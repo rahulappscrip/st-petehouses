@@ -5,6 +5,7 @@ import {
   CASH_ADVANCE_BENEFITS,
   OFFER_FORMULA_DETAILS,
   OFFER_FORMULA_PARTS,
+  OFFER_MATH,
 } from "@/lib/constants";
 
 function FormulaOp({ children }: { children: string }) {
@@ -16,32 +17,30 @@ export function OfferMathSection() {
     <section className="section offer-math" id="offer-math">
       <div className="wrap">
         <Reveal className="section-head">
-          <span className="eyebrow">Our offer math</span>
+          <span className="eyebrow">{OFFER_MATH.eyebrow}</span>
           <h2 className="h-2">
             How we <em>calculate</em> our offers.
           </h2>
-          <p className="lede">
-            We need to make a profit on the sale, but we promise not to take advantage of you or
-            give you a lowball offer. Every cash offer follows a transparent formula, and we are
-            happy to walk you through the math.
-          </p>
+          <p className="lede">{OFFER_MATH.lede}</p>
         </Reveal>
 
-        <Reveal className="offer-formula" d={1}>
-          <div className="offer-formula__result">
-            <span className="offer-formula__lab">Cash offer amount</span>
-            <span className="offer-formula__val">Your Offer</span>
+        <Reveal className="offer-formula-wrap" d={1}>
+          <div className="offer-formula">
+            <div className="offer-formula__box offer-formula__box--result">
+              <span className="offer-formula__lab">{OFFER_MATH.formulaResult.label}</span>
+              <span className="offer-formula__val">{OFFER_MATH.formulaResult.value}</span>
+            </div>
+            <FormulaOp>=</FormulaOp>
+            {OFFER_FORMULA_PARTS.map((part, i) => (
+              <span key={part.label} className="offer-formula__item">
+                {i > 0 ? <FormulaOp>−</FormulaOp> : null}
+                <div className="offer-formula__box">
+                  <span className="offer-formula__lab">{part.label}</span>
+                  <span className="offer-formula__val">{part.value}</span>
+                </div>
+              </span>
+            ))}
           </div>
-          <FormulaOp>=</FormulaOp>
-          {OFFER_FORMULA_PARTS.map((part, i) => (
-            <span key={part.label} className="offer-formula__group">
-              {i > 0 ? <FormulaOp>−</FormulaOp> : null}
-              <div className="offer-formula__part">
-                <span className="offer-formula__lab">{part.label}</span>
-                <span className="offer-formula__val">{part.value}</span>
-              </div>
-            </span>
-          ))}
         </Reveal>
 
         <div className="offer-factors">
@@ -56,26 +55,20 @@ export function OfferMathSection() {
 
         <Reveal className="offer-advance" d={1}>
           <div className="offer-advance__copy">
-            <span className="offer-advance__badge">Additional benefit</span>
+            <span className="offer-advance__badge">{OFFER_MATH.cashAdvance.badge}</span>
             <h3 className="offer-advance__title">
               We can offer a <em>cash advance</em>.
             </h3>
-            <p className="offer-advance__lede">
-              In some situations we can advance a portion of your offer before closing — so you
-              have cash in hand for moving, bills, or your next place while we handle the sale.
-            </p>
+            <p className="offer-advance__lede">{OFFER_MATH.cashAdvance.lede}</p>
             <ul className="offer-advance__list">
               {CASH_ADVANCE_BENEFITS.map((item) => (
-                <li key={item}>
-                  <span className="offer-advance__dot" aria-hidden />
-                  {item}
-                </li>
+                <li key={item}>{item}</li>
               ))}
             </ul>
           </div>
           <div className="offer-advance__action">
             <Link href="#offer" className="btn offer-advance__cta">
-              Get a cash offer
+              {OFFER_MATH.cashAdvance.cta}
               <Arr />
             </Link>
           </div>

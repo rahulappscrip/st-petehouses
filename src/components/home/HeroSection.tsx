@@ -1,10 +1,35 @@
 "use client";
 
+import type { ReactNode } from "react";
 import { Reveal } from "@/components/ui/Reveal";
 import { Arr } from "@/components/ui/Arr";
 import { ASSETS } from "@/lib/constants";
 
-export function HeroSection() {
+export type HeroContent = {
+  title: ReactNode;
+  subheadline: string;
+  formEyebrow?: string;
+  formTitle?: ReactNode;
+  formIntro?: string;
+};
+
+export const DEFAULT_HERO: HeroContent = {
+  title: (
+    <>
+      We Buy Houses In <em>St&nbsp;Petersburg</em> For Fast, Fair Cash
+    </>
+  ),
+  subheadline: "Sell your St Pete house fast for cash. No agents, no fees, no repairs.",
+  formEyebrow: "Get your fair cash offer today",
+  formTitle: (
+    <>
+      See <em>how much</em> cash you&apos;ll get today.
+    </>
+  ),
+  formIntro: "We buy houses fast, as-is, and stress-free. No repairs or out-of-pocket costs.",
+};
+
+export function HeroSection({ content = DEFAULT_HERO }: { content?: HeroContent }) {
   return (
     <section className="hero">
       <div className="hero-bg" aria-hidden="true" />
@@ -12,10 +37,10 @@ export function HeroSection() {
       <div className="wrap">
         <div className="hero-header">
           <Reveal as="h1" d={1} className="h-display">
-            We Buy Houses In <em>St&nbsp;Petersburg</em> For Fast, Fair Cash
+            {content.title}
           </Reveal>
           <Reveal as="p" d={2} className="hero-sub">
-            Sell your St Pete house fast for cash. No agents, no fees, no repairs.
+            {content.subheadline}
           </Reveal>
         </div>
 
@@ -52,13 +77,9 @@ export function HeroSection() {
                   <i>5.0 Rated</i>
                 </span>
               </div>
-              <span className="lead-eyebrow">Get your fair cash offer today</span>
-              <h2 className="lead-title">
-                See <em>how much</em> cash you&apos;ll get today.
-              </h2>
-              <p className="lead-intro">
-                We buy houses fast, as-is, and stress-free. No repairs or out-of-pocket costs.
-              </p>
+              <span className="lead-eyebrow">{content.formEyebrow ?? DEFAULT_HERO.formEyebrow}</span>
+              <h2 className="lead-title">{content.formTitle ?? DEFAULT_HERO.formTitle}</h2>
+              <p className="lead-intro">{content.formIntro ?? DEFAULT_HERO.formIntro}</p>
             </div>
 
             <form

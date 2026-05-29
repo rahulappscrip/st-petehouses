@@ -1,0 +1,135 @@
+/* City + situation landing pages — not .hero (avoids homepage fixed-height clip) */
+
+.landing-hero {
+  position: relative;
+  padding-top: clamp(40px, 5vw, 72px);
+  padding-bottom: clamp(72px, 9vw, 120px);
+  overflow: visible;
+}
+
+.landing-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.landing-hero__bg::before {
+  content: "";
+  position: absolute;
+  right: -10%;
+  top: -15%;
+  width: 56vw;
+  height: 56vw;
+  max-width: 800px;
+  max-height: 800px;
+  background: radial-gradient(circle at 30% 30%, rgba(42, 174, 102, 0.1), transparent 65%);
+  border-radius: 50%;
+}
+
+@media (max-width: 759px) {
+  .landing-hero {
+    padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+.situation-crumbs {
+  padding-top: 0;
+}
+
+.situation-title {
+  margin-top: 24px;
+  max-width: 18ch;
+}
+
+.situation-sub {
+  max-width: 60ch;
+  margin-top: 18px;
+}
+
+.situation-grid {
+  display: grid;
+  gap: clamp(24px, 3vw, 40px);
+  grid-template-columns: 1fr;
+  margin-top: clamp(32px, 4vw, 48px);
+  align-items: start;
+}
+
+@media (min-width: 880px) {
+  .situation-grid {
+    grid-template-columns: 1.4fr 0.8fr;
+    gap: 56px;
+  }
+}
+
+.situation-body {
+  font-size: 17px;
+  color: var(--ink-2);
+  line-height: 1.65;
+  max-width: 64ch;
+}
+
+.situation-body h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.1;
+  margin: 36px 0 14px;
+  color: var(--ink);
+}
+
+.situation-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.situation-body > p:last-child {
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
+.situation-aside {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  padding: 28px;
+}
+
+.situation-aside__eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sun-deep);
+}
+
+.situation-aside h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.1;
+  margin-top: 8px;
+  color: var(--ink);
+}
+
+.situation-aside > p {
+  font-size: 14.5px;
+  color: var(--ink-2);
+  margin-top: 10px;
+}
+
+.situation-aside__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.situation-aside__actions .btn {
+  justify-content: center;
+}

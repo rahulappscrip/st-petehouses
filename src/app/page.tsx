@@ -11,10 +11,15 @@ import { GuaranteeSection } from "@/components/home/GuaranteeSection";
 import { ResourcesSection } from "@/components/home/ResourcesSection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { FinalCtaSection } from "@/components/home/FinalCtaSection";
+import { HOMEPAGE_FAQ_JSON_LD } from "@/lib/schema";
 
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(HOMEPAGE_FAQ_JSON_LD) }}
+      />
       <HeroSection />
       <StatsSection />
       <ProcessSection />

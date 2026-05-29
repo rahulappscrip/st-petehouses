@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import { BrandLogo } from "@/components/ui/BrandLogo";
 import { Arr } from "@/components/ui/Arr";
@@ -14,10 +15,35 @@ function Caret() {
   );
 }
 
+function MenuItem({
+  href,
+  label,
+  className,
+  onNavigate,
+}: {
+  href: string;
+  label: string;
+  className?: string;
+  onNavigate?: () => void;
+}) {
+  return (
+    <Link
+      href={href}
+      className={className ? `menu-item ${className}` : "menu-item"}
+      role="menuitem"
+      onClick={onNavigate}
+    >
+      {label}
+    </Link>
+  );
+}
+
 export function Header() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
+  const [suppressHover, setSuppressHover] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -27,6 +53,18 @@ export function Header() {
   }, []);
 
   const closeMenus = useCallback(() => setOpenMenu(null), []);
+
+  const handleMenuNavigate = useCallback(() => {
+    setOpenMenu(null);
+    setSuppressHover(true);
+    setDrawerOpen(false);
+  }, []);
+
+  useEffect(() => {
+    setOpenMenu(null);
+    setSuppressHover(true);
+    setDrawerOpen(false);
+  }, [pathname]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && closeMenus();
@@ -53,7 +91,12 @@ export function Header() {
       <div className="wrap nav">
         <BrandLogo showName={false} />
 
-        <ul className="nav-links" aria-label="Primary">
+        <ul
+          className="nav-links"
+          aria-label="Primary"
+          data-suppress-hover={suppressHover ? "" : undefined}
+          onMouseLeave={() => setSuppressHover(false)}
+        >
           {NAV_LINKS.primary.map((link) => (
             <li key={link.href}>
               <Link href={link.href}>{link.label}</Link>
@@ -71,22 +114,18 @@ export function Header() {
               <Caret />
             </button>
             <div className="menu menu-2col" role="menu" onClick={(e) => e.stopPropagation()}>
-              <div>
+              <div className="menu-col">
                 <div className="menu-h">Cities</div>
                 {NAV_LINKS.locations.cities.map((c) => (
-                  <Link key={c.href} href={c.href} role="menuitem">
-                    {c.label}
-                  </Link>
+                  <MenuItem key={c.href} href={c.href} label={c.label} onNavigate={handleMenuNavigate} />
                 ))}
               </div>
-              <div>
+              <div className="menu-col">
                 <div className="menu-h">Counties</div>
                 {NAV_LINKS.locations.counties.map((c) => (
-                  <Link key={c.href} href={c.href} role="menuitem">
-                    {c.label}
-                  </Link>
+                  <MenuItem key={c.href} href={c.href} label={c.label} onNavigate={handleMenuNavigate} />
                 ))}
-                <Link href="/#areas" className="menu-all" role="menuitem">
+                <Link href="/#areas" className="menu-item menu-all" role="menuitem" onClick={handleMenuNavigate}>
                   All service areas
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
                     <path d="M5 12h14M13 6l6 6-6 6" />
@@ -107,18 +146,14 @@ export function Header() {
               <Caret />
             </button>
             <div className="menu menu-2col" role="menu" onClick={(e) => e.stopPropagation()}>
-              <div>
+              <div className="menu-col">
                 {NAV_LINKS.situations.slice(0, 6).map((s) => (
-                  <Link key={s.href} href={s.href} role="menuitem">
-                    {s.label}
-                  </Link>
+                  <MenuItem key={s.href} href={s.href} label={s.label} onNavigate={handleMenuNavigate} />
                 ))}
               </div>
-              <div>
+              <div className="menu-col">
                 {NAV_LINKS.situations.slice(6).map((s) => (
-                  <Link key={s.href} href={s.href} role="menuitem">
-                    {s.label}
-                  </Link>
+                  <MenuItem key={s.href} href={s.href} label={s.label} onNavigate={handleMenuNavigate} />
                 ))}
               </div>
             </div>
@@ -134,11 +169,9 @@ export function Header() {
               Company
               <Caret />
             </button>
-            <div className="menu" role="menu" onClick={(e) => e.stopPropagation()}>
+            <div className="menu menu-single" role="menu" onClick={(e) => e.stopPropagation()}>
               {NAV_LINKS.company.map((c) => (
-                <Link key={c.href} href={c.href} role="menuitem">
-                  {c.label}
-                </Link>
+                <MenuItem key={c.href} href={c.href} label={c.label} onNavigate={handleMenuNavigate} />
               ))}
             </div>
           </li>
@@ -172,10 +205,10 @@ export function Header() {
       </div>
 
       <div className="nav-drawer" id="nav-drawer" data-open={drawerOpen ? "" : undefined}>
-        <Link href="/how-it-works" className="top-link">
+        <Link href="/how-it-works" className="top-link" onClick={handleMenuNavigate}>
           How It Works
         </Link>
-        <Link href="/reviews" className="top-link">
+        <Link href="/reviews" className="top-link" onClick={handleMenuNavigate}>
           Reviews
         </Link>
         <details>
@@ -187,11 +220,11 @@ export function Header() {
           </summary>
           <div className="sub">
             {NAV_LINKS.locations.cities.map((c) => (
-              <Link key={c.href} href={c.href}>
+              <Link key={c.href} href={c.href} onClick={handleMenuNavigate}>
                 {c.label}
               </Link>
             ))}
-            <Link href="/#areas">All service areas →</Link>
+            <Link href="/#areas" onClick={handleMenuNavigate}>All service areas →</Link>
           </div>
         </details>
         <details>
@@ -203,7 +236,7 @@ export function Header() {
           </summary>
           <div className="sub">
             {NAV_LINKS.situations.map((s) => (
-              <Link key={s.href} href={s.href}>
+              <Link key={s.href} href={s.href} onClick={handleMenuNavigate}>
                 {s.label}
               </Link>
             ))}
@@ -218,7 +251,7 @@ export function Header() {
           </summary>
           <div className="sub">
             {NAV_LINKS.company.map((c) => (
-              <Link key={c.href} href={c.href}>
+              <Link key={c.href} href={c.href} onClick={handleMenuNavigate}>
                 {c.label}
               </Link>
             ))}

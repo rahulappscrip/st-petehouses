@@ -1,20 +1,43 @@
+import type { ReactNode } from "react";
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
 import { FAQ_ITEMS } from "@/lib/constants";
 
-export function FaqSection() {
+type FaqItem = { q: string; a: string };
+
+type FaqSectionProps = {
+  items?: readonly FaqItem[];
+  title?: ReactNode;
+  showFullLink?: boolean;
+  className?: string;
+  id?: string;
+};
+
+export function FaqSection({
+  items = FAQ_ITEMS,
+  title = (
+    <>
+      Frequently asked questions about <em>selling for cash</em> in St. Pete.
+    </>
+  ),
+  showFullLink = true,
+  className = "",
+  id = "faq",
+}: FaqSectionProps) {
   return (
-    <section className="section" id="faq" style={{ background: "var(--paper)", borderTop: "1px solid var(--line-soft)", borderBottom: "1px solid var(--line-soft)" }}>
+    <section
+      className={`section ${className}`.trim()}
+      id={id}
+      style={{ background: "var(--paper)", borderTop: "1px solid var(--line-soft)", borderBottom: "1px solid var(--line-soft)" }}
+    >
       <div className="wrap" style={{ maxWidth: 920 }}>
         <Reveal className="section-head">
           <span className="eyebrow">FAQ</span>
-          <h2 className="h-2">
-            Frequently asked questions about <em>selling for cash</em> in St Petersburg.
-          </h2>
+          <h2 className="h-2">{title}</h2>
         </Reveal>
 
         <div className="faq-list">
-          {FAQ_ITEMS.map((item, i) => (
+          {items.map((item, i) => (
             <details key={item.q} className="faq-item" open={i === 0}>
               <summary className="faq-q">
                 {item.q}
@@ -31,11 +54,13 @@ export function FaqSection() {
           ))}
         </div>
 
-        <div style={{ marginTop: 22 }}>
-          <Link href="/faq" className="btn btn--link">
-            Visit our full FAQ page →
-          </Link>
-        </div>
+        {showFullLink ? (
+          <div style={{ marginTop: 22 }}>
+            <Link href="/faq" className="btn btn--link">
+              Visit our full FAQ page →
+            </Link>
+          </div>
+        ) : null}
       </div>
     </section>
   );

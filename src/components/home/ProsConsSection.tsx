@@ -1,5 +1,10 @@
 import { Reveal } from "@/components/ui/Reveal";
-import { PROS_ADVANTAGES, PROS_COMPARE_ROWS, PROS_TRADEOFFS } from "@/lib/constants";
+import {
+  PROS_ADVANTAGES,
+  PROS_COMPARE_ROWS,
+  PROS_CONS,
+  PROS_TRADEOFFS,
+} from "@/lib/constants";
 
 function CheckIcon() {
   return (
@@ -30,25 +35,24 @@ export function ProsConsSection() {
     <section className="section pros-cons" id="pros-cons">
       <div className="wrap">
         <Reveal className="section-head">
-          <span className="eyebrow">Decide with clarity</span>
+          <span className="eyebrow">{PROS_CONS.eyebrow}</span>
           <h2 className="h-2">
-            Pros and cons of <em>selling your home for cash.</em>
+            Pros and cons of selling your home <em>for cash</em>.
           </h2>
-          <p className="lede">
-            A cash sale is not for everyone—but for many St Pete homeowners it removes the friction
-            of a traditional listing. Here&apos;s an honest look at both sides.
-          </p>
+          <p className="lede">{PROS_CONS.lede}</p>
         </Reveal>
 
         <div className="pros-cards">
           <Reveal className="pros-card pros-card--pro" d={1}>
             <span className="pros-card__lab pros-card__lab--pro">Advantages</span>
-            <h3 className="pros-card__title">Advantages of cash sales</h3>
+            <h3 className="pros-card__title">{PROS_CONS.advantagesTitle}</h3>
             <ul className="pros-card__list">
               {PROS_ADVANTAGES.map((item) => (
-                <li key={item}>
+                <li key={item.label}>
                   <CheckIcon />
-                  <span>{item}</span>
+                  <span>
+                    <b>{item.label}</b> {item.text}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -56,12 +60,14 @@ export function ProsConsSection() {
 
           <Reveal className="pros-card pros-card--con" d={2}>
             <span className="pros-card__lab">Trade-offs</span>
-            <h3 className="pros-card__title">Considerations to keep in mind</h3>
+            <h3 className="pros-card__title">{PROS_CONS.tradeoffsTitle}</h3>
             <ul className="pros-card__list">
               {PROS_TRADEOFFS.map((item) => (
-                <li key={item}>
+                <li key={item.label}>
                   <MinusIcon />
-                  <span>{item}</span>
+                  <span>
+                    <b>{item.label}</b> {item.text}
+                  </span>
                 </li>
               ))}
             </ul>

@@ -1,28 +1,40 @@
-import type { CSSProperties } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
 import { Arr } from "@/components/ui/Arr";
 import { SITE } from "@/lib/constants";
 
-export function FinalCtaSection() {
+type FinalCtaSectionProps = {
+  eyebrow?: string;
+  title?: ReactNode;
+  description?: string;
+  offerHref?: string;
+};
+
+export function FinalCtaSection({
+  eyebrow = "Ready to sell?",
+  title = (
+    <>
+      Get your <em>no-obligation</em> St Petersburg cash offer today.
+    </>
+  ),
+  description = "Call us or fill out our form. Tell us about your property — address, condition, and timeline. Receive your cash offer, usually within 24 hours. Choose your closing date. No pressure. No obligation. Just a fair cash offer for your St Pete home.",
+  offerHref = "/#offer",
+}: FinalCtaSectionProps = {}) {
   return (
     <section className="section">
       <div className="wrap">
         <Reveal className="cta-card">
           <div>
             <span className="eyebrow" style={{ color: "color-mix(in oklab, var(--paper) 70%, transparent)" }}>
-              Ready to sell?
+              {eyebrow}
             </span>
             <h2 className="h-2" style={{ color: "var(--paper)", marginTop: 14 }}>
-              Get your <em>no-obligation</em> St Petersburg cash offer today.
+              {title}
             </h2>
-            <p>
-              Call us or fill out our form. Tell us about your property &mdash; address, condition, and timeline.
-              Receive your cash offer, usually within 24 hours. Choose your closing date.
-              No pressure. No obligation. Just a fair cash offer for your St Pete home.
-            </p>
+            <p>{description}</p>
             <div className="cta-actions">
-              <Link href="#offer" className="btn btn--cta">
+              <Link href={offerHref} className="btn btn--cta">
                 Get my cash offer
                 <Arr />
               </Link>

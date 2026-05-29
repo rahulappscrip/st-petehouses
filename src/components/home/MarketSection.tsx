@@ -1,20 +1,16 @@
 import { Reveal } from "@/components/ui/Reveal";
-import { MARKET_FACTORS } from "@/lib/constants";
+import { MARKET_FACTORS, MARKET_SECTION } from "@/lib/constants";
 
 export function MarketSection() {
   return (
-    <section className="section" id="market">
+    <section className="section section-alt market-section" id="market">
       <div className="wrap">
         <Reveal className="section-head">
-          <span className="eyebrow">Local market</span>
+          <span className="eyebrow">{MARKET_SECTION.eyebrow}</span>
           <h2 className="h-2">
-            Understanding the <em>St Petersburg</em> cash home market.
+            Understanding the St Petersburg <em>cash-offer market</em>.
           </h2>
-          <p className="lede">
-            St Petersburg&apos;s real estate market has transformed into a vibrant, sought-after
-            destination. Understanding local price trends and demand indicators helps us
-            present strong, data-driven cash offers.
-          </p>
+          <p className="lede">{MARKET_SECTION.lede}</p>
         </Reveal>
 
         <div className="market-grid">
@@ -31,6 +27,26 @@ export function MarketSection() {
               </Reveal>
             ))}
           </div>
+        </div>
+
+        <div className="market-local">
+          <Reveal className="market-local__col">
+            <h3 className="market-local__title">{MARKET_SECTION.neighborhoodsTitle}</h3>
+            <p className="market-local__body">{MARKET_SECTION.neighborhoodsBody}</p>
+            <div className="market-chips">
+              {MARKET_SECTION.neighborhoods.map((name) => (
+                <span key={name} className="market-chip">
+                  {name}
+                </span>
+              ))}
+            </div>
+          </Reveal>
+
+          <Reveal className="market-local__col" d={1}>
+            <h3 className="market-local__title">{MARKET_SECTION.conditionsTitle}</h3>
+            <p className="market-local__body">{MARKET_SECTION.conditionsBody1}</p>
+            <p className="market-local__body">{MARKET_SECTION.conditionsBody2}</p>
+          </Reveal>
         </div>
       </div>
     </section>
