@@ -1,0 +1,237 @@
+/* How we calculate our offers */
+
+.offer-formula {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(10px, 1.5vw, 16px);
+  margin-top: clamp(32px, 4vw, 48px);
+}
+
+.offer-formula__group {
+  display: contents;
+}
+
+.offer-formula__op {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1;
+  color: var(--sun);
+  font-weight: 400;
+  flex: 0 0 auto;
+  padding: 0 2px;
+}
+
+.offer-formula__result,
+.offer-formula__part {
+  flex: 1 1 140px;
+  min-width: min(100%, 140px);
+  max-width: 200px;
+  border-radius: var(--radius);
+  padding: clamp(16px, 2vw, 22px) clamp(14px, 1.8vw, 20px);
+  text-align: center;
+}
+
+.offer-formula__result {
+  background: var(--teal-deep);
+  color: var(--paper);
+  box-shadow: var(--shadow-2);
+  border: 1px solid color-mix(in oklab, var(--teal-deep) 85%, var(--ink));
+}
+
+.offer-formula__part {
+  background: var(--sand);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-1);
+}
+
+.offer-formula__lab {
+  display: block;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.3;
+  color: color-mix(in oklab, var(--paper) 75%, transparent);
+}
+
+.offer-formula__part .offer-formula__lab {
+  color: var(--ink-soft);
+}
+
+.offer-formula__val {
+  display: block;
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.2vw, 28px);
+  line-height: 1.1;
+  margin-top: 8px;
+  color: inherit;
+}
+
+.offer-factors {
+  display: grid;
+  gap: clamp(14px, 2vw, 20px);
+  margin-top: clamp(24px, 3.5vw, 36px);
+}
+
+@media (min-width: 700px) {
+  .offer-factors {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .offer-factors {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.offer-factor {
+  position: relative;
+  background: var(--sand-2);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  padding: clamp(20px, 2.5vw, 26px);
+}
+
+.offer-factor__num {
+  position: absolute;
+  top: clamp(16px, 2vw, 20px);
+  right: clamp(16px, 2vw, 20px);
+  font-family: var(--serif);
+  font-size: clamp(28px, 2.5vw, 34px);
+  font-style: italic;
+  line-height: 1;
+  color: color-mix(in oklab, var(--sun) 55%, var(--sand));
+}
+
+.offer-factor__title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(19px, 1.8vw, 22px);
+  line-height: 1.15;
+  padding-right: 2.5rem;
+}
+
+.offer-factor p {
+  margin-top: 10px;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+
+/* Cash advance CTA */
+.offer-advance {
+  display: grid;
+  gap: clamp(24px, 3vw, 32px);
+  align-items: center;
+  margin-top: clamp(28px, 4vw, 40px);
+  padding: clamp(28px, 3.5vw, 40px);
+  border-radius: var(--radius-l);
+  background: var(--teal-deep);
+  color: var(--paper);
+  border: 1px solid color-mix(in oklab, var(--teal-deep) 80%, var(--ink));
+  box-shadow: var(--shadow-2);
+}
+
+@media (min-width: 900px) {
+  .offer-advance {
+    grid-template-columns: 1fr auto;
+    gap: clamp(32px, 4vw, 48px);
+  }
+}
+
+.offer-advance__badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--gold) 92%, var(--paper));
+  color: var(--ink);
+}
+
+.offer-advance__title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(28px, 3vw, 38px);
+  line-height: 1.08;
+  margin-top: 14px;
+}
+
+.offer-advance__title em {
+  font-style: italic;
+  color: color-mix(in oklab, var(--sun) 75%, var(--paper));
+}
+
+.offer-advance__lede {
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: color-mix(in oklab, var(--paper) 82%, transparent);
+  max-width: 52ch;
+}
+
+.offer-advance__list {
+  margin: clamp(18px, 2.5vw, 24px) 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px 24px;
+}
+
+@media (min-width: 560px) {
+  .offer-advance__list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.offer-advance__list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14.5px;
+  line-height: 1.35;
+  color: color-mix(in oklab, var(--paper) 90%, transparent);
+}
+
+.offer-advance__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--sun);
+  flex: 0 0 auto;
+}
+
+.offer-advance__action {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media (min-width: 900px) {
+  .offer-advance__action {
+    justify-content: center;
+    align-self: center;
+  }
+}
+
+.offer-advance__cta {
+  --bg: var(--gold);
+  --bd: var(--gold);
+  --fg: var(--ink);
+  padding: 14px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow:
+    0 0 0 4px color-mix(in oklab, var(--gold) 28%, transparent),
+    0 8px 24px -8px rgba(0, 0, 0, 0.35);
+}
+
+.offer-advance__cta:hover {
+  --bg: color-mix(in oklab, var(--gold) 88%, var(--paper));
+  --bd: color-mix(in oklab, var(--gold) 88%, var(--paper));
+}

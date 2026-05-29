@@ -1,0 +1,260 @@
+/* Pros & cons — cash sale comparison */
+
+.pros-cards {
+  display: grid;
+  gap: clamp(16px, 2.5vw, 24px);
+  margin-top: clamp(28px, 4vw, 40px);
+}
+
+@media (min-width: 900px) {
+  .pros-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.pros-card {
+  background: var(--sand);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  padding: clamp(24px, 3vw, 32px);
+  box-shadow: var(--shadow-1);
+}
+
+.pros-card__lab {
+  display: block;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.pros-card__lab--pro {
+  color: var(--sun-deep);
+}
+
+.pros-card__title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(24px, 2.4vw, 30px);
+  line-height: 1.12;
+  margin-top: 10px;
+}
+
+.pros-card__list {
+  margin: clamp(18px, 2.5vw, 24px) 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pros-card__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--ink-2);
+}
+
+.pros-card__list li svg {
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
+
+/* Side-by-side comparison */
+.pros-compare {
+  position: relative;
+  display: grid;
+  gap: clamp(20px, 3vw, 28px);
+  margin-top: clamp(20px, 3vw, 28px);
+}
+
+@media (min-width: 900px) {
+  .pros-compare {
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: stretch;
+  }
+}
+
+.pros-compare__vs {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--serif);
+  font-size: 15px;
+  font-style: italic;
+  display: grid;
+  place-items: center;
+  box-shadow: var(--shadow-2);
+  pointer-events: none;
+}
+
+@media (max-width: 899px) {
+  .pros-compare__vs {
+    display: none;
+  }
+}
+
+.pros-compare__panel {
+  border-radius: var(--radius-l);
+  padding: clamp(24px, 3vw, 36px);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.pros-compare__panel--traditional {
+  background: var(--sand);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-1);
+}
+
+@media (min-width: 900px) {
+  .pros-compare__panel--traditional {
+    border-radius: var(--radius-l) 0 0 var(--radius-l);
+  }
+}
+
+.pros-compare__panel--cash {
+  position: relative;
+  background: var(--teal-deep);
+  color: var(--paper);
+  border: 1px solid color-mix(in oklab, var(--teal-deep) 80%, var(--ink));
+}
+
+@media (min-width: 900px) {
+  .pros-compare__panel--cash {
+    border-radius: 0 var(--radius-l) var(--radius-l) 0;
+  }
+}
+
+.pros-compare__badge {
+  position: absolute;
+  top: clamp(20px, 2.5vw, 28px);
+  right: clamp(20px, 2.5vw, 28px);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--sun) 88%, var(--paper));
+  color: var(--teal-deep);
+}
+
+.pros-compare__head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pros-compare__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex: 0 0 auto;
+}
+
+.pros-compare__dot--muted {
+  background: color-mix(in oklab, var(--ink) 35%, var(--sand));
+}
+
+.pros-compare__dot--accent {
+  background: var(--sun);
+}
+
+.pros-compare__type {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.pros-compare__panel--cash .pros-compare__type {
+  color: color-mix(in oklab, var(--paper) 70%, transparent);
+}
+
+.pros-compare__title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(28px, 3vw, 36px);
+  line-height: 1.08;
+  margin-top: 12px;
+}
+
+.pros-compare__sub {
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-top: 8px;
+  max-width: 36ch;
+}
+
+.pros-compare__panel--cash .pros-compare__sub {
+  color: color-mix(in oklab, var(--paper) 80%, transparent);
+}
+
+.pros-compare__rows {
+  margin: clamp(20px, 2.5vw, 28px) 0 0;
+  padding: 0;
+}
+
+.pros-compare__row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px 20px;
+  align-items: center;
+  padding: 14px 0;
+  border-top: 1px dashed var(--line);
+}
+
+.pros-compare__panel--cash .pros-compare__row {
+  border-top-color: color-mix(in oklab, var(--paper) 18%, transparent);
+}
+
+.pros-compare__row dt {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.pros-compare__panel--cash .pros-compare__row dt {
+  color: color-mix(in oklab, var(--paper) 65%, transparent);
+}
+
+.pros-compare__row dd {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(17px, 1.6vw, 20px);
+  line-height: 1.2;
+  color: var(--ink);
+  text-align: right;
+}
+
+.pros-compare__panel--cash .pros-compare__row dd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  color: var(--paper);
+}
+
+.pros-compare__panel--cash .pros-compare__row dd svg {
+  flex: 0 0 auto;
+}

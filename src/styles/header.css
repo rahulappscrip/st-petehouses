@@ -1,0 +1,22 @@
+/* Header — nav centered; edge spacing from .wrap gutter only */
+
+.site-header {
+  overflow: visible;
+}
+
+.site-header .nav {
+  overflow: visible;
+}
+
+/* Match hero/content width; side padding lives on .wrap (--gutter) */
+.site-header > .wrap {
+  max-width: var(--maxw);
+  margin-inline: auto;
+  width: 100%;
+}
+
+@media (min-width: 980px) {
+  .site-header .nav-links {
+    justify-content: center;
+  }
+}

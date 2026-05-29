@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design System — We Buy Houses St Petersburg</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+/* ─────────────────────────────────────────
+   DESIGN TOKENS
+───────────────────────────────────────── */
+:root {
+  /* Colours */
+  --c-forest:        #1F3D2E;
+  --c-forest-mid:    #2B5240;
+  --c-forest-light:  #3D6B52;
+  --c-accent:        #4FA86B;
+  --c-accent-light:  rgba(79,168,107,.12);
+  --c-sage:          #C8D9C4;
+  --c-sage-light:    #E2EDE0;
+  --c-cream:         #F3F0EA;
+  --c-white:         #FFFFFF;
+  --c-text:          #1A2B22;
+  --c-text-mid:      #2E4438;
+  --c-text-muted:    rgba(26,43,34,.48);
+  --c-border:        rgba(26,43,34,.12);
+  --c-border-md:     rgba(26,43,34,.22);
+
+  /* Typography */
+  --f-sans:   'Manrope', sans-serif;
+  --f-serif:  'DM Serif Display', serif;
+
+  /* Radii */
+  --r-sm:    6px;
+  --r-md:    10px;
+  --r-card:  14px;
+  --r-pill:  40px;
+
+  /* Spacing */
+  --sp-xs: 4px;
+  --sp-sm: 8px;
+  --sp-md: 16px;
+  --sp-lg: 24px;
+  --sp-xl: 40px;
+  --sp-2xl: 64px;
+}
+
+/* ─────────────────────────────────────────
+   RESET & BASE
+───────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+body {
+  font-family: var(--f-sans);
+  background: var(--c-cream);
+  color: var(--c-text);
+  line-height: 1.6;
+}
+
+/* ─────────────────────────────────────────
+   LAYOUT
+───────────────────────────────────────── */
+.page { max-width: 1080px; margin: 0 auto; padding: 60px 40px 100px; }
+
+.section { margin-bottom: 64px; }
+
+.section-header {
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 0.5px solid var(--c-border-md);
+}
+.section-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--c-accent);
+  margin-bottom: 6px;
+}
+.section-title {
+  font-family: var(--f-sans);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--c-text-mid);
+}
+
+.grid2  { display: grid; grid-template-columns: 1fr 1fr;           gap: 12px; }
+.grid3  { display: grid; grid-template-columns: 1fr 1fr 1fr;       gap: 12px; }
+.grid4  { display: grid; grid-template-columns: repeat(4,1fr);     gap: 12px; }
+.grid6  { display: grid; grid-template-columns: repeat(6,1fr);     gap: 10px; }
+.flex   { display: flex; }
+.flex-wrap { flex-wrap: wrap; }
+.gap-sm { gap: 8px; }
+.gap-md { gap: 14px; }
+.gap-lg { gap: 20px; }
+.items-center { align-items: center; }
+.items-baseline { align-items: baseline; }
+.justify-between { justify-content: space-between; }
+
+hr.rule { border: none; border-top: .5px solid var(--c-border); margin: 24px 0; }
+
+/* ─────────────────────────────────────────
+   PAGE HEADER
+───────────────────────────────────────── */
+.ds-header {
+  background: var(--c-forest);
+  margin: -60px -40px 60px;
+  padding: 48px 40px 40px;
+}
+.ds-header-tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--c-accent);
+  margin-bottom: 10px;
+}
+.ds-header-title {
+  font-family: var(--f-sans);
+  font-size: 36px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+.ds-header-title em {
+  font-family: var(--f-serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--c-accent);
+}
+.ds-header-sub {
+  font-size: 13px;
+  color: rgba(255,255,255,.5);
+  margin-top: 8px;
+}
+.ds-header-meta {
+  display: flex;
+  gap: 24px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: .5px solid rgba(255,255,255,.1);
+}
+.ds-meta-item { }
+.ds-meta-label { font-size: 9px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.4); }
+.ds-meta-val   { font-size: 12px; font-weight: 600; color: rgba(255,255,255,.8); margin-top: 2px; }
+
+/* ─────────────────────────────────────────
+   COLOUR SWATCHES
+───────────────────────────────────────── */
+.sw { border-radius: var(--r-md); overflow: hidden; border: .5px solid var(--c-border); }
+.sw-fill { height: 64px; }
+.sw-body { background: var(--c-white); padding: 8px 10px; }
+.sw-name { font-size: 10px; font-weight: 700; color: var(--c-text); }
+.sw-role { font-size: 9px; color: var(--c-text-muted); margin-top: 1px; }
+.sw-hex  { font-size: 9px; font-weight: 600; color: var(--c-forest-mid); margin-top: 4px; font-family: monospace; }
+
+/* ─────────────────────────────────────────
+   TYPOGRAPHY
+───────────────────────────────────────── */
+.type-specimen { margin-bottom: 20px; padding-bottom: 20px; border-bottom: .5px solid var(--c-border); }
+.type-specimen:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.type-meta-col { width: 140px; flex-shrink: 0; }
+.ts-role   { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--c-accent); }
+.ts-spec   { font-size: 9px; color: var(--c-text-muted); line-height: 1.6; margin-top: 3px; }
+
+.t-hero    { font-family: var(--f-sans); font-size: 32px; font-weight: 800; color: var(--c-forest); line-height: 1.1; }
+.t-hero em { font-family: var(--f-serif); font-style: italic; font-weight: 400; color: var(--c-accent); }
+
+.t-h2      { font-family: var(--f-sans); font-size: 22px; font-weight: 700; color: var(--c-forest); line-height: 1.2; }
+.t-h2 em   { font-family: var(--f-serif); font-style: italic; font-weight: 400; color: var(--c-accent); }
+
+.t-h3      { font-family: var(--f-sans); font-size: 15px; font-weight: 600; color: var(--c-text); line-height: 1.3; }
+.t-body    { font-family: var(--f-sans); font-size: 13px; font-weight: 400; color: var(--c-text-mid); line-height: 1.65; }
+.t-small   { font-family: var(--f-sans); font-size: 11px; font-weight: 400; color: var(--c-text-muted); line-height: 1.55; }
+.t-label   { font-family: var(--f-sans); font-size: 9px;  font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--c-text-muted); }
+.t-stat    { font-family: var(--f-sans); font-size: 12px; font-weight: 700; color: var(--c-text); }
+.t-step    { font-family: var(--f-serif); font-style: italic; font-size: 40px; color: var(--c-accent); line-height: 1; }
+
+/* ─────────────────────────────────────────
+   CARDS
+───────────────────────────────────────── */
+.card {
+  background: var(--c-white);
+  border: .5px solid var(--c-border);
+  border-radius: var(--r-card);
+  padding: 18px 20px;
+}
+.card-sage {
+  background: var(--c-sage-light);
+  border: .5px solid var(--c-sage);
+  border-radius: var(--r-card);
+  padding: 18px 20px;
+}
+.card-dark {
+  background: var(--c-forest);
+  border-radius: var(--r-card);
+  padding: 18px 20px;
+}
+.card-accent-border {
+  border-color: var(--c-accent);
+  border-width: 1.5px;
+}
+
+.stat-divider {
+  border-top: .5px dashed var(--c-border);
+  padding-top: 10px;
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ─────────────────────────────────────────
+   STAT STRIP
+───────────────────────────────────────── */
+.stat-strip {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1px;
+  background: var(--c-border);
+  border-radius: var(--r-card);
+  overflow: hidden;
+  border: .5px solid var(--c-border);
+}
+.stat-cell {
+  background: var(--c-white);
+  padding: 20px 16px;
+  text-align: center;
+}
+.stat-num {
+  font-family: var(--f-sans);
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--c-forest);
+  line-height: 1;
+}
+.stat-num sup { font-size: 14px; vertical-align: super; }
+.stat-desc {
+  font-size: 10px;
+  color: var(--c-text-muted);
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* ─────────────────────────────────────────
+   BUTTONS
+───────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--f-sans);
+  font-size: 13px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity .15s, transform .1s;
+}
+.btn:hover { opacity: .88; transform: translateY(-1px); }
+.btn-primary  { background: var(--c-forest);  color: #fff; padding: 12px 24px; border-radius: var(--r-pill); }
+.btn-accent   { background: var(--c-accent);  color: #fff; padding: 12px 24px; border-radius: var(--r-pill); }
+.btn-outline  { background: transparent; color: var(--c-forest); padding: 11px 22px; border-radius: var(--r-pill); border: 1.5px solid var(--c-forest); }
+.btn-ghost    { background: transparent; color: var(--c-forest); padding: 0; text-decoration: underline; text-underline-offset: 3px; font-weight: 600; }
+.btn-ghost:hover { opacity: .7; transform: none; }
+
+/* ─────────────────────────────────────────
+   BADGES
+───────────────────────────────────────── */
+.badge {
+  display: inline-block;
+  font-family: var(--f-sans);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+.badge-forest  { background: var(--c-forest); color: #fff; }
+.badge-accent  { background: var(--c-accent-light); color: var(--c-accent); }
+.badge-sage    { background: var(--c-sage); color: var(--c-forest-mid); }
+.badge-outline { background: transparent; color: var(--c-forest); border: 1px solid var(--c-border-md); }
+
+/* ─────────────────────────────────────────
+   FORM
+───────────────────────────────────────── */
+.inp {
+  width: 100%;
+  background: var(--c-white);
+  border: .5px solid var(--c-border-md);
+  border-radius: var(--r-sm);
+  padding: 11px 14px;
+  font-family: var(--f-sans);
+  font-size: 13px;
+  color: var(--c-text);
+  outline: none;
+  transition: border-color .15s;
+}
+.inp:focus { border-color: var(--c-accent); }
+.inp::placeholder { color: var(--c-text-muted); }
+.inp-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--c-text-muted); margin-bottom: 5px; display: block; }
+
+/* ─────────────────────────────────────────
+   ACCORDION
+───────────────────────────────────────── */
+.acc-row {
+  border-top: .5px solid var(--c-border);
+  padding: 12px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.acc-row:last-child { border-bottom: .5px solid var(--c-border); }
+.acc-q   { font-size: 13px; font-weight: 500; color: var(--c-text); }
+.acc-icon {
+  width: 22px; height: 22px; flex-shrink: 0;
+  border: .5px solid var(--c-border-md);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; color: var(--c-text-mid);
+}
+
+/* ─────────────────────────────────────────
+   FOOTER CTA BANNER
+───────────────────────────────────────── */
+.footer-cta {
+  background: var(--c-forest);
+  border-radius: var(--r-card);
+  padding: 36px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.footer-phone {
+  font-family: var(--f-sans);
+  font-size: 22px;
+  font-weight: 800;
+  color: #fff;
+}
+
+/* ─────────────────────────────────────────
+   COMPARISON
+───────────────────────────────────────── */
+.comp-num { font-family: var(--f-sans); font-size: 24px; font-weight: 800; line-height: 1; }
+.comp-lbl { font-size: 9px; color: var(--c-text-muted); font-weight: 600; margin-top: 2px; text-transform: uppercase; letter-spacing: .06em; }
+
+/* ─────────────────────────────────────────
+   SPACING REFERENCE
+───────────────────────────────────────── */
+.sp-row { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.sp-box { background: var(--c-sage); border-radius: 3px; flex-shrink: 0; }
+.sp-info { font-size: 11px; color: var(--c-text-mid); }
+.sp-token { font-weight: 700; }
+.sp-val { color: var(--c-text-muted); }
+
+/* ─────────────────────────────────────────
+   PRINT / EXPORT NOTES
+───────────────────────────────────────── */
+@media print {
+  .ds-header { margin: 0 0 40px; }
+  .section { page-break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ── PAGE HEADER ────────────────────── -->
+  <div class="ds-header">
+    <div class="ds-header-tag">Design System v1.0</div>
+    <div class="ds-header-title">We Buy Houses <em>St Petersburg</em></div>
+    <div class="ds-header-sub">Fonts: Manrope + DM Serif Display &nbsp;·&nbsp; Colours extracted from brand reference</div>
+    <div class="ds-header-meta">
+      <div class="ds-meta-item"><div class="ds-meta-label">Primary Font</div><div class="ds-meta-val">Manrope</div></div>
+      <div class="ds-meta-item"><div class="ds-meta-label">Accent Font</div><div class="ds-meta-val">DM Serif Display Italic</div></div>
+      <div class="ds-meta-item"><div class="ds-meta-label">Primary Colour</div><div class="ds-meta-val">#1F3D2E Forest</div></div>
+      <div class="ds-meta-item"><div class="ds-meta-label">Accent Colour</div><div class="ds-meta-val">#4FA86B Green</div></div>
+      <div class="ds-meta-item"><div class="ds-meta-label">Background</div><div class="ds-meta-val">#F3F0EA Cream</div></div>
+    </div>
+  </div>
+
+  <!-- ── 1. COLOUR PALETTE ─────────────── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-label">01</div>
+      <div class="section-title">Colour Palette</div>
+    </div>
+    <div class="grid6">
+      <div class="sw"><div class="sw-fill" style="background:#1F3D2E"></div><div class="sw-body"><div class="sw-name">Forest</div><div class="sw-role">Primary dark, nav, footers</div><div class="sw-hex">#1F3D2E</div></div></div>
+      <div class="sw"><div class="sw-fill" style="background:#2B5240"></div><div class="sw-body"><div class="sw-name">Forest Mid</div><div class="sw-role">Secondary dark surfaces</div><div class="sw-hex">#2B5240</div></div></div>
+      <div class="sw"><div class="sw-fill" style="background:#4FA86B"></div><div class="sw-body"><div class="sw-name">Accent Green</div><div class="sw-role">CTAs, highlights, active</div><div class="sw-hex">#4FA86B</div></div></div>
+      <div class="sw"><div class="sw-fill" style="background:#C8D9C4"></div><div class="sw-body"><div class="sw-name">Sage</div><div class="sw-role">Borders, muted fills</div><div class="sw-hex">#C8D9C4</div></div></div>
+      <div class="sw"><div class="sw-fill" style="background:#E2EDE0"></div><div class="sw-body"><div class="sw-name">Sage Light</div><div class="sw-role">Card backgrounds</div><div class="sw-hex">#E2EDE0</div></div></div>
+      <div class="sw"><div class="sw-fill" style="background:#F3F0EA;border:.5px solid #ddd"></div><div class="sw-body"><div class="sw-name">Cream</div><div class="sw-role">Page background</div><div class="sw-hex">#F3F0EA</div></div></div>
+    </div>
+  </div>
+
+  <!-- ── 2. TYPOGRAPHY ─────────────────── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-label">02</div>
+      <div class="section-title">Typography Scale</div>
+    </div>
+
+    <div class="type-specimen flex items-baseline gap-lg">
+      <div class="type-meta-col"><div class="ts-role">Hero H1</div><div class="ts-spec">Manrope 800<br>+ DM Serif Italic<br>for accent words<br>32px / 1.1</div></div>
+      <div class="t-hero">We Buy Houses In <em>St Petersburg</em> For Fast, Fair Cash</div>
+    </div>
+
+    <div class="type-specimen flex items-baseline gap-lg">
+      <div class="type-meta-col"><div class="ts-role">Section H2</div><div class="ts-spec">Manrope 700<br>+ DM Serif Italic<br>22px / 1.2</div></div>
+      <div class="t-h2">How our <em>cash offer process</em> works.</div>
+    </div>
+
+    <div class="type-specimen flex items-baseline gap-lg">
+      <div class="type-meta-col"><div class="ts-role">Card H3</div><div class="ts-spec">Manrope 600<br>15px / 1.3</div></div>
+      <div class="t-h3">Inspection (As–Is)</div>
+    </div>
+
+    <div class="type-specimen flex items-baseline gap-lg">
+      <div class="type-meta-col"><div class="ts-role">Body</div><div class="ts-spec">Manrope 400<br>13px / 1.65</div></div>
+      <div class="t-body" style="max-width:560px">Our process is transparent and speed-focused. From inquiry to cash offer to closing on your timeline — no waiting for mortgage approvals, no buyer financing falling through.</div>
+    </div>
+
+    <div class="type-specimen flex items-baseline gap-lg">
+      <div class="type-meta-col"><div class="ts-role">Small / Caption</div><div class="ts-spec">Manrope 400<br>11px / 1.55<br>muted</div></div>
+      <div class="t-small">We've purchased over 500+ homes across the Tampa Bay area since 2015.</div>
+    </div>
+
+    <div class="type-specimen flex items-center gap-lg">
+      <div class="type-meta-col"><div class="ts-role">Label + Stat</div><div class="ts-spec">Manrope 700<br>9px uppercase<br>+ 12px value</div></div>
+      <div class="flex gap-lg items-center">
+        <span class="t-label">Time</span><span class="t-stat">~2 MIN</span>
+        <span class="t-label">Within</span><span class="t-stat">24 HRS</span>
+        <span class="t-label">Repairs</span><span class="t-stat">NONE</span>
+        <span class="t-label">Close In</span><span class="t-stat">7–14 DAYS</span>
+      </div>
+    </div>
+
+    <div class="type-specimen flex items-baseline gap-lg" style="margin-bottom:0;padding-bottom:0;border:none">
+      <div class="type-meta-col"><div class="ts-role">Step Number</div><div class="ts-spec">DM Serif Display<br>Italic<br>40px<br>Accent green</div></div>
+      <div style="display:flex;gap:24px">
+        <span class="t-step">01</span>
+        <span class="t-step">02</span>
+        <span class="t-step">03</span>
+        <span class="t-step">04</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 3. HERO STAT STRIP ─────────────── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-label">03</div>
+      <div class="section-title">Hero Stat Strip</div>
+    </div>
+    <div class="stat-strip">
+      <div class="stat-cell"><div class="stat-num">24<sup>hr</sup></div><div class="stat-desc">Offer turnaround</div></div>
+      <div class="stat-cell"><div class="stat-num">7</div><div class="stat-desc">Days to close</div></div>
+      <div class="stat-cell"><div class="stat-num">$0</div><div class="stat-desc">Fees or commissions</div></div>
+      <div class="stat-cell"><div class="stat-num">500<sup>+</sup></div><div class="stat-desc">Homes purchased</div></div>
+    </div>
+  </div>
+
+  <!-- ── 4. STEP CARDS ──────────────────── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-label">04</div>
+      <div class="section-title">Step Card Component</div>
+    </div>
+    <div class="grid4">
+      <div class="card">
+        <div class="t-step">01</div>
+        <div class="t-h3" style="margin:8px 0 5px">Inquiry</div>
+        <div class="t-body">Reach out by phone, email, or our online form. Share basic details about your St Petersburg property.</div>
+        <div class="stat-divider"><span class="t-label">Time</span><span class="t-stat">~2 MIN</span></div>
+      </div>
+      <div class="card card-accent-border">
+        <div class="t-step">02</div>
+        <div class="t-h3" style="margin:8px 0 5px">Cash Offer</div>
+        <div class="t-body">We evaluate your home and present a fair, no-obligation cash offer — usually within 24 hours.</div>
+        <div class="stat-divider"><span class="t-label">Within</span><span class="t-stat">24 HRS</span></div>
+      </div>
+      <div class="card">
+        <div class="t-step">03</div>
+        <div class="t-h3" style="margin:8px 0 5px">Inspection</div>
+        <div class="t-body">We inspect the property as-is. No required repairs, no staging, no cleaning.</div>
+        <div class="stat-divider"><span class="t-label">Repairs</span><span class="t-stat">NONE</span></div>
+      </div>
+      <div class="card">
+        <div class="t-step">04</div>
+        <div class="t-h3" style="margin:8px 0 5px">Closing</div>
+        <div class="t-body">Choose your closing date. We close in as little as 7 days — no financing contingencies.</div>
+        <div class="stat-divider"><span class="t-label">Close In</span><span class="t-stat">7–14 DAYS</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 5. CARD VARIANTS ───────────────── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-label">05</div>
+      <div class="section-title">Card Variants</div>
+    </div>
+    <div class="grid3">
+      <div class="card">
+        <div class="t-label" style="margin-bottom:6px">Light Card · Default</div>
+        <div class="t-h3" style="margin-bottom:5px">No hidden fees</div>
+        <div class="t-body">White surface with subtle border. Used for features, testimonials, and resource rows throughout the page.</div>
+      </div>
+      <div class="card-sage">
+        <div class="t-label" style="margin-bottom:6px">Sage Card · Secondary</div>
+        <div class="t-h3" style="margin-bottom:5px">Areas We Serve</div>
+        <div class="t-body">Sage-light fill. Used for geographic content, service areas, and soft trust signal sections.</div>
+      </div>
+      <div class="card-dark">
+        <div class="t-label" style="margin-bottom:6px;color:rgba(255,255,255,.4)">Dark Card · Emphasis</div>
+        <div class="t-h3" style="margin-bottom:5px;color:#fff">Certainty &amp; Bonus</div>
+        <div class="t-body" style="color:rgba(255,255,255,.62)">Forest background. Used for highlighted callout blocks, comparison panels, and inline CTAs.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 6. COMPARISON ─────────────────── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-label">06</div>
+      <div class="section-title">Traditional Sale vs. Cash Sale</div>
+    </div>
+    <div class="grid2">
+      <div class="card" style="opacity:.78">
+        <div class="flex justify-between items-center" style="margin-bottom:10px">
+          <div class="t-h3">Traditional Sale</div>
+          <span class="badge badge-outline">Typical</span>
+        </div>
+        <div class="t-body" style="margin-bottom:14px">Subject to financing, inspections, and buyer contingencies. Timeline is unpredictable.</div>
+        <div class="flex gap-lg">
+          <div><div class="comp-num" style="color:var(--c-text-mid)">9</div><div class="comp-lbl">Day avg list</div></div>
+          <div><div class="comp-num" style="color:var(--c-text-mid)">14W</div><div class="comp-lbl">To close</div></div>
+        </div>
+      </div>
+      <div class="card card-accent-border">
+        <div class="flex justify-between items-center" style="margin-bottom:10px">
+          <div class="t-h3">Cash Sale</div>
+          <span class="badge badge-accent">Our Offer</span>
+        </div>
+        <div class="t-body" style="margin-bottom:14px">No repairs, no fees, no contingencies. You choose the closing date and we handle the rest.</div>
+        <div class="flex gap-lg">
+          <div><div class="comp-num" style="color:var(--c-accent)">7</div><div class="comp-lbl">Day offer</div></div>
+          <div><div class="comp-num" style="color:var(--c-accent)">11W</div><div class="comp-lbl">Faster avg</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 7. BUTTONS ────────────────────── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-label">07</div>
+      <div class="section-title">Buttons</div>
+    </div>
+    <div style="background:var(--c-white);border:.5px solid var(--c-border);border-radius:var(--r-card);padding:24px 24px;">
+      <div class="flex flex-wrap gap-md items-center" style="margin-bottom:20px">
+        <button class="btn btn-primary">Start step 1 →</button>
+        <button class="btn btn-accent">Get My Cash Offer →</button>
+        <button class="btn btn-outline">Learn More →</button>
+        <button class="btn btn-ghost">Learn more about how it works →</button>
+      </div>
+      <hr class="rule">
+      <div style="background:var(--c-forest);border-radius:var(--r-md);padding:16px 20px;display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+        <span class="t-label" style="color:rgba(255,255,255,.45)">On dark bg:</span>
+        <button class="btn btn-accent">Get My Cash Offer →</button>
+        <button class="btn" style="background:rgba(255,255,255,.12);color:#fff;padding:11px 22px;border-radius:var(--r-pill);">Learn More</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 8. BADGES ─────────────────────── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-label">08</div>
+      <div class="section-title">Badges &amp; Labels</div>
+    </div>
+    <div class="card">
+      <div class="flex flex-wrap gap-sm items-center">
+        <span class="badge badge-forest">No Repairs</span>
+        <span class="badge badge-accent">24 hr Offer</span>
+        <span class="badge badge-sage">As-Is</span>
+        <span class="badge badge-outline">No Fees</span>
+        <span class="badge badge-forest">Close in 7–14 Days</span>
+        <span class="badge badge-accent">Cash Buyer</span>
+        <span class="badge badge-sage">St Petersburg</span>
+        <span class="badge badge-outline">No Commission</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 9. FORM ───────────────────────── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-label">09</div>
+      <div class="section-title">Lead Capture Form</div>
+    </div>
+    <div class="grid2" style="align-items:start">
+      <div class="card">
+        <div class="t-h3" style="margin-bottom:4px">Get your cash offer today</div>
+        <div class="t-body" style="margin-bottom:16px">No obligation. No fees. Close in as little as 7 days.</div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div><label class="inp-label">Property Address</label><input class="inp" type="text" placeholder="123 Main St, St Petersburg, FL"></div>
+          <div><label class="inp-label">Your Name</label><input class="inp" type="text" placeholder="Full name"></div>
+          <div><label class="inp-label">Phone Number</label><input class="inp" type="tel" placeholder="(727) 000-0000"></div>
+          <button class="btn btn-accent" style="width:100%;justify-content:center;margin-top:4px">Get My Cash Offer →</button>
+          <div class="t-small" style="text-align:center">We never share your information. No spam, ever.</div>
+        </div>
+      </div>
+      <div>
+        <div class="card-sage" style="margin-bottom:12px">
+          <div class="t-label" style="margin-bottom:6px">Form States</div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <input class="inp" type="text" value="123 Main St" style="border-color:var(--c-accent)">
+            <div class="t-small" style="color:var(--c-accent)">✓ Address verified</div>
+            <input class="inp" type="text" placeholder="Error state" style="border-color:#D94F3D">
+            <div class="t-small" style="color:#D94F3D">Please enter a valid address</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="t-label" style="margin-bottom:8px">Trust Signals (below form)</div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <div class="t-small">✓ &nbsp;No obligation whatsoever</div>
+            <div class="t-small">✓ &nbsp;Offer in under 24 hours</div>
+            <div class="t-small">✓ &nbsp;Close on your timeline</div>
+            <div class="t-small">✓ &nbsp;500+ homes purchased</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 10. FAQ ACCORDION ─────────────── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-label">10</div>
+      <div class="section-title">FAQ Accordion</div>
+    </div>
+    <div class="card">
+      <div class="acc-row"><span class="acc-q">What are the top types of houses to buy in St Petersburg?</span><div class="acc-icon">+</div></div>
+      <div class="acc-row"><span class="acc-q">How fast will I receive my offer?</span><div class="acc-icon">+</div></div>
+      <div class="acc-row">
+        <div style="flex:1">
+          <div class="acc-q" style="margin-bottom:8px">Are there any fees or commissions to pay?</div>
+          <div class="t-body">No fees, no commissions, no closing costs. We handle everything — the offer you receive is the exact amount you walk away with at closing.</div>
+        </div>
+        <div class="acc-icon" style="align-self:flex-start">−</div>
+      </div>
+      <div class="acc-row"><span class="acc-q">How does the inspection process work?</span><div class="acc-icon">+</div></div>
+      <div class="acc-row"><span class="acc-q">Can I sell my house if it needs major repairs?</span><div class="acc-icon">+</div></div>
+    </div>
+  </div>
+
+  <!-- ── 11. SPACING ───────────────────── -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-label">11</div>
+      <div class="section-title">Spacing Scale</div>
+    </div>
+    <div class="card">
+      <div class="sp-row"><div class="sp-box" style="width:4px;height:16px"></div><div class="sp-info"><span class="sp-token">--sp-xs</span> &nbsp;<span class="sp-val">4px — icon gaps, tight inline spacing</span></div></div>
+      <div class="sp-row"><div class="sp-box" style="width:8px;height:16px"></div><div class="sp-info"><span class="sp-token">--sp-sm</span> &nbsp;<span class="sp-val">8px — badge gaps, card internal tight spacing</span></div></div>
+      <div class="sp-row"><div class="sp-box" style="width:16px;height:16px"></div><div class="sp-info"><span class="sp-token">--sp-md</span> &nbsp;<span class="sp-val">16px — component internal padding, grid gaps</span></div></div>
+      <div class="sp-row"><div class="sp-box" style="width:24px;height:16px"></div><div class="sp-info"><span class="sp-token">--sp-lg</span> &nbsp;<span class="sp-val">24px — section sub-spacing, card padding</span></div></div>
+      <div class="sp-row"><div class="sp-box" style="width:40px;height:16px"></div><div class="sp-info"><span class="sp-token">--sp-xl</span> &nbsp;<span class="sp-val">40px — section top margin, large layout gaps</span></div></div>
+      <div class="sp-row" style="margin-bottom:0"><div class="sp-box" style="width:64px;height:16px"></div><div class="sp-info"><span class="sp-token">--sp-2xl</span> &nbsp;<span class="sp-val">64px — between major page sections</span></div></div>
+    </div>
+  </div>
+
+  <!-- ── 12. FOOTER CTA ────────────────── -->
+  <div class="section" style="margin-bottom:0">
+    <div class="section-header">
+      <div class="section-label">12</div>
+      <div class="section-title">Footer CTA Banner</div>
+    </div>
+    <div class="footer-cta">
+      <div>
+        <div class="t-label" style="color:rgba(255,255,255,.4);margin-bottom:8px">Ready to sell?</div>
+        <div class="t-h2" style="color:#fff;font-size:20px">Get your <em>cash offer</em> in<br><em>St Petersburg</em> today.</div>
+        <button class="btn btn-accent" style="margin-top:16px">Get My Cash Offer →</button>
+      </div>
+      <div style="text-align:right">
+        <div class="t-label" style="color:rgba(255,255,255,.4);margin-bottom:6px">Or call us directly</div>
+        <div class="footer-phone">(727) 477 9998</div>
+        <div class="t-small" style="color:rgba(255,255,255,.4);margin-top:4px">Mon–Sat, 8am–7pm EST</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

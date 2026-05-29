@@ -1,0 +1,168 @@
+/* Prevent horizontal bleed / scroll from overflow children */
+
+html {
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+main {
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+.topbar {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.site-header {
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
+}
+
+.site-header {
+  isolation: isolate;
+}
+
+.topbar .wrap,
+.site-header .nav {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: visible;
+  align-items: center;
+}
+
+/* Nav row: allow flex children to shrink instead of pushing past viewport */
+.nav {
+  flex-wrap: nowrap;
+}
+
+.nav-links {
+  min-width: 0;
+}
+
+.nav-cta {
+  min-width: 0;
+}
+
+.brand {
+  min-width: 0;
+  max-width: min(52vw, 320px);
+}
+
+.site-header .brand {
+  max-width: 168px;
+}
+
+@media (min-width: 760px) {
+  .brand {
+    max-width: min(40vw, 360px);
+  }
+
+  .site-header .brand {
+    max-width: 168px;
+  }
+}
+
+@media (min-width: 980px) and (max-width: 1199px) {
+  .brand {
+    max-width: 240px;
+  }
+
+  .site-header .brand {
+    max-width: 168px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .brand {
+    max-width: none;
+  }
+
+  .site-header .brand {
+    max-width: 168px;
+  }
+
+  .brand-name,
+  .brand-name small {
+    overflow: visible;
+    text-overflow: clip;
+  }
+}
+
+.brand-name,
+.brand-name small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Tighter nav between desktop breakpoint and wide layout */
+@media (min-width: 980px) and (max-width: 1240px) {
+  .nav-links > li > a,
+  .nav-links > li > button {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  .nav-cta {
+    gap: 8px;
+  }
+
+  .nav-cta .btn--cta {
+    padding: 10px 16px;
+    font-size: 13.5px;
+  }
+
+  .nav-phone {
+    font-size: 13px;
+  }
+
+  .nav-phone .ico {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* Hero + form: clip decorative overflow inside content width */
+.hero {
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+.hero > .wrap {
+  overflow-x: clip;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  width: 100%;
+}
+
+.hero-body {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.hero-portrait,
+.hero-portrait__img {
+  max-width: 100%;
+  min-width: 0;
+}
+
+.hero .lead-card {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Closed mobile drawer must not affect layout width */
+.nav-drawer:not([data-open]) {
+  visibility: hidden;
+  pointer-events: none;
+}
