@@ -4,6 +4,7 @@
   overflow: visible;
 }
 
+
 .site-header .nav {
   overflow: visible;
 }
@@ -18,5 +19,8 @@
 @media (min-width: 980px) {
   .site-header .nav-links {
     justify-content: center;
+  }
+    .nav-cta .btn--cta {
+    display:none; 
   }
 }
