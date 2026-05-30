@@ -4,6 +4,7 @@
   --offer-box-w: 172px;
   --offer-box-h: 92px;
   background: var(--sand);
+  padding-block-end: var(--section-y); 
 }
 
 .offer-formula-wrap {
