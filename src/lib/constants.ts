@@ -16,7 +16,7 @@ export const SITE = {
 } as const;
 
 export const TOPBAR = {
-  rating: "Rated 5.0 by 120+ Tampa Bay home sellers",
+  rating: "Rated 5.0 by 120+ St. Petersburg",
   bbb: "BBB A+ Accredited",
   homes: "500+ Homes Bought",
 } as const;
