@@ -38,13 +38,20 @@ export function Footer() {
                 </svg>
                 {SITE.email}
               </a>
-              <span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 1 1 18 0z" />
-                  <circle cx="12" cy="10" r="3" />
-                </svg>
-                {SITE.address}
-              </span>
+<a href="https://maps.app.goo.gl/WLWfNKY5PqvBVPXy5"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="hover:opacity-75 transition-opacity"
+  style={{ textDecoration: 'none', color: 'inherit' }}
+>
+  <span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 1 1 18 0z" />
+      <circle cx="12" cy="10" r="3" />
+    </svg>
+    {SITE.address}
+  </span>
+</a>
             </div>
           </div>
 
