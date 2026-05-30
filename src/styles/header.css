@@ -20,7 +20,11 @@
   .site-header .nav-links {
     justify-content: center;
   }
-    .nav-cta .btn--cta {
+
+}
+
+@media (max-width:980px) {
+      .nav-cta .btn--cta {
     display:none; 
   }
 }
