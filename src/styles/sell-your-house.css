@@ -61,7 +61,7 @@
 
 .sit h4 {
   font-family: var(--sans);
-  font-weight: 600;
+  font-weight: 400;
   font-size: 20px;
   margin: 0 0 4px;
 }
@@ -91,7 +91,7 @@
 
 .legal h3 {
   font-family: var(--sans);
-  font-weight: 600;
+  font-weight: 400;
   font-size: 22px;
   margin: 0 0 4px;
 }

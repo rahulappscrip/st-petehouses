@@ -3,7 +3,7 @@ import { TopBar } from "@/components/layout/TopBar";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileCallBar } from "@/components/layout/MobileCallBar";
-import { inter } from "@/lib/fonts";
+import { dmSerifDisplay, inter } from "@/lib/fonts";
 import { ASSETS, SITE } from "@/lib/constants";
 import { REAL_ESTATE_AGENT_JSON_LD } from "@/lib/schema";
 import "./globals.css";
@@ -35,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`${inter.variable} ${dmSerifDisplay.variable}`}>
       <head>
         <link rel="icon" href={ASSETS.favicon} type="image/png" />
         <link rel="shortcut icon" href={ASSETS.favicon} type="image/png" />

@@ -50,13 +50,13 @@
   text-transform: uppercase;
   color: var(--ink-soft);
   line-height: 1.35;
-  max-width: 16ch;
+  max-width: 42ch;
 }
 
 .calc-field__value {
   font-family: var(--sans);
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--ink);
   white-space: nowrap;
   flex-shrink: 0;
@@ -136,7 +136,7 @@
 }
 
 .calc-breakdown__total {
-  font-weight: 600;
+  font-weight: 400;
   color: var(--paper);
   font-size: 16px;
 }

@@ -281,10 +281,6 @@
 
 /* ——— Mobile ——— */
 @media (max-width: 767px) {
-  .hero-header .h-display {
-    font-size: clamp(32px, 8.5vw, 44px);
-  }
-
   .hero-body {
     gap: 28px;
   }

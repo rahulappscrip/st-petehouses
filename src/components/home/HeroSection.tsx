@@ -143,7 +143,7 @@ export function HeroSection({ content = DEFAULT_HERO }: { content?: HeroContent 
               </button>
             </form>
 
-            <div className="lead-trust">
+            {/* <div className="lead-trust">
               <div className="lead-trust__avatars" aria-hidden="true">
                 <span>DH</span>
                 <span>MC</span>
@@ -153,7 +153,7 @@ export function HeroSection({ content = DEFAULT_HERO }: { content?: HeroContent 
                 <span className="lead-trust__stars">★★★★★</span>
                 <span className="lead-trust__text">Rated 5.0/5 by Tampa Bay home sellers</span>
               </div>
-            </div>
+            </div> */}
           </Reveal>
         </div>
       </div>
