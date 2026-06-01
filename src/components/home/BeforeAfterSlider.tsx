@@ -1,20 +1,16 @@
 "use client";
 
+import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 type Props = {
-  beforeLabel: string;
-  afterLabel: string;
-  beforeTone?: "ink" | "sun" | "teal";
-  afterTone?: "ink" | "sun" | "teal";
+  beforeSrc: string;
+  afterSrc: string;
+  beforeAlt: string;
+  afterAlt: string;
 };
 
-export function BeforeAfterSlider({
-  beforeLabel,
-  afterLabel,
-  beforeTone = "ink",
-  afterTone = "sun",
-}: Props) {
+export function BeforeAfterSlider({ beforeSrc, afterSrc, beforeAlt, afterAlt }: Props) {
   const frameRef = useRef<HTMLDivElement>(null);
   const [pos, setPos] = useState(50);
   const dragging = useRef(false);
@@ -96,24 +92,12 @@ export function BeforeAfterSlider({
   return (
     <div className="ba-frame" ref={frameRef}>
       <div className="ba-side ba-before">
-        <div
-          className="ph"
-          data-tone={beforeTone}
-          data-label={beforeLabel}
-          style={{ border: "none", borderRadius: 0, height: "100%" }}
-          aria-hidden
-        />
+        <Image src={beforeSrc} alt={beforeAlt} fill sizes="(min-width: 880px) 50vw, 100vw" className="ba-side__img" />
       </div>
       <div className="ba-side ba-after">
-        <div
-          className="ph"
-          data-tone={afterTone}
-          data-label={afterLabel}
-          style={{ border: "none", borderRadius: 0, height: "100%" }}
-          aria-hidden
-        />
+        <Image src={afterSrc} alt={afterAlt} fill sizes="(min-width: 880px) 50vw, 100vw" className="ba-side__img" />
       </div>
-      <button className="ba-handle" type="button" aria-label="Drag to reveal">
+      <button className="ba-handle" type="button" aria-label="Drag to reveal before and after">
         <span className="ba-handle-line" aria-hidden="true" />
         <span className="ba-handle-pill" aria-hidden="true">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" aria-hidden>

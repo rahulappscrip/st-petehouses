@@ -1,16 +1,13 @@
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
-import { AREA_CITIES, AREA_COUNTIES } from "@/lib/constants";
+import { AreaServiceMap } from "@/components/home/AreaServiceMap";
+import { AREA_CITIES } from "@/lib/constants";
 import type { ReactNode } from "react";
-
-const PIN_CLASSES = ["you l1", "l2", "l3", "l4", "l5", "l6"] as const;
-const PIN_LABELS = ["St Petersburg", "Dunedin", "Tampa", "Largo", "Bradenton", "Clearwater"] as const;
 
 type AreasSectionProps = {
   eyebrow?: string;
   title?: ReactNode;
   lede?: string;
-  showCounties?: boolean;
   listHeading?: string;
 };
 
@@ -22,7 +19,6 @@ export function AreasSection({
     </>
   ),
   lede = "We serve St. Petersburg, Pinellas County, and the greater Tampa Bay area. Hyper-local coverage means we know the neighborhoods, market trends, and what makes each community unique — from Historic Kenwood to Disston Heights and beyond.",
-  showCounties = true,
   listHeading = "Service area — cities",
 }: AreasSectionProps = {}) {
   return (
@@ -35,13 +31,7 @@ export function AreasSection({
         </Reveal>
 
         <div className="areas-grid">
-          <Reveal className="area-map" role="img" aria-label="Map highlighting Tampa Bay service area">
-            {PIN_LABELS.map((label, i) => (
-              <span key={label} className={`pin-label ${PIN_CLASSES[i]}`}>
-                {label}
-              </span>
-            ))}
-          </Reveal>
+          <AreaServiceMap />
 
           <Reveal d={1} className="areas-aside">
             <h3>{listHeading}</h3>
@@ -52,18 +42,6 @@ export function AreasSection({
                 </li>
               ))}
             </ul>
-            {showCounties ? (
-              <>
-                <h3 style={{ marginTop: 30 }}>Counties</h3>
-                <ul className="area-list">
-                  {AREA_COUNTIES.map((c) => (
-                    <li key={c.label}>
-                      <Link href={c.href}>{c.label}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </>
-            ) : null}
             <Link href="/#areas" className="btn btn--link" style={{ marginTop: 18 }}>
               All service areas →
             </Link>

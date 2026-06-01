@@ -16,14 +16,14 @@ export type HeroContent = {
 export const DEFAULT_HERO: HeroContent = {
   title: (
     <>
-      We Buy Houses In <em>St&nbsp;Petersburg</em> For Fast, Fair Cash
+      We Buy Houses for Cash In <em>St. Pete</em> 
     </>
   ),
-  subheadline: "Sell your St Pete house fast for cash. No agents, no fees, no repairs.",
+  subheadline: "Sell your St. Petersburg house as-is without repairs, commissions, or showings. Get a fair offer from a local buyer and choose a closing date that works for you.",
   formEyebrow: "Get your fair cash offer today",
   formTitle: (
     <>
-      See <em>how much</em> cash you&apos;ll get today.
+      Get Your <em>Fair Offer</em> Today.
     </>
   ),
   formIntro: "We buy houses fast, as-is, and stress-free. No repairs or out-of-pocket costs.",
@@ -143,7 +143,7 @@ export function HeroSection({ content = DEFAULT_HERO }: { content?: HeroContent 
               </button>
             </form>
 
-            <div className="lead-trust">
+            {/* <div className="lead-trust">
               <div className="lead-trust__avatars" aria-hidden="true">
                 <span>DH</span>
                 <span>MC</span>
@@ -153,7 +153,7 @@ export function HeroSection({ content = DEFAULT_HERO }: { content?: HeroContent 
                 <span className="lead-trust__stars">★★★★★</span>
                 <span className="lead-trust__text">Rated 5.0/5 by Tampa Bay home sellers</span>
               </div>
-            </div>
+            </div> */}
           </Reveal>
         </div>
       </div>

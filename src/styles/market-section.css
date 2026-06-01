@@ -6,8 +6,29 @@
   border-bottom: 1px solid var(--line-soft);
 }
 
+.market-section h2 {
+  max-width: 683px;
+}
+
 .market-grid {
   margin-bottom: clamp(40px, 5vw, 56px);
+}
+
+.market-chart {
+  position: relative;
+  min-height: 380px;
+  /* border: 1px solid var(--line); */
+  border-radius: var(--radius);
+  overflow: hidden;
+  /* background: var(--sand); */
+}
+
+.market-chart__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 380px;
+  object-fit: contain;
 }
 
 .market-local {
@@ -27,7 +48,7 @@
 
 .market-local__title {
   font-family: var(--sans);
-  font-weight: 700;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.3;
   color: var(--ink);

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap");
+
 @import "../styles/reference-layout.css";
 @import "../styles/hero.css";
 @import "../styles/layout-fixes.css";
@@ -6,8 +8,11 @@
 @import "../styles/sell-your-house.css";
 @import "../styles/how-it-works.css";
 @import "../styles/offer-math.css";
+@import "../styles/seller-situations.css";
+@import "../styles/meet-owner.css";
 @import "../styles/savings-estimator.css";
 @import "../styles/pros-cons.css";
 @import "../styles/market-section.css";
 @import "../styles/testimonials.css";
 @import "../styles/situation-page.css";
+@import "../styles/mobile-nav.css";

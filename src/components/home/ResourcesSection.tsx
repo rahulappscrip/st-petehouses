@@ -44,10 +44,10 @@ export function ResourcesSection() {
             {BEFORE_AFTER.map((item, i) => (
               <Reveal key={item.title} as="article" d={i > 0 ? 1 : undefined} className="ba-card">
                 <BeforeAfterSlider
-                  beforeLabel={item.beforeLabel}
-                  afterLabel={item.afterLabel}
-                  beforeTone="ink"
-                  afterTone={i === 0 ? "sun" : "teal"}
+                  beforeSrc={item.beforeImage}
+                  afterSrc={item.afterImage}
+                  beforeAlt={`${item.beforeLabel} — ${item.title}`}
+                  afterAlt={`${item.afterLabel} — ${item.title}`}
                 />
                 <div className="ba-meta">
                   <h3>{item.title}</h3>
@@ -67,9 +67,6 @@ export function ResourcesSection() {
               </Reveal>
             ))}
           </div>
-          <p className="mono" style={{ marginTop: 18 }}>
-            [IMAGE: Replace before/after slots with real portfolio photos.]
-          </p>
         </div>
       </div>
     </section>

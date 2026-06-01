@@ -4,6 +4,7 @@
   --offer-box-w: 172px;
   --offer-box-h: 92px;
   background: var(--sand);
+  padding-block-end: var(--section-y); 
 }
 
 .offer-formula-wrap {
@@ -109,7 +110,7 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   line-height: 1.35;
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 6px;
   color: var(--ink-soft);
 }
@@ -122,7 +123,7 @@
   display: block;
   font-family: var(--sans);
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.2;
   color: var(--ink);
 }
@@ -179,7 +180,7 @@
 
 .offer-factor__title {
   font-family: var(--sans);
-  font-weight: 700;
+  font-weight: 400;
   font-size: 15px;
   line-height: 1.2;
   color: var(--ink);
@@ -236,7 +237,7 @@
   font-size: 10px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 400;
   padding: 6px 12px;
   border-radius: 999px;
   background: var(--gold);
@@ -245,7 +246,7 @@
 
 .offer-advance__title {
   font-family: var(--sans);
-  font-weight: 700;
+  font-weight: 400;
   font-size: clamp(22px, 2.4vw, 26px);
   line-height: 1.15;
   color: #fff;
@@ -254,8 +255,9 @@
 }
 
 .offer-advance__title em {
+  font-family: inherit;
   font-style: italic;
-  font-weight: 500;
+  font-weight: inherit;
   color: #f3e8c4;
 }
 
@@ -293,7 +295,7 @@
   content: "";
   position: absolute;
   left: 0;
-  top: 8px;
+  top: 5px;
   width: 10px;
   height: 10px;
   border: 2px solid var(--gold);
@@ -320,7 +322,7 @@
   --fg: var(--teal-deep);
   padding: 16px 28px;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   white-space: nowrap;

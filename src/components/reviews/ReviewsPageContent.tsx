@@ -91,7 +91,7 @@ export function ReviewsPageContent() {
             </p>
           </Reveal>
 
-          <div className="trust-grid">
+          {/* <div className="trust-grid">
             {REVIEWS_TRUST_SIGNALS.map((item, i) => (
               <Reveal key={item.title} className="trust-card" d={i > 0 ? (i as 1 | 2 | 3) : undefined}>
                 <span className="ic">
@@ -103,7 +103,26 @@ export function ReviewsPageContent() {
                 <p>{item.body}</p>
               </Reveal>
             ))}
-          </div>
+          </div> */}
+ <div className="trust-grid">
+  {REVIEWS_TRUST_SIGNALS.map((item, i) => (
+    <Reveal key={item.title} className="trust-card" d={i > 0 ? (i as 1 | 2 | 3) : undefined}>
+      <span className="ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+          {TRUST_ICONS[i]}
+        </svg>
+      </span>
+      <h4>{item.title}</h4>
+      <p>
+        {i === 0
+          ? <>We&apos;re at <a href="https://maps.app.goo.gl/WLWfNKY5PqvBVPXy5" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "inherit" }}>PO Box 143, St Petersburg, FL 33731</a> — verifiable in public Florida business records.</>
+          : i === 1
+          ? <>Reach a real person at <a href="tel:+17274778998" style={{ textDecoration: "none", color: "inherit" }}>(727) 477-8998</a> — no offshore call centers or third-party screeners.</>
+          : item.body}
+      </p>
+    </Reveal>
+  ))}
+</div>
         </div>
       </section>
 

@@ -1,7 +1,17 @@
 export const ASSETS = {
   johnPortrait: "/assets/images/john-gardepe.webp",
+  johnCta: "/assets/images/john-gardepe-1.png",
+  ownerJohn: "/assets/images/owner-john.jpg",
   bbbBadge: "/assets/images/bbb-client.png",
   logo: "/assets/images/logo.png",
+  favicon: "/assets/images/we-buy-st-pete-favicon-res.png",
+  marketChart: "/assets/images/Understanding-the-st-pete-market.png",
+  facingForeclosure: "/assets/images/facing-foreclosure.jpg",
+  inheritedHome: "/assets/images/inherited-home.jpg",
+  divorceSeparation: "/assets/images/divorce-or-seperation.jpg",
+  tiredLandlord: "/assets/images/tired-landload.jpg",
+  distressedProperty: "/assets/images/distressed-property.jpg",
+  relocation: "/assets/images/relocation.jpg",
 } as const;
 
 export const SITE = {
@@ -13,10 +23,49 @@ export const SITE = {
   contactEmail: "hello@webuystpetehouses.com",
   address: "PO Box 143, St. Petersburg, FL 33731",
   url: "https://webuystpetehouses.com/",
+  mapsHref: "https://maps.app.goo.gl/WLWfNKY5PqvBVPXy5",
 } as const;
 
+export const HOMEPAGE_SEO = {
+  title: "We Buy Houses In St Petersburg FL | Cash Offer in 24 Hours",
+  description:
+    "Sell your St Petersburg house fast for cash. No repairs, no fees, no commissions. Get a fair cash offer today and close on your timeline—as-is, hassle-free",
+  primaryKeyword: "We Buy Houses In St Petersburg",
+} as const;
+
+export const MEET_OWNER = {
+  eyebrow: "Meet the owner",
+  title: "Hi, I'm John Gardepe.",
+  subtitle: "I'm the owner of We Buy St. Pete Houses.",
+  paragraphs: [
+    {
+      lead: "Our mission is simple:",
+      rest: " help homeowners sell their houses fast, avoid the hassle, and move forward with confidence.",
+      intro:
+        "We're a local home buying company based right here in St. Petersburg.",
+    },
+    "I started this company because I saw too many good people stuck in difficult situations with no easy solution. We believe selling your house should be simple, fair, and stress-free.",
+    "When you work with us, you're not dealing with a big corporation—you're dealing with a local team that truly cares.",
+  ],
+  quote:
+    "We treat every homeowner the way we'd want our own family to be treated. You'll get a fair offer and a team that's with you every step of the way.",
+  ctaTitle: "Get Your No-Obligation Offer",
+  ctaBody: "Tell us a few details about your property and we'll provide a fair cash offer.",
+  ctaButton: "Get my offer now",
+  badgeRole: "Owner",
+  badgeCompany: "We Buy St. Pete Houses",
+} as const;
+
+/** Footer social links — replace `#` with real URLs when ready */
+export const SOCIAL_LINKS = [
+  { label: "Facebook", href: "#", icon: "facebook" },
+  { label: "LinkedIn", href: "#", icon: "linkedin" },
+  { label: "Instagram", href: "#", icon: "instagram" },
+  { label: "Google", href: "#", icon: "google" },
+] as const;
+
 export const TOPBAR = {
-  rating: "Rated 5.0 by 120+ Tampa Bay home sellers",
+  rating: "Rated 5.0 by 120+ St. Petersburg",
   bbb: "BBB A+ Accredited",
   homes: "500+ Homes Bought",
 } as const;
@@ -132,11 +181,6 @@ export const NAV_LINKS = {
       { label: "Hudson", href: "/we-buy-houses-hudson-fl" },
       { label: "New Port Richey", href: "/we-buy-houses-new-port-richey-fl" },
     ],
-    counties: [
-      { label: "Pinellas County", href: "/pinellas-county" },
-      { label: "Hillsborough County", href: "/hillsborough-county" },
-      { label: "Manatee County", href: "/manatee-county" },
-    ],
   },
   situations: [
     { label: "Foreclosure", href: "/situations/foreclosure" },
@@ -144,13 +188,13 @@ export const NAV_LINKS = {
     { label: "Divorce", href: "/situations/divorce" },
     { label: "Inherited house", href: "/situations/inherited" },
     { label: "House with tenants", href: "/situations/tenants" },
-    { label: "House with a mortgage", href: "/situations/mortgage" },
     { label: "Fire damage", href: "/situations/fire-damage" },
     { label: "Water damage", href: "/situations/water-damage" },
     { label: "Mold damage", href: "/situations/mold-damage" },
     { label: "Hoarder house", href: "/situations/hoarder-house" },
     { label: "Bankruptcy", href: "/situations/bankruptcy" },
     { label: "Sell as-is", href: "/situations/sell-as-is" },
+    { label: "House with a mortgage", href: "/situations/mortgage" },
   ],
   company: [
     { label: "About Us", href: "/about" },
@@ -159,6 +203,23 @@ export const NAV_LINKS = {
     { label: "Contact", href: "/contact" },
   ],
 } as const;
+
+/** Footer “We Buy Houses In Any Situation” column — fixed order. */
+export const FOOTER_SITUATIONS = [
+  { label: "Foreclosure", href: "/situations/foreclosure" },
+  { label: "Probate", href: "/situations/probate" },
+  { label: "Divorce", href: "/situations/divorce" },
+  { label: "Inherited house", href: "/situations/inherited" },
+  { label: "House with tenants", href: "/situations/tenants" },
+  { label: "Fire damage", href: "/situations/fire-damage" },
+  { label: "Water damage", href: "/situations/water-damage" },
+  { label: "Mold damage", href: "/situations/mold-damage" },
+  { label: "Hoarder house", href: "/situations/hoarder-house" },
+  { label: "Bankruptcy", href: "/situations/bankruptcy" },
+  { label: "House with a mortgage", href: "/situations/mortgage" },
+  { label: "Sell as-is", href: "/situations/sell-as-is" },
+  { label: "We assume your mortgage", href: "/situations/mortgage" },
+] as const;
 
 export const STATS = [
   {
@@ -171,7 +232,7 @@ export const STATS = [
     value: "10",
     suffix: "days",
     label: "Minimum close",
-    sub: "7–14 days typical. You pick the date.",
+    sub: "10 to 14 days typical. You pick the date.",
   },
   {
     value: "$0",
@@ -181,7 +242,7 @@ export const STATS = [
   {
     value: "500",
     suffix: "+",
-    label: "Tampa Bay homes bought",
+    label: "St. Petersburg homes bought",
     sub: "Local team serving since 2014.",
   },
 ] as const;
@@ -189,30 +250,30 @@ export const STATS = [
 export const PROCESS_STEPS = [
   {
     num: "01",
-    title: "Inquiry",
-    body: "Reach out by phone, email, or our online form. Share basic details about your St Petersburg property.",
+    title: "Let's Talk",
+    body: "Give us a call, send a text, or fill out our form. Tell us a little about your St. Petersburg property and your situation.",
     metaLabel: "Time",
     metaValue: "~ 2 min",
   },
   {
     num: "02",
     title: "Cash Offer",
-    body: "We evaluate your home and present a fair, no-obligation cash offer — usually within 24 hours.",
+    body: "We review the details and provide a fair, no-obligation cash offer — usually within 24 hours.",
     metaLabel: "Within",
     metaValue: "24 hours",
     highlight: true,
   },
   {
     num: "03",
-    title: "Contact Us",
-    body: "We inspect the property as-is. No required repairs, no staging, no cleaning.",
+    title: "Meet At Your Property",
+    body: "We visit your property as-is. No repairs, no cleaning, no staging — just a quick, friendly walkthrough.",
     metaLabel: "Repairs",
     metaValue: "None",
   },
   {
     num: "04",
-    title: "Meet at your property",
-    body: "Choose your closing date. We close in as little as 7 days — no financing contingencies, just a fast, certain close.",
+    title: "Close On Your Timeline",
+    body: "You choose your closing date. We can close in as little as 7 days or whenever works best for you.",
     metaLabel: "Close in",
     metaValue: "7–14 days",
   },
@@ -248,38 +309,53 @@ export const SELL_HOUSE_PROCESS_STEPS = [
   },
 ] as const;
 
-export const SELL_HOUSE_SITUATIONS = [
+export const SELLER_SITUATIONS = [
   {
     title: "Facing foreclosure",
     body: "Stop the process with a fast cash close before the auction date.",
     href: "/situations/foreclosure",
+    image: ASSETS.facingForeclosure,
+    imageAlt: "Front porch of a home with a white entry door",
   },
   {
     title: "Inherited a home",
     body: "Settle the estate without managing repairs or showings.",
     href: "/situations/inherited",
+    image: ASSETS.inheritedHome,
+    imageAlt: "Sunlit living room in an inherited home",
   },
   {
     title: "Divorce or separation",
     body: "Divide assets quickly without prolonged listing periods.",
     href: "/situations/divorce",
+    image: ASSETS.divorceSeparation,
+    imageAlt: "Wedding rings on legal documents",
   },
   {
     title: "Tired landlord",
     body: "Exit problem tenants. We buy with the lease in place if needed.",
     href: "/situations/tenants",
+    image: ASSETS.tiredLandlord,
+    imageAlt: "Landlord holding house keys in front of a rental property",
   },
   {
     title: "Distressed property",
-    body: "Major repairs needed. Skip the contractors — we buy as-is.",
+    body: "Major repairs needed. Skip the contractor — we buy as-is.",
     href: "/situations/sell-as-is",
+    image: ASSETS.distressedProperty,
+    imageAlt: "Older home in need of repair",
   },
   {
     title: "Relocation",
     body: "Move on your schedule without waiting for a buyer to come along.",
-    href: "/situations/mortgage",
+    href: "/how-it-works",
+    image: ASSETS.relocation,
+    imageAlt: "Moving boxes stacked in an empty room",
   },
 ] as const;
+
+/** @deprecated Use SELLER_SITUATIONS */
+export const SELL_HOUSE_SITUATIONS = SELLER_SITUATIONS;
 
 export const SELL_HOUSE_OFFER_BLOCKS = [
   {
@@ -777,21 +853,8 @@ export const AREA_CITIES = [
   { label: "New Port Richey", href: "/we-buy-houses-new-port-richey-fl" },
 ] as const;
 
-export const AREA_COUNTIES = [
-  { label: "Pinellas County", href: "/pinellas-county" },
-  { label: "Hillsborough County", href: "/hillsborough-county" },
-  { label: "Manatee County", href: "/manatee-county" },
-  { label: "Pasco County", href: "/pinellas-county" },
-] as const;
-
-export const MAP_PINS = [
-  "St Petersburg",
-  "Dunedin",
-  "Tampa",
-  "Largo",
-  "Bradenton",
-  "Clearwater",
-] as const;
+export const AREA_MAP_EMBED =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8396.837695282898!2d-82.64505577943609!3d27.76555673270129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2e18481dc2ddf%3A0x2e71d28c72abcc7f!2sSt.%20Petersburg%2C%20FL%2033731%2C%20USA!5e0!3m2!1sen!2sin!4v1780317001513!5m2!1sen!2sin";
 
 export const GUARANTEE_ITEMS = [
   {
@@ -883,6 +946,8 @@ export const BEFORE_AFTER = [
   {
     beforeLabel: "BEFORE · distressed property",
     afterLabel: "AFTER · renovated & resold",
+    beforeImage: "/assets/images/before-building.png",
+    afterImage: "/assets/images/After-building.png",
     title: "Inherited bungalow — Disston Heights",
     body: "Estate full of contents, dated kitchen, leaking roof. Cash close in 9 days.",
     statHtml: "<b>9 day</b> close · <b>14 wk</b> renovation",
@@ -890,6 +955,8 @@ export const BEFORE_AFTER = [
   {
     beforeLabel: "BEFORE · vacant rental",
     afterLabel: "AFTER · move-in ready",
+    beforeImage: "/assets/images/before-inner-house.png",
+    afterImage: "/assets/images/after-inner-house.png",
     title: "Vacant rental — Old Northeast",
     body: "Tired landlord with tenant issues. Closed without eviction in 7 days.",
     statHtml: "<b>7 day</b> close · <b>11 wk</b> renovation",

@@ -1,13 +1,12 @@
 /* Prevent horizontal bleed / scroll from overflow children */
 
+/* overflow-x on body breaks position:sticky — clip on html only */
 html {
-  overflow-x: hidden;
   overflow-x: clip;
+  scroll-padding-top: var(--nav-h);
 }
 
 body {
-  overflow-x: hidden;
-  overflow-x: clip;
   max-width: 100%;
 }
 
@@ -26,10 +25,6 @@ main {
   width: 100%;
   max-width: 100%;
   overflow: visible;
-}
-
-.site-header {
-  isolation: isolate;
 }
 
 .topbar .wrap,
@@ -60,7 +55,7 @@ main {
 }
 
 .site-header .brand {
-  max-width: 168px;
+  max-width: min(72vw, 300px);
 }
 
 @media (min-width: 760px) {
@@ -69,7 +64,7 @@ main {
   }
 
   .site-header .brand {
-    max-width: 168px;
+    max-width: min(38vw, 320px);
   }
 }
 
@@ -79,7 +74,7 @@ main {
   }
 
   .site-header .brand {
-    max-width: 168px;
+    max-width: min(34vw, 300px);
   }
 }
 
@@ -89,7 +84,7 @@ main {
   }
 
   .site-header .brand {
-    max-width: 168px;
+    max-width: none;
   }
 
   .brand-name,
@@ -161,8 +156,3 @@ main {
   max-width: 100%;
 }
 
-/* Closed mobile drawer must not affect layout width */
-.nav-drawer:not([data-open]) {
-  visibility: hidden;
-  pointer-events: none;
-}

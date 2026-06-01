@@ -14,7 +14,7 @@ function FormulaOp({ children }: { children: string }) {
 
 export function OfferMathSection() {
   return (
-    <section className="section offer-math" id="offer-math">
+    <section className="offer-math" id="offer-math">
       <div className="wrap">
         <Reveal className="section-head">
           <span className="eyebrow">{OFFER_MATH.eyebrow}</span>
