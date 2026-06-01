@@ -1,8 +1,8 @@
 import type { ReactNode } from "react";
-import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
 import { HeroSection } from "@/components/home/HeroSection";
 import { ProcessSection } from "@/components/home/ProcessSection";
+import { SellerSituationsSection } from "@/components/home/SellerSituationsSection";
 import { AreasSection } from "@/components/home/AreasSection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { FinalCtaSection } from "@/components/home/FinalCtaSection";
@@ -12,17 +12,7 @@ import {
   SELL_HOUSE_LEGAL_BLOCKS,
   SELL_HOUSE_OFFER_BLOCKS,
   SELL_HOUSE_PROCESS_STEPS,
-  SELL_HOUSE_SITUATIONS,
 } from "@/lib/constants";
-
-const SITUATION_ICONS = [
-  <g key="1"><path d="M3 21V8l9-5 9 5v13" /><path d="M9 21V12h6v9" /></g>,
-  <g key="2"><rect x="4" y="4" width="16" height="16" rx="2" /><path d="M4 9h16M9 4v16" /></g>,
-  <path key="3" d="M3 12h18M12 3v18" />,
-  <g key="4"><circle cx="9" cy="8" r="3.5" /><path d="M2 21a7 7 0 0 1 14 0" /></g>,
-  <path key="5" d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z" />,
-  <g key="6"><path d="M3 12h13l-4-4M16 12l-4 4" /><path d="M20 5v14" /></g>,
-];
 
 function CalloutGrid({ blocks }: { blocks: readonly { title: string; body: string }[] }) {
   return (
@@ -101,42 +91,7 @@ export function SellYourHouseContent() {
         secondaryCta={{ label: "Full process walkthrough →", href: "/how-it-works" }}
       />
 
-      <section className="section section-alt">
-        <div className="wrap">
-          <Reveal className="section-head">
-            <span className="eyebrow">Who we help</span>
-            <h2 className="h-2">
-              <em>Seller situations</em> we handle.
-            </h2>
-            <p className="lede">
-              Cash works well for sellers who value speed, simplicity, and certainty over maximizing
-              every dollar through a traditional listing. Common scenarios we close every month:
-            </p>
-          </Reveal>
-
-          <div className="sit-grid">
-            {SELL_HOUSE_SITUATIONS.map((item, i) => (
-              <Reveal
-                key={item.href}
-                as={Link}
-                href={item.href}
-                className="sit"
-                d={i > 0 ? (i as 1 | 2 | 3) : undefined}
-              >
-                <span className="ic">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
-                    {SITUATION_ICONS[i]}
-                  </svg>
-                </span>
-                <div>
-                  <h4>{item.title}</h4>
-                  <p>{item.body}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      <SellerSituationsSection />
 
       <AreasSection
         eyebrow="Where we buy"

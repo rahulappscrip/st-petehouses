@@ -1,9 +1,17 @@
 export const ASSETS = {
   johnPortrait: "/assets/images/john-gardepe.webp",
+  johnCta: "/assets/images/john-gardepe-1.png",
+  ownerJohn: "/assets/images/owner-john.jpg",
   bbbBadge: "/assets/images/bbb-client.png",
   logo: "/assets/images/logo.png",
   favicon: "/assets/images/we-buy-st-pete-favicon-res.png",
   marketChart: "/assets/images/Understanding-the-st-pete-market.png",
+  facingForeclosure: "/assets/images/facing-foreclosure.jpg",
+  inheritedHome: "/assets/images/inherited-home.jpg",
+  divorceSeparation: "/assets/images/divorce-or-seperation.jpg",
+  tiredLandlord: "/assets/images/tired-landload.jpg",
+  distressedProperty: "/assets/images/distressed-property.jpg",
+  relocation: "/assets/images/relocation.jpg",
 } as const;
 
 export const SITE = {
@@ -16,6 +24,29 @@ export const SITE = {
   address: "PO Box 143, St. Petersburg, FL 33731",
   url: "https://webuystpetehouses.com/",
   mapsHref: "https://maps.app.goo.gl/WLWfNKY5PqvBVPXy5",
+} as const;
+
+export const MEET_OWNER = {
+  eyebrow: "Meet the owner",
+  title: "Hi, I'm John Gardepe.",
+  subtitle: "I'm the owner of We Buy St. Pete Houses.",
+  paragraphs: [
+    {
+      lead: "Our mission is simple:",
+      rest: " help homeowners sell their houses fast, avoid the hassle, and move forward with confidence.",
+      intro:
+        "We're a local home buying company based right here in St. Petersburg.",
+    },
+    "I started this company because I saw too many good people stuck in difficult situations with no easy solution. We believe selling your house should be simple, fair, and stress-free.",
+    "When you work with us, you're not dealing with a big corporation—you're dealing with a local team that truly cares.",
+  ],
+  quote:
+    "We treat every homeowner the way we'd want our own family to be treated. You'll get a fair offer and a team that's with you every step of the way.",
+  ctaTitle: "Get Your No-Obligation Offer",
+  ctaBody: "Tell us a few details about your property and we'll provide a fair cash offer.",
+  ctaButton: "Get my offer now",
+  badgeRole: "Owner",
+  badgeCompany: "We Buy St. Pete Houses",
 } as const;
 
 /** Footer social links — replace `#` with real URLs when ready */
@@ -259,38 +290,53 @@ export const SELL_HOUSE_PROCESS_STEPS = [
   },
 ] as const;
 
-export const SELL_HOUSE_SITUATIONS = [
+export const SELLER_SITUATIONS = [
   {
     title: "Facing foreclosure",
     body: "Stop the process with a fast cash close before the auction date.",
     href: "/situations/foreclosure",
+    image: ASSETS.facingForeclosure,
+    imageAlt: "Front porch of a home with a white entry door",
   },
   {
     title: "Inherited a home",
     body: "Settle the estate without managing repairs or showings.",
     href: "/situations/inherited",
+    image: ASSETS.inheritedHome,
+    imageAlt: "Sunlit living room in an inherited home",
   },
   {
     title: "Divorce or separation",
     body: "Divide assets quickly without prolonged listing periods.",
     href: "/situations/divorce",
+    image: ASSETS.divorceSeparation,
+    imageAlt: "Wedding rings on legal documents",
   },
   {
     title: "Tired landlord",
     body: "Exit problem tenants. We buy with the lease in place if needed.",
     href: "/situations/tenants",
+    image: ASSETS.tiredLandlord,
+    imageAlt: "Landlord holding house keys in front of a rental property",
   },
   {
     title: "Distressed property",
-    body: "Major repairs needed. Skip the contractors — we buy as-is.",
+    body: "Major repairs needed. Skip the contractor — we buy as-is.",
     href: "/situations/sell-as-is",
+    image: ASSETS.distressedProperty,
+    imageAlt: "Older home in need of repair",
   },
   {
     title: "Relocation",
     body: "Move on your schedule without waiting for a buyer to come along.",
-    href: "/situations/mortgage",
+    href: "/how-it-works",
+    image: ASSETS.relocation,
+    imageAlt: "Moving boxes stacked in an empty room",
   },
 ] as const;
+
+/** @deprecated Use SELLER_SITUATIONS */
+export const SELL_HOUSE_SITUATIONS = SELLER_SITUATIONS;
 
 export const SELL_HOUSE_OFFER_BLOCKS = [
   {

@@ -1120,7 +1120,7 @@ h3 em,
   position: relative; overflow: hidden;
   background: var(--ink); color: var(--paper);
   border-radius: clamp(20px, 3vw, 32px);
-  padding: clamp(40px, 6vw, 80px);
+  padding: clamp(40px, 6vw, 80px) clamp(40px, 6vw, 80px) 0;
   display: grid; gap: 40px;
   grid-template-columns: 1fr;
   align-items: center;
@@ -1142,17 +1142,18 @@ h3 em,
 .cta-card p{ color: color-mix(in oklab, var(--paper) 75%, transparent); max-width: 52ch; position: relative; z-index: 1; }
 .cta-actions{ display: flex; flex-wrap: wrap; gap: 12px; margin-top: 14px; position: relative; z-index: 1; }
 .cta-side{
-  background: color-mix(in oklab, var(--paper) 5%, var(--ink));
-  border: 1px solid color-mix(in oklab, var(--paper) 12%, transparent);
   border-radius: var(--radius-l);
-  padding: 26px;
-  position: relative; z-index: 1;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
-.cta-side .lab{ font-family: var(--mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: color-mix(in oklab, var(--paper) 60%, transparent); }
-.cta-side .num{ font-family: var(--serif); font-size: 40px; margin-top: 6px; }
-.cta-side ul{ margin: 16px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: color-mix(in oklab, var(--paper) 80%, transparent); }
-.cta-side li{ display: flex; align-items: center; gap: 10px; }
-.cta-side li svg{ width: 14px; height: 14px; color: var(--sun); flex: 0 0 auto; }
+.cta-side__img{
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 
 /* ============================================================
    Footer (dark, multi-column)

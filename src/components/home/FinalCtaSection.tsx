@@ -1,8 +1,9 @@
 import type { CSSProperties, ReactNode } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
 import { Arr } from "@/components/ui/Arr";
-import { SITE } from "@/lib/constants";
+import { ASSETS, SITE } from "@/lib/constants";
 
 type FinalCtaSectionProps = {
   eyebrow?: string;
@@ -58,28 +59,14 @@ export function FinalCtaSection({
           </div>
 
           <aside className="cta-side">
-            <span className="lab">Talk to John directly</span>
-            <div className="num">{SITE.phone}</div>
-            <ul>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
-                  <path d="M4 12l5 5L20 6" />
-                </svg>
-                Local team &mdash; no call centers
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
-                  <path d="M4 12l5 5L20 6" />
-                </svg>
-                Cash offer within 24 hours
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
-                  <path d="M4 12l5 5L20 6" />
-                </svg>
-                {SITE.email}
-              </li>
-            </ul>
+            <Image
+              src={ASSETS.johnCta}
+              alt="John Gardepe"
+              width={480}
+              height={560}
+              sizes="(min-width: 880px) 33vw, 100vw"
+              className="cta-side__img"
+            />
           </aside>
         </Reveal>
       </div>

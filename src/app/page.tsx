@@ -2,6 +2,8 @@ import { HeroSection } from "@/components/home/HeroSection";
 import { StatsSection } from "@/components/home/StatsSection";
 import { ProcessSection } from "@/components/home/ProcessSection";
 import { OfferMathSection } from "@/components/home/OfferMathSection";
+import { SellerSituationsSection } from "@/components/home/SellerSituationsSection";
+import { MeetOwnerSection } from "@/components/home/MeetOwnerSection";
 import { SavingsEstimatorSection } from "@/components/home/SavingsEstimatorSection";
 import { ProsConsSection } from "@/components/home/ProsConsSection";
 import { AreasSection } from "@/components/home/AreasSection";
@@ -24,6 +26,8 @@ export default function HomePage() {
       <StatsSection />
       <ProcessSection />
       <OfferMathSection />
+      <SellerSituationsSection />
+      <MeetOwnerSection />
       <SavingsEstimatorSection />
       <ProsConsSection />
       <AreasSection />
