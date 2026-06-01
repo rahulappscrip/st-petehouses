@@ -13,7 +13,16 @@ export const SITE = {
   contactEmail: "hello@webuystpetehouses.com",
   address: "PO Box 143, St. Petersburg, FL 33731",
   url: "https://webuystpetehouses.com/",
+  mapsHref: "https://maps.app.goo.gl/WLWfNKY5PqvBVPXy5",
 } as const;
+
+/** Footer social links — replace `#` with real URLs when ready */
+export const SOCIAL_LINKS = [
+  { label: "Facebook", href: "#", icon: "facebook" },
+  { label: "LinkedIn", href: "#", icon: "linkedin" },
+  { label: "Instagram", href: "#", icon: "instagram" },
+  { label: "Google", href: "#", icon: "google" },
+] as const;
 
 export const TOPBAR = {
   rating: "Rated 5.0 by 120+ St. Petersburg",

@@ -1085,6 +1085,34 @@ p{ margin:0; }
 .foot-contact svg{ width: 16px; height: 16px; flex: 0 0 auto; color: color-mix(in oklab, var(--paper) 60%, transparent); }
 .foot-contact a:hover{ color: var(--paper); }
 
+.foot-social{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+.foot-social a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  color: color-mix(in oklab, var(--paper) 84%, transparent);
+  background: color-mix(in oklab, var(--paper) 10%, transparent);
+  text-decoration: none;
+  transition: color .2s, background .2s;
+}
+.foot-social a:hover{
+  color: var(--paper);
+  background: color-mix(in oklab, var(--paper) 18%, transparent);
+}
+.foot-social svg{
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+}
+
 .foot-col h4{
   font-family: var(--sans);
   font-size: 17px; color: var(--paper); font-weight: 600; margin-bottom: 18px;
@@ -1150,7 +1178,7 @@ p{ margin:0; }
 .brand-mark::after{ display:none; }
 
 /* Defensive SVG sizing — never let unsized inline icons blow up */
-.site-foot svg, .nav svg, .crumbs svg, .res svg, .ti svg, .gi svg, .sit svg, .icon-card svg, .trust-card svg, .pccard svg, .compare-callout svg, .cta-side svg, .lead-card svg, .nav-phone svg, .nav-burger svg, .nav-cta svg, .foot-contact svg, .lead-consent svg, .step-meta svg, .featured-meta svg, .byline svg, .topbar svg, .ba-tag svg, .ba-handle-pill svg, .pin-label svg, .res .arr-out, .mobile-call svg, .calc-bd svg, .factor svg, .factor-list svg, .hero-call svg, .lead-orcall svg, .review svg, .review-filters svg, .filter-search svg, .toc svg{
+.site-foot svg, .nav svg, .crumbs svg, .res svg, .ti svg, .gi svg, .sit svg, .icon-card svg, .trust-card svg, .pccard svg, .compare-callout svg, .cta-side svg, .lead-card svg, .nav-phone svg, .nav-burger svg, .nav-cta svg, .foot-contact svg, .foot-social svg, .lead-consent svg, .step-meta svg, .featured-meta svg, .byline svg, .topbar svg, .ba-tag svg, .ba-handle-pill svg, .pin-label svg, .res .arr-out, .mobile-call svg, .calc-bd svg, .factor svg, .factor-list svg, .hero-call svg, .lead-orcall svg, .review svg, .review-filters svg, .filter-search svg, .toc svg{
   max-width: 24px;
   max-height: 24px;
   flex: 0 0 auto;
