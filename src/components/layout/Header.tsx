@@ -211,6 +211,9 @@ export function Header() {
     setOpenMenu((prev) => (prev === id ? null : id));
   };
 
+  const locationCities = NAV_LINKS.locations.cities;
+  const locationCitiesMid = Math.ceil(locationCities.length / 2);
+
   const mobileNav =
     drawerOpen && typeof document !== "undefined"
       ? createPortal(
@@ -258,23 +261,25 @@ export function Header() {
                 Locations
                 <Caret />
               </button>
-              <div className="menu menu-2col" role="menu" onClick={(e) => e.stopPropagation()}>
+              <div className="menu menu-2col menu-2col--locations" role="menu" onClick={(e) => e.stopPropagation()}>
                 <div className="menu-col">
                   <div className="menu-h">Cities</div>
-                  {NAV_LINKS.locations.cities.map((c) => (
+                  {locationCities.slice(0, locationCitiesMid).map((c) => (
                     <MenuItem key={c.href} href={c.href} label={c.label} onNavigate={handleMenuNavigate} />
                   ))}
                 </div>
                 <div className="menu-col">
-                  <div className="menu-h">Counties</div>
-                  {NAV_LINKS.locations.counties.map((c) => (
+                  <div className="menu-h menu-h--spacer" aria-hidden="true">
+                    Cities
+                  </div>
+                  {locationCities.slice(locationCitiesMid).map((c) => (
                     <MenuItem key={c.href} href={c.href} label={c.label} onNavigate={handleMenuNavigate} />
                   ))}
                   <Link href="/#areas" className="menu-item menu-all" role="menuitem" onClick={handleMenuNavigate}>
-                    All service areas
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
                       <path d="M5 12h14M13 6l6 6-6 6" />
                     </svg>
+                    All service areas
                   </Link>
                 </div>
               </div>

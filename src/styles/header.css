@@ -40,6 +40,11 @@
     justify-content: center;
   }
 
+  .menu-2col--locations .menu-h--spacer {
+    visibility: hidden;
+    user-select: none;
+    pointer-events: none;
+  }
 }
 
 @media (max-width: 979px) {

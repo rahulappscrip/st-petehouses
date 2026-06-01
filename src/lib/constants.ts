@@ -181,11 +181,6 @@ export const NAV_LINKS = {
       { label: "Hudson", href: "/we-buy-houses-hudson-fl" },
       { label: "New Port Richey", href: "/we-buy-houses-new-port-richey-fl" },
     ],
-    counties: [
-      { label: "Pinellas County", href: "/pinellas-county" },
-      { label: "Hillsborough County", href: "/hillsborough-county" },
-      { label: "Manatee County", href: "/manatee-county" },
-    ],
   },
   situations: [
     { label: "Foreclosure", href: "/situations/foreclosure" },
@@ -193,13 +188,13 @@ export const NAV_LINKS = {
     { label: "Divorce", href: "/situations/divorce" },
     { label: "Inherited house", href: "/situations/inherited" },
     { label: "House with tenants", href: "/situations/tenants" },
-    { label: "House with a mortgage", href: "/situations/mortgage" },
     { label: "Fire damage", href: "/situations/fire-damage" },
     { label: "Water damage", href: "/situations/water-damage" },
     { label: "Mold damage", href: "/situations/mold-damage" },
     { label: "Hoarder house", href: "/situations/hoarder-house" },
     { label: "Bankruptcy", href: "/situations/bankruptcy" },
     { label: "Sell as-is", href: "/situations/sell-as-is" },
+    { label: "House with a mortgage", href: "/situations/mortgage" },
   ],
   company: [
     { label: "About Us", href: "/about" },
@@ -208,6 +203,23 @@ export const NAV_LINKS = {
     { label: "Contact", href: "/contact" },
   ],
 } as const;
+
+/** Footer “We Buy Houses In Any Situation” column — fixed order. */
+export const FOOTER_SITUATIONS = [
+  { label: "Foreclosure", href: "/situations/foreclosure" },
+  { label: "Probate", href: "/situations/probate" },
+  { label: "Divorce", href: "/situations/divorce" },
+  { label: "Inherited house", href: "/situations/inherited" },
+  { label: "House with tenants", href: "/situations/tenants" },
+  { label: "Fire damage", href: "/situations/fire-damage" },
+  { label: "Water damage", href: "/situations/water-damage" },
+  { label: "Mold damage", href: "/situations/mold-damage" },
+  { label: "Hoarder house", href: "/situations/hoarder-house" },
+  { label: "Bankruptcy", href: "/situations/bankruptcy" },
+  { label: "House with a mortgage", href: "/situations/mortgage" },
+  { label: "Sell as-is", href: "/situations/sell-as-is" },
+  { label: "We assume your mortgage", href: "/situations/mortgage" },
+] as const;
 
 export const STATS = [
   {

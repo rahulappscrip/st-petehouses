@@ -311,7 +311,7 @@ h3 em,
   flex-direction: column;
   min-width: 0;
 }
-.nav-links > li[data-open] .menu-2col{ display: grid; }
+.nav-links > li[data-open] > .menu.menu-2col{ display: grid; }
 .menu-item,
 .menu a{
   display: block;
@@ -334,16 +334,16 @@ h3 em,
   right: 0;
   transform: none;
 }
-.nav-links > li[data-open] .menu{ display: block; }
+.nav-links > li[data-open] > .menu:not(.menu-2col){ display: block; }
 
 /* Desktop: show dropdowns on hover / keyboard focus (disabled briefly after navigation) */
 @media (min-width: 980px) {
-  .nav-links:not([data-suppress-hover]) > li[data-menu]:hover > .menu,
-  .nav-links:not([data-suppress-hover]) > li[data-menu]:focus-within > .menu{
+  .nav-links:not([data-suppress-hover]) > li[data-menu]:hover > .menu:not(.menu-2col),
+  .nav-links:not([data-suppress-hover]) > li[data-menu]:focus-within > .menu:not(.menu-2col){
     display: block;
   }
-  .nav-links:not([data-suppress-hover]) > li[data-menu]:hover > .menu-2col,
-  .nav-links:not([data-suppress-hover]) > li[data-menu]:focus-within > .menu-2col{
+  .nav-links:not([data-suppress-hover]) > li[data-menu]:hover > .menu.menu-2col,
+  .nav-links:not([data-suppress-hover]) > li[data-menu]:focus-within > .menu.menu-2col{
     display: grid;
   }
   .nav-links:not([data-suppress-hover]) > li[data-menu]:hover > button,
@@ -386,6 +386,7 @@ h3 em,
     z-index: 100;
   }
 }
+.menu-item.menu-all,
 .menu-all{
   display: flex; align-items: center; gap: 8px;
   width: 100%;
@@ -393,6 +394,10 @@ h3 em,
   background: color-mix(in oklab, var(--sun) 12%, transparent);
   color: var(--sun-deep);
   font-weight: 500;
+}
+.menu-item.menu-all svg,
+.menu-all svg{
+  flex-shrink: 0;
 }
 .menu-all:hover{ background: color-mix(in oklab, var(--sun) 22%, transparent); }
 
@@ -1131,7 +1136,7 @@ h3 em,
   padding-block: clamp(48px, 6vw, 80px) 24px;
 }
 .foot-grid{ display: grid; gap: 40px; grid-template-columns: 1fr; }
-@media (min-width: 760px){ .foot-grid{ grid-template-columns: 1.4fr 1fr 1fr 1.4fr; } }
+@media (min-width: 760px){ .foot-grid{ grid-template-columns: 1.3fr 1fr 1fr 1.55fr; } }
 .foot-brand .brand-mark{ background:#fff; border-radius:10px; padding:4px; }
 .foot-brand .brand-name{ color: var(--paper); }
 .foot-brand .brand-name small{ color: color-mix(in oklab, var(--paper) 60%, transparent); }
@@ -1179,10 +1184,30 @@ h3 em,
 .foot-col a{ display: block; padding: 6px 0; color: color-mix(in oklab, var(--paper) 70%, transparent); text-decoration: none; font-size: 14.5px; }
 .foot-col a:hover{ color: var(--paper); }
 .foot-col--2col ul{
-  display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px;
-  padding: 0; margin: 0; list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(10.5rem, 1fr));
+  gap: 0 clamp(20px, 3vw, 36px);
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
-.foot-col--2col li a{ padding: 6px 0; }
+.foot-col--2col li{
+  min-width: 0;
+}
+.foot-col--2col li a{
+  display: block;
+  padding: 6px 0;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+@media (max-width: 859px){
+  .foot-col--2col ul{
+    grid-template-columns: 1fr;
+  }
+  .foot-col--2col li a{
+    white-space: normal;
+  }
+}
 
 .foot-bottom{
   margin-top: 48px; padding-top: 24px;
