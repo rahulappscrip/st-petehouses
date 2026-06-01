@@ -4,7 +4,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { MobileCallBar } from "@/components/layout/MobileCallBar";
 import { inter } from "@/lib/fonts";
-import { SITE } from "@/lib/constants";
+import { ASSETS, SITE } from "@/lib/constants";
 import { REAL_ESTATE_AGENT_JSON_LD } from "@/lib/schema";
 import "./globals.css";
 
@@ -36,6 +36,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        <link rel="icon" href={ASSETS.favicon} type="image/png" />
+        <link rel="shortcut icon" href={ASSETS.favicon} type="image/png" />
+        <link rel="apple-touch-icon" href={ASSETS.favicon} type="image/png" />
+      </head>
       <body className={inter.className}>
         <script
           type="application/ld+json"

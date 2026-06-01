@@ -1,5 +1,6 @@
+import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
-import { MARKET_FACTORS, MARKET_SECTION } from "@/lib/constants";
+import { ASSETS, MARKET_FACTORS, MARKET_SECTION } from "@/lib/constants";
 
 export function MarketSection() {
   return (
@@ -14,7 +15,16 @@ export function MarketSection() {
         </Reveal>
 
         <div className="market-grid">
-          <Reveal className="ph" data-tone="sun" data-label="[IMAGE: market_stats_chart]" style={{ minHeight: 380 }} aria-hidden>{null}</Reveal>
+          <Reveal className="market-chart">
+            <Image
+              src={ASSETS.marketChart}
+              alt="Understanding the St. Petersburg cash home market"
+              width={960}
+              height={720}
+              sizes="(min-width: 960px) 50vw, 100vw"
+              className="market-chart__img"
+            />
+          </Reveal>
 
           <div className="factor-list">
             {MARKET_FACTORS.map((factor, i) => (

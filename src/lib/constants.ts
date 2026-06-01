@@ -2,6 +2,8 @@ export const ASSETS = {
   johnPortrait: "/assets/images/john-gardepe.webp",
   bbbBadge: "/assets/images/bbb-client.png",
   logo: "/assets/images/logo.png",
+  favicon: "/assets/images/we-buy-st-pete-favicon-res.png",
+  marketChart: "/assets/images/Understanding-the-st-pete-market.png",
 } as const;
 
 export const SITE = {
