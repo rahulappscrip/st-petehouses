@@ -115,7 +115,7 @@ export function ReviewsPageContent() {
       <h4>{item.title}</h4>
       <p>
         {i === 0
-          ? <>We're at <a href="https://maps.app.goo.gl/WLWfNKY5PqvBVPXy5" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "inherit" }}>PO Box 143, St Petersburg, FL 33731</a> — verifiable in public Florida business records.</>
+          ? <>We&apos;re at <a href="https://maps.app.goo.gl/WLWfNKY5PqvBVPXy5" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "inherit" }}>PO Box 143, St Petersburg, FL 33731</a> — verifiable in public Florida business records.</>
           : i === 1
           ? <>Reach a real person at <a href="tel:+17274778998" style={{ textDecoration: "none", color: "inherit" }}>(727) 477-8998</a> — no offshore call centers or third-party screeners.</>
           : item.body}

@@ -1,7 +1,26 @@
 /* Header — nav centered; edge spacing from .wrap gutter only */
 
+.site-chrome {
+  overflow: visible;
+}
+
 .site-header {
   overflow: visible;
+}
+
+/* Sticky header — all viewports; reinforced on mobile/tablet */
+@media (max-width: 979px) {
+  .site-header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: color-mix(in oklab, var(--sand) 98%, transparent);
+  }
+
+  .site-header.is-drawer-open {
+    z-index: 10000;
+  }
 }
 
 
@@ -29,7 +48,40 @@
   }
 
   .site-header .nav {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
     min-height: 72px;
+    column-gap: 12px;
+  }
+
+  .site-header .nav-links {
+    display: none;
+  }
+
+  .site-header .brand {
+    grid-column: 1;
+    min-width: 0;
+  }
+
+  .site-header .nav-cta {
+    grid-column: 2;
+    justify-self: end;
+  }
+
+  /* Open drawer: match menu row padding (14px vertical, gutter horizontal) */
+  .site-header.is-drawer-open .nav {
+    min-height: 0;
+    padding-block: 14px;
+  }
+
+  .site-header.is-drawer-open .brand,
+  .site-header.is-drawer-open .nav-cta {
+    align-items: center;
+  }
+
+  .nav-burger {
+    display: inline-flex !important;
   }
 }
 

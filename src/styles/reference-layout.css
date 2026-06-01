@@ -20,9 +20,11 @@
   --radius: 14px;
   --radius-l: 22px;
 
-  --serif: var(--font-dm-serif), 'DM Serif Display', Georgia, 'Times New Roman', serif;
-  --sans: var(--font-inter), 'Inter', ui-sans-serif, system-ui, sans-serif;
-  --mono: var(--font-inter), 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-inter: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-dm-serif: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+  --serif: var(--font-dm-serif);
+  --sans: var(--font-inter);
+  --mono: var(--font-inter);
 
   --maxw: 1280px;
   --gutter: clamp(20px, 4vw, 56px);
@@ -172,16 +174,25 @@ h3 em,
   .topbar-r .topbar-hide-mobile{ display: none; }
 }
 
+/* Wrapper only — header sticks on its own (topbar scrolls away) */
+.site-chrome{
+  width: 100%;
+  max-width: 100%;
+}
+
 .site-header{
-  position: sticky; top: 0; z-index: 50;
-  background: color-mix(in oklab, var(--sand) 92%, transparent);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in oklab, var(--sand) 96%, transparent);
   backdrop-filter: saturate(140%) blur(10px);
   -webkit-backdrop-filter: saturate(140%) blur(10px);
   border-bottom: 1px solid color-mix(in oklab, var(--line) 60%, transparent);
   transition: box-shadow .25s ease, background .25s ease;
 }
+
 .site-header.is-drawer-open{
-  z-index: 52;
   border-bottom-color: transparent;
 }
 .site-header.is-scrolled{
@@ -423,60 +434,7 @@ h3 em,
   .nav-phone{ display: inline-flex; }
 }
 
-/* Mobile drawer — anchored to sticky header (no topbar offset gap) */
-.nav-drawer-backdrop{
-  display: none;
-}
-@media (max-width: 979px){
-  .nav-drawer-backdrop{
-    display: block;
-    position: fixed;
-    inset: 0;
-    z-index: 48;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background: color-mix(in oklab, var(--ink) 42%, transparent);
-    cursor: pointer;
-  }
-  .nav-drawer{
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 100%;
-    margin: 0;
-    background: var(--paper);
-    border-top: 1px solid var(--line);
-    padding: 12px var(--gutter) 28px;
-    max-height: calc(100dvh - var(--nav-h));
-    overflow-y: auto;
-    display: none;
-    z-index: 51;
-    box-shadow: 0 16px 40px -20px rgba(14, 59, 35, .28);
-  }
-  .nav-drawer[data-open]{ display: block; }
-  body.nav-drawer-open{
-    overflow: hidden;
-  }
-}
-.nav-drawer details{ border-bottom: 1px solid var(--line-soft); }
-.nav-drawer summary{
-  list-style: none; cursor: pointer;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 14px 4px;
-  font-weight: 500; font-size: 16px;
-}
-.nav-drawer summary::-webkit-details-marker{ display: none; }
-.nav-drawer summary svg{ width: 14px; height: 14px; transition: transform .2s ease; }
-.nav-drawer details[open] summary svg{ transform: rotate(180deg); }
-.nav-drawer .sub{ display: flex; flex-direction: column; gap: 4px; padding: 2px 4px 14px; }
-.nav-drawer .sub a{ display: block; padding: 8px 4px; font-size: 14.5px; color: var(--ink-2); text-decoration: none; }
-.nav-drawer .sub a:hover{ color: var(--ink); }
-.nav-drawer .top-link{ display: block; padding: 14px 4px; font-weight: 500; border-bottom: 1px solid var(--line-soft); color: var(--ink); text-decoration: none; }
-.nav-drawer .drawer-cta{ margin-top: 18px; display: flex; flex-direction: column; gap: 10px; }
-@media (min-width: 980px){
-  .nav-drawer{ display: none !important; }
-}
+/* Legacy .nav-drawer rules removed — see mobile-nav.css (portaled panel) */
 
 /* ============================================================
    HERO — split layout: title + image left, form right
@@ -1113,7 +1071,7 @@ h3 em,
   position: relative; overflow: hidden;
   background: var(--ink); color: var(--paper);
   border-radius: clamp(20px, 3vw, 32px);
-  padding: clamp(40px, 6vw, 65px) clamp(36px, 6vw, 81px) 0;
+  padding: clamp(40px, 6vw, 43px) clamp(36px, 6vw, 80px) 0;
   display: grid; gap: 40px;
   grid-template-columns: 1fr;
   align-items: center;
@@ -1287,15 +1245,20 @@ h3 em,
 svg{ flex: 0 0 auto; }
 
 
-/* Defensive: force-hide leaked mobile drawer on any viewport over 760px */
-@media (min-width: 760px){
-  .nav-drawer{ display: none !important; }
-}
 /* Cap nav/drawer/details SVGs to safe icon size */
-.nav-drawer svg, details summary svg, .nav-links svg, .nav-burger svg, header svg, .topbar svg{
+.mobile-nav-panel svg,
+.nav-links svg,
+header .caret,
+.topbar svg{
   width: 14px !important; height: 14px !important;
   max-width: 14px !important; max-height: 14px !important;
   flex: 0 0 auto !important;
+}
+.nav-burger svg{
+  width: 20px !important;
+  height: 20px !important;
+  max-width: 20px !important;
+  max-height: 20px !important;
 }
 .brand-mark svg, .brand-mark img{ width:100% !important; height:100% !important; max-width:none !important; max-height:none !important; }
 .site-header .brand-mark img{

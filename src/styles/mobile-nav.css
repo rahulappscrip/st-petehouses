@@ -1,0 +1,118 @@
+/* Mobile nav overlay + panel (portaled to body — avoids header backdrop-filter trap) */
+
+@media (max-width: 979px) {
+  .mobile-nav-overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: var(--mobile-nav-top, 72px);
+    z-index: 9998;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: color-mix(in oklab, var(--ink) 42%, transparent);
+    cursor: pointer;
+  }
+
+  .mobile-nav-panel {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: var(--mobile-nav-top, 72px);
+    z-index: 9999;
+    display: block;
+    margin: 0;
+    background: var(--paper);
+    border-top: 1px solid var(--line);
+    padding: 12px var(--gutter) calc(28px + env(safe-area-inset-bottom));
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: 0 16px 40px -20px rgba(14, 59, 35, 0.28);
+  }
+
+  .mobile-nav-panel .top-link {
+    display: block;
+    padding: 14px 4px;
+    font-weight: 500;
+    border-bottom: 1px solid var(--line-soft);
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .mobile-nav-panel details {
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .mobile-nav-panel summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 4px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  .mobile-nav-panel summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobile-nav-panel summary svg {
+    width: 14px;
+    height: 14px;
+    flex: 0 0 auto;
+    transition: transform 0.2s ease;
+  }
+
+  .mobile-nav-panel details[open] summary svg {
+    transform: rotate(180deg);
+  }
+
+  .mobile-nav-panel .sub {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 2px 4px 14px;
+  }
+
+  .mobile-nav-panel .sub a {
+    display: block;
+    padding: 8px 4px;
+    font-size: 14.5px;
+    color: var(--ink-2);
+    text-decoration: none;
+  }
+
+  .mobile-nav-panel .sub a:hover {
+    color: var(--ink);
+  }
+
+  .mobile-nav-panel .drawer-cta {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  body.nav-drawer-open {
+    overflow: hidden;
+  }
+
+  body.nav-drawer-open .mobile-call {
+    display: none;
+  }
+
+  .site-header.is-drawer-open {
+    border-bottom-color: transparent;
+  }
+}
+
+@media (min-width: 980px) {
+  .mobile-nav-overlay,
+  .mobile-nav-panel {
+    display: none !important;
+  }
+}

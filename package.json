@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "dev:fast": "next dev",
-    "dev:clean": "rm -rf .next && next dev",
-    "build": "rm -rf .next && next build",
+    "dev:clean": "rimraf .next && next dev",
+    "build": "rimraf .next && next build",
     "start": "next start",
     "lint": "eslint"
   },

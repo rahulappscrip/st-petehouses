@@ -26,6 +26,13 @@ export const SITE = {
   mapsHref: "https://maps.app.goo.gl/WLWfNKY5PqvBVPXy5",
 } as const;
 
+export const HOMEPAGE_SEO = {
+  title: "We Buy Houses In St Petersburg FL | Cash Offer in 24 Hours",
+  description:
+    "Sell your St Petersburg house fast for cash. No repairs, no fees, no commissions. Get a fair cash offer today and close on your timeline—as-is, hassle-free",
+  primaryKeyword: "We Buy Houses In St Petersburg",
+} as const;
+
 export const MEET_OWNER = {
   eyebrow: "Meet the owner",
   title: "Hi, I'm John Gardepe.",

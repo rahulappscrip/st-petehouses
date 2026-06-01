@@ -1,17 +1,14 @@
-import { DM_Serif_Display, Inter } from "next/font/google";
+/**
+ * Typography is loaded at runtime (see layout.tsx <link> tags).
+ * We avoid `next/font/google` so `next build` does not fetch fonts over the network
+ * (fails on some Windows/corporate networks with SSL certificate errors).
+ */
+export const inter = {
+  variable: "",
+  className: "",
+};
 
-export const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-  weight: ["300", "400", "500", "600", "700", "800"],
-});
-
-/** Italic emphasis in headings */
-export const dmSerifDisplay = DM_Serif_Display({
-  subsets: ["latin"],
-  variable: "--font-dm-serif",
-  display: "swap",
-  weight: "400",
-  style: ["normal", "italic"],
-});
+export const dmSerifDisplay = {
+  variable: "",
+  className: "",
+};
