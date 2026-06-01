@@ -587,8 +587,74 @@ h3 em,
 .lead-intro{ font-size: 14.5px; color: var(--ink-2); margin-top: 2px; }
 .lead-top{ display: flex; flex-direction: column; gap: 8px; position: relative; z-index: 1; }
 
+/* Shared lead offer form — homepage hero, city pages */
+.lead-card.lead-offer-form {
+  background: var(--sand);
+  gap: 8px;
+  padding: clamp(18px, 2vw, 22px) clamp(18px, 2vw, 24px) clamp(20px, 2.2vw, 28px);
+}
+
+.lead-card.lead-offer-form .lead-top {
+  gap: 6px;
+}
+
+.lead-badges {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 4px;
+  --lead-badge-h: 42px;
+}
+
+.lead-badge-bbb {
+  display: block;
+  height: var(--lead-badge-h);
+  width: auto;
+  max-width: calc(var(--lead-badge-h) * 2.66);
+  object-fit: contain;
+  object-position: left center;
+}
+
+.lead-badges .lead-badge--5 {
+  height: var(--lead-badge-h);
+  min-height: var(--lead-badge-h);
+  padding-block: 0;
+  padding-inline: 10px;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.lead-badges .lead-badge--5 b {
+  font-size: 15px;
+}
+
+.lead-badges .lead-badge--5 i {
+  margin-top: 1px;
+  font-size: 9px;
+  line-height: 1.1;
+}
+
+.lead-card.lead-offer-form .lead-intro {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.lead-card.lead-offer-form form .field {
+  margin-bottom: 10px;
+}
+
+.lead-card.lead-offer-form form .row-2 {
+  margin-bottom: 10px;
+}
+
+.lead-card.lead-offer-form .lead-consent {
+  margin-bottom: 8px;
+  padding: 10px 12px;
+  font-size: 11.5px;
+  line-height: 1.45;
+}
+
 /* BBB / 5-star trust badges above form */
-.lead-badges{ display: flex; gap: 10px; align-items: center; margin-bottom: 4px; }
 .lead-badge{
   display: inline-flex; flex-direction: column; align-items: flex-start; gap: 0;
   padding: 6px 10px; border-radius: 8px;
@@ -715,6 +781,20 @@ h3 em,
 .steps{ display: grid; gap: 18px; grid-template-columns: 1fr; }
 @media (min-width: 640px){ .steps{ grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1080px){ .steps{ grid-template-columns: repeat(4, 1fr); } }
+
+.steps.steps--3 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 720px) {
+  .steps.steps--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.steps.steps--3 .step {
+  min-height: 0;
+}
 .step{
   background: var(--paper); border: 1px solid var(--line);
   border-radius: var(--radius-l);

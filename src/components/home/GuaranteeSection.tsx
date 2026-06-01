@@ -1,4 +1,4 @@
-import type { CSSProperties } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
 import { Arr } from "@/components/ui/Arr";
@@ -11,29 +11,58 @@ const ICONS = [
   <path key="4" d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z" />,
 ];
 
-export function GuaranteeSection() {
+export type GuaranteeItem = {
+  title: string;
+  body: string;
+};
+
+type GuaranteeSectionProps = {
+  eyebrow?: string;
+  title?: ReactNode;
+  lede?: string;
+  items?: readonly GuaranteeItem[];
+  asideTitle?: ReactNode;
+  asideBody?: string;
+  asidePrimaryLabel?: string;
+  asideSecondaryLabel?: string;
+  showAside?: boolean;
+};
+
+export function GuaranteeSection({
+  eyebrow = "Our guarantee",
+  title = (
+    <>
+      Clear terms. <em>No surprises.</em>
+    </>
+  ),
+  lede = "We guarantee a cash offer with clear terms and a flexible closing schedule. No hidden fees. No required repairs. No agent commissions. Just a straightforward, fair offer you can accept or decline — no pressure.",
+  items = GUARANTEE_ITEMS,
+  asideTitle = (
+    <>
+      Certainty &amp; fairness, <em>from offer to keys.</em>
+    </>
+  ),
+  asideBody = "You know exactly what to expect from start to finish. No surprises, no pressure, no obligation. Ready to see what your house is worth?",
+  asidePrimaryLabel = "Sell my house",
+  asideSecondaryLabel = "Get my offer →",
+  showAside = true,
+}: GuaranteeSectionProps = {}) {
   return (
     <section className="guarantee section" id="guarantee">
       <div className="wrap">
         <Reveal className="section-head">
-          <span className="eyebrow">Our guarantee</span>
-          <h2 className="h-2">
-            Clear terms. <em>No surprises.</em>
-          </h2>
-          <p className="lede">
-            We guarantee a cash offer with clear terms and a flexible closing schedule. No hidden
-            fees. No required repairs. No agent commissions. Just a straightforward, fair offer
-            you can accept or decline — no pressure.
-          </p>
+          <span className="eyebrow">{eyebrow}</span>
+          <h2 className="h-2">{title}</h2>
+          <p className="lede">{lede}</p>
         </Reveal>
 
         <div className="guarantee-grid">
           <div className="guarantee-list">
-            {GUARANTEE_ITEMS.map((item, i) => (
+            {items.map((item, i) => (
               <Reveal key={item.title} className="gi">
                 <span className="ico">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
-                    {ICONS[i]}
+                    {ICONS[i % ICONS.length]}
                   </svg>
                 </span>
                 <div>
@@ -44,35 +73,32 @@ export function GuaranteeSection() {
             ))}
           </div>
 
-          <Reveal d={1} as="aside" className="guarantee-aside">
-            <span className="lab">Cash offer guarantee</span>
-            <h3>
-              Certainty &amp; fairness, <em>from offer to keys.</em>
-            </h3>
-            <p>
-              You know exactly what to expect from start to finish. No surprises, no pressure,
-              no obligation. Ready to see what your St Petersburg house is worth?
-            </p>
-            <div className="actions">
-              <Link href="/sell-your-house" className="btn btn--cta">
-                Sell my house
-                <Arr />
-              </Link>
-              <Link
-                href="#offer"
-                className="btn"
-                style={
-                  {
-                    "--bg": "transparent",
-                    "--fg": "var(--paper)",
-                    "--bd": "color-mix(in oklab, var(--paper) 40%, transparent)",
-                  } as CSSProperties
-                }
-              >
-                Get my offer →
-              </Link>
-            </div>
-          </Reveal>
+          {showAside ? (
+            <Reveal d={1} as="aside" className="guarantee-aside">
+              <span className="lab">Cash offer guarantee</span>
+              <h3>{asideTitle}</h3>
+              <p>{asideBody}</p>
+              <div className="actions">
+                <Link href="/sell-your-house" className="btn btn--cta">
+                  {asidePrimaryLabel}
+                  <Arr />
+                </Link>
+                <Link
+                  href="#offer"
+                  className="btn"
+                  style={
+                    {
+                      "--bg": "transparent",
+                      "--fg": "var(--paper)",
+                      "--bd": "color-mix(in oklab, var(--paper) 40%, transparent)",
+                    } as CSSProperties
+                  }
+                >
+                  {asideSecondaryLabel}
+                </Link>
+              </div>
+            </Reveal>
+          ) : null}
         </div>
       </div>
     </section>

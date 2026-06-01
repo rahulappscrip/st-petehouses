@@ -1,3 +1,5 @@
+import { AREA_CITIES as CITY_AREA_LIST, CITY_NAV_LINKS } from "./cities";
+
 export const ASSETS = {
   johnPortrait: "/assets/images/john-gardepe.webp",
   johnCta: "/assets/images/john-gardepe-1.png",
@@ -165,22 +167,7 @@ export const NAV_LINKS = {
     { label: "Reviews", href: "/reviews" },
   ],
   locations: {
-    cities: [
-      { label: "St Petersburg", href: "/we-buy-houses-st-petersburg-fl" },
-      { label: "Tampa", href: "/we-buy-houses-tampa-fl" },
-      { label: "Clearwater", href: "/we-buy-houses-clearwater-fl" },
-      { label: "Largo", href: "/we-buy-houses-largo-fl" },
-      { label: "Pinellas Park", href: "/we-buy-houses-pinellas-park-fl" },
-      { label: "Seminole", href: "/we-buy-houses-seminole-fl" },
-      { label: "Dunedin", href: "/we-buy-houses-dunedin-fl" },
-      { label: "Bradenton", href: "/we-buy-houses-bradenton-fl" },
-      { label: "Brandon", href: "/we-buy-houses-brandon-fl" },
-      { label: "Gulfport", href: "/we-buy-houses-gulfport-fl" },
-      { label: "Palm Harbor", href: "/we-buy-houses-palm-harbor-fl" },
-      { label: "Sarasota", href: "/we-buy-houses-sarasota-fl" },
-      { label: "Hudson", href: "/we-buy-houses-hudson-fl" },
-      { label: "New Port Richey", href: "/we-buy-houses-new-port-richey-fl" },
-    ],
+    cities: CITY_NAV_LINKS,
   },
   situations: [
     { label: "Foreclosure", href: "/situations/foreclosure" },
@@ -836,25 +823,20 @@ export const PROS_COMPARE_ROWS = [
   { label: "Showings & open houses", traditional: "Showings & open houses", cash: "No showings" },
 ] as const;
 
-export const AREA_CITIES = [
-  { label: "St Petersburg", href: "/we-buy-houses-st-petersburg-fl", featured: true },
-  { label: "Tampa", href: "/we-buy-houses-tampa-fl" },
-  { label: "Clearwater", href: "/we-buy-houses-clearwater-fl" },
-  { label: "Largo", href: "/we-buy-houses-largo-fl" },
-  { label: "Pinellas Park", href: "/we-buy-houses-pinellas-park-fl" },
-  { label: "Seminole", href: "/we-buy-houses-seminole-fl" },
-  { label: "Dunedin", href: "/we-buy-houses-dunedin-fl" },
-  { label: "Bradenton", href: "/we-buy-houses-bradenton-fl" },
-  { label: "Brandon", href: "/we-buy-houses-brandon-fl" },
-  { label: "Gulfport", href: "/we-buy-houses-gulfport-fl" },
-  { label: "Palm Harbor", href: "/we-buy-houses-palm-harbor-fl" },
-  { label: "Sarasota", href: "/we-buy-houses-sarasota-fl" },
-  { label: "Hudson", href: "/we-buy-houses-hudson-fl" },
-  { label: "New Port Richey", href: "/we-buy-houses-new-port-richey-fl" },
-] as const;
+export { CITY_AREA_LIST as AREA_CITIES };
 
 export const AREA_MAP_EMBED =
   "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8396.837695282898!2d-82.64505577943609!3d27.76555673270129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2e18481dc2ddf%3A0x2e71d28c72abcc7f!2sSt.%20Petersburg%2C%20FL%2033731%2C%20USA!5e0!3m2!1sen!2sin!4v1780317001513!5m2!1sen!2sin";
+
+/** Google Maps embed URL centered on a given city (used on city location pages). */
+export function buildCityMapEmbed(cityName: string): string {
+  const query = encodeURIComponent(`${cityName}, FL, USA`);
+  return `https://maps.google.com/maps?q=${query}&hl=en&z=12&ie=UTF8&iwloc=&output=embed`;
+}
+
+export function buildCityMapTitle(cityName: string): string {
+  return `Map of ${cityName}, FL and the Tampa Bay service area`;
+}
 
 export const GUARANTEE_ITEMS = [
   {

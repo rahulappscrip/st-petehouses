@@ -1,78 +1,326 @@
 import Link from "next/link";
-import { Arr } from "@/components/ui/Arr";
+import { CityHeroSection } from "@/components/cities/CityHeroSection";
+import { CitySituationsSection } from "@/components/cities/CitySituationsSection";
+import { CityBenefitsSection } from "@/components/cities/CityBenefitsSection";
+import { CityAfterAcceptSection } from "@/components/cities/CityAfterAcceptSection";
+import { CityCompareSection } from "@/components/cities/CityCompareSection";
+import { CityContactSection } from "@/components/cities/CityContactSection";
+import { StatsSection } from "@/components/home/StatsSection";
+import { ProcessSection } from "@/components/home/ProcessSection";
+import { AreasSection } from "@/components/home/AreasSection";
+import { MarketSection } from "@/components/home/MarketSection";
+import { GuaranteeSection } from "@/components/home/GuaranteeSection";
+import { ResourcesSection } from "@/components/home/ResourcesSection";
+import { FaqSection } from "@/components/home/FaqSection";
+import { FinalCtaSection } from "@/components/home/FinalCtaSection";
+import { TestimonialsSection } from "@/components/shared/TestimonialsSection";
 import {
-  buildCityBreadcrumb,
-  buildCityIntro,
-  CITY_BENEFITS,
-  CITY_SECOND_INTRO,
-  CITY_SITUATIONS_TEXT,
-  type CityPageData,
-} from "@/lib/cities";
+  buildCityTitleParts,
+  getCityFullContent,
+  type CityFullContent,
+  type CitySectionId,
+} from "@/lib/city-content";
+import { notFound } from "next/navigation";
 import { SITE } from "@/lib/constants";
+import type { CityPageData } from "@/lib/cities";
 
 type Props = {
   page: CityPageData;
 };
 
-function CrumbChevron() {
+function SectionTitle({ lead, em, tail }: { lead: string; em: string; tail: string }) {
   return (
-    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
-      <path d="M9 6l6 6-6 6" />
-    </svg>
+    <>
+      {lead}
+      <em>{em}</em>
+      {tail}
+    </>
+  );
+}
+
+function renderCitySection(id: CitySectionId, content: CityFullContent, page: CityPageData, alt: boolean) {
+  switch (id) {
+    case "process":
+      return (
+        <ProcessSection
+          key={id}
+          eyebrow={content.process.eyebrow}
+          title={
+            <SectionTitle
+              lead={content.process.titleLead}
+              em={content.process.titleEm}
+              tail={content.process.titleTail}
+            />
+          }
+          lede={content.process.lede}
+          steps={content.process.steps}
+          showStepMeta={false}
+          primaryCta={{ label: content.process.primaryCtaLabel, href: "#offer" }}
+          secondaryCta={{ label: content.process.secondaryCtaLabel, href: SITE.phoneHref }}
+        />
+      );
+
+    case "areas":
+      return (
+        <AreasSection
+          key={id}
+          eyebrow={content.areas.eyebrow}
+          title={
+            <SectionTitle lead={content.areas.titleLead} em={content.areas.titleEm} tail={content.areas.titleTail} />
+          }
+          lede={content.areas.lede}
+          listHeading="Service area — cities"
+          mapCity={page.cityName}
+          featuredCityHref={`/${page.route}`}
+        />
+      );
+
+    case "situations":
+      return (
+        <CitySituationsSection
+          key={id}
+          eyebrow={content.situations.eyebrow}
+          title={
+            <SectionTitle
+              lead={content.situations.titleLead}
+              em={content.situations.titleEm}
+              tail={content.situations.titleTail}
+            />
+          }
+          lede={content.situations.lede}
+          items={content.situations.items}
+          alt={alt}
+        />
+      );
+
+    case "testimonials":
+      if (!content.testimonials) return null;
+      return (
+        <TestimonialsSection
+          key={id}
+          eyebrow={content.testimonials.eyebrow}
+          title={
+            <SectionTitle
+              lead={content.testimonials.titleLead}
+              em={content.testimonials.titleEm}
+              tail={content.testimonials.titleTail}
+            />
+          }
+          lede={content.testimonials.lede}
+          items={content.testimonials.items}
+          showGoogleLink={false}
+          showRatingBadge={false}
+        />
+      );
+
+    case "market":
+      if (!content.market) return null;
+      return (
+        <MarketSection
+          key={id}
+          eyebrow={content.market.eyebrow}
+          title={
+            <SectionTitle lead={content.market.titleLead} em={content.market.titleEm} tail={content.market.titleTail} />
+          }
+          lede={content.market.lede}
+          factors={content.market.factors}
+          showLocal={false}
+          alt={alt}
+        />
+      );
+
+    case "guarantee":
+      if (!content.guarantee) return null;
+      return (
+        <GuaranteeSection
+          key={id}
+          eyebrow={content.guarantee.eyebrow}
+          title={
+            <SectionTitle
+              lead={content.guarantee.titleLead}
+              em={content.guarantee.titleEm}
+              tail={content.guarantee.titleTail}
+            />
+          }
+          lede={content.guarantee.intro ?? content.guarantee.lede}
+          items={content.guarantee.items}
+          asideTitle={content.guarantee.asideTitle}
+          asideBody={content.guarantee.asideBody}
+          asidePrimaryLabel="Request My Cash Offer"
+          asideSecondaryLabel="Get my offer →"
+        />
+      );
+
+    case "comparison":
+      return (
+        <CityCompareSection
+          key={id}
+          eyebrow={content.comparison.eyebrow}
+          title={
+            <SectionTitle
+              lead={content.comparison.titleLead}
+              em={content.comparison.titleEm}
+              tail={content.comparison.titleTail}
+            />
+          }
+          lede={content.comparison.lede}
+          traditionalLabel={content.comparison.traditionalLabel}
+          cashLabel={content.comparison.cashLabel}
+          rows={content.comparison.rows}
+          alt={alt}
+        />
+      );
+
+    case "benefits":
+      if (!content.benefits) return null;
+      return (
+        <CityBenefitsSection
+          key={id}
+          eyebrow={content.benefits.eyebrow}
+          title={
+            <SectionTitle
+              lead={content.benefits.titleLead}
+              em={content.benefits.titleEm}
+              tail={content.benefits.titleTail}
+            />
+          }
+          lede={content.benefits.lede}
+          items={content.benefits.items}
+        />
+      );
+
+    case "afterAccept":
+      if (!content.afterAccept) return null;
+      return (
+        <CityAfterAcceptSection
+          key={id}
+          eyebrow={content.afterAccept.eyebrow}
+          title={
+            <SectionTitle
+              lead={content.afterAccept.titleLead}
+              em={content.afterAccept.titleEm}
+              tail={content.afterAccept.titleTail}
+            />
+          }
+          lede={content.afterAccept.lede}
+          steps={content.afterAccept.steps}
+          alt={alt}
+        />
+      );
+
+    case "resources":
+      if (!content.resources) return null;
+      return (
+        <ResourcesSection
+          key={id}
+          eyebrow={content.resources.eyebrow}
+          title={
+            <SectionTitle
+              lead={content.resources.titleLead}
+              em={content.resources.titleEm}
+              tail={content.resources.titleTail}
+            />
+          }
+          lede={content.resources.lede}
+          resources={content.resources.items.map((item) => ({
+            title: item.title,
+            sub: item.sub,
+            href: item.href,
+          }))}
+          showBeforeAfter={false}
+          alt={alt}
+        />
+      );
+
+    case "contact":
+      if (!content.contact) return null;
+      return (
+        <CityContactSection
+          key={id}
+          eyebrow={content.contact.eyebrow}
+          title={
+            <SectionTitle lead={content.contact.titleLead} em={content.contact.titleEm} tail={content.contact.titleTail} />
+          }
+          lede={content.contact.lede}
+        />
+      );
+
+    case "faq":
+      return (
+        <FaqSection
+          key={id}
+          className="city-faq"
+          eyebrow={content.faq.eyebrow ?? "FAQ"}
+          items={content.faq.items}
+          title={
+            <SectionTitle lead={content.faq.titleLead} em={content.faq.titleEm} tail={content.faq.titleTail} />
+          }
+          showFullLink={false}
+        />
+      );
+
+    case "finalCta":
+      return (
+        <FinalCtaSection
+          key={id}
+          eyebrow={content.finalCta.eyebrow ?? "Ready to sell?"}
+          title={
+            <SectionTitle
+              lead={content.finalCta.titleLead}
+              em={content.finalCta.titleEm}
+              tail={content.finalCta.titleTail}
+            />
+          }
+          description={content.finalCta.description}
+          offerHref="#offer"
+        />
+      );
+
+    default:
+      return null;
+  }
+}
+
+function CityFullPageContent({ page, content }: Props & { content: CityFullContent }) {
+  const titleParts = buildCityTitleParts(page.cityName);
+
+  return (
+    <>
+      <nav className="city-breadcrumb" aria-label="Breadcrumb">
+        <div className="wrap">
+          <Link href="/">Home</Link>
+          <span aria-hidden>›</span>
+          <Link href="/#areas">Locations</Link>
+          <span aria-hidden>›</span>
+          <span>{page.cityName}, FL</span>
+        </div>
+      </nav>
+
+      <CityHeroSection
+        eyebrow={content.heroEyebrow}
+        title={
+          <>
+            {titleParts.lead}
+            <em>{titleParts.em}</em>
+            {titleParts.tail}
+          </>
+        }
+        subheadline={content.heroSubheadline}
+        formTitle={content.formTitle}
+        formIntro={content.formIntro}
+        cityName={page.cityName}
+        authorRole={content.authorRole}
+      />
+
+      <StatsSection />
+
+      {content.sectionOrder.map((sectionId, i) => renderCitySection(sectionId, content, page, i % 2 === 1))}
+    </>
   );
 }
 
 export function CityPageContent({ page }: Props) {
-  const breadcrumb = buildCityBreadcrumb(page.cityName);
-  const intro = buildCityIntro(page.cityName, page.neighborhoods);
-
-  return (
-    <section className="landing-hero">
-      <div className="landing-hero__bg" aria-hidden="true" />
-      <div className="wrap">
-        <nav className="crumbs situation-crumbs" aria-label="Breadcrumb">
-          <Link href="/">Home</Link>
-          <CrumbChevron />
-          <span>{breadcrumb}</span>
-        </nav>
-
-        <h1 className="h-display situation-title">
-          We buy houses in <em>{page.cityName}, FL</em> for cash.
-        </h1>
-        <p className="hero-sub situation-sub">{page.description}</p>
-
-        <div className="situation-grid">
-          <article className="situation-body">
-            <p>{intro}</p>
-            <p>{CITY_SECOND_INTRO}</p>
-            <h2>What you get with a cash sale in {page.cityName}</h2>
-            <ul className="situation-benefits">
-              {CITY_BENEFITS.map((item) => (
-                <li key={item.label}>
-                  <strong>{item.label}:</strong> {item.text}
-                </li>
-              ))}
-            </ul>
-            <h2>Common {page.cityName} seller situations</h2>
-            <p>{CITY_SITUATIONS_TEXT}</p>
-          </article>
-
-          <aside className="situation-aside">
-            <span className="situation-aside__eyebrow">Ready to sell?</span>
-            <h2>Get a no-obligation cash offer.</h2>
-            <p>Tell us about your property. Offer in 24 hours, close in as little as 7 days.</p>
-            <div className="situation-aside__actions">
-              <Link href="/get-cash-offer" className="btn btn--cta">
-                Get my cash offer
-                <Arr />
-              </Link>
-              <a href={SITE.phoneHref} className="btn btn--ghost">
-                📞 {SITE.phone}
-              </a>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </section>
-  );
+  const content = getCityFullContent(page.route);
+  if (!content) notFound();
+  return <CityFullPageContent page={page} content={content} />;
 }

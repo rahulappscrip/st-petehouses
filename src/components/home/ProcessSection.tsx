@@ -44,7 +44,11 @@ export function ProcessSection({
           <p className="lede">{lede}</p>
         </Reveal>
 
-        <ol className="steps" style={{ listStyle: "none", padding: 0 }} aria-label="Four step process">
+        <ol
+          className={`steps${steps.length === 3 ? " steps--3" : ""}`}
+          style={{ listStyle: "none", padding: 0 }}
+          aria-label="Process steps"
+        >
           {steps.map((step, i) => (
             <Reveal
               key={step.num}

@@ -9,6 +9,8 @@ type AreasSectionProps = {
   title?: ReactNode;
   lede?: string;
   listHeading?: string;
+  mapCity?: string;
+  featuredCityHref?: string;
 };
 
 export function AreasSection({
@@ -20,6 +22,8 @@ export function AreasSection({
   ),
   lede = "We serve St. Petersburg, Pinellas County, and the greater Tampa Bay area. Hyper-local coverage means we know the neighborhoods, market trends, and what makes each community unique — from Historic Kenwood to Disston Heights and beyond.",
   listHeading = "Service area — cities",
+  mapCity,
+  featuredCityHref,
 }: AreasSectionProps = {}) {
   return (
     <section className="areas-section section" id="areas">
@@ -31,13 +35,24 @@ export function AreasSection({
         </Reveal>
 
         <div className="areas-grid">
-          <AreaServiceMap />
+          <AreaServiceMap cityName={mapCity} />
 
           <Reveal d={1} className="areas-aside">
             <h3>{listHeading}</h3>
             <ul className="area-list">
               {AREA_CITIES.map((city) => (
-                <li key={city.href} className={"featured" in city && city.featured ? "featured" : undefined}>
+                <li
+                  key={city.href}
+                  className={
+                    featuredCityHref
+                      ? city.href === featuredCityHref
+                        ? "featured"
+                        : undefined
+                      : "featured" in city && city.featured
+                        ? "featured"
+                        : undefined
+                  }
+                >
                   <Link href={city.href}>{city.label}</Link>
                 </li>
               ))}

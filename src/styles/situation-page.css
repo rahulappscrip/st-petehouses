@@ -125,3 +125,226 @@
 .situation-aside__actions .btn {
   justify-content: center;
 }
+
+/* City page breadcrumb */
+.city-breadcrumb {
+  padding: 14px 0;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line-soft);
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.city-breadcrumb .wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.city-breadcrumb a {
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.city-breadcrumb a:hover {
+  color: var(--ink);
+}
+
+/* City page hero — content left, homepage form right */
+.city-hero {
+  position: relative;
+  padding-top: clamp(32px, 4vw, 56px);
+  padding-bottom: clamp(56px, 7vw, 88px);
+  overflow: visible;
+}
+
+.city-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.city-hero__bg::before {
+  content: "";
+  position: absolute;
+  right: -8%;
+  top: -20%;
+  width: 52vw;
+  height: 52vw;
+  max-width: 720px;
+  max-height: 720px;
+  background: radial-gradient(circle at 30% 30%, rgba(42, 174, 102, 0.1), transparent 65%);
+  border-radius: 50%;
+}
+
+.city-hero__grid {
+  display: grid;
+  gap: clamp(32px, 4vw, 56px);
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .city-hero__grid {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
+    gap: clamp(40px, 5vw, 72px);
+  }
+}
+
+.city-hero__eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: clamp(16px, 2vw, 22px);
+}
+
+.city-hero__title {
+  margin-top: 0;
+  max-width: 14ch;
+  text-wrap: balance;
+}
+
+.city-hero__sub {
+  font-family: var(--sans);
+  font-size: clamp(16px, 1.6vw, 17px);
+  line-height: 1.65;
+  color: var(--ink-2);
+  max-width: 52ch;
+  margin-top: clamp(16px, 2vw, 22px);
+}
+
+.city-hero__author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: clamp(24px, 3vw, 32px);
+  padding-top: clamp(20px, 2.5vw, 28px);
+  border-top: 1px solid var(--line-soft);
+}
+
+.city-hero__avatar {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--sun-deep);
+  color: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.city-hero__author strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.city-hero__author span {
+  display: block;
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-top: 2px;
+}
+
+.city-hero .lead-card.lead-offer-form {
+  position: static;
+  top: auto;
+  align-self: start;
+  margin-bottom: 0;
+}
+
+/* City situation / benefit cards */
+.city-sit-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .city-sit-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .city-sit-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.city-sit-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.city-sit-card__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: var(--sand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.city-sit-card h3 {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.city-sit-card p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+
+/* City page FAQ — slightly smaller */
+.city-faq .faq-q {
+  font-size: clamp(17px, 1.7vw, 21px);
+  padding: 18px 0;
+}
+
+.city-faq .faq-a {
+  font-size: 14.5px;
+  line-height: 1.6;
+  padding-bottom: 18px;
+}
+
+.city-faq .faq-q .plus {
+  width: 28px;
+  height: 28px;
+}
+
+.city-faq .faq-q .plus svg {
+  width: 12px;
+  height: 12px;
+}
+
+@media (max-width: 899px) {
+  .city-hero {
+    padding-bottom: calc(56px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .city-hero__title {
+    max-width: none;
+  }
+}

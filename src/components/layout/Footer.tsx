@@ -12,7 +12,6 @@ const FOOTER_COMPANY = [
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
   { label: "Get a Cash Offer", href: "/get-cash-offer" },
-  { label: "We Buy Houses in Tampa", href: "/we-buy-houses-tampa-fl" },
   { label: "Privacy Policy", href: "/about" },
 ];
 
@@ -112,7 +111,7 @@ export function Footer() {
 
           <div className="foot-col">
             <h4>Cities</h4>
-            {NAV_LINKS.locations.cities.slice(0, 9).map((c) => (
+            {NAV_LINKS.locations.cities.map((c) => (
               <Link key={c.href} href={c.href}>
                 {c.label}
               </Link>

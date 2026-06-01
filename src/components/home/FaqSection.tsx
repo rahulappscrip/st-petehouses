@@ -8,6 +8,7 @@ type FaqItem = { q: string; a: string };
 type FaqSectionProps = {
   items?: readonly FaqItem[];
   title?: ReactNode;
+  eyebrow?: string;
   showFullLink?: boolean;
   className?: string;
   id?: string;
@@ -20,6 +21,7 @@ export function FaqSection({
       Frequently asked questions about <em>selling for cash</em> in St. Pete.
     </>
   ),
+  eyebrow = "FAQ",
   showFullLink = true,
   className = "",
   id = "faq",
@@ -32,7 +34,7 @@ export function FaqSection({
     >
       <div className="wrap" style={{ maxWidth: 920 }}>
         <Reveal className="section-head">
-          <span className="eyebrow">FAQ</span>
+          <span className="eyebrow">{eyebrow}</span>
           <h2 className="h-2">{title}</h2>
         </Reveal>
 

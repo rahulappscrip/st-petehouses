@@ -176,8 +176,8 @@
   }
 }
 
-/* Form card — wider, same height as portrait column */
-.hero .lead-card {
+/* Form card — layout within fixed-height hero grid */
+.hero .lead-card.lead-offer-form {
   background: var(--sand);
   width: 100%;
   max-width: 100%;
@@ -191,7 +191,7 @@
 }
 
 @media (min-width: 768px) {
-  .hero .lead-card {
+  .hero .lead-card.lead-offer-form {
     height: fit-content;
     max-height: none;
     min-height: 0;

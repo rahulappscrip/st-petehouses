@@ -24,22 +24,16 @@ export const CITY_BENEFITS = [
 export const CITY_SITUATIONS_TEXT =
   "Foreclosure, divorce, probate, tired-landlord exits, relocations, fire/water/mold damage, and properties with significant deferred maintenance. Every situation is different — call us and we'll walk through your options.";
 
+/** Active city location pages — single source of truth for routes, nav, and footer. */
 export const CITY_PAGES: CityPageData[] = [
   {
     route: "we-buy-houses-st-petersburg-fl",
     label: "St Petersburg",
     cityName: "St Petersburg",
     description: CITY_HERO_SUB,
-    metaDescription: "Sell your St Petersburg house fast for cash. Local cash buyers, as-is, no fees.",
+    metaDescription:
+      "Sell your house fast in St Petersburg, FL. Get a fair cash offer with no repairs, no fees, and close on your schedule. We buy houses as-is.",
     neighborhoods: "Old Northeast, Historic Kenwood, Disston Heights, Shore Acres, Pasadena, Gulfport area",
-  },
-  {
-    route: "we-buy-houses-tampa-fl",
-    label: "Tampa",
-    cityName: "Tampa",
-    description: CITY_HERO_SUB,
-    metaDescription: "Sell your Tampa house fast for cash. As-is, no commissions, close in 7 days.",
-    neighborhoods: "Hyde Park, Seminole Heights, Ybor City, South Tampa, Westshore, New Tampa",
   },
   {
     route: "we-buy-houses-clearwater-fl",
@@ -47,7 +41,7 @@ export const CITY_PAGES: CityPageData[] = [
     cityName: "Clearwater",
     description: CITY_HERO_SUB,
     metaDescription:
-      "We buy houses in Clearwater, FL for cash. No repairs, no fees, no commissions. Get your no-obligation offer today and close on your schedule.",
+      "Sell your Clearwater home fast for cash. No repairs, no fees, close in as little as 7 days. We serve Clearwater and Greater Tampa Bay. Get your offer today.",
     neighborhoods: "Island Estates, Countryside, Belleair, Coachman, North Clearwater",
   },
   {
@@ -56,90 +50,38 @@ export const CITY_PAGES: CityPageData[] = [
     cityName: "Largo",
     description: CITY_HERO_SUB,
     metaDescription:
-      "We buy houses in Largo, FL for cash. No fees, no repairs needed. Close in as little as 7 days. Get your no-obligation cash offer today at (727) 477-8998.",
+      "Need to sell your house fast in Largo? We buy homes as-is for cash with no fees or repairs. Get a fair offer and close in as little as 7 days. Call today!",
     neighborhoods: "Central Park, Twin Oaks, Bardmoor, Indian Rocks gateway",
-  },
-  {
-    route: "we-buy-houses-pinellas-park-fl",
-    label: "Pinellas Park",
-    cityName: "Pinellas Park",
-    description: CITY_HERO_SUB,
-    metaDescription: "Cash for Pinellas Park homes. As-is, no fees, fast close.",
-    neighborhoods: "Bardmoor, Park Royal, Pinellas Park core, near 49th Street",
-  },
-  {
-    route: "we-buy-houses-seminole-fl",
-    label: "Seminole",
-    cityName: "Seminole",
-    description: CITY_HERO_SUB,
-    metaDescription: "Cash offers for Seminole, FL homes. No repairs needed, fast closing.",
-    neighborhoods: "Seminole core, Bay Pines, near Lake Seminole",
   },
   {
     route: "we-buy-houses-dunedin-fl",
     label: "Dunedin",
     cityName: "Dunedin",
     description: CITY_HERO_SUB,
-    metaDescription: "Cash offers for Dunedin homes. As-is, no agent fees, close on your timeline.",
+    metaDescription:
+      "Sell your Dunedin house fast for cash—close in as few as 7 days with no fees, no repairs. We buy houses as-is across Tampa Bay. Get your offer today.",
     neighborhoods: "Downtown Dunedin, Honeymoon Island area, Caladesi, Curlew Hills",
   },
   {
-    route: "we-buy-houses-bradenton-fl",
-    label: "Bradenton",
-    cityName: "Bradenton",
+    route: "we-buy-houses-pinellas-park-fl",
+    label: "Pinellas Park",
+    cityName: "Pinellas Park",
     description: CITY_HERO_SUB,
-    metaDescription: "Cash buyers for Bradenton homes. As-is, on your timeline.",
-    neighborhoods: "West Bradenton, Cortez, Palma Sola, Anna Maria gateway",
-  },
-  {
-    route: "we-buy-houses-brandon-fl",
-    label: "Brandon",
-    cityName: "Brandon",
-    description: CITY_HERO_SUB,
-    metaDescription: "Sell your Brandon house fast for cash. Local, transparent, no fees.",
-    neighborhoods: "Brandon core, Bloomingdale, Valrico edge",
-  },
-  {
-    route: "we-buy-houses-gulfport-fl",
-    label: "Gulfport",
-    cityName: "Gulfport",
-    description: CITY_HERO_SUB,
-    metaDescription: "Cash offers for Gulfport homes. As-is, friendly local team.",
-    neighborhoods: "Historic Gulfport, Stetson, Boca Ciega Bay",
-  },
-  {
-    route: "we-buy-houses-palm-harbor-fl",
-    label: "Palm Harbor",
-    cityName: "Palm Harbor",
-    description: CITY_HERO_SUB,
-    metaDescription: "Cash for Palm Harbor homes. As-is, fast close.",
-    neighborhoods: "Crystal Beach, Ozona, Lansbrook, Highland Lakes",
-  },
-  {
-    route: "we-buy-houses-sarasota-fl",
-    label: "Sarasota",
-    cityName: "Sarasota",
-    description: CITY_HERO_SUB,
-    metaDescription: "Sell your Sarasota home for cash. As-is, no commissions.",
-    neighborhoods: "Downtown Sarasota, Siesta Key area, Bird Key, Lakewood Ranch edge",
-  },
-  {
-    route: "we-buy-houses-hudson-fl",
-    label: "Hudson",
-    cityName: "Hudson",
-    description: CITY_HERO_SUB,
-    metaDescription: "Cash for Hudson, FL homes. Local team, fast close.",
-    neighborhoods: "Hudson Beach, Sea Pines, Sea Ranch",
-  },
-  {
-    route: "we-buy-houses-new-port-richey-fl",
-    label: "New Port Richey",
-    cityName: "New Port Richey",
-    description: CITY_HERO_SUB,
-    metaDescription: "Cash offers for New Port Richey homes. No fees, no repairs.",
-    neighborhoods: "Downtown NPR, Trinity, Gulf Harbors",
+    metaDescription:
+      "Sell your house fast for cash in Pinellas Park. No fees, no repairs, close in 7 days. Get a fair cash offer from We Buy St Pete Houses today.",
+    neighborhoods: "Bardmoor, Park Royal, Pinellas Park core, near 49th Street",
   },
 ];
+
+export const CITY_NAV_LINKS = CITY_PAGES.map((page) => ({
+  label: page.label,
+  href: `/${page.route}`,
+}));
+
+export const AREA_CITIES = CITY_PAGES.map((page) => ({
+  label: page.label,
+  href: `/${page.route}`,
+}));
 
 export const CITY_BY_ROUTE = Object.fromEntries(CITY_PAGES.map((page) => [page.route, page])) as Record<
   string,
