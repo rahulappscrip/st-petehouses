@@ -1,5 +1,9 @@
 /* Pros & cons — cash sale comparison */
 
+#pros-cons h2 {
+  max-width: 740px;
+}
+
 .pros-cards {
   display: grid;
   gap: clamp(16px, 2.5vw, 24px);

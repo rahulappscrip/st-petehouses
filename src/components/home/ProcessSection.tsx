@@ -26,10 +26,10 @@ export function ProcessSection({
   eyebrow = "How it works",
   title = (
     <>
-      How our <em>cash offer process</em> works.
+      How our <em>offer process</em> works.
     </>
   ),
-  lede = "Our process is transparent and flexible. From inquiry to cash offer to closing on your timeline, we make selling straightforward — no waiting for mortgage approvals, no buyer financing falling through.",
+  lede = "Our process is transparent and flexible. From your first conversation to a fair offer and closing on your timeline, we make selling straightforward—without the uncertainty of traditional home sales.",
   steps = PROCESS_STEPS,
   primaryCta = { label: "Start step 1", href: "#offer" },
   secondaryCta = { label: "Learn more about how it works →", href: "/how-it-works" },

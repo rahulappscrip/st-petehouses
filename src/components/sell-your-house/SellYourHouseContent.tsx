@@ -146,7 +146,6 @@ export function SellYourHouseContent() {
           </>
         }
         lede="Hyper-local coverage throughout St. Petersburg and Pinellas County — from Old Northeast and Historic Kenwood to Shore Acres, Pasadena, Gulfport, and the wider Tampa Bay region."
-        showCounties={false}
         listHeading="Service area"
       />
 

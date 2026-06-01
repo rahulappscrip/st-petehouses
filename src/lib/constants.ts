@@ -182,7 +182,7 @@ export const STATS = [
     value: "10",
     suffix: "days",
     label: "Minimum close",
-    sub: "7–14 days typical. You pick the date.",
+    sub: "10 to 14 days typical. You pick the date.",
   },
   {
     value: "$0",
@@ -192,7 +192,7 @@ export const STATS = [
   {
     value: "500",
     suffix: "+",
-    label: "Tampa Bay homes bought",
+    label: "St. Petersburg homes bought",
     sub: "Local team serving since 2014.",
   },
 ] as const;
@@ -786,13 +786,6 @@ export const AREA_CITIES = [
   { label: "Sarasota", href: "/we-buy-houses-sarasota-fl" },
   { label: "Hudson", href: "/we-buy-houses-hudson-fl" },
   { label: "New Port Richey", href: "/we-buy-houses-new-port-richey-fl" },
-] as const;
-
-export const AREA_COUNTIES = [
-  { label: "Pinellas County", href: "/pinellas-county" },
-  { label: "Hillsborough County", href: "/hillsborough-county" },
-  { label: "Manatee County", href: "/manatee-county" },
-  { label: "Pasco County", href: "/pinellas-county" },
 ] as const;
 
 export const MAP_PINS = [
