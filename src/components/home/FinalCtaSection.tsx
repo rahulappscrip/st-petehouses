@@ -26,13 +26,9 @@ export function FinalCtaSection({
     <section className="section">
       <div className="wrap">
         <Reveal className="cta-card">
-          <div>
-            <span className="eyebrow" style={{ color: "color-mix(in oklab, var(--paper) 70%, transparent)" }}>
-              {eyebrow}
-            </span>
-            <h2 className="h-2" style={{ color: "var(--paper)", marginTop: 14 }}>
-              {title}
-            </h2>
+          <div className="cta-card__content">
+            <span className="eyebrow">{eyebrow}</span>
+            <h2 className="h-2">{title}</h2>
             <p>{description}</p>
             <div className="cta-actions">
               <Link href={offerHref} className="btn btn--cta">

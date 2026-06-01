@@ -185,7 +185,7 @@
   align-self: end;
   position: static !important;
   top: auto !important;
-  margin-bottom: 0;
+  margin-bottom: 46px;
   padding: 24px clamp(18px, 2vw, 24px);
   gap: 8px;
 }

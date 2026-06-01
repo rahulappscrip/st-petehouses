@@ -1,10 +1,8 @@
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
+import { AreaServiceMap } from "@/components/home/AreaServiceMap";
 import { AREA_CITIES } from "@/lib/constants";
 import type { ReactNode } from "react";
-
-const PIN_CLASSES = ["you l1", "l2", "l3", "l4", "l5", "l6"] as const;
-const PIN_LABELS = ["St Petersburg", "Dunedin", "Tampa", "Largo", "Bradenton", "Clearwater"] as const;
 
 type AreasSectionProps = {
   eyebrow?: string;
@@ -33,13 +31,7 @@ export function AreasSection({
         </Reveal>
 
         <div className="areas-grid">
-          <Reveal className="area-map" role="img" aria-label="Map highlighting Tampa Bay service area">
-            {PIN_LABELS.map((label, i) => (
-              <span key={label} className={`pin-label ${PIN_CLASSES[i]}`}>
-                {label}
-              </span>
-            ))}
-          </Reveal>
+          <AreaServiceMap />
 
           <Reveal d={1} className="areas-aside">
             <h3>{listHeading}</h3>

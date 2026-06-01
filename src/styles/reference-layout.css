@@ -199,14 +199,15 @@ h3 em,
 .brand-mark::after{ content:""; position:absolute; right:-6px; bottom:-6px; width: 18px; height: 18px; background: var(--sun); border-radius: 50%; }
 .site-header .brand{
   align-items: center;
-  max-width: 168px;
-  overflow: hidden;
+  gap: 10px;
+  max-width: min(72vw, 300px);
+  overflow: visible;
 }
 .site-header .brand-mark{
   width: auto;
-  height: 46px;
-  max-width: 168px;
-  max-height: 46px;
+  height: 42px;
+  max-width: 48px;
+  max-height: 42px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -215,10 +216,23 @@ h3 em,
 .site-header .brand-mark img{
   width: auto !important;
   height: 100% !important;
-  max-width: 168px !important;
-  max-height: 46px !important;
+  max-width: 48px !important;
+  max-height: 42px !important;
   object-fit: contain;
   object-position: left center;
+}
+.site-header .brand-name{
+  min-width: 0;
+  font-size: clamp(15px, 1.5vw, 18px);
+  line-height: 1.1;
+}
+.site-header .brand-name small{
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  margin-top: 3px;
+}
+@media (max-width: 479px){
+  .site-header .brand-name small{ display: none; }
 }
 .brand-name{ font-family: var(--serif); font-size: 20px; line-height: 1.05; white-space: nowrap; }
 .brand-name small{ display: block; font-family: var(--mono); font-size: 9.5px; letter-spacing: .16em; color: var(--ink-soft); text-transform: uppercase; margin-top: 4px; white-space: nowrap; }
@@ -588,6 +602,7 @@ h3 em,
   align-self: start;
   position: sticky;
   top: calc(var(--topbar-h) + var(--nav-h) + 16px);
+  margin-bottom: 46px;
 }
 @media (max-width: 899px){ .lead-card{ position: static; } }
 .lead-card::before{
@@ -765,42 +780,20 @@ h3 em,
 .areas-grid{ display: grid; gap: clamp(24px, 3vw, 40px); grid-template-columns: 1fr; }
 @media (min-width: 880px){ .areas-grid{ grid-template-columns: 1.1fr .9fr; align-items: stretch; } }
 .area-map{
-  min-height: 440px;
+  min-height: clamp(320px, 50vw, 450px);
   border-radius: var(--radius-l);
-  overflow: hidden; position: relative;
+  overflow: hidden;
+  position: relative;
   border: 1px solid var(--line);
-  background:
-    radial-gradient(circle at 55% 35%, color-mix(in oklab, var(--sun) 70%, var(--sand)) 0 12px, transparent 13px),
-    radial-gradient(circle at 30% 30%, color-mix(in oklab, var(--teal) 30%, var(--sand)) 0 10px, transparent 11px),
-    radial-gradient(circle at 78% 28%, color-mix(in oklab, var(--ink) 30%, var(--sand)) 0 10px, transparent 11px),
-    radial-gradient(circle at 35% 60%, color-mix(in oklab, var(--leaf) 30%, var(--sand)) 0 10px, transparent 11px),
-    radial-gradient(circle at 60% 72%, color-mix(in oklab, var(--ink) 30%, var(--sand)) 0 10px, transparent 11px),
-    radial-gradient(circle at 22% 75%, color-mix(in oklab, var(--teal) 30%, var(--sand)) 0 10px, transparent 11px),
-    repeating-linear-gradient(0deg, color-mix(in oklab, var(--ink) 8%, transparent) 0 1px, transparent 1px 40px),
-    repeating-linear-gradient(90deg, color-mix(in oklab, var(--ink) 8%, transparent) 0 1px, transparent 1px 40px),
-    var(--paper);
+  background: var(--paper);
 }
-.area-map::after{
-  content: "[MAP: Tampa Bay service area]";
-  position: absolute; right: 14px; bottom: 14px;
-  font-family: var(--mono); font-size: 11px; letter-spacing: .08em;
-  background: var(--paper); color: var(--ink);
-  padding: 6px 10px; border-radius: 6px; border: 1px solid var(--line);
+.area-map__embed{
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: clamp(320px, 50vw, 450px);
+  border: 0;
 }
-.pin-label{
-  position: absolute; padding: 6px 10px; background: var(--paper);
-  border-radius: 6px; border: 1px solid var(--line);
-  font-family: var(--mono); font-size: 11px; letter-spacing: .06em;
-  color: var(--ink); box-shadow: var(--shadow-1);
-  transform: translate(-50%, -130%);
-}
-.pin-label.you{ background: var(--sun); color: var(--paper); border-color: var(--sun); font-weight: 500; }
-.pin-label.l1{ left: 55%; top: 35%; }
-.pin-label.l2{ left: 30%; top: 30%; }
-.pin-label.l3{ left: 78%; top: 28%; }
-.pin-label.l4{ left: 35%; top: 60%; }
-.pin-label.l5{ left: 60%; top: 72%; }
-.pin-label.l6{ left: 22%; top: 75%; }
 .areas-aside h3{ font-family: var(--serif); font-weight: 400; font-size: 26px; line-height: 1.1; margin-bottom: 14px; }
 .area-list{
   display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px;
@@ -1120,12 +1113,29 @@ h3 em,
   position: relative; overflow: hidden;
   background: var(--ink); color: var(--paper);
   border-radius: clamp(20px, 3vw, 32px);
-  padding: clamp(40px, 6vw, 80px) clamp(40px, 6vw, 80px) 0;
+  padding: clamp(40px, 6vw, 65px) clamp(36px, 6vw, 81px) 0;
   display: grid; gap: 40px;
   grid-template-columns: 1fr;
   align-items: center;
 }
-@media (min-width: 880px){ .cta-card{ grid-template-columns: 1.4fr 1fr; } }
+@media (min-width: 880px){
+  .cta-card{
+    grid-template-columns: 1.4fr 1fr;
+    align-items: center;
+  }
+}
+.cta-card__content{
+  position: relative;
+  z-index: 1;
+  margin-top: clamp(-8px, -1vw, -16px);
+}
+.cta-card__content .eyebrow{
+  color: color-mix(in oklab, var(--paper) 70%, transparent);
+}
+.cta-card__content .h-2{
+  color: var(--paper);
+  margin-top: 10px;
+}
 .cta-card::before{
   content:""; position: absolute; right: -10%; top: -30%;
   width: 60%; height: 160%;
@@ -1291,8 +1301,8 @@ svg{ flex: 0 0 auto; }
 .site-header .brand-mark img{
   width: auto !important;
   height: 100% !important;
-  max-width: 168px !important;
-  max-height: 46px !important;
+  max-width: 48px !important;
+  max-height: 42px !important;
 }
 .nav-phone .ico svg{ width:16px !important; height:16px !important; }
 .btn svg, .btn .arr{ width:16px !important; height:16px !important; }

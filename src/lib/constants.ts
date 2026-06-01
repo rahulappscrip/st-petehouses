@@ -834,14 +834,8 @@ export const AREA_CITIES = [
   { label: "New Port Richey", href: "/we-buy-houses-new-port-richey-fl" },
 ] as const;
 
-export const MAP_PINS = [
-  "St Petersburg",
-  "Dunedin",
-  "Tampa",
-  "Largo",
-  "Bradenton",
-  "Clearwater",
-] as const;
+export const AREA_MAP_EMBED =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8396.837695282898!2d-82.64505577943609!3d27.76555673270129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2e18481dc2ddf%3A0x2e71d28c72abcc7f!2sSt.%20Petersburg%2C%20FL%2033731%2C%20USA!5e0!3m2!1sen!2sin!4v1780317001513!5m2!1sen!2sin";
 
 export const GUARANTEE_ITEMS = [
   {
