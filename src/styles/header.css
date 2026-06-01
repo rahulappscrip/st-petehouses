@@ -46,6 +46,7 @@
     pointer-events: none;
   }
 }
+<<<<<<< HEAD
 
 @media (max-width: 979px) {
   .nav-cta .btn--cta {
@@ -95,3 +96,10 @@
     display: inline-flex;
   }
 } 
+=======
+@media (max-width:980px) {
+      .nav-cta .btn--cta {
+    display:none; 
+  }
+}
+>>>>>>> abe9286 (Hide call-to-action button on small screens)
