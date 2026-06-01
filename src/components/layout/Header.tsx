@@ -15,6 +15,21 @@ function Caret() {
   );
 }
 
+function MenuToggleIcon({ open }: { open: boolean }) {
+  if (open) {
+    return (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden>
+        <path d="M6 6l12 12M18 6L6 18" />
+      </svg>
+    );
+  }
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden>
+      <path d="M3 6h18M3 12h18M3 18h18" />
+    </svg>
+  );
+}
+
 function MenuItem({
   href,
   label,
@@ -54,6 +69,8 @@ export function Header() {
 
   const closeMenus = useCallback(() => setOpenMenu(null), []);
 
+  const closeDrawer = useCallback(() => setDrawerOpen(false), []);
+
   const handleMenuNavigate = useCallback(() => {
     setOpenMenu(null);
     setSuppressHover(true);
@@ -67,7 +84,16 @@ export function Header() {
   }, [pathname]);
 
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && closeMenus();
+    document.body.classList.toggle("nav-drawer-open", drawerOpen);
+    return () => document.body.classList.remove("nav-drawer-open");
+  }, [drawerOpen]);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== "Escape") return;
+      closeMenus();
+      closeDrawer();
+    };
     const onClick = (e: MouseEvent) => {
       const target = e.target as Node;
       if (document.querySelector(".nav-links")?.contains(target)) return;
@@ -79,7 +105,7 @@ export function Header() {
       document.removeEventListener("keydown", onKey);
       document.removeEventListener("click", onClick);
     };
-  }, [closeMenus]);
+  }, [closeMenus, closeDrawer]);
 
   const toggleMenu = (id: string, e: React.MouseEvent) => {
     e.stopPropagation();
@@ -87,7 +113,7 @@ export function Header() {
   };
 
   return (
-    <header className={`site-header${scrolled ? " is-scrolled" : ""}`}>
+    <header className={`site-header${scrolled ? " is-scrolled" : ""}${drawerOpen ? " is-drawer-open" : ""}`}>
       <div className="wrap nav">
         <BrandLogo showName={false} />
 
@@ -194,17 +220,28 @@ export function Header() {
             className="nav-burger"
             type="button"
             aria-label={drawerOpen ? "Close menu" : "Open menu"}
+            aria-expanded={drawerOpen}
+            aria-controls="nav-drawer"
             data-drawer-toggle
+            data-open={drawerOpen ? "" : undefined}
             onClick={() => setDrawerOpen((v) => !v)}
           >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-              <path d="M3 6h18M3 12h18M3 18h18" />
-            </svg>
+            <MenuToggleIcon open={drawerOpen} />
           </button>
         </div>
       </div>
 
-      <div className="nav-drawer" id="nav-drawer" data-open={drawerOpen ? "" : undefined}>
+      {drawerOpen ? (
+        <button
+          type="button"
+          className="nav-drawer-backdrop"
+          aria-label="Close menu"
+          tabIndex={-1}
+          onClick={closeDrawer}
+        />
+      ) : null}
+
+      <div className="nav-drawer" id="nav-drawer" data-open={drawerOpen ? "" : undefined} aria-hidden={!drawerOpen}>
         <Link href="/how-it-works" className="top-link" onClick={handleMenuNavigate}>
           How It Works
         </Link>

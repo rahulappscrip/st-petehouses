@@ -161,8 +161,11 @@ main {
   max-width: 100%;
 }
 
-/* Closed mobile drawer must not affect layout width */
-.nav-drawer:not([data-open]) {
-  visibility: hidden;
-  pointer-events: none;
+/* Closed mobile drawer must not affect layout or leave a gap */
+@media (max-width: 979px) {
+  .nav-drawer:not([data-open]) {
+    display: none !important;
+    visibility: hidden;
+    pointer-events: none;
+  }
 }

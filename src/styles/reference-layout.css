@@ -145,6 +145,10 @@ p{ margin:0; }
   border-bottom: 1px solid color-mix(in oklab, var(--line) 60%, transparent);
   transition: box-shadow .25s ease, background .25s ease;
 }
+.site-header.is-drawer-open{
+  z-index: 52;
+  border-bottom-color: transparent;
+}
 .site-header.is-scrolled{
   background: color-mix(in oklab, var(--sand) 98%, transparent);
   box-shadow: 0 8px 20px -16px rgba(14,59,35,.25);
@@ -353,8 +357,16 @@ p{ margin:0; }
   border-radius: 10px;
   background: var(--paper); border: 1px solid var(--line); color: var(--ink);
   align-items: center; justify-content: center;
+  flex: 0 0 auto;
+  cursor: pointer;
+  padding: 0;
 }
-.nav-burger svg{ width: 20px; height: 20px; }
+.nav-burger svg{ width: 20px; height: 20px; flex: 0 0 auto; }
+.nav-burger[data-open]{
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
 
 @media (min-width: 980px){
   .nav-links{ display: flex; }
@@ -362,18 +374,42 @@ p{ margin:0; }
   .nav-phone{ display: inline-flex; }
 }
 
-/* Mobile drawer */
-.nav-drawer{
-  position: fixed; left: 0; right: 0; top: calc(var(--topbar-h) + var(--nav-h));
-  background: var(--paper);
-  border-top: 1px solid var(--line);
-  padding: 20px var(--gutter) 32px;
-  max-height: calc(100vh - var(--topbar-h) - var(--nav-h));
-  overflow-y: auto;
+/* Mobile drawer — anchored to sticky header (no topbar offset gap) */
+.nav-drawer-backdrop{
   display: none;
-  z-index: 49;
 }
-.nav-drawer[data-open]{ display: block; }
+@media (max-width: 979px){
+  .nav-drawer-backdrop{
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 48;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: color-mix(in oklab, var(--ink) 42%, transparent);
+    cursor: pointer;
+  }
+  .nav-drawer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    margin: 0;
+    background: var(--paper);
+    border-top: 1px solid var(--line);
+    padding: 12px var(--gutter) 28px;
+    max-height: calc(100dvh - var(--nav-h));
+    overflow-y: auto;
+    display: none;
+    z-index: 51;
+    box-shadow: 0 16px 40px -20px rgba(14, 59, 35, .28);
+  }
+  .nav-drawer[data-open]{ display: block; }
+  body.nav-drawer-open{
+    overflow: hidden;
+  }
+}
 .nav-drawer details{ border-bottom: 1px solid var(--line-soft); }
 .nav-drawer summary{
   list-style: none; cursor: pointer;
