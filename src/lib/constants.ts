@@ -894,6 +894,8 @@ export const BEFORE_AFTER = [
   {
     beforeLabel: "BEFORE · distressed property",
     afterLabel: "AFTER · renovated & resold",
+    beforeImage: "/assets/images/before-building.png",
+    afterImage: "/assets/images/After-building.png",
     title: "Inherited bungalow — Disston Heights",
     body: "Estate full of contents, dated kitchen, leaking roof. Cash close in 9 days.",
     statHtml: "<b>9 day</b> close · <b>14 wk</b> renovation",
@@ -901,6 +903,8 @@ export const BEFORE_AFTER = [
   {
     beforeLabel: "BEFORE · vacant rental",
     afterLabel: "AFTER · move-in ready",
+    beforeImage: "/assets/images/before-inner-house.png",
+    afterImage: "/assets/images/after-inner-house.png",
     title: "Vacant rental — Old Northeast",
     body: "Tired landlord with tenant issues. Closed without eviction in 7 days.",
     statHtml: "<b>7 day</b> close · <b>11 wk</b> renovation",

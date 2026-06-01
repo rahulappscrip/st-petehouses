@@ -970,7 +970,8 @@ p{ margin:0; }
   user-select: none;
   touch-action: none;
 }
-.ba-side{ position: absolute; inset: 0; }
+.ba-side{ position: absolute; inset: 0; overflow: hidden; }
+.ba-side__img{ object-fit: cover; }
 .ba-after{ clip-path: inset(0 0 0 50%); transition: clip-path .25s ease; }
 .ba-frame.is-dragging .ba-after{ transition: none; }
 .ba-tag{
