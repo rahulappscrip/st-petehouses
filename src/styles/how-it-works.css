@@ -250,6 +250,21 @@
   border-color: rgba(255, 255, 255, 0.1);
 }
 
+.hiw-inline-image {
+  margin: 24px 0 8px;
+  border-radius: var(--radius-l);
+  border: 1px solid var(--line);
+  aspect-ratio: 16 / 9;
+  position: relative;
+  overflow: hidden;
+  background: var(--paper);
+}
+
+.hiw-inline-image__img {
+  object-fit: cover;
+  object-position: top center;
+}
+
 .process-steps {
   display: grid;
   gap: 14px;
