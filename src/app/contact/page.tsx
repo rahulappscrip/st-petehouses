@@ -16,20 +16,14 @@ export default function ContactPage() {
       <div className="wrap">
         <div className="about-page__grid">
           <PageIntroColumn
-            breadcrumbLabel="Contact Us"
-            title="Contact We Buy St Pete Houses."
-            subtitle="Reach us by phone or email and we&apos;ll respond quickly with clear next steps."
+            breadcrumbLabel="Get in touch"
+            title="Get in touch."
+            subtitle="Reach We Buy St Pete Houses - call, email, or fill out the form."
           >
             <p>
-              We&apos;re a local Tampa Bay team, and we keep communication simple. Call, text, or email us with your
-              property details and timing. You&apos;ll get straightforward answers, a no-pressure process, and an offer you
-              can review on your schedule.
-            </p>
-            <p className="about-page__contact-line">
-              <strong>Phone:</strong> <a href={SITE.phoneHref}>{SITE.phone}</a>
-            </p>
-            <p className="about-page__contact-line">
-              <strong>Email:</strong> <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+              Phone: <a href={SITE.phoneHref}>{SITE.phone}</a>. Email: <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.
+              {" "}PO Box 143, St. Petersburg, FL 33731. We answer in person during business hours and reply within one
+              business day.
             </p>
           </PageIntroColumn>
 
