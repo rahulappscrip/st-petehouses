@@ -23,7 +23,7 @@ export default function ContactPage() {
             <p>
               We&apos;re a local Tampa Bay team, and we keep communication simple. Call, text, or email us with your
               property details and timing. You&apos;ll get straightforward answers, a no-pressure process, and an offer you
-              can review on your schedule.
+              can review on your schedule..
             </p>
             <p className="about-page__contact-line">
               <strong>Phone:</strong> <a href={SITE.phoneHref}>{SITE.phone}</a>
