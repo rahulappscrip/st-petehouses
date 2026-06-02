@@ -840,6 +840,21 @@ h3 em,
 @media (min-width: 640px){ .steps{ grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1080px){ .steps{ grid-template-columns: repeat(4, 1fr); } }
 
+/* Court process / four-step blocks — 2×2, not 1×4 */
+.steps.steps--4 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .steps.steps--4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.steps.steps--4 .step {
+  min-height: 0;
+}
+
 .steps.steps--3 {
   grid-template-columns: 1fr;
 }

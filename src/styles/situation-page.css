@@ -376,6 +376,23 @@
   gap: 12px;
 }
 
+/* Space between body copy and CTAs (prose, cards, asides — not hero) */
+.situation-prose-grid .situation-hero__actions,
+.situation-info-card > .btn--cta,
+.situation-info-callout__card > .btn--cta,
+.situation-aside-cta > .btn--cta,
+.situation-val-stats > .btn--cta,
+.situation-trust__card > .btn--cta,
+.situation-insurance-card > .btn--cta,
+.situation-obligation-card > .btn--cta,
+.situation-payoff__equity > .btn--cta {
+  margin-top: clamp(16px, 2vw, 24px);
+}
+
+.situation-prose-grid .situation-hero__actions {
+  margin-top: clamp(20px, 2.5vw, 28px);
+}
+
 .situation-exclusion-note {
   margin-top: 24px;
   padding: 18px 22px;
@@ -521,6 +538,17 @@
   font-weight: 600;
   color: var(--ink);
   margin-bottom: 14px;
+}
+
+.situation-info-card > p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--ink-2);
+  margin-top: 10px;
+}
+
+.situation-info-card > p:first-of-type {
+  margin-top: 0;
 }
 
 .situation-info-card li {

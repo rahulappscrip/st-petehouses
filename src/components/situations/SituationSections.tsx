@@ -90,7 +90,11 @@ export function SituationCourtProcessSection({
         />
         <div className="situation-prose-grid">
           <Reveal>
-            <ol className="steps" style={{ listStyle: "none", padding: 0 }} aria-label="Court-ordered sale steps">
+            <ol
+              className="steps steps--4"
+              style={{ listStyle: "none", padding: 0 }}
+              aria-label="Court-ordered sale steps"
+            >
               {data.steps.map((step) => (
                 <li key={step.num} className="step">
                   <span className="step-num">{step.num}</span>
@@ -115,7 +119,7 @@ export function SituationCourtProcessSection({
               <div className="situation-aside-cta" style={{ marginTop: 20 }}>
                 <h3>{data.callout.title}</h3>
                 <p>{data.callout.body}</p>
-                <Link href="#offer" className="btn btn--cta" style={{ marginTop: 16 }}>
+                <Link href="#offer" className="btn btn--cta">
                   Get a cash offer now
                   <Arr />
                 </Link>
@@ -231,7 +235,7 @@ export function SituationProbateSection({
               <a href={SITE.phoneHref} className="phone">
                 {SITE.phone}
               </a>
-              <Link href="#offer" className="btn btn--cta" style={{ marginTop: 16, width: "100%", justifyContent: "center" }}>
+              <Link href="#offer" className="btn btn--cta" style={{ width: "100%", justifyContent: "center" }}>
                 Submit your property online
                 <Arr />
               </Link>
@@ -320,7 +324,7 @@ export function SituationValuationSection({
               ))}
             </dl>
             {data.statsNote ? <p className="situation-val-stats__note">{data.statsNote}</p> : null}
-            <Link href="#offer" className="btn btn--cta" style={{ marginTop: 20, width: "100%", justifyContent: "center" }}>
+            <Link href="#offer" className="btn btn--cta" style={{ width: "100%", justifyContent: "center" }}>
               Get my cash offer
               <Arr />
             </Link>
@@ -361,7 +365,7 @@ export function SituationTenantRightsSection({
             {data.callout.paragraphs.map((p) => (
               <p key={p.slice(0, 40)}>{p}</p>
             ))}
-            <Link href="#offer" className="btn btn--cta" style={{ marginTop: 16 }}>
+            <Link href="#offer" className="btn btn--cta">
               Ask about cash-for-keys
               <Arr />
             </Link>
@@ -399,7 +403,7 @@ export function SituationObligationsSection({
                 <p key={p.slice(0, 40)}>{p}</p>
               ))}
               {card.featured ? (
-                <Link href="#offer" className="btn btn--cta" style={{ marginTop: 16 }}>
+                <Link href="#offer" className="btn btn--cta">
                   Get a cash offer
                   <Arr />
                 </Link>
@@ -483,7 +487,7 @@ export function SituationInsuranceSection({
                 <p key={p.slice(0, 40)}>{p}</p>
               ))}
               {card.cta ? (
-                <Link href="#offer" className="btn btn--cta" style={{ marginTop: 16 }}>
+                <Link href="#offer" className="btn btn--cta">
                   Discuss my situation
                   <Arr />
                 </Link>
@@ -866,7 +870,7 @@ export function SituationTrustSection({
           <Reveal d={1} className="situation-trust__card">
             <h3>{data.card.title}</h3>
             <p>{data.card.body}</p>
-            <Link href="#offer" className="btn btn--cta" style={{ marginTop: 16, width: "100%", justifyContent: "center" }}>
+            <Link href="#offer" className="btn btn--cta" style={{ width: "100%", justifyContent: "center" }}>
               Get my as-is cash offer
               <Arr />
             </Link>
@@ -982,7 +986,7 @@ export function SituationWhyUsSection({
               <a href={SITE.phoneHref} className="phone">
                 {SITE.phone}
               </a>
-              <Link href="#offer" className="btn btn--cta" style={{ marginTop: 16, width: "100%", justifyContent: "center" }}>
+              <Link href="#offer" className="btn btn--cta" style={{ width: "100%", justifyContent: "center" }}>
                 Request my offer
                 <Arr />
               </Link>
