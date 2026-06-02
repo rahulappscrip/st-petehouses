@@ -53,7 +53,7 @@ export default function HomePage() {
       <ProsConsSection />
       <AreasSection />
       <ReviewsSection />
-      <MarketSection />
+      <MarketSection showLocal={false} />
       <GuaranteeSection />
       <ResourcesSection />
       <FaqSection />

@@ -165,7 +165,15 @@ export function HowItWorksContent() {
                   </ul>
                 </div>
               </div>
-              <ImagePlaceholder tone="teal" label="[IMAGE: cash-buyer-explainer · cash vs traditional buyer]" />
+              <figure className="hiw-inline-image">
+                <Image
+                  src="/assets/images/HIW-Image-1.webp"
+                  alt="Cash buyer explainer and comparison"
+                  fill
+                  sizes="(max-width: 980px) 100vw, 900px"
+                  className="hiw-inline-image__img"
+                />
+              </figure>
             </section>
 
             <section id="how-it-works">
@@ -191,7 +199,15 @@ export function HowItWorksContent() {
                 listing fees — we cover closing costs. The entire process moves at your pace, with
                 no pressure and no surprises.
               </p>
-              <ImagePlaceholder tone="sun" label="[IMAGE: process-flow-diagram]" />
+              <figure className="hiw-inline-image">
+                <Image
+                  src="/assets/images/HIW-Image-2.webp"
+                  alt="Process flow diagram for cash home buying"
+                  fill
+                  sizes="(max-width: 980px) 100vw, 900px"
+                  className="hiw-inline-image__img"
+                />
+              </figure>
             </section>
 
             <section id="benefits">
@@ -221,7 +237,15 @@ export function HowItWorksContent() {
                   <IconCard key={item.title} title={item.title} body={item.body} icon={SITUATION_ICONS[i]} />
                 ))}
               </div>
-              <ImagePlaceholder label="[IMAGE: seller-situations]" />
+              <figure className="hiw-inline-image">
+                <Image
+                  src="/assets/images/HIW-Image-3.webp"
+                  alt="Seller situations where cash buying helps"
+                  fill
+                  sizes="(max-width: 980px) 100vw, 900px"
+                  className="hiw-inline-image__img"
+                />
+              </figure>
             </section>
 
             <section id="step-by-step">
@@ -261,7 +285,15 @@ export function HowItWorksContent() {
               </p>
 
               <TimelineCalculator />
-              <ImagePlaceholder tone="ink" label="[IMAGE: step-by-step-visual]" />
+              <figure className="hiw-inline-image">
+                <Image
+                  src="/assets/images/HIW-Image-4.webp"
+                  alt="Step-by-step visual for cash home sale process"
+                  fill
+                  sizes="(max-width: 980px) 100vw, 900px"
+                  className="hiw-inline-image__img"
+                />
+              </figure>
             </section>
 
             <section id="are-cash-buyers-legit">
@@ -296,7 +328,15 @@ export function HowItWorksContent() {
                 We operate openly in St. Petersburg and Tampa Bay with a public track record of
                 successful closings.
               </p>
-              <ImagePlaceholder tone="teal" label="[IMAGE: trust-signals]" />
+              <figure className="hiw-inline-image">
+                <Image
+                  src="/assets/images/HIW-Image-5.webp"
+                  alt="Trust signals for verifying legitimate cash home buyers"
+                  fill
+                  sizes="(max-width: 980px) 100vw, 900px"
+                  className="hiw-inline-image__img"
+                />
+              </figure>
             </section>
 
             <section id="when-to-consider">

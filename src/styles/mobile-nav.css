@@ -1,12 +1,17 @@
 /* Mobile nav overlay + panel (portaled to body — avoids header backdrop-filter trap) */
 
 @media (max-width: 979px) {
+  :root {
+    --mobile-header-h: 72px;
+  }
+
   .mobile-nav-overlay {
     position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
-    top: var(--mobile-nav-top, 72px);
+    /* Never cover the sticky header */
+    top: var(--mobile-header-h);
     z-index: 9998;
     margin: 0;
     padding: 0;
@@ -20,7 +25,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    top: var(--mobile-nav-top, 72px);
+    /* Never cover the sticky header */
+    top: var(--mobile-header-h);
+    min-height: calc(100dvh - var(--mobile-header-h));
     z-index: 9999;
     display: block;
     margin: 0;

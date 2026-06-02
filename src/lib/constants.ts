@@ -984,4 +984,12 @@ export const FAQ_ITEMS = [
     q: "Is there a risk of scams with cash buyers in St Petersburg?",
     a: "Work with local, established buyers and verify each offer through clear, written terms to minimize risk.",
   },
+  {
+    q: "How market conditions affect cash offers",
+    a: "Local market data grounds our offers in St Petersburg realities. We consider comparable sales, property condition, needed repairs, and how quickly you need to close. While cash offers provide speed and convenience, they typically reflect a discount to account for the certainty and immediacy we provide.\n\nOur approach is transparent: we share how we arrived at your offer and explain the factors that influenced the price. No surprises, no hidden calculations.",
+  },
+  {
+    q: "Local neighborhoods we serve",
+    a: "We buy homes throughout St Petersburg — from historic neighborhoods to established residential areas. Each one has unique characteristics that influence value, and we account for local conditions in every offer.",
+  },
 ] as const;
