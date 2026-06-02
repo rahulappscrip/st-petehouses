@@ -84,7 +84,7 @@
 
 .sit-card__title {
   margin: 0;
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-weight: 400;
   font-size: clamp(20px, 2vw, 22px);
   line-height: 1.15;

@@ -2,18 +2,18 @@ import { AREA_CITIES as CITY_AREA_LIST, CITY_NAV_LINKS } from "./cities";
 
 export const ASSETS = {
   johnPortrait: "/assets/images/john-gardepe.webp",
-  johnCta: "/assets/images/john-gardepe-1.png",
-  ownerJohn: "/assets/images/owner-john.jpg",
-  bbbBadge: "/assets/images/bbb-client.png",
-  logo: "/assets/images/logo.png",
+  johnCta: "/assets/images/john-gardepe-1.webp",
+  ownerJohn: "/assets/images/john-own.webp",
+  bbbBadge: "/assets/images/bbb-client.webp",
+  logo: "/assets/images/logo.webp",
   favicon: "/assets/images/we-buy-st-pete-favicon-res.png",
-  marketChart: "/assets/images/Understanding-the-st-pete-market.png",
-  facingForeclosure: "/assets/images/facing-foreclosure.jpg",
-  inheritedHome: "/assets/images/inherited-home.jpg",
-  divorceSeparation: "/assets/images/divorce-or-seperation.jpg",
-  tiredLandlord: "/assets/images/tired-landload.jpg",
-  distressedProperty: "/assets/images/distressed-property.jpg",
-  relocation: "/assets/images/relocation.jpg",
+  marketChart: "/assets/images/Understanding-the-st-pete-market.webp",
+  facingForeclosure: "/assets/images/facing-foreclosure.webp",
+  inheritedHome: "/assets/images/inherited-home.webp",
+  divorceSeparation: "/assets/images/divorce-or-seperation.webp",
+  tiredLandlord: "/assets/images/tired-landload.webp",
+  distressedProperty: "/assets/images/distressed-property.webp",
+  relocation: "/assets/images/relocation.webp",
 } as const;
 
 export const SITE = {
@@ -252,14 +252,14 @@ export const PROCESS_STEPS = [
   },
   {
     num: "03",
-    title: "Meet At Your Property",
+    title: "walkthrough",
     body: "We visit your property as-is. No repairs, no cleaning, no staging — just a quick, friendly walkthrough.",
     metaLabel: "Repairs",
     metaValue: "None",
   },
   {
     num: "04",
-    title: "Close On Your Timeline",
+    title: "closing timeline",
     body: "You choose your closing date. We can close in as little as 7 days or whenever works best for you.",
     metaLabel: "Close in",
     metaValue: "7–14 days",
@@ -928,8 +928,8 @@ export const BEFORE_AFTER = [
   {
     beforeLabel: "BEFORE · distressed property",
     afterLabel: "AFTER · renovated & resold",
-    beforeImage: "/assets/images/before-building.png",
-    afterImage: "/assets/images/After-building.png",
+    beforeImage: "/assets/images/before-building.webp",
+    afterImage: "/assets/images/After-building.webp",
     title: "Inherited bungalow — Disston Heights",
     body: "Estate full of contents, dated kitchen, leaking roof. Cash close in 9 days.",
     statHtml: "<b>9 day</b> close · <b>14 wk</b> renovation",
@@ -937,8 +937,8 @@ export const BEFORE_AFTER = [
   {
     beforeLabel: "BEFORE · vacant rental",
     afterLabel: "AFTER · move-in ready",
-    beforeImage: "/assets/images/before-inner-house.png",
-    afterImage: "/assets/images/after-inner-house.png",
+    beforeImage: "/assets/images/before-inner-house.webp",
+    afterImage: "/assets/images/after-inner-house.webp",
     title: "Vacant rental — Old Northeast",
     body: "Tired landlord with tenant issues. Closed without eviction in 7 days.",
     statHtml: "<b>7 day</b> close · <b>11 wk</b> renovation",

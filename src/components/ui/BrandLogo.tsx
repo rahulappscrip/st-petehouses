@@ -21,7 +21,6 @@ export function BrandLogo({ showName = true }: BrandLogoProps) {
       {showName ? (
         <span className="brand-name">
           {SITE.name}
-          <small>{SITE.tagline}</small>
         </span>
       ) : null}
     </Link>
