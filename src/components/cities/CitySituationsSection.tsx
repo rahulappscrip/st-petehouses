@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { Reveal } from "@/components/ui/Reveal";
+import { SectionHead } from "@/components/ui/SectionHead";
 
 export type CitySituationItem = {
   icon: string;
@@ -19,11 +20,7 @@ export function CitySituationsSection({ eyebrow, title, lede, items, alt = false
   return (
     <section className={`section${alt ? " section-alt" : ""}`} id="situations">
       <div className="wrap">
-        <Reveal className="section-head">
-          <span className="eyebrow">{eyebrow}</span>
-          <h2 className="h-2">{title}</h2>
-          <p className="lede">{lede}</p>
-        </Reveal>
+        <SectionHead eyebrow={eyebrow} title={title} lede={lede} />
 
         <div className="city-sit-grid">
           {items.map((item, i) => (

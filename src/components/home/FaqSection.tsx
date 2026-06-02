@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
-import { Reveal } from "@/components/ui/Reveal";
+import { SectionHead } from "@/components/ui/SectionHead";
 import { FAQ_ITEMS } from "@/lib/constants";
 
 type FaqItem = { q: string; a: string };
@@ -33,10 +33,7 @@ export function FaqSection({
       style={{ background: "var(--paper)", borderTop: "1px solid var(--line-soft)", borderBottom: "1px solid var(--line-soft)" }}
     >
       <div className="wrap" style={{ maxWidth: 920 }}>
-        <Reveal className="section-head">
-          <span className="eyebrow">{eyebrow}</span>
-          <h2 className="h-2">{title}</h2>
-        </Reveal>
+        <SectionHead eyebrow={eyebrow} title={title} />
 
         <div className="faq-list">
           {items.map((item, i) => (

@@ -103,7 +103,7 @@ h2,
   font-family: var(--sans);
   font-weight: 400;
   font-size: var(--h2-size);
-  line-height: 1.1;
+  line-height: 1.2;
   letter-spacing: -0.025em;
 }
 h2 em,
@@ -769,11 +769,44 @@ h3 em,
    Section head — stacked
    ============================================================ */
 .section-head{
-  display: flex; flex-direction: column; gap: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(14px, 2vw, 22px);
   margin-bottom: clamp(28px, 4vw, 48px);
   max-width: 880px;
 }
-.section-head h2{ margin-top: 0; }
+/* Prevent flex children (especially h2) from shrinking below wrapped text height */
+.section-head > *{
+  flex-shrink: 0;
+  min-height: min-content;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+}
+.section-head h2,
+.section-head .h-2{
+  margin-top: 0;
+  line-height: 1.2;
+}
+.section-head .lede{
+  line-height: 1.65;
+}
+/* Title + lede grouped so lede never overlaps a multi-line h2 */
+.section-head__copy{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(12px, 1.8vw, 18px);
+  width: 100%;
+  max-width: 100%;
+}
+.section-head__copy > *{
+  flex-shrink: 0;
+  min-height: min-content;
+  margin: 0;
+  width: 100%;
+}
 
 /* ============================================================
    Process steps
@@ -1170,14 +1203,38 @@ h3 em,
 .cta-card__content{
   position: relative;
   z-index: 1;
-  margin-top: clamp(-8px, -1vw, -16px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(16px, 2vw, 24px);
+  margin-top: 0;
+  padding-bottom: clamp(40px, 6vw, 56px);
+}
+.cta-card__content > *{
+  flex-shrink: 0;
+  min-height: min-content;
+  margin: 0;
+  max-width: 100%;
 }
 .cta-card__content .eyebrow{
   color: color-mix(in oklab, var(--paper) 70%, transparent);
 }
+.cta-card__copy{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(12px, 1.8vw, 18px);
+  width: 100%;
+}
+.cta-card__copy > *{
+  flex-shrink: 0;
+  min-height: min-content;
+  margin: 0;
+  width: 100%;
+}
 .cta-card__content .h-2{
   color: var(--paper);
-  margin-top: 10px;
+  line-height: 1.2;
 }
 .cta-card::before{
   content:""; position: absolute; right: -10%; top: -30%;
@@ -1189,11 +1246,24 @@ h3 em,
   color: var(--paper);
   position: relative;
   z-index: 1;
-  padding-bottom: 12px;
+  padding-bottom: 0;
 }
 .cta-card h2 em{ font-family: var(--serif); font-style: italic; font-weight: 400; color: var(--sun); }
-.cta-card p{ color: color-mix(in oklab, var(--paper) 75%, transparent); max-width: 52ch; position: relative; z-index: 1; }
-.cta-actions{ display: flex; flex-wrap: wrap; gap: 12px; margin-top: 14px; position: relative; z-index: 1; }
+.cta-card p{
+  color: color-mix(in oklab, var(--paper) 75%, transparent);
+  max-width: 52ch;
+  line-height: 1.65;
+  position: relative;
+  z-index: 1;
+}
+.cta-actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: clamp(8px, 1.5vw, 16px);
+  position: relative;
+  z-index: 1;
+}
 .cta-side{
   border-radius: var(--radius-l);
   padding: 0;

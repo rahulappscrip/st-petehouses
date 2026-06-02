@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
+import { SectionHead } from "@/components/ui/SectionHead";
 import { Arr } from "@/components/ui/Arr";
 import { PROCESS_STEPS } from "@/lib/constants";
 
@@ -38,11 +39,7 @@ export function ProcessSection({
   return (
     <section className="section" id="process">
       <div className="wrap">
-        <Reveal className="section-head">
-          <span className="eyebrow">{eyebrow}</span>
-          <h2 className="h-2">{title}</h2>
-          <p className="lede">{lede}</p>
-        </Reveal>
+        <SectionHead eyebrow={eyebrow} title={title} lede={lede} />
 
         <ol
           className={`steps${steps.length === 3 ? " steps--3" : ""}`}

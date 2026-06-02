@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { Reveal } from "@/components/ui/Reveal";
+import { SectionHead } from "@/components/ui/SectionHead";
 
 export type CityCompareRow = {
   label: string;
@@ -38,11 +39,7 @@ export function CityCompareSection({
   return (
     <section className={`section pros-cons${alt ? " section-alt" : ""}`} id="comparison">
       <div className="wrap">
-        <Reveal className="section-head">
-          <span className="eyebrow">{eyebrow}</span>
-          <h2 className="h-2">{title}</h2>
-          <p className="lede">{lede}</p>
-        </Reveal>
+        <SectionHead eyebrow={eyebrow} title={title} lede={lede} />
 
         <Reveal className="pros-compare" d={1}>
           <div className="pros-compare__panel pros-compare__panel--traditional">

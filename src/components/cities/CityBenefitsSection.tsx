@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { Reveal } from "@/components/ui/Reveal";
+import { SectionHead } from "@/components/ui/SectionHead";
 
 export type CityBenefitItem = {
   icon: string;
@@ -18,11 +19,7 @@ export function CityBenefitsSection({ eyebrow, title, lede, items }: Props) {
   return (
     <section className="section" id="benefits">
       <div className="wrap">
-        <Reveal className="section-head">
-          <span className="eyebrow">{eyebrow}</span>
-          <h2 className="h-2">{title}</h2>
-          <p className="lede">{lede}</p>
-        </Reveal>
+        <SectionHead eyebrow={eyebrow} title={title} lede={lede} />
 
         <div className="city-sit-grid">
           {items.map((item, i) => (

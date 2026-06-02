@@ -1,6 +1,7 @@
 import type { CSSProperties, ReactNode } from "react";
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
+import { SectionHead } from "@/components/ui/SectionHead";
 import { Arr } from "@/components/ui/Arr";
 import { GUARANTEE_ITEMS } from "@/lib/constants";
 
@@ -50,11 +51,7 @@ export function GuaranteeSection({
   return (
     <section className="guarantee section" id="guarantee">
       <div className="wrap">
-        <Reveal className="section-head">
-          <span className="eyebrow">{eyebrow}</span>
-          <h2 className="h-2">{title}</h2>
-          <p className="lede">{lede}</p>
-        </Reveal>
+        <SectionHead eyebrow={eyebrow} title={title} lede={lede} />
 
         <div className="guarantee-grid">
           <div className="guarantee-list">
