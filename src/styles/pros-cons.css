@@ -268,3 +268,15 @@
 .pros-compare__panel--cash .pros-compare__row dd svg {
   flex: 0 0 auto;
 }
+
+.pros-compare__note {
+  margin: 18px 0 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink-2);
+  font-style: italic;
+}
+
+.pros-compare__panel--cash .pros-compare__note {
+  color: color-mix(in oklab, var(--paper) 75%, transparent);
+}

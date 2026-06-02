@@ -17,6 +17,12 @@ export function SituationHeroSection({ breadcrumb, hero }: Props) {
       <nav className="city-breadcrumb" aria-label="Breadcrumb">
         <div className="wrap">
           <Link href="/">Home</Link>
+          {hero.breadcrumbTrail?.map((crumb) => (
+            <span key={crumb.href}>
+              <span aria-hidden>›</span>
+              <Link href={crumb.href}>{crumb.label}</Link>
+            </span>
+          ))}
           <span aria-hidden>›</span>
           <span>{breadcrumb}</span>
         </div>
@@ -27,12 +33,35 @@ export function SituationHeroSection({ breadcrumb, hero }: Props) {
         <div className="wrap city-hero__grid">
           <Reveal className="city-hero__content">
             <p className="city-hero__eyebrow">{hero.eyebrow}</p>
+            {hero.urgencyBadge ? (
+              <p className="situation-hero__urgency-badge">{hero.urgencyBadge}</p>
+            ) : null}
             <h1 className="h-display city-hero__title">
               {hero.titleLead}
               {hero.titleEm ? <em>{hero.titleEm}</em> : null}
               {hero.titleTail}
             </h1>
             <p className="city-hero__sub">{hero.subheadline}</p>
+
+            {hero.neighborhoodTags && hero.neighborhoodTags.length > 0 ? (
+              <div className="situation-hero__neighborhoods" aria-label="Featured neighborhoods">
+                {hero.neighborhoodTags.map((tag) => (
+                  <span key={tag} className="situation-hero__neighborhood-tag">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            ) : null}
+
+            {hero.trustPills && hero.trustPills.length > 0 ? (
+              <div className="situation-hero__trust-pills" aria-label="Key benefits">
+                {hero.trustPills.map((pill) => (
+                  <span key={pill} className="situation-hero__trust-pill">
+                    {pill}
+                  </span>
+                ))}
+              </div>
+            ) : null}
 
             {hero.checklist && hero.checklist.length > 0 ? (
               <ul className="situation-hero__checklist">

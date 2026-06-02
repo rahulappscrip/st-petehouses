@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
 import { ArticleToc } from "@/components/how-it-works/ArticleToc";
 import { TimelineCalculator } from "@/components/how-it-works/TimelineCalculator";
+import { FaqAccordionList } from "@/components/home/FaqAccordionList";
 import { FinalCtaSection } from "@/components/home/FinalCtaSection";
 import {
   ASSETS,
@@ -380,23 +381,7 @@ export function HowItWorksContent() {
               Frequently asked questions about <em>cash offers</em>.
             </h2>
           </Reveal>
-          <div className="faq-list">
-            {HOW_IT_WORKS_FAQ.map((item, i) => (
-              <details key={item.q} className="faq-item" open={i === 0}>
-                <summary className="faq-q">
-                  {item.q}
-                  <span className="plus" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
-                      <path d="M12 5v14M5 12h14" />
-                    </svg>
-                  </span>
-                </summary>
-                <div className="faq-a">
-                  <p>{item.a}</p>
-                </div>
-              </details>
-            ))}
-          </div>
+          <FaqAccordionList items={HOW_IT_WORKS_FAQ} />
         </div>
       </section>
 

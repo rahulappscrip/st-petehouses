@@ -8,13 +8,25 @@ export type CityCompareRow = {
   cash: string;
 };
 
+export type CompareTradeoff = {
+  num: string;
+  title: string;
+  body: string;
+};
+
 type Props = {
   eyebrow: string;
   title: ReactNode;
   lede: string;
   traditionalLabel?: string;
+  traditionalTimeline?: string;
   cashLabel?: string;
+  cashTimeline?: string;
+  featuredBadge?: string;
   rows: readonly CityCompareRow[];
+  tradeoffs?: readonly CompareTradeoff[];
+  cashNote?: string;
+  traditionalNote?: string;
   alt?: boolean;
 };
 
@@ -32,8 +44,14 @@ export function CityCompareSection({
   title,
   lede,
   traditionalLabel = "Traditional Agent Listing",
+  traditionalTimeline,
   cashLabel = "We Buy St Pete Houses",
+  cashTimeline,
+  featuredBadge,
   rows,
+  tradeoffs,
+  cashNote,
+  traditionalNote,
   alt = false,
 }: Props) {
   return (
@@ -48,7 +66,9 @@ export function CityCompareSection({
               <span className="pros-compare__type">Traditional sale</span>
             </div>
             <h3 className="pros-compare__title">{traditionalLabel}</h3>
-            <p className="pros-compare__sub">List, wait, repair, negotiate, hope financing clears.</p>
+            <p className="pros-compare__sub">
+              {traditionalTimeline ? `Average close: ${traditionalTimeline}` : "List, wait, repair, negotiate, hope financing clears."}
+            </p>
             <dl className="pros-compare__rows">
               {rows.map((row) => (
                 <div key={row.label} className="pros-compare__row">
@@ -57,6 +77,7 @@ export function CityCompareSection({
                 </div>
               ))}
             </dl>
+            {traditionalNote ? <p className="pros-compare__note">{traditionalNote}</p> : null}
           </div>
 
           <span className="pros-compare__vs" aria-hidden>
@@ -64,13 +85,15 @@ export function CityCompareSection({
           </span>
 
           <div className="pros-compare__panel pros-compare__panel--cash">
-            <span className="pros-compare__badge">Recommended</span>
+            <span className="pros-compare__badge">{featuredBadge ?? "Recommended"}</span>
             <div className="pros-compare__head">
               <span className="pros-compare__dot pros-compare__dot--accent" aria-hidden />
               <span className="pros-compare__type">Cash offer</span>
             </div>
             <h3 className="pros-compare__title">{cashLabel}</h3>
-            <p className="pros-compare__sub">One buyer. Real cash. No surprises between offer and closing.</p>
+            <p className="pros-compare__sub">
+              {cashTimeline ? `Close in ${cashTimeline} — you choose the date` : "One buyer. Real cash. No surprises between offer and closing."}
+            </p>
             <dl className="pros-compare__rows">
               {rows.map((row) => (
                 <div key={row.label} className="pros-compare__row">
@@ -82,8 +105,21 @@ export function CityCompareSection({
                 </div>
               ))}
             </dl>
+            {cashNote ? <p className="pros-compare__note">{cashNote}</p> : null}
           </div>
         </Reveal>
+
+        {tradeoffs && tradeoffs.length > 0 ? (
+          <div className="situation-diff-grid" style={{ marginTop: 48 }}>
+            {tradeoffs.map((item) => (
+              <Reveal key={item.num} className="situation-diff-card">
+                <span className="num">{item.num}</span>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+              </Reveal>
+            ))}
+          </div>
+        ) : null}
       </div>
     </section>
   );

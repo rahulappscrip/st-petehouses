@@ -14,26 +14,36 @@ type Props = {
   lede: string;
   items: readonly CitySituationItem[];
   alt?: boolean;
+  /** Omit outer section wrapper when nested inside another section. */
+  embedded?: boolean;
 };
 
-export function CitySituationsSection({ eyebrow, title, lede, items, alt = false }: Props) {
+export function CitySituationsSection({ eyebrow, title, lede, items, alt = false, embedded = false }: Props) {
+  const inner = (
+    <>
+      <SectionHead eyebrow={eyebrow} title={title} lede={lede} />
+
+      <div className="city-sit-grid">
+        {items.map((item, i) => (
+          <Reveal key={item.title} className="city-sit-card" d={i > 0 ? ((i % 3) as 1 | 2 | 3) : undefined}>
+            <span className="city-sit-card__icon" aria-hidden="true">
+              {item.icon}
+            </span>
+            <h3>{item.title}</h3>
+            <p>{item.body}</p>
+          </Reveal>
+        ))}
+      </div>
+    </>
+  );
+
+  if (embedded) {
+    return inner;
+  }
+
   return (
     <section className={`section${alt ? " section-alt" : ""}`} id="situations">
-      <div className="wrap">
-        <SectionHead eyebrow={eyebrow} title={title} lede={lede} />
-
-        <div className="city-sit-grid">
-          {items.map((item, i) => (
-            <Reveal key={item.title} className="city-sit-card" d={i > 0 ? ((i % 3) as 1 | 2 | 3) : undefined}>
-              <span className="city-sit-card__icon" aria-hidden="true">
-                {item.icon}
-              </span>
-              <h3>{item.title}</h3>
-              <p>{item.body}</p>
-            </Reveal>
-          ))}
-        </div>
-      </div>
+      <div className="wrap">{inner}</div>
     </section>
   );
 }

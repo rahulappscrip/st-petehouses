@@ -12,16 +12,9 @@
       "titleTail": " with a Fast, Fair Cash Offer",
       "subheadline": "Facing foreclosure in St Petersburg? We buy houses as-is for cash — no fees, no commissions, no repairs required. Get a no-obligation offer and close in as little as 7 days before the foreclosure sale date.",
       "formTitle": "Tell us about your home.",
-      "formIntro": "A local team of specialists — buying homes across Pinellas County at fair prices. No agents, no repairs, no surprises.",
-      "keySteps": {
-        "title": "What to Do Right Now",
-        "items": [
-          "Contact a local cash buyer to evaluate your property",
-          "Review your rights under Florida foreclosure law",
-          "Understand the timeline and your options for halting the process",
-          "Get a no-obligation cash offer and decide on your terms"
-        ]
-      }
+      "formIntro": "A small local team of in-house specialists — buying homes across Pinellas County at fair prices. No agents, no repairs, no surprises.",
+      "authorRole": "Local Founder · We Buy St Pete Houses · Pinellas County",
+      "addressPlaceholder": "123 Main St, St Petersburg FL"
     },
     "stats": [
       {
@@ -55,8 +48,8 @@
       "guarantee",
       "comparison",
       "infoBlocks",
-      "faq",
       "diff",
+      "faq",
       "finalCta"
     ],
     "process": {
@@ -86,26 +79,24 @@
           "title": "Close on your timeline",
           "body": "You choose the closing date. We handle the paperwork. You get cash at closing."
         }
-      ]
+      ],
+      "primaryCta": "Start with a free offer",
+      "keySteps": {
+        "title": "What to Do Right Now",
+        "items": [
+          "Contact a local cash buyer to evaluate your property",
+          "Review your rights under Florida foreclosure law",
+          "Understand the timeline and your options for halting the process",
+          "Get a no-obligation cash offer and decide on your terms"
+        ]
+      }
     },
     "areas": {
       "eyebrow": "Service Area",
       "titleLead": "Across ",
       "titleEm": "St. Petersburg",
       "titleTail": " and Tampa Bay.",
-      "lede": "We focus on the neighborhoods we know personally — streets we've bought houses on for over a decade.",
-      "areas": [
-        "St Petersburg",
-        "Clearwater",
-        "Gulfport",
-        "Largo",
-        "Pinellas Park",
-        "Palm Harbor",
-        "Tampa",
-        "Dunedin",
-        "New Port Richey",
-        "Pasco County"
-      ]
+      "lede": "We focus on the neighborhoods we know personally — the streets we live in, raise families in, and have bought houses in for over a decade."
     },
     "faq": {
       "eyebrow": "Common Questions",
@@ -155,28 +146,8 @@
       "titleLead": "We'll ",
       "titleEm": "call you",
       "titleTail": " right back.",
-      "description": "Facing foreclosure in St Petersburg? Get a no-obligation cash offer within 24 hours. No repairs. No commissions. Close on your timeline."
-    },
-    "testimonials": {
-      "eyebrow": "What Our Customers Say",
-      "titleLead": "What our ",
-      "titleEm": "customers",
-      "titleTail": " say.",
-      "lede": "Selling a property is personal. These are a few of the stories from homeowners we've had the honor to help across St Pete.",
-      "items": [
-        {
-          "quote": "They were patient, kind, and didn't push. The offer arrived the next morning and was exactly what they said it would be.",
-          "name": "Karen R.",
-          "meta": "Homeowner, St. Petersburg",
-          "initials": "KR"
-        },
-        {
-          "quote": "I'd put off selling for two years. Marcus walked through the house with me and answered every question. We closed in nine days.",
-          "name": "Daniel P.",
-          "meta": "Estate Sale, Pinellas Park",
-          "initials": "DP"
-        }
-      ]
+      "description": "Facing foreclosure in St Petersburg? Get a no-obligation cash offer within 24 hours. No repairs. No commissions. Close on your timeline.",
+      "eyebrow": "Ready to sell?"
     },
     "situations": {
       "eyebrow": "Who We Help",
@@ -215,14 +186,15 @@
           "title": "Upside-Down Mortgages",
           "body": "Properties where the loan balance exceeds market value, or burdened by liens and judgments."
         }
-      ]
+      ],
+      "imageCards": true
     },
     "market": {
       "eyebrow": "Local Market Context",
       "titleLead": "Understanding the ",
       "titleEm": "St. Petersburg",
       "titleTail": " cash home market.",
-      "lede": "St Pete is a sought-after market — its climate, small feel, and proximity to beaches draw new residents monthly. But foreclosure is a real local challenge, affecting families across Pinellas County every year.",
+      "lede": "St Pete is a sought-after market — its climate, small feel, and proximity to beaches draw 1,500 new residents monthly. But foreclosure is a real local challenge, affecting families across Pinellas County every year.",
       "factors": [
         {
           "title": "Block-level comps",
@@ -236,7 +208,10 @@
           "title": "Title clarity upfront",
           "body": "We work with local title professionals, handle any complications, and keep your closing on track."
         }
-      ]
+      ],
+      "badgeValue": "$380k",
+      "badgeLabel": "Avg. St Pete home value",
+      "showLocal": false
     },
     "guarantee": {
       "eyebrow": "Our Commitment",
@@ -410,92 +385,55 @@
         "No agent commissions or hidden fees — keep the full offer amount",
         "We guide you through probate and title clearance",
         "Close in as little as 7 days — or on your timeline"
-      ]
+      ],
+      "authorRole": "Founder, We Buy St Pete Houses · Tampa Bay Area",
+      "addressPlaceholder": "Full property address in St Petersburg"
     },
     "stats": [
       {
-        "value": "24",
-        "suffix": "hrs",
-        "label": "Cash offer in your hands"
-      },
-      {
         "value": "7",
         "suffix": "days",
-        "label": "Fastest close possible"
+        "label": "Days minimum to close"
       },
       {
         "prefix": "$",
         "value": "0",
-        "label": "Fees or commissions"
+        "label": "Commissions or fees"
       },
       {
         "value": "500",
         "suffix": "+",
-        "label": "Homes bought across St Pete"
+        "label": "Homes purchased locally"
+      },
+      {
+        "value": "100",
+        "suffix": "%",
+        "label": "As-is — no repairs needed"
       }
     ],
     "sectionOrder": [
       "stats",
-      "process",
+      "buyProcess",
       "comparison",
-      "cards",
-      "areas",
+      "probate",
+      "tax",
+      "valuation",
       "resources",
+      "areas",
       "faq",
       "finalCta"
     ],
-    "process": {
-      "eyebrow": "How It Works",
-      "titleLead": "How our ",
-      "titleEm": "cash offer",
-      "titleTail": " process works.",
-      "lede": "Our quick steps: No bidding wars, no repair headaches, no complex listings — certain results you can count on.",
-      "steps": [
-        {
-          "num": "01",
-          "title": "Tell us about the home",
-          "body": "Share your property details via our form or by phone. We listen to your specific situation first."
-        },
-        {
-          "num": "02",
-          "title": "We visit, in person",
-          "body": "A local team member schedules a walkthrough at a time that's convenient for you. No hassle."
-        },
-        {
-          "num": "03",
-          "title": "Receive a written offer",
-          "body": "We present a fair, no-obligation cash offer with transparent terms — no hidden fees, ever."
-        },
-        {
-          "num": "04",
-          "title": "Close on your timeline",
-          "body": "You choose the closing date. We handle the paperwork. You get cash at closing."
-        }
-      ]
-    },
     "areas": {
       "eyebrow": "Service Area",
-      "titleLead": "Across ",
-      "titleEm": "St. Petersburg",
-      "titleTail": " and Tampa Bay.",
-      "lede": "We focus on the neighborhoods we know personally — streets we've bought houses on for over a decade.",
-      "areas": [
-        "St Petersburg",
-        "Clearwater",
-        "Gulfport",
-        "Largo",
-        "Pinellas Park",
-        "Palm Harbor",
-        "Tampa",
-        "Dunedin",
-        "New Port Richey",
-        "Pasco County"
-      ]
+      "titleLead": "St Petersburg and the ",
+      "titleEm": "Greater Tampa Bay area.",
+      "titleTail": "",
+      "lede": "Our local focus means we understand the neighborhoods, market conditions, and specific challenges of inherited properties in this region."
     },
     "faq": {
-      "eyebrow": "Common Questions",
-      "titleLead": "Frequently asked questions about ",
-      "titleEm": "selling for cash",
+      "eyebrow": "FAQ",
+      "titleLead": "Frequently asked questions about selling ",
+      "titleEm": "inherited houses",
       "titleTail": " in St Petersburg.",
       "items": [
         {
@@ -532,7 +470,11 @@
         },
         {
           "q": "How do I start the process?",
-          "a": "Call us at (727) 477-8998 or fill out our online form to receive a free, no-obligation cash offer. We'll walk you through every step from your first call to closing. Reach out to our team →"
+          "a": "Call us at (727) 477-8998 or fill out our online form to receive a free, no-obligation cash offer. We'll walk you through every step from your first call to closing.",
+          "aLink": {
+            "label": "Reach out to our team →",
+            "href": "/contact"
+          }
         }
       ]
     },
@@ -540,39 +482,15 @@
       "titleLead": "Sell your ",
       "titleEm": "inherited house",
       "titleTail": " in St Petersburg for cash.",
-      "description": "No repairs. No fees. No waiting on the market. A fair cash offer from a local team that knows St Petersburg — and the probate process — inside and out."
-    },
-    "cards": {
-      "eyebrow": "How We Buy Inherited Houses",
-      "titleLead": "Cash, as-is, with ",
-      "titleEm": "probate support.",
-      "titleTail": "",
-      "lede": "Our process is designed to be transparent and stress-free for heirs navigating unfamiliar territory.",
-      "items": [
-        {
-          "title": "As-is purchases — nothing required",
-          "body": "No need to clean out belongings, fix outdated systems, or worry about curb appeal. We purchase the property exactly as it is."
-        },
-        {
-          "title": "No commissions or fees — ever",
-          "body": "You keep the full cash offer amount. There are no real estate agent commissions and no hidden fees."
-        },
-        {
-          "title": "Probate and title clearance support",
-          "body": "We work alongside your probate attorney and can begin preparing the sale while probate is underway."
-        },
-        {
-          "title": "Flexible closing — your timeline",
-          "body": "Close in as little as 7 days, or take more time to finalize probate or family decisions."
-        }
-      ]
+      "description": "No repairs. No fees. No waiting on the market. A fair cash offer from a local team that knows St Petersburg — and the probate process — inside and out.",
+      "eyebrow": "Ready to move forward?"
     },
     "comparison": {
       "eyebrow": "Compare Your Options",
       "titleLead": "Cash offer vs. traditional listing — ",
       "titleEm": "what's best for your inherited home?",
       "titleTail": "",
-      "lede": "For inherited properties, especially those in probate or needing significant work, a cash offer eliminates friction and gets you to closing faster.",
+      "lede": "For inherited properties, especially those in probate or needing significant work, a cash offer eliminates the friction and gets you to closing faster.",
       "traditionalLabel": "Listing with an Agent",
       "traditionalTimeline": "60–90+ days",
       "cashLabel": "Cash Offer (with us)",
@@ -609,32 +527,234 @@
           "traditional": "Financing risk",
           "cash": "Guaranteed cash"
         }
-      ]
+      ],
+      "cashNote": "Best for: properties in probate, deferred maintenance, out-of-state heirs, or anyone who needs certainty over maximum price.",
+      "traditionalNote": "May yield a higher gross price if the property is in excellent condition and you have months to wait — but net proceeds often similar when accounting for repairs, commissions, and carrying costs."
     },
     "resources": {
       "eyebrow": "Local Resources",
       "titleLead": "Local resources for selling ",
       "titleEm": "inherited property",
       "titleTail": " in St Petersburg.",
-      "lede": "These offices handle the key legal and administrative steps involved in selling inherited property.",
+      "lede": "These offices handle the key legal and administrative steps involved in selling inherited property. We're familiar with each one and can guide you through what's needed and when.",
       "items": [
         {
+          "tag": "City",
           "title": "St. Petersburg City Hall",
-          "body": "Property records, local ordinances, permits, and municipal information."
+          "body": "Property records, local ordinances, permits, and municipal information relevant to the inherited property."
         },
         {
+          "tag": "Clerk",
           "title": "Pinellas County Clerk of the Circuit Court & Comptroller",
-          "body": "Probate filings, court records, deed recording, and official property documents."
+          "body": "Probate filings, court records, deed recording, and official property documents for estates going through Pinellas County."
         },
         {
+          "tag": "Tax",
           "title": "Pinellas County Tax Collector",
-          "body": "Property tax records and payment information for title clearance."
+          "body": "Property tax records, outstanding tax balances, and payment information. Important for title clearance before closing."
         },
         {
+          "tag": "Appraiser",
           "title": "Pinellas County Property Appraiser",
-          "body": "Official property valuations and assessment data."
+          "body": "Official property valuations, ownership information, and assessment data. Useful for understanding the property's current assessed value."
         }
       ]
+    },
+    "buyProcess": {
+      "eyebrow": "How We Buy Inherited Houses",
+      "titleLead": "Cash, as-is, with ",
+      "titleEm": "probate support.",
+      "titleTail": "",
+      "lede": "Our process is designed to be transparent and stress-free for heirs navigating unfamiliar territory. From initial contact to closing, we guide you every step of the way.",
+      "features": [
+        {
+          "icon": "📋",
+          "title": "As-is purchases — nothing required",
+          "body": "No need to clean out belongings, fix outdated systems, or worry about curb appeal. We purchase the property exactly as it is, including personal items left behind."
+        },
+        {
+          "icon": "💵",
+          "title": "No commissions or fees — ever",
+          "body": "You keep the full cash offer amount. There are no real estate agent commissions, no closing costs charged to you, and no hidden fees at the end."
+        },
+        {
+          "icon": "📅",
+          "title": "Probate and title clearance support",
+          "body": "We work alongside your probate attorney to keep the process moving. We can begin preparing the sale while probate is underway — reducing the overall timeline to closing."
+        },
+        {
+          "icon": "📍",
+          "title": "Flexible closing — your timeline",
+          "body": "Close in as little as 7 days, or take more time to finalize probate or family decisions. You choose the closing date that works for your situation."
+        }
+      ],
+      "stepsTitle": "From inquiry to cash in 4 steps",
+      "steps": [
+        {
+          "num": "1",
+          "title": "Contact us with property details",
+          "body": "Call (727) 477-8998, email, or submit our online form. Share the property address and your probate status.",
+          "link": {
+            "label": "Contact us today →",
+            "href": "/contact"
+          }
+        },
+        {
+          "num": "2",
+          "title": "Property review and fair cash offer",
+          "body": "We evaluate the property's condition and local market. You receive a written, no-obligation cash offer with transparent terms.",
+          "link": {
+            "label": "How our process works →",
+            "href": "/how-it-works"
+          }
+        },
+        {
+          "num": "3",
+          "title": "Accept the offer on your terms",
+          "body": "No pressure, no deadlines. Accept when you're ready. We coordinate with your probate attorney and a local title company."
+        },
+        {
+          "num": "4",
+          "title": "Close and receive your cash",
+          "body": "You choose the closing date. We handle all paperwork. You receive the full cash offer amount at closing — no deductions."
+        }
+      ]
+    },
+    "probate": {
+      "eyebrow": "Probate & Title",
+      "titleLead": "What you need to know about ",
+      "titleEm": "probate in Florida.",
+      "titleTail": "",
+      "lede": "Probate may be required, but we guide you through the steps and can begin preparing the sale in parallel — reducing your overall timeline.",
+      "items": [
+        {
+          "label": "Is it required?",
+          "question": "Is probate required to sell an inherited property?",
+          "answer": "Probate is typically required when a property passes through an estate without joint ownership or a trust. If the deceased owned the property solely in their name, probate is necessary to transfer the title to the heirs — this applies to most inherited properties in St Petersburg and throughout Florida."
+        },
+        {
+          "label": "How long does it take?",
+          "question": "How long does Florida probate take?",
+          "answer": "Timelines vary by county due to court backlog and local procedures. Summary administration for smaller estates typically takes 1–3 months. Formal administration typically takes 6–12 months or longer. In Pinellas County, court scheduling and backlog affect timelines — but our familiarity with local procedures helps us identify which steps can be accelerated and what documentation to prepare in advance."
+        },
+        {
+          "label": "How we help",
+          "question": "How does We Buy St Pete Houses support the probate process?",
+          "answer": "We work alongside your probate attorney to ensure all documentation is in order and can begin preparing the sale while probate is underway. This parallel approach saves time and reduces the total timeline from inheritance to cash in hand. We also coordinate with local Pinellas County title companies to ensure a smooth, compliant closing."
+        }
+      ],
+      "timelineTitle": "Florida Probate Timeline",
+      "timeline": [
+        {
+          "stage": "Filing & Notice",
+          "duration": "Weeks 1–4",
+          "body": "Petition filed with county probate court; creditors and heirs notified"
+        },
+        {
+          "stage": "Administration & Inventory",
+          "duration": "Months 1–6",
+          "body": "Estate assets inventoried; debts and taxes paid; court hearings scheduled"
+        },
+        {
+          "stage": "Title Transfer to Heirs",
+          "duration": "After court approval",
+          "body": "Property title transferred; heirs authorized to sell"
+        },
+        {
+          "stage": "Sale & Closing",
+          "duration": "As little as 7 days after title clears",
+          "body": "We close quickly once title is clear — often within days of authorization"
+        }
+      ],
+      "helpTitle": "We guide you through every step.",
+      "helpBody": "Not sure where you are in probate? Call us — we'll tell you exactly what you need, what to prepare, and how we can work in parallel to minimize your total timeline."
+    },
+    "tax": {
+      "eyebrow": "Tax Considerations",
+      "titleLead": "Tax considerations when selling ",
+      "titleEm": "inherited property in Florida.",
+      "titleTail": "",
+      "lede": "Florida has no state inheritance tax — but federal capital gains rules still apply. Here's a general overview to help you plan ahead.",
+      "paragraphs": [
+        "Florida does not have a state inheritance or estate tax, which simplifies the process for most heirs. However, federal estate tax may apply to very large estates, and capital gains tax considerations depend on the property's stepped-up basis at the time of inheritance.",
+        "When you inherit property, the IRS typically resets the property's basis to its fair market value at the date of the decedent's death — this is the \"stepped-up basis.\" This often means little to no capital gains tax if you sell the property shortly after inheriting it, since the basis and sale price are close together.",
+        "If the property appreciates significantly after inheritance, you may owe capital gains tax on the difference between the stepped-up basis and the eventual sale price. A cash sale that closes quickly can minimize this exposure."
+      ],
+      "disclaimer": "Tax questions are best answered by a qualified CPA or tax attorney familiar with Florida real estate. The information above is general in nature and does not constitute tax advice.",
+      "cards": [
+        {
+          "label": "Florida state tax",
+          "title": "No state inheritance or estate tax",
+          "body": "Florida does not impose a state-level inheritance or estate tax, simplifying the process for most heirs selling inherited property."
+        },
+        {
+          "label": "Stepped-up basis",
+          "title": "IRS resets basis at date of death",
+          "body": "The property's tax basis is typically reset to its fair market value on the date the owner passed. Selling shortly after inheriting often results in little to no capital gains tax."
+        },
+        {
+          "label": "Capital gains",
+          "title": "Applies only to appreciation after inheritance",
+          "body": "Capital gains tax applies to the difference between the stepped-up basis and your eventual sale price. Selling quickly minimizes this gap."
+        },
+        {
+          "label": "Our recommendation",
+          "title": "Consult a Florida CPA before closing",
+          "body": "We recommend consulting a tax advisor or CPA familiar with Florida real estate before finalizing your sale. We can provide referrals to trusted local professionals."
+        }
+      ]
+    },
+    "valuation": {
+      "eyebrow": "Local Market Insights",
+      "titleLead": "Interactive valuation and ",
+      "titleEm": "St Petersburg market data.",
+      "titleTail": "",
+      "lede": "Understanding what your inherited property is worth — in its current condition and after repairs — helps you make a faster, more informed decision.",
+      "scenarios": [
+        {
+          "label": "Scenario A",
+          "title": "Sell as-is for cash — now",
+          "body": "Receive a fair cash offer based on current condition and local comps. Close quickly, avoid carrying costs, repairs, and commission. Get certainty on your net proceeds today."
+        },
+        {
+          "label": "Scenario B",
+          "title": "Repair and list with an agent",
+          "body": "Invest in repairs and staging, wait for a buyer, and pay 5–6% commission. Higher gross price possible — but net proceeds after costs and months of carrying costs may be similar to a cash offer."
+        },
+        {
+          "label": "Scenario C",
+          "title": "Wait through probate, then list",
+          "body": "The traditional path — but the property continues to carry property taxes, insurance, and maintenance costs throughout probate. Our parallel approach starts the sale process early to reduce this window."
+        }
+      ],
+      "statsTitle": "St Petersburg Market at a Glance",
+      "stats": [
+        {
+          "label": "Traditional days on market",
+          "value": "45–90 days"
+        },
+        {
+          "label": "Cash sale closing time",
+          "value": "7–30 days"
+        },
+        {
+          "label": "Typical agent commission",
+          "value": "5–6%"
+        },
+        {
+          "label": "Our agent commission",
+          "value": "$0"
+        },
+        {
+          "label": "Repairs required",
+          "value": "None (as-is)"
+        },
+        {
+          "label": "Probate support",
+          "value": "Yes (included)"
+        }
+      ],
+      "statsNote": "Figures reflect typical St Petersburg market ranges. Your specific offer is based on block-level comps and property condition."
     }
   },
   {
@@ -649,8 +769,10 @@
       "titleEm": "Divorce",
       "titleTail": " in Florida: Fast, Fair Cash Offers",
       "subheadline": "Navigating a home sale during divorce is hard enough. We buy houses as-is across St. Petersburg and Tampa Bay — no fees, no commissions, no repairs. Close in as little as 7 days and divide proceeds on your timeline.",
-      "formTitle": "Tell us about your home.",
-      "formIntro": "A local team of specialists — buying homes across Pinellas County at fair prices. No agents, no repairs, no surprises."
+      "formTitle": "Get your cash offer today.",
+      "formIntro": "We work with divorcing couples across St. Petersburg and Tampa Bay. One conversation — no pressure, no obligation.",
+      "authorRole": "Local Founder · We Buy St Pete Houses · Pinellas County",
+      "addressPlaceholder": "123 Main St, St Petersburg FL"
     },
     "stats": [
       {
@@ -676,67 +798,71 @@
     ],
     "sectionOrder": [
       "stats",
-      "process",
+      "prose",
+      "courtProcess",
       "cards",
       "comparison",
+      "situations",
+      "market",
+      "process",
+      "whyUs",
       "areas",
       "resources",
       "faq",
       "finalCta"
     ],
     "process": {
-      "eyebrow": "How It Works",
-      "titleLead": "How our ",
-      "titleEm": "cash offer",
-      "titleTail": " process works.",
-      "lede": "Our quick steps: No bidding wars, no repair headaches, no complex listings — certain results you can count on.",
+      "eyebrow": "Step-by-Step Guide",
+      "titleLead": "Selling a Home During ",
+      "titleEm": "Divorce in Florida",
+      "titleTail": "",
+      "lede": "A typical Florida divorce sale involves several steps from filing to closing. Here's the practical blueprint — with and without a cash buyer.",
       "steps": [
         {
           "num": "01",
-          "title": "Tell us about the home",
-          "body": "Share your property details via our form or by phone. We listen to your specific situation first."
+          "title": "Decide to Sell",
+          "body": "Both spouses (or the court) agree that selling the home is the best option. This is often the hardest step — once agreed, everything moves faster."
         },
         {
           "num": "02",
-          "title": "We visit, in person",
-          "body": "A local team member schedules a walkthrough at a time that's convenient for you. No hassle."
+          "title": "Court Orders (if needed)",
+          "body": "If mutual agreement isn't possible, file a motion for sale and attend hearings. A cash buyer can be lined up in parallel to close quickly once the order is issued."
         },
         {
           "num": "03",
-          "title": "Receive a written offer",
-          "body": "We present a fair, no-obligation cash offer with transparent terms — no hidden fees, ever."
+          "title": "Choose a Sale Path",
+          "body": "Traditional listing vs. cash buyer. A cash buyer eliminates showings, repairs, and financing delays — especially important when court deadlines are involved."
         },
         {
           "num": "04",
-          "title": "Close on your timeline",
-          "body": "You choose the closing date. We handle the paperwork. You get cash at closing."
+          "title": "Receive Cash Offer",
+          "body": "We provide a no-obligation cash offer within 24–48 hours. Transparent terms, no hidden fees, no agent commissions. Both parties can review the terms together."
+        },
+        {
+          "num": "05",
+          "title": "Close the Sale",
+          "body": "We handle title work, coordinate with your attorneys, and close in as little as 7 days. You choose the closing date based on your court schedule."
+        },
+        {
+          "num": "06",
+          "title": "Divide Proceeds",
+          "body": "Proceeds are distributed per the divorce agreement or court order. A clean, documented cash close makes distribution straightforward for both parties."
         }
-      ]
+      ],
+      "primaryCta": "Get my cash offer"
     },
     "areas": {
       "eyebrow": "Service Area",
-      "titleLead": "Across ",
-      "titleEm": "St. Petersburg",
-      "titleTail": " and Tampa Bay.",
-      "lede": "We focus on the neighborhoods we know personally — streets we've bought houses on for over a decade.",
-      "areas": [
-        "St Petersburg",
-        "Clearwater",
-        "Gulfport",
-        "Largo",
-        "Pinellas Park",
-        "Palm Harbor",
-        "Tampa",
-        "Dunedin",
-        "New Port Richey",
-        "Pasco County"
-      ]
+      "titleLead": "Areas We Serve in St. Petersburg and ",
+      "titleEm": "Tampa Bay",
+      "titleTail": "",
+      "lede": "Whether you're in a coastal neighborhood or an inland community, we provide fast, fair cash offers tailored to your local market."
     },
     "faq": {
       "eyebrow": "Common Questions",
       "titleLead": "Frequently asked questions about ",
-      "titleEm": "selling for cash",
-      "titleTail": " in St Petersburg.",
+      "titleEm": "selling during divorce",
+      "titleTail": " in Florida.",
       "items": [
         {
           "q": "Do you have to sell your house in a divorce in Florida?",
@@ -782,10 +908,294 @@
     },
     "finalCta": {
       "eyebrow": "Ready to sell?",
-      "titleLead": "Get your ",
-      "titleEm": "no-obligation",
-      "titleTail": " cash offer today.",
-      "description": "Navigating a home sale during divorce is hard enough. We buy houses as-is across St. Petersburg and Tampa Bay — no fees, no commissions, no repairs. Close in as little as 7 days and divide proceeds on your timeline."
+      "titleLead": "Sell your house during divorce ",
+      "titleEm": "for cash",
+      "titleTail": " in Florida.",
+      "description": "Navigating a home sale during divorce is hard enough. Get a fair cash offer in St. Petersburg — no fees, close in as little as 7 days, on your timeline."
+    },
+    "cards": {
+      "eyebrow": "Family Considerations",
+      "titleLead": "How Do Minor Children Affect ",
+      "titleEm": "Home Sale Decisions?",
+      "titleTail": "",
+      "lede": "When children are involved, Florida courts prioritize their stability and best interests while balancing legal and financial goals. This adds complexity — and requires careful planning.",
+      "items": [
+        {
+          "icon": "🏠",
+          "title": "Courts May Delay a Sale",
+          "body": "Courts can delay or condition a sale to maintain a stable living environment for children during the divorce process. The custodial parent's situation weighs heavily."
+        },
+        {
+          "icon": "👨‍👩‍👧",
+          "title": "Temporary Arrangements Matter",
+          "body": "Temporary custody arrangements influence who stays in the home and for how long. These arrangements can shape both the timing and terms of any sale agreement."
+        },
+        {
+          "icon": "⏱️",
+          "title": "Certainty Reduces Disruption",
+          "body": "Sales involving children may take longer through traditional channels. A fast cash offer provides certainty and a defined closing date — reducing stress for the whole family."
+        }
+      ]
+    },
+    "comparison": {
+      "eyebrow": "Fastest Path Forward",
+      "titleLead": "Cash Buyer Options: The ",
+      "titleEm": "Fastest Path Forward",
+      "titleTail": "",
+      "lede": "A cash buyer eliminates financing contingencies, appraisal delays, and buyer loan complications — the fastest and most certain route during a Florida divorce.",
+      "traditionalLabel": "Traditional Listing",
+      "traditionalTimeline": "60–90 days",
+      "cashLabel": "We Buy St Pete Houses",
+      "cashTimeline": "7–21 days",
+      "featuredBadge": "Best for divorce",
+      "rows": [
+        {
+          "label": "Close time",
+          "traditional": "60–90+ days",
+          "cash": "As fast as 7 days"
+        },
+        {
+          "label": "Commissions",
+          "traditional": "5–6% of price",
+          "cash": "$0 — none"
+        },
+        {
+          "label": "Repairs needed",
+          "traditional": "Often yes",
+          "cash": "None — as-is"
+        },
+        {
+          "label": "Showings",
+          "traditional": "Multiple",
+          "cash": "One walkthrough"
+        },
+        {
+          "label": "Court alignment",
+          "traditional": "Difficult",
+          "cash": "We work with attorneys"
+        }
+      ],
+      "tradeoffs": [
+        {
+          "num": "Trade-off 01",
+          "title": "Cash vs. Retail Price",
+          "body": "Cash offers may be slightly below retail market value. However, you save agent fees (5–6%), repair costs, and months of carrying costs — often making the net outcome comparable or better."
+        },
+        {
+          "num": "Trade-off 02",
+          "title": "Speed vs. Maximum Price",
+          "body": "For many divorcing couples, speed and certainty outweigh a potentially higher list price. A guaranteed close removes uncertainty for both parties and their attorneys."
+        },
+        {
+          "num": "Trade-off 03",
+          "title": "Cash When There Is Disagreement",
+          "body": "Cash offers provide a neutral, court-acceptable path when disputes exist. The offer terms must be reviewed by both parties and approved by the court if necessary."
+        }
+      ]
+    },
+    "resources": {
+      "eyebrow": "Local Resources",
+      "titleLead": "Local Resources for ",
+      "titleEm": "Divorce-Related",
+      "titleTail": " Property Matters in St. Petersburg",
+      "lede": "For assistance with divorce-related property matters in St. Petersburg and the Tampa Bay area, these offices and professionals can guide you through the legal and administrative steps.",
+      "items": [
+        {
+          "tag": "County Clerk",
+          "title": "Pinellas County Clerk of the Circuit Court",
+          "body": "Handles court records, filings, and title documents. The primary resource for divorce-related property records and official filings in Pinellas County."
+        },
+        {
+          "tag": "Court",
+          "title": "Pinellas County Court",
+          "body": "Oversees divorce proceedings and property disputes. Contact for information on scheduling hearings, accessing court orders, and understanding local procedures."
+        },
+        {
+          "tag": "City",
+          "title": "St. Petersburg City Hall",
+          "body": "Provides general civic information, local ordinances, and references to city-level resources that may affect property transactions within city limits."
+        },
+        {
+          "tag": "Title",
+          "title": "Local Title Companies",
+          "body": "Assist with title searches, lien resolution, and closing coordination. Essential for verifying clean title before any sale — especially when court orders are involved."
+        },
+        {
+          "tag": "State",
+          "title": "Florida Dept. of Highway Safety & Motor Vehicles",
+          "body": "Local DHSMV office for title changes and document updates if needed as part of the property transfer process during divorce."
+        },
+        {
+          "tag": "Cash Buyer",
+          "title": "We Buy St Pete Houses",
+          "body": "Local cash buyers serving St. Pete and Tampa Bay. We work with your attorneys and coordinate with local title offices to close on your timeline."
+        }
+      ]
+    },
+    "prose": {
+      "eyebrow": "Florida Property Law",
+      "titleLead": "Understanding Florida's ",
+      "titleEm": "Equitable Distribution",
+      "titleTail": " Framework",
+      "lede": "Equitable distribution is Florida's method of dividing marital property — not necessarily in equal shares, but fairly. This framework governs how home sale proceeds are split during a Florida divorce.",
+      "paragraphs": [
+        "According to Florida Statute 61.075, the court considers factors like the length of the marriage, each spouse's economic circumstances, and contributions to the marital property. This process directly affects sale timing.",
+        "If both spouses agree on a sale, you can move forward quickly. If you can't agree, the court may step in — extending the timeline by weeks or months. Working with a cash buyer from the start can simplify the division process and reduce the risk of delays.",
+        "We work with divorcing couples across St. Petersburg and Tampa Bay to provide a straightforward cash-sale path that aligns with equitable distribution goals — no commissions, no repairs, no drawn-out listing periods."
+      ],
+      "sidebar": {
+        "title": "What Courts Consider",
+        "items": [
+          {
+            "strong": "Length of marriage",
+            "text": " and contributions of each spouse to the marital estate."
+          },
+          {
+            "strong": "Economic circumstances",
+            "text": " and earning capacity at time of division."
+          },
+          {
+            "strong": "Childcare & education",
+            "text": " contributions and career-building of the other spouse."
+          },
+          {
+            "strong": "Minor children",
+            "text": " — whether one party wishes to retain the home as a primary residence."
+          }
+        ]
+      }
+    },
+    "courtProcess": {
+      "eyebrow": "Court Process",
+      "titleLead": "When Does a ",
+      "titleEm": "Court-Ordered Sale",
+      "titleTail": " Occur?",
+      "lede": "A court can order the sale of your marital home when mutual agreement is not possible. This typically happens if one spouse blocks the sale or if both parties can't agree on terms.",
+      "steps": [
+        {
+          "num": "01",
+          "title": "Filing a Motion for Sale",
+          "body": "One spouse files a motion requesting the court order the property sold. This initiates the judicial process."
+        },
+        {
+          "num": "02",
+          "title": "Hearing & Judicial Review",
+          "body": "The court reviews both parties' positions and applies Florida's equitable distribution framework to determine the best outcome."
+        },
+        {
+          "num": "03",
+          "title": "Court Order Issued",
+          "body": "Once approved, the order compels both parties to cooperate with the sale. A cash buyer can satisfy the order's requirements quickly."
+        },
+        {
+          "num": "04",
+          "title": "Cash Close",
+          "body": "We provide court-acceptable cash offers and can close in as little as 7 days once the order is in place — no further delays."
+        }
+      ],
+      "sidebarTitle": "What Court-Ordered Sales Add",
+      "sidebarItems": [
+        {
+          "strong": "Legal fees:",
+          "text": " Attorney time for motions and hearings adds real cost to both parties."
+        },
+        {
+          "strong": "Weeks of delay:",
+          "text": " Court schedules extend the timeline beyond what mutual agreement would require."
+        },
+        {
+          "strong": "Court expenses:",
+          "text": " Filing fees and administrative costs accumulate during proceedings."
+        },
+        {
+          "strong": "Emotional strain:",
+          "text": " Contested proceedings are often more adversarial and stressful for both parties."
+        }
+      ],
+      "callout": {
+        "title": "Court order already issued?",
+        "body": "We work with attorneys and title professionals to satisfy court requirements and close quickly. Our offers are court-acceptable and our process is designed for exactly these situations."
+      }
+    },
+    "situations": {
+      "eyebrow": "Tax Considerations",
+      "titleLead": "Tax Implications of Selling During ",
+      "titleEm": "Divorce in Florida",
+      "titleTail": "",
+      "lede": "Tax outcomes depend on timing, residency, and ownership. Capital gains treatment can shift significantly based on whether you sell before or after the divorce is finalized. Always consult a tax advisor for your specific situation.",
+      "items": [
+        {
+          "icon": "📋",
+          "title": "Joint $500k Exclusion",
+          "body": "If you sell before the divorce is finalized and meet IRS requirements, you may qualify for the joint $500,000 capital gains exclusion — saving significant tax liability for both parties."
+        },
+        {
+          "icon": "📅",
+          "title": "Timing the Sale Matters",
+          "body": "After the divorce is finalized, each spouse may qualify for only a $250,000 capital gains exclusion individually. The date of sale relative to the divorce decree directly affects tax treatment."
+        },
+        {
+          "icon": "✓",
+          "title": "Cash Sale Simplifies Records",
+          "body": "A cash sale provides a clear, documented closing date and straightforward transaction records — simplifying tax planning and reducing ambiguity for both parties' advisors."
+        }
+      ]
+    },
+    "market": {
+      "eyebrow": "Local Market Context",
+      "titleLead": "Local Market Variations in ",
+      "titleEm": "Florida",
+      "titleTail": "",
+      "lede": "Tampa Bay-area variations affect price and speed. Local data beats generic statewide averages — and we track it daily.",
+      "showChart": false,
+      "showLocal": false,
+      "factors": [
+        {
+          "title": "Demand differences",
+          "body": "Coastal properties in St. Petersburg and Clearwater may move faster than inland homes in Largo or Pinellas Park due to stronger buyer pools."
+        },
+        {
+          "title": "Pricing dynamics",
+          "body": "Neighborhoods with strong buyer demand can support higher offers. Markets with more inventory may require competitive pricing to close quickly."
+        },
+        {
+          "title": "Speed to sell",
+          "body": "In hot markets, traditional sales may close quickly. In slower markets, a cash buyer offers certainty regardless of conditions — no waiting for a qualified buyer."
+        },
+        {
+          "title": "Local data advantage",
+          "body": "We track Pinellas County MLS actives, tax data, and closed cash sales — not national automated estimates — to price your property accurately."
+        }
+      ]
+    },
+    "whyUs": {
+      "eyebrow": "Florida-Specific Considerations",
+      "titleLead": "Florida-Specific Timing and ",
+      "titleEm": "Legal Considerations",
+      "titleTail": "",
+      "lede": "Florida-specific deadlines and court orders can significantly impact the timing of a home sale during divorce. Knowing these constraints helps you plan effectively.",
+      "items": [
+        {
+          "title": "Court Dates",
+          "body": "Align your closing with scheduled hearings or final divorce dates to avoid delays. A cash buyer can close on a specific date — unlike traditional sales with unpredictable timelines."
+        },
+        {
+          "title": "No Mandatory Waiting Period",
+          "body": "Florida has no mandatory waiting period for divorce if there are no minor children. However, court scheduling realities can extend timelines — planning ahead is essential."
+        },
+        {
+          "title": "Title and Lien Checks",
+          "body": "All liens must be addressed before closing. We work with local title professionals and your attorney to resolve title issues quickly — keeping your closing on schedule."
+        }
+      ],
+      "asideTitle": "Strategies to Maintain Momentum",
+      "asideList": [
+        "Start the sale process early — even before the divorce is finalized. Pre-marketing a cash sale loses nothing.",
+        "Communicate openly with your attorney and our team. Shared timelines prevent last-minute surprises.",
+        "Choose a cash buyer who understands Florida divorce timelines and can close on your exact schedule.",
+        "Get lien and title checks initiated in parallel with legal proceedings — not after.",
+        "Request a written offer with a flexible closing date window to accommodate court scheduling changes."
+      ]
     }
   },
   {
@@ -800,14 +1210,21 @@
       "titleEm": "Tenants in Place",
       "titleTail": " in Florida",
       "subheadline": "Done being a landlord? We buy tenant-occupied rental properties across St. Petersburg and Tampa Bay — as-is, for cash, with no commissions or repairs. We handle all tenant coordination. Close in as little as 7 days.",
-      "formTitle": "Tell us about your home.",
-      "formIntro": "A local team of specialists — buying homes across Pinellas County at fair prices. No agents, no repairs, no surprises."
+      "formTitle": "Get your cash offer today.",
+      "formIntro": "We specialize in tenant-occupied properties across St. Pete and Tampa Bay. One call — no pressure, no fees, no obligation.",
+      "authorRole": "Local Founder · We Buy St Pete Houses · Pinellas County",
+      "addressPlaceholder": "123 Main St, St Petersburg FL",
+      "trustPills": [
+        "Tenants OK — no move-out required",
+        "No repairs or staging",
+        "Cash offer in 24hrs"
+      ]
     },
     "stats": [
       {
         "value": "24",
         "suffix": "hrs",
-        "label": "Cash offer in your hands"
+        "label": "Cash offer delivered"
       },
       {
         "value": "7",
@@ -817,77 +1234,40 @@
       {
         "prefix": "$",
         "value": "0",
-        "label": "Fees or commissions"
+        "label": "Commissions or fees"
       },
       {
         "value": "500",
         "suffix": "+",
-        "label": "Homes bought across St Pete"
+        "label": "Homes purchased in St Pete"
       }
     ],
     "sectionOrder": [
       "stats",
-      "process",
-      "cards",
       "prose",
-      "areas",
+      "tenantRights",
+      "obligations",
+      "cards",
+      "market",
+      "caseStudies",
+      "whyUs",
       "resources",
+      "areas",
       "faq",
       "finalCta"
     ],
-    "process": {
-      "eyebrow": "How It Works",
-      "titleLead": "How our ",
-      "titleEm": "cash offer",
-      "titleTail": " process works.",
-      "lede": "Our quick steps: No bidding wars, no repair headaches, no complex listings — certain results you can count on.",
-      "steps": [
-        {
-          "num": "01",
-          "title": "Tell us about the home",
-          "body": "Share your property details via our form or by phone. We listen to your specific situation first."
-        },
-        {
-          "num": "02",
-          "title": "We visit, in person",
-          "body": "A local team member schedules a walkthrough at a time that's convenient for you. No hassle."
-        },
-        {
-          "num": "03",
-          "title": "Receive a written offer",
-          "body": "We present a fair, no-obligation cash offer with transparent terms — no hidden fees, ever."
-        },
-        {
-          "num": "04",
-          "title": "Close on your timeline",
-          "body": "You choose the closing date. We handle the paperwork. You get cash at closing."
-        }
-      ]
-    },
     "areas": {
       "eyebrow": "Service Area",
-      "titleLead": "Across ",
-      "titleEm": "St. Petersburg",
-      "titleTail": " and Tampa Bay.",
-      "lede": "We focus on the neighborhoods we know personally — streets we've bought houses on for over a decade.",
-      "areas": [
-        "St Petersburg",
-        "Clearwater",
-        "Gulfport",
-        "Largo",
-        "Pinellas Park",
-        "Palm Harbor",
-        "Tampa",
-        "Dunedin",
-        "New Port Richey",
-        "Pasco County"
-      ]
+      "titleLead": "Areas We Serve in St. Pete and ",
+      "titleEm": "Greater Tampa Bay",
+      "titleTail": "",
+      "lede": "We buy tenant-occupied rental properties throughout St. Petersburg and the Greater Tampa Bay area. No matter where your rental is located in our service area, we can provide a fast, fair cash offer."
     },
     "faq": {
       "eyebrow": "Common Questions",
       "titleLead": "Frequently asked questions about ",
-      "titleEm": "selling for cash",
-      "titleTail": " in St Petersburg.",
+      "titleEm": "selling with tenants",
+      "titleTail": " in Florida.",
       "items": [
         {
           "q": "Is it legal to sell a Florida rental with tenants in place?",
@@ -929,10 +1309,325 @@
     },
     "finalCta": {
       "eyebrow": "Ready to sell?",
-      "titleLead": "Get your ",
-      "titleEm": "no-obligation",
-      "titleTail": " cash offer today.",
-      "description": "Done being a landlord? We buy tenant-occupied rental properties across St. Petersburg and Tampa Bay — as-is, for cash, with no commissions or repairs. We handle all tenant coordination. Close in as little as 7 days."
+      "titleLead": "Done being a landlord? ",
+      "titleEm": "Let's talk.",
+      "titleTail": "",
+      "description": "We buy tenant-occupied rental properties across St. Pete and Tampa Bay — as-is, for cash, with no commissions. We handle the tenants. You move on."
+    },
+    "cards": {
+      "eyebrow": "What Investors Want",
+      "titleLead": "What Buyers Look for in ",
+      "titleEm": "Tenant-Occupied Properties",
+      "titleTail": "",
+      "lede": "Knowing buyer priorities helps you position your rental for a faster, smoother sale — and helps you understand why occupancy is often a selling point, not a liability.",
+      "items": [
+        {
+          "icon": "01",
+          "title": "Lease Continuity",
+          "body": "Investors want current leases with responsible tenants paying market-rate rent on time. A solid rental history makes your property more attractive and can support a higher sale price."
+        },
+        {
+          "icon": "02",
+          "title": "Remaining Lease Duration",
+          "body": "Buyers prefer leases with several months remaining — enough to evaluate tenant performance without being locked into unfavorable long-term terms."
+        },
+        {
+          "icon": "03",
+          "title": "Immediate Cash Flow",
+          "body": "Tenant-occupied properties eliminate the buyer's need to find renters, market the property, and wait for lease-up. Day-one rental income is a significant advantage."
+        },
+        {
+          "icon": "04",
+          "title": "Move-Out Timeline Clarity",
+          "body": "Some buyers want tenants to stay; others prefer vacant possession. We buy properties in both situations — with tenants staying or with a cash-for-keys transition plan in place."
+        },
+        {
+          "icon": "05",
+          "title": "Clean Documentation",
+          "body": "Buyers want written leases, payment history, and deposit accounting. We handle all this coordination during due diligence — your sale is effortless even with tenants in place."
+        },
+        {
+          "icon": "→",
+          "title": "We Buy Regardless",
+          "body": "We buy tenant-occupied properties regardless of lease length, tenant type, or occupancy status. Cooperative tenants or difficult ones — we've handled both and we can handle yours."
+        }
+      ]
+    },
+    "prose": {
+      "eyebrow": "How Lease Transfer Works",
+      "titleLead": "How Lease Terms Affect Your ",
+      "titleEm": "Florida Tenant-Occupied Sale",
+      "titleTail": "",
+      "lede": "Lease terms, deposit handling, and transfer mechanics determine how quickly a sale can close when tenants are present. Here's exactly how it works in Florida.",
+      "paragraphs": [
+        "When you sell a rental property with tenants in Florida, the existing lease doesn't simply disappear — it transfers to the new owner along with all its terms and conditions. The buyer steps into your shoes as landlord, inheriting the current rent amount, lease duration, and security deposit obligations.",
+        "Security deposits must be handled carefully at closing. Florida landlord-tenant statutes require that deposits either transfer to the new owner or return to the tenant, with proper documentation and notice. We coordinate this transfer seamlessly, protecting you from post-close liability.",
+        "Notice requirements vary based on lease type. Month-to-month tenancies typically require proper notice before showing or selling, while fixed-term leases continue until expiration unless both parties agree otherwise. We navigate these requirements so you can sell without legal complications or tenant disputes.",
+        "Cash buyers like us often prefer tenant-occupied properties because they generate immediate rental income. We can close in as little as 7 days, with or without tenants in place, because we buy as-is and handle all tenant coordination directly."
+      ],
+      "sidebar": {
+        "badge": "Florida Landlord-Tenant Law",
+        "title": "What Transfers at Closing",
+        "items": [
+          {
+            "strong": "The lease itself",
+            "text": "— all terms, rent amounts, and end dates survive the sale unchanged."
+          },
+          {
+            "strong": "Security deposits",
+            "text": "— must transfer to buyer or return to tenant with written notice."
+          },
+          {
+            "strong": "Landlord obligations",
+            "text": "— maintenance responsibilities, habitability standards, and all lease covenants pass to the buyer."
+          },
+          {
+            "strong": "Tenant rights",
+            "text": "— occupancy rights continue through the remainder of the lease term regardless of ownership change."
+          }
+        ]
+      },
+      "extraCard": {
+        "title": "Month-to-Month vs Fixed-Term",
+        "items": [
+          {
+            "strong": "Month-to-month:",
+            "text": " More flexibility for both parties; proper notice required before showings and sale."
+          },
+          {
+            "strong": "Fixed-term lease:",
+            "text": " Continues until expiration; buyer inherits all terms. We buy both situations — no conditions."
+          }
+        ]
+      }
+    },
+    "resources": {
+      "eyebrow": "Local Resources",
+      "titleLead": "Local Resources for ",
+      "titleEm": "Tenants and Sellers",
+      "titleTail": " in St. Petersburg",
+      "lede": "These trusted public offices provide guidance for Florida landlords and tenants navigating a property sale.",
+      "items": [
+        {
+          "tag": "City",
+          "title": "St. Petersburg City Hall",
+          "body": "Municipal services, local ordinances, and permitting information relevant to rental property ownership and sale in the city."
+        },
+        {
+          "tag": "County Clerk",
+          "title": "Pinellas County Clerk of the Circuit Court",
+          "body": "Property records, court documents, and official filings. Primary source for lease-related legal documents and title records."
+        },
+        {
+          "tag": "Tax",
+          "title": "Pinellas County Tax Collector",
+          "body": "Property tax information, payment options, and assessment details. Important for calculating net proceeds from your rental sale."
+        },
+        {
+          "tag": "State",
+          "title": "Florida DBPR",
+          "body": "Florida Department of Business and Professional Regulation: landlord-tenant law guidance, complaint resolution, and regulatory updates applicable to your sale."
+        }
+      ]
+    },
+    "tenantRights": {
+      "eyebrow": "Tenant Protections",
+      "titleLead": "Florida Tenant Rights ",
+      "titleEm": "When You Sell",
+      "titleTail": "",
+      "lede": "Florida tenants don't lose their housing when a property changes hands. Their lease follows the property to the new owner — and their rights remain fully intact throughout the transaction.",
+      "items": [
+        {
+          "strong": "Rent stays the same:",
+          "text": " The new owner inherits the existing rent amount and cannot increase it mid-lease without proper lease terms allowing it."
+        },
+        {
+          "strong": "Lease end dates unchanged:",
+          "text": " Tenants can't be forced out simply because ownership transferred. The lease term is protected."
+        },
+        {
+          "strong": "Security deposit continuity:",
+          "text": " The selling landlord must transfer the full deposit to the buyer or return it to the tenant with proper accounting and written notice."
+        },
+        {
+          "strong": "Notice before entry:",
+          "text": " Florida law requires reasonable notice before entry — typically 24 hours for non-emergency access. Tenants cannot unreasonably refuse showings."
+        },
+        {
+          "strong": "Cash-for-keys option:",
+          "text": " When both parties benefit, we may offer tenants voluntary relocation assistance in exchange for early move-out — compensating them fairly for their cooperation."
+        }
+      ],
+      "callout": {
+        "title": "Cash-for-Keys Explained",
+        "paragraphs": [
+          "Cash-for-keys is a voluntary agreement where a tenant agrees to vacate early in exchange for a relocation payment. It's not eviction — it's a mutually beneficial arrangement.",
+          "When we offer cash-for-keys, tenants receive fair compensation for their cooperation. You get vacant possession for a faster close. We handle the entire negotiation directly with tenants so you don't have to.",
+          "This approach works especially well when a buyer prefers vacant possession or when you want to close before the lease naturally expires."
+        ]
+      }
+    },
+    "obligations": {
+      "eyebrow": "Your Legal Obligations",
+      "titleLead": "Your Legal Obligations When Selling ",
+      "titleEm": "Tenant-Occupied Property",
+      "titleTail": "",
+      "lede": "Deliver notices properly, handle deposits at closing, and document disclosures to minimize risk. We coordinate all of this as part of our standard closing process.",
+      "cards": [
+        {
+          "title": "Required Disclosures",
+          "paragraphs": [
+            "Florida law requires sellers to disclose material facts about the property's condition and existing tenant arrangements. You must provide buyers with current lease agreements, rent payment history, security deposit amounts, and any outstanding maintenance requests or disputes.",
+            "Tenant notification follows specific timelines. When the property sells, you must notify tenants in writing about the new owner's contact information and confirm that their security deposits have transferred."
+          ]
+        },
+        {
+          "title": "Deposit Handling at Closing",
+          "paragraphs": [
+            "Security deposits create the most common legal complication in tenant-occupied sales. The closing statement must clearly show deposit amounts transferred to the buyer, and written notice must go to each tenant within 30 days of closing.",
+            "We coordinate all required notices and deposit transfers as part of our service, ensuring full compliance with Florida landlord-tenant statutes — protecting you from post-sale disputes."
+          ]
+        },
+        {
+          "title": "Lease Assignment",
+          "paragraphs": [
+            "Lease assignment happens automatically at closing — the new owner assumes all landlord rights and obligations under existing leases. Your responsibility ends at closing, provided you've properly transferred deposits and delivered all required notices.",
+            "This clean handoff protects you from future tenant issues while ensuring tenants experience no disruption in their housing situation."
+          ]
+        },
+        {
+          "title": "We Handle Everything",
+          "featured": true,
+          "paragraphs": [
+            "When you sell to us, we coordinate all required notices, deposit transfers, and tenant communication. You don't need to manage any of the legal compliance steps on your own.",
+            "Our team has completed dozens of tenant-occupied closings across Tampa Bay and knows every step of the Florida process."
+          ]
+        }
+      ]
+    },
+    "market": {
+      "dark": true,
+      "eyebrow": "Local Market Intelligence",
+      "titleLead": "Tampa Bay Market Trends for ",
+      "titleEm": "Tenant-Occupied Sales",
+      "titleTail": "",
+      "lede": "The Tampa Bay rental market remains strong, creating favorable conditions for selling tenant-occupied properties. Here's what the local data shows.",
+      "showChart": false,
+      "showLocal": false,
+      "factors": [
+        {
+          "label": "Demand",
+          "title": "Rental Demand Outpaces Supply",
+          "body": "Demand for rental housing continues to outpace supply across St. Petersburg, Clearwater, and surrounding communities — meaning tenant-occupied properties attract serious investor interest."
+        },
+        {
+          "label": "Vacancy",
+          "title": "Low Vacancy Across Pinellas",
+          "body": "Vacancy rates remain low throughout Pinellas County, reinforcing the value of properties with tenants already in place. A tenant-occupied home eliminates the investor's lease-up risk."
+        },
+        {
+          "label": "Regulatory",
+          "title": "Florida Law Is Predictable",
+          "body": "Florida's regulatory climate supports property owners while protecting tenant rights. Recent legislative updates have clarified landlord obligations during sales — making the process more predictable."
+        }
+      ],
+      "regions": [
+        {
+          "label": "St Pete / Clearwater",
+          "body": "High coastal demand — properties close faster, cash buyers very competitive"
+        },
+        {
+          "label": "Largo / Pinellas Park",
+          "body": "More inventory, longer traditional timelines — cash offers provide certainty"
+        },
+        {
+          "label": "Tampa / Hillsborough",
+          "body": "Active market, cash buyers well-positioned for rapid close on tenant-occupied homes"
+        },
+        {
+          "label": "Pasco / Manatee / Sarasota",
+          "body": "Growing markets where speed and certainty matter — especially for tired landlords"
+        }
+      ]
+    },
+    "caseStudies": {
+      "eyebrow": "Real Transactions",
+      "titleLead": "Real Florida Tenant-Occupied Sales: ",
+      "titleEm": "What Works",
+      "titleTail": "",
+      "lede": "Learning from real transactions helps you avoid common pitfalls and set realistic expectations. Here are two recent closings from our Tampa Bay portfolio.",
+      "cases": [
+        {
+          "tag": "St. Petersburg · Duplex",
+          "title": "Two Long-Term Tenants, Month-to-Month Leases",
+          "paragraphs": [
+            "The seller worried that buyer financing would require vacant possession. We purchased the property as-is with both tenants staying in place. We handled all tenant communication, coordinated deposit transfers, and managed every aspect of the closing.",
+            "The seller walked away without ever coordinating move-outs or fielding tenant questions. No repairs, no showings, no hassle."
+          ],
+          "statValue": "10 days",
+          "statLabel": "from accepted offer to close — both tenants remaining"
+        },
+        {
+          "tag": "Clearwater · Single-Family Rental",
+          "title": "Fixed-Term Lease Expiring in 90 Days",
+          "paragraphs": [
+            "The seller initially considered waiting for vacancy, but three more months of landlord responsibilities and carrying costs made a faster sale more appealing. We offered a fair cash price accounting for occupied status and closed before lease expiration.",
+            "We managed the tenant transition ourselves — the seller avoided the uncertainty of vacancy, property condition risk, and continued maintenance obligations."
+          ],
+          "statValue": "Before",
+          "statLabel": "lease expiration — saved 3 months of landlord costs"
+        }
+      ],
+      "takeaways": [
+        {
+          "strong": "Transparency accelerates sales",
+          "text": "— honest disclosure of tenant situations builds buyer confidence and avoids delays."
+        },
+        {
+          "strong": "Occupancy affects pricing, not feasibility",
+          "text": "— occupied status changes the number, not whether a sale is possible."
+        },
+        {
+          "strong": "The right buyer makes all the difference",
+          "text": "— investors who specialize in tenant-occupied properties close faster and with fewer complications."
+        },
+        {
+          "strong": "Waiting isn't always the answer",
+          "text": "— carrying costs and uncertainty often exceed the value of waiting for vacancy."
+        }
+      ]
+    },
+    "whyUs": {
+      "eyebrow": "Why We Buy St Pete Houses",
+      "titleLead": "Why Choose Us for Your ",
+      "titleEm": "Tenant-Occupied Sale?",
+      "titleTail": "",
+      "lede": "",
+      "items": [
+        {
+          "title": "Local expertise in St Pete + Tampa Bay",
+          "body": "We understand Pinellas County regulations, Tampa Bay market norms, and Florida statutory requirements. You get locally grounded advice — not generic national guidance."
+        },
+        {
+          "title": "Cash eliminates financing contingencies",
+          "body": "Traditional buyers struggle to secure mortgages on occupied properties. We buy with cash — no appraisal issues, no lender requirements for vacant possession, no fall-through risk."
+        },
+        {
+          "title": "No commissions, no fees, no repairs",
+          "body": "Listing with an agent costs 5–6% in commissions plus potential repair demands. We buy as-is with zero fees — keeping thousands more in your pocket."
+        },
+        {
+          "title": "We handle all tenant coordination",
+          "body": "You're not the middleman. We communicate directly with tenants, coordinate deposit transfers, and manage every compliance step — so you can step back immediately."
+        },
+        {
+          "title": "Close in 7 days or on your timeline",
+          "body": "You control the schedule. We can close in as little as 7 days once you accept our offer, or wait if you need more time. Fast or flexible — your call."
+        }
+      ],
+      "asideTitle": "Ready to stop being a landlord?",
+      "asideBody": "Call or message us now. A local St Pete team member will respond within 24 hours with a no-obligation cash offer — tenants in place, no repairs required.",
+      "footerNote": "Much online guidance misses Florida's specific legal framework — deposit transfer obligations, lease survival provisions, and local market norms in Pinellas County. We provide Florida-verified guidance, not national boilerplate that may not apply to your situation."
     }
   },
   {
@@ -947,14 +1642,23 @@
       "titleEm": "Lien",
       "titleTail": " — Fast Cash Offers",
       "subheadline": "Selling a house with a lien in Florida doesn't have to be stressful. We buy as-is, handle the lien payoff at closing, and can close in as little as 7 days. No agent fees. No repairs. No pressure.",
-      "formTitle": "Submit Property Details",
-      "formIntro": "A local team of specialists — buying homes across Pinellas County at fair prices. No agents, no repairs, no surprises."
+      "formTitle": "Get your cash offer today.",
+      "formIntro": "Tell us about your property and lien situation. We'll have a no-obligation offer in your hands within 24 hours.",
+      "authorRole": "Local Founder · We Buy St Pete Houses · Pinellas County",
+      "addressPlaceholder": "123 Main St, St Petersburg FL",
+      "checklist": [
+        "Cash offer within 24 hours",
+        "As-is purchase — no repairs needed",
+        "Close in as little as 7 days",
+        "No fees or commissions",
+        "Lien payoff coordinated at closing"
+      ]
     },
     "stats": [
       {
         "value": "24",
         "suffix": "hrs",
-        "label": "Cash offer in your hands"
+        "label": "Cash offer delivered"
       },
       {
         "value": "7",
@@ -964,77 +1668,68 @@
       {
         "prefix": "$",
         "value": "0",
-        "label": "Fees or commissions"
+        "label": "Commissions or fees"
       },
       {
         "value": "500",
         "suffix": "+",
-        "label": "Homes bought across St Pete"
+        "label": "Homes purchased in St Pete"
       }
     ],
     "sectionOrder": [
       "stats",
-      "process",
       "cards",
-      "prose",
+      "process",
+      "situations",
+      "payoff",
+      "whyUs",
       "areas",
       "resources",
       "faq",
       "finalCta"
     ],
     "process": {
-      "eyebrow": "How It Works",
-      "titleLead": "How our ",
-      "titleEm": "cash offer",
-      "titleTail": " process works.",
-      "lede": "Our quick steps: No bidding wars, no repair headaches, no complex listings — certain results you can count on.",
+      "eyebrow": "Our 4-Step Process",
+      "titleLead": "How It Works: Simple, ",
+      "titleEm": "Transparent, Fast",
+      "titleTail": "",
+      "lede": "Our four-step path makes selling a home with liens simple and certain. No listings, no showings, no repairs — just a direct path to cash.",
       "steps": [
         {
           "num": "01",
-          "title": "Tell us about the home",
-          "body": "Share your property details via our form or by phone. We listen to your specific situation first."
+          "title": "Submit Property Details",
+          "body": "Fill out our quick form or call us with basic property information. We need proof of ownership and lien details — we'll guide you through the rest."
         },
         {
           "num": "02",
-          "title": "We visit, in person",
-          "body": "A local team member schedules a walkthrough at a time that's convenient for you. No hassle."
+          "title": "Receive Your Cash Offer",
+          "body": "We evaluate your property and present a no-obligation cash offer within 24 hours — fair, straightforward, and based on current local market conditions."
         },
         {
           "num": "03",
-          "title": "Receive a written offer",
-          "body": "We present a fair, no-obligation cash offer with transparent terms — no hidden fees, ever."
+          "title": "Verify Lien Payoff",
+          "body": "Once you accept, we coordinate directly with your lien holders to verify payoff amounts. Liens are satisfied from sale proceeds — no extra steps for you."
         },
         {
           "num": "04",
-          "title": "Close on your timeline",
-          "body": "You choose the closing date. We handle the paperwork. You get cash at closing."
+          "title": "Close Quickly",
+          "body": "Choose your closing date. We can close in as little as 7 days or on your preferred timeline. Funds are issued to you promptly after closing."
         }
-      ]
+      ],
+      "primaryCta": "Start with a free offer"
     },
     "areas": {
       "eyebrow": "Service Area",
-      "titleLead": "Across ",
-      "titleEm": "St. Petersburg",
-      "titleTail": " and Tampa Bay.",
-      "lede": "We focus on the neighborhoods we know personally — streets we've bought houses on for over a decade.",
-      "areas": [
-        "St Petersburg",
-        "Clearwater",
-        "Gulfport",
-        "Largo",
-        "Pinellas Park",
-        "Palm Harbor",
-        "Tampa",
-        "Dunedin",
-        "New Port Richey",
-        "Pasco County"
-      ]
+      "titleLead": "Areas We Serve in ",
+      "titleEm": "Florida",
+      "titleTail": "",
+      "lede": "We serve St. Petersburg and the greater Tampa Bay area with fast, reliable cash closings — including hyper-local knowledge of lien processing norms and title workflows specific to each community."
     },
     "faq": {
       "eyebrow": "Common Questions",
       "titleLead": "Frequently asked questions about ",
-      "titleEm": "selling for cash",
-      "titleTail": " in St Petersburg.",
+      "titleEm": "selling with liens",
+      "titleTail": " in Florida.",
       "items": [
         {
           "q": "Can you sell a property with a lien on it in Florida?",
@@ -1079,7 +1774,182 @@
       "titleLead": "Get your ",
       "titleEm": "no-obligation",
       "titleTail": " cash offer today.",
-      "description": "Selling a house with a lien in Florida doesn't have to be stressful. We buy as-is, handle the lien payoff at closing, and can close in as little as 7 days. No agent fees. No repairs. No pressure."
+      "description": "Ready to move forward? Submit your property details now for a fair cash offer. Lien payoff handled at closing. No repairs. No commissions. No pressure.",
+      "bullets": [
+        "Submit details online or call us directly",
+        "Receive a fair cash offer within 24 hours",
+        "Accept the offer and coordinate lien payoff",
+        "Close on your schedule — fast or flexible"
+      ]
+    },
+    "cards": {
+      "eyebrow": "Types of Liens We Handle",
+      "titleLead": "Every Type of ",
+      "titleEm": "Florida Lien",
+      "titleTail": " — We've Seen It",
+      "lede": "Liens come in many forms. All of them can be resolved at closing when you sell to us. Here are the most common types we handle across St. Pete and Tampa Bay.",
+      "items": [
+        {
+          "icon": "📄",
+          "title": "Tax Liens",
+          "body": "Federal IRS liens and Florida property tax liens. Satisfied directly from sale proceeds at closing with coordination through the title company."
+        },
+        {
+          "icon": "🏠",
+          "title": "Mortgage Liens",
+          "body": "Primary and secondary mortgage liens paid off at closing from sale proceeds. No need to refinance or bring cash to the table."
+        },
+        {
+          "icon": "⚖️",
+          "title": "Judgment Liens",
+          "body": "Court-ordered judgment liens against the property. We work with title professionals experienced in Florida judgment lien resolution."
+        },
+        {
+          "icon": "🔧",
+          "title": "Mechanic's Liens",
+          "body": "Contractor or subcontractor liens for unpaid construction work. Common in renovation projects — we coordinate resolution with your title company."
+        },
+        {
+          "icon": "👥",
+          "title": "HOA Liens",
+          "body": "Homeowners association liens for unpaid dues or assessments. Resolved at closing with payoff amounts confirmed by the title company."
+        },
+        {
+          "icon": "⏱️",
+          "title": "Multiple Liens",
+          "body": "Properties with multiple overlapping liens are our specialty. We coordinate all payoffs simultaneously at closing for a clean, clear title transfer."
+        }
+      ]
+    },
+    "resources": {
+      "eyebrow": "Local Resources",
+      "titleLead": "Local Resources for ",
+      "titleEm": "St. Petersburg Homeowners",
+      "titleTail": "",
+      "lede": "Need help understanding liens or accessing property records? These local offices provide guidance and services for Florida homeowners navigating lien-related property matters.",
+      "items": [
+        {
+          "tag": "City",
+          "title": "St. Petersburg City Hall",
+          "body": "General city services and property information. Starting point for city-level lien inquiries and municipal code compliance questions."
+        },
+        {
+          "tag": "Tax",
+          "title": "Pinellas County Tax Collector",
+          "body": "Tax lien details and payment options. Confirm outstanding tax liens and obtain payoff amounts for property tax obligations."
+        },
+        {
+          "tag": "Court Records",
+          "title": "Pinellas County Clerk of the Circuit Court",
+          "body": "Official property records and lien searches. Access recorded liens, judgment records, and title-related documents for Pinellas County properties."
+        },
+        {
+          "tag": "Health",
+          "title": "Florida Dept. of Health – Pinellas County",
+          "body": "Health-related lien inquiries, including Medicaid estate recovery liens that may apply to inherited or estate properties."
+        }
+      ]
+    },
+    "situations": {
+      "dark": true,
+      "eyebrow": "Properties We Buy",
+      "titleLead": "Properties and Situations ",
+      "titleEm": "We Handle",
+      "titleTail": "",
+      "lede": "We buy liens and distressed Florida homes across a wide range of scenarios — tailoring our terms to your specific situation, not a generic template.",
+      "items": [
+        {
+          "title": "Owner-Occupied with Liens",
+          "body": "Primary residence with outstanding tax, judgment, or mortgage liens. We buy your home and resolve all liens at the closing table."
+        },
+        {
+          "title": "Rental Properties",
+          "body": "Problem tenants, upside-down mortgages, or deferred maintenance — we buy tenant-occupied rentals with liens in any condition."
+        },
+        {
+          "title": "Inherited / Probate Properties",
+          "body": "Estates with title complications, outstanding liens, or unpaid back taxes. We coordinate with estate attorneys for smooth closings."
+        },
+        {
+          "title": "Vacant Homes",
+          "body": "Empty properties accumulating carrying costs, utilities, and maintenance. We close quickly to end the ongoing expense."
+        },
+        {
+          "title": "Foreclosure Risk",
+          "body": "Properties with tax liens or mortgage defaults heading toward foreclosure. We can close before the auction date to stop the process."
+        },
+        {
+          "title": "Relocation or Life Events",
+          "body": "Job changes, divorce, inheritance, or other circumstances requiring a fast, certain sale — we work on your timeline, not the market's."
+        }
+      ]
+    },
+    "payoff": {
+      "eyebrow": "How Lien Payoff Works",
+      "titleLead": "What Happens to the ",
+      "titleEm": "Lien at Closing?",
+      "titleTail": "",
+      "lede": "The process is straightforward — liens don't block the sale. They're resolved as part of it. Here's exactly how the money flows at your closing.",
+      "steps": [
+        {
+          "num": "Step 1",
+          "title": "Title Search",
+          "body": "The title company identifies all recorded liens against the property and confirms exact payoff amounts with each lien holder."
+        },
+        {
+          "num": "Step 2",
+          "title": "Payoff Coordination",
+          "body": "We coordinate with your lien holders and the title company to confirm payoff figures and schedule disbursements at closing."
+        },
+        {
+          "num": "Step 3",
+          "title": "Closing Day",
+          "body": "Sale proceeds are disbursed in order: liens paid first directly to lien holders; remaining balance paid to you at closing."
+        },
+        {
+          "num": "Step 4",
+          "title": "Clear Title",
+          "body": "All liens are released. The new owner receives clear title. Your responsibility ends at closing — no post-sale lien issues."
+        }
+      ],
+      "equityNote": {
+        "title": "What if the liens exceed my equity?",
+        "body": "If liens exceed the property value, contact us anyway. Depending on your situation, there may still be options — including short sales or lien negotiation. Our team will walk you through what's possible before making any commitments."
+      }
+    },
+    "whyUs": {
+      "eyebrow": "Why Choose Us",
+      "titleLead": "Why Choose Us for Your ",
+      "titleEm": "Lien Sale",
+      "titleTail": "",
+      "lede": "We buy liened properties as-is, with no agent fees and a local Florida focus for smooth, certain closings. Our approach is designed for exactly the situation you're in.",
+      "items": [
+        {
+          "title": "Sell as-is — no repairs required",
+          "body": "We buy your home in its current condition. No need to fix broken systems, update kitchens, or stage for showings. The property doesn't need to be market-ready."
+        },
+        {
+          "title": "No commissions — you keep more",
+          "body": "Listing with an agent costs 5–6% in commissions. We buy direct with zero fees. We cover typical closing costs. What you're offered is what you receive."
+        },
+        {
+          "title": "Flexible closing timelines",
+          "body": "Need to close in a week? Need extra time to move? We work on your schedule — as fast as 7 days or as flexible as you need. You control the closing date."
+        },
+        {
+          "title": "Local expertise in Florida lien law",
+          "body": "We know Pinellas County lien processing norms, title workflows, and Florida statutory requirements — ensuring a smooth, legally sound transaction every time."
+        }
+      ],
+      "asideTitle": "Typical Outcomes",
+      "asideList": [
+        "Cash offers delivered within 24 hours",
+        "Smooth lien payoffs coordinated at closing",
+        "Closings completed in 7 to 14 days",
+        "No-pressure consultations and clear communication",
+        "No post-sale lien liability or title disputes"
+      ],
+      "asideBody": "Call or message us now. A local St Pete team member will respond within 24 hours with a no-obligation cash offer — lien handled at closing."
     }
   },
   {
@@ -1094,36 +1964,43 @@
       "titleEm": "St Petersburg",
       "titleTail": " for Cash",
       "subheadline": "We buy flood-damaged houses in St Pete for cash, AS-IS, with fast closes and a local focus. No repairs, no commissions, no waiting. Whether your property is in Shore Acres, Pinellas Point, Old Northeast, or anywhere in St Petersburg — we're here to help.",
-      "formTitle": "Get a cash offer for your flooded home.",
-      "formIntro": "Tell us about your water-damaged St Petersburg property. We'll respond within 24 hours with a fair, no-obligation offer.",
+      "formTitle": "Get a cash offer today.",
+      "formIntro": "Tell us about your flood-damaged St Petersburg home. We'll review it AS-IS and have a no-obligation offer in your hands quickly.",
       "checklist": [
-        "Cash offer within 24 hours",
-        "Sell flooded homes as-is — no mitigation required",
-        "Close in as little as 7 days",
-        "No agent fees or commissions",
-        "Local St Pete team — one call away"
+        "Cash offer — no obligation to accept",
+        "Buy AS-IS — no repairs, no cleanup",
+        "Close as fast as 7–14 days",
+        "No realtor fees or commissions",
+        "Local St Pete team — owner-operated"
+      ],
+      "authorRole": "Local Founder · We Buy St Pete Houses · Pinellas County",
+      "addressPlaceholder": "123 Main St, St Petersburg FL",
+      "neighborhoodTags": [
+        "Shore Acres",
+        "Pinellas Point",
+        "Old Northeast",
+        "All St Pete Neighborhoods"
       ]
     },
     "stats": [
       {
         "value": "24",
         "suffix": "hrs",
-        "label": "Cash offer in your hands"
+        "label": "To receive your cash offer"
       },
       {
-        "value": "7",
-        "suffix": "days",
-        "label": "Fastest close possible"
+        "value": "7–14",
+        "label": "Days to close when ready"
       },
       {
         "prefix": "$",
         "value": "0",
-        "label": "Fees or commissions"
+        "label": "Commissions or fees"
       },
       {
         "value": "500",
         "suffix": "+",
-        "label": "Homes bought across St Pete"
+        "label": "Homes purchased in St Pete"
       }
     ],
     "sectionOrder": [
@@ -1132,6 +2009,7 @@
       "process",
       "cards",
       "comparison",
+      "diff",
       "whyUs",
       "areas",
       "resources",
@@ -1139,57 +2017,53 @@
       "finalCta"
     ],
     "process": {
-      "eyebrow": "How It Works",
-      "titleLead": "How our ",
-      "titleEm": "cash offer",
-      "titleTail": " process works.",
-      "lede": "Our quick steps: No bidding wars, no repair headaches, no complex listings — certain results you can count on.",
+      "eyebrow": "5-Step Process",
+      "titleLead": "How It Works When You Sell ",
+      "titleEm": "Flooded Property",
+      "titleTail": " to Us",
+      "lede": "Our process starts with your details, a no-obligation AS-IS review, and a cash offer with a closing timeline that fits you. Each step is transparent, seller-friendly, and built around your needs.",
       "steps": [
         {
           "num": "01",
-          "title": "Tell us about the home",
-          "body": "Share your property details via our form or by phone. We listen to your specific situation first."
+          "title": "Initial Contact",
+          "body": "Reach out by phone, email, or our online form. Tell us about your property — location, extent of the flood damage, and your preferred timeline. No formal inspection required."
         },
         {
           "num": "02",
-          "title": "We visit, in person",
-          "body": "A local team member schedules a walkthrough at a time that's convenient for you. No hassle."
+          "title": "Property Review",
+          "body": "We evaluate your home based on the information you provide. No repairs required, no move-in condition needed. We're buying AS-IS and factor in real flood damage honestly."
         },
         {
           "num": "03",
-          "title": "Receive a written offer",
-          "body": "We present a fair, no-obligation cash offer with transparent terms — no hidden fees, ever."
+          "title": "Cash Offer",
+          "body": "We present a fair cash offer — transparent, written, and based on current condition and local St Pete market data. You review it at your own pace with no obligation to accept."
         },
         {
           "num": "04",
-          "title": "Close on your timeline",
-          "body": "You choose the closing date. We handle the paperwork. You get cash at closing."
+          "title": "Flexible Closing Timeline",
+          "body": "Cash offers can close quickly. Some transactions complete in as little as a week to two weeks when conditions align. The exact timeline depends on your readiness and situation — we prioritize what works for you."
+        },
+        {
+          "num": "05",
+          "title": "Final Close and Transfer of Funds",
+          "body": "Once you're ready, we finalize the paperwork and transfer the cash. You walk away without repair costs, realtor fees, or drawn-out negotiations. We guide you through every document you need."
         }
-      ]
+      ],
+      "note": "What you'll typically need: Proof of ownership (deed or title), government-issued ID, and property details. Flood damage documentation is helpful but not required. Our team walks you through each step.",
+      "primaryCta": "Get my cash offer"
     },
     "areas": {
       "eyebrow": "Service Area",
-      "titleLead": "Across ",
-      "titleEm": "St. Petersburg",
-      "titleTail": " and Tampa Bay.",
-      "lede": "We focus on the neighborhoods we know personally — streets we've bought houses on for over a decade.",
-      "areas": [
-        "St Petersburg",
-        "Clearwater",
-        "Gulfport",
-        "Largo",
-        "Pinellas Park",
-        "Palm Harbor",
-        "Tampa",
-        "Dunedin",
-        "New Port Richey",
-        "Pasco County"
-      ]
+      "titleLead": "Areas We Serve in ",
+      "titleEm": "St Petersburg",
+      "titleTail": "",
+      "lede": "We buy houses across St Pete and the surrounding area. Our local focus means we know the flood zones, the neighborhood pricing dynamics, and the community landscape throughout Pinellas County.",
+      "areasNote": "Not sure if your property is within our area? Reach out anyway — we often work with sellers in adjacent communities."
     },
     "faq": {
       "eyebrow": "Common Questions",
-      "titleLead": "Frequently asked questions about ",
-      "titleEm": "selling for cash",
+      "titleLead": "Common seller questions about ",
+      "titleEm": "flood-damaged homes",
       "titleTail": " in St Petersburg.",
       "items": [
         {
@@ -1231,175 +2105,230 @@
       ]
     },
     "finalCta": {
-      "titleLead": "Take the first step toward ",
-      "titleEm": "a stress-free sale.",
+      "eyebrow": "Ready to sell?",
+      "titleLead": "Sell your flooded St Pete home ",
+      "titleEm": "for cash today.",
       "titleTail": "",
-      "description": "Sell your fire-damaged house in St Petersburg for cash — as-is, no repairs, no commissions. Get a fair, no-obligation offer today."
+      "description": "No repairs. No commissions. AS-IS cash offer with a closing timeline that works for you. Get started now — no obligation, no pressure."
     },
     "prose": {
-      "eyebrow": "Local Cash Offer — St Pete",
-      "titleLead": "Get a Local Cash Offer for Your ",
-      "titleEm": "Flooded Home",
-      "titleTail": " Today",
-      "lede": "Whether you're dealing with hurricane flooding, plumbing failures, or storm surge — we buy water-damaged homes across St Petersburg as-is.",
+      "eyebrow": "Cash Offer — Flood-Damaged Homes",
+      "titleLead": "Get a Cash Offer for Your ",
+      "titleEm": "Flood-Damaged St Pete Home",
+      "titleTail": "",
+      "lede": "Flood damage can feel overwhelming, but selling your St Pete home doesn't have to be. We offer a direct, transparent path to cash — no commissions, no hidden costs, and a flexible closing timeline that works around your needs.",
       "paragraphs": [
-        "Water damage doesn't have to trap you in months of mitigation, insurance disputes, and repair estimates. We buy flooded and water-damaged homes in their current condition.",
-        "You contact us, we evaluate your property, and we present a fair cash offer within 24 hours. No pressure, no obligation.",
-        "Choose your closing date — as fast as 7 days or more time if needed. We handle paperwork and coordinate with a local title company."
+        "We purchase flood-damaged properties in their current condition across St Petersburg and Pinellas County. You don't need to repair water damage, remediate mold, or stage the home before selling. We evaluate your property AS-IS and make a fair cash offer based on its current state.",
+        "Our process is designed for sellers who need certainty. There's no obligation to accept our offer, no pressure to decide on a timeline you didn't choose, and no surprises at closing. The cash offer we present is what you receive — no deductions added later.",
+        "Whether your home is in Shore Acres (which has seen significant flood impact following recent hurricanes), Pinellas Point, Old Northeast, or anywhere else in St Petersburg — we know the local landscape, the flood zones, and the community dynamics. That local expertise translates to faster, more confident offers."
       ],
       "sidebar": {
-        "title": "What Happens When You Contact Us",
+        "title": "What Sellers Get from Us",
         "items": [
           {
-            "strong": "We gather basic details",
-            "text": "— address, damage extent, and your preferred timeline. No formal inspection required in most cases."
+            "strong": "Fair cash offer",
+            "text": "— based on your home's AS-IS condition, local market data, and comparable sales in St Pete."
           },
           {
-            "strong": "We evaluate your home",
-            "text": "— based on current condition, local market data, and comparable sales in St Petersburg."
+            "strong": "No obligation",
+            "text": "— review the offer at your own pace. If it doesn't work for you, no pressure."
           },
           {
-            "strong": "You receive a written offer",
-            "text": "— fair, transparent, no hidden deductions. No obligation to accept."
+            "strong": "No fees or commissions",
+            "text": "— the offer we make is what you receive. Zero realtor fees, zero closing costs passed to you."
           },
           {
-            "strong": "You choose the closing date",
-            "text": "— we work on your timeline. As fast as 7 days, or take more time if needed."
+            "strong": "Flexible closing",
+            "text": "— we work around your schedule, whether you need to move fast or need extra time."
           },
           {
-            "strong": "You walk away with cash",
-            "text": "— no agent commissions, no repair costs, no carrying costs eating into your proceeds."
+            "strong": "Full guidance",
+            "text": "— we walk you through every document and every step, keeping the process transparent and seller-friendly."
           }
         ]
       }
     },
     "cards": {
-      "eyebrow": "No Repairs Needed",
-      "titleLead": "Sell As-Is — ",
-      "titleEm": "No Repairs Required",
+      "eyebrow": "Properties We Purchase",
+      "titleLead": "What We Buy and ",
+      "titleEm": "When It Applies",
       "titleTail": "",
-      "lede": "You don't need to fix fire damage, clean up soot, or pass inspections before selling to us. We buy homes in their current condition and make offers that reflect fair value — no hidden deductions.",
+      "lede": "We buy flood-damaged homes in St Pete regardless of mild-to-severe damage — AS-IS and fast. Whether your property has water stains or significant structural concerns, we're interested.",
       "items": [
         {
-          "title": "Structural Damage",
-          "body": "Compromised walls, roof damage, or load-bearing issues. We've purchased severely fire-damaged structures across St Pete and Tampa Bay — no condition is too extreme."
+          "icon": "💧",
+          "title": "Flood-Damaged Properties",
+          "body": "Homes with water damage from hurricanes, storms, or rising water levels across St Petersburg and Pinellas County neighborhoods."
         },
         {
-          "title": "Smoke & Soot Damage",
-          "body": "Interior smoke damage, soot-covered surfaces, and lingering odor issues. You don't need to clean or remediate before receiving your offer."
+          "icon": "🌊",
+          "title": "Flood Zone Properties",
+          "body": "Properties in established flood zones or areas with a history of water intrusion — including Shore Acres and other at-risk St Pete neighborhoods."
         },
         {
-          "title": "Water Damage from Firefighting",
-          "body": "Properties often sustain water damage alongside fire damage from firefighting efforts. We factor all of it into our evaluation — one clean offer."
+          "icon": "🏠",
+          "title": "Mold and Moisture Damage",
+          "body": "Houses with mold growth, persistent moisture, compromised drywall, or water-damaged foundations. No remediation required before selling."
         },
         {
-          "title": "Debris & Cleanup",
-          "body": "You don't need to remove debris, haul away damaged materials, or make the property presentable. We buy homes in the exact condition we find them."
+          "icon": "🌀",
+          "title": "Combined Flood + Hurricane Damage",
+          "body": "Properties with combined water damage and wind or structural damage from hurricane events. We evaluate the whole picture and make one fair offer."
         },
         {
-          "title": "Open Insurance Claims",
-          "body": "You can sell with an open or pending insurance claim. We'll discuss how your specific situation affects timing and ensure the transaction is handled correctly."
+          "icon": "🧱",
+          "title": "Compromised Foundations",
+          "body": "Structural concerns from flood saturation, settling, or slab damage. Traditional buyers walk away — we evaluate honestly and still make a fair offer."
         },
         {
-          "title": "Any Condition — We Buy It",
-          "body": "Total loss, partial damage, or smoke-only — we evaluate every St Pete property individually and make a fair offer based on what's actually there."
-        }
-      ]
-    },
-    "situations": {
-      "eyebrow": "All Distressed Situations",
-      "titleLead": "What We Buy in ",
-      "titleEm": "St Petersburg",
-      "titleTail": "",
-      "lede": "We specialize in situations where traditional buyers walk away. Fire damage is our specialty — but we buy a wide range of distressed properties across St Pete and Tampa Bay.",
-      "items": [
-        {
-          "title": "Fire-Damaged Homes",
-          "body": "Any extent of fire damage — kitchen fires, partial structural damage, or total loss situations."
-        },
-        {
-          "title": "Vacant Properties",
-          "body": "Empty homes accumulating carrying costs, code violations, or deferred maintenance."
-        },
-        {
-          "title": "Inherited / Probate Homes",
-          "body": "Estate properties with title complications, outstanding liens, or deferred repairs."
-        },
-        {
-          "title": "Properties with Liens",
-          "body": "Tax liens, judgment liens, HOA liens, or mechanic's liens — we work through these as part of the acquisition."
-        },
-        {
-          "title": "Homes with Problem Tenants",
-          "body": "Tenant-occupied properties with non-payment or cooperation issues."
-        },
-        {
-          "title": "Upside-Down Mortgages",
-          "body": "Properties where the loan balance exceeds market value — we evaluate each situation individually."
-        }
-      ]
-    },
-    "whyUs": {
-      "eyebrow": "Why Choose Us",
-      "titleLead": "Why Choose ",
-      "titleEm": "We Buy St Pete Houses",
-      "titleTail": "",
-      "lede": "Local focus, fast and fair cash offers, no commissions — designed specifically for St Pete homeowners facing difficult property situations.",
-      "items": [
-        {
-          "title": "Local St Pete expertise",
-          "body": "We know the St Petersburg market, neighborhood property values, and local buyer dynamics."
-        },
-        {
-          "title": "Fast, fair offers — no waiting",
-          "body": "We present a written cash offer within 24 hours and you decide at your own pace."
-        },
-        {
-          "title": "Zero commissions",
-          "body": "No real estate agent fees eating into your proceeds."
-        },
-        {
-          "title": "Flexible closing timeline",
-          "body": "Close in as little as 7 days or take more time if you need it."
-        },
-        {
-          "title": "Transparent offers",
-          "body": "No surprise credits, no hidden repair deductions after acceptance."
-        },
-        {
-          "title": "Hassle-free from start to finish",
-          "body": "We handle the paperwork and coordinate with the title company."
+          "icon": "✓",
+          "title": "Any Flood Damage Condition",
+          "body": "Mild water stains to severe interior damage — we buy them all in St Petersburg. Contact us and let us evaluate your specific situation."
         }
       ],
-      "asideTitle": "Ready to move forward?",
-      "asideBody": "Call or message us now. A local St Pete team member responds within 24 hours with a no-obligation cash offer for your fire-damaged property."
+      "exclusionNote": "Condemned properties or structures with illegal builds. If your home is legally habitable and you hold clear title, we're interested — regardless of flood damage extent."
+    },
+    "whyUs": {
+      "eyebrow": "Why Sellers Choose Us",
+      "titleLead": "Why Sellers Trust ",
+      "titleEm": "We Buy St Pete Houses",
+      "titleTail": "",
+      "lede": "Local focus, transparent process, no-obligation offers, and no fees. Here's exactly what makes us different from generic investors and national cash-offer chains.",
+      "items": [
+        {
+          "title": "Local focus — St Petersburg specialists",
+          "body": "We specialize in St Petersburg and understand the unique challenges of selling flood-damaged homes in this specific market, including flood zones, neighborhood dynamics, and post-hurricane pricing realities."
+        },
+        {
+          "title": "Transparent process — no surprises",
+          "body": "We explain every step, from the initial offer to the final close. No surprise deductions, no bait-and-switch after acceptance, no hidden fees anywhere in the process."
+        },
+        {
+          "title": "No-obligation offers — you decide",
+          "body": "You review our cash offer on your terms. If it doesn't work for you, there's no pressure to accept and no cost for having explored the option. Zero obligation throughout."
+        },
+        {
+          "title": "No fees or commissions — keep more",
+          "body": "We don't charge realtor commissions or closing fees. The offer we make is what you receive — there's no percentage taken out at closing, no cost for our service."
+        }
+      ],
+      "asideTitle": "Ready to get a cash offer today?",
+      "asideBody": "Call or message us now. A local St Pete team member responds promptly with a no-obligation cash offer for your flood-damaged property."
     },
     "resources": {
-      "eyebrow": "Local Resources",
-      "titleLead": "Local Resources to ",
-      "titleEm": "Help Your Sale",
+      "eyebrow": "Local & Government Resources",
+      "titleLead": "Local Resources for ",
+      "titleEm": "St Petersburg Sellers",
       "titleTail": "",
-      "lede": "When selling a home in St Petersburg, these local agencies can provide documentation, property records, and tax information needed for a smooth closing.",
+      "lede": "If you're dealing with flood damage, these local and federal resources can help with documentation, records, and disaster assistance — alongside our cash offer process.",
       "items": [
         {
           "tag": "City",
-          "title": "St Petersburg City Hall",
-          "body": "General city services, property information, building permits, and code compliance."
+          "title": "St. Petersburg City Hall",
+          "body": "General city services, permits, and local ordinances for properties within St. Petersburg city limits.",
+          "href": "https://www.stpete.org/",
+          "linkLabel": "stpete.org →"
         },
         {
-          "tag": "County",
-          "title": "Pinellas County Government Center",
-          "body": "County-level property records and government offices throughout Pinellas County."
+          "tag": "Property Records",
+          "title": "Pinellas County Property Appraiser",
+          "body": "Property valuations, tax assessments, and ownership records for all Pinellas County properties.",
+          "href": "https://www.pcpao.gov/",
+          "linkLabel": "pcpao.gov →"
         },
         {
           "tag": "Court Records",
           "title": "Pinellas County Clerk of the Circuit Court & Comptroller",
-          "body": "Official property documents, deed recordings, and title-related records."
+          "body": "Official records, deeds, and court filings. Essential for confirming ownership before any sale transaction.",
+          "href": "https://www.pinellasclerk.org/",
+          "linkLabel": "pinellasclerk.org →"
         },
         {
-          "tag": "Tax",
-          "title": "Pinellas County Tax Collector",
-          "body": "Property tax records and payment information."
+          "tag": "Federal",
+          "title": "FEMA Disaster Assistance",
+          "body": "Federal disaster assistance programs for flood recovery. Check eligibility for your St Petersburg property after a declared disaster.",
+          "href": "https://www.fema.gov/assistance/individual",
+          "linkLabel": "fema.gov/assistance →"
+        },
+        {
+          "tag": "State",
+          "title": "Florida Division of Emergency Management",
+          "body": "State-level disaster response and recovery resources. Coordinate with state programs alongside your selling options.",
+          "href": "https://www.floridadisaster.org/",
+          "linkLabel": "floridadisaster.org →"
+        },
+        {
+          "tag": "Cash Buyer",
+          "title": "We Buy St Pete Houses",
+          "body": "Local cash buyer specializing in flood-damaged properties across St Pete and Pinellas County. No repairs, no commissions, fast close."
+        }
+      ]
+    },
+    "comparison": {
+      "eyebrow": "Cash vs Traditional",
+      "titleLead": "Why Cash Offers Beat ",
+      "titleEm": "Traditional Realtors",
+      "titleTail": "",
+      "lede": "Cash offers remove financing delays, eliminate realtor commissions, and move faster. For flood-damaged homes specifically, these advantages become critical — traditional buyers and lenders often won't engage at all.",
+      "traditionalLabel": "Traditional Realtor",
+      "traditionalTimeline": "30–60+ days avg",
+      "cashLabel": "We Buy St Pete Houses",
+      "cashTimeline": "7–14 days",
+      "featuredBadge": "Best for flood damage",
+      "rows": [
+        {
+          "label": "Purchase condition",
+          "traditional": "Repairs often required to list",
+          "cash": "AS-IS — no repairs required"
+        },
+        {
+          "label": "Realtor commissions",
+          "traditional": "Typical 5–6% of sale price",
+          "cash": "None"
+        },
+        {
+          "label": "Closing timeline",
+          "traditional": "Average 30–60+ days",
+          "cash": "As little as 7–14 days"
+        },
+        {
+          "label": "Financing contingencies",
+          "traditional": "Buyer financing adds risk & delay",
+          "cash": "None — cash purchase"
+        },
+        {
+          "label": "Lender flood zone requirements",
+          "traditional": "Often blocks sale entirely",
+          "cash": "Not applicable — no lender"
+        },
+        {
+          "label": "Offer transparency",
+          "traditional": "Negotiation, inspection credits, price drops",
+          "cash": "Flat cash offer — no hidden deductions"
+        }
+      ]
+    },
+    "diff": {
+      "eyebrow": "Local Knowledge Advantage",
+      "titleLead": "Our Local Expertise and ",
+      "titleEm": "Speed Advantage",
+      "titleTail": "",
+      "lede": "Why does local expertise matter when selling a flood-damaged home? Because the nuances of St Pete's flood history, neighborhood dynamics, and market realities directly affect your offer — and distant investors don't know them.",
+      "items": [
+        {
+          "num": "01",
+          "title": "Understanding St Pete's Flood History",
+          "body": "We know which neighborhoods have been impacted by recent hurricanes, where flood zones are most challenging, and how local market dynamics affect valuations. Shore Acres and similar areas have seen real price adjustments we factor in honestly — giving you a fair offer, not a lowball based on generic data."
+        },
+        {
+          "num": "02",
+          "title": "Speed to Close",
+          "body": "Because we operate locally and focus exclusively on St Petersburg, we move fast. We don't need to coordinate with distant investors or navigate unfamiliar markets. We know St Pete — and that translates to quicker decisions and smoother closings without the delays national buyers introduce."
+        },
+        {
+          "num": "03",
+          "title": "Owner-Operator Perspective",
+          "body": "We're not a faceless national chain. We're a local operation invested in this community, committed to treating sellers fairly, and accountable to our reputation here in St Pete. That local identity means we care about the outcome — not just the transaction."
         }
       ]
     }
@@ -1487,7 +2416,11 @@
           "title": "Close on your timeline",
           "body": "You choose the closing date. We handle the paperwork. You get cash at closing."
         }
-      ]
+      ],
+      "secondaryCta": {
+        "label": "Learn more about our process",
+        "href": "/how-it-works"
+      }
     },
     "areas": {
       "eyebrow": "Service Area",
@@ -1495,18 +2428,12 @@
       "titleEm": "St. Petersburg",
       "titleTail": " and Tampa Bay.",
       "lede": "We focus on the neighborhoods we know personally — streets we've bought houses on for over a decade.",
-      "areas": [
-        "St Petersburg",
-        "Clearwater",
-        "Gulfport",
-        "Largo",
-        "Pinellas Park",
-        "Palm Harbor",
-        "Tampa",
-        "Dunedin",
-        "New Port Richey",
-        "Pasco County"
-      ]
+      "areasNote": "Not sure if your property is in our service area? ",
+      "areasNoteLink": {
+        "label": "Contact us to find out",
+        "href": "/contact"
+      },
+      "areasNoteAfter": " — we often work with homeowners in adjacent counties."
     },
     "faq": {
       "eyebrow": "Common Questions",
@@ -1742,14 +2669,24 @@
       "titleEm": "Florida",
       "titleTail": " for Cash",
       "subheadline": "Hurricane, tropical storm, or flood damage doesn't have to mean months of repairs and uncertainty. We buy storm-damaged homes across Florida as-is for cash — no repairs, no commissions, close in as little as 7 days.",
-      "formTitle": "Tell us about your home.",
-      "formIntro": "A local team of specialists — buying homes across Pinellas County at fair prices. No agents, no repairs, no surprises."
+      "formTitle": "Get your cash offer today.",
+      "formIntro": "Tell us about the storm damage. We'll have a no-obligation offer in your hands within 24 hours — no repairs needed first.",
+      "urgencyBadge": "Act before contractor costs or further damage accumulate",
+      "authorRole": "Local Founder · We Buy St Pete Houses · Pinellas County",
+      "addressPlaceholder": "123 Main St, St Petersburg FL",
+      "checklist": [
+        "Cash offer within 24 hours",
+        "As-is — any storm damage condition",
+        "Close in as little as 7 days",
+        "No commissions, no agent fees",
+        "No insurance waiting period required"
+      ]
     },
     "stats": [
       {
         "value": "24",
         "suffix": "hrs",
-        "label": "Cash offer in your hands"
+        "label": "Cash offer delivered"
       },
       {
         "value": "7",
@@ -1759,78 +2696,82 @@
       {
         "prefix": "$",
         "value": "0",
-        "label": "Fees or commissions"
+        "label": "Commissions or fees"
       },
       {
         "value": "500",
         "suffix": "+",
-        "label": "Homes bought across St Pete"
+        "label": "Homes purchased in St Pete"
       }
     ],
     "sectionOrder": [
       "stats",
-      "process",
       "cards",
-      "prose",
-      "areas",
+      "process",
+      "comparison",
+      "insurance",
+      "environmental",
+      "caseStudies",
       "resources",
+      "areas",
       "whyUs",
       "faq",
       "finalCta"
     ],
     "process": {
       "eyebrow": "How It Works",
-      "titleLead": "How our ",
-      "titleEm": "cash offer",
-      "titleTail": " process works.",
-      "lede": "Our quick steps: No bidding wars, no repair headaches, no complex listings — certain results you can count on.",
+      "titleLead": "How to Sell Your Storm-Damaged Home ",
+      "titleEm": "in Florida",
+      "titleTail": "",
+      "lede": "Contact us, review your offer, sign, and close — often within days. Our process is designed to minimize stress and maximize speed when you need it most.",
       "steps": [
         {
           "num": "01",
-          "title": "Tell us about the home",
-          "body": "Share your property details via our form or by phone. We listen to your specific situation first."
+          "title": "Initial Contact & Property Evaluation",
+          "body": "Reach out by phone or through our website. We'll ask basic questions about your property's location, condition, and your timeline. No obligation — we're simply gathering information to provide an accurate offer. We don't require formal inspections or in-person showings in most cases."
         },
         {
           "num": "02",
-          "title": "We visit, in person",
-          "body": "A local team member schedules a walkthrough at a time that's convenient for you. No hassle."
+          "title": "Receive Your Cash Offer",
+          "body": "Within 24–48 hours, we'll present a cash offer that accounts for your home's current storm-damaged condition, the local Tampa Bay market, and comparable sales. Because we buy as-is, you won't need to invest in repairs or staging. No high-pressure tactics — just a straightforward proposal you can review at your own pace."
         },
         {
           "num": "03",
-          "title": "Receive a written offer",
-          "body": "We present a fair, no-obligation cash offer with transparent terms — no hidden fees, ever."
+          "title": "Review, Accept, & Sign",
+          "body": "If the offer meets your needs, we move forward. We use a standard Florida as-is contract and walk through every term with you. No surprise clauses, no contingencies that could derail the sale, no pressure to decide before you're ready."
         },
         {
           "num": "04",
-          "title": "Close on your timeline",
-          "body": "You choose the closing date. We handle the paperwork. You get cash at closing."
+          "title": "Closing the Sale",
+          "body": "We coordinate with a local title company to finalize paperwork. You choose the closing date. We handle closing costs, and you walk away with cash. The entire process from offer to close can happen in as little as 7 days — or take more time if you need it."
         }
-      ]
+      ],
+      "note": "What you'll typically need: Proof of ownership, property tax information, storm damage documentation (optional), and government-issued ID.",
+      "primaryCta": "Get my cash offer",
+      "docs": [
+        "Proof of ownership (deed or title)",
+        "Property tax information",
+        "Storm damage documentation (optional — helpful but not required)",
+        "Government-issued ID"
+      ],
+      "disclosureNote": "Florida disclosure note: Florida law requires sellers to disclose known material defects, including storm damage. We'll guide you through the disclosure process to ensure compliance. Because we specialize in damaged properties, you won't face the scrutiny or complications common with traditional buyers."
     },
     "areas": {
       "eyebrow": "Service Area",
-      "titleLead": "Across ",
-      "titleEm": "St. Petersburg",
-      "titleTail": " and Tampa Bay.",
-      "lede": "We focus on the neighborhoods we know personally — streets we've bought houses on for over a decade.",
-      "areas": [
-        "St Petersburg",
-        "Clearwater",
-        "Gulfport",
-        "Largo",
-        "Pinellas Park",
-        "Palm Harbor",
-        "Tampa",
-        "Dunedin",
-        "New Port Richey",
-        "Pasco County"
-      ]
+      "titleLead": "Florida Areas ",
+      "titleEm": "We Serve",
+      "titleTail": "",
+      "lede": "We buy storm-damaged homes throughout St. Petersburg and the Greater Tampa Bay area — with local market knowledge that ensures accurate, competitive offers for every neighborhood.",
+      "areasAside": {
+        "title": "Not sure if we serve your area?",
+        "body": "Reach out anyway. We're often able to work with homeowners in adjacent counties or special circumstances."
+      }
     },
     "faq": {
       "eyebrow": "Common Questions",
       "titleLead": "Frequently asked questions about ",
-      "titleEm": "selling for cash",
-      "titleTail": " in St Petersburg.",
+      "titleEm": "selling storm-damaged homes",
+      "titleTail": " in Florida.",
       "items": [
         {
           "q": "Can you sell a house with storm damage?",
@@ -1872,10 +2813,266 @@
     },
     "finalCta": {
       "eyebrow": "Ready to sell?",
-      "titleLead": "Get your ",
-      "titleEm": "no-obligation",
-      "titleTail": " cash offer today.",
-      "description": "Hurricane, tropical storm, or flood damage doesn't have to mean months of repairs and uncertainty. We buy storm-damaged homes across Florida as-is for cash — no repairs, no commissions, close in as little as 7 days."
+      "titleLead": "Ready to sell your ",
+      "titleEm": "storm-damaged home?",
+      "titleTail": "",
+      "description": "We buy storm-damaged homes across Florida for cash, as-is, with no fees and fast closings. Get a no-obligation cash offer today — no pressure, no repairs required first.",
+      "bullets": [
+        "Call or fill out our form with property details",
+        "Receive a fair cash offer within 24–48 hours",
+        "Accept and coordinate the closing on your schedule",
+        "Walk away with cash — as fast as 7 days"
+      ]
+    },
+    "cards": {
+      "eyebrow": "Every Type of Storm Damage",
+      "titleLead": "We Buy Homes with ",
+      "titleEm": "Any Type of Storm Damage",
+      "titleTail": "",
+      "lede": "Whether your home was hit last season or years ago, we make cash offers for properties in any storm-damaged condition. No damage is too severe — we've seen it all across Tampa Bay.",
+      "items": [
+        {
+          "icon": "🏠",
+          "title": "Roof Damage",
+          "body": "Missing shingles, structural compromise, collapsed sections. We buy homes with active roof damage and make offers that account for full replacement costs."
+        },
+        {
+          "icon": "💧",
+          "title": "Flood & Water Intrusion",
+          "body": "Interior flooding, standing water, saturated materials, and compromised flooring. We purchase flood-damaged properties throughout Pinellas County and Tampa Bay."
+        },
+        {
+          "icon": "💨",
+          "title": "Hurricane / Wind Damage",
+          "body": "Structural damage from high winds, blown-out windows, siding damage, or debris impact. Cash offers account for wind damage regardless of severity."
+        },
+        {
+          "icon": "🦠",
+          "title": "Mold & Moisture",
+          "body": "Visible mold growth, persistent moisture, compromised drywall, and air quality issues. You don't need to remediate before selling — we factor it into the offer."
+        },
+        {
+          "icon": "🧱",
+          "title": "Structural Damage",
+          "body": "Foundation issues, load-bearing wall compromise, and frame damage. We buy structurally compromised homes that traditional buyers and lenders won't touch."
+        },
+        {
+          "icon": "✓",
+          "title": "Any Condition — We Buy It",
+          "body": "Multiple damage types, total loss situations, or properties where repairs aren't worth it. We've seen every scenario across Tampa Bay and can close on any of them."
+        }
+      ]
+    },
+    "resources": {
+      "eyebrow": "Local Government Resources",
+      "titleLead": "Local Resources for ",
+      "titleEm": "St. Pete Storm-Damaged",
+      "titleTail": " Home Sales",
+      "lede": "Beyond finding a buyer, you may need to coordinate with government agencies, access disaster assistance, or verify tax and title information. These offices can help.",
+      "items": [
+        {
+          "tag": "City",
+          "title": "St. Petersburg City Hall",
+          "body": "Building permits, code compliance, and storm damage reporting for properties within St. Petersburg city limits.",
+          "phone": "(727) 893-7111"
+        },
+        {
+          "tag": "Court Records",
+          "title": "Pinellas County Clerk of the Circuit Court",
+          "body": "Property records, title searches, and deed transfers. Essential for confirming ownership before any sale transaction.",
+          "phone": "(727) 464-7000"
+        },
+        {
+          "tag": "Tax",
+          "title": "Pinellas County Tax Collector",
+          "body": "Property tax information, payment plans, and tax certificates. Confirm any outstanding tax obligations before closing.",
+          "phone": "(727) 464-7777"
+        },
+        {
+          "tag": "FEMA / State",
+          "title": "Florida Division of Emergency Management",
+          "body": "Disaster assistance programs, FEMA coordination, and storm recovery resources. Check for current hurricane grant programs and eligibility.",
+          "phone": "1-800-342-3557"
+        }
+      ]
+    },
+    "whyUs": {
+      "eyebrow": "Why We Buy St Pete Houses",
+      "titleLead": "Why We Buy St Pete Houses Is ",
+      "titleEm": "Your Best Choice",
+      "titleTail": "",
+      "lede": "No fees, no commissions, sell as-is, guaranteed cash offer. These aren't just marketing phrases — they're the foundation of how we operate. When you're dealing with storm damage, time and certainty matter. We provide both.",
+      "items": [
+        {
+          "title": "Local Tampa Bay expertise",
+          "body": "We know St. Pete's storm patterns, flood zones, neighborhood property values, and what buyers expect across Pinellas County. Locally grounded offers, not national averages."
+        },
+        {
+          "title": "Transparent, no-surprise process",
+          "body": "No hidden costs, no bait-and-switch pricing after initial evaluation, no pressure. You always know exactly where you stand and what to expect next."
+        },
+        {
+          "title": "Fast closings — 7 days possible",
+          "body": "As little as 7 days from offer to cash in hand. Or more time if you need it — you control the closing date, not us."
+        },
+        {
+          "title": "No repairs — any condition",
+          "body": "Roof gone, mold throughout, flood damage — we've seen it all and we buy it all. No condition is too severe to evaluate."
+        },
+        {
+          "title": "Guaranteed cash offer",
+          "body": "A firm commitment, not a conditional promise. Cash buyers don't have financing fall-through risk. When we say we're closing, we close."
+        },
+        {
+          "title": "We understand the urgency",
+          "body": "Storm damage has financial and emotional weight. We've helped Florida homeowners after hurricanes and flooding move forward — we know how to make this fast and simple."
+        }
+      ],
+      "grid": true
+    },
+    "comparison": {
+      "eyebrow": "Why Cash Offers Win",
+      "titleLead": "Why Choose a Cash Offer for Your ",
+      "titleEm": "Storm-Damaged Florida Home",
+      "titleTail": "",
+      "lede": "Cash offers close faster, require no repairs, and eliminate commissions. When your home has sustained storm damage, these advantages become critical.",
+      "traditionalLabel": "Traditional Sale",
+      "traditionalTimeline": "60–90+ days",
+      "cashLabel": "Cash Sale — We Buy St Pete Houses",
+      "cashTimeline": "As little as 7 days",
+      "featuredBadge": "Best for storm damage",
+      "tradeoffs": [
+        {
+          "num": "Advantage 01",
+          "title": "Speed and Certainty",
+          "body": "Traditional sales involve inspections, appraisals, and financing contingencies — any of which can derail the deal. Cash buyers eliminate all of these hurdles. You receive a firm commitment, not a conditional promise. Close in as little as 7 days."
+        },
+        {
+          "num": "Advantage 02",
+          "title": "No Repairs or Renovations",
+          "body": "Storm damage requires expensive repairs — roof replacement, mold remediation, drywall, electrical. With a cash offer, you sell as-is. We assess the property in its current state and make an offer that reflects the damage. Zero contractor headaches."
+        },
+        {
+          "num": "Advantage 03",
+          "title": "No Commissions or Fees",
+          "body": "Listing with an agent costs 5–6% in commissions plus staging, photography, and marketing. When you sell to us, you pay no commissions. The offer you receive is the amount you keep, minus any agreed-upon closing costs we cover."
+        }
+      ],
+      "rows": [
+        {
+          "label": "Timeline",
+          "traditional": "60–90+ days",
+          "cash": "As little as 7 days"
+        },
+        {
+          "label": "Repairs needed",
+          "traditional": "Often required",
+          "cash": "None required"
+        },
+        {
+          "label": "Commissions",
+          "traditional": "5–6% of sale price",
+          "cash": "None"
+        },
+        {
+          "label": "Financing contingencies",
+          "traditional": "Inspections, appraisal, financing",
+          "cash": "None"
+        },
+        {
+          "label": "Certainty",
+          "traditional": "Moderate to low",
+          "cash": "High — guaranteed cash"
+        },
+        {
+          "label": "Insurance required",
+          "traditional": "Often required by lenders",
+          "cash": "No waiting period needed"
+        }
+      ]
+    },
+    "insurance": {
+      "eyebrow": "Insurance & Claims",
+      "titleLead": "Should I File My Insurance Claim First, ",
+      "titleEm": "or Sell First?",
+      "titleTail": "",
+      "lede": "One of the most common questions we hear from storm-damaged homeowners. The answer depends on your situation — here's how to think through it.",
+      "cards": [
+        {
+          "tag": "If you're repairing and listing traditionally",
+          "title": "File Your Claim First",
+          "paragraphs": [
+            "If you plan to repair the damage and sell through a traditional listing, filing your insurance claim gives you the funds needed to complete repairs before buyers and their lenders begin scrutinizing the property.",
+            "This path can yield a higher gross sale price, but it requires months of contractor coordination, insurance negotiation, and listing time — with no guarantee of the final outcome."
+          ]
+        },
+        {
+          "tag": "If you want to sell as-is for cash",
+          "title": "You Can Sell Without Filing",
+          "paragraphs": [
+            "If you want to sell as-is for cash, you can proceed without waiting for insurance approval or settlement. Some sellers file their claim and then sell before repairs are completed, using the insurance payout to offset a reduced cash offer price.",
+            "A cash sale often provides faster financial relief than waiting for grant approval or insurance settlement. We can discuss your specific insurance situation during the evaluation — no judgment, just clarity on your options."
+          ],
+          "cta": true
+        }
+      ]
+    },
+    "environmental": {
+      "eyebrow": "Environmental & Legal Disclosures",
+      "titleLead": "Environmental Considerations When Selling ",
+      "titleEm": "Storm-Damaged Homes",
+      "titleTail": "",
+      "lede": "Storm damage often creates environmental hazards that must be disclosed. Understanding these considerations protects both parties and ensures a compliant transaction.",
+      "items": [
+        {
+          "title": "Mold and Moisture Risks",
+          "body": "Porous materials visibly moldy after water damage — drywall, insulation, carpet — cannot be satisfactorily cleaned and must be disclosed. Cash buyers like us factor mold issues into the offer. You don't need to remediate before selling. Florida Department of Health and EPA guidance applies."
+        },
+        {
+          "title": "Lead Paint & Asbestos",
+          "body": "Homes built before 1978 may contain lead-based paint — federal law requires disclosure and an EPA-approved pamphlet. Older homes may also contain asbestos in insulation, flooring, or roofing. We're experienced with both and factor them into our offer process."
+        },
+        {
+          "title": "Proper Disposal of Damaged Materials",
+          "body": "Florida regulations govern disposal of storm-damaged materials, especially those containing hazardous substances. If materials remain on-site, we typically handle disposal as part of the acquisition — coordinating with licensed contractors and disposal services to manage environmental compliance."
+        }
+      ]
+    },
+    "caseStudies": {
+      "eyebrow": "Local Success Stories",
+      "titleLead": "Fast Cash Sales Across ",
+      "titleEm": "Tampa Bay",
+      "titleTail": "",
+      "lede": "Local homeowners have successfully sold storm-damaged properties through cash offers, avoiding months of repairs and uncertainty. Here are three representative situations.",
+      "cases": [
+        {
+          "tag": "St. Petersburg · Hurricane Damage",
+          "title": "Roof Compromise & Water Intrusion Throughout",
+          "paragraphs": [
+            "A seller worried that traditional buyers would require a full roof replacement and mold remediation before close. We purchased the property as-is, handling all environmental coordination. The seller never had to coordinate contractors or talk to adjusters after the sale."
+          ],
+          "statValue": "10 days",
+          "statLabel": "from accepted offer to cash at closing"
+        },
+        {
+          "tag": "Clearwater · Flood Damage + Foreclosure Risk",
+          "title": "Extensive Mold, Facing Foreclosure Deadline",
+          "paragraphs": [
+            "A homeowner facing foreclosure after flood damage made traditional sale impossible — no lender would finance the purchase. The cash offer provided a clear exit before the auction date, eliminating the need to repair extensive mold and removing foreclosure from the equation."
+          ],
+          "statValue": "Before",
+          "statLabel": "foreclosure auction date — clean exit achieved"
+        },
+        {
+          "tag": "Tampa · Relocation · Storm Damage",
+          "title": "Out-of-State Relocation After Storm",
+          "paragraphs": [
+            "A couple needed to relocate for work but their storm-damaged home was unsellable through traditional channels. We provided a cash offer within 48 hours and closed before their move date — they relocated without leaving behind an unsold, damaged property."
+          ],
+          "statValue": "2 weeks",
+          "statLabel": "from first contact to relocation — complete"
+        }
+      ]
     }
   },
   {
@@ -1891,94 +3088,111 @@
       "titleTail": " in St Petersburg for cash.",
       "subheadline": "We buy houses for cash in St Petersburg in any condition — no repairs, no agent commissions, no hidden fees. Get a fair, no-obligation cash offer and close in as little as 7 days, on your schedule.",
       "formTitle": "Tell us about your home.",
-      "formIntro": "A local team of specialists — buying homes across Pinellas County at fair prices. No agents, no repairs, no surprises."
+      "formIntro": "Get a fair as-is cash offer within 24 hours.",
+      "authorRole": "By John Gardepe · Principal Buyer, We Buy St. Pete Houses, LLC",
+      "addressPlaceholder": "123 Main St, St. Petersburg, FL",
+      "checklist": [
+        "No repairs or renovations required",
+        "No real estate agent commissions",
+        "Close in as little as 7 days",
+        "No showings or open houses",
+        "Fair, transparent cash offers"
+      ],
+      "breadcrumbTrail": [
+        {
+          "label": "St. Petersburg",
+          "href": "/we-buy-houses-st-petersburg-fl"
+        }
+      ]
     },
     "stats": [
       {
         "value": "24",
-        "suffix": "hrs",
-        "label": "Cash offer in your hands"
+        "suffix": "hr",
+        "label": "Offer Turnaround"
       },
       {
         "value": "7",
-        "suffix": "days",
-        "label": "Fastest close possible"
+        "label": "Days to Close"
       },
       {
         "prefix": "$",
         "value": "0",
-        "label": "Fees or commissions"
+        "label": "Fees or Commissions"
       },
       {
-        "value": "500",
-        "suffix": "+",
-        "label": "Homes bought across St Pete"
+        "value": "Any",
+        "label": "Condition Accepted"
       }
     ],
     "sectionOrder": [
       "stats",
       "process",
-      "cards",
-      "prose",
+      "prosCons",
+      "whyUs",
+      "trust",
       "areas",
       "resources",
       "faq",
       "finalCta"
     ],
     "process": {
-      "eyebrow": "How It Works",
-      "titleLead": "How our ",
-      "titleEm": "cash offer",
-      "titleTail": " process works.",
-      "lede": "Our quick steps: No bidding wars, no repair headaches, no complex listings — certain results you can count on.",
+      "eyebrow": "The Cash Sale Process",
+      "titleLead": "How the St Pete ",
+      "titleEm": "cash sale",
+      "titleTail": " works.",
+      "lede": "Straightforward from first call to closing — no complicated paperwork, no drawn-out negotiations, no waiting on buyer financing.",
       "steps": [
         {
           "num": "01",
-          "title": "Tell us about the home",
-          "body": "Share your property details via our form or by phone. We listen to your specific situation first."
+          "title": "Contact us for a no-obligation chat",
+          "body": "Tell us about your property and your timeline. We'll discuss your situation, answer every question, and explain exactly how the process works — with no pressure to move forward."
         },
         {
           "num": "02",
-          "title": "We visit, in person",
-          "body": "A local team member schedules a walkthrough at a time that's convenient for you. No hassle."
+          "title": "Receive a cash offer quickly",
+          "body": "We evaluate your home and present a fair, written cash offer — typically within 24–48 hours of your inquiry. Our offers are based on local market conditions and property details, with nothing hidden."
         },
         {
           "num": "03",
-          "title": "Receive a written offer",
-          "body": "We present a fair, no-obligation cash offer with transparent terms — no hidden fees, ever."
+          "title": "Accept and set your closing timeline",
+          "body": "If you accept our offer, you choose the closing date that works best for you — as soon as 7 days or weeks later. You're in control of the schedule."
         },
         {
           "num": "04",
-          "title": "Close on your timeline",
-          "body": "You choose the closing date. We handle the paperwork. You get cash at closing."
+          "title": "Close with no repairs required",
+          "body": "We buy homes in any condition. You don't need to fix, clean, or stage anything before closing. Leave behind what you don't want and we handle the rest."
+        },
+        {
+          "num": "05",
+          "title": "Move out and complete the sale",
+          "body": "On closing day, you hand over the keys and receive your cash. We coordinate with the title company and handle the details so you can move forward with confidence."
         }
-      ]
+      ],
+      "primaryCta": "Start the process today"
     },
     "areas": {
       "eyebrow": "Service Area",
-      "titleLead": "Across ",
-      "titleEm": "St. Petersburg",
-      "titleTail": " and Tampa Bay.",
-      "lede": "We focus on the neighborhoods we know personally — streets we've bought houses on for over a decade.",
-      "areas": [
-        "St Petersburg",
-        "Clearwater",
-        "Gulfport",
-        "Largo",
-        "Pinellas Park",
-        "Palm Harbor",
-        "Tampa",
-        "Dunedin",
-        "New Port Richey",
-        "Pasco County"
-      ]
+      "titleLead": "Areas we ",
+      "titleEm": "serve.",
+      "titleTail": "",
+      "lede": "We buy houses for cash throughout St Petersburg and the Greater Tampa Bay area. If your property is in the region, we can help.",
+      "areasAside": {
+        "title": "Ready to skip the repairs and move on?",
+        "body": "Call or message us now. A local St Pete team member responds within 24 hours with a no-obligation cash offer."
+      },
+      "areasNote": "Contact us to confirm we serve your specific area. If you're in the Tampa Bay region, there's a good chance we can help."
     },
     "faq": {
-      "eyebrow": "Common Questions",
-      "titleLead": "Frequently asked questions about ",
-      "titleEm": "selling as-is",
+      "eyebrow": "FAQ",
+      "titleLead": "Frequently asked questions about selling ",
+      "titleEm": "as is",
       "titleTail": " in St Petersburg.",
       "items": [
+        {
+          "q": "Is it worth selling my house as is?",
+          "a": "Yes — selling as-is can save time and avoid repairs, especially if your goal is a quick, certain cash sale. If you need to move fast, don't want to invest in renovations, or simply want a straightforward transaction, selling as-is makes strong sense."
+        },
         {
           "q": "Is it worth getting a cash offer for my house?",
           "a": "Yes — cash offers provide speed and certainty with fewer repair requirements. You avoid the risk of buyer financing falling through and can close on your own timeline without waiting months for a traditional deal to settle."
@@ -2018,11 +3232,210 @@
       ]
     },
     "finalCta": {
-      "eyebrow": "Ready to sell?",
+      "eyebrow": "Ready to Sell As-Is?",
       "titleLead": "Get your ",
-      "titleEm": "no-obligation",
+      "titleEm": "as-is",
       "titleTail": " cash offer today.",
-      "description": "We buy houses for cash in St Petersburg in any condition — no repairs, no agent commissions, no hidden fees. Get a fair, no-obligation cash offer and close in as little as 7 days, on your schedule."
+      "description": "We buy houses in St Petersburg in any condition — no repairs, no commissions, no hassle. Submit your details for a no-obligation offer in 24 hours.",
+      "bullets": [
+        "(727) 477-8998",
+        "SellFast@WeBuyStPeteHouses.com",
+        "St. Petersburg, FL — We're Local"
+      ]
+    },
+    "resources": {
+      "eyebrow": "Helpful Offices",
+      "titleLead": "Local resources for ",
+      "titleEm": "St Pete sellers.",
+      "titleTail": "",
+      "lede": "Whether you need property records, tax guidance, or legal support, these local offices can help you navigate your sale with confidence.",
+      "items": [
+        {
+          "tag": "City",
+          "title": "St. Petersburg City Hall",
+          "body": "General city services, permits, code enforcement, and municipal records for your St. Pete property.",
+          "note": "One 4th St N, St. Petersburg, FL 33701"
+        },
+        {
+          "tag": "County",
+          "title": "Pinellas County Government Center",
+          "body": "County records, administrative services, and general support for Pinellas County homeowners and sellers.",
+          "note": "315 Court St, Clearwater, FL 33756"
+        },
+        {
+          "tag": "Tax",
+          "title": "Pinellas County Tax Collector",
+          "body": "Property tax information, payment history, tax certificates, and related filings for your Pinellas property.",
+          "note": "pinellastaxcollector.org"
+        },
+        {
+          "tag": "State",
+          "title": "Florida Dept of Revenue — Pinellas",
+          "body": "State tax guidance, documentary stamp information, and filings related to Florida real estate transactions.",
+          "note": "floridarevenue.com"
+        }
+      ],
+      "footerNote": "For legal or financial advice specific to your situation, consult a qualified attorney or tax professional familiar with Florida real estate transactions."
+    },
+    "prosCons": {
+      "light": true,
+      "eyebrow": "Making the Right Decision",
+      "titleLead": "Pros and cons of selling ",
+      "titleEm": "for cash",
+      "titleTail": " in St Pete.",
+      "lede": "Cash sales offer speed and certainty, but may result in offers below full market value. Understanding both sides helps you make the right decision for your situation.",
+      "advantages": [
+        {
+          "strong": "Speed",
+          "text": "Close in days, not months — no waiting on lender approvals or inspection timelines."
+        },
+        {
+          "strong": "Certainty",
+          "text": "No buyer financing contingencies or appraisal issues that can derail the sale."
+        },
+        {
+          "strong": "No repairs",
+          "text": "Sell in any condition without investing in costly renovations you may never recoup."
+        },
+        {
+          "strong": "No commissions",
+          "text": "Avoid the typical 5–6% agent fees deducted from your proceeds."
+        },
+        {
+          "strong": "Flexibility",
+          "text": "You choose your closing date and timeline."
+        },
+        {
+          "strong": "Privacy",
+          "text": "No showings or strangers walking through your home."
+        }
+      ],
+      "tradeoffs": [
+        {
+          "strong": "Potentially lower offers",
+          "text": "Cash buyers account for repair costs and holding expenses, so offers may come in below full retail value. The trade-off is certainty and speed."
+        },
+        {
+          "strong": "Due diligence matters",
+          "text": "It's important to verify a buyer's legitimacy, financial capability, and local track record before signing anything. Always review contracts with an attorney."
+        }
+      ],
+      "footerNote": "Bottom line: A cash sale isn't right for everyone. If your priority is speed, simplicity, and certainty over maximizing every dollar, it's often the smartest path forward.",
+      "when": {
+        "titleLead": "When a ",
+        "titleEm": "cash sale",
+        "titleTail": " makes sense.",
+        "lede": "Cash sales work especially well in specific situations where speed, simplicity, or a difficult property condition make traditional listing impractical.",
+        "items": [
+          {
+            "icon": "🏦",
+            "title": "Foreclosure",
+            "body": "Act quickly to avoid credit damage and move forward."
+          },
+          {
+            "icon": "🏛️",
+            "title": "Probate / Inherited",
+            "body": "Simplify the estate process with a clean cash transaction."
+          },
+          {
+            "icon": "🚚",
+            "title": "Relocation",
+            "body": "Move on your timeline without listing delays holding you back."
+          },
+          {
+            "icon": "🔑",
+            "title": "Tired Landlord",
+            "body": "Exit rental property headaches quickly, even with tenants."
+          },
+          {
+            "icon": "🔨",
+            "title": "Major Repairs Needed",
+            "body": "Avoid costly renovations — we buy damaged property as-is."
+          },
+          {
+            "icon": "⚖️",
+            "title": "Divorce / Hardship",
+            "body": "Get a fast, certain resolution when timing is critical."
+          }
+        ]
+      }
+    },
+    "whyUs": {
+      "grid": true,
+      "eyebrow": "Our Approach",
+      "titleLead": "Why choose a ",
+      "titleEm": "cash sale",
+      "titleTail": " in St Pete.",
+      "lede": "Cash sales eliminate the variables that derail traditional transactions — and our local knowledge means competitive offers tailored to St Petersburg's market.",
+      "items": [
+        {
+          "icon": "📅",
+          "title": "Predictable timeline",
+          "body": "You know exactly when you'll close and receive your funds. No waiting on lender schedules, no last-minute rescheduling."
+        },
+        {
+          "icon": "🗺️",
+          "title": "Local market knowledge",
+          "body": "We understand St Petersburg neighborhoods, property values, and what drives buyer interest — from Old Northeast to Kenwood and the waterfront."
+        },
+        {
+          "icon": "🤝",
+          "title": "Seller-focused support",
+          "body": "We work around your needs, not ours. If you need more time before closing or have a complicated situation, we'll accommodate you."
+        },
+        {
+          "icon": "💵",
+          "title": "No hidden costs",
+          "body": "What we offer is what you receive, minus standard closing costs. No deductions, no last-minute fees, no surprise adjustments."
+        }
+      ]
+    },
+    "trust": {
+      "eyebrow": "Local Expertise",
+      "titleLead": "Your trustworthy ",
+      "titleEm": "St Pete",
+      "titleTail": " buyer.",
+      "lede": "We're not a national franchise or out-of-state investor — we're local, accessible, and genuinely invested in this community. Our team understands the nuances of St Petersburg properties, from historic bungalows to waterfront condos.",
+      "points": [
+        {
+          "title": "Community involvement",
+          "body": "We're part of the St Pete community, not just passing through. We've been buying homes here for years and intend to keep doing so."
+        },
+        {
+          "title": "Responsive local team",
+          "body": "Reach us by phone, email, or in person. You speak directly with a decision-maker, not a call center."
+        },
+        {
+          "title": "Trusted local partners",
+          "body": "We work with vetted local title companies, attorneys, and contractors — the same professionals St Pete sellers rely on."
+        },
+        {
+          "title": "Transparent process",
+          "body": "We explain every step and answer every question. No surprises, no pressure, no fine print designed to confuse."
+        }
+      ],
+      "card": {
+        "title": "We know St Pete — and we're here to help.",
+        "body": "When you work with a local buyer, you get genuine accountability, accessibility, and an offer based on real knowledge of your neighborhood — not an algorithm."
+      },
+      "stats": [
+        {
+          "value": "500+",
+          "label": "Homes purchased"
+        },
+        {
+          "value": "7 days",
+          "label": "Fastest close"
+        },
+        {
+          "value": "$0",
+          "label": "Fees charged"
+        },
+        {
+          "value": "Local",
+          "label": "St Pete based"
+        }
+      ]
     }
   },
   {
@@ -2037,8 +3450,10 @@
       "titleEm": "As Is",
       "titleTail": " in Florida for Cash",
       "subheadline": "No repairs. No showings. No agent commissions. We buy houses in St. Pete and across Florida as-is for cash — closing in as little as 7 days. You sell the home exactly as it stands and move on with certainty.",
-      "formTitle": "Tell us about your home.",
-      "formIntro": "A local team of specialists — buying homes across Pinellas County at fair prices. No agents, no repairs, no surprises."
+      "formTitle": "Get your cash offer today.",
+      "formIntro": "Tell us about your property. We'll have a no-obligation cash offer in your hands within 24 hours — no repairs, no pressure.",
+      "authorRole": "Local Founder · We Buy St Pete Houses · Pinellas County",
+      "addressPlaceholder": "123 Main St, St Petersburg FL"
     },
     "stats": [
       {
@@ -2054,71 +3469,83 @@
       {
         "prefix": "$",
         "value": "0",
-        "label": "Fees or commissions"
+        "label": "Commissions or repairs"
       },
       {
         "value": "500",
         "suffix": "+",
-        "label": "Homes bought across St Pete"
+        "label": "Homes purchased in St Pete"
       }
     ],
     "sectionOrder": [
       "stats",
-      "process",
-      "cards",
       "prose",
+      "environmental",
+      "comparison",
+      "prosCons",
+      "process",
+      "market",
+      "cards",
       "areas",
       "resources",
       "faq",
       "finalCta"
     ],
     "process": {
-      "eyebrow": "How It Works",
-      "titleLead": "How our ",
-      "titleEm": "cash offer",
-      "titleTail": " process works.",
-      "lede": "Our quick steps: No bidding wars, no repair headaches, no complex listings — certain results you can count on.",
+      "eyebrow": "Step-by-Step",
+      "titleLead": "Steps to Sell Your Florida House ",
+      "titleEm": "As-Is for Cash",
+      "titleTail": "",
+      "lede": "Selling as-is for cash follows a straightforward 7-step process. You know the buyer, the price, and the timeline upfront — no surprises.",
       "steps": [
         {
           "num": "01",
-          "title": "Tell us about the home",
-          "body": "Share your property details via our form or by phone. We listen to your specific situation first."
+          "title": "Initial Contact",
+          "body": "Reach out by phone, email, or our website. Share basic details about your property and situation — condition, timeline, any special circumstances."
         },
         {
           "num": "02",
-          "title": "We visit, in person",
-          "body": "A local team member schedules a walkthrough at a time that's convenient for you. No hassle."
+          "title": "Receive a Cash Offer",
+          "body": "We evaluate your home and present a fair cash offer within 24 hours. No obligation to accept — just a clear, honest number based on local market data."
         },
         {
           "num": "03",
-          "title": "Receive a written offer",
-          "body": "We present a fair, no-obligation cash offer with transparent terms — no hidden fees, ever."
+          "title": "Review and Accept",
+          "body": "If the offer works for you, we move forward. If not, no pressure. We never use high-pressure tactics or expire your offer to force a decision."
         },
         {
           "num": "04",
-          "title": "Close on your timeline",
-          "body": "You choose the closing date. We handle the paperwork. You get cash at closing."
+          "title": "Sign the As-Is Contract",
+          "body": "We use a standard Florida as-is contract (FAR/BAR forms). We walk through each term with you so you understand exactly what you're agreeing to before you sign."
+        },
+        {
+          "num": "05",
+          "title": "Prepare for Closing",
+          "body": "We coordinate with a local title company to handle all paperwork and title work. You choose your closing date — we work around your schedule."
+        },
+        {
+          "num": "06",
+          "title": "Move Out on Your Schedule",
+          "body": "Take the time you need to vacate. Need to move immediately? Or need a few extra weeks? We work with your situation, not against it."
+        },
+        {
+          "num": "07",
+          "title": "Close and Get Paid",
+          "body": "At closing, you sign the final documents and receive your payment. The entire process takes as little as 7 days from offer to close — and you walk away with certainty."
         }
-      ]
+      ],
+      "primaryCta": "Start with a free offer"
     },
     "areas": {
       "eyebrow": "Service Area",
-      "titleLead": "Across ",
-      "titleEm": "St. Petersburg",
-      "titleTail": " and Tampa Bay.",
-      "lede": "We focus on the neighborhoods we know personally — streets we've bought houses on for over a decade.",
-      "areas": [
-        "St Petersburg",
-        "Clearwater",
-        "Gulfport",
-        "Largo",
-        "Pinellas Park",
-        "Palm Harbor",
-        "Tampa",
-        "Dunedin",
-        "New Port Richey",
-        "Pasco County"
-      ]
+      "titleLead": "Areas We Serve in St. Petersburg and ",
+      "titleEm": "Greater Tampa Bay",
+      "titleTail": "",
+      "lede": "We buy houses for cash throughout St. Petersburg and the surrounding region — offering local expertise and fast closings no matter where your property is located.",
+      "areasAside": {
+        "title": "Ready to skip the repairs and move on?",
+        "body": "Call or message us now. A local St Pete team member responds within 24 hours with a no-obligation cash offer."
+      }
     },
     "faq": {
       "eyebrow": "Common Questions",
@@ -2178,10 +3605,233 @@
     },
     "finalCta": {
       "eyebrow": "Ready to sell?",
-      "titleLead": "Get your ",
-      "titleEm": "no-obligation",
-      "titleTail": " cash offer today.",
-      "description": "No repairs. No showings. No agent commissions. We buy houses in St. Pete and across Florida as-is for cash — closing in as little as 7 days. You sell the home exactly as it stands and move on with certainty."
+      "titleLead": "Skip the repairs. ",
+      "titleEm": "Get your offer today.",
+      "titleTail": "",
+      "description": "Sell your Florida house as-is for cash — no repairs, no commissions, no uncertainty. Close in as little as 7 days on your timeline."
+    },
+    "cards": {
+      "eyebrow": "Neighborhood-Level Data",
+      "titleLead": "Neighborhood-Level Market Insights for ",
+      "titleEm": "St. Pete Sellers",
+      "titleTail": "",
+      "lede": "Neighborhood-specific trends significantly influence cash offers. We track these factors to ensure our offers reflect current local realities — not statewide averages.",
+      "items": [
+        {
+          "icon": "Coastal",
+          "title": "St. Pete Beach, Gulfport, Coquina Key",
+          "body": "High buyer demand, proximity to water, and lifestyle appeal drive stronger cash offers in waterfront-adjacent neighborhoods."
+        },
+        {
+          "icon": "Urban",
+          "title": "Downtown St. Pete, Edge District",
+          "body": "New development, walkability, and proximity to restaurants and arts drive strong investor interest. Higher offers for urban properties."
+        },
+        {
+          "icon": "Suburban",
+          "title": "Largo, Pinellas Park, Palm Harbor",
+          "body": "School ratings and neighborhood stability matter. Properties in strong school districts see higher demand even in as-is condition."
+        },
+        {
+          "icon": "Value",
+          "title": "Lealman, Disston Heights, Bayway Isles",
+          "body": "Value-focused neighborhoods where investor activity is high. Lower offers may reflect market dynamics — we still buy in any area."
+        }
+      ]
+    },
+    "prose": {
+      "eyebrow": "What As-Is Really Means",
+      "titleLead": "What Does Selling a House ",
+      "titleEm": "As-Is in Florida",
+      "titleTail": " Mean?",
+      "lede": "Selling as-is in Florida means accepting a cash offer based on your property's current condition — no fixing leaks, no painting walls, no replacing broken appliances. You sell the home exactly as it stands.",
+      "paragraphs": [
+        "Unlike traditional listings that demand repairs, showings, and months of waiting, an as-is cash sale lets you move forward quickly. There are no agent commissions, no contingencies, and no uncertainty about whether a buyer's financing will fall through.",
+        "For homeowners in St. Petersburg and the Greater Tampa Bay area, this approach removes the stress of preparing a home for market. Whether you're facing foreclosure, managing an inherited property, relocating for work, or dealing with a problem tenant, selling as-is offers a direct, certain path.",
+        "The St. Pete market moves quickly for cash buyers. Local demand, neighborhood dynamics, and the condition of your property all influence your offer — but the process remains the same: contact us, receive a fair cash offer, and close on your timeline."
+      ],
+      "sidebar": {
+        "title": "What \"As-Is\" Means in Practice",
+        "items": [
+          {
+            "strong": "No repairs required",
+            "text": " — we buy in any condition including fire damage, water damage, or code violations."
+          },
+          {
+            "strong": "No staging or showings",
+            "text": " — one walkthrough from us, then we get out of your way."
+          },
+          {
+            "strong": "No financing contingencies",
+            "text": " — cash buyers don't need bank approval. The deal won't collapse at the last minute."
+          },
+          {
+            "strong": "You choose the closing date",
+            "text": " — as fast as 7 days or as flexible as you need."
+          },
+          {
+            "strong": "Disclosures still required",
+            "text": " — Florida law requires you to disclose known defects. We guide you through exactly what must be shared."
+          }
+        ]
+      }
+    },
+    "resources": {
+      "eyebrow": "Local Resources",
+      "titleLead": "Local Resources for ",
+      "titleEm": "St. Petersburg Homeowners",
+      "titleTail": "",
+      "lede": "If you're selling a home in St. Petersburg, these local offices can help with records, valuations, and tax information.",
+      "items": [
+        {
+          "tag": "City",
+          "title": "City Hall — St. Petersburg",
+          "body": "General city services, local ordinances, and property information for properties within St. Petersburg city limits."
+        },
+        {
+          "tag": "Court Records",
+          "title": "Clerk of the Circuit Court — Pinellas County",
+          "body": "Official records including deeds, liens, and title-related documents. Essential for confirming clear title before closing."
+        },
+        {
+          "tag": "Valuation",
+          "title": "Property Appraiser — Pinellas County",
+          "body": "Property valuations and tax assessments. Useful for understanding your property's assessed value relative to market conditions."
+        },
+        {
+          "tag": "Tax",
+          "title": "Tax Collector — Pinellas County",
+          "body": "Property tax payments, outstanding balances, and tax records. Confirm any tax obligations before closing on your property sale."
+        }
+      ]
+    },
+    "environmental": {
+      "eyebrow": "Florida Legal Framework",
+      "titleLead": "Florida Legal Requirements for ",
+      "titleEm": "As-Is Sales",
+      "titleTail": "",
+      "lede": "Florida law requires specific disclosures even in as-is cash sales. These obligations protect both parties and ensure a transparent transaction. We walk you through each one before you sign anything.",
+      "items": [
+        {
+          "title": "Disclosure Obligations",
+          "body": "Even selling as-is, you must disclose known issues — structural problems, roof leaks, plumbing or electrical issues, environmental hazards, and lead paint (for homes built before 1978). Failing to disclose material defects creates post-close liability. We guide you through exactly what must be shared and provide the documentation you need."
+        },
+        {
+          "title": "The Florida As-Is Contract",
+          "body": "Florida's standard as-is contract — using the FAR/BAR forms — states the property is sold in its current condition. The buyer accepts the home without requiring repairs. This contract protects you from repair obligations while clearly outlining the terms. We explain each clause before you sign so there are no surprises at closing."
+        },
+        {
+          "title": "Move-Out & HOA Considerations",
+          "body": "Move-out timelines are flexible in cash sales — we work with your schedule. If your property is part of a homeowners association, you must disclose HOA fees, rules, and any pending violations before closing. We help you navigate these details to ensure a smooth, compliant transaction from start to finish."
+        }
+      ]
+    },
+    "comparison": {
+      "eyebrow": "Your Options",
+      "titleLead": "Your Options When Selling a ",
+      "titleEm": "Florida Home As-Is",
+      "titleTail": "",
+      "lede": "Understanding each path helps you choose the one that fits your situation. Here's how they compare side by side.",
+      "traditionalLabel": "Traditional Listing with Repairs",
+      "traditionalTimeline": "30–60+ days",
+      "cashLabel": "We Buy St Pete Houses — Cash",
+      "cashTimeline": "as little as 7 days",
+      "featuredBadge": "Best for as-is sellers",
+      "rows": [
+        {
+          "label": "Repairs needed",
+          "traditional": "Often required",
+          "cash": "None — any condition"
+        },
+        {
+          "label": "Showings",
+          "traditional": "Multiple, ongoing",
+          "cash": "One walkthrough"
+        },
+        {
+          "label": "Closing timeline",
+          "traditional": "30–60+ days",
+          "cash": "As fast as 7 days"
+        },
+        {
+          "label": "Agent commission",
+          "traditional": "5–6% of price",
+          "cash": "$0 — none"
+        },
+        {
+          "label": "Financing risk",
+          "traditional": "Deal can fall through",
+          "cash": "Zero — cash purchase"
+        },
+        {
+          "label": "HOA & lien resolution",
+          "traditional": "You manage it",
+          "cash": "We coordinate it"
+        }
+      ]
+    },
+    "prosCons": {
+      "eyebrow": "Honest Trade-Offs",
+      "titleLead": "Pros and Cons of Selling ",
+      "titleEm": "As-Is to a Cash Buyer",
+      "titleTail": "",
+      "lede": "We'll be direct about the trade-offs. The right choice depends on your priorities — here's exactly what you're getting and what you're giving up.",
+      "advantages": [
+        {
+          "strong": "Speed",
+          "text": "— close in as little as 7 days, not months of waiting."
+        },
+        {
+          "strong": "Simplicity",
+          "text": "— no repairs, no staging, no open houses, no buyer negotiations."
+        },
+        {
+          "strong": "No agent fees",
+          "text": "— avoid the typical 5–6% real estate commission on your sale price."
+        },
+        {
+          "strong": "Certainty",
+          "text": "— no financing contingencies mean the deal won't collapse at the last minute."
+        },
+        {
+          "strong": "Flexibility",
+          "text": "— we work around your move-out timeline, not the market's."
+        }
+      ],
+      "tradeoffs": [
+        {
+          "strong": "Potentially lower sale price",
+          "text": "— cash offers typically run below full retail market value, reflecting the speed and convenience you gain."
+        },
+        {
+          "strong": "Less price negotiation",
+          "text": "— the offer reflects current market conditions and repair costs; there's less back-and-forth than with a traditional buyer."
+        }
+      ],
+      "footerNote": "For most stressed or time-pressured sellers in Florida, the speed and simplicity of a cash sale outweigh the price difference. If maximizing price is your only goal and you have time and money for repairs, a traditional listing may suit you better."
+    },
+    "market": {
+      "eyebrow": "Local Market Intelligence",
+      "titleLead": "How the St. Pete and Tampa Bay Market ",
+      "titleEm": "Affects Cash Offers",
+      "titleTail": "",
+      "lede": "Local market conditions directly influence as-is cash offers. Understanding these dynamics helps you set realistic expectations and recognize a fair offer when you see one.",
+      "showChart": false,
+      "showLocal": false,
+      "factors": [
+        {
+          "title": "Strong Buyer Interest in St. Pete",
+          "body": "Demand remains strong with buyers attracted to waterfront access, urban amenities, and steady job growth. Competitive neighborhoods see faster offers for cash buyers purchasing as-is properties."
+        },
+        {
+          "title": "Location Shapes the Offer",
+          "body": "A home in a sought-after St. Pete neighborhood commands a higher cash offer than a similar property elsewhere. We evaluate location as carefully as condition when pricing your property."
+        },
+        {
+          "title": "Repair Costs Factor In Honestly",
+          "body": "Cash buyers evaluate repair costs and resale potential. Properties needing significant work receive offers reflecting those costs — but we buy in any condition, unlike traditional buyers."
+        }
+      ]
     }
   },
   {
@@ -2191,41 +3841,50 @@
     "metaTitle": "Cash Home Buyers St Petersburg | We Buy St Pete Houses",
     "metaDescription": "Sell your St Petersburg home fast for cash. No fees, no repairs, close in as little as 7 days. Get a fair cash offer from We Buy St Pete Houses today.",
     "hero": {
-      "eyebrow": "",
+      "eyebrow": "St. Petersburg, Florida · Cash Home Buyers",
       "titleLead": "Cash home buyers in ",
       "titleEm": "St. Petersburg",
       "titleTail": " — fast, fair offers with no fees.",
-      "subheadline": "",
+      "subheadline": "We buy houses for cash in St. Petersburg with a fast, no-repair process and a quick close. No real estate agent commissions. No hidden fees. No repairs needed.",
       "formTitle": "Tell us about your home.",
-      "formIntro": "A local team of specialists — buying homes across Pinellas County at fair prices. No agents, no repairs, no surprises."
+      "formIntro": "Get your fair cash offer — no obligation, no hassle.",
+      "authorRole": "We Buy St Pete Houses · PO Box 143, St Petersburg FL 33731",
+      "addressPlaceholder": "123 Central Ave, St Petersburg FL 33701",
+      "trustPills": [
+        "Close in 7 days",
+        "Zero commissions",
+        "Any condition",
+        "Local team"
+      ]
     },
     "stats": [
       {
-        "value": "24",
-        "suffix": "hrs",
-        "label": "Cash offer in your hands"
-      },
-      {
         "value": "7",
-        "suffix": "days",
-        "label": "Fastest close possible"
+        "suffix": " days",
+        "label": "Fastest Close"
       },
       {
         "prefix": "$",
         "value": "0",
-        "label": "Fees or commissions"
+        "label": "Fees or Commissions"
+      },
+      {
+        "value": "Any",
+        "label": "Condition Accepted"
       },
       {
         "value": "500",
         "suffix": "+",
-        "label": "Homes bought across St Pete"
+        "label": "Homes Purchased"
       }
     ],
     "sectionOrder": [
       "stats",
+      "prose",
       "process",
       "comparison",
       "areas",
+      "cards",
       "testimonials",
       "market",
       "guarantee",
@@ -2235,106 +3894,318 @@
     ],
     "process": {
       "eyebrow": "How It Works",
-      "titleLead": "How our ",
-      "titleEm": "cash offer",
-      "titleTail": " process works.",
-      "lede": "Our quick steps: No bidding wars, no repair headaches, no complex listings — certain results you can count on.",
+      "titleLead": "Sell your St. Pete home for cash in ",
+      "titleEm": "3 simple steps.",
+      "titleTail": "",
+      "lede": "Submit your property details, receive a cash offer, and close quickly if you accept. Our process is designed for speed, simplicity, and certainty.",
       "steps": [
         {
           "num": "01",
-          "title": "Tell us about the home",
-          "body": "Share your property details via our form or by phone. We listen to your specific situation first."
+          "title": "Submit Your Property Details",
+          "body": "Fill out our simple online form or give us a call at (727) 477-8998. We'll ask a few questions about your property — its condition, location, and your timeline. Takes less than 2 minutes."
         },
         {
           "num": "02",
-          "title": "We visit, in person",
-          "body": "A local team member schedules a walkthrough at a time that's convenient for you. No hassle."
+          "title": "Receive Your Cash Offer",
+          "body": "We review your information and present a fair, no-obligation cash offer. No pressure to accept — we're happy to answer every question you have before you decide."
         },
         {
           "num": "03",
-          "title": "Receive a written offer",
-          "body": "We present a fair, no-obligation cash offer with transparent terms — no hidden fees, ever."
-        },
-        {
-          "num": "04",
-          "title": "Close on your timeline",
-          "body": "You choose the closing date. We handle the paperwork. You get cash at closing."
+          "title": "Close on Your Schedule",
+          "body": "If you accept, we can close in as little as 7 days — or on whatever timeline works best for you. No fees. No commissions. Just a straightforward, hassle-free sale."
         }
-      ]
+      ],
+      "primaryCta": "Start with a cash offer"
     },
     "areas": {
       "eyebrow": "Service Area",
-      "titleLead": "Across ",
+      "titleLead": "",
       "titleEm": "St. Petersburg",
-      "titleTail": " and Tampa Bay.",
-      "lede": "We focus on the neighborhoods we know personally — streets we've bought houses on for over a decade.",
-      "areas": [
-        "St Petersburg",
-        "Clearwater",
-        "Gulfport",
-        "Largo",
-        "Pinellas Park",
-        "Palm Harbor",
-        "Tampa",
-        "Dunedin",
-        "New Port Richey",
-        "Pasco County"
-      ]
+      "titleTail": " and all of Tampa Bay.",
+      "lede": "We buy houses in any condition across the Tampa Bay area. Whether your home is in a desirable neighborhood or needs significant work, we're ready to make you a fair offer."
     },
     "faq": {
-      "eyebrow": "Common Questions",
-      "titleLead": "Frequently asked questions about ",
-      "titleEm": "selling for cash",
-      "titleTail": " in St Petersburg.",
+      "eyebrow": "FAQs",
+      "titleLead": "Frequently asked questions about cash home buyers in ",
+      "titleEm": "St. Petersburg.",
+      "titleTail": "",
       "items": [
         {
-          "q": "Can I sell my home AS-IS to a cash buyer? +",
+          "q": "Can I sell my home AS-IS to a cash buyer?",
           "a": "Yes. We buy houses in any condition and pay cash, with no repairs needed. Whether your home needs major work or just minor updates, we'll make you a fair offer based on its current state."
         },
         {
-          "q": "How long does closing take with a cash buyer? +",
+          "q": "How long does closing take with a cash buyer?",
           "a": "We can close in as little as 7 days, depending on your situation. If you need more time, we're flexible — we work on your schedule."
         },
         {
-          "q": "Are there any fees or commissions when selling to cash buyers? +",
+          "q": "Are there any fees or commissions when selling to cash buyers?",
           "a": "No. There are no real estate commissions or hidden fees when selling to us. The cash offer we present is the amount you receive at closing."
         },
         {
-          "q": "What is a cash home buyer in St. Petersburg? +",
+          "q": "What is a cash home buyer in St. Petersburg?",
           "a": "A cash home buyer is a person or company that purchases real estate with available funds rather than requiring mortgage financing. This allows for faster closings, no contingencies, and the ability to buy properties in any condition — including as-is."
         },
         {
-          "q": "What is the typical process to sell to a cash buyer? +",
+          "q": "What is the typical process to sell to a cash buyer?",
           "a": "Submit your property details, receive a cash offer, and close quickly if you accept. Our three-step process is designed to be simple and transparent — contact us, receive your offer, and close on your schedule."
         },
         {
-          "q": "Do you buy inherited or probate properties? +",
+          "q": "Do you buy inherited or probate properties?",
           "a": "Yes, we consider inherited and probate properties. We understand these situations can be stressful and time-sensitive, and we're here to help you navigate the sale smoothly."
         },
         {
-          "q": "How do you determine the cash offer amount? +",
+          "q": "How do you determine the cash offer amount?",
           "a": "We base offers on your property's condition, local market data for your specific St. Petersburg neighborhood, and our straightforward business model. Each property is evaluated individually, and we walk you through our reasoning so you understand every factor."
         },
         {
-          "q": "Cash home buyers vs. traditional buyers — which is faster? +",
+          "q": "Cash home buyers vs. traditional buyers — which is faster?",
           "a": "Cash home buyers are significantly faster. Traditional buyer transactions typically take 30–60+ days due to mortgage approvals, appraisals, inspections, and negotiations. A cash sale can close in as little as 7 days with no financing contingencies and no repair negotiations."
         },
         {
-          "q": "Can I compare your offer to a traditional buyer before deciding? +",
+          "q": "Can I compare your offer to a traditional buyer before deciding?",
           "a": "Yes — we encourage it. Our offer is completely no-obligation, so you can take your time, compare your options, and decide what's best for you. We're confident our offer will be competitive when you factor in the savings on repairs, commissions, and holding costs."
         },
         {
-          "q": "Which areas do you serve near St. Petersburg? +",
+          "q": "Which areas do you serve near St. Petersburg?",
           "a": "We serve St. Petersburg and the broader Tampa Bay area, including Clearwater, Gulfport, Largo, Pinellas Park, Palm Harbor, Dunedin, Tampa, Sarasota, New Port Richey, Hudson, and surrounding communities."
         }
       ]
     },
     "finalCta": {
       "eyebrow": "Ready to sell?",
-      "titleLead": "Get your ",
-      "titleEm": "no-obligation",
-      "titleTail": " cash offer today.",
-      "description": ""
+      "titleLead": "Ready to sell your ",
+      "titleEm": "St. Pete home",
+      "titleTail": " for cash?",
+      "description": "Get your no-obligation cash offer today. No repairs, no fees, close in as little as 7 days — on your schedule.",
+      "bullets": [
+        "(727) 477-8998",
+        "SellFast@WeBuyStPeteHouses.com"
+      ]
+    },
+    "comparison": {
+      "eyebrow": "Cash Buyers vs. Traditional Buyers",
+      "titleLead": "What's the ",
+      "titleEm": "difference?",
+      "titleTail": "",
+      "lede": "Compared to traditional buyers, cash offers are faster, with fewer conditions and no commissions. Here's the full picture.",
+      "traditionalLabel": "Traditional Buyer",
+      "traditionalTimeline": "Typically 30–60+ days",
+      "cashLabel": "We Buy St Pete Houses",
+      "cashTimeline": "As little as 7 days",
+      "featuredBadge": "Local cash buyer",
+      "rows": [
+        {
+          "label": "Speed",
+          "traditional": "Typically 30–60+ days",
+          "cash": "Close in as little as 7 days"
+        },
+        {
+          "label": "Repairs",
+          "traditional": "Often required or negotiated",
+          "cash": "None — buy as-is"
+        },
+        {
+          "label": "Fees & Commissions",
+          "traditional": "5–6% agent commission + costs",
+          "cash": "$0"
+        },
+        {
+          "label": "Financing Contingency",
+          "traditional": "Subject to mortgage approval",
+          "cash": "None — all cash"
+        },
+        {
+          "label": "Appraisal Required",
+          "traditional": "Yes — can kill deals",
+          "cash": "No"
+        },
+        {
+          "label": "Certainty of Close",
+          "traditional": "Risk of deal falling through",
+          "cash": "Guaranteed"
+        },
+        {
+          "label": "Closing Date Control",
+          "traditional": "Buyer's timeline",
+          "cash": "You choose"
+        }
+      ]
+    },
+    "market": {
+      "eyebrow": "Market Insights",
+      "titleLead": "Why ",
+      "titleEm": "cash offers make sense",
+      "titleTail": " in St. Petersburg.",
+      "lede": "We ground every offer in verifiable local market data. Traditional sales in St. Petersburg often face friction that cash buyers eliminate entirely.",
+      "factors": [
+        {
+          "title": "Financing delays slow traditional sales",
+          "body": "Buyer mortgage approvals, appraisal gaps, and underwriting timelines can add months — or kill deals entirely. Cash removes all of it."
+        },
+        {
+          "title": "Repair negotiations eat your proceeds",
+          "body": "Traditional buyers request credits, repairs, or price reductions after inspection. We buy as-is — no negotiations, no uncertainty."
+        },
+        {
+          "title": "Agent commissions compound costs",
+          "body": "5–6% commissions plus closing costs typically take a significant bite out of proceeds. Our offers carry zero deductions."
+        },
+        {
+          "title": "Local comps drive every offer",
+          "body": "We analyze comparable sales in your specific St. Petersburg neighborhood — not city-wide averages — so every offer reflects real local data."
+        }
+      ],
+      "badgeValue": "St. Pete",
+      "badgeLabel": "Pinellas County · Tampa Bay",
+      "showChart": false,
+      "showLocal": false
+    },
+    "guarantee": {
+      "eyebrow": "Clear Terms",
+      "titleLead": "Clear terms. ",
+      "titleEm": "No surprises.",
+      "titleTail": "",
+      "lede": "The terms we commit to are exactly what you'll see at the closing table in St. Petersburg. Complete transparency from the first call to the final signature.",
+      "items": [
+        {
+          "title": "No commissions",
+          "body": "We never charge real estate commissions. Every dollar of your offer goes to you."
+        },
+        {
+          "title": "No repairs",
+          "body": "We buy as-is. Leave the property exactly as it is — we handle everything after closing."
+        },
+        {
+          "title": "No closing fees",
+          "body": "We cover typical closing costs. No surprise deductions at settlement day."
+        },
+        {
+          "title": "No financing contingencies",
+          "body": "All-cash offers mean no mortgage to fall through. Certainty from day one."
+        },
+        {
+          "title": "Transparent offer formula",
+          "body": "We walk through our pricing rationale — condition, comps, market factors — so you understand every number."
+        }
+      ],
+      "asideTitle": "Ready for your no-obligation offer?",
+      "asideBody": "Call (727) 477-8998, email SellFast@WeBuyStPeteHouses.com, or fill out our online form. We respond promptly and explain everything clearly."
+    },
+    "resources": {
+      "eyebrow": "Local Resources",
+      "titleLead": "Helpful local resources for ",
+      "titleEm": "St. Petersburg sellers.",
+      "titleTail": "",
+      "lede": "Whether you need property records, tax information, or official contacts, these offices help make your closing smooth and fast.",
+      "items": [
+        {
+          "tag": "City",
+          "title": "St. Petersburg City Hall",
+          "body": "General city services, permits, and municipal records for your St. Pete property.",
+          "note": "175 5th St N, St. Petersburg, FL 33701",
+          "phone": "(727) 893-7111"
+        },
+        {
+          "tag": "Clerk",
+          "title": "Pinellas County Clerk of Court",
+          "body": "Official records including deeds, liens, and title-related documents.",
+          "note": "315 Court St, Clearwater, FL 33756",
+          "phone": "(727) 464-7000"
+        },
+        {
+          "tag": "Tax",
+          "title": "Pinellas County Tax Collector",
+          "body": "Property tax information, payment history, and related filings.",
+          "href": "https://pinellascounty.org/taxcollector",
+          "linkLabel": "pinellascounty.org/taxcollector"
+        },
+        {
+          "tag": "Appraiser",
+          "title": "Pinellas County Property Appraiser",
+          "body": "Property valuations and ownership record cards for Pinellas County.",
+          "note": "315 Court St, Clearwater, FL 33756",
+          "phone": "(727) 464-3207"
+        }
+      ]
+    },
+    "prose": {
+      "eyebrow": "What Is a Cash Home Buyer?",
+      "titleLead": "A faster, simpler way to ",
+      "titleEm": "sell your home.",
+      "titleTail": "",
+      "lede": "A cash home buyer is someone who pays cash for your home — enabling faster, no-contingency closings. Unlike traditional buyers who rely on mortgage approvals, inspections, and lengthy bank processes, cash buyers close quickly and purchase properties in any condition.",
+      "paragraphs": [
+        "At We Buy St Pete Houses, we evaluate your property based on its current condition, local market data, and our straightforward process. You don't need to make repairs, stage the home, or wait months for a buyer. We handle the entire process so you can move forward without the stress."
+      ],
+      "sidebar": {
+        "title": "Why sellers choose cash",
+        "items": [
+          {
+            "strong": "No mortgage approvals needed",
+            "text": " — our offers are backed by real cash, not financing contingencies"
+          },
+          {
+            "strong": "No repairs or cleaning",
+            "text": " — we buy as-is in whatever condition your property is in today"
+          },
+          {
+            "strong": "No agent commissions",
+            "text": " — the offer you receive is exactly what you get at closing"
+          },
+          {
+            "strong": "Flexible timelines",
+            "text": " — close in as little as 7 days or on whatever schedule works for you"
+          },
+          {
+            "strong": "Local expertise",
+            "text": " — we know the St. Petersburg market and price accordingly"
+          },
+          {
+            "strong": "Clear communication",
+            "text": " — every step explained, no surprises at the table"
+          }
+        ]
+      }
+    },
+    "cards": {
+      "eyebrow": "Why Trust Us",
+      "titleLead": "Why trust ",
+      "titleEm": "We Buy St Pete Houses?",
+      "titleTail": "",
+      "lede": "We're local, transparent, and offer no-obligation cash offers. Here's what sets us apart from national franchises and distant buyers.",
+      "items": [
+        {
+          "icon": "📍",
+          "title": "Local Presence",
+          "body": "Based right here in St. Petersburg at PO Box 143, St Petersburg FL 33731. We're your neighbors — not a call center in another state."
+        },
+        {
+          "icon": "💰",
+          "title": "No Hidden Fees",
+          "body": "We never charge commissions or fees. What we offer is exactly what you get at closing — no deductions, no surprises."
+        },
+        {
+          "icon": "🏚️",
+          "title": "Sell As-Is",
+          "body": "No repairs, no cleaning, no staging. We buy houses in any condition — move-in ready or needing full renovation."
+        },
+        {
+          "icon": "💵",
+          "title": "Guaranteed Cash Offer",
+          "body": "Our offers are backed by real cash, not financing contingencies. The deal won't fall through because of a mortgage approval."
+        },
+        {
+          "icon": "📅",
+          "title": "Flexible Closings",
+          "body": "Close in as little as 7 days, or choose a timeline that works for your life. You're always in control of the closing date."
+        },
+        {
+          "icon": "💬",
+          "title": "Clear Communication",
+          "body": "Call (727) 477-8998 or email SellFast@WeBuyStPeteHouses.com — we answer questions promptly and explain every step."
+        }
+      ]
     }
   }
 ]

@@ -11,7 +11,7 @@ export function SituationPageContent({ content }: Props) {
     <div className="situation-page">
       <SituationHeroSection breadcrumb={content.breadcrumb} hero={content.hero} />
 
-      {content.hero.keySteps ? (
+      {content.hero.keySteps && !content.process?.keySteps ? (
         <section className="situation-key-steps" aria-label="What to do right now">
           <div className="wrap">
             <h2>{content.hero.keySteps.title}</h2>

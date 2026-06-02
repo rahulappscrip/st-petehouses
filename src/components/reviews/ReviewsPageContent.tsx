@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
-import { TestimonialsSection } from "@/components/shared/TestimonialsSection";
+import { ReviewsSection } from "@/components/home/ReviewsSection";
 import { HOME_TESTIMONIALS } from "@/lib/constants";
 import { FaqSection } from "@/components/home/FaqSection";
 import { FinalCtaSection } from "@/components/home/FinalCtaSection";
@@ -76,7 +76,7 @@ export function ReviewsPageContent() {
         </div>
       </section>
 
-      <TestimonialsSection />
+      <ReviewsSection />
 
       <section className="section section-alt">
         <div className="wrap">
