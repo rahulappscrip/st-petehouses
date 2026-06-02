@@ -328,7 +328,15 @@ export function HowItWorksContent() {
                 We operate openly in St. Petersburg and Tampa Bay with a public track record of
                 successful closings.
               </p>
-              <ImagePlaceholder tone="teal" label="[IMAGE: trust-signals]" />
+              <figure className="hiw-inline-image">
+                <Image
+                  src="/assets/images/HIW-Image-5.webp"
+                  alt="Trust signals for verifying legitimate cash home buyers"
+                  fill
+                  sizes="(max-width: 980px) 100vw, 900px"
+                  className="hiw-inline-image__img"
+                />
+              </figure>
             </section>
 
             <section id="when-to-consider">
