@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { CityHeroSection } from "@/components/cities/CityHeroSection";
+import { HeroSection } from "@/components/home/HeroSection";
 import { CitySituationsSection } from "@/components/cities/CitySituationsSection";
 import { CityBenefitsSection } from "@/components/cities/CityBenefitsSection";
 import { CityAfterAcceptSection } from "@/components/cities/CityAfterAcceptSection";
@@ -286,30 +285,20 @@ function CityFullPageContent({ page, content }: Props & { content: CityFullConte
 
   return (
     <>
-      <nav className="city-breadcrumb" aria-label="Breadcrumb">
-        <div className="wrap">
-          <Link href="/">Home</Link>
-          <span aria-hidden>›</span>
-          <Link href="/#areas">Locations</Link>
-          <span aria-hidden>›</span>
-          <span>{page.cityName}, FL</span>
-        </div>
-      </nav>
-
-      <CityHeroSection
-        eyebrow={content.heroEyebrow}
-        title={
-          <>
-            {titleParts.lead}
-            <em>{titleParts.em}</em>
-            {titleParts.tail}
-          </>
-        }
-        subheadline={content.heroSubheadline}
-        formTitle={content.formTitle}
-        formIntro={content.formIntro}
-        cityName={page.cityName}
-        authorRole={content.authorRole}
+      <HeroSection
+        content={{
+          title: (
+            <>
+              {titleParts.lead}
+              <em>{titleParts.em}</em>
+              {titleParts.tail}
+            </>
+          ),
+          subheadline: content.heroSubheadline,
+          formTitle: content.formTitle,
+          formIntro: content.formIntro,
+          addressPlaceholder: `123 Main St, ${page.cityName}, FL`,
+        }}
       />
 
       <StatsSection />
