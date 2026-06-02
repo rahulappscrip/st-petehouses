@@ -55,6 +55,12 @@
   box-shadow: var(--shadow-2);
 }
 
+.sit-card--static {
+  cursor: default;
+  text-decoration: none;
+  color: inherit;
+}
+
 .sit-card__media {
   position: relative;
   aspect-ratio: 3 / 2;

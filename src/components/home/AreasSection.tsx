@@ -13,9 +13,9 @@ type AreasSectionProps = {
   listHeading?: string;
   mapCity?: string;
   featuredCityHref?: string;
-  /** Plain city names (situation pages); falls back to linked AREA_CITIES when omitted. */
-  areaNames?: string[];
   areasNote?: string;
+  areasNoteLink?: { href: string; label: string };
+  areasNoteAfter?: string;
   areasAside?: { title: string; body: string };
   showMap?: boolean;
 };
@@ -31,8 +31,9 @@ export function AreasSection({
   listHeading = "Service area — cities",
   mapCity,
   featuredCityHref,
-  areaNames,
   areasNote,
+  areasNoteLink,
+  areasNoteAfter,
   areasAside,
   showMap = true,
 }: AreasSectionProps = {}) {
@@ -47,26 +48,27 @@ export function AreasSection({
           <Reveal d={1} className="areas-aside">
             <h3>{listHeading}</h3>
             <ul className="area-list">
-              {areaNames
-                ? areaNames.map((name) => <li key={name}>{name}</li>)
-                : AREA_CITIES.map((city) => (
-                    <li
-                      key={city.href}
-                      className={
-                        featuredCityHref
-                          ? city.href === featuredCityHref
-                            ? "featured"
-                            : undefined
-                          : "featured" in city && city.featured
-                            ? "featured"
-                            : undefined
-                      }
-                    >
-                      <Link href={city.href}>{city.label}</Link>
-                    </li>
-                  ))}
+              {AREA_CITIES.map((city) => (
+                <li
+                  key={city.href}
+                  className={featuredCityHref && city.href === featuredCityHref ? "featured" : undefined}
+                >
+                  <Link href={city.href}>{city.label}</Link>
+                </li>
+              ))}
             </ul>
-            {areasNote ? <p className="areas-note">{areasNote}</p> : null}
+            {areasNote ? (
+              <p className="areas-note">
+                {areasNote}
+                {areasNoteLink ? (
+                  <>
+                    {" "}
+                    <Link href={areasNoteLink.href}>{areasNoteLink.label}</Link>
+                  </>
+                ) : null}
+                {areasNoteAfter ?? null}
+              </p>
+            ) : null}
             {areasAside ? (
               <div className="situation-areas-aside-cta">
                 <h3>{areasAside.title}</h3>
@@ -80,11 +82,9 @@ export function AreasSection({
                 </Link>
               </div>
             ) : null}
-            {areaNames ? null : (
-              <Link href="/#areas" className="btn btn--link" style={{ marginTop: 18 }}>
-                All service areas →
-              </Link>
-            )}
+            <Link href="/#areas" className="btn btn--link" style={{ marginTop: 18 }}>
+              All service areas →
+            </Link>
           </Reveal>
         </div>
       </div>

@@ -114,22 +114,6 @@ export const CASH_HOME_BUYERS_CONTENT = {
     titleTail: " and all of Tampa Bay.",
     lede:
       "We buy houses in any condition across the Tampa Bay area. Whether your home is in a desirable neighborhood or needs significant work, we're ready to make you a fair offer.",
-    areas: [
-      "St. Petersburg",
-      "Clearwater",
-      "Gulfport",
-      "Largo",
-      "Pinellas Park",
-      "Palm Harbor",
-      "Dunedin",
-      "Tampa",
-      "Manatee",
-      "Palmetto",
-      "Sarasota",
-      "Hudson",
-      "New Port Richey",
-      "And surrounding areas",
-    ],
   },
   cards: {
     eyebrow: "Why Trust Us",
@@ -248,7 +232,7 @@ export const CASH_HOME_BUYERS_CONTENT = {
         tag: "Tax",
         title: "Pinellas County Tax Collector",
         body: "Property tax information, payment history, and related filings.",
-        href: "https://www.pinellascounty.org/taxcollector",
+        href: "https://pinellascounty.org/taxcollector",
         linkLabel: "pinellascounty.org/taxcollector",
       },
       {

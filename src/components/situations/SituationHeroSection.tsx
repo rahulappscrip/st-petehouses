@@ -17,6 +17,12 @@ export function SituationHeroSection({ breadcrumb, hero }: Props) {
       <nav className="city-breadcrumb" aria-label="Breadcrumb">
         <div className="wrap">
           <Link href="/">Home</Link>
+          {hero.breadcrumbTrail?.map((crumb) => (
+            <span key={crumb.href}>
+              <span aria-hidden>›</span>
+              <Link href={crumb.href}>{crumb.label}</Link>
+            </span>
+          ))}
           <span aria-hidden>›</span>
           <span>{breadcrumb}</span>
         </div>

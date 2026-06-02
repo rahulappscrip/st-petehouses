@@ -415,6 +415,20 @@
   color: var(--ink-2);
 }
 
+.areas-note a,
+.situation-inline-link,
+.faq-a a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.areas-note a:hover,
+.situation-inline-link:hover,
+.faq-a a:hover {
+  text-decoration: underline;
+}
+
 .situation-key-steps {
   padding-block: clamp(32px, 4vw, 48px);
   background: var(--paper);
@@ -522,10 +536,17 @@
   color: var(--ink);
 }
 
+.situation-info-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(28px, 4vw, 40px);
+}
+
 .situation-info-split {
   display: grid;
   gap: clamp(32px, 4vw, 56px);
   grid-template-columns: 1fr;
+  align-items: start;
 }
 
 @media (min-width: 900px) {
@@ -534,18 +555,42 @@
   }
 }
 
-.situation-info-split h2 {
-  font-size: var(--h3-size);
-  font-weight: 600;
-  color: var(--ink);
-  margin-bottom: 12px;
+.situation-info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-width: 0;
 }
 
-.situation-info-split p {
+/* h2.h-3 was inheriting large h2 typography and overlapping body copy */
+.situation-info-block h2 {
+  font-family: var(--sans);
+  font-size: clamp(20px, 2.1vw, 24px);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0 0 14px;
+}
+
+.situation-info-block > p,
+.situation-info-block__footer {
   font-size: 15px;
   line-height: 1.65;
   color: var(--ink-2);
-  margin-top: 10px;
+  margin: 0 0 12px;
+}
+
+.situation-info-callout {
+  width: 100%;
+}
+
+.situation-info-callout__card {
+  margin-top: 0;
+}
+
+.situation-info-callout__card .btn {
+  margin-top: 16px;
 }
 
 .situation-info-list {
@@ -1119,66 +1164,91 @@
 /* Inherited page — buy process, probate, tax, valuation */
 .situation-buy-grid {
   display: grid;
-  gap: clamp(32px, 4vw, 48px);
+  gap: clamp(40px, 5vw, 60px);
   grid-template-columns: 1fr;
   align-items: start;
 }
 
 @media (min-width: 960px) {
   .situation-buy-grid {
-    grid-template-columns: 1.05fr 0.95fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .situation-buy-grid > .situation-buy-features,
+  .situation-buy-grid > .situation-buy-steps {
+    align-self: start;
+    margin: 0;
   }
 }
 
 .situation-buy-features {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 0;
+  min-width: 0;
 }
 
 .situation-buy-feature {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 14px;
+  gap: 14px 18px;
   align-items: start;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.situation-buy-feature:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.situation-buy-feature:first-child {
+  padding-top: 0;
 }
 
 .situation-buy-feature__icon {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 10px;
   background: var(--sand);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 18px;
+  flex-shrink: 0;
 }
 
 .situation-buy-feature h3 {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
+  line-height: 1.25;
   color: var(--ink);
-  margin-bottom: 6px;
+  margin: 0 0 6px;
 }
 
 .situation-buy-feature p {
-  font-size: 14.5px;
+  font-size: 14px;
   line-height: 1.6;
   color: var(--ink-2);
+  margin: 0;
 }
 
 .situation-buy-steps {
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: var(--radius-l);
-  padding: clamp(20px, 2.5vw, 28px);
+  padding: 0 clamp(24px, 3vw, 32px) clamp(24px, 3vw, 32px);
+  margin: 0;
+  min-width: 0;
 }
 
 .situation-buy-steps__title {
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 600;
+  line-height: 1.25;
   color: var(--ink);
-  margin-bottom: 18px;
+  margin: 0;
+  padding: clamp(24px, 3vw, 32px) 0 24px;
 }
 
 .situation-buy-steps ol {
@@ -1187,13 +1257,25 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 0;
 }
 
 .situation-buy-steps li {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 12px;
+  gap: 12px 16px;
+  align-items: start;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.situation-buy-steps li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.situation-buy-steps li:first-child {
+  padding-top: 0;
 }
 
 .situation-buy-steps__num {

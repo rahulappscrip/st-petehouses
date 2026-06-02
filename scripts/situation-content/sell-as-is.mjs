@@ -26,6 +26,7 @@ export const SELL_AS_IS_CONTENT = {
     formIntro: "Get a fair as-is cash offer within 24 hours.",
     authorRole: "By John Gardepe · Principal Buyer, We Buy St. Pete Houses, LLC",
     addressPlaceholder: "123 Main St, St. Petersburg, FL",
+    breadcrumbTrail: [{ label: "St. Petersburg", href: "/we-buy-houses-st-petersburg-fl" }],
     checklist: [
       "No repairs or renovations required",
       "No real estate agent commissions",
@@ -194,22 +195,6 @@ export const SELL_AS_IS_CONTENT = {
     titleTail: "",
     lede:
       "We buy houses for cash throughout St Petersburg and the Greater Tampa Bay area. If your property is in the region, we can help.",
-    areas: [
-      "St Petersburg",
-      "Clearwater",
-      "Gulfport",
-      "Largo",
-      "Pinellas Park",
-      "Palm Harbor",
-      "Dunedin",
-      "Tampa",
-      "Manatee",
-      "Palmetto",
-      "Sarasota",
-      "Pasco",
-      "Hudson",
-      "New Port Richey",
-    ],
     areasNote: "Contact us to confirm we serve your specific area. If you're in the Tampa Bay region, there's a good chance we can help.",
   },
   resources: {

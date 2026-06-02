@@ -6,19 +6,28 @@ export type SituationStat = {
   sub?: string;
 };
 
+export type SituationInlineLink = {
+  href: string;
+  label: string;
+};
+
 export type SituationStep = {
   num: string;
   title: string;
   body: string;
+  link?: SituationInlineLink;
 };
 
 export type SituationCard = {
   icon?: string;
   title: string;
   body: string;
+  image?: string;
+  imageAlt?: string;
+  href?: string;
 };
 
-export type SituationFaqItem = { q: string; a: string };
+export type SituationFaqItem = { q: string; a: string; aLink?: SituationInlineLink };
 
 export type SituationCompareRow = {
   label: string;
@@ -56,6 +65,8 @@ export type SituationHero = {
   trustPills?: string[];
   urgencyBadge?: string;
   keySteps?: { title: string; items: string[] };
+  /** Optional middle crumb, e.g. city page before the situation label. */
+  breadcrumbTrail?: SituationInlineLink[];
 };
 
 export type SituationTitleParts = {
@@ -144,6 +155,7 @@ export type SituationFullContent = {
     keySteps?: { title: string; items: string[] };
     docs?: string[];
     disclosureNote?: string;
+    secondaryCta?: SituationInlineLink;
   };
   courtProcess?: SituationCourtProcess;
   buyProcess?: SituationTitleParts & {
@@ -207,11 +219,17 @@ export type SituationFullContent = {
   };
   cards?: SituationTitleParts & { items: SituationCard[]; exclusionNote?: string };
   areas?: SituationTitleParts & {
-    areas: string[];
     areasNote?: string;
+    areasNoteLink?: SituationInlineLink;
+    areasNoteAfter?: string;
     areasAside?: { title: string; body: string };
   };
-  situations?: SituationTitleParts & { items: SituationCard[]; dark?: boolean };
+  situations?: SituationTitleParts & {
+    items: SituationCard[];
+    dark?: boolean;
+    /** Use homepage-style image cards (sit-cards) instead of icon grid. */
+    imageCards?: boolean;
+  };
   market?: SituationTitleParts & {
     factors: { title: string; body: string; label?: string }[];
     badgeValue?: string;

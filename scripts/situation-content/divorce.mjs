@@ -257,22 +257,6 @@ export const DIVORCE_CONTENT = {
     titleTail: "",
     lede:
       "Whether you're in a coastal neighborhood or an inland community, we provide fast, fair cash offers tailored to your local market.",
-    areas: [
-      "St. Petersburg",
-      "Clearwater",
-      "Gulfport",
-      "Largo",
-      "Pinellas Park",
-      "Palm Harbor",
-      "Tampa",
-      "Manatee",
-      "Palmetto",
-      "Sarasota",
-      "Hudson",
-      "New Port Richey",
-      "Dunedin",
-      "Pasco County",
-    ],
   },
   resources: {
     eyebrow: "Local Resources",

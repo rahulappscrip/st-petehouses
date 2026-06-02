@@ -33,11 +33,6 @@ const DEFAULT_PROCESS_STEPS = [
   { num: "04", title: "Close on your timeline", body: "You choose the closing date. We handle the paperwork. You get cash at closing." },
 ];
 
-const AREA_LIST = [
-  "St Petersburg", "Clearwater", "Gulfport", "Largo", "Pinellas Park",
-  "Palm Harbor", "Tampa", "Dunedin", "New Port Richey", "Pasco County",
-];
-
 const SLUG_META = {
   foreclosure: {
     label: "Foreclosure",
@@ -160,7 +155,6 @@ function buildPage(slug, data) {
       titleEm: "St. Petersburg",
       titleTail: " and Tampa Bay.",
       lede: "We focus on the neighborhoods we know personally — streets we've bought houses on for over a decade.",
-      areas: AREA_LIST,
     },
     faq: {
       eyebrow: "Common Questions",

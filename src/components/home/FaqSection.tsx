@@ -1,9 +1,10 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
+import { FaqAccordionList } from "@/components/home/FaqAccordionList";
 import { SectionHead } from "@/components/ui/SectionHead";
 import { FAQ_ITEMS } from "@/lib/constants";
 
-type FaqItem = { q: string; a: string };
+type FaqItem = { q: string; a: string; aLink?: { href: string; label: string } };
 
 type FaqSectionProps = {
   items?: readonly FaqItem[];
@@ -35,23 +36,7 @@ export function FaqSection({
       <div className="wrap" style={{ maxWidth: 920 }}>
         <SectionHead eyebrow={eyebrow} title={title} />
 
-        <div className="faq-list">
-          {items.map((item, i) => (
-            <details key={item.q} className="faq-item" open={i === 0}>
-              <summary className="faq-q">
-                {item.q}
-                <span className="plus" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
-                    <path d="M12 5v14M5 12h14" />
-                  </svg>
-                </span>
-              </summary>
-              <div className="faq-a">
-                <p>{item.a}</p>
-              </div>
-            </details>
-          ))}
-        </div>
+        <FaqAccordionList items={items} />
 
         {showFullLink ? (
           <div style={{ marginTop: 22 }}>

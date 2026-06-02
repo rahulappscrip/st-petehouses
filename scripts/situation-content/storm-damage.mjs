@@ -272,16 +272,6 @@ export const STORM_DAMAGE_CONTENT = {
     titleEm: "We Serve",
     titleTail: "",
     lede: "We buy storm-damaged homes throughout St. Petersburg and the Greater Tampa Bay area — with local market knowledge that ensures accurate, competitive offers for every neighborhood.",
-    areas: [
-      "St. Petersburg — our home base",
-      "Clearwater — Pinellas coastal",
-      "Tampa — Greater Tampa metro",
-      "Gulfport, Largo, Pinellas Park",
-      "Palm Harbor, Dunedin",
-      "Manatee, Palmetto, Sarasota",
-      "Pasco, Hudson, New Port Richey",
-      "Surrounding Tampa Bay areas",
-    ],
     areasAside: {
       title: "Not sure if we serve your area?",
       body: "Reach out anyway. We're often able to work with homeowners in adjacent counties or special circumstances.",

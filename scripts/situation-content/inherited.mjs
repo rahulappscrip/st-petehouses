@@ -70,11 +70,13 @@ export const INHERITED_CONTENT = {
         num: "1",
         title: "Contact us with property details",
         body: "Call (727) 477-8998, email, or submit our online form. Share the property address and your probate status.",
+        link: { label: "Contact us today →", href: "/contact" },
       },
       {
         num: "2",
         title: "Property review and fair cash offer",
         body: "We evaluate the property's condition and local market. You receive a written, no-obligation cash offer with transparent terms.",
+        link: { label: "How our process works →", href: "/how-it-works" },
       },
       {
         num: "3",
@@ -217,18 +219,6 @@ export const INHERITED_CONTENT = {
     titleTail: "",
     lede:
       "Our local focus means we understand the neighborhoods, market conditions, and specific challenges of inherited properties in this region.",
-    areas: [
-      "St. Petersburg",
-      "Clearwater",
-      "Largo",
-      "Palm Harbor",
-      "Pinellas Park",
-      "Dunedin",
-      "Safety Harbor",
-      "Tampa",
-      "Gulfport",
-      "And surrounding areas",
-    ],
   },
   faq: {
     eyebrow: "FAQ",

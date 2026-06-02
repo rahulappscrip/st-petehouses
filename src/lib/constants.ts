@@ -339,6 +339,16 @@ export const SELLER_SITUATIONS = [
   },
 ] as const;
 
+/** Homepage sit-card photos for situation-page cards (copy stays on the page; images only). */
+export const SITUATION_CARD_HOME_IMAGES: Record<string, { image: string; imageAlt: string }> = {
+  Foreclosure: { image: ASSETS.facingForeclosure, imageAlt: SELLER_SITUATIONS[0].imageAlt },
+  Divorce: { image: ASSETS.divorceSeparation, imageAlt: SELLER_SITUATIONS[2].imageAlt },
+  "Inherited / Probate": { image: ASSETS.inheritedHome, imageAlt: SELLER_SITUATIONS[1].imageAlt },
+  "Tired Landlords": { image: ASSETS.tiredLandlord, imageAlt: SELLER_SITUATIONS[3].imageAlt },
+  Relocation: { image: ASSETS.relocation, imageAlt: SELLER_SITUATIONS[5].imageAlt },
+  "Upside-Down Mortgages": { image: ASSETS.distressedProperty, imageAlt: SELLER_SITUATIONS[4].imageAlt },
+};
+
 /** @deprecated Use SELLER_SITUATIONS */
 export const SELL_HOUSE_SITUATIONS = SELLER_SITUATIONS;
 

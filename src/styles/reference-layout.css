@@ -374,26 +374,12 @@ h3 em,
   transform: none;
 }
 .nav-links > li[data-open] > .menu:not(.menu-2col){ display: block; }
-
-/* Desktop: show dropdowns on hover / keyboard focus (disabled briefly after navigation) */
-@media (min-width: 980px) {
-  .nav-links:not([data-suppress-hover]) > li[data-menu]:hover > .menu:not(.menu-2col),
-  .nav-links:not([data-suppress-hover]) > li[data-menu]:focus-within > .menu:not(.menu-2col){
-    display: block;
-  }
-  .nav-links:not([data-suppress-hover]) > li[data-menu]:hover > .menu.menu-2col,
-  .nav-links:not([data-suppress-hover]) > li[data-menu]:focus-within > .menu.menu-2col{
-    display: grid;
-  }
-  .nav-links:not([data-suppress-hover]) > li[data-menu]:hover > button,
-  .nav-links:not([data-suppress-hover]) > li[data-menu]:focus-within > button{
-    background: color-mix(in oklab, var(--ink) 6%, transparent);
-    color: var(--ink);
-  }
-  .nav-links:not([data-suppress-hover]) > li[data-menu]:hover .caret,
-  .nav-links:not([data-suppress-hover]) > li[data-menu]:focus-within .caret{
-    transform: rotate(180deg);
-  }
+.nav-links > li[data-open] > button{
+  background: color-mix(in oklab, var(--ink) 6%, transparent);
+  color: var(--ink);
+}
+.nav-links > li[data-open] .caret{
+  transform: rotate(180deg);
 }
 
 @media (min-width: 980px) {

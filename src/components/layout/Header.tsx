@@ -129,7 +129,7 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
-  const [suppressHover, setSuppressHover] = useState(false);
+  const closeMenuTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -138,7 +138,33 @@ export function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const closeMenus = useCallback(() => setOpenMenu(null), []);
+  const clearCloseMenuTimer = useCallback(() => {
+    if (closeMenuTimerRef.current) {
+      clearTimeout(closeMenuTimerRef.current);
+      closeMenuTimerRef.current = null;
+    }
+  }, []);
+
+  const closeMenus = useCallback(() => {
+    clearCloseMenuTimer();
+    setOpenMenu(null);
+  }, [clearCloseMenuTimer]);
+
+  const openMenuNow = useCallback(
+    (id: string) => {
+      clearCloseMenuTimer();
+      setOpenMenu(id);
+    },
+    [clearCloseMenuTimer],
+  );
+
+  const scheduleCloseMenu = useCallback(() => {
+    clearCloseMenuTimer();
+    closeMenuTimerRef.current = setTimeout(() => {
+      setOpenMenu(null);
+      closeMenuTimerRef.current = null;
+    }, 80);
+  }, [clearCloseMenuTimer]);
 
   const closeDrawer = useCallback(() => setDrawerOpen(false), []);
 
@@ -147,16 +173,16 @@ export function Header() {
   }, []);
 
   const handleMenuNavigate = useCallback(() => {
-    setOpenMenu(null);
-    setSuppressHover(true);
+    closeMenus();
     setDrawerOpen(false);
-  }, []);
+  }, [closeMenus]);
 
   useEffect(() => {
-    setOpenMenu(null);
-    setSuppressHover(true);
+    closeMenus();
     setDrawerOpen(false);
-  }, [pathname]);
+  }, [pathname, closeMenus]);
+
+  useEffect(() => () => clearCloseMenuTimer(), [clearCloseMenuTimer]);
 
   useEffect(() => {
     document.body.classList.toggle("nav-drawer-open", drawerOpen);
@@ -217,6 +243,7 @@ export function Header() {
 
   const toggleMenu = (id: string, e: React.MouseEvent) => {
     e.stopPropagation();
+    clearCloseMenuTimer();
     setOpenMenu((prev) => (prev === id ? null : id));
   };
 
@@ -251,21 +278,25 @@ export function Header() {
           <ul
             className="nav-links"
             aria-label="Primary"
-            data-suppress-hover={suppressHover ? "" : undefined}
-            onMouseLeave={() => setSuppressHover(false)}
+            onMouseLeave={scheduleCloseMenu}
           >
             {NAV_LINKS.primary.map((link) => (
-              <li key={link.href}>
+              <li key={link.href} onMouseEnter={closeMenus}>
                 <Link href={link.href}>{link.label}</Link>
               </li>
             ))}
 
-            <li data-menu data-open={openMenu === "locations" ? "" : undefined}>
+            <li
+              data-menu
+              data-open={openMenu === "locations" ? "" : undefined}
+              onMouseEnter={() => openMenuNow("locations")}
+            >
               <button
                 type="button"
                 aria-haspopup="true"
                 aria-expanded={openMenu === "locations"}
                 onClick={(e) => toggleMenu("locations", e)}
+                onFocus={() => openMenuNow("locations")}
               >
                 Locations
                 <Caret />
@@ -294,12 +325,17 @@ export function Header() {
               </div>
             </li>
 
-            <li data-menu data-open={openMenu === "situations" ? "" : undefined}>
+            <li
+              data-menu
+              data-open={openMenu === "situations" ? "" : undefined}
+              onMouseEnter={() => openMenuNow("situations")}
+            >
               <button
                 type="button"
                 aria-haspopup="true"
                 aria-expanded={openMenu === "situations"}
                 onClick={(e) => toggleMenu("situations", e)}
+                onFocus={() => openMenuNow("situations")}
               >
                 Situations
                 <Caret />
@@ -318,12 +354,17 @@ export function Header() {
               </div>
             </li>
 
-            <li data-menu data-open={openMenu === "company" ? "" : undefined}>
+            <li
+              data-menu
+              data-open={openMenu === "company" ? "" : undefined}
+              onMouseEnter={() => openMenuNow("company")}
+            >
               <button
                 type="button"
                 aria-haspopup="true"
                 aria-expanded={openMenu === "company"}
                 onClick={(e) => toggleMenu("company", e)}
+                onFocus={() => openMenuNow("company")}
               >
                 Company
                 <Caret />

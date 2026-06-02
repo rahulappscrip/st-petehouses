@@ -12,7 +12,8 @@ import { MarketSection } from "@/components/home/MarketSection";
 import { GuaranteeSection } from "@/components/home/GuaranteeSection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { FinalCtaSection } from "@/components/home/FinalCtaSection";
-import { SITE } from "@/lib/constants";
+import { SellerSituationsSection } from "@/components/home/SellerSituationsSection";
+import { SITE, SITUATION_CARD_HOME_IMAGES } from "@/lib/constants";
 import type {
   SituationCourtProcess,
   SituationFullContent,
@@ -142,10 +143,10 @@ export function SituationBuyProcessSection({
           title={<SectionTitle lead={data.titleLead} em={data.titleEm} tail={data.titleTail} />}
           lede={data.lede}
         />
-        <div className="situation-buy-grid">
+        <Reveal className="situation-buy-grid">
           <div className="situation-buy-features">
-            {data.features.map((item, i) => (
-              <Reveal key={item.title} className="situation-buy-feature" d={i > 0 ? 1 : undefined}>
+            {data.features.map((item) => (
+              <div key={item.title} className="situation-buy-feature">
                 <span className="situation-buy-feature__icon" aria-hidden>
                   {item.icon ?? "✓"}
                 </span>
@@ -153,10 +154,10 @@ export function SituationBuyProcessSection({
                   <h3>{item.title}</h3>
                   <p>{item.body}</p>
                 </div>
-              </Reveal>
+              </div>
             ))}
           </div>
-          <Reveal d={1} className="situation-buy-steps">
+          <div className="situation-buy-steps">
             <h3 className="situation-buy-steps__title">{data.stepsTitle}</h3>
             <ol>
               {data.steps.map((step) => (
@@ -164,13 +165,23 @@ export function SituationBuyProcessSection({
                   <span className="situation-buy-steps__num">{step.num}</span>
                   <div>
                     <h4>{step.title}</h4>
-                    <p>{step.body}</p>
+                    <p>
+                      {step.body}
+                      {step.link ? (
+                        <>
+                          {" "}
+                          <Link href={step.link.href} className="situation-inline-link">
+                            {step.link.label}
+                          </Link>
+                        </>
+                      ) : null}
+                    </p>
                   </div>
                 </li>
               ))}
             </ol>
-          </Reveal>
-        </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
@@ -687,6 +698,42 @@ export function SituationProseSection({
   );
 }
 
+function SituationInfoBlockColumn({
+  block,
+  delay,
+}: {
+  block: NonNullable<SituationFullContent["infoBlocks"]>[number];
+  delay?: 1;
+}) {
+  return (
+    <Reveal d={delay} className="situation-info-block">
+      <h2>{block.title}</h2>
+      {block.body ? <p>{block.body}</p> : null}
+      {block.chapters ? (
+        <div className="situation-chapter-grid">
+          {block.chapters.map((ch) => (
+            <div key={ch.title} className="situation-chapter">
+              <h4>{ch.title}</h4>
+              <p>{ch.body}</p>
+            </div>
+          ))}
+        </div>
+      ) : null}
+      {block.list ? (
+        <ul className="situation-info-list">
+          {block.list.map((item) => (
+            <li key={item.title}>
+              <strong>{item.title}</strong>
+              <p>{item.body}</p>
+            </li>
+          ))}
+        </ul>
+      ) : null}
+      {block.footer ? <p className="situation-info-block__footer">{block.footer}</p> : null}
+    </Reveal>
+  );
+}
+
 export function SituationInfoBlocksSection({
   blocks,
   alt,
@@ -694,48 +741,28 @@ export function SituationInfoBlocksSection({
   blocks: NonNullable<SituationFullContent["infoBlocks"]>;
   alt?: boolean;
 }) {
+  const callout = blocks.find((block) => block.callout)?.callout;
+
   return (
     <section className={`section${alt ? " section-alt" : ""}`}>
-      <div className="wrap">
+      <div className="wrap situation-info-blocks">
         <div className="situation-info-split">
           {blocks.map((block, i) => (
-            <Reveal key={block.title} d={i > 0 ? 1 : undefined}>
-              <h2 className="h-3">{block.title}</h2>
-              {block.body ? <p>{block.body}</p> : null}
-              {block.chapters ? (
-                <div className="situation-chapter-grid">
-                  {block.chapters.map((ch) => (
-                    <div key={ch.title} className="situation-chapter">
-                      <h4>{ch.title}</h4>
-                      <p>{ch.body}</p>
-                    </div>
-                  ))}
-                </div>
-              ) : null}
-              {block.list ? (
-                <ul className="situation-info-list">
-                  {block.list.map((item) => (
-                    <li key={item.title}>
-                      <strong>{item.title}</strong>
-                      <p>{item.body}</p>
-                    </li>
-                  ))}
-                </ul>
-              ) : null}
-              {block.footer ? <p>{block.footer}</p> : null}
-              {block.callout ? (
-                <div className="situation-info-card" style={{ marginTop: 20 }}>
-                  <h3>{block.callout.title}</h3>
-                  <p>{block.callout.body}</p>
-                  <Link href="#offer" className="btn btn--cta" style={{ marginTop: 16 }}>
-                    Get a cash offer
-                    <Arr />
-                  </Link>
-                </div>
-              ) : null}
-            </Reveal>
+            <SituationInfoBlockColumn key={block.title} block={block} delay={i > 0 ? 1 : undefined} />
           ))}
         </div>
+        {callout ? (
+          <Reveal className="situation-info-callout">
+            <div className="situation-info-card situation-info-callout__card">
+              <h3>{callout.title}</h3>
+              <p>{callout.body}</p>
+              <Link href="#offer" className="btn btn--cta">
+                Get a cash offer
+                <Arr />
+              </Link>
+            </div>
+          </Reveal>
+        ) : null}
       </div>
     </section>
   );
@@ -1065,7 +1092,12 @@ export function renderSituationSection(
           disclosureNote={content.process.disclosureNote}
           showStepMeta={false}
           primaryCta={{ label: content.process.primaryCta ?? "Start with a free offer", href: "#offer" }}
-          secondaryCta={{ label: `Call ${SITE.phone}`, href: SITE.phoneHref }}
+          secondaryCta={
+            content.process.secondaryCta ?? {
+              label: `Call ${SITE.phone}`,
+              href: SITE.phoneHref,
+            }
+          }
         />
       ) : null;
 
@@ -1134,8 +1166,9 @@ export function renderSituationSection(
           eyebrow={content.areas.eyebrow}
           title={titleToParts(content.areas)}
           lede={content.areas.lede}
-          areaNames={content.areas.areas}
           areasNote={content.areas.areasNote}
+          areasNoteLink={content.areas.areasNoteLink}
+          areasNoteAfter={content.areas.areasNoteAfter}
           areasAside={content.areas.areasAside}
         />
       ) : null;
@@ -1147,6 +1180,25 @@ export function renderSituationSection(
       return content.situations ? (
         content.situations.dark ? (
           <SituationForestSituationsSection key={id} data={content.situations} />
+        ) : content.situations.imageCards ? (
+          <SellerSituationsSection
+            key={id}
+            className={alt ? "section-alt" : ""}
+            eyebrow={content.situations.eyebrow}
+            title={titleToParts(content.situations)}
+            lede={content.situations.lede ?? ""}
+            linkable={false}
+            items={content.situations.items.map((item) => {
+              const photo = SITUATION_CARD_HOME_IMAGES[item.title];
+              return {
+                title: item.title,
+                body: item.body,
+                href: "#offer",
+                image: photo?.image ?? item.image ?? "",
+                imageAlt: photo?.imageAlt ?? item.imageAlt ?? item.title,
+              };
+            })}
+          />
         ) : (
           <CitySituationsSection
             key={id}
@@ -1180,7 +1232,7 @@ export function renderSituationSection(
               body: f.body,
             }))}
             showChart={content.market.showChart !== false}
-            showLocal={content.market.showLocal !== false}
+            showLocal={content.market.showLocal === true}
             badgeValue={content.market.badgeValue}
             badgeLabel={content.market.badgeLabel}
           />

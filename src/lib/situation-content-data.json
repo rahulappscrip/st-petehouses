@@ -48,8 +48,8 @@
       "guarantee",
       "comparison",
       "infoBlocks",
-      "faq",
       "diff",
+      "faq",
       "finalCta"
     ],
     "process": {
@@ -96,23 +96,7 @@
       "titleLead": "Across ",
       "titleEm": "St. Petersburg",
       "titleTail": " and Tampa Bay.",
-      "lede": "We focus on the neighborhoods we know personally — the streets we live in, raise families in, and have bought houses in for over a decade.",
-      "areas": [
-        "St Petersburg",
-        "Clearwater",
-        "Gulfport",
-        "Largo",
-        "Pinellas Park",
-        "Palm Harbor",
-        "Tampa",
-        "Manatee",
-        "Palmetto",
-        "Sarasota",
-        "Hudson",
-        "New Port Richey",
-        "Dunedin",
-        "Pasco County"
-      ]
+      "lede": "We focus on the neighborhoods we know personally — the streets we live in, raise families in, and have bought houses in for over a decade."
     },
     "faq": {
       "eyebrow": "Common Questions",
@@ -202,7 +186,8 @@
           "title": "Upside-Down Mortgages",
           "body": "Properties where the loan balance exceeds market value, or burdened by liens and judgments."
         }
-      ]
+      ],
+      "imageCards": true
     },
     "market": {
       "eyebrow": "Local Market Context",
@@ -225,7 +210,8 @@
         }
       ],
       "badgeValue": "$380k",
-      "badgeLabel": "Avg. St Pete home value"
+      "badgeLabel": "Avg. St Pete home value",
+      "showLocal": false
     },
     "guarantee": {
       "eyebrow": "Our Commitment",
@@ -442,19 +428,7 @@
       "titleLead": "St Petersburg and the ",
       "titleEm": "Greater Tampa Bay area.",
       "titleTail": "",
-      "lede": "Our local focus means we understand the neighborhoods, market conditions, and specific challenges of inherited properties in this region.",
-      "areas": [
-        "St. Petersburg",
-        "Clearwater",
-        "Largo",
-        "Palm Harbor",
-        "Pinellas Park",
-        "Dunedin",
-        "Safety Harbor",
-        "Tampa",
-        "Gulfport",
-        "And surrounding areas"
-      ]
+      "lede": "Our local focus means we understand the neighborhoods, market conditions, and specific challenges of inherited properties in this region."
     },
     "faq": {
       "eyebrow": "FAQ",
@@ -496,7 +470,11 @@
         },
         {
           "q": "How do I start the process?",
-          "a": "Call us at (727) 477-8998 or fill out our online form to receive a free, no-obligation cash offer. We'll walk you through every step from your first call to closing. Reach out to our team →"
+          "a": "Call us at (727) 477-8998 or fill out our online form to receive a free, no-obligation cash offer. We'll walk you through every step from your first call to closing.",
+          "aLink": {
+            "label": "Reach out to our team →",
+            "href": "/contact"
+          }
         }
       ]
     },
@@ -615,12 +593,20 @@
         {
           "num": "1",
           "title": "Contact us with property details",
-          "body": "Call (727) 477-8998, email, or submit our online form. Share the property address and your probate status."
+          "body": "Call (727) 477-8998, email, or submit our online form. Share the property address and your probate status.",
+          "link": {
+            "label": "Contact us today →",
+            "href": "/contact"
+          }
         },
         {
           "num": "2",
           "title": "Property review and fair cash offer",
-          "body": "We evaluate the property's condition and local market. You receive a written, no-obligation cash offer with transparent terms."
+          "body": "We evaluate the property's condition and local market. You receive a written, no-obligation cash offer with transparent terms.",
+          "link": {
+            "label": "How our process works →",
+            "href": "/how-it-works"
+          }
         },
         {
           "num": "3",
@@ -870,23 +856,7 @@
       "titleLead": "Areas We Serve in St. Petersburg and ",
       "titleEm": "Tampa Bay",
       "titleTail": "",
-      "lede": "Whether you're in a coastal neighborhood or an inland community, we provide fast, fair cash offers tailored to your local market.",
-      "areas": [
-        "St. Petersburg",
-        "Clearwater",
-        "Gulfport",
-        "Largo",
-        "Pinellas Park",
-        "Palm Harbor",
-        "Tampa",
-        "Manatee",
-        "Palmetto",
-        "Sarasota",
-        "Hudson",
-        "New Port Richey",
-        "Dunedin",
-        "Pasco County"
-      ]
+      "lede": "Whether you're in a coastal neighborhood or an inland community, we provide fast, fair cash offers tailored to your local market."
     },
     "faq": {
       "eyebrow": "Common Questions",
@@ -1291,27 +1261,7 @@
       "titleLead": "Areas We Serve in St. Pete and ",
       "titleEm": "Greater Tampa Bay",
       "titleTail": "",
-      "lede": "We buy tenant-occupied rental properties throughout St. Petersburg and the Greater Tampa Bay area. No matter where your rental is located in our service area, we can provide a fast, fair cash offer.",
-      "areas": [
-        "St. Petersburg",
-        "Clearwater",
-        "Largo",
-        "Pinellas Park",
-        "Palm Harbor",
-        "Dunedin",
-        "Tarpon Springs",
-        "Safety Harbor",
-        "Oldsmar",
-        "Tampa",
-        "Gulfport",
-        "Manatee",
-        "Palmetto",
-        "Sarasota",
-        "Pasco",
-        "Hudson",
-        "New Port Richey",
-        "And surrounding areas"
-      ]
+      "lede": "We buy tenant-occupied rental properties throughout St. Petersburg and the Greater Tampa Bay area. No matter where your rental is located in our service area, we can provide a fast, fair cash offer."
     },
     "faq": {
       "eyebrow": "Common Questions",
@@ -1773,25 +1723,7 @@
       "titleLead": "Areas We Serve in ",
       "titleEm": "Florida",
       "titleTail": "",
-      "lede": "We serve St. Petersburg and the greater Tampa Bay area with fast, reliable cash closings — including hyper-local knowledge of lien processing norms and title workflows specific to each community.",
-      "areas": [
-        "St. Petersburg",
-        "Clearwater",
-        "Largo",
-        "Pinellas Park",
-        "Gulfport",
-        "Palm Harbor",
-        "Dunedin",
-        "Tampa",
-        "Palmetto",
-        "Sarasota",
-        "Manatee County",
-        "Pasco County",
-        "Hudson",
-        "Port Richey",
-        "New Port Richey",
-        "And surrounding areas"
-      ]
+      "lede": "We serve St. Petersburg and the greater Tampa Bay area with fast, reliable cash closings — including hyper-local knowledge of lien processing norms and title workflows specific to each community."
     },
     "faq": {
       "eyebrow": "Common Questions",
@@ -2126,19 +2058,6 @@
       "titleEm": "St Petersburg",
       "titleTail": "",
       "lede": "We buy houses across St Pete and the surrounding area. Our local focus means we know the flood zones, the neighborhood pricing dynamics, and the community landscape throughout Pinellas County.",
-      "areas": [
-        "St Petersburg proper",
-        "Shore Acres",
-        "Pinellas Point",
-        "Old Northeast",
-        "Clearwater",
-        "Gulfport",
-        "Largo",
-        "Pinellas Park",
-        "Palm Harbor",
-        "Dunedin",
-        "Surrounding Pinellas County neighborhoods"
-      ],
       "areasNote": "Not sure if your property is within our area? Reach out anyway — we often work with sellers in adjacent communities."
     },
     "faq": {
@@ -2497,7 +2416,11 @@
           "title": "Close on your timeline",
           "body": "You choose the closing date. We handle the paperwork. You get cash at closing."
         }
-      ]
+      ],
+      "secondaryCta": {
+        "label": "Learn more about our process",
+        "href": "/how-it-works"
+      }
     },
     "areas": {
       "eyebrow": "Service Area",
@@ -2505,18 +2428,12 @@
       "titleEm": "St. Petersburg",
       "titleTail": " and Tampa Bay.",
       "lede": "We focus on the neighborhoods we know personally — streets we've bought houses on for over a decade.",
-      "areas": [
-        "St Petersburg",
-        "Clearwater",
-        "Gulfport",
-        "Largo",
-        "Pinellas Park",
-        "Palm Harbor",
-        "Tampa",
-        "Dunedin",
-        "New Port Richey",
-        "Pasco County"
-      ]
+      "areasNote": "Not sure if your property is in our service area? ",
+      "areasNoteLink": {
+        "label": "Contact us to find out",
+        "href": "/contact"
+      },
+      "areasNoteAfter": " — we often work with homeowners in adjacent counties."
     },
     "faq": {
       "eyebrow": "Common Questions",
@@ -2845,16 +2762,6 @@
       "titleEm": "We Serve",
       "titleTail": "",
       "lede": "We buy storm-damaged homes throughout St. Petersburg and the Greater Tampa Bay area — with local market knowledge that ensures accurate, competitive offers for every neighborhood.",
-      "areas": [
-        "St. Petersburg — our home base",
-        "Clearwater — Pinellas coastal",
-        "Tampa — Greater Tampa metro",
-        "Gulfport, Largo, Pinellas Park",
-        "Palm Harbor, Dunedin",
-        "Manatee, Palmetto, Sarasota",
-        "Pasco, Hudson, New Port Richey",
-        "Surrounding Tampa Bay areas"
-      ],
       "areasAside": {
         "title": "Not sure if we serve your area?",
         "body": "Reach out anyway. We're often able to work with homeowners in adjacent counties or special circumstances."
@@ -3190,6 +3097,12 @@
         "Close in as little as 7 days",
         "No showings or open houses",
         "Fair, transparent cash offers"
+      ],
+      "breadcrumbTrail": [
+        {
+          "label": "St. Petersburg",
+          "href": "/we-buy-houses-st-petersburg-fl"
+        }
       ]
     },
     "stats": [
@@ -3264,22 +3177,6 @@
       "titleEm": "serve.",
       "titleTail": "",
       "lede": "We buy houses for cash throughout St Petersburg and the Greater Tampa Bay area. If your property is in the region, we can help.",
-      "areas": [
-        "St Petersburg",
-        "Clearwater",
-        "Gulfport",
-        "Largo",
-        "Pinellas Park",
-        "Palm Harbor",
-        "Dunedin",
-        "Tampa",
-        "Manatee",
-        "Palmetto",
-        "Sarasota",
-        "Pasco",
-        "Hudson",
-        "New Port Richey"
-      ],
       "areasAside": {
         "title": "Ready to skip the repairs and move on?",
         "body": "Call or message us now. A local St Pete team member responds within 24 hours with a no-obligation cash offer."
@@ -3645,24 +3542,6 @@
       "titleEm": "Greater Tampa Bay",
       "titleTail": "",
       "lede": "We buy houses for cash throughout St. Petersburg and the surrounding region — offering local expertise and fast closings no matter where your property is located.",
-      "areas": [
-        "St. Petersburg",
-        "Clearwater",
-        "Gulfport",
-        "Largo",
-        "Pinellas Park",
-        "Palm Harbor",
-        "Tampa",
-        "Manatee",
-        "Palmetto",
-        "Sarasota",
-        "Pasco",
-        "Hudson",
-        "New Port Richey",
-        "Dunedin",
-        "Hillsborough County",
-        "And surrounding areas"
-      ],
       "areasAside": {
         "title": "Ready to skip the repairs and move on?",
         "body": "Call or message us now. A local St Pete team member responds within 24 hours with a no-obligation cash offer."
@@ -4043,23 +3922,7 @@
       "titleLead": "",
       "titleEm": "St. Petersburg",
       "titleTail": " and all of Tampa Bay.",
-      "lede": "We buy houses in any condition across the Tampa Bay area. Whether your home is in a desirable neighborhood or needs significant work, we're ready to make you a fair offer.",
-      "areas": [
-        "St. Petersburg",
-        "Clearwater",
-        "Gulfport",
-        "Largo",
-        "Pinellas Park",
-        "Palm Harbor",
-        "Dunedin",
-        "Tampa",
-        "Manatee",
-        "Palmetto",
-        "Sarasota",
-        "Hudson",
-        "New Port Richey",
-        "And surrounding areas"
-      ]
+      "lede": "We buy houses in any condition across the Tampa Bay area. Whether your home is in a desirable neighborhood or needs significant work, we're ready to make you a fair offer."
     },
     "faq": {
       "eyebrow": "FAQs",
@@ -4254,7 +4117,7 @@
           "tag": "Tax",
           "title": "Pinellas County Tax Collector",
           "body": "Property tax information, payment history, and related filings.",
-          "href": "https://www.pinellascounty.org/taxcollector",
+          "href": "https://pinellascounty.org/taxcollector",
           "linkLabel": "pinellascounty.org/taxcollector"
         },
         {

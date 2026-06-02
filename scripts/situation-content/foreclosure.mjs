@@ -14,8 +14,8 @@ export const FORECLOSURE_CONTENT = {
     "guarantee",
     "comparison",
     "infoBlocks",
-    "faq",
     "diff",
+    "faq",
     "finalCta",
   ],
   hero: {
@@ -55,22 +55,6 @@ export const FORECLOSURE_CONTENT = {
     titleTail: " and Tampa Bay.",
     lede:
       "We focus on the neighborhoods we know personally — the streets we live in, raise families in, and have bought houses in for over a decade.",
-    areas: [
-      "St Petersburg",
-      "Clearwater",
-      "Gulfport",
-      "Largo",
-      "Pinellas Park",
-      "Palm Harbor",
-      "Tampa",
-      "Manatee",
-      "Palmetto",
-      "Sarasota",
-      "Hudson",
-      "New Port Richey",
-      "Dunedin",
-      "Pasco County",
-    ],
   },
   situations: {
     eyebrow: "Who We Help",
@@ -78,6 +62,7 @@ export const FORECLOSURE_CONTENT = {
     titleEm: "Stop Foreclosure?",
     titleTail: "",
     lede: "We buy houses in St Petersburg in any condition, including properties facing foreclosure, divorce, probate, or burdened by problem tenants.",
+    imageCards: true,
     items: [
       { icon: "📍", title: "Foreclosure", body: "Properties at any stage of foreclosure — from missed payments to an imminent sale date." },
       { icon: "👥", title: "Divorce", body: "Couples who need to liquidate a shared asset quickly and fairly, with minimal conflict." },
@@ -96,6 +81,7 @@ export const FORECLOSURE_CONTENT = {
       "St Pete is a sought-after market — its climate, small feel, and proximity to beaches draw 1,500 new residents monthly. But foreclosure is a real local challenge, affecting families across Pinellas County every year.",
     badgeValue: "$380k",
     badgeLabel: "Avg. St Pete home value",
+    showLocal: false,
     factors: [
       { title: "Block-level comps", body: "Our evaluations draw on Pinellas County tax data, MLS actives, and recent closed cash sales — not automated national averages." },
       { title: "Condition-tiered pricing", body: "We never apply one price regardless of state. We visit in person and price accordingly." },

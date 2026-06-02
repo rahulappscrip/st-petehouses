@@ -98,7 +98,6 @@ export type CityFullContent = {
     eyebrow: string;
     lede: string;
     sidebarIntro?: string;
-    areas: string[];
   };
   situations: SectionTitle & {
     eyebrow: string;
@@ -264,23 +263,6 @@ const ST_PETERSBURG: CityFullContent = {
     lede: "We focus on the neighborhoods we know personally — this lets us find truly fair, data-driven prices for homes across the region.",
     sidebarIntro:
       "We serve every neighborhood in St. Petersburg and the surrounding Greater Tampa Bay communities. Our local focus means we understand local values and can move quickly.",
-    areas: [
-      "St. Petersburg",
-      "Clearwater",
-      "Largo",
-      "Pinellas Park",
-      "Palm Harbor",
-      "Tampa",
-      "Dunedin",
-      "Gulfport",
-      "Dade City",
-      "Manatee",
-      "Palmetto",
-      "Sarasota",
-      "Pasco",
-      "Hudson",
-      "New Port Richey",
-    ],
   },
   testimonials: {
     eyebrow: "What Our Customers Say",
@@ -569,23 +551,6 @@ const CLEARWATER: CityFullContent = {
     lede: "Our local team understands Clearwater market dynamics — neighborhood values, what drives quick closings, and what sellers in this area need most.",
     sidebarIntro:
       "We cover all Clearwater neighborhoods — from downtown and the beaches to North Clearwater, Countryside, and every community in between. Our service area spans Greater Tampa Bay.",
-    areas: [
-      "Clearwater ★",
-      "St. Petersburg",
-      "Tampa",
-      "Largo",
-      "Pinellas Park",
-      "Palm Harbor",
-      "Dunedin",
-      "Gulfport",
-      "Safety Harbor",
-      "Oldsmar",
-      "Manatee",
-      "Palmetto",
-      "Sarasota",
-      "Hudson",
-      "New Port Richey",
-    ],
   },
   situations: {
     eyebrow: "What Situations We Handle",
@@ -834,18 +799,6 @@ const LARGO: CityFullContent = {
     titleEm: "Largo",
     titleTail: " and Tampa Bay.",
     lede: "We focus on the neighborhoods you know personally — the ones we find new families to love, from Clearwater to Gulfport and beyond.",
-    areas: [
-      "Largo",
-      "St. Petersburg",
-      "Clearwater",
-      "Pinellas Park",
-      "Palm Harbor",
-      "Tampa",
-      "Gulfport",
-      "Dunedin",
-      "Safety Harbor",
-      "Tarpon Springs",
-    ],
   },
   situations: {
     eyebrow: "Seller Situations",
@@ -1082,20 +1035,6 @@ const DUNEDIN: CityFullContent = {
     titleEm: "Dunedin",
     titleTail: " and Tampa Bay.",
     lede: "We serve Dunedin and the greater Tampa Bay area. Wherever your property is in the region, we're ready to make you a fair cash offer.",
-    areas: [
-      "Dunedin",
-      "St. Petersburg",
-      "Clearwater",
-      "Gulfport",
-      "Largo",
-      "Pinellas Park",
-      "Palm Harbor",
-      "Tampa",
-      "New Port Richey",
-      "Hudson",
-      "Palmetto",
-      "Sarasota",
-    ],
   },
   situations: {
     eyebrow: "Seller Situations",
@@ -1350,22 +1289,6 @@ const PINELLAS_PARK: CityFullContent = {
     titleEm: "Pinellas Park",
     titleTail: " and Tampa Bay.",
     lede: "We focus on the neighborhoods we know personally — this lets us think like families looking to sell homes as a new business.",
-    areas: [
-      "Pinellas Park",
-      "St. Petersburg",
-      "Clearwater",
-      "Gulfport",
-      "Largo",
-      "Palm Harbor",
-      "Tampa",
-      "Bradenton",
-      "Palmetto",
-      "Sarasota",
-      "Hudson",
-      "New Port Richey",
-      "Dunedin",
-      "And more",
-    ],
   },
   testimonials: {
     eyebrow: "Reviews",
