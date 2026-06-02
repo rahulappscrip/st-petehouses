@@ -2,6 +2,7 @@ import { AREA_CITIES as CITY_AREA_LIST, CITY_NAV_LINKS } from "./cities";
 
 export const ASSETS = {
   johnPortrait: "/assets/images/john-gardepe.webp",
+  johnSvg: "/assets/images/John-svg.svg",
   johnCta: "/assets/images/john-gardepe-1.webp",
   ownerJohn: "/assets/images/john-own.webp",
   bbbBadge: "/assets/images/bbb-client.webp",
