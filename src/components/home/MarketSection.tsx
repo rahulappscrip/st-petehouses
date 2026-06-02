@@ -15,6 +15,9 @@ type MarketSectionProps = {
   title?: ReactNode;
   lede?: string;
   factors?: readonly MarketFactor[];
+  badgeValue?: string;
+  badgeLabel?: string;
+  showChart?: boolean;
   showLocal?: boolean;
   alt?: boolean;
 };
@@ -28,6 +31,9 @@ export function MarketSection({
   ),
   lede = MARKET_SECTION.lede,
   factors = MARKET_FACTORS,
+  badgeValue,
+  badgeLabel,
+  showChart = true,
   showLocal = true,
   alt = true,
 }: MarketSectionProps = {}) {
@@ -36,17 +42,25 @@ export function MarketSection({
       <div className="wrap">
         <SectionHead eyebrow={eyebrow} title={title} lede={lede} />
 
-        <div className="market-grid">
-          <Reveal className="market-chart">
-            <Image
-              src={ASSETS.marketChart}
-              alt=""
-              width={960}
-              height={720}
-              sizes="(min-width: 960px) 50vw, 100vw"
-              className="market-chart__img"
-            />
-          </Reveal>
+        <div className={showChart ? "market-grid" : "factor-list"} style={showChart ? undefined : { maxWidth: "100%" }}>
+          {showChart ? (
+            <Reveal className="market-chart">
+              <Image
+                src={ASSETS.marketChart}
+                alt=""
+                width={960}
+                height={720}
+                sizes="(min-width: 960px) 50vw, 100vw"
+                className="market-chart__img"
+              />
+              {badgeValue && badgeLabel ? (
+                <div className="market-badge">
+                  <span>{badgeValue}</span>
+                  {badgeLabel}
+                </div>
+              ) : null}
+            </Reveal>
+          ) : null}
 
           <div className="factor-list">
             {factors.map((factor, i) => (

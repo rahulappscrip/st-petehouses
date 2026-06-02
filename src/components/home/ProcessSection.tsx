@@ -21,6 +21,10 @@ type ProcessSectionProps = {
   primaryCta?: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
   showStepMeta?: boolean;
+  note?: string;
+  keySteps?: { title: string; items: string[] };
+  docs?: string[];
+  disclosureNote?: string;
 };
 
 export function ProcessSection({
@@ -35,14 +39,26 @@ export function ProcessSection({
   primaryCta = { label: "Learn More", href: "#offer" },
   secondaryCta = { label: "Learn more about how it works →", href: "/how-it-works" },
   showStepMeta = true,
+  note,
+  keySteps,
+  docs,
+  disclosureNote,
 }: ProcessSectionProps = {}) {
+  const stepsClass =
+    steps.length === 3
+      ? " steps--3"
+      : steps.length === 5
+        ? " steps--5"
+        : steps.length === 6
+          ? " steps--6"
+          : "";
   return (
     <section className="section" id="process">
       <div className="wrap">
         <SectionHead eyebrow={eyebrow} title={title} lede={lede} />
 
         <ol
-          className={`steps${steps.length === 3 ? " steps--3" : ""}`}
+          className={`steps${stepsClass}`}
           style={{ listStyle: "none", padding: 0 }}
           aria-label="Process steps"
         >
@@ -66,6 +82,10 @@ export function ProcessSection({
           ))}
         </ol>
 
+        {note ? (
+          <p className="process-note">{note}</p>
+        ) : null}
+
         <div style={{ marginTop: 28, display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center" }}>
           <Link href={primaryCta.href} className="btn btn--cta">
             {primaryCta.label}
@@ -75,6 +95,34 @@ export function ProcessSection({
             {secondaryCta.label}
           </Link>
         </div>
+
+        {docs && docs.length > 0 ? (
+          <div className="situation-process-docs">
+            <h4>What documents you&apos;ll need</h4>
+            <div className="situation-process-docs__grid">
+              {docs.map((doc) => (
+                <span key={doc} className="situation-process-docs__item">
+                  {doc}
+                </span>
+              ))}
+            </div>
+          </div>
+        ) : null}
+
+        {disclosureNote ? (
+          <p className="situation-process-disclosure">{disclosureNote}</p>
+        ) : null}
+
+        {keySteps ? (
+          <div className="situation-key-steps situation-key-steps--in-process">
+            <h4>{keySteps.title}</h4>
+            <ul>
+              {keySteps.items.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
       </div>
     </section>
   );

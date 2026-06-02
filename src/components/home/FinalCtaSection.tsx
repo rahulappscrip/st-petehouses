@@ -10,6 +10,7 @@ type FinalCtaSectionProps = {
   title?: ReactNode;
   description?: string;
   offerHref?: string;
+  bullets?: string[];
 };
 
 export function FinalCtaSection({
@@ -21,6 +22,7 @@ export function FinalCtaSection({
   ),
   description = "Call us or fill out our form. Tell us about your property — address, condition, and timeline. Receive your cash offer, usually within 24 hours. Choose your closing date. No pressure. No obligation. Just a fair cash offer for your St Pete home.",
   offerHref = "/#offer",
+  bullets,
 }: FinalCtaSectionProps = {}) {
   return (
     <section className="section">
@@ -31,6 +33,13 @@ export function FinalCtaSection({
             <div className="cta-card__copy">
               <h2 className="h-2">{title}</h2>
               <p>{description}</p>
+              {bullets && bullets.length > 0 ? (
+                <ul className="cta-card__bullets">
+                  {bullets.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              ) : null}
             </div>
             <div className="cta-actions">
               <Link href={offerHref} className="btn btn--cta">

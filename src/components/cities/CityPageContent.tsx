@@ -13,7 +13,7 @@ import { GuaranteeSection } from "@/components/home/GuaranteeSection";
 import { ResourcesSection } from "@/components/home/ResourcesSection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { FinalCtaSection } from "@/components/home/FinalCtaSection";
-import { TestimonialsSection } from "@/components/shared/TestimonialsSection";
+import { ReviewsSection } from "@/components/home/ReviewsSection";
 import {
   buildCityTitleParts,
   getCityFullContent,
@@ -96,7 +96,7 @@ function renderCitySection(id: CitySectionId, content: CityFullContent, page: Ci
     case "testimonials":
       if (!content.testimonials) return null;
       return (
-        <TestimonialsSection
+        <ReviewsSection
           key={id}
           eyebrow={content.testimonials.eyebrow}
           title={
