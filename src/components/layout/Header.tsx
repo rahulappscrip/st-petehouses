@@ -172,11 +172,19 @@ export function Header() {
     const updateTop = () => {
       const header = headerRef.current;
       if (!header) return;
-      const bottom = Math.round(header.getBoundingClientRect().bottom);
-      document.documentElement.style.setProperty("--mobile-nav-top", `${bottom}px`);
+
+      const rect = header.getBoundingClientRect();
+      const measured = Math.round(rect.bottom);
+
+      // On some scroll/lay-out combinations, measurements can briefly be 0.
+      // If that happens, the drawer panel starts at the very top and covers the header.
+      // Keep a sensible fallback (mobile header height is ~72px).
+      const top = Number.isFinite(measured) && measured >= 40 ? measured : 72;
+      document.documentElement.style.setProperty("--mobile-nav-top", `${top}px`);
     };
 
     updateTop();
+    requestAnimationFrame(updateTop);
     window.addEventListener("resize", updateTop);
     window.addEventListener("scroll", updateTop, { passive: true });
     return () => {
@@ -197,6 +205,7 @@ export function Header() {
   }, [closeMenus, closeDrawer]);
 
   useEffect(() => {
+    if (!openMenu) return;
     const onClick = (e: MouseEvent) => {
       const target = e.target as Node;
       if (headerRef.current?.contains(target)) return;
@@ -204,7 +213,7 @@ export function Header() {
     };
     document.addEventListener("click", onClick);
     return () => document.removeEventListener("click", onClick);
-  }, [closeMenus]);
+  }, [closeMenus, openMenu]);
 
   const toggleMenu = (id: string, e: React.MouseEvent) => {
     e.stopPropagation();
@@ -234,7 +243,7 @@ export function Header() {
     <>
       <header
         ref={headerRef}
-        className={`site-header${scrolled ? " is-scrolled" : ""}${drawerOpen ? " is-drawer-open" : ""}`}
+        className={`site-header${scrolled ? " is-scrolled" : ""}${drawerOpen ? " is-drawer-open" : ""}${openMenu ? " is-menu-open" : ""}`}
       >
         <div className="wrap nav">
           <BrandLogo />

@@ -11,7 +11,7 @@
 }
 
 .market-grid {
-  margin-bottom: clamp(40px, 5vw, 56px);
+  margin-bottom: 0;
 }
 
 .market-chart {
