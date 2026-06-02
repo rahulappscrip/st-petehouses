@@ -90,6 +90,11 @@
 
 .meet-owner__title {
   margin-top: 0;
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: clamp(32px, 4vw, 44px);
+  line-height: 1.1;
+  color: var(--ink);
 }
 
 .meet-owner__subtitle {

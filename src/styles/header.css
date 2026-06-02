@@ -1,27 +1,10 @@
 /* Header — nav centered; edge spacing from .wrap gutter only */
 
-.site-chrome {
-  overflow: visible;
-}
-
 .site-header {
   overflow: visible;
 }
 
-/* Sticky header — all viewports; reinforced on mobile/tablet */
-@media (max-width: 979px) {
-  .site-header {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    background: color-mix(in oklab, var(--sand) 98%, transparent);
-  }
-
-  .site-header.is-drawer-open {
-    z-index: 10000;
-  }
-}
+/* z-index when drawer/menu open — see reference-layout.css (.is-menu-open / .is-drawer-open) */
 
 
 .site-header .nav {
@@ -74,15 +57,14 @@
     justify-self: end;
   }
 
-  /* Open drawer: match menu row padding (14px vertical, gutter horizontal) */
-  .site-header.is-drawer-open .nav {
-    min-height: 0;
-    padding-block: 14px;
-  }
-
-  .site-header.is-drawer-open .brand,
-  .site-header.is-drawer-open .nav-cta {
-    align-items: center;
+  /* Keep header pinned and visible when drawer is open */
+  .site-header.is-drawer-open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10000;
   }
 
   .nav-burger {

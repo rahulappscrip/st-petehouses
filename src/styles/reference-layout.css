@@ -50,7 +50,7 @@
   :root {
     --h1-size: 62px;
     --h2-size: 46px;
-    --h3-size: 30px;
+    --h3-size: 26px;
   }
 }
 
@@ -105,6 +105,12 @@ h2,
   font-size: var(--h2-size);
   line-height: 1.2;
   letter-spacing: -0.025em;
+}
+
+/* Prevent Tailwind's utility class `.h-2` from forcing a fixed height
+   when used as a semantic heading class (e.g. <h2 class="h-2">). */
+h2.h-2 {
+  height: auto;
 }
 h2 em,
 .h-2 em{
@@ -161,8 +167,15 @@ h3 em,
 .topbar .wrap{
   display: flex; align-items: center; justify-content: space-between;
   min-height: var(--topbar-h);
-  gap: 18px; flex-wrap: wrap;
-  padding-block: 8px;
+  flex-wrap: wrap;
+
+}
+@media (max-width:920px) { 
+.topbar .wrap{ 
+ padding: 16px 0px;
+  gap: 8px;
+  justify-content: center;
+}
 }
 .topbar-l, .topbar-r{ display: inline-flex; align-items: center; gap: 18px; flex-wrap: wrap; }
 .topbar-l .stars{ color: var(--gold); letter-spacing: 1px; }
@@ -174,10 +187,9 @@ h3 em,
   .topbar-r .topbar-hide-mobile{ display: none; }
 }
 
-/* Wrapper only — header sticks on its own (topbar scrolls away) */
+/* Wrapper groups topbar + header; display:contents so sticky isn’t clipped to this box */
 .site-chrome{
-  width: 100%;
-  max-width: 100%;
+  display: contents;
 }
 
 .site-header{
@@ -185,19 +197,44 @@ h3 em,
   position: sticky;
   top: 0;
   z-index: 50;
+  overflow: visible;
+  /* Ensure the header always has a visible fill (even if ::before backdrop behaves differently) */
   background: color-mix(in oklab, var(--sand) 96%, transparent);
+  border-bottom: 1px solid color-mix(in oklab, var(--line) 60%, transparent);
+  transition: box-shadow .25s ease;
+}
+/* Backdrop on ::before so dropdowns aren’t clipped by sticky + backdrop-filter */
+.site-header::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  /* Backdrop blur only; the header fill comes from .site-header background */
+  background: transparent;
   backdrop-filter: saturate(140%) blur(10px);
   -webkit-backdrop-filter: saturate(140%) blur(10px);
-  border-bottom: 1px solid color-mix(in oklab, var(--line) 60%, transparent);
-  transition: box-shadow .25s ease, background .25s ease;
+}
+.site-header > .wrap{
+  position: relative;
+  z-index: 1;
 }
 
 .site-header.is-drawer-open{
   border-bottom-color: transparent;
 }
 .site-header.is-scrolled{
-  background: color-mix(in oklab, var(--sand) 98%, transparent);
   box-shadow: 0 8px 20px -16px rgba(14,59,35,.25);
+  background: color-mix(in oklab, var(--sand) 98%, transparent);
+}
+.site-header.is-scrolled::before{
+  background: transparent;
+}
+.site-header.is-menu-open{
+  z-index: 200;
+}
+.site-header.is-drawer-open{
+  z-index: 10000;
 }
 .nav{
   display: flex; align-items: center; justify-content: space-between;
@@ -870,9 +907,9 @@ h3 em,
   min-height: clamp(320px, 50vw, 450px);
   border: 0;
 }
-.areas-aside h3{ font-family: var(--serif); font-weight: 400; font-size: 26px; line-height: 1.1; margin-bottom: 14px; }
+.areas-aside h3{ font-family: var(--serif); font-weight: 400; font-size: 26px; line-height: 1.1; margin-bottom: 14px; white-space: nowrap; }
 .area-list{
-  display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px;
+  display: grid; grid-template-columns: 1fr;
   list-style: none; padding: 0; margin: 0;
 }
 .area-list li{
@@ -973,7 +1010,6 @@ h3 em,
   padding: 22px 0;
   border-top: 1px solid var(--line);
 }
-.factor:last-child{ border-bottom: 1px solid var(--line); }
 .factor .pre{
   font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
   color: var(--sun-deep);
@@ -1051,7 +1087,7 @@ h3 em,
   display: grid; place-items: center;
 }
 .guarantee-list .ico svg{ width: 20px; height: 20px; }
-.guarantee-list h3{ font-family: var(--serif); font-weight: 400; font-size: 22px; line-height: 1.1; }
+.guarantee-list h3{ font-family: var(--sans); font-weight: 400; font-size: 26px; line-height: 1.1; }
 .guarantee-list p{ color: var(--ink-2); font-size: 15px; margin-top: 4px; }
 
 .guarantee-aside{

@@ -184,7 +184,7 @@
 }
 
 .article-body .intro {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: clamp(20px, 1.8vw, 24px);
   line-height: 1.4;
   color: var(--ink);
