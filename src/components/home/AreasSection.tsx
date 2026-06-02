@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
+import { SectionHead } from "@/components/ui/SectionHead";
 import { AreaServiceMap } from "@/components/home/AreaServiceMap";
 import { AREA_CITIES } from "@/lib/constants";
 import type { ReactNode } from "react";
@@ -28,11 +29,7 @@ export function AreasSection({
   return (
     <section className="areas-section section" id="areas">
       <div className="wrap">
-        <Reveal className="section-head">
-          <span className="eyebrow">{eyebrow}</span>
-          <h2 className="h-2">{title}</h2>
-          <p className="lede">{lede}</p>
-        </Reveal>
+        <SectionHead eyebrow={eyebrow} title={title} lede={lede} />
 
         <div className="areas-grid">
           <AreaServiceMap cityName={mapCity} />

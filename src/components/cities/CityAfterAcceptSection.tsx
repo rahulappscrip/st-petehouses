@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { Reveal } from "@/components/ui/Reveal";
+import { SectionHead } from "@/components/ui/SectionHead";
 
 export type CityAfterAcceptStep = {
   title: string;
@@ -18,11 +19,7 @@ export function CityAfterAcceptSection({ eyebrow, title, lede, steps, alt = fals
   return (
     <section className={`section${alt ? " section-alt" : ""}`}>
       <div className="wrap">
-        <Reveal className="section-head">
-          <span className="eyebrow">{eyebrow}</span>
-          <h2 className="h-2">{title}</h2>
-          <p className="lede">{lede}</p>
-        </Reveal>
+        <SectionHead eyebrow={eyebrow} title={title} lede={lede} />
 
         <ol className="steps steps--3" style={{ listStyle: "none", padding: 0 }} aria-label="Steps after accepting">
           {steps.map((step, i) => (

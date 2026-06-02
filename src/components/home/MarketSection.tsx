@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
+import { SectionHead } from "@/components/ui/SectionHead";
 import { ASSETS, MARKET_FACTORS, MARKET_SECTION } from "@/lib/constants";
 
 export type MarketFactor = {
@@ -33,11 +34,7 @@ export function MarketSection({
   return (
     <section className={`section${alt ? " section-alt" : ""} market-section`} id="market">
       <div className="wrap">
-        <Reveal className="section-head">
-          <span className="eyebrow">{eyebrow}</span>
-          <h2 className="h-2">{title}</h2>
-          {lede ? <p className="lede">{lede}</p> : null}
-        </Reveal>
+        <SectionHead eyebrow={eyebrow} title={title} lede={lede} />
 
         <div className="market-grid">
           <Reveal className="market-chart">

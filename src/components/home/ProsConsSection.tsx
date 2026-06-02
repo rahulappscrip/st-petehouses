@@ -1,4 +1,5 @@
 import { Reveal } from "@/components/ui/Reveal";
+import { SectionHead } from "@/components/ui/SectionHead";
 import {
   PROS_ADVANTAGES,
   PROS_COMPARE_ROWS,
@@ -34,13 +35,15 @@ export function ProsConsSection() {
   return (
     <section className="section pros-cons" id="pros-cons">
       <div className="wrap">
-        <Reveal className="section-head">
-          <span className="eyebrow">{PROS_CONS.eyebrow}</span>
-          <h2 className="h-2">
-            Pros and cons of selling your home <em>for cash</em>.
-          </h2>
-          <p className="lede">{PROS_CONS.lede}</p>
-        </Reveal>
+        <SectionHead
+          eyebrow={PROS_CONS.eyebrow}
+          title={
+            <>
+              Pros and cons of selling your home <em>for cash</em>.
+            </>
+          }
+          lede={PROS_CONS.lede}
+        />
 
         <div className="pros-cards">
           <Reveal className="pros-card pros-card--pro" d={1}>

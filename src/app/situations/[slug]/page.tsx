@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SituationPageContent } from "@/components/situations/SituationPageContent";
 import { SITE } from "@/lib/constants";
-import { getSituationPage, SITUATION_PAGES } from "@/lib/situations";
+import { getSituationContent, SITUATION_PAGES } from "@/lib/situations";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -14,29 +14,31 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const page = getSituationPage(slug);
-  if (!page) return {};
+  const content = getSituationContent(slug);
+  if (!content) return {};
 
-  const title = `${page.label} — Sell Your House Fast · We Buy St Pete Houses`;
-  const canonical = `/situations/${page.slug}`;
+  const canonical = `/situations/${content.slug}`;
 
   return {
-    title,
-    description: page.description,
+    title: content.metaTitle,
+    description: content.metaDescription,
     alternates: { canonical },
     openGraph: {
       type: "article",
-      title,
-      description: page.description,
-      url: `${SITE.url}situations/${page.slug}/`,
+      title: content.metaTitle,
+      description: content.metaDescription,
+      url: `${SITE.url}situations/${content.slug}/`,
       locale: "en_US",
     },
     robots: { index: true, follow: true },
   };
 }
 
-function buildJsonLd(page: NonNullable<ReturnType<typeof getSituationPage>>) {
-  const url = `${SITE.url}situations/${page.slug}/`;
+function buildJsonLd(content: NonNullable<ReturnType<typeof getSituationContent>>) {
+  const url = `${SITE.url}situations/${content.slug}/`;
+  const titleText = [content.hero.titleLead, content.hero.titleEm, content.hero.titleTail]
+    .filter(Boolean)
+    .join("");
 
   return {
     "@context": "https://schema.org",
@@ -44,17 +46,17 @@ function buildJsonLd(page: NonNullable<ReturnType<typeof getSituationPage>>) {
       {
         "@type": "WebPage",
         "@id": `${url}#webpage`,
-        name: page.title,
-        description: page.description,
+        name: titleText,
+        description: content.metaDescription,
         url,
         datePublished: "2026-05-29",
-        dateModified: "2026-05-29",
+        dateModified: "2026-06-01",
       },
       {
         "@type": "BreadcrumbList",
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Home", item: SITE.url },
-          { "@type": "ListItem", position: 2, name: page.breadcrumb, item: url },
+          { "@type": "ListItem", position: 2, name: content.breadcrumb, item: url },
         ],
       },
     ],
@@ -63,16 +65,16 @@ function buildJsonLd(page: NonNullable<ReturnType<typeof getSituationPage>>) {
 
 export default async function SituationPage({ params }: PageProps) {
   const { slug } = await params;
-  const page = getSituationPage(slug);
-  if (!page) notFound();
+  const content = getSituationContent(slug);
+  if (!content) notFound();
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildJsonLd(page)) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildJsonLd(content)) }}
       />
-      <SituationPageContent page={page} />
+      <SituationPageContent content={content} />
     </>
   );
 }

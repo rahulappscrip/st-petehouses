@@ -28,8 +28,10 @@ export function FinalCtaSection({
         <Reveal className="cta-card">
           <div className="cta-card__content">
             <span className="eyebrow">{eyebrow}</span>
-            <h2 className="h-2">{title}</h2>
-            <p>{description}</p>
+            <div className="cta-card__copy">
+              <h2 className="h-2">{title}</h2>
+              <p>{description}</p>
+            </div>
             <div className="cta-actions">
               <Link href={offerHref} className="btn btn--cta">
                 Get my cash offer

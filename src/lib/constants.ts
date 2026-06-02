@@ -2,6 +2,7 @@ import { AREA_CITIES as CITY_AREA_LIST, CITY_NAV_LINKS } from "./cities";
 
 export const ASSETS = {
   johnPortrait: "/assets/images/john-gardepe.webp",
+  johnSvg: "/assets/images/John-svg.svg",
   johnCta: "/assets/images/john-gardepe-1.png",
   ownerJohn: "/assets/images/owner-john.jpg",
   bbbBadge: "/assets/images/bbb-client.png",
@@ -171,17 +172,16 @@ export const NAV_LINKS = {
   },
   situations: [
     { label: "Foreclosure", href: "/situations/foreclosure" },
-    { label: "Probate", href: "/situations/probate" },
-    { label: "Divorce", href: "/situations/divorce" },
     { label: "Inherited house", href: "/situations/inherited" },
+    { label: "Divorce", href: "/situations/divorce" },
     { label: "House with tenants", href: "/situations/tenants" },
+    { label: "House with a lien", href: "/situations/lien" },
+    { label: "Water / flood damage", href: "/situations/water-damage" },
     { label: "Fire damage", href: "/situations/fire-damage" },
-    { label: "Water damage", href: "/situations/water-damage" },
-    { label: "Mold damage", href: "/situations/mold-damage" },
-    { label: "Hoarder house", href: "/situations/hoarder-house" },
-    { label: "Bankruptcy", href: "/situations/bankruptcy" },
-    { label: "Sell as-is", href: "/situations/sell-as-is" },
-    { label: "House with a mortgage", href: "/situations/mortgage" },
+    { label: "Storm damage", href: "/situations/storm-damage" },
+    { label: "Sell as-is (St Pete)", href: "/situations/sell-as-is" },
+    { label: "Sell as-is (Florida)", href: "/situations/as-is-florida" },
+    { label: "Cash home buyers", href: "/situations/cash-home-buyers" },
   ],
   company: [
     { label: "About Us", href: "/about" },
@@ -194,18 +194,16 @@ export const NAV_LINKS = {
 /** Footer “We Buy Houses In Any Situation” column — fixed order. */
 export const FOOTER_SITUATIONS = [
   { label: "Foreclosure", href: "/situations/foreclosure" },
-  { label: "Probate", href: "/situations/probate" },
-  { label: "Divorce", href: "/situations/divorce" },
   { label: "Inherited house", href: "/situations/inherited" },
+  { label: "Divorce", href: "/situations/divorce" },
   { label: "House with tenants", href: "/situations/tenants" },
+  { label: "House with a lien", href: "/situations/lien" },
+  { label: "Water / flood damage", href: "/situations/water-damage" },
   { label: "Fire damage", href: "/situations/fire-damage" },
-  { label: "Water damage", href: "/situations/water-damage" },
-  { label: "Mold damage", href: "/situations/mold-damage" },
-  { label: "Hoarder house", href: "/situations/hoarder-house" },
-  { label: "Bankruptcy", href: "/situations/bankruptcy" },
-  { label: "House with a mortgage", href: "/situations/mortgage" },
-  { label: "Sell as-is", href: "/situations/sell-as-is" },
-  { label: "We assume your mortgage", href: "/situations/mortgage" },
+  { label: "Storm damage", href: "/situations/storm-damage" },
+  { label: "Sell as-is (St Pete)", href: "/situations/sell-as-is" },
+  { label: "Sell as-is (Florida)", href: "/situations/as-is-florida" },
+  { label: "Cash home buyers", href: "/situations/cash-home-buyers" },
 ] as const;
 
 export const STATS = [

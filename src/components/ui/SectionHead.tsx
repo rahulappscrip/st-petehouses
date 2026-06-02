@@ -1,25 +1,26 @@
-import { type ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
+import { Reveal } from "@/components/ui/Reveal";
 
 type Props = {
   eyebrow: string;
   title: ReactNode;
   lede?: string;
-  className?: string;
   centered?: boolean;
+  className?: string;
+  style?: CSSProperties;
 };
 
-export function SectionHead({ eyebrow, title, lede, className = "", centered }: Props) {
+export function SectionHead({ eyebrow, title, lede, centered, className = "", style }: Props) {
   return (
-    <div className={`mb-10 max-w-3xl ${centered ? "mx-auto text-center" : ""} ${className}`}>
-      <span className="mb-3 block text-[10px] font-bold uppercase tracking-[0.14em] text-accent">
-        {eyebrow}
-      </span>
-      <h2 className="text-[clamp(22px,4vw,32px)] font-extrabold leading-tight text-forest [&_em]:text-accent-serif">
-        {title}
-      </h2>
-      {lede && (
-        <p className="mt-4 text-[15px] leading-relaxed text-ink-mid">{lede}</p>
-      )}
-    </div>
+    <Reveal
+      className={`section-head${centered ? " section-head--center" : ""}${className ? ` ${className}` : ""}`}
+      style={style}
+    >
+      <span className="eyebrow">{eyebrow}</span>
+      <div className="section-head__copy">
+        <h2 className="h-2">{title}</h2>
+        {lede ? <p className="lede">{lede}</p> : null}
+      </div>
+    </Reveal>
   );
 }
