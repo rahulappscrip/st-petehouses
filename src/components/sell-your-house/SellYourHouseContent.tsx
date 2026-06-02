@@ -87,7 +87,7 @@ export function SellYourHouseContent() {
         lede="A no-obligation cash offer quickly — often within 24 hours. No waiting on banks, no financing contingencies, no surprises at closing. We coordinate title, due diligence, and a walkthrough at your convenience. You pick the closing date."
         steps={SELL_HOUSE_PROCESS_STEPS}
         showStepMeta={false}
-        primaryCta={{ label: "Start step 1", href: "#offer" }}
+        primaryCta={{ label: "Learn More", href: "#offer" }}
         secondaryCta={{ label: "Full process walkthrough →", href: "/how-it-works" }}
       />
 

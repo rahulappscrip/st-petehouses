@@ -38,7 +38,7 @@ const jsonLd = {
       publisher: {
         "@type": "Organization",
         name: "We Buy St Pete Houses",
-        logo: { "@type": "ImageObject", url: `${SITE.url}assets/images/logo.png` },
+        logo: { "@type": "ImageObject", url: `${SITE.url}assets/images/logo.webp` },
       },
       mainEntityOfPage: `${SITE.url}how-it-works/`,
     },

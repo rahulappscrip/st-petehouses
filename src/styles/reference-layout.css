@@ -245,7 +245,7 @@ h3 em,
 @media (max-width: 479px){
   .site-header .brand-name small{ display: none; }
 }
-.brand-name{ font-family: var(--serif); font-size: 20px; line-height: 1.05; white-space: nowrap; }
+.brand-name{ font-family: var(--sans); font-size: 20px; line-height: 1.05; white-space: nowrap; }
 .brand-name small{ display: block; font-family: var(--mono); font-size: 9.5px; letter-spacing: .16em; color: var(--ink-soft); text-transform: uppercase; margin-top: 4px; white-space: nowrap; }
 @media (min-width: 1200px){ .brand-name{ font-size: 22px; } .brand-name small{ font-size: 10px; } }
 
@@ -760,7 +760,7 @@ h3 em,
 .stats{ background: var(--ink); color: var(--paper); padding-block: clamp(28px, 4vw, 44px); }
 .stats-grid{ display: grid; gap: 28px; grid-template-columns: repeat(2, 1fr); }
 @media (min-width: 760px){ .stats-grid{ grid-template-columns: repeat(4, 1fr); } }
-.stat b{ font-family: var(--serif); font-weight: 400; font-size: clamp(24px, 4.4vw, 34px); line-height: 1; letter-spacing: -0.02em; display: block; }
+.stat b{ font-family: var(--serif); font-weight: 400; font-size: clamp(24px, 4.4vw, 44px); line-height: 1; letter-spacing: -0.02em; display: block; }
 .stat b em{ font-style: italic; color: var(--sun); }
 .stat span{ display: block; font-family: var(--mono); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: color-mix(in oklab, var(--paper) 70%, transparent); margin-top: 8px; }
 .stat .sub{ font-size: 13.5px; color: color-mix(in oklab, var(--paper) 75%, transparent); margin-top: 4px; }
@@ -839,7 +839,7 @@ h3 em,
 }
 .step:hover{ transform: translateY(-2px); border-color: color-mix(in oklab, var(--ink) 18%, var(--line)); box-shadow: var(--shadow-2); }
 .step-num{ font-family: var(--serif); font-style: italic; font-size: 56px; line-height: 1; color: var(--sun); }
-.step h3{ font-family: var(--sans); font-weight: 400; font-size: 22px; line-height: 1.1; }
+.step h3{ font-family: var(--sans); font-weight: 400; font-size: 22px; line-height: 1.1; text-transform: capitalize; }
 .step p{ color: var(--ink-2); font-size: 15px; flex: 1; }
 .step .step-meta{
   padding-top: 16px; border-top: 1px dashed var(--line);
@@ -1150,7 +1150,7 @@ h3 em,
   display: grid; place-items: center;
   box-shadow: 0 4px 16px rgba(0,0,0,.2);
 }
-.ba-meta h3{ font-family: var(--serif); font-weight: 400; font-size: 22px; line-height: 1.1; }
+.ba-meta h3{ font-family: var(--sans); font-weight: 400; font-size: 22px; line-height: 1.1; }
 .ba-meta p{ color: var(--ink-2); font-size: 14.5px; margin-top: 6px; }
 .ba-meta .stat{ display: inline-flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 12px; font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
 .ba-meta .stat b{ color: var(--ink); font-weight: 400; }
@@ -1399,12 +1399,12 @@ h3 em,
 
 .hero-portrait__placeholder{ display:none; }
 /* Real-photo avatars (calm professional, swap when client supplies John's headshot) */
-/* Photo URLs: add /public/images/john-gardepe.png and uncomment when available
+/* Photo URLs: add /public/images/john-gardepe.webp and uncomment when available
 .byline .av, .author-bio .av, .lead-trust__avatars span:first-child{
-  background: url('/images/john-gardepe.png') center/cover no-repeat !important;
+  background: url('/images/john-gardepe.webp') center/cover no-repeat !important;
   color: transparent !important;
 }
-.sig-photo{ background: url('/images/john-gardepe.png') center/cover no-repeat !important; }
+.sig-photo{ background: url('/images/john-gardepe.webp') center/cover no-repeat !important; }
 .sig-photo span{ display:none !important; }
 */
 
