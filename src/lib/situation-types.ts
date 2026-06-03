@@ -281,6 +281,7 @@ export type SituationFullContent = {
     asideTitle?: string;
     asideBody?: string;
     asideList?: string[];
+    footerTitle?: string;
     footerNote?: string;
     grid?: boolean;
   };

@@ -915,6 +915,16 @@ export function SituationDiffSection({
   );
 }
 
+function SituationWhyCheckIcon() {
+  return (
+    <span className="situation-why-check" aria-hidden>
+      <svg viewBox="0 0 12 12" fill="none">
+        <polyline points="1 6 5 10 11 2" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    </span>
+  );
+}
+
 export function SituationWhyUsSection({
   data,
   alt,
@@ -946,50 +956,55 @@ export function SituationWhyUsSection({
   }
 
   return (
-    <section className={`section${alt ? " section-alt" : ""}`}>
+    <section className="section situation-why-section">
       <div className="wrap">
+        <SituationSectionHead
+          eyebrow={data.eyebrow}
+          title={<SectionTitle lead={data.titleLead} em={data.titleEm} tail={data.titleTail} />}
+          lede={data.lede}
+        />
         <div className="situation-why-grid">
-          <div>
-            <SituationSectionHead
-              eyebrow={data.eyebrow}
-              title={<SectionTitle lead={data.titleLead} em={data.titleEm} tail={data.titleTail} />}
-              lede={data.lede}
-            />
-            <ul className="situation-why-list">
-              {data.items.map((item) => (
-                <li key={item.title}>
-                  <div>
-                    <h4>{item.title}</h4>
-                    <p>{item.body}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <ul className="situation-why-list">
+            {data.items.map((item) => (
+              <li key={item.title}>
+                <SituationWhyCheckIcon />
+                <div>
+                  <h4>{item.title}</h4>
+                  <p>{item.body}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
           {data.asideTitle ? (
-            <Reveal d={1} className="situation-aside-cta">
-              <h3>{data.asideTitle}</h3>
-              {data.asideBody ? <p>{data.asideBody}</p> : null}
-              {data.asideList ? (
-                <ul className="situation-why-list" style={{ marginTop: 12 }}>
-                  {data.asideList.map((line) => (
-                    <li key={line}>
-                      <p>{line}</p>
-                    </li>
-                  ))}
-                </ul>
-              ) : null}
-              <a href={SITE.phoneHref} className="phone">
-                {SITE.phone}
-              </a>
-              <Link href="#offer" className="btn btn--cta" style={{ marginTop: 16, width: "100%", justifyContent: "center" }}>
-                Request my offer
-                <Arr />
-              </Link>
+            <div className="situation-why-aside">
+              <Reveal d={1} className="situation-aside-cta">
+                <h4 className="situation-aside-cta__title">{data.asideTitle}</h4>
+                {data.asideBody ? <p>{data.asideBody}</p> : null}
+                {data.asideList ? (
+                  <ul className="situation-aside-cta__list">
+                    {data.asideList.map((line) => (
+                      <li key={line}>{line}</li>
+                    ))}
+                  </ul>
+                ) : null}
+                <a href={SITE.phoneHref} className="phone">
+                  {SITE.phone}
+                </a>
+                <Link href="#offer" className="btn btn--cta situation-aside-cta__btn">
+                  Request My Cash Offer
+                  <Arr />
+                </Link>
+                <a href={`mailto:${SITE.email}`} className="situation-aside-cta__email">
+                  {SITE.email}
+                </a>
+              </Reveal>
               {data.footerNote ? (
-                <p className="situation-why-footer-note">{data.footerNote}</p>
+                <div className="situation-why-info-card">
+                  {data.footerTitle ? <h4>{data.footerTitle}</h4> : null}
+                  <p>{data.footerNote}</p>
+                </div>
               ) : null}
-            </Reveal>
+            </div>
           ) : null}
         </div>
       </div>
