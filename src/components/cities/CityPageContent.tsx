@@ -20,7 +20,7 @@ import {
   type CitySectionId,
 } from "@/lib/city-content";
 import { notFound } from "next/navigation";
-import { mapCitySituationsToSellerCards, SITE } from "@/lib/constants";
+import { mapCityBenefitsToSellerCards, mapCitySituationsToSellerCards, SITE } from "@/lib/constants";
 import type { CityPageData } from "@/lib/cities";
 
 type Props = {
@@ -173,6 +173,25 @@ function renderCitySection(id: CitySectionId, content: CityFullContent, page: Ci
 
     case "benefits":
       if (!content.benefits) return null;
+      if (content.benefits.imageCardLayout) {
+        return (
+          <SellerSituationsSection
+            key={id}
+            sectionId="benefits"
+            eyebrow={content.benefits.eyebrow}
+            title={
+              <SectionTitle
+                lead={content.benefits.titleLead}
+                em={content.benefits.titleEm}
+                tail={content.benefits.titleTail}
+              />
+            }
+            lede={content.benefits.lede}
+            items={mapCityBenefitsToSellerCards(content.benefits.items)}
+            linkable={false}
+          />
+        );
+      }
       return (
         <CityBenefitsSection
           key={id}

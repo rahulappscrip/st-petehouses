@@ -142,6 +142,8 @@ export type CityFullContent = {
     eyebrow: string;
     lede: string;
     items: CityBenefitItem[];
+    /** Use homepage sit-card image layout instead of icon grid. */
+    imageCardLayout?: boolean;
   };
   afterAccept?: SectionTitle & {
     eyebrow: string;
@@ -601,6 +603,7 @@ const CLEARWATER: CityFullContent = {
     titleEm: "cash buyer",
     titleTail: " in Clearwater.",
     lede: "Cash offers mean certainty and speed — no financing risk, no repairs, and a faster, smoother close that you control.",
+    imageCardLayout: true,
     items: [
       {
         icon: "🔒",
@@ -1108,6 +1111,8 @@ const DUNEDIN: CityFullContent = {
     titleEm: "local expertise",
     titleTail: " matters.",
     lede: "Deep Dunedin market knowledge drives faster, fairer offers. We know the neighborhoods, price trends, and local factors that affect value — from waterfront properties to inland homes.",
+    chartImage: ASSETS.whyLocalExpertiseMatters,
+    chartImageAlt: "Why local expertise matters when selling your Dunedin home for cash",
     factors: [
       {
         letter: "A",
@@ -1323,6 +1328,8 @@ const PINELLAS_PARK: CityFullContent = {
     titleEm: "Pinellas Park",
     titleTail: " cash home market.",
     lede: "",
+    chartImage: ASSETS.marketChartPinellasPark,
+    chartImageAlt: "Understanding the Pinellas Park cash home market",
     factors: [
       {
         letter: "A",

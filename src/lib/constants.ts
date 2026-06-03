@@ -11,8 +11,12 @@ export const ASSETS = {
   faviconPng: "/assets/images/we-buy-st-pete-favicon-res.png",
   marketChart: "/assets/images/Understanding-the-st-pete-market.webp",
   marketChartStPetersburg: "/assets/images/Understanding-the-st-Petersburg-cash.webp",
+  marketChartPinellasPark:
+    "/assets/images/Understanding-the-Pinellas-Park-cash-home-market-optimized.webp",
+  whyLocalExpertiseMatters: "/assets/images/Why-local-expertise-matters.webp",
   facingForeclosure: "/assets/images/facing-foreclosure.webp",
   inheritedHome: "/assets/images/inherited-home.webp",
+  inheritedOrProbateProperty: "/assets/images/Inherited-or-Probate-Property.webp",
   divorceSeparation: "/assets/images/divorce-or-seperation.webp",
   tiredLandlord: "/assets/images/tired-landload.webp",
   distressedProperty: "/assets/images/distressed-property.webp",
@@ -20,6 +24,10 @@ export const ASSETS = {
   upsideDownMortgage: "/assets/images/Upside-Down-Mortgage.webp",
   vacantProperty: "/assets/images/Vacant-Property.webp",
   behindOnPayments: "/assets/images/Behind-on-Payments.webp",
+  noFinancingRisk: "/assets/images/No-financing-risk.webp",
+  sellAsIsNoRepairs: "/assets/images/Sell-as-is-no-repairs-or-cleaning.webp",
+  noAgentCommissions: "/assets/images/No-agent-commissions-or-fees.webp",
+  certaintyControlClosing: "/assets/images/Certainty-and-control-over-closing.webp",
 } as const;
 
 export const SITE = {
@@ -348,7 +356,10 @@ export const SELLER_SITUATIONS = [
 export const SITUATION_CARD_HOME_IMAGES: Record<string, { image: string; imageAlt: string }> = {
   Foreclosure: { image: ASSETS.facingForeclosure, imageAlt: SELLER_SITUATIONS[0].imageAlt },
   Divorce: { image: ASSETS.divorceSeparation, imageAlt: SELLER_SITUATIONS[2].imageAlt },
-  "Inherited / Probate": { image: ASSETS.inheritedHome, imageAlt: SELLER_SITUATIONS[1].imageAlt },
+  "Inherited / Probate": {
+    image: ASSETS.inheritedOrProbateProperty,
+    imageAlt: "Inherited or probate property ready for a cash home sale",
+  },
   "Tired Landlords": { image: ASSETS.tiredLandlord, imageAlt: SELLER_SITUATIONS[3].imageAlt },
   Relocation: { image: ASSETS.relocation, imageAlt: SELLER_SITUATIONS[5].imageAlt },
   "Upside-Down Mortgages": { image: ASSETS.distressedProperty, imageAlt: SELLER_SITUATIONS[4].imageAlt },
@@ -396,8 +407,8 @@ function resolveCitySituationMedia(title: string): { image: string; imageAlt: st
   }
   if (/inher|probate|estate/i.test(lower)) {
     return {
-      image: ASSETS.inheritedHome,
-      imageAlt: SELLER_SITUATIONS[1].imageAlt,
+      image: ASSETS.inheritedOrProbateProperty,
+      imageAlt: "Inherited or probate property ready for a cash home sale",
       href: "/situations/inherited",
     };
   }
@@ -441,6 +452,57 @@ function resolveCitySituationMedia(title: string): { image: string; imageAlt: st
 export function mapCitySituationsToSellerCards(items: readonly CitySituationInput[]) {
   return items.map((item) => {
     const media = resolveCitySituationMedia(item.title);
+    return {
+      title: item.title,
+      body: item.body,
+      ...media,
+    };
+  });
+}
+
+function resolveCityBenefitMedia(title: string): { image: string; imageAlt: string; href: string } {
+  const lower = title.toLowerCase();
+
+  if (/no financing risk|financing risk/i.test(lower)) {
+    return {
+      image: ASSETS.noFinancingRisk,
+      imageAlt: "Cash home sale with no buyer financing risk",
+      href: "/get-cash-offer",
+    };
+  }
+  if (/sell as-is|no repairs or cleaning|as-is.*repair/i.test(lower)) {
+    return {
+      image: ASSETS.sellAsIsNoRepairs,
+      imageAlt: "Selling a Clearwater home as-is with no repairs or cleaning",
+      href: "/situations/sell-as-is",
+    };
+  }
+  if (/no agent commissions|commissions or fees|agent commissions/i.test(lower)) {
+    return {
+      image: ASSETS.noAgentCommissions,
+      imageAlt: "Home sale with no real estate agent commissions or fees",
+      href: "/get-cash-offer",
+    };
+  }
+  if (/certainty and control|certainty.*closing|control over closing/i.test(lower)) {
+    return {
+      image: ASSETS.certaintyControlClosing,
+      imageAlt: "Certainty and control over your cash home sale closing date",
+      href: "/get-cash-offer",
+    };
+  }
+
+  return {
+    image: ASSETS.distressedProperty,
+    imageAlt: SELLER_SITUATIONS[4].imageAlt,
+    href: "/get-cash-offer",
+  };
+}
+
+/** Map location-page benefits copy to homepage sit-card layout (images, non-linked cards). */
+export function mapCityBenefitsToSellerCards(items: readonly CitySituationInput[]) {
+  return items.map((item) => {
+    const media = resolveCityBenefitMedia(item.title);
     return {
       title: item.title,
       body: item.body,
