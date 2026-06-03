@@ -1008,6 +1008,13 @@ export function buildCityMapTitle(cityName: string): string {
   return `Map of ${cityName}, FL and the Tampa Bay service area`;
 }
 
+export const GUARANTEE_ASIDE_CHECKLIST = [
+  "Written offer within 24 hours",
+  "We cover all closing costs",
+  "Local St Pete title company",
+  "No obligation to accept",
+] as const;
+
 export const GUARANTEE_ITEMS = [
   {
     title: "Guaranteed cash offer",
