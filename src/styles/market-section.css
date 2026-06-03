@@ -26,9 +26,11 @@
 .market-chart__img {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
-  min-height: 380px;
+  min-height: clamp(220px, 40vw, 380px);
   object-fit: contain;
+  object-position: center;
 }
 
 .market-badge {

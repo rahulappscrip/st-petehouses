@@ -18,6 +18,7 @@ type SellerSituationsSectionProps = {
   lede?: string;
   items?: readonly SellerSituationCard[];
   className?: string;
+  sectionId?: string;
   /** When false, cards are not links (e.g. situation pages keep their own copy). */
   linkable?: boolean;
 };
@@ -32,12 +33,13 @@ export function SellerSituationsSection({
   lede = "Cash works well for sellers who value speed, simplicity, and certainty over maximizing every dollar through a traditional listing. Common scenarios we close every month:",
   items = SELLER_SITUATIONS,
   className = "",
+  sectionId = "situations",
   linkable = true,
 }: SellerSituationsSectionProps = {}) {
   return (
     <section
       className={`section section-alt seller-situations${className ? ` ${className}` : ""}`}
-      id="situations"
+      id={sectionId}
     >
       <div className="wrap">
         <Reveal className="section-head">

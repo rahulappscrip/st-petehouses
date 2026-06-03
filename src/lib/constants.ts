@@ -10,12 +10,24 @@ export const ASSETS = {
   favicon: "/favicon.ico",
   faviconPng: "/assets/images/we-buy-st-pete-favicon-res.png",
   marketChart: "/assets/images/Understanding-the-st-pete-market.webp",
+  marketChartStPetersburg: "/assets/images/Understanding-the-st-Petersburg-cash.webp",
+  marketChartPinellasPark:
+    "/assets/images/Understanding-the-Pinellas-Park-cash-home-market-optimized.webp",
+  whyLocalExpertiseMatters: "/assets/images/Why-local-expertise-matters.webp",
   facingForeclosure: "/assets/images/facing-foreclosure.webp",
   inheritedHome: "/assets/images/inherited-home.webp",
+  inheritedOrProbateProperty: "/assets/images/Inherited-or-Probate-Property.webp",
   divorceSeparation: "/assets/images/divorce-or-seperation.webp",
   tiredLandlord: "/assets/images/tired-landload.webp",
   distressedProperty: "/assets/images/distressed-property.webp",
   relocation: "/assets/images/relocation.webp",
+  upsideDownMortgage: "/assets/images/Upside-Down-Mortgage.webp",
+  vacantProperty: "/assets/images/Vacant-Property.webp",
+  behindOnPayments: "/assets/images/Behind-on-Payments.webp",
+  noFinancingRisk: "/assets/images/No-financing-risk.webp",
+  sellAsIsNoRepairs: "/assets/images/Sell-as-is-no-repairs-or-cleaning.webp",
+  noAgentCommissions: "/assets/images/No-agent-commissions-or-fees.webp",
+  certaintyControlClosing: "/assets/images/Certainty-and-control-over-closing.webp",
 } as const;
 
 export const SITE = {
@@ -62,7 +74,7 @@ export const MEET_OWNER = {
 
 /** Footer social links — replace `#` with real URLs when ready */
 export const SOCIAL_LINKS = [
-  { label: "Facebook", href: "#", icon: "facebook" },
+  { label: "Facebook", href: "https://www.facebook.com/WeBuyStPeteHouses", icon: "facebook" },
   { label: "LinkedIn", href: "#", icon: "linkedin" },
   { label: "Instagram", href: "#", icon: "instagram" },
   { label: "Google", href: "#", icon: "google" },
@@ -344,11 +356,160 @@ export const SELLER_SITUATIONS = [
 export const SITUATION_CARD_HOME_IMAGES: Record<string, { image: string; imageAlt: string }> = {
   Foreclosure: { image: ASSETS.facingForeclosure, imageAlt: SELLER_SITUATIONS[0].imageAlt },
   Divorce: { image: ASSETS.divorceSeparation, imageAlt: SELLER_SITUATIONS[2].imageAlt },
-  "Inherited / Probate": { image: ASSETS.inheritedHome, imageAlt: SELLER_SITUATIONS[1].imageAlt },
+  "Inherited / Probate": {
+    image: ASSETS.inheritedOrProbateProperty,
+    imageAlt: "Inherited or probate property ready for a cash home sale",
+  },
   "Tired Landlords": { image: ASSETS.tiredLandlord, imageAlt: SELLER_SITUATIONS[3].imageAlt },
   Relocation: { image: ASSETS.relocation, imageAlt: SELLER_SITUATIONS[5].imageAlt },
   "Upside-Down Mortgages": { image: ASSETS.distressedProperty, imageAlt: SELLER_SITUATIONS[4].imageAlt },
 };
+
+type CitySituationInput = { title: string; body: string };
+
+function resolveCitySituationMedia(title: string): { image: string; imageAlt: string; href: string } {
+  const lower = title.toLowerCase();
+
+  if (/behind on payments/i.test(lower)) {
+    return {
+      image: ASSETS.behindOnPayments,
+      imageAlt: "Homeowner reviewing mortgage payment documents",
+      href: "/situations/foreclosure",
+    };
+  }
+  if (/upside-down mortgage|upside down mortgage/i.test(lower)) {
+    return {
+      image: ASSETS.upsideDownMortgage,
+      imageAlt: "House illustrating an upside-down mortgage situation",
+      href: "/situations/lien",
+    };
+  }
+  if (/vacant property|vacant homes|vacant or hard-to-sell/i.test(lower)) {
+    return {
+      image: ASSETS.vacantProperty,
+      imageAlt: "Vacant residential property ready for a cash sale",
+      href: "/situations/sell-as-is",
+    };
+  }
+  if (/foreclos|behind on mortgage|pre-foreclosure/i.test(lower)) {
+    return {
+      image: ASSETS.facingForeclosure,
+      imageAlt: SELLER_SITUATIONS[0].imageAlt,
+      href: "/situations/foreclosure",
+    };
+  }
+  if (/divorc|separat/i.test(lower)) {
+    return {
+      image: ASSETS.divorceSeparation,
+      imageAlt: SELLER_SITUATIONS[2].imageAlt,
+      href: "/situations/divorce",
+    };
+  }
+  if (/inher|probate|estate/i.test(lower)) {
+    return {
+      image: ASSETS.inheritedOrProbateProperty,
+      imageAlt: "Inherited or probate property ready for a cash home sale",
+      href: "/situations/inherited",
+    };
+  }
+  if (/landlord|tenant/i.test(lower)) {
+    return {
+      image: ASSETS.tiredLandlord,
+      imageAlt: SELLER_SITUATIONS[3].imageAlt,
+      href: "/situations/tenants",
+    };
+  }
+  if (/relocat|moving|job transfer/i.test(lower)) {
+    return {
+      image: ASSETS.relocation,
+      imageAlt: SELLER_SITUATIONS[5].imageAlt,
+      href: "/how-it-works",
+    };
+  }
+  if (/lien|upside|underwater/i.test(lower)) {
+    return {
+      image: ASSETS.upsideDownMortgage,
+      imageAlt: "House illustrating an upside-down mortgage situation",
+      href: "/situations/lien",
+    };
+  }
+  if (/major repairs|hard-to-sell|as-is|distress|repair/i.test(lower)) {
+    return {
+      image: ASSETS.distressedProperty,
+      imageAlt: SELLER_SITUATIONS[4].imageAlt,
+      href: "/situations/sell-as-is",
+    };
+  }
+
+  return {
+    image: ASSETS.distressedProperty,
+    imageAlt: SELLER_SITUATIONS[4].imageAlt,
+    href: "/get-cash-offer",
+  };
+}
+
+/** Map location-page situation copy to homepage sit-card layout (images + links). */
+export function mapCitySituationsToSellerCards(items: readonly CitySituationInput[]) {
+  return items.map((item) => {
+    const media = resolveCitySituationMedia(item.title);
+    return {
+      title: item.title,
+      body: item.body,
+      ...media,
+    };
+  });
+}
+
+function resolveCityBenefitMedia(title: string): { image: string; imageAlt: string; href: string } {
+  const lower = title.toLowerCase();
+
+  if (/no financing risk|financing risk/i.test(lower)) {
+    return {
+      image: ASSETS.noFinancingRisk,
+      imageAlt: "Cash home sale with no buyer financing risk",
+      href: "/get-cash-offer",
+    };
+  }
+  if (/sell as-is|no repairs or cleaning|as-is.*repair/i.test(lower)) {
+    return {
+      image: ASSETS.sellAsIsNoRepairs,
+      imageAlt: "Selling a Clearwater home as-is with no repairs or cleaning",
+      href: "/situations/sell-as-is",
+    };
+  }
+  if (/no agent commissions|commissions or fees|agent commissions/i.test(lower)) {
+    return {
+      image: ASSETS.noAgentCommissions,
+      imageAlt: "Home sale with no real estate agent commissions or fees",
+      href: "/get-cash-offer",
+    };
+  }
+  if (/certainty and control|certainty.*closing|control over closing/i.test(lower)) {
+    return {
+      image: ASSETS.certaintyControlClosing,
+      imageAlt: "Certainty and control over your cash home sale closing date",
+      href: "/get-cash-offer",
+    };
+  }
+
+  return {
+    image: ASSETS.distressedProperty,
+    imageAlt: SELLER_SITUATIONS[4].imageAlt,
+    href: "/get-cash-offer",
+  };
+}
+
+/** Map location-page benefits copy to homepage sit-card layout (images, non-linked cards). */
+export function mapCityBenefitsToSellerCards(items: readonly CitySituationInput[]) {
+  return items.map((item) => {
+    const media = resolveCityBenefitMedia(item.title);
+    return {
+      title: item.title,
+      body: item.body,
+      ...media,
+    };
+  });
+}
 
 /** @deprecated Use SELLER_SITUATIONS */
 export const SELL_HOUSE_SITUATIONS = SELLER_SITUATIONS;
