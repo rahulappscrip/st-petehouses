@@ -1,5 +1,5 @@
 import { HeroSection } from "@/components/home/HeroSection";
-import { CitySituationsSection } from "@/components/cities/CitySituationsSection";
+import { SellerSituationsSection } from "@/components/home/SellerSituationsSection";
 import { CityBenefitsSection } from "@/components/cities/CityBenefitsSection";
 import { CityAfterAcceptSection } from "@/components/cities/CityAfterAcceptSection";
 import { CityCompareSection } from "@/components/cities/CityCompareSection";
@@ -20,7 +20,7 @@ import {
   type CitySectionId,
 } from "@/lib/city-content";
 import { notFound } from "next/navigation";
-import { SITE } from "@/lib/constants";
+import { mapCitySituationsToSellerCards, SITE } from "@/lib/constants";
 import type { CityPageData } from "@/lib/cities";
 
 type Props = {
@@ -76,7 +76,7 @@ function renderCitySection(id: CitySectionId, content: CityFullContent, page: Ci
 
     case "situations":
       return (
-        <CitySituationsSection
+        <SellerSituationsSection
           key={id}
           eyebrow={content.situations.eyebrow}
           title={
@@ -87,8 +87,7 @@ function renderCitySection(id: CitySectionId, content: CityFullContent, page: Ci
             />
           }
           lede={content.situations.lede}
-          items={content.situations.items}
-          alt={alt}
+          items={mapCitySituationsToSellerCards(content.situations.items)}
         />
       );
 
@@ -123,6 +122,8 @@ function renderCitySection(id: CitySectionId, content: CityFullContent, page: Ci
           }
           lede={content.market.lede}
           factors={content.market.factors}
+          chartImage={content.market.chartImage}
+          chartImageAlt={content.market.chartImageAlt}
           showLocal={false}
           alt={alt}
         />

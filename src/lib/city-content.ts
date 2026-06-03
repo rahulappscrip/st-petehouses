@@ -1,4 +1,4 @@
-import { SITE } from "./constants";
+import { ASSETS, SITE } from "./constants";
 
 export type CitySectionId =
   | "process"
@@ -113,6 +113,8 @@ export type CityFullContent = {
     eyebrow: string;
     lede: string;
     factors: CityMarketFactor[];
+    chartImage?: string;
+    chartImageAlt?: string;
   };
   guarantee?: SectionTitle & {
     eyebrow: string;
@@ -293,6 +295,8 @@ const ST_PETERSBURG: CityFullContent = {
     titleEm: "St. Petersburg",
     titleTail: " cash home market.",
     lede: "St. Pete is a unique market — its blend of small over 4,000 homes, a vibrant housing stock, and high post-hurricane repair needs means sellers have real options beyond listing agents.",
+    chartImage: ASSETS.marketChartStPetersburg,
+    chartImageAlt: "Understanding the St. Petersburg cash home market",
     factors: [
       {
         letter: "A",

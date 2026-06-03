@@ -10,12 +10,16 @@ export const ASSETS = {
   favicon: "/favicon.ico",
   faviconPng: "/assets/images/we-buy-st-pete-favicon-res.png",
   marketChart: "/assets/images/Understanding-the-st-pete-market.webp",
+  marketChartStPetersburg: "/assets/images/Understanding-the-st-Petersburg-cash.webp",
   facingForeclosure: "/assets/images/facing-foreclosure.webp",
   inheritedHome: "/assets/images/inherited-home.webp",
   divorceSeparation: "/assets/images/divorce-or-seperation.webp",
   tiredLandlord: "/assets/images/tired-landload.webp",
   distressedProperty: "/assets/images/distressed-property.webp",
   relocation: "/assets/images/relocation.webp",
+  upsideDownMortgage: "/assets/images/Upside-Down-Mortgage.webp",
+  vacantProperty: "/assets/images/Vacant-Property.webp",
+  behindOnPayments: "/assets/images/Behind-on-Payments.webp",
 } as const;
 
 export const SITE = {
@@ -349,6 +353,101 @@ export const SITUATION_CARD_HOME_IMAGES: Record<string, { image: string; imageAl
   Relocation: { image: ASSETS.relocation, imageAlt: SELLER_SITUATIONS[5].imageAlt },
   "Upside-Down Mortgages": { image: ASSETS.distressedProperty, imageAlt: SELLER_SITUATIONS[4].imageAlt },
 };
+
+type CitySituationInput = { title: string; body: string };
+
+function resolveCitySituationMedia(title: string): { image: string; imageAlt: string; href: string } {
+  const lower = title.toLowerCase();
+
+  if (/behind on payments/i.test(lower)) {
+    return {
+      image: ASSETS.behindOnPayments,
+      imageAlt: "Homeowner reviewing mortgage payment documents",
+      href: "/situations/foreclosure",
+    };
+  }
+  if (/upside-down mortgage|upside down mortgage/i.test(lower)) {
+    return {
+      image: ASSETS.upsideDownMortgage,
+      imageAlt: "House illustrating an upside-down mortgage situation",
+      href: "/situations/lien",
+    };
+  }
+  if (/vacant property|vacant homes|vacant or hard-to-sell/i.test(lower)) {
+    return {
+      image: ASSETS.vacantProperty,
+      imageAlt: "Vacant residential property ready for a cash sale",
+      href: "/situations/sell-as-is",
+    };
+  }
+  if (/foreclos|behind on mortgage|pre-foreclosure/i.test(lower)) {
+    return {
+      image: ASSETS.facingForeclosure,
+      imageAlt: SELLER_SITUATIONS[0].imageAlt,
+      href: "/situations/foreclosure",
+    };
+  }
+  if (/divorc|separat/i.test(lower)) {
+    return {
+      image: ASSETS.divorceSeparation,
+      imageAlt: SELLER_SITUATIONS[2].imageAlt,
+      href: "/situations/divorce",
+    };
+  }
+  if (/inher|probate|estate/i.test(lower)) {
+    return {
+      image: ASSETS.inheritedHome,
+      imageAlt: SELLER_SITUATIONS[1].imageAlt,
+      href: "/situations/inherited",
+    };
+  }
+  if (/landlord|tenant/i.test(lower)) {
+    return {
+      image: ASSETS.tiredLandlord,
+      imageAlt: SELLER_SITUATIONS[3].imageAlt,
+      href: "/situations/tenants",
+    };
+  }
+  if (/relocat|moving|job transfer/i.test(lower)) {
+    return {
+      image: ASSETS.relocation,
+      imageAlt: SELLER_SITUATIONS[5].imageAlt,
+      href: "/how-it-works",
+    };
+  }
+  if (/lien|upside|underwater/i.test(lower)) {
+    return {
+      image: ASSETS.upsideDownMortgage,
+      imageAlt: "House illustrating an upside-down mortgage situation",
+      href: "/situations/lien",
+    };
+  }
+  if (/major repairs|hard-to-sell|as-is|distress|repair/i.test(lower)) {
+    return {
+      image: ASSETS.distressedProperty,
+      imageAlt: SELLER_SITUATIONS[4].imageAlt,
+      href: "/situations/sell-as-is",
+    };
+  }
+
+  return {
+    image: ASSETS.distressedProperty,
+    imageAlt: SELLER_SITUATIONS[4].imageAlt,
+    href: "/get-cash-offer",
+  };
+}
+
+/** Map location-page situation copy to homepage sit-card layout (images + links). */
+export function mapCitySituationsToSellerCards(items: readonly CitySituationInput[]) {
+  return items.map((item) => {
+    const media = resolveCitySituationMedia(item.title);
+    return {
+      title: item.title,
+      body: item.body,
+      ...media,
+    };
+  });
+}
 
 /** @deprecated Use SELLER_SITUATIONS */
 export const SELL_HOUSE_SITUATIONS = SELLER_SITUATIONS;

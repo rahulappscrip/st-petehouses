@@ -20,6 +20,8 @@ type MarketSectionProps = {
   showChart?: boolean;
   showLocal?: boolean;
   alt?: boolean;
+  chartImage?: string;
+  chartImageAlt?: string;
 };
 
 export function MarketSection({
@@ -36,6 +38,8 @@ export function MarketSection({
   showChart = true,
   showLocal = true,
   alt = true,
+  chartImage = ASSETS.marketChart,
+  chartImageAlt = "Chart illustrating the St. Petersburg cash home market",
 }: MarketSectionProps = {}) {
   return (
     <section className={`section${alt ? " section-alt" : ""} market-section`} id="market">
@@ -46,8 +50,8 @@ export function MarketSection({
           {showChart ? (
             <Reveal className="market-chart">
               <Image
-                src={ASSETS.marketChart}
-                alt=""
+                src={chartImage}
+                alt={chartImageAlt}
                 width={960}
                 height={720}
                 sizes="(min-width: 960px) 50vw, 100vw"
