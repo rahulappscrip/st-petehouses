@@ -54,7 +54,7 @@ export default function HomePage() {
       <AreasSection />
       <ReviewsSection />
       <MarketSection showLocal={false} />
-      <GuaranteeSection />
+      <GuaranteeSection variant="card" />
       <ResourcesSection />
       <FaqSection />
       <FinalCtaSection />
