@@ -217,7 +217,12 @@ export type SituationFullContent = {
     steps: { num: string; title: string; body: string }[];
     equityNote?: { title: string; body: string };
   };
-  cards?: SituationTitleParts & { items: SituationCard[]; exclusionNote?: string };
+  cards?: SituationTitleParts & {
+    items: SituationCard[];
+    exclusionNote?: string;
+    /** Use homepage-style image cards (sit-cards) instead of icon grid. */
+    imageCards?: boolean;
+  };
   areas?: SituationTitleParts & {
     areasNote?: string;
     areasNoteLink?: SituationInlineLink;

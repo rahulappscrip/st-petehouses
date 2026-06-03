@@ -1788,6 +1788,7 @@
       "titleEm": "Florida Lien",
       "titleTail": " — We've Seen It",
       "lede": "Liens come in many forms. All of them can be resolved at closing when you sell to us. Here are the most common types we handle across St. Pete and Tampa Bay.",
+      "imageCards": true,
       "items": [
         {
           "icon": "📄",

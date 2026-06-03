@@ -10,7 +10,7 @@ export function MobileCallBar() {
         </svg>
         Call
       </a>
-      <Link href="/get-cash-offer" className="btn btn--cta">
+      <Link href={SITE.cashOfferHref} className="btn btn--cta">
         Get cash offer
       </Link>
     </div>

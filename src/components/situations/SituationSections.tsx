@@ -1,4 +1,5 @@
-import type { ReactNode } from "react";
+import { Fragment, type ReactNode } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHead } from "@/components/ui/SectionHead";
@@ -13,7 +14,12 @@ import { GuaranteeSection } from "@/components/home/GuaranteeSection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { FinalCtaSection } from "@/components/home/FinalCtaSection";
 import { SellerSituationsSection } from "@/components/home/SellerSituationsSection";
-import { SITE, SITUATION_CARD_HOME_IMAGES } from "@/lib/constants";
+import {
+  LIEN_PROPERTY_SITUATION_IMAGES,
+  mapCitySituationsToSellerCards,
+  SITE,
+  SITUATION_CARD_HOME_IMAGES,
+} from "@/lib/constants";
 import type {
   SituationCourtProcess,
   SituationFullContent,
@@ -620,13 +626,37 @@ export function SituationForestSituationsSection({
           lede={data.lede}
         />
         <div className="situation-forest-sit__grid">
-          {data.items.map((item, i) => (
-            <Reveal key={item.title} className="situation-forest-sit__card" d={i > 0 ? ((i % 3) as 1 | 2 | 3) : undefined}>
-              <span className="situation-forest-sit__dot" aria-hidden />
-              <h3>{item.title}</h3>
-              <p>{item.body}</p>
-            </Reveal>
-          ))}
+          {data.items.map((item, i) => {
+            const photo =
+              item.image && item.imageAlt
+                ? { image: item.image, imageAlt: item.imageAlt }
+                : LIEN_PROPERTY_SITUATION_IMAGES[item.title];
+
+            return (
+              <Reveal
+                key={item.title}
+                className="situation-forest-sit__card"
+                d={i > 0 ? ((i % 3) as 1 | 2 | 3) : undefined}
+              >
+                {photo ? (
+                  <div className="situation-forest-sit__media">
+                    <Image
+                      src={photo.image}
+                      alt={photo.imageAlt}
+                      width={800}
+                      height={500}
+                      sizes="(min-width: 1024px) 33vw, (min-width: 720px) 50vw, 100vw"
+                      className="situation-forest-sit__img"
+                    />
+                  </div>
+                ) : null}
+                <div className="situation-forest-sit__body">
+                  <h3>{item.title}</h3>
+                  <p>{item.body}</p>
+                </div>
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>
@@ -1138,29 +1168,56 @@ export function renderSituationSection(
 
     case "cards":
       return content.cards ? (
-        <section key={id} className={`section${alt ? " section-alt" : ""}`}>
-          <div className="wrap">
-            <CitySituationsSection
-              embedded
-              alt={false}
+        content.cards.imageCards ? (
+          <Fragment key={id}>
+            <SellerSituationsSection
+              sectionId="cards"
+              className={alt ? "section-alt" : ""}
               eyebrow={content.cards.eyebrow}
               title={titleToParts(content.cards)}
               lede={content.cards.lede ?? ""}
-              items={content.cards.items.map((item) => ({
-                icon: item.icon ?? "•",
-                title: item.title,
-                body: item.body,
-              }))}
+              linkable={false}
+              items={mapCitySituationsToSellerCards(
+                content.cards.items.map((item) => ({ title: item.title, body: item.body })),
+              )}
             />
             {content.cards.exclusionNote ? (
-              <div className="situation-exclusion-note">
-                <p>
-                  <strong>What we don&apos;t purchase:</strong> {content.cards.exclusionNote}
-                </p>
-              </div>
+              <section className={`section${alt ? " section-alt" : ""}`}>
+                <div className="wrap">
+                  <div className="situation-exclusion-note">
+                    <p>
+                      <strong>What we don&apos;t purchase:</strong> {content.cards.exclusionNote}
+                    </p>
+                  </div>
+                </div>
+              </section>
             ) : null}
-          </div>
-        </section>
+          </Fragment>
+        ) : (
+          <section key={id} className={`section${alt ? " section-alt" : ""}`}>
+            <div className="wrap">
+              <CitySituationsSection
+                embedded
+                alt={false}
+                eyebrow={content.cards.eyebrow}
+                title={titleToParts(content.cards)}
+                lede={content.cards.lede ?? ""}
+                items={content.cards.items.map((item) => ({
+                  icon: item.icon ?? "•",
+                  title: item.title,
+                  body: item.body,
+                }))}
+              />
+              {content.cards.exclusionNote ? (
+                <div className="situation-exclusion-note">
+                  <p>
+                    <strong>What we don&apos;t purchase:</strong> {content.cards.exclusionNote}
+                  </p>
+                </div>
+              ) : null}
+            </div>
+          </section>
+        )
       ) : null;
 
     case "areas":

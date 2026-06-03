@@ -28,7 +28,42 @@ export const ASSETS = {
   sellAsIsNoRepairs: "/assets/images/Sell-as-is-no-repairs-or-cleaning.webp",
   noAgentCommissions: "/assets/images/No-agent-commissions-or-fees.webp",
   certaintyControlClosing: "/assets/images/Certainty-and-control-over-closing.webp",
+  taxLiens: "/assets/images/Tax-Liens-1.webp",
+  mortgageLiens: "/assets/images/Mortgage-Liens-1.webp",
+  judgmentLiens: "/assets/images/Judgment-Liens-1.webp",
+  mechanicsLiens: "/assets/images/Mechanics-Liens-1.webp",
+  hoaLiens: "/assets/images/HOA-Liens-1.webp",
+  multipleLiens: "/assets/images/Multiple-Liens-1.webp",
+  ownerOccupiedWithLiens: "/assets/images/Owner-Occupied-with-Liens-optimized.webp",
 } as const;
+
+/** Lien page — "Properties and Situations We Handle" forest cards. */
+export const LIEN_PROPERTY_SITUATION_IMAGES: Record<string, { image: string; imageAlt: string }> = {
+  "Owner-Occupied with Liens": {
+    image: ASSETS.ownerOccupiedWithLiens,
+    imageAlt: "Owner-occupied Florida home with liens sold for cash",
+  },
+  "Rental Properties": {
+    image: ASSETS.upsideDownMortgage,
+    imageAlt: "Rental property with liens purchased as-is for cash",
+  },
+  "Inherited / Probate Properties": {
+    image: ASSETS.inheritedOrProbateProperty,
+    imageAlt: "Inherited or probate property with liens resolved at closing",
+  },
+  "Vacant Homes": {
+    image: ASSETS.vacantProperty,
+    imageAlt: "Vacant Florida home with liens sold for cash",
+  },
+  "Foreclosure Risk": {
+    image: ASSETS.taxLiens,
+    imageAlt: "Florida home facing foreclosure sold with lien payoff at closing",
+  },
+  "Relocation or Life Events": {
+    image: ASSETS.relocation,
+    imageAlt: "Home sold quickly for cash during relocation or life changes",
+  },
+};
 
 export const SITE = {
   name: "We Buy St Pete Houses",
@@ -40,6 +75,8 @@ export const SITE = {
   address: "PO Box 143, St. Petersburg, FL 33731",
   url: "https://webuystpetehouses.com/",
   mapsHref: "https://maps.app.goo.gl/WLWfNKY5PqvBVPXy5",
+  /** Primary “Get Cash Offer” CTA — contact page with offer form */
+  cashOfferHref: "/contact",
 } as const;
 
 export const HOMEPAGE_SEO = {
@@ -419,6 +456,48 @@ function resolveCitySituationMedia(title: string): { image: string; imageAlt: st
       href: "/situations/tenants",
     };
   }
+  if (/tax lien/i.test(lower)) {
+    return {
+      image: ASSETS.taxLiens,
+      imageAlt: "Florida home with tax lien resolved at cash closing",
+      href: "/situations/lien",
+    };
+  }
+  if (/mortgage lien/i.test(lower)) {
+    return {
+      image: ASSETS.mortgageLiens,
+      imageAlt: "Home with mortgage lien paid off from sale proceeds at closing",
+      href: "/situations/lien",
+    };
+  }
+  if (/judgment lien/i.test(lower)) {
+    return {
+      image: ASSETS.judgmentLiens,
+      imageAlt: "Property with judgment lien handled at cash closing",
+      href: "/situations/lien",
+    };
+  }
+  if (/mechanic.*lien|mechanics lien/i.test(lower)) {
+    return {
+      image: ASSETS.mechanicsLiens,
+      imageAlt: "Home with mechanic's lien sold as-is for cash",
+      href: "/situations/lien",
+    };
+  }
+  if (/hoa lien/i.test(lower)) {
+    return {
+      image: ASSETS.hoaLiens,
+      imageAlt: "Property with HOA lien satisfied at closing",
+      href: "/situations/lien",
+    };
+  }
+  if (/multiple lien/i.test(lower)) {
+    return {
+      image: ASSETS.multipleLiens,
+      imageAlt: "Property with multiple liens coordinated at cash closing",
+      href: "/situations/lien",
+    };
+  }
   if (/relocat|moving|job transfer/i.test(lower)) {
     return {
       image: ASSETS.relocation,
@@ -444,7 +523,7 @@ function resolveCitySituationMedia(title: string): { image: string; imageAlt: st
   return {
     image: ASSETS.distressedProperty,
     imageAlt: SELLER_SITUATIONS[4].imageAlt,
-    href: "/get-cash-offer",
+    href: SITE.cashOfferHref,
   };
 }
 
@@ -467,7 +546,7 @@ function resolveCityBenefitMedia(title: string): { image: string; imageAlt: stri
     return {
       image: ASSETS.noFinancingRisk,
       imageAlt: "Cash home sale with no buyer financing risk",
-      href: "/get-cash-offer",
+      href: SITE.cashOfferHref,
     };
   }
   if (/sell as-is|no repairs or cleaning|as-is.*repair/i.test(lower)) {
@@ -481,21 +560,21 @@ function resolveCityBenefitMedia(title: string): { image: string; imageAlt: stri
     return {
       image: ASSETS.noAgentCommissions,
       imageAlt: "Home sale with no real estate agent commissions or fees",
-      href: "/get-cash-offer",
+      href: SITE.cashOfferHref,
     };
   }
   if (/certainty and control|certainty.*closing|control over closing/i.test(lower)) {
     return {
       image: ASSETS.certaintyControlClosing,
       imageAlt: "Certainty and control over your cash home sale closing date",
-      href: "/get-cash-offer",
+      href: SITE.cashOfferHref,
     };
   }
 
   return {
     image: ASSETS.distressedProperty,
     imageAlt: SELLER_SITUATIONS[4].imageAlt,
-    href: "/get-cash-offer",
+    href: SITE.cashOfferHref,
   };
 }
 

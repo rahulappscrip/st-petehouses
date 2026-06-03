@@ -16,7 +16,7 @@ export function ReadyToSellCard({
   title = "Get a no-obligation cash offer.",
   description = "Tell us about your property. Offer in 24 hours, close in as little as 7 days.",
   primaryLabel = "Get my cash offer →",
-  primaryHref = "/get-cash-offer",
+  primaryHref = SITE.cashOfferHref,
 }: ReadyToSellCardProps) {
   return (
     <aside className={className ? `about-cta-card ${className}` : "about-cta-card"}>
