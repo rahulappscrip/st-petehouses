@@ -35,6 +35,56 @@ export const ASSETS = {
   hoaLiens: "/assets/images/HOA-Liens-1.webp",
   multipleLiens: "/assets/images/Multiple-Liens-1.webp",
   ownerOccupiedWithLiens: "/assets/images/Owner-Occupied-with-Liens-optimized.webp",
+  floodDamagedProperties: "/assets/images/Flood-Damaged-Properties.webp",
+  floodZoneProperties: "/assets/images/Flood-Zone-Properties.webp",
+  moldAndMoistureDamage: "/assets/images/Mold-and-Moisture-Damage.webp",
+  combinedFloodHurricaneDamage: "/assets/images/Combined-Flood-Hurricane-Damage.webp",
+  floodDamages: "/assets/images/Flood-damages.webp",
+  anyFloodDamageCondition: "/assets/images/Any-Flood-Damage-Condition.webp",
+  roofDamage: "/assets/images/Roof-Damage.webp",
+  floodWaterIntrusion: "/assets/images/Flood-Water-Intrusion.webp",
+  hurricaneWindDamage: "/assets/images/Hurricane-Wind-Damage.webp",
+  moldMoisture: "/assets/images/Mold-Moisture.webp",
+  structuralDamageOptimized: "/assets/images/Structural-Damage-optimized.webp",
+  anyConditionWeBuyIt: "/assets/images/Any-Condition-We-Buy-It.webp",
+  leaseContinuity: "/assets/images/Lease-Continuity.webp",
+  remainingLeaseDuration: "/assets/images/Remaining-Lease-Duration.webp",
+  immediateCashFlow: "/assets/images/Immediate-Cash-Flow.webp",
+  moveOutTimelineClarity: "/assets/images/Move-Out-Timeline-Clarity.webp",
+  cleanDocumentation: "/assets/images/Clean-Documentation.webp",
+  weBuyRegardless: "/assets/images/We-Buy-Regardless.webp",
+  localPresence: "/assets/images/Local-Presence.webp",
+  noHiddenFees: "/assets/images/No-Hidden-Fees.webp",
+  sellAsIsOptimized: "/assets/images/Sell-As-Is-optimized.webp",
+  guaranteedCashOffer: "/assets/images/Guaranteed-Cash-Offer.webp",
+  flexibleClosings: "/assets/images/Flexible-Closings.webp",
+  clearCommunication: "/assets/images/Clear-Communication.webp",
+  fireStructuralDamage: "/assets/images/Structural-Damage-1.webp",
+  fireSmokeSootDamage: "/assets/images/Smoke-Soot-Damage-1.webp",
+  fireWaterDamageFirefighting: "/assets/images/Water-Damage-from-Firefighting-optimized.webp",
+  fireDebrisCleanup: "/assets/images/Debris-Cleanup-1.webp",
+  fireOpenInsuranceClaims: "/assets/images/Open-Insurance-Claims-1.webp",
+  fireAnyConditionWeBuyIt: "/assets/images/Any-Condition-We-Buy-It-1.webp",
+  fireDamagedHomes: "/assets/images/Fire-Damaged-Homes-1.webp",
+  vacantPropertiesCard: "/assets/images/Vacant-Properties-1.webp",
+  propertiesWithLiensCard: "/assets/images/Properties-with-Liens-1.webp",
+  homesWithProblemTenants: "/assets/images/Homes-with-Problem-Tenants-1.webp",
+  sellAsIsForeclosure: "/assets/images/Foreclosure-1.webp",
+  sellAsIsProbateInherited: "/assets/images/Probate-Inherited-1.webp",
+  sellAsIsRelocation: "/assets/images/Relocation-1.webp",
+  sellAsIsTiredLandlord: "/assets/images/Tired-Landlord.webp",
+  sellAsIsMajorRepairsNeeded: "/assets/images/Major-Repairs-Needed.webp",
+  sellAsIsDivorceHardship: "/assets/images/Divorce-Hardship.webp",
+  sellAsIsPredictableTimeline: "/assets/images/Predictable-timeline.webp",
+  sellAsIsLocalMarketKnowledge: "/assets/images/Local-market-knowledge.webp",
+  sellAsIsSellerFocusedSupport: "/assets/images/Seller-focused-support.webp",
+  sellAsIsNoHiddenCosts: "/assets/images/No-hidden-costs.webp",
+  divorceCourtsMayDelayASale: "/assets/images/Courts-May-Delay-a-Sale.webp",
+  divorceTemporaryArrangementsMatter: "/assets/images/Temporary-Arrangements-Matter.webp",
+  divorceCertaintyReducesDisruption: "/assets/images/Certainty-Reduces-Disruption.webp",
+  divorceJoint500kExclusion: "/assets/images/Joint-500k-Exclusion.webp",
+  divorceTimingTheSaleMatters: "/assets/images/Timing-the-Sale-Matters-optimized.webp",
+  divorceCashSaleSimplifiesRecords: "/assets/images/Cash-Sale-Simplifies-Records.webp",
 } as const;
 
 /** Lien page — "Properties and Situations We Handle" forest cards. */
@@ -62,6 +112,272 @@ export const LIEN_PROPERTY_SITUATION_IMAGES: Record<string, { image: string; ima
   "Relocation or Life Events": {
     image: ASSETS.relocation,
     imageAlt: "Home sold quickly for cash during relocation or life changes",
+  },
+};
+
+/** Water damage page — "What We Buy and When It Applies" cards. */
+export const WATER_DAMAGE_CARD_IMAGES: Record<string, { image: string; imageAlt: string }> = {
+  "Flood-Damaged Properties": {
+    image: ASSETS.floodDamagedProperties,
+    imageAlt: "Flood-damaged home in St Petersburg sold for cash as-is",
+  },
+  "Flood Zone Properties": {
+    image: ASSETS.floodZoneProperties,
+    imageAlt: "Flood zone property in Pinellas County purchased for cash",
+  },
+  "Mold and Moisture Damage": {
+    image: ASSETS.moldAndMoistureDamage,
+    imageAlt: "Home with mold and moisture damage sold without repairs",
+  },
+  "Combined Flood + Hurricane Damage": {
+    image: ASSETS.combinedFloodHurricaneDamage,
+    imageAlt: "Property with combined flood and hurricane damage sold for cash",
+  },
+  "Compromised Foundations": {
+    image: ASSETS.floodDamages,
+    imageAlt: "Flood-compromised foundation home sold as-is in St Petersburg",
+  },
+  "Any Flood Damage Condition": {
+    image: ASSETS.anyFloodDamageCondition,
+    imageAlt: "Any flood damage condition — mild to severe — purchased for cash",
+  },
+};
+
+/** Storm damage page — "Every Type of Storm Damage" cards. */
+export const STORM_DAMAGE_CARD_IMAGES: Record<string, { image: string; imageAlt: string }> = {
+  "Roof Damage": {
+    image: ASSETS.roofDamage,
+    imageAlt: "Storm-damaged roof on a Florida home sold for cash as-is",
+  },
+  "Flood & Water Intrusion": {
+    image: ASSETS.floodWaterIntrusion,
+    imageAlt: "Home with flood and water intrusion from storm damage sold for cash",
+  },
+  "Hurricane / Wind Damage": {
+    image: ASSETS.hurricaneWindDamage,
+    imageAlt: "Hurricane and wind-damaged property purchased for cash in Tampa Bay",
+  },
+  "Mold & Moisture": {
+    image: ASSETS.moldMoisture,
+    imageAlt: "Storm-damaged home with mold and moisture sold without remediation",
+  },
+  "Structural Damage": {
+    image: ASSETS.structuralDamageOptimized,
+    imageAlt: "Structurally compromised storm-damaged home sold for cash",
+  },
+  "Any Condition — We Buy It": {
+    image: ASSETS.anyConditionWeBuyIt,
+    imageAlt: "Any storm damage condition — we buy Tampa Bay homes for cash",
+  },
+};
+
+/** Tenants page — "What Buyers Look for in Tenant-Occupied Properties" cards. */
+export const TENANTS_CARD_IMAGES: Record<string, { image: string; imageAlt: string }> = {
+  "Lease Continuity": {
+    image: ASSETS.leaseContinuity,
+    imageAlt: "Tenant-occupied rental with stable lease continuity sold for cash",
+  },
+  "Remaining Lease Duration": {
+    image: ASSETS.remainingLeaseDuration,
+    imageAlt: "Rental property with remaining lease duration purchased with tenants in place",
+  },
+  "Immediate Cash Flow": {
+    image: ASSETS.immediateCashFlow,
+    imageAlt: "Tenant-occupied property offering immediate rental cash flow for buyers",
+  },
+  "Move-Out Timeline Clarity": {
+    image: ASSETS.moveOutTimelineClarity,
+    imageAlt: "Rental sale with clear move-out timeline and tenant coordination",
+  },
+  "Clean Documentation": {
+    image: ASSETS.cleanDocumentation,
+    imageAlt: "Tenant-occupied sale with clean lease and deposit documentation",
+  },
+  "We Buy Regardless": {
+    image: ASSETS.weBuyRegardless,
+    imageAlt: "We buy tenant-occupied Florida rentals regardless of lease or tenant status",
+  },
+};
+
+/** Cash home buyers page — "Why trust We Buy St Pete Houses?" cards. */
+export const CASH_HOME_BUYERS_CARD_IMAGES: Record<string, { image: string; imageAlt: string }> = {
+  "Local Presence": {
+    image: ASSETS.localPresence,
+    imageAlt: "Local St Petersburg cash home buyers based in Pinellas County",
+  },
+  "No Hidden Fees": {
+    image: ASSETS.noHiddenFees,
+    imageAlt: "Cash home sale with no commissions or hidden fees",
+  },
+  "Sell As-Is": {
+    image: ASSETS.sellAsIsOptimized,
+    imageAlt: "Sell your St Petersburg home as-is for cash with no repairs",
+  },
+  "Guaranteed Cash Offer": {
+    image: ASSETS.guaranteedCashOffer,
+    imageAlt: "Guaranteed cash offer backed by real funds, not financing contingencies",
+  },
+  "Flexible Closings": {
+    image: ASSETS.flexibleClosings,
+    imageAlt: "Flexible closing timeline on your cash home sale in St Pete",
+  },
+  "Clear Communication": {
+    image: ASSETS.clearCommunication,
+    imageAlt: "Clear communication throughout your cash home sale process",
+  },
+};
+
+/** Fire damage page — "Sell As-Is — No Repairs Required" cards. */
+export const FIRE_DAMAGE_CARD_IMAGES: Record<string, { image: string; imageAlt: string }> = {
+  "Structural Damage": {
+    image: ASSETS.fireStructuralDamage,
+    imageAlt: "Fire-damaged home with structural damage sold for cash in St Petersburg",
+  },
+  "Smoke & Soot Damage": {
+    image: ASSETS.fireSmokeSootDamage,
+    imageAlt: "House with smoke and soot damage from fire sold as-is for cash",
+  },
+  "Water Damage from Firefighting": {
+    image: ASSETS.fireWaterDamageFirefighting,
+    imageAlt: "Fire-damaged home with water damage from firefighting sold for cash",
+  },
+  "Debris & Cleanup": {
+    image: ASSETS.fireDebrisCleanup,
+    imageAlt: "Fire-damaged property with debris sold without cleanup required",
+  },
+  "Open Insurance Claims": {
+    image: ASSETS.fireOpenInsuranceClaims,
+    imageAlt: "Sell a fire-damaged home with an open insurance claim for cash",
+  },
+  "Any Condition — We Buy It": {
+    image: ASSETS.fireAnyConditionWeBuyIt,
+    imageAlt: "Any fire damage condition — we buy St Petersburg homes for cash",
+  },
+};
+
+/** Divorce page — "How Do Minor Children Affect Home Sale Decisions?" cards. */
+export const DIVORCE_FAMILY_CARD_IMAGES: Record<string, { image: string; imageAlt: string }> = {
+  "Courts May Delay a Sale": {
+    image: ASSETS.divorceCourtsMayDelayASale,
+    imageAlt: "Florida court considerations when selling a home during divorce with minor children",
+  },
+  "Temporary Arrangements Matter": {
+    image: ASSETS.divorceTemporaryArrangementsMatter,
+    imageAlt: "Temporary custody arrangements affecting who stays in the marital home during divorce",
+  },
+  "Certainty Reduces Disruption": {
+    image: ASSETS.divorceCertaintyReducesDisruption,
+    imageAlt: "Fast cash home sale providing certainty and a defined closing date during divorce",
+  },
+};
+
+/** Divorce page — "Tax Implications of Selling During Divorce in Florida" cards. */
+export const DIVORCE_TAX_CARD_IMAGES: Record<string, { image: string; imageAlt: string }> = {
+  "Joint $500k Exclusion": {
+    image: ASSETS.divorceJoint500kExclusion,
+    imageAlt: "Joint $500,000 capital gains exclusion when selling before divorce is finalized",
+  },
+  "Timing the Sale Matters": {
+    image: ASSETS.divorceTimingTheSaleMatters,
+    imageAlt: "Timing a home sale relative to divorce decree for capital gains tax treatment",
+  },
+  "Cash Sale Simplifies Records": {
+    image: ASSETS.divorceCashSaleSimplifiesRecords,
+    imageAlt: "Cash home sale with clear closing records for divorce tax planning",
+  },
+};
+
+export const SITUATION_PAGE_CARD_IMAGES: Partial<
+  Record<string, Record<string, { image: string; imageAlt: string }>>
+> = {
+  "water-damage": WATER_DAMAGE_CARD_IMAGES,
+  "storm-damage": STORM_DAMAGE_CARD_IMAGES,
+  tenants: TENANTS_CARD_IMAGES,
+  "cash-home-buyers": CASH_HOME_BUYERS_CARD_IMAGES,
+  "fire-damage": FIRE_DAMAGE_CARD_IMAGES,
+  divorce: DIVORCE_FAMILY_CARD_IMAGES,
+};
+
+/** Fire damage page — "What We Buy in St Petersburg" situations cards. */
+export const FIRE_DAMAGE_SITUATION_IMAGES: Record<string, { image: string; imageAlt: string }> = {
+  "Fire-Damaged Homes": {
+    image: ASSETS.fireDamagedHomes,
+    imageAlt: "Fire-damaged home in St Petersburg sold for cash as-is",
+  },
+  "Vacant Properties": {
+    image: ASSETS.vacantPropertiesCard,
+    imageAlt: "Vacant property in Tampa Bay purchased for cash",
+  },
+  "Inherited / Probate Homes": {
+    image: ASSETS.inheritedOrProbateProperty,
+    imageAlt: "Inherited or probate home sold for cash in St Petersburg",
+  },
+  "Properties with Liens": {
+    image: ASSETS.propertiesWithLiensCard,
+    imageAlt: "Property with liens sold for cash in St Petersburg",
+  },
+  "Homes with Problem Tenants": {
+    image: ASSETS.homesWithProblemTenants,
+    imageAlt: "Tenant-occupied home with problem tenants sold for cash",
+  },
+  "Upside-Down Mortgages": {
+    image: ASSETS.upsideDownMortgage,
+    imageAlt: "Upside-down mortgage home sold for cash in St Petersburg",
+  },
+};
+
+export const SITUATION_PAGE_SITUATION_IMAGES: Partial<
+  Record<string, Record<string, { image: string; imageAlt: string }>>
+> = {
+  "fire-damage": FIRE_DAMAGE_SITUATION_IMAGES,
+  divorce: DIVORCE_TAX_CARD_IMAGES,
+};
+
+/** Sell as-is — "When a cash sale makes sense" chips. */
+export const SELL_AS_IS_WHEN_IMAGES: Record<string, { image: string; imageAlt: string }> = {
+  Foreclosure: {
+    image: ASSETS.sellAsIsForeclosure,
+    imageAlt: "Foreclosed or pre-foreclosure home sold as-is for cash in St Petersburg",
+  },
+  "Probate / Inherited": {
+    image: ASSETS.sellAsIsProbateInherited,
+    imageAlt: "Inherited or probate property sold as-is for cash",
+  },
+  Relocation: {
+    image: ASSETS.sellAsIsRelocation,
+    imageAlt: "Relocation home sold quickly for cash without repairs",
+  },
+  "Tired Landlord": {
+    image: ASSETS.sellAsIsTiredLandlord,
+    imageAlt: "Tired landlord selling rental property as-is for cash",
+  },
+  "Major Repairs Needed": {
+    image: ASSETS.sellAsIsMajorRepairsNeeded,
+    imageAlt: "Home needing major repairs sold as-is for cash",
+  },
+  "Divorce / Hardship": {
+    image: ASSETS.sellAsIsDivorceHardship,
+    imageAlt: "Home sold as-is for cash during divorce or hardship",
+  },
+};
+
+/** Sell as-is — "Why choose a cash sale" grid cards. */
+export const SELL_AS_IS_WHY_US_IMAGES: Record<string, { image: string; imageAlt: string }> = {
+  "Predictable timeline": {
+    image: ASSETS.sellAsIsPredictableTimeline,
+    imageAlt: "Predictable closing timeline for an as-is cash home sale",
+  },
+  "Local market knowledge": {
+    image: ASSETS.sellAsIsLocalMarketKnowledge,
+    imageAlt: "Local St Petersburg market knowledge for as-is cash offers",
+  },
+  "Seller-focused support": {
+    image: ASSETS.sellAsIsSellerFocusedSupport,
+    imageAlt: "Seller-focused support throughout your as-is cash sale",
+  },
+  "No hidden costs": {
+    image: ASSETS.sellAsIsNoHiddenCosts,
+    imageAlt: "As-is cash home sale with no hidden costs or fees",
   },
 };
 
@@ -525,6 +841,54 @@ function resolveCitySituationMedia(title: string): { image: string; imageAlt: st
     imageAlt: SELLER_SITUATIONS[4].imageAlt,
     href: SITE.cashOfferHref,
   };
+}
+
+/** Map situation-page cards to homepage sit-card layout using a title → image map. */
+export function mapSituationCardsToSellerCards(
+  items: readonly CitySituationInput[],
+  imageMap: Record<string, { image: string; imageAlt: string }>,
+  href: string = SITE.cashOfferHref,
+) {
+  return items.map((item) => {
+    const photo = imageMap[item.title];
+    return {
+      title: item.title,
+      body: item.body,
+      href,
+      image: photo?.image ?? ASSETS.distressedProperty,
+      imageAlt: photo?.imageAlt ?? item.title,
+    };
+  });
+}
+
+/** Map situation-page `cards` section when slug has a dedicated image map. */
+export function mapSituationPageCardsToSellerCards(
+  slug: string,
+  items: readonly CitySituationInput[],
+) {
+  const imageMap = SITUATION_PAGE_CARD_IMAGES[slug];
+  if (imageMap) return mapSituationCardsToSellerCards(items, imageMap);
+  return mapCitySituationsToSellerCards(items);
+}
+
+/** Map situation-page `situations` section when slug has a dedicated image map. */
+export function mapSituationPageSituationsToSellerCards(
+  slug: string,
+  items: readonly CitySituationInput[],
+) {
+  const imageMap = SITUATION_PAGE_SITUATION_IMAGES[slug];
+  if (imageMap) return mapSituationCardsToSellerCards(items, imageMap, "#offer");
+
+  return items.map((item) => {
+    const photo = SITUATION_CARD_HOME_IMAGES[item.title];
+    return {
+      title: item.title,
+      body: item.body,
+      href: "#offer",
+      image: photo?.image ?? ASSETS.distressedProperty,
+      imageAlt: photo?.imageAlt ?? item.title,
+    };
+  });
 }
 
 /** Map location-page situation copy to homepage sit-card layout (images + links). */

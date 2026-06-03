@@ -268,6 +268,8 @@ export type SituationFullContent = {
     when?: SituationTitleParts & {
       lede?: string;
       items: SituationCard[];
+      /** Image cards (photo above title) instead of icon chips. */
+      imageCards?: boolean;
     };
   };
   trust?: SituationTitleParts & {
@@ -288,6 +290,8 @@ export type SituationFullContent = {
     asideList?: string[];
     footerNote?: string;
     grid?: boolean;
+    /** Image cards (photo above title) instead of icon grid. */
+    imageCards?: boolean;
   };
   faq: SituationTitleParts & { items: SituationFaqItem[] };
   finalCta: {

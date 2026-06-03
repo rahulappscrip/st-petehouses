@@ -919,19 +919,17 @@
       "titleEm": "Home Sale Decisions?",
       "titleTail": "",
       "lede": "When children are involved, Florida courts prioritize their stability and best interests while balancing legal and financial goals. This adds complexity — and requires careful planning.",
+      "imageCards": true,
       "items": [
         {
-          "icon": "🏠",
           "title": "Courts May Delay a Sale",
           "body": "Courts can delay or condition a sale to maintain a stable living environment for children during the divorce process. The custodial parent's situation weighs heavily."
         },
         {
-          "icon": "👨‍👩‍👧",
           "title": "Temporary Arrangements Matter",
           "body": "Temporary custody arrangements influence who stays in the home and for how long. These arrangements can shape both the timing and terms of any sale agreement."
         },
         {
-          "icon": "⏱️",
           "title": "Certainty Reduces Disruption",
           "body": "Sales involving children may take longer through traditional channels. A fast cash offer provides certainty and a defined closing date — reducing stress for the whole family."
         }
@@ -1123,19 +1121,17 @@
       "titleEm": "Divorce in Florida",
       "titleTail": "",
       "lede": "Tax outcomes depend on timing, residency, and ownership. Capital gains treatment can shift significantly based on whether you sell before or after the divorce is finalized. Always consult a tax advisor for your specific situation.",
+      "imageCards": true,
       "items": [
         {
-          "icon": "📋",
           "title": "Joint $500k Exclusion",
           "body": "If you sell before the divorce is finalized and meet IRS requirements, you may qualify for the joint $500,000 capital gains exclusion — saving significant tax liability for both parties."
         },
         {
-          "icon": "📅",
           "title": "Timing the Sale Matters",
           "body": "After the divorce is finalized, each spouse may qualify for only a $250,000 capital gains exclusion individually. The date of sale relative to the divorce decree directly affects tax treatment."
         },
         {
-          "icon": "✓",
           "title": "Cash Sale Simplifies Records",
           "body": "A cash sale provides a clear, documented closing date and straightforward transaction records — simplifying tax planning and reducing ambiguity for both parties' advisors."
         }
@@ -1320,6 +1316,7 @@
       "titleEm": "Tenant-Occupied Properties",
       "titleTail": "",
       "lede": "Knowing buyer priorities helps you position your rental for a faster, smoother sale — and helps you understand why occupancy is often a selling point, not a liability.",
+      "imageCards": true,
       "items": [
         {
           "icon": "01",
@@ -2155,6 +2152,7 @@
       "titleEm": "When It Applies",
       "titleTail": "",
       "lede": "We buy flood-damaged homes in St Pete regardless of mild-to-severe damage — AS-IS and fast. Whether your property has water stains or significant structural concerns, we're interested.",
+      "imageCards": true,
       "items": [
         {
           "icon": "💧",
@@ -2533,6 +2531,7 @@
       "titleEm": "No Repairs Required",
       "titleTail": "",
       "lede": "You don't need to fix fire damage, clean up soot, or pass inspections before selling to us. We buy homes in their current condition and make offers that reflect fair value — no hidden deductions.",
+      "imageCards": true,
       "items": [
         {
           "title": "Structural Damage",
@@ -2566,6 +2565,7 @@
       "titleEm": "St Petersburg",
       "titleTail": "",
       "lede": "We specialize in situations where traditional buyers walk away. Fire damage is our specialty — but we buy a wide range of distressed properties across St Pete and Tampa Bay.",
+      "imageCards": true,
       "items": [
         {
           "title": "Fire-Damaged Homes",
@@ -2831,6 +2831,7 @@
       "titleEm": "Any Type of Storm Damage",
       "titleTail": "",
       "lede": "Whether your home was hit last season or years ago, we make cash offers for properties in any storm-damaged condition. No damage is too severe — we've seen it all across Tampa Bay.",
+      "imageCards": true,
       "items": [
         {
           "icon": "🏠",
@@ -3327,6 +3328,7 @@
         "titleEm": "cash sale",
         "titleTail": " makes sense.",
         "lede": "Cash sales work especially well in specific situations where speed, simplicity, or a difficult property condition make traditional listing impractical.",
+        "imageCards": true,
         "items": [
           {
             "icon": "🏦",
@@ -3363,6 +3365,7 @@
     },
     "whyUs": {
       "grid": true,
+      "imageCards": true,
       "eyebrow": "Our Approach",
       "titleLead": "Why choose a ",
       "titleEm": "cash sale",
@@ -4175,6 +4178,7 @@
       "titleEm": "We Buy St Pete Houses?",
       "titleTail": "",
       "lede": "We're local, transparent, and offer no-obligation cash offers. Here's what sets us apart from national franchises and distant buyers.",
+      "imageCards": true,
       "items": [
         {
           "icon": "📍",

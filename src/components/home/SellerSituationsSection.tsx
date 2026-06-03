@@ -21,6 +21,8 @@ type SellerSituationsSectionProps = {
   sectionId?: string;
   /** When false, cards are not links (e.g. situation pages keep their own copy). */
   linkable?: boolean;
+  /** Optional content below the card grid (e.g. exclusion note). */
+  after?: ReactNode;
 };
 
 export function SellerSituationsSection({
@@ -35,6 +37,7 @@ export function SellerSituationsSection({
   className = "",
   sectionId = "situations",
   linkable = true,
+  after,
 }: SellerSituationsSectionProps = {}) {
   return (
     <section
@@ -86,6 +89,7 @@ export function SellerSituationsSection({
             );
           })}
         </div>
+        {after}
       </div>
     </section>
   );

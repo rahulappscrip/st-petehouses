@@ -1,4 +1,4 @@
-import { Fragment, type ReactNode } from "react";
+import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
@@ -17,6 +17,10 @@ import { SellerSituationsSection } from "@/components/home/SellerSituationsSecti
 import {
   LIEN_PROPERTY_SITUATION_IMAGES,
   mapCitySituationsToSellerCards,
+  mapSituationPageCardsToSellerCards,
+  mapSituationPageSituationsToSellerCards,
+  SELL_AS_IS_WHEN_IMAGES,
+  SELL_AS_IS_WHY_US_IMAGES,
   SITE,
   SITUATION_CARD_HOME_IMAGES,
 } from "@/lib/constants";
@@ -35,6 +39,48 @@ function SectionTitle({ lead, em, tail }: { lead: string; em: string; tail: stri
       <em>{em}</em>
       {tail}
     </>
+  );
+}
+
+function SituationImageCardsGrid({
+  items,
+  imageMap,
+  className = "sit-cards",
+}: {
+  items: readonly { title: string; body: string }[];
+  imageMap: Record<string, { image: string; imageAlt: string }>;
+  className?: string;
+}) {
+  return (
+    <div className={className}>
+      {items.map((item, i) => {
+        const photo = imageMap[item.title];
+        return (
+          <Reveal
+            key={item.title}
+            className="sit-card sit-card--static"
+            d={i > 0 ? ((i % 3) as 1 | 2 | 3) : undefined}
+          >
+            {photo ? (
+              <div className="sit-card__media">
+                <Image
+                  src={photo.image}
+                  alt={photo.imageAlt}
+                  width={800}
+                  height={500}
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                  className="sit-card__img"
+                />
+              </div>
+            ) : null}
+            <div className="sit-card__body">
+              <h3 className="sit-card__title">{item.title}</h3>
+              <p className="sit-card__text">{item.body}</p>
+            </div>
+          </Reveal>
+        );
+      })}
+    </div>
   );
 }
 
@@ -848,17 +894,25 @@ export function SituationProsConsSection({
               <SectionTitle lead={data.when.titleLead} em={data.when.titleEm} tail={data.when.titleTail} />
             </h3>
             {data.when.lede ? <p className="situation-proscons-when__lede">{data.when.lede}</p> : null}
-            <div className="situation-proscons-when__chips">
-              {data.when.items.map((item) => (
-                <div key={item.title} className="situation-proscons-chip">
-                  {item.icon ? <span className="situation-proscons-chip__icon">{item.icon}</span> : null}
-                  <div>
-                    <strong>{item.title}</strong>
-                    <p>{item.body}</p>
+            {data.when.imageCards ? (
+              <SituationImageCardsGrid
+                items={data.when.items}
+                imageMap={SELL_AS_IS_WHEN_IMAGES}
+                className="sit-cards situation-proscons-when__cards"
+              />
+            ) : (
+              <div className="situation-proscons-when__chips">
+                {data.when.items.map((item) => (
+                  <div key={item.title} className="situation-proscons-chip">
+                    {item.icon ? <span className="situation-proscons-chip__icon">{item.icon}</span> : null}
+                    <div>
+                      <strong>{item.title}</strong>
+                      <p>{item.body}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            )}
           </Reveal>
         ) : null}
       </div>
@@ -965,15 +1019,23 @@ export function SituationWhyUsSection({
             title={<SectionTitle lead={data.titleLead} em={data.titleEm} tail={data.titleTail} />}
             lede={data.lede}
           />
-          <div className="situation-whyus-cards">
-            {data.items.map((item, i) => (
-              <Reveal key={item.title} className="situation-whyus-card" d={i > 0 ? ((i % 3) as 1 | 2 | 3) : undefined}>
-                {item.icon ? <span className="situation-whyus-card__icon">{item.icon}</span> : null}
-                <h3>{item.title}</h3>
-                <p>{item.body}</p>
-              </Reveal>
-            ))}
-          </div>
+          {data.imageCards ? (
+            <SituationImageCardsGrid
+              items={data.items}
+              imageMap={SELL_AS_IS_WHY_US_IMAGES}
+              className="sit-cards situation-whyus-cards"
+            />
+          ) : (
+            <div className="situation-whyus-cards">
+              {data.items.map((item, i) => (
+                <Reveal key={item.title} className="situation-whyus-card" d={i > 0 ? ((i % 3) as 1 | 2 | 3) : undefined}>
+                  {item.icon ? <span className="situation-whyus-card__icon">{item.icon}</span> : null}
+                  <h3>{item.title}</h3>
+                  <p>{item.body}</p>
+                </Reveal>
+              ))}
+            </div>
+          )}
         </div>
       </section>
     );
@@ -1169,30 +1231,28 @@ export function renderSituationSection(
     case "cards":
       return content.cards ? (
         content.cards.imageCards ? (
-          <Fragment key={id}>
-            <SellerSituationsSection
-              sectionId="cards"
-              className={alt ? "section-alt" : ""}
-              eyebrow={content.cards.eyebrow}
-              title={titleToParts(content.cards)}
-              lede={content.cards.lede ?? ""}
-              linkable={false}
-              items={mapCitySituationsToSellerCards(
-                content.cards.items.map((item) => ({ title: item.title, body: item.body })),
-              )}
-            />
-            {content.cards.exclusionNote ? (
-              <section className={`section${alt ? " section-alt" : ""}`}>
-                <div className="wrap">
-                  <div className="situation-exclusion-note">
-                    <p>
-                      <strong>What we don&apos;t purchase:</strong> {content.cards.exclusionNote}
-                    </p>
-                  </div>
+          <SellerSituationsSection
+            key={id}
+            sectionId="cards"
+            className={alt ? "section-alt" : ""}
+            eyebrow={content.cards.eyebrow}
+            title={titleToParts(content.cards)}
+            lede={content.cards.lede ?? ""}
+            linkable={false}
+            items={mapSituationPageCardsToSellerCards(
+              content.slug,
+              content.cards.items.map((item) => ({ title: item.title, body: item.body })),
+            )}
+            after={
+              content.cards.exclusionNote ? (
+                <div className="situation-exclusion-note">
+                  <p>
+                    <strong>What we don&apos;t purchase:</strong> {content.cards.exclusionNote}
+                  </p>
                 </div>
-              </section>
-            ) : null}
-          </Fragment>
+              ) : undefined
+            }
+          />
         ) : (
           <section key={id} className={`section${alt ? " section-alt" : ""}`}>
             <div className="wrap">
@@ -1249,16 +1309,10 @@ export function renderSituationSection(
             title={titleToParts(content.situations)}
             lede={content.situations.lede ?? ""}
             linkable={false}
-            items={content.situations.items.map((item) => {
-              const photo = SITUATION_CARD_HOME_IMAGES[item.title];
-              return {
-                title: item.title,
-                body: item.body,
-                href: "#offer",
-                image: photo?.image ?? item.image ?? "",
-                imageAlt: photo?.imageAlt ?? item.imageAlt ?? item.title,
-              };
-            })}
+            items={mapSituationPageSituationsToSellerCards(
+              content.slug,
+              content.situations.items.map((item) => ({ title: item.title, body: item.body })),
+            )}
           />
         ) : (
           <CitySituationsSection
