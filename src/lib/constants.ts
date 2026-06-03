@@ -62,7 +62,7 @@ export const MEET_OWNER = {
 
 /** Footer social links — replace `#` with real URLs when ready */
 export const SOCIAL_LINKS = [
-  { label: "Facebook", href: "#", icon: "facebook" },
+  { label: "Facebook", href: "https://www.facebook.com/WeBuyStPeteHouses", icon: "facebook" },
   { label: "LinkedIn", href: "#", icon: "linkedin" },
   { label: "Instagram", href: "#", icon: "instagram" },
   { label: "Google", href: "#", icon: "google" },
