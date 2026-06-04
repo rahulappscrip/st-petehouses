@@ -1,0 +1,232 @@
+/* Home guarantee — card layout (reference design) */
+.guarantee--card .guarantee-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: clamp(32px, 4.5vw, 52px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #fff;
+  box-shadow: var(--shadow-1);
+}
+
+@media (min-width: 960px) {
+  .guarantee--card .guarantee-card {
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+    align-items: stretch;
+  }
+}
+
+.guarantee--card .guarantee-list {
+  background: #fff;
+}
+
+.guarantee--card .guarantee-list .gi {
+  gap: clamp(14px, 2vw, 18px);
+  padding: clamp(20px, 2.8vw, 28px) clamp(20px, 3vw, 32px);
+  border-top-color: var(--line);
+}
+
+.guarantee--card .guarantee-list .gi:first-child {
+  border-top: none;
+}
+
+.guarantee--card .guarantee-list .gi:last-child {
+  border-bottom: none;
+}
+
+@media (min-width: 960px) {
+  .guarantee--card .guarantee-list .gi:not(:last-child) {
+    border-bottom: none;
+  }
+}
+
+.guarantee--card .guarantee-list .ico {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid color-mix(in oklab, var(--sun) 42%, #fff);
+  background: color-mix(in oklab, var(--sun) 10%, #fff);
+  color: var(--sun-deep);
+  flex-shrink: 0;
+}
+
+.guarantee--card .guarantee-list .ico svg {
+  width: 20px;
+  height: 20px;
+}
+
+.guarantee--card .guarantee-list h3 {
+  font-weight: 600;
+  font-size: clamp(18px, 2vw, 22px);
+  color: var(--ink);
+}
+
+.guarantee--card .guarantee-list p {
+  font-size: clamp(14px, 1.6vw, 15px);
+  line-height: 1.5;
+  margin-top: 6px;
+  max-width: 52ch;
+}
+
+.guarantee--card .guarantee-aside {
+  background: var(--teal-deep);
+  border-radius: 0;
+  padding: clamp(28px, 4vw, 44px);
+}
+
+.guarantee--card .guarantee-aside::before {
+  display: none;
+}
+
+.guarantee--card .guarantee-aside .lab {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: color-mix(in oklab, var(--sun) 88%, #fff);
+  letter-spacing: 0.16em;
+}
+
+.guarantee--card .guarantee-aside .lab::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.guarantee--card .guarantee-aside h3 {
+  font-size: clamp(26px, 3.2vw, 34px);
+  line-height: 1.15;
+  margin-top: 16px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.guarantee--card .guarantee-aside h3 em {
+  display: block;
+  margin-top: 0.15em;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  color: color-mix(in oklab, var(--sun) 75%, #fff);
+}
+
+.guarantee--card .guarantee-aside > p {
+  font-size: clamp(14px, 1.7vw, 15px);
+  line-height: 1.55;
+  margin-top: 16px;
+  max-width: 46ch;
+}
+
+.guarantee-aside__checks {
+  list-style: none;
+  margin: clamp(20px, 2.5vw, 28px) 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.guarantee-aside__checks li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: clamp(14px, 1.6vw, 15px);
+  line-height: 1.45;
+  color: color-mix(in oklab, var(--paper) 92%, transparent);
+}
+
+.guarantee-aside__check-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--sun);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.guarantee-aside__check-icon svg {
+  width: 11px;
+  height: 11px;
+}
+
+.guarantee--card .guarantee-aside .actions {
+  margin-top: clamp(22px, 3vw, 30px);
+  gap: 10px;
+}
+
+.guarantee--card .guarantee-aside .btn--guarantee-primary {
+  --bg: #fff;
+  --fg: var(--teal-deep);
+  --bd: #fff;
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow: 0 4px 14px -8px rgba(0, 0, 0, 0.35);
+}
+
+.guarantee--card .guarantee-aside .btn--guarantee-primary:hover {
+  --bg: color-mix(in oklab, #fff 92%, var(--sun));
+  --bd: color-mix(in oklab, #fff 92%, var(--sun));
+}
+
+.guarantee--card .guarantee-aside .btn--guarantee-secondary {
+  --bg: transparent;
+  --fg: #fff;
+  --bd: color-mix(in oklab, #fff 42%, transparent);
+  padding: 12px 20px;
+  font-size: 15px;
+}
+
+.guarantee--card .guarantee-aside .btn--guarantee-secondary:hover {
+  --bg: color-mix(in oklab, #fff 10%, transparent);
+  --fg: #fff;
+}
+
+.guarantee-aside__deco {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: min(55%, 280px);
+  height: min(70%, 320px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.guarantee-aside__deco span {
+  position: absolute;
+  border: 1px solid color-mix(in oklab, var(--sun) 38%, transparent);
+  border-radius: 50%;
+}
+
+.guarantee-aside__deco span:nth-child(1) {
+  width: 140px;
+  height: 140px;
+  right: 12px;
+  bottom: 24px;
+}
+
+.guarantee-aside__deco span:nth-child(2) {
+  width: 220px;
+  height: 220px;
+  right: -36px;
+  bottom: -48px;
+}
+
+@media (max-width: 639px) {
+  .guarantee--card .guarantee-aside .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .guarantee--card .guarantee-aside .actions .btn {
+    justify-content: center;
+  }
+}

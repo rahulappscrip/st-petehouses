@@ -1,0 +1,202 @@
+/* Inherited page — "Cash, as-is, with probate support" visual layout */
+
+.situation-inherited-buy .section-head .h-2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  color: var(--ink);
+}
+
+.situation-inherited-buy .section-head .h-2 em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--sun);
+}
+
+.situation-inherited-buy__cards {
+  display: grid;
+  gap: clamp(20px, 3vw, 28px);
+  grid-template-columns: 1fr;
+  margin-top: clamp(32px, 4vw, 48px);
+}
+
+@media (min-width: 640px) {
+  .situation-inherited-buy__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1080px) {
+  .situation-inherited-buy__cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.situation-inherited-buy__card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: var(--sand);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  padding: 14px 14px 20px;
+  box-shadow: var(--shadow-1);
+}
+
+.situation-inherited-buy__card-media {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.situation-inherited-buy__card-img-wrap {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 14px;
+  overflow: hidden;
+  background: color-mix(in oklab, var(--ink) 6%, var(--paper));
+}
+
+.situation-inherited-buy__card-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.situation-inherited-buy__card-badge {
+  position: absolute;
+  left: 16px;
+  bottom: -18px;
+  z-index: 1;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--sand-2);
+  border: 3px solid var(--sand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--teal-deep);
+  box-shadow: var(--shadow-1);
+}
+
+.situation-inherited-buy__card-badge svg {
+  width: 22px;
+  height: 22px;
+}
+
+.situation-inherited-buy__card-title {
+  margin: 0 0 8px;
+  font-family: var(--sans);
+  font-size: clamp(18px, 1.6vw, 21px);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.situation-inherited-buy__card-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+
+.situation-inherited-buy__timeline {
+  margin-top: clamp(40px, 5vw, 56px);
+  padding: 0 clamp(20px, 3vw, 36px);
+  background: var(--sand-2);
+  border-radius: var(--radius-l);
+}
+
+.situation-inherited-buy__timeline-title {
+  margin: 0 0 clamp(28px, 4vw, 36px);
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.2vw, 28px);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--ink);
+  text-align: center;
+}
+
+.situation-inherited-buy__steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: clamp(28px, 4vw, 32px);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px) {
+  .situation-inherited-buy__steps {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    position: relative;
+  }
+
+  .situation-inherited-buy__steps::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 14%;
+    right: 14%;
+    height: 0;
+    border-top: 2px dashed color-mix(in oklab, var(--sun) 45%, var(--line));
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+.situation-inherited-buy__step {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 0;
+}
+
+.situation-inherited-buy__step-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: color-mix(in oklab, var(--sun) 18%, var(--sand));
+  border: 2px solid color-mix(in oklab, var(--sun) 35%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--teal-deep);
+  margin-bottom: 14px;
+}
+
+.situation-inherited-buy__step-icon--svg {
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background: none;
+  border: none;
+  margin-bottom: 14px;
+}
+
+.situation-inherited-buy__step-icon-img {
+  display: block;
+  width: 60px;
+  height: 60px;
+}
+
+.situation-inherited-buy__step-title {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+.situation-inherited-buy__step-text {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--ink-2);
+  max-width: 28ch;
+}

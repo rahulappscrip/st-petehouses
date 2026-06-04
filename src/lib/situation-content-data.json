@@ -332,6 +332,7 @@
       "titleEm": "Different?",
       "titleTail": "",
       "lede": "Our local focus, transparent terms, and seller-first approach set us apart from out-of-state cash buyers and generic investor groups.",
+      "imageCards": true,
       "items": [
         {
           "num": "01",
@@ -478,57 +479,54 @@
       "titleEm": "probate support.",
       "titleTail": "",
       "lede": "Our process is designed to be transparent and stress-free for heirs navigating unfamiliar territory. From initial contact to closing, we guide you every step of the way.",
+      "layout": "visual",
       "features": [
         {
-          "icon": "📋",
+          "icon": "probate",
+          "title": "Probate & title support",
+          "body": "We work with your probate attorney and help handle the paperwork so you can focus on what matters."
+        },
+        {
+          "icon": "asis",
           "title": "As-is purchases — nothing required",
-          "body": "No need to clean out belongings, fix outdated systems, or worry about curb appeal. We purchase the property exactly as it is, including personal items left behind."
+          "body": "No need to clean out belongings, make repairs, or worry about curb appeal. We buy it as it is."
         },
         {
-          "icon": "💵",
+          "icon": "fees",
           "title": "No commissions or fees — ever",
-          "body": "You keep the full cash offer amount. There are no real estate agent commissions, no closing costs charged to you, and no hidden fees at the end."
+          "body": "You keep the full cash offer amount. No agent commissions, no closing costs, no hidden fees."
         },
         {
-          "icon": "📅",
-          "title": "Probate and title clearance support",
-          "body": "We work alongside your probate attorney to keep the process moving. We can begin preparing the sale while probate is underway — reducing the overall timeline to closing."
-        },
-        {
-          "icon": "📍",
+          "icon": "calendar",
           "title": "Flexible closing — your timeline",
-          "body": "Close in as little as 7 days, or take more time to finalize probate or family decisions. You choose the closing date that works for your situation."
+          "body": "Close in as little as 7 days, or take more time to finalize probate or family decisions. You choose."
         }
       ],
-      "stepsTitle": "From inquiry to cash in 4 steps",
+      "stepsTitle": "From inquiry to cash in 4 simple steps",
       "steps": [
         {
           "num": "1",
-          "title": "Contact us with property details",
-          "body": "Call (727) 477-8998, email, or submit our online form. Share the property address and your probate status.",
-          "link": {
-            "label": "Contact us today →",
-            "href": "/contact"
-          }
+          "icon": "Contact-Us",
+          "title": "Contact us",
+          "body": "Call, email, or submit our form with your property address and probate status."
         },
         {
           "num": "2",
-          "title": "Property review and fair cash offer",
-          "body": "We evaluate the property's condition and local market. You receive a written, no-obligation cash offer with transparent terms.",
-          "link": {
-            "label": "How our process works →",
-            "href": "/how-it-works"
-          }
+          "icon": "Review",
+          "title": "We review & offer",
+          "body": "We evaluate the property's condition and local market and provide a fair cash offer with no obligation."
         },
         {
           "num": "3",
-          "title": "Accept the offer on your terms",
-          "body": "No pressure, no deadlines. Accept when you're ready. We coordinate with your probate attorney and a local title company."
+          "icon": "You-decide",
+          "title": "You decide",
+          "body": "Accept the offer on your terms. We coordinate with your attorney and title company."
         },
         {
           "num": "4",
-          "title": "Close and receive your cash",
-          "body": "You choose the closing date. We handle all paperwork. You receive the full cash offer amount at closing — no deductions."
+          "icon": "Close-and-get-paid",
+          "title": "Close & get paid",
+          "body": "You choose the closing date. We handle the paperwork and you receive your cash."
         }
       ]
     },
@@ -1029,19 +1027,17 @@
       "titleEm": "Divorce in Florida",
       "titleTail": "",
       "lede": "Tax outcomes depend on timing, residency, and ownership. Capital gains treatment can shift significantly based on whether you sell before or after the divorce is finalized. Always consult a tax advisor for your specific situation.",
+      "imageCards": true,
       "items": [
         {
-          "icon": "📋",
           "title": "Joint $500k Exclusion",
           "body": "If you sell before the divorce is finalized and meet IRS requirements, you may qualify for the joint $500,000 capital gains exclusion — saving significant tax liability for both parties."
         },
         {
-          "icon": "📅",
           "title": "Timing the Sale Matters",
           "body": "After the divorce is finalized, each spouse may qualify for only a $250,000 capital gains exclusion individually. The date of sale relative to the divorce decree directly affects tax treatment."
         },
         {
-          "icon": "✓",
           "title": "Cash Sale Simplifies Records",
           "body": "A cash sale provides a clear, documented closing date and straightforward transaction records — simplifying tax planning and reducing ambiguity for both parties' advisors."
         }
@@ -1763,6 +1759,7 @@
       "titleEm": "Florida Lien",
       "titleTail": " — We've Seen It",
       "lede": "Liens come in many forms. All of them can be resolved at closing when you sell to us. Here are the most common types we handle across St. Pete and Tampa Bay.",
+      "imageCards": true,
       "items": [
         {
           "icon": "📄",
@@ -2129,6 +2126,7 @@
       "titleEm": "When It Applies",
       "titleTail": "",
       "lede": "We buy flood-damaged homes in St Pete regardless of mild-to-severe damage — AS-IS and fast. Whether your property has water stains or significant structural concerns, we're interested.",
+      "imageCards": true,
       "items": [
         {
           "icon": "💧",
@@ -2497,6 +2495,7 @@
       "titleEm": "No Repairs Required",
       "titleTail": "",
       "lede": "You don't need to fix fire damage, clean up soot, or pass inspections before selling to us. We buy homes in their current condition and make offers that reflect fair value — no hidden deductions.",
+      "imageCards": true,
       "items": [
         {
           "title": "Structural Damage",
@@ -2530,6 +2529,7 @@
       "titleEm": "St Petersburg",
       "titleTail": "",
       "lede": "We specialize in situations where traditional buyers walk away. Fire damage is our specialty — but we buy a wide range of distressed properties across St Pete and Tampa Bay.",
+      "imageCards": true,
       "items": [
         {
           "title": "Fire-Damaged Homes",
@@ -2794,6 +2794,7 @@
       "titleEm": "Any Type of Storm Damage",
       "titleTail": "",
       "lede": "Whether your home was hit last season or years ago, we make cash offers for properties in any storm-damaged condition. No damage is too severe — we've seen it all across Tampa Bay.",
+      "imageCards": true,
       "items": [
         {
           "icon": "🏠",
@@ -3252,6 +3253,7 @@
         "titleEm": "cash sale",
         "titleTail": " makes sense.",
         "lede": "Cash sales work especially well in specific situations where speed, simplicity, or a difficult property condition make traditional listing impractical.",
+        "imageCards": true,
         "items": [
           {
             "icon": "🏦",
@@ -3288,6 +3290,7 @@
     },
     "whyUs": {
       "grid": true,
+      "imageCards": true,
       "eyebrow": "Our Approach",
       "titleLead": "Why choose a ",
       "titleEm": "cash sale",
@@ -3719,6 +3722,8 @@
       "lede": "Local market conditions directly influence as-is cash offers. Understanding these dynamics helps you set realistic expectations and recognize a fair offer when you see one.",
       "showChart": false,
       "showLocal": false,
+      "sideImage": "/assets/images/left-side-column-image.webp",
+      "sideImageAlt": "St. Pete and Tampa Bay market factors affecting as-is cash offers",
       "factors": [
         {
           "title": "Strong Buyer Interest in St. Pete",

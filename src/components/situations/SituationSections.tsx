@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHead } from "@/components/ui/SectionHead";
@@ -13,7 +14,19 @@ import { GuaranteeSection } from "@/components/home/GuaranteeSection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { FinalCtaSection } from "@/components/home/FinalCtaSection";
 import { SellerSituationsSection } from "@/components/home/SellerSituationsSection";
-import { SITE, SITUATION_CARD_HOME_IMAGES } from "@/lib/constants";
+import { InheritedBuyProcessVisual } from "@/components/situations/InheritedBuyProcessVisual";
+import {
+  LIEN_PROPERTY_SITUATION_IMAGES,
+  mapCitySituationsToSellerCards,
+  mapSituationPageCardsToSellerCards,
+  mapSituationPageCityCards,
+  mapSituationPageSituationsToSellerCards,
+  SELL_AS_IS_WHEN_IMAGES,
+  SELL_AS_IS_WHY_US_IMAGES,
+  SITUATION_PAGE_DIFF_IMAGES,
+  SITE,
+  SITUATION_CARD_HOME_IMAGES,
+} from "@/lib/constants";
 import type {
   SituationCourtProcess,
   SituationFullContent,
@@ -29,6 +42,48 @@ function SectionTitle({ lead, em, tail }: { lead: string; em: string; tail: stri
       <em>{em}</em>
       {tail}
     </>
+  );
+}
+
+function SituationImageCardsGrid({
+  items,
+  imageMap,
+  className = "sit-cards",
+}: {
+  items: readonly { title: string; body: string }[];
+  imageMap: Record<string, { image: string; imageAlt: string }>;
+  className?: string;
+}) {
+  return (
+    <div className={className}>
+      {items.map((item, i) => {
+        const photo = imageMap[item.title];
+        return (
+          <Reveal
+            key={item.title}
+            className="sit-card sit-card--static"
+            d={i > 0 ? ((i % 3) as 1 | 2 | 3) : undefined}
+          >
+            {photo ? (
+              <div className="sit-card__media">
+                <Image
+                  src={photo.image}
+                  alt={photo.imageAlt}
+                  width={800}
+                  height={500}
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                  className="sit-card__img"
+                />
+              </div>
+            ) : null}
+            <div className="sit-card__body">
+              <h3 className="sit-card__title">{item.title}</h3>
+              <p className="sit-card__text">{item.body}</p>
+            </div>
+          </Reveal>
+        );
+      })}
+    </div>
   );
 }
 
@@ -90,7 +145,11 @@ export function SituationCourtProcessSection({
         />
         <div className="situation-prose-grid">
           <Reveal>
-            <ol className="steps" style={{ listStyle: "none", padding: 0 }} aria-label="Court-ordered sale steps">
+            <ol
+              className="steps steps--4"
+              style={{ listStyle: "none", padding: 0 }}
+              aria-label="Court-ordered sale steps"
+            >
               {data.steps.map((step) => (
                 <li key={step.num} className="step">
                   <span className="step-num">{step.num}</span>
@@ -115,7 +174,7 @@ export function SituationCourtProcessSection({
               <div className="situation-aside-cta" style={{ marginTop: 20 }}>
                 <h3>{data.callout.title}</h3>
                 <p>{data.callout.body}</p>
-                <Link href="#offer" className="btn btn--cta" style={{ marginTop: 16 }}>
+                <Link href="#offer" className="btn btn--cta">
                   Get a cash offer now
                   <Arr />
                 </Link>
@@ -135,6 +194,10 @@ export function SituationBuyProcessSection({
   data: NonNullable<SituationFullContent["buyProcess"]>;
   alt?: boolean;
 }) {
+  if (data.layout === "visual") {
+    return <InheritedBuyProcessVisual data={data} alt={alt} />;
+  }
+
   return (
     <section className={`section${alt ? " section-alt" : ""}`}>
       <div className="wrap">
@@ -231,7 +294,7 @@ export function SituationProbateSection({
               <a href={SITE.phoneHref} className="phone">
                 {SITE.phone}
               </a>
-              <Link href="#offer" className="btn btn--cta" style={{ marginTop: 16, width: "100%", justifyContent: "center" }}>
+              <Link href="#offer" className="btn btn--cta" style={{ width: "100%", justifyContent: "center" }}>
                 Submit your property online
                 <Arr />
               </Link>
@@ -320,7 +383,7 @@ export function SituationValuationSection({
               ))}
             </dl>
             {data.statsNote ? <p className="situation-val-stats__note">{data.statsNote}</p> : null}
-            <Link href="#offer" className="btn btn--cta" style={{ marginTop: 20, width: "100%", justifyContent: "center" }}>
+            <Link href="#offer" className="btn btn--cta" style={{ width: "100%", justifyContent: "center" }}>
               Get my cash offer
               <Arr />
             </Link>
@@ -361,7 +424,7 @@ export function SituationTenantRightsSection({
             {data.callout.paragraphs.map((p) => (
               <p key={p.slice(0, 40)}>{p}</p>
             ))}
-            <Link href="#offer" className="btn btn--cta" style={{ marginTop: 16 }}>
+            <Link href="#offer" className="btn btn--cta">
               Ask about cash-for-keys
               <Arr />
             </Link>
@@ -399,7 +462,7 @@ export function SituationObligationsSection({
                 <p key={p.slice(0, 40)}>{p}</p>
               ))}
               {card.featured ? (
-                <Link href="#offer" className="btn btn--cta" style={{ marginTop: 16 }}>
+                <Link href="#offer" className="btn btn--cta">
                   Get a cash offer
                   <Arr />
                 </Link>
@@ -483,7 +546,7 @@ export function SituationInsuranceSection({
                 <p key={p.slice(0, 40)}>{p}</p>
               ))}
               {card.cta ? (
-                <Link href="#offer" className="btn btn--cta" style={{ marginTop: 16 }}>
+                <Link href="#offer" className="btn btn--cta">
                   Discuss my situation
                   <Arr />
                 </Link>
@@ -616,13 +679,37 @@ export function SituationForestSituationsSection({
           lede={data.lede}
         />
         <div className="situation-forest-sit__grid">
-          {data.items.map((item, i) => (
-            <Reveal key={item.title} className="situation-forest-sit__card" d={i > 0 ? ((i % 3) as 1 | 2 | 3) : undefined}>
-              <span className="situation-forest-sit__dot" aria-hidden />
-              <h3>{item.title}</h3>
-              <p>{item.body}</p>
-            </Reveal>
-          ))}
+          {data.items.map((item, i) => {
+            const photo =
+              item.image && item.imageAlt
+                ? { image: item.image, imageAlt: item.imageAlt }
+                : LIEN_PROPERTY_SITUATION_IMAGES[item.title];
+
+            return (
+              <Reveal
+                key={item.title}
+                className="situation-forest-sit__card"
+                d={i > 0 ? ((i % 3) as 1 | 2 | 3) : undefined}
+              >
+                {photo ? (
+                  <div className="situation-forest-sit__media">
+                    <Image
+                      src={photo.image}
+                      alt={photo.imageAlt}
+                      width={800}
+                      height={500}
+                      sizes="(min-width: 1024px) 33vw, (min-width: 720px) 50vw, 100vw"
+                      className="situation-forest-sit__img"
+                    />
+                  </div>
+                ) : null}
+                <div className="situation-forest-sit__body">
+                  <h3>{item.title}</h3>
+                  <p>{item.body}</p>
+                </div>
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>
@@ -814,17 +901,25 @@ export function SituationProsConsSection({
               <SectionTitle lead={data.when.titleLead} em={data.when.titleEm} tail={data.when.titleTail} />
             </h3>
             {data.when.lede ? <p className="situation-proscons-when__lede">{data.when.lede}</p> : null}
-            <div className="situation-proscons-when__chips">
-              {data.when.items.map((item) => (
-                <div key={item.title} className="situation-proscons-chip">
-                  {item.icon ? <span className="situation-proscons-chip__icon">{item.icon}</span> : null}
-                  <div>
-                    <strong>{item.title}</strong>
-                    <p>{item.body}</p>
+            {data.when.imageCards ? (
+              <SituationImageCardsGrid
+                items={data.when.items}
+                imageMap={SELL_AS_IS_WHEN_IMAGES}
+                className="sit-cards situation-proscons-when__cards"
+              />
+            ) : (
+              <div className="situation-proscons-when__chips">
+                {data.when.items.map((item) => (
+                  <div key={item.title} className="situation-proscons-chip">
+                    {item.icon ? <span className="situation-proscons-chip__icon">{item.icon}</span> : null}
+                    <div>
+                      <strong>{item.title}</strong>
+                      <p>{item.body}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            )}
           </Reveal>
         ) : null}
       </div>
@@ -866,7 +961,7 @@ export function SituationTrustSection({
           <Reveal d={1} className="situation-trust__card">
             <h3>{data.card.title}</h3>
             <p>{data.card.body}</p>
-            <Link href="#offer" className="btn btn--cta" style={{ marginTop: 16, width: "100%", justifyContent: "center" }}>
+            <Link href="#offer" className="btn btn--cta" style={{ width: "100%", justifyContent: "center" }}>
               Get my as-is cash offer
               <Arr />
             </Link>
@@ -887,13 +982,17 @@ export function SituationTrustSection({
 
 export function SituationDiffSection({
   data,
+  slug,
   alt,
 }: {
   data: NonNullable<SituationFullContent["diff"]>;
+  slug: string;
   alt?: boolean;
 }) {
+  const imageMap = data.imageCards ? SITUATION_PAGE_DIFF_IMAGES[slug] : undefined;
+
   return (
-    <section className={`section${alt ? " section-alt" : ""}`}>
+    <section className={`section${alt ? " section-alt" : ""}${imageMap ? " seller-situations" : ""}`}>
       <div className="wrap">
         <SituationSectionHead
           eyebrow={data.eyebrow}
@@ -901,15 +1000,23 @@ export function SituationDiffSection({
           lede={data.lede}
           centered
         />
-        <div className="situation-diff-grid">
-          {data.items.map((item, i) => (
-            <Reveal key={item.num} className="situation-diff-card" d={i > 0 ? ((i % 3) as 1 | 2 | 3) : undefined}>
-              <span className="num">{item.num}</span>
-              <h3>{item.title}</h3>
-              <p>{item.body}</p>
-            </Reveal>
-          ))}
-        </div>
+        {imageMap ? (
+          <SituationImageCardsGrid
+            items={data.items.map((item) => ({ title: item.title, body: item.body }))}
+            imageMap={imageMap}
+            className="sit-cards"
+          />
+        ) : (
+          <div className="situation-diff-grid">
+            {data.items.map((item, i) => (
+              <Reveal key={item.num} className="situation-diff-card" d={i > 0 ? ((i % 3) as 1 | 2 | 3) : undefined}>
+                <span className="num">{item.num}</span>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+              </Reveal>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
@@ -941,15 +1048,23 @@ export function SituationWhyUsSection({
             title={<SectionTitle lead={data.titleLead} em={data.titleEm} tail={data.titleTail} />}
             lede={data.lede}
           />
-          <div className="situation-whyus-cards">
-            {data.items.map((item, i) => (
-              <Reveal key={item.title} className="situation-whyus-card" d={i > 0 ? ((i % 3) as 1 | 2 | 3) : undefined}>
-                {item.icon ? <span className="situation-whyus-card__icon">{item.icon}</span> : null}
-                <h3>{item.title}</h3>
-                <p>{item.body}</p>
-              </Reveal>
-            ))}
-          </div>
+          {data.imageCards ? (
+            <SituationImageCardsGrid
+              items={data.items}
+              imageMap={SELL_AS_IS_WHY_US_IMAGES}
+              className="sit-cards situation-whyus-cards"
+            />
+          ) : (
+            <div className="situation-whyus-cards">
+              {data.items.map((item, i) => (
+                <Reveal key={item.title} className="situation-whyus-card" d={i > 0 ? ((i % 3) as 1 | 2 | 3) : undefined}>
+                  {item.icon ? <span className="situation-whyus-card__icon">{item.icon}</span> : null}
+                  <h3>{item.title}</h3>
+                  <p>{item.body}</p>
+                </Reveal>
+              ))}
+            </div>
+          )}
         </div>
       </section>
     );
@@ -1006,6 +1121,7 @@ export function SituationWhyUsSection({
               ) : null}
             </div>
           ) : null}
+
         </div>
       </div>
     </section>
@@ -1149,29 +1265,74 @@ export function renderSituationSection(
 
     case "cards":
       return content.cards ? (
-        <section key={id} className={`section${alt ? " section-alt" : ""}`}>
-          <div className="wrap">
-            <CitySituationsSection
-              embedded
-              alt={false}
-              eyebrow={content.cards.eyebrow}
-              title={titleToParts(content.cards)}
-              lede={content.cards.lede ?? ""}
-              items={content.cards.items.map((item) => ({
-                icon: item.icon ?? "•",
-                title: item.title,
-                body: item.body,
-              }))}
-            />
-            {content.cards.exclusionNote ? (
-              <div className="situation-exclusion-note">
-                <p>
-                  <strong>What we don&apos;t purchase:</strong> {content.cards.exclusionNote}
-                </p>
-              </div>
-            ) : null}
-          </div>
-        </section>
+        content.cards.cityImageCards ? (
+          <section key={id} className={`section${alt ? " section-alt" : ""}`} id="cards">
+            <div className="wrap">
+              <CitySituationsSection
+                embedded
+                alt={false}
+                eyebrow={content.cards.eyebrow}
+                title={titleToParts(content.cards)}
+                lede={content.cards.lede ?? ""}
+                items={mapSituationPageCityCards(content.slug, content.cards.items)}
+              />
+              {content.cards.exclusionNote ? (
+                <div className="situation-exclusion-note">
+                  <p>
+                    <strong>What we don&apos;t purchase:</strong> {content.cards.exclusionNote}
+                  </p>
+                </div>
+              ) : null}
+            </div>
+          </section>
+        ) : content.cards.imageCards ? (
+          <SellerSituationsSection
+            key={id}
+            sectionId="cards"
+            className={alt ? "section-alt" : ""}
+            eyebrow={content.cards.eyebrow}
+            title={titleToParts(content.cards)}
+            lede={content.cards.lede ?? ""}
+            linkable={false}
+            items={mapSituationPageCardsToSellerCards(
+              content.slug,
+              content.cards.items.map((item) => ({ title: item.title, body: item.body })),
+            )}
+            after={
+              content.cards.exclusionNote ? (
+                <div className="situation-exclusion-note">
+                  <p>
+                    <strong>What we don&apos;t purchase:</strong> {content.cards.exclusionNote}
+                  </p>
+                </div>
+              ) : undefined
+            }
+          />
+        ) : (
+          <section key={id} className={`section${alt ? " section-alt" : ""}`}>
+            <div className="wrap">
+              <CitySituationsSection
+                embedded
+                alt={false}
+                eyebrow={content.cards.eyebrow}
+                title={titleToParts(content.cards)}
+                lede={content.cards.lede ?? ""}
+                items={content.cards.items.map((item) => ({
+                  icon: item.icon ?? "•",
+                  title: item.title,
+                  body: item.body,
+                }))}
+              />
+              {content.cards.exclusionNote ? (
+                <div className="situation-exclusion-note">
+                  <p>
+                    <strong>What we don&apos;t purchase:</strong> {content.cards.exclusionNote}
+                  </p>
+                </div>
+              ) : null}
+            </div>
+          </section>
+        )
       ) : null;
 
     case "areas":
@@ -1203,16 +1364,10 @@ export function renderSituationSection(
             title={titleToParts(content.situations)}
             lede={content.situations.lede ?? ""}
             linkable={false}
-            items={content.situations.items.map((item) => {
-              const photo = SITUATION_CARD_HOME_IMAGES[item.title];
-              return {
-                title: item.title,
-                body: item.body,
-                href: "#offer",
-                image: photo?.image ?? item.image ?? "",
-                imageAlt: photo?.imageAlt ?? item.imageAlt ?? item.title,
-              };
-            })}
+            items={mapSituationPageSituationsToSellerCards(
+              content.slug,
+              content.situations.items.map((item) => ({ title: item.title, body: item.body })),
+            )}
           />
         ) : (
           <CitySituationsSection
@@ -1250,6 +1405,8 @@ export function renderSituationSection(
             showLocal={content.market.showLocal === true}
             badgeValue={content.market.badgeValue}
             badgeLabel={content.market.badgeLabel}
+            sideImage={content.market.sideImage}
+            sideImageAlt={content.market.sideImageAlt}
           />
         )
       ) : null;
@@ -1299,7 +1456,9 @@ export function renderSituationSection(
       ) : null;
 
     case "diff":
-      return content.diff ? <SituationDiffSection key={id} data={content.diff} alt={alt} /> : null;
+      return content.diff ? (
+        <SituationDiffSection key={id} data={content.diff} slug={content.slug} alt={alt} />
+      ) : null;
 
     case "resources":
       return content.resources ? (

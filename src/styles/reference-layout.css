@@ -183,6 +183,8 @@ h3 em,
 .topbar-l .stars{ color: var(--gold); letter-spacing: 1px; }
 .topbar a{ color: inherit; text-decoration: none; transition: color .15s ease; }
 .topbar a:hover{ color: #fff; }
+.topbar-phone{ display: inline-flex; align-items: center; gap: 6px; }
+.topbar-phone svg{ color: color-mix(in oklab, var(--paper) 70%, transparent); }
 .topbar .sep{ width: 1px; height: 12px; background: color-mix(in oklab, var(--paper) 24%, transparent); display: inline-block; }
 @media (max-width: 760px){
   .topbar-l .topbar-hide-mobile,
@@ -839,6 +841,21 @@ h3 em,
 .steps{ display: grid; gap: 18px; grid-template-columns: 1fr; }
 @media (min-width: 640px){ .steps{ grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1080px){ .steps{ grid-template-columns: repeat(4, 1fr); } }
+
+/* Court process / four-step blocks — 2×2, not 1×4 */
+.steps.steps--4 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .steps.steps--4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.steps.steps--4 .step {
+  min-height: 0;
+}
 
 .steps.steps--3 {
   grid-template-columns: 1fr;

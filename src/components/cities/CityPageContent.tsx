@@ -1,6 +1,5 @@
-import Link from "next/link";
-import { CityHeroSection } from "@/components/cities/CityHeroSection";
-import { CitySituationsSection } from "@/components/cities/CitySituationsSection";
+import { HeroSection } from "@/components/home/HeroSection";
+import { SellerSituationsSection } from "@/components/home/SellerSituationsSection";
 import { CityBenefitsSection } from "@/components/cities/CityBenefitsSection";
 import { CityAfterAcceptSection } from "@/components/cities/CityAfterAcceptSection";
 import { CityCompareSection } from "@/components/cities/CityCompareSection";
@@ -21,7 +20,7 @@ import {
   type CitySectionId,
 } from "@/lib/city-content";
 import { notFound } from "next/navigation";
-import { SITE } from "@/lib/constants";
+import { mapCityBenefitsToSellerCards, mapCitySituationsToSellerCards, SITE } from "@/lib/constants";
 import type { CityPageData } from "@/lib/cities";
 
 type Props = {
@@ -77,7 +76,7 @@ function renderCitySection(id: CitySectionId, content: CityFullContent, page: Ci
 
     case "situations":
       return (
-        <CitySituationsSection
+        <SellerSituationsSection
           key={id}
           eyebrow={content.situations.eyebrow}
           title={
@@ -88,8 +87,7 @@ function renderCitySection(id: CitySectionId, content: CityFullContent, page: Ci
             />
           }
           lede={content.situations.lede}
-          items={content.situations.items}
-          alt={alt}
+          items={mapCitySituationsToSellerCards(content.situations.items)}
         />
       );
 
@@ -124,6 +122,8 @@ function renderCitySection(id: CitySectionId, content: CityFullContent, page: Ci
           }
           lede={content.market.lede}
           factors={content.market.factors}
+          chartImage={content.market.chartImage}
+          chartImageAlt={content.market.chartImageAlt}
           showLocal={false}
           alt={alt}
         />
@@ -173,6 +173,25 @@ function renderCitySection(id: CitySectionId, content: CityFullContent, page: Ci
 
     case "benefits":
       if (!content.benefits) return null;
+      if (content.benefits.imageCardLayout) {
+        return (
+          <SellerSituationsSection
+            key={id}
+            sectionId="benefits"
+            eyebrow={content.benefits.eyebrow}
+            title={
+              <SectionTitle
+                lead={content.benefits.titleLead}
+                em={content.benefits.titleEm}
+                tail={content.benefits.titleTail}
+              />
+            }
+            lede={content.benefits.lede}
+            items={mapCityBenefitsToSellerCards(content.benefits.items)}
+            linkable={false}
+          />
+        );
+      }
       return (
         <CityBenefitsSection
           key={id}
@@ -286,30 +305,20 @@ function CityFullPageContent({ page, content }: Props & { content: CityFullConte
 
   return (
     <>
-      <nav className="city-breadcrumb" aria-label="Breadcrumb">
-        <div className="wrap">
-          <Link href="/">Home</Link>
-          <span aria-hidden>›</span>
-          <Link href="/#areas">Locations</Link>
-          <span aria-hidden>›</span>
-          <span>{page.cityName}, FL</span>
-        </div>
-      </nav>
-
-      <CityHeroSection
-        eyebrow={content.heroEyebrow}
-        title={
-          <>
-            {titleParts.lead}
-            <em>{titleParts.em}</em>
-            {titleParts.tail}
-          </>
-        }
-        subheadline={content.heroSubheadline}
-        formTitle={content.formTitle}
-        formIntro={content.formIntro}
-        cityName={page.cityName}
-        authorRole={content.authorRole}
+      <HeroSection
+        content={{
+          title: (
+            <>
+              {titleParts.lead}
+              <em>{titleParts.em}</em>
+              {titleParts.tail}
+            </>
+          ),
+          subheadline: content.heroSubheadline,
+          formTitle: content.formTitle,
+          formIntro: content.formIntro,
+          addressPlaceholder: `123 Main St, ${page.cityName}, FL`,
+        }}
       />
 
       <StatsSection />

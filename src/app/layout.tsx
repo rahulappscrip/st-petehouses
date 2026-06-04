@@ -16,9 +16,12 @@ export const metadata: Metadata = {
   description: "We buy houses in St. Petersburg and Tampa Bay for cash. Fair offers, fast closings, no repairs required.",
   robots: { index: true, follow: true },
   icons: {
-    icon: [{ url: ASSETS.favicon, type: "image/png" }],
-    shortcut: [{ url: ASSETS.favicon, type: "image/png" }],
-    apple: [{ url: ASSETS.favicon, type: "image/png" }],
+    icon: [
+      { url: ASSETS.favicon, sizes: "32x32", type: "image/png" },
+      { url: ASSETS.faviconPng, sizes: "240x240", type: "image/png" },
+    ],
+    shortcut: ASSETS.favicon,
+    apple: [{ url: ASSETS.faviconPng, sizes: "180x180", type: "image/png" }],
   },
 };
 
@@ -33,11 +36,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href={ASSETS.favicon} type="image/png" sizes="32x32" />
-        <link rel="shortcut icon" href={ASSETS.favicon} type="image/png" />
-        <link rel="apple-touch-icon" href={ASSETS.favicon} />
-      </head>
       <body>
         <script
           type="application/ld+json"

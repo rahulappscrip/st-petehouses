@@ -1,4 +1,4 @@
-import { SITE } from "./constants";
+import { ASSETS, SITE } from "./constants";
 
 export type CitySectionId =
   | "process"
@@ -113,6 +113,8 @@ export type CityFullContent = {
     eyebrow: string;
     lede: string;
     factors: CityMarketFactor[];
+    chartImage?: string;
+    chartImageAlt?: string;
   };
   guarantee?: SectionTitle & {
     eyebrow: string;
@@ -140,6 +142,8 @@ export type CityFullContent = {
     eyebrow: string;
     lede: string;
     items: CityBenefitItem[];
+    /** Use homepage sit-card image layout instead of icon grid. */
+    imageCardLayout?: boolean;
   };
   afterAccept?: SectionTitle & {
     eyebrow: string;
@@ -293,6 +297,8 @@ const ST_PETERSBURG: CityFullContent = {
     titleEm: "St. Petersburg",
     titleTail: " cash home market.",
     lede: "St. Pete is a unique market — its blend of small over 4,000 homes, a vibrant housing stock, and high post-hurricane repair needs means sellers have real options beyond listing agents.",
+    chartImage: ASSETS.marketChartStPetersburg,
+    chartImageAlt: "Understanding the St. Petersburg cash home market",
     factors: [
       {
         letter: "A",
@@ -597,6 +603,7 @@ const CLEARWATER: CityFullContent = {
     titleEm: "cash buyer",
     titleTail: " in Clearwater.",
     lede: "Cash offers mean certainty and speed — no financing risk, no repairs, and a faster, smoother close that you control.",
+    imageCardLayout: true,
     items: [
       {
         icon: "🔒",
@@ -1104,6 +1111,8 @@ const DUNEDIN: CityFullContent = {
     titleEm: "local expertise",
     titleTail: " matters.",
     lede: "Deep Dunedin market knowledge drives faster, fairer offers. We know the neighborhoods, price trends, and local factors that affect value — from waterfront properties to inland homes.",
+    chartImage: ASSETS.whyLocalExpertiseMatters,
+    chartImageAlt: "Why local expertise matters when selling your Dunedin home for cash",
     factors: [
       {
         letter: "A",
@@ -1319,6 +1328,8 @@ const PINELLAS_PARK: CityFullContent = {
     titleEm: "Pinellas Park",
     titleTail: " cash home market.",
     lede: "",
+    chartImage: ASSETS.marketChartPinellasPark,
+    chartImageAlt: "Understanding the Pinellas Park cash home market",
     factors: [
       {
         letter: "A",

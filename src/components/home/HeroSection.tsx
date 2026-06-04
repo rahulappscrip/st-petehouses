@@ -11,6 +11,7 @@ export type HeroContent = {
   formEyebrow?: string;
   formTitle?: ReactNode;
   formIntro?: string;
+  addressPlaceholder?: string;
 };
 
 export const DEFAULT_HERO: HeroContent = {
@@ -66,6 +67,7 @@ export function HeroSection({ content = DEFAULT_HERO }: { content?: HeroContent 
               formEyebrow={content.formEyebrow ?? DEFAULT_HERO.formEyebrow}
               formTitle={content.formTitle ?? DEFAULT_HERO.formTitle}
               formIntro={content.formIntro ?? DEFAULT_HERO.formIntro}
+              addressPlaceholder={content.addressPlaceholder}
             />
           </Reveal>
         </div>
