@@ -183,6 +183,8 @@ h3 em,
 .topbar-l .stars{ color: var(--gold); letter-spacing: 1px; }
 .topbar a{ color: inherit; text-decoration: none; transition: color .15s ease; }
 .topbar a:hover{ color: #fff; }
+.topbar-phone{ display: inline-flex; align-items: center; gap: 6px; }
+.topbar-phone svg{ color: color-mix(in oklab, var(--paper) 70%, transparent); }
 .topbar .sep{ width: 1px; height: 12px; background: color-mix(in oklab, var(--paper) 24%, transparent); display: inline-block; }
 @media (max-width: 760px){
   .topbar-l .topbar-hide-mobile,

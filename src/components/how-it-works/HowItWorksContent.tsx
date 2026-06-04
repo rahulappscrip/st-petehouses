@@ -288,7 +288,7 @@ export function HowItWorksContent() {
               <TimelineCalculator />
               <figure className="hiw-inline-image">
                 <Image
-                  src="/assets/images/HIW-Image-4.webp"
+                  src="/assets/images/How-it-works-situation-sec.webp"
                   alt="Step-by-step visual for cash home sale process"
                   fill
                   sizes="(max-width: 980px) 100vw, 900px"
@@ -331,7 +331,7 @@ export function HowItWorksContent() {
               </p>
               <figure className="hiw-inline-image">
                 <Image
-                  src="/assets/images/HIW-Image-5.webp"
+                  src="/assets/images/HOW-IT-WORKS-Cash-Homebuyers.webp"
                   alt="Trust signals for verifying legitimate cash home buyers"
                   fill
                   sizes="(max-width: 980px) 100vw, 900px"

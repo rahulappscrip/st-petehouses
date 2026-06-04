@@ -85,6 +85,24 @@ export const ASSETS = {
   divorceJoint500kExclusion: "/assets/images/Joint-500k-Exclusion.webp",
   divorceTimingTheSaleMatters: "/assets/images/Timing-the-Sale-Matters-optimized.webp",
   divorceCashSaleSimplifiesRecords: "/assets/images/Cash-Sale-Simplifies-Records.webp",
+  asIsFloridaCoastal: "/assets/images/coastal.webp",
+  asIsFloridaUrban: "/assets/images/urban.webp",
+  asIsFloridaSuburban: "/assets/images/suburban.webp",
+  asIsFloridaValue: "/assets/images/value.webp",
+  inheritedBuyProbate: "/assets/images/Probate-and-title.webp",
+  inheritedBuyAsIs: "/assets/images/As-is-purchases.webp",
+  inheritedBuyNoFees: "/assets/images/No-commission.webp",
+  inheritedBuyFlexibleClosing: "/assets/images/Flexible-Closing.webp",
+  inheritedStepContactUs: "/assets/images/Contact-Us.svg",
+  inheritedStepReview: "/assets/images/Review.svg",
+  inheritedStepYouDecide: "/assets/images/You-decide.svg",
+  inheritedStepCloseAndGetPaid: "/assets/images/Close-and-get-paid.svg",
+  foreclosureHyperLocalExpertise: "/assets/images/Hyper-local-expertise.webp",
+  foreclosureTransparentWrittenOffers: "/assets/images/Transparent-written-offers-optimized.webp",
+  foreclosureFastClosings: "/assets/images/Fast-closings-on-your-timeline.webp",
+  foreclosureEmpatheticSellerCentered: "/assets/images/Empathetic-seller-centered.webp",
+  foreclosureProvenTrackRecord: "/assets/images/Proven-track-record.webp",
+  foreclosureLocalVsAiAdvice: "/assets/images/Local-vs-AI-generated-advice.webp",
 } as const;
 
 /** Lien page — "Properties and Situations We Handle" forest cards. */
@@ -287,6 +305,129 @@ export const DIVORCE_TAX_CARD_IMAGES: Record<string, { image: string; imageAlt: 
   },
 };
 
+/** As-is Florida page — neighborhood market cards (keyed by category icon label). */
+export const AS_IS_FLORIDA_NEIGHBORHOOD_IMAGES: Record<string, { image: string; imageAlt: string }> = {
+  Coastal: {
+    image: ASSETS.asIsFloridaCoastal,
+    imageAlt: "Coastal St Pete neighborhoods including St Pete Beach, Gulfport, and Coquina Key",
+  },
+  Urban: {
+    image: ASSETS.asIsFloridaUrban,
+    imageAlt: "Urban St Petersburg neighborhoods including Downtown and the Edge District",
+  },
+  Suburban: {
+    image: ASSETS.asIsFloridaSuburban,
+    imageAlt: "Suburban Pinellas County areas including Largo, Pinellas Park, and Palm Harbor",
+  },
+  Value: {
+    image: ASSETS.asIsFloridaValue,
+    imageAlt: "Value-focused St Pete neighborhoods including Lealman, Disston Heights, and Bayway Isles",
+  },
+};
+
+/** Inherited page — "Cash, as-is, with probate support" feature cards. */
+export const INHERITED_BUY_PROCESS_FEATURES: Record<
+  string,
+  { image: string; imageAlt: string; iconKey: string }
+> = {
+  "Probate & title support": {
+    image: ASSETS.inheritedBuyProbate,
+    imageAlt: "Probate court documents for inherited property sale in St Petersburg",
+    iconKey: "probate",
+  },
+  "As-is purchases — nothing required": {
+    image: ASSETS.inheritedBuyAsIs,
+    imageAlt: "Inherited St Petersburg home purchased as-is for cash",
+    iconKey: "asis",
+  },
+  "No commissions or fees — ever": {
+    image: ASSETS.inheritedBuyNoFees,
+    imageAlt: "No real estate commissions or hidden fees on inherited home cash sale",
+    iconKey: "fees",
+  },
+  "Flexible closing — your timeline": {
+    image: ASSETS.inheritedBuyFlexibleClosing,
+    imageAlt: "Flexible closing timeline when selling an inherited house for cash",
+    iconKey: "calendar",
+  },
+};
+
+/** Inherited page — timeline step SVG icons (filename keys). */
+export const INHERITED_BUY_STEP_SVG: Record<string, { src: string; alt: string }> = {
+  "Contact-Us": {
+    src: ASSETS.inheritedStepContactUs,
+    alt: "Contact us about your inherited property",
+  },
+  Review: {
+    src: ASSETS.inheritedStepReview,
+    alt: "Property review and cash offer",
+  },
+  "You-decide": {
+    src: ASSETS.inheritedStepYouDecide,
+    alt: "Accept the cash offer on your terms",
+  },
+  "Close-and-get-paid": {
+    src: ASSETS.inheritedStepCloseAndGetPaid,
+    alt: "Close and receive cash for your inherited home",
+  },
+  phone: {
+    src: ASSETS.inheritedStepContactUs,
+    alt: "Contact us about your inherited property",
+  },
+  house: {
+    src: ASSETS.inheritedStepReview,
+    alt: "Property review and cash offer",
+  },
+  handshake: {
+    src: ASSETS.inheritedStepYouDecide,
+    alt: "Accept the cash offer on your terms",
+  },
+  cash: {
+    src: ASSETS.inheritedStepCloseAndGetPaid,
+    alt: "Close and receive cash for your inherited home",
+  },
+};
+
+export const SITUATION_PAGE_CITY_CARD_IMAGES: Partial<
+  Record<string, Record<string, { image: string; imageAlt: string }>>
+> = {
+  "as-is-florida": AS_IS_FLORIDA_NEIGHBORHOOD_IMAGES,
+};
+
+/** Foreclosure page — "What Makes We Buy St Pete Houses Different?" cards. */
+export const FORECLOSURE_DIFF_IMAGES: Record<string, { image: string; imageAlt: string }> = {
+  "Hyper-local expertise": {
+    image: ASSETS.foreclosureHyperLocalExpertise,
+    imageAlt: "Hyper-local St Petersburg foreclosure and cash home buying expertise",
+  },
+  "Transparent, written offers": {
+    image: ASSETS.foreclosureTransparentWrittenOffers,
+    imageAlt: "Transparent written cash offer when stopping foreclosure in St Pete",
+  },
+  "Fast closings on your timeline": {
+    image: ASSETS.foreclosureFastClosings,
+    imageAlt: "Fast foreclosure home sale closing on your timeline in Pinellas County",
+  },
+  "Empathetic, seller-centered": {
+    image: ASSETS.foreclosureEmpatheticSellerCentered,
+    imageAlt: "Empathetic seller-centered approach for St Petersburg homeowners facing foreclosure",
+  },
+  "Proven track record": {
+    image: ASSETS.foreclosureProvenTrackRecord,
+    imageAlt: "Proven track record buying homes across St Petersburg and Tampa Bay",
+  },
+  "Local vs. AI-generated advice": {
+    image: ASSETS.foreclosureLocalVsAiAdvice,
+    imageAlt: "Local foreclosure guidance versus generic AI-generated advice in Florida",
+  },
+};
+
+export const SITUATION_PAGE_DIFF_IMAGES: Partial<
+  Record<string, Record<string, { image: string; imageAlt: string }>>
+> = {
+  foreclosure: FORECLOSURE_DIFF_IMAGES,
+};
+
 export const SITUATION_PAGE_CARD_IMAGES: Partial<
   Record<string, Record<string, { image: string; imageAlt: string }>>
 > = {
@@ -436,7 +577,6 @@ export const SOCIAL_LINKS = [
 export const TOPBAR = {
   rating: "Rated 5.0 by 120+ St. Petersburg",
   bbb: "BBB A+ Accredited",
-  homes: "500+ Homes Bought",
 } as const;
 
 export const HOME_TESTIMONIALS = {
@@ -869,6 +1009,26 @@ export function mapSituationPageCardsToSellerCards(
   const imageMap = SITUATION_PAGE_CARD_IMAGES[slug];
   if (imageMap) return mapSituationCardsToSellerCards(items, imageMap);
   return mapCitySituationsToSellerCards(items);
+}
+
+type CityCardInput = { icon?: string; title: string; body: string };
+
+/** Map city-style cards (category icon + title) to items with top images. */
+export function mapSituationPageCityCards(
+  slug: string,
+  items: readonly CityCardInput[],
+) {
+  const imageMap = SITUATION_PAGE_CITY_CARD_IMAGES[slug];
+  return items.map((item) => {
+    const photo = imageMap?.[item.icon ?? ""];
+    return {
+      icon: item.icon ?? "•",
+      title: item.title,
+      body: item.body,
+      image: photo?.image,
+      imageAlt: photo?.imageAlt ?? item.icon,
+    };
+  });
 }
 
 /** Map situation-page `situations` section when slug has a dedicated image map. */

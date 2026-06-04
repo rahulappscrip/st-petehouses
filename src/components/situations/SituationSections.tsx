@@ -14,13 +14,16 @@ import { GuaranteeSection } from "@/components/home/GuaranteeSection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { FinalCtaSection } from "@/components/home/FinalCtaSection";
 import { SellerSituationsSection } from "@/components/home/SellerSituationsSection";
+import { InheritedBuyProcessVisual } from "@/components/situations/InheritedBuyProcessVisual";
 import {
   LIEN_PROPERTY_SITUATION_IMAGES,
   mapCitySituationsToSellerCards,
   mapSituationPageCardsToSellerCards,
+  mapSituationPageCityCards,
   mapSituationPageSituationsToSellerCards,
   SELL_AS_IS_WHEN_IMAGES,
   SELL_AS_IS_WHY_US_IMAGES,
+  SITUATION_PAGE_DIFF_IMAGES,
   SITE,
   SITUATION_CARD_HOME_IMAGES,
 } from "@/lib/constants";
@@ -191,6 +194,10 @@ export function SituationBuyProcessSection({
   data: NonNullable<SituationFullContent["buyProcess"]>;
   alt?: boolean;
 }) {
+  if (data.layout === "visual") {
+    return <InheritedBuyProcessVisual data={data} alt={alt} />;
+  }
+
   return (
     <section className={`section${alt ? " section-alt" : ""}`}>
       <div className="wrap">
@@ -975,13 +982,17 @@ export function SituationTrustSection({
 
 export function SituationDiffSection({
   data,
+  slug,
   alt,
 }: {
   data: NonNullable<SituationFullContent["diff"]>;
+  slug: string;
   alt?: boolean;
 }) {
+  const imageMap = data.imageCards ? SITUATION_PAGE_DIFF_IMAGES[slug] : undefined;
+
   return (
-    <section className={`section${alt ? " section-alt" : ""}`}>
+    <section className={`section${alt ? " section-alt" : ""}${imageMap ? " seller-situations" : ""}`}>
       <div className="wrap">
         <SituationSectionHead
           eyebrow={data.eyebrow}
@@ -989,15 +1000,23 @@ export function SituationDiffSection({
           lede={data.lede}
           centered
         />
-        <div className="situation-diff-grid">
-          {data.items.map((item, i) => (
-            <Reveal key={item.num} className="situation-diff-card" d={i > 0 ? ((i % 3) as 1 | 2 | 3) : undefined}>
-              <span className="num">{item.num}</span>
-              <h3>{item.title}</h3>
-              <p>{item.body}</p>
-            </Reveal>
-          ))}
-        </div>
+        {imageMap ? (
+          <SituationImageCardsGrid
+            items={data.items.map((item) => ({ title: item.title, body: item.body }))}
+            imageMap={imageMap}
+            className="sit-cards"
+          />
+        ) : (
+          <div className="situation-diff-grid">
+            {data.items.map((item, i) => (
+              <Reveal key={item.num} className="situation-diff-card" d={i > 0 ? ((i % 3) as 1 | 2 | 3) : undefined}>
+                <span className="num">{item.num}</span>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+              </Reveal>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
@@ -1230,7 +1249,27 @@ export function renderSituationSection(
 
     case "cards":
       return content.cards ? (
-        content.cards.imageCards ? (
+        content.cards.cityImageCards ? (
+          <section key={id} className={`section${alt ? " section-alt" : ""}`} id="cards">
+            <div className="wrap">
+              <CitySituationsSection
+                embedded
+                alt={false}
+                eyebrow={content.cards.eyebrow}
+                title={titleToParts(content.cards)}
+                lede={content.cards.lede ?? ""}
+                items={mapSituationPageCityCards(content.slug, content.cards.items)}
+              />
+              {content.cards.exclusionNote ? (
+                <div className="situation-exclusion-note">
+                  <p>
+                    <strong>What we don&apos;t purchase:</strong> {content.cards.exclusionNote}
+                  </p>
+                </div>
+              ) : null}
+            </div>
+          </section>
+        ) : content.cards.imageCards ? (
           <SellerSituationsSection
             key={id}
             sectionId="cards"
@@ -1350,6 +1389,8 @@ export function renderSituationSection(
             showLocal={content.market.showLocal === true}
             badgeValue={content.market.badgeValue}
             badgeLabel={content.market.badgeLabel}
+            sideImage={content.market.sideImage}
+            sideImageAlt={content.market.sideImageAlt}
           />
         )
       ) : null;
@@ -1399,7 +1440,9 @@ export function renderSituationSection(
       ) : null;
 
     case "diff":
-      return content.diff ? <SituationDiffSection key={id} data={content.diff} alt={alt} /> : null;
+      return content.diff ? (
+        <SituationDiffSection key={id} data={content.diff} slug={content.slug} alt={alt} />
+      ) : null;
 
     case "resources":
       return content.resources ? (
