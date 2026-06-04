@@ -210,7 +210,6 @@
 
 .situation-insurance-card h3 {
   font-size: 16px;
-  font-weight: 700;
   color: var(--ink);
   margin-bottom: 12px;
 }
@@ -244,7 +243,6 @@
 
 .situation-environmental-card h3 {
   font-size: 14px;
-  font-weight: 700;
   color: var(--ink);
   margin-bottom: 8px;
 }
@@ -287,9 +285,7 @@
 }
 
 .situation-areas-aside-cta h3 {
-  font-family: var(--serif);
   font-size: clamp(20px, 2.2vw, 24px);
-  font-weight: 400;
   color: var(--paper);
   margin-bottom: 10px;
 }
@@ -337,7 +333,6 @@
 
 .situation-whyus-card h3 {
   font-size: 15px;
-  font-weight: 700;
   color: var(--ink);
   margin-bottom: 8px;
 }
@@ -460,7 +455,12 @@
   background: var(--paper);
 }
 
-.situation-key-steps h2,
+.situation-key-steps h2 {
+  font-size: var(--h3-size);
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+
 .situation-key-steps h4 {
   font-family: var(--sans);
   font-size: var(--h3-size);
@@ -535,7 +535,6 @@
 
 .situation-info-card h3 {
   font-size: var(--h3-size);
-  font-weight: 600;
   color: var(--ink);
   margin-bottom: 14px;
 }
@@ -591,11 +590,7 @@
 
 /* h2.h-3 was inheriting large h2 typography and overlapping body copy */
 .situation-info-block h2 {
-  font-family: var(--sans);
   font-size: clamp(20px, 2.1vw, 24px);
-  font-weight: 600;
-  line-height: 1.35;
-  letter-spacing: -0.02em;
   color: var(--ink);
   margin: 0 0 14px;
 }
@@ -729,7 +724,6 @@
 .situation-diff-card h3 {
   margin-top: 8px;
   font-size: 17px;
-  font-weight: 600;
   color: var(--ink);
 }
 
@@ -830,10 +824,8 @@
   padding: clamp(24px, 3vw, 32px);
 }
 
-.situation-aside-cta__title {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.25;
+.situation-aside-cta h3 {
+  font-size: clamp(22px, 2.5vw, 28px);
   color: var(--paper);
 }
 
@@ -859,8 +851,13 @@
 .situation-aside-cta .phone {
   display: block;
   margin-top: 18px;
+<<<<<<< HEAD
+  font-size: clamp(24px, 3vw, 30px);
+  font-weight: 700;
+=======
   font-size: clamp(22px, 2.8vw, 24px);
   font-weight: 800;
+>>>>>>> c09c67324dce1ec3b013e5ceb8232e530f59254f
   color: var(--paper);
   text-decoration: none;
 }
@@ -1253,10 +1250,7 @@
 }
 
 .city-sit-card h3 {
-  font-family: var(--sans);
-  font-weight: 600;
   font-size: 17px;
-  line-height: 1.2;
   color: var(--ink);
 }
 
@@ -1266,15 +1260,17 @@
   color: var(--ink-2);
 }
 
-/* City page FAQ — slightly smaller */
+/* City page FAQ — matches global FAQ type scale */
 .city-faq .faq-q {
-  font-size: clamp(17px, 1.7vw, 21px);
+  font-size: var(--body-size);
+  font-weight: 500;
   padding: 18px 0;
 }
 
 .city-faq .faq-a {
-  font-size: 14.5px;
-  line-height: 1.6;
+  font-size: var(--body-size);
+  font-weight: 400;
+  line-height: 1.75;
   padding-bottom: 18px;
 }
 
@@ -1367,8 +1363,6 @@
 
 .situation-buy-feature h3 {
   font-size: 17px;
-  font-weight: 600;
-  line-height: 1.25;
   color: var(--ink);
   margin: 0 0 6px;
 }
@@ -1391,8 +1385,6 @@
 
 .situation-buy-steps__title {
   font-size: 18px;
-  font-weight: 600;
-  line-height: 1.25;
   color: var(--ink);
   margin: 0;
   padding: clamp(24px, 3vw, 32px) 0 24px;
@@ -1481,7 +1473,6 @@
 
 .situation-probate-q h3 {
   font-size: 17px;
-  font-weight: 600;
   color: var(--ink);
   margin-bottom: 8px;
 }
@@ -1592,7 +1583,6 @@
 
 .situation-tax-card h3 {
   font-size: 15px;
-  font-weight: 600;
   color: var(--ink);
   margin-bottom: 8px;
 }
@@ -1640,7 +1630,6 @@
 
 .situation-val-scenario h3 {
   font-size: 16px;
-  font-weight: 600;
   color: var(--ink);
   margin-bottom: 8px;
 }
@@ -1660,7 +1649,6 @@
 
 .situation-val-stats h3 {
   font-size: 17px;
-  font-weight: 600;
   margin-bottom: 16px;
 }
 
@@ -1761,7 +1749,6 @@
 
 .situation-forest-sit__card h3 {
   font-size: clamp(15px, 1.8vw, 16px);
-  font-weight: 700;
   color: var(--paper);
   margin: 0 0 6px;
 }
@@ -1823,7 +1810,6 @@
 
 .situation-payoff__step h3 {
   font-size: 15px;
-  font-weight: 700;
   color: var(--ink);
   margin-bottom: 8px;
 }
@@ -1933,7 +1919,6 @@
 
 .situation-obligation-card h3 {
   font-size: 15px;
-  font-weight: 700;
   color: var(--ink);
   margin-bottom: 12px;
 }
@@ -2011,7 +1996,6 @@
 
 .situation-tenant-market__factor h3 {
   font-size: 15px;
-  font-weight: 700;
   color: var(--paper);
   margin-bottom: 8px;
 }
@@ -2108,7 +2092,6 @@
 
 .situation-case-card h3 {
   font-size: 16px;
-  font-weight: 700;
   color: var(--ink);
   margin-bottom: 12px;
 }
@@ -2131,7 +2114,6 @@
 }
 
 .situation-case-card__stat-value {
-  font-family: var(--serif);
   font-style: italic;
   font-size: 28px;
   font-weight: 800;
@@ -2154,7 +2136,6 @@
 
 .situation-case-takeaways h3 {
   font-size: 15px;
-  font-weight: 700;
   color: var(--ink);
   margin-bottom: 14px;
 }
@@ -2190,6 +2171,42 @@
   margin-top: 7px;
 }
 
+<<<<<<< HEAD
+/* Florida-specific callout card (tenants why-us sidebar) */
+.situation-aside-cta .situation-why-aside-note {
+  margin-top: 20px;
+  padding: 16px;
+  background: var(--sand);
+  border: 1px solid color-mix(in oklab, var(--ink) 10%, #e5e7eb);
+  border-radius: 12px;
+  box-shadow:
+    0 1px 2px rgba(31, 61, 46, 0.04),
+    0 4px 12px -2px rgba(31, 61, 46, 0.1);
+}
+
+.situation-aside-cta .situation-why-aside-note__title {
+  margin: 0 0 12px;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal-deep);
+  line-height: 1.4;
+}
+
+.situation-aside-cta .situation-why-aside-note > p {
+  margin: 0;
+  padding-bottom: 8px;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+=======
+>>>>>>> c09c67324dce1ec3b013e5ceb8232e530f59254f
 /* Numeric buyer cards on tenants page */
 .city-sit-card__icon:has(+ h3) {
   font-size: 13px;
@@ -2345,9 +2362,7 @@
 }
 
 .situation-proscons-when__title {
-  font-family: var(--serif);
   font-size: clamp(22px, 2.8vw, 28px);
-  font-weight: 600;
   margin-bottom: 10px;
 }
 

@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-import Link from "next/link";
 import { FaqAccordionList } from "@/components/home/FaqAccordionList";
 import { SectionHead } from "@/components/ui/SectionHead";
 import { FAQ_ITEMS } from "@/lib/constants";
@@ -10,7 +9,6 @@ type FaqSectionProps = {
   items?: readonly FaqItem[];
   title?: ReactNode;
   eyebrow?: string;
-  showFullLink?: boolean;
   className?: string;
   id?: string;
 };
@@ -23,7 +21,6 @@ export function FaqSection({
     </>
   ),
   eyebrow = "FAQ",
-  showFullLink = true,
   className = "",
   id = "faq",
 }: FaqSectionProps) {
@@ -37,14 +34,6 @@ export function FaqSection({
         <SectionHead eyebrow={eyebrow} title={title} />
 
         <FaqAccordionList items={items} />
-
-        {showFullLink ? (
-          <div style={{ marginTop: 22 }}>
-            <Link href="/faq" className="btn btn--link">
-              Visit our full FAQ page →
-            </Link>
-          </div>
-        ) : null}
       </div>
     </section>
   );

@@ -14,7 +14,7 @@ import { GuaranteeSection } from "@/components/home/GuaranteeSection";
 import { ResourcesSection } from "@/components/home/ResourcesSection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { FinalCtaSection } from "@/components/home/FinalCtaSection";
-import { HOMEPAGE_SEO, SITE } from "@/lib/constants";
+import { GUARANTEE_ASIDE_CHECKLIST, HOMEPAGE_SEO, SITE } from "@/lib/constants";
 import { HOMEPAGE_FAQ_JSON_LD } from "@/lib/schema";
 
 export const metadata: Metadata = {
@@ -54,7 +54,7 @@ export default function HomePage() {
       <AreasSection />
       <ReviewsSection />
       <MarketSection showLocal={false} />
-      <GuaranteeSection variant="card" />
+      <GuaranteeSection asideChecklist={GUARANTEE_ASIDE_CHECKLIST} />
       <ResourcesSection />
       <FaqSection />
       <FinalCtaSection />

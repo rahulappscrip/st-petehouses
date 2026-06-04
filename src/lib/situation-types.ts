@@ -247,6 +247,8 @@ export type SituationFullContent = {
     badgeLabel?: string;
     showChart?: boolean;
     showLocal?: boolean;
+    chartImage?: string;
+    chartImageAlt?: string;
     sideImage?: string;
     sideImageAlt?: string;
     dark?: boolean;
@@ -300,6 +302,8 @@ export type SituationFullContent = {
     asideTitle?: string;
     asideBody?: string;
     asideList?: string[];
+    /** Callout below the sidebar CTA (e.g. Florida-specific guidance on tenants page). */
+    asideNoteTitle?: string;
     footerTitle?: string;
     footerNote?: string;
     grid?: boolean;

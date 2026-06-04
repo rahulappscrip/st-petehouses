@@ -274,7 +274,6 @@ function renderCitySection(id: CitySectionId, content: CityFullContent, page: Ci
           title={
             <SectionTitle lead={content.faq.titleLead} em={content.faq.titleEm} tail={content.faq.titleTail} />
           }
-          showFullLink={false}
         />
       );
 

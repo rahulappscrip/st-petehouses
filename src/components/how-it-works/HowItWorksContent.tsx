@@ -3,12 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
 import { ArticleToc } from "@/components/how-it-works/ArticleToc";
+import { ProcessStepsGrid } from "@/components/how-it-works/ProcessStepsGrid";
 import { TimelineCalculator } from "@/components/how-it-works/TimelineCalculator";
 import { FaqAccordionList } from "@/components/home/FaqAccordionList";
 import { FinalCtaSection } from "@/components/home/FinalCtaSection";
 import {
   ASSETS,
   HOW_IT_WORKS_BENEFITS,
+  HOW_IT_WORKS_DETAILED_STEPS,
   HOW_IT_WORKS_FAQ,
   HOW_IT_WORKS_SITUATIONS,
   HOW_IT_WORKS_STEPS,
@@ -91,7 +93,7 @@ export function HowItWorksContent() {
             <div className="byline">
               <Image
                 className="av"
-                src={ASSETS.johnPortrait}
+                src={ASSETS.johnByline}
                 alt="John Gardepe"
                 width={40}
                 height={40}
@@ -185,15 +187,7 @@ export function HowItWorksContent() {
                 sellers.
               </p>
 
-              <div className="process-steps">
-                {HOW_IT_WORKS_STEPS.map((step) => (
-                  <div key={step.num} className="pstep">
-                    <span className="n">{step.num}</span>
-                    <h3>{step.title}</h3>
-                    <p>{step.body}</p>
-                  </div>
-                ))}
-              </div>
+              <ProcessStepsGrid steps={HOW_IT_WORKS_STEPS} />
 
               <p>
                 No repairs are required at any stage. You won&apos;t pay real estate commissions or
@@ -238,45 +232,13 @@ export function HowItWorksContent() {
                   <IconCard key={item.title} title={item.title} body={item.body} icon={SITUATION_ICONS[i]} />
                 ))}
               </div>
-              <figure className="hiw-inline-image">
-                <Image
-                  src="/assets/images/HIW-Image-3.webp"
-                  alt="Seller situations where cash buying helps"
-                  fill
-                  sizes="(max-width: 980px) 100vw, 900px"
-                  className="hiw-inline-image__img"
-                />
-              </figure>
             </section>
 
             <section id="step-by-step">
               <h2>Step-by-step: selling your house for cash.</h2>
               <p>Let me walk you through the complete process in detail.</p>
 
-              <h3>Step 1: Submit your inquiry</h3>
-              <p>
-                Reach out by phone, online form, or email with your property address and a brief
-                description of your situation. This takes just a few minutes.
-              </p>
-
-              <h3>Step 2: Receive and review the offer</h3>
-              <p>
-                We evaluate your property and typically provide a written cash offer within 24 hours.
-                Review it at your own pace with no pressure.
-              </p>
-
-              <h3>Step 3: Acceptance and escrow</h3>
-              <p>
-                Once you accept, we open escrow and handle title work, inspections (for our due
-                diligence only — not your responsibility), and paperwork.
-              </p>
-
-              <h3>Step 4: Closing and possession</h3>
-              <p>
-                We close on a date that works for you. After signing, you receive your proceeds and
-                hand over the keys. The entire process from inquiry to close can happen in as little
-                as 7 days.
-              </p>
+              <ProcessStepsGrid steps={HOW_IT_WORKS_DETAILED_STEPS} />
 
               <p>
                 <strong>Common timing delays and how to avoid them.</strong> Title issues or unclear
@@ -286,15 +248,6 @@ export function HowItWorksContent() {
               </p>
 
               <TimelineCalculator />
-              <figure className="hiw-inline-image">
-                <Image
-                  src="/assets/images/How-it-works-situation-sec.webp"
-                  alt="Step-by-step visual for cash home sale process"
-                  fill
-                  sizes="(max-width: 980px) 100vw, 900px"
-                  className="hiw-inline-image__img"
-                />
-              </figure>
             </section>
 
             <section id="are-cash-buyers-legit">

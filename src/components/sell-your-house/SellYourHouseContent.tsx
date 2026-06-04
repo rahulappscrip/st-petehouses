@@ -136,7 +136,6 @@ export function SellYourHouseContent() {
             Frequently asked <em>questions</em>.
           </>
         }
-        showFullLink={false}
       />
 
       <FinalCtaSection

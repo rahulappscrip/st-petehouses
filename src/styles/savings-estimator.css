@@ -104,8 +104,7 @@
 }
 
 .calc-results__total {
-  font-family: var(--serif);
-  font-weight: 400;
+  font-weight: 800;
   font-size: clamp(44px, 5vw, 64px);
   line-height: 1;
   letter-spacing: -0.02em;

@@ -1,0 +1,147 @@
+/**
+ * Site typography — Inter for all text/headings; DM Serif only inside <em>.
+ * Loaded last so it wins over section-specific overrides.
+ */
+
+/* ── H2 (section titles) ── */
+h2,
+.h-2,
+h2[class] {
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: var(--h2-size);
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+}
+
+h2 em,
+.h-2 em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--sun);
+}
+
+.section-head h2,
+.section-head .h-2,
+.seller-situations .section-head .h-2,
+.situation-inherited-buy .section-head .h-2,
+[class*="situation-"] h2,
+.cta-card h2,
+.cta-card__content .h-2,
+.reviews-header h2,
+.testimonials .reviews-header h2,
+.article-body h2,
+.lead-title,
+.about-cta-card__title,
+.meet-owner__title {
+  font-family: var(--sans);
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+}
+
+h2.lead-title {
+  font-size: clamp(24px, 2.2vw, 30px);
+  line-height: 1.12;
+}
+
+/* ── H3 (card / block titles) ── */
+h3,
+.h-3,
+h3[class] {
+  font-family: var(--sans);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.18;
+}
+
+h3 em,
+.h-3 em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+}
+
+[class*="situation-"] h3,
+.sit-card__title,
+.city-sit-card h3,
+.pstep h3,
+.step h3,
+.factor h3,
+.ba-meta h3,
+.guarantee-list h3,
+.guarantee-aside h3,
+.guarantee--card .guarantee-list h3,
+.guarantee--card .guarantee-aside h3,
+.article-body h3,
+.timeline-widget h3,
+.meet-owner__cta-text h3,
+.legal h3,
+.reviews-process-grid h3,
+.icon-card h3,
+.market-local__title {
+  font-family: var(--sans);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.18;
+}
+
+.guarantee-aside h3 em,
+.meet-owner__cta-text h3 em,
+.situation-aside-cta h3 em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* ── H1 accent (em only) ── */
+h1 em,
+.h-display em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--sun);
+}
+
+/* ── DM Serif only on <em> ── */
+em {
+  font-family: var(--serif);
+  font-style: italic;
+}
+
+/* Legacy serif utility classes → Inter */
+.line-name,
+.line-sig,
+.lead-badge b,
+.stat b,
+.step-num,
+.pstep .n,
+.tcard p.quote,
+.sig-photo span,
+.sig-body p.q,
+.rev-hero .summary .big,
+.rev-hero .badge b,
+.review p.quote,
+.trust-card h4,
+.compare-callout h4,
+.timeline-widget .result .big,
+.meet-owner__badge strong,
+.meet-owner__quote-mark,
+.testimonials .rating-badge .score,
+.situation-aside-cta .phone,
+.situation-case-card__stat-value,
+.calc-results__total {
+  font-family: var(--sans);
+}
+
+.line-sig,
+.situation-case-card__stat-value {
+  font-style: italic;
+}
+
+.lead-title em,
+.timeline-widget .result .big em {
+  font-family: var(--serif);
+  font-style: italic;
+}
