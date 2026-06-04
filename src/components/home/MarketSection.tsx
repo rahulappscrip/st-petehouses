@@ -22,6 +22,8 @@ type MarketSectionProps = {
   alt?: boolean;
   chartImage?: string;
   chartImageAlt?: string;
+  sideImage?: string;
+  sideImageAlt?: string;
 };
 
 export function MarketSection({
@@ -40,13 +42,17 @@ export function MarketSection({
   alt = true,
   chartImage = ASSETS.marketChart,
   chartImageAlt = "Chart illustrating the St. Petersburg cash home market",
+  sideImage,
+  sideImageAlt = "Local market context for cash home offers",
 }: MarketSectionProps = {}) {
+  const useTwoColumn = showChart || Boolean(sideImage);
+
   return (
     <section className={`section${alt ? " section-alt" : ""} market-section`} id="market">
       <div className="wrap">
         <SectionHead eyebrow={eyebrow} title={title} lede={lede} />
 
-        <div className={showChart ? "market-grid" : "factor-list"} style={showChart ? undefined : { maxWidth: "100%" }}>
+        <div className={useTwoColumn ? "market-grid" : "factor-list"}>
           {showChart ? (
             <Reveal className="market-chart">
               <Image
@@ -63,6 +69,17 @@ export function MarketSection({
                   {badgeLabel}
                 </div>
               ) : null}
+            </Reveal>
+          ) : sideImage ? (
+            <Reveal className="market-chart">
+              <Image
+                src={sideImage}
+                alt={sideImageAlt}
+                width={960}
+                height={720}
+                sizes="(min-width: 960px) 50vw, 100vw"
+                className="market-chart__img"
+              />
             </Reveal>
           ) : null}
 

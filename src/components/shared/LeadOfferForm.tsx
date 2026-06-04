@@ -2,7 +2,7 @@
 
 import type { ReactNode } from "react";
 import { Arr } from "@/components/ui/Arr";
-import { ASSETS } from "@/lib/constants";
+import { ASSETS, SITE } from "@/lib/constants";
 
 type LeadOfferFormProps = {
   id?: string;
@@ -79,7 +79,7 @@ export function LeadOfferForm({
         <div className="row-2">
           <div className="field">
             <label htmlFor="phone">Phone</label>
-            <input id="phone" className="input" required type="tel" autoComplete="tel" placeholder="(727) 555-0123" />
+            <input id="phone" className="input" required type="tel" autoComplete="tel" placeholder={SITE.phone} />
           </div>
           <div className="field">
             <label htmlFor="email">Email</label>

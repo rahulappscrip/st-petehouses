@@ -16,6 +16,8 @@ export type SituationStep = {
   title: string;
   body: string;
   link?: SituationInlineLink;
+  /** Icon key for visual buy-process timeline (e.g. phone, house). */
+  icon?: string;
 };
 
 export type SituationCard = {
@@ -162,6 +164,8 @@ export type SituationFullContent = {
     features: SituationCard[];
     stepsTitle: string;
     steps: SituationStep[];
+    /** Visual layout with image feature cards and horizontal step timeline. */
+    layout?: "default" | "visual";
   };
   probate?: SituationTitleParts & {
     items: SituationProbateItem[];
@@ -222,6 +226,8 @@ export type SituationFullContent = {
     exclusionNote?: string;
     /** Use homepage-style image cards (sit-cards) instead of icon grid. */
     imageCards?: boolean;
+    /** Keep city-sit-card layout with photos (category label + title). */
+    cityImageCards?: boolean;
   };
   areas?: SituationTitleParts & {
     areasNote?: string;
@@ -241,6 +247,8 @@ export type SituationFullContent = {
     badgeLabel?: string;
     showChart?: boolean;
     showLocal?: boolean;
+    sideImage?: string;
+    sideImageAlt?: string;
     dark?: boolean;
     regions?: { label: string; body: string }[];
   };
@@ -278,7 +286,11 @@ export type SituationFullContent = {
     stats: { value: string; label: string }[];
   };
   infoBlocks?: SituationInfoBlock[];
-  diff?: SituationTitleParts & { items: SituationDiffItem[] };
+  diff?: SituationTitleParts & {
+    items: SituationDiffItem[];
+    /** Use image cards (photo above title) instead of numbered diff cards. */
+    imageCards?: boolean;
+  };
   resources?: SituationTitleParts & {
     items: { title: string; body: string; tag?: string; href?: string; linkLabel?: string; phone?: string; note?: string }[];
     footerNote?: string;
