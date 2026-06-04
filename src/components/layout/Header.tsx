@@ -115,7 +115,7 @@ function MobileNavPanel({ onNavigate }: { onNavigate: () => void }) {
         <a href={SITE.phoneHref} className="btn btn--ghost">
           📞 {SITE.phone}
         </a>
-        <Link href="/get-cash-offer" className="btn btn--cta">
+        <Link href={SITE.cashOfferHref} className="btn btn--cta">
           Get Cash Offer →
         </Link>
       </div>
@@ -378,7 +378,7 @@ export function Header() {
           </ul>
 
           <div className="nav-cta">
-            <Link href="/get-cash-offer" className="btn btn--cta">
+            <Link href={SITE.cashOfferHref} className="btn btn--cta">
               Get Cash Offer
               <Arr />
             </Link>

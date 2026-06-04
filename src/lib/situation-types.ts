@@ -217,7 +217,12 @@ export type SituationFullContent = {
     steps: { num: string; title: string; body: string }[];
     equityNote?: { title: string; body: string };
   };
-  cards?: SituationTitleParts & { items: SituationCard[]; exclusionNote?: string };
+  cards?: SituationTitleParts & {
+    items: SituationCard[];
+    exclusionNote?: string;
+    /** Use homepage-style image cards (sit-cards) instead of icon grid. */
+    imageCards?: boolean;
+  };
   areas?: SituationTitleParts & {
     areasNote?: string;
     areasNoteLink?: SituationInlineLink;
@@ -263,6 +268,8 @@ export type SituationFullContent = {
     when?: SituationTitleParts & {
       lede?: string;
       items: SituationCard[];
+      /** Image cards (photo above title) instead of icon chips. */
+      imageCards?: boolean;
     };
   };
   trust?: SituationTitleParts & {
@@ -283,6 +290,8 @@ export type SituationFullContent = {
     asideList?: string[];
     footerNote?: string;
     grid?: boolean;
+    /** Image cards (photo above title) instead of icon grid. */
+    imageCards?: boolean;
   };
   faq: SituationTitleParts & { items: SituationFaqItem[] };
   finalCta: {

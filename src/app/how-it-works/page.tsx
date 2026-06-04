@@ -24,7 +24,7 @@ const jsonLd = {
     {
       "@type": "Article",
       "@id": `${SITE.url}how-it-works/#article`,
-      headline: "How the Cash Home Buying Process Works",
+      headline: "How the Cash Home Buying Process Works.",
       description:
         "A clear, step-by-step guide to selling your home for cash in St Petersburg and Tampa Bay — inquiry, assessment, offer, closing.",
       datePublished: "2026-05-26",

@@ -11,7 +11,7 @@ const FOOTER_COMPANY = [
   { label: "FAQ", href: "/faq" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
-  { label: "Get a Cash Offer", href: "/get-cash-offer" },
+  { label: "Get a Cash Offer", href: SITE.cashOfferHref },
   { label: "Privacy Policy", href: "/about" },
 ];
 

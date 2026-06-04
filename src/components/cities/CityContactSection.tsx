@@ -30,7 +30,7 @@ export function CityContactSection({ eyebrow, title, lede }: Props) {
               </li>
               <li>
                 <strong>Online:</strong>{" "}
-                <Link href="/get-cash-offer">Submit our simple online form</Link>
+                <Link href={SITE.cashOfferHref}>Submit our simple online form</Link>
               </li>
             </ul>
           </Reveal>
