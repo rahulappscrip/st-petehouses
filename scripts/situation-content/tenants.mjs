@@ -237,6 +237,7 @@ export const TENANTS_CONTENT = {
     asideTitle: "Ready to stop being a landlord?",
     asideBody:
       "Call or message us now. A local St Pete team member will respond within 24 hours with a no-obligation cash offer — tenants in place, no repairs required.",
+    footerTitle: "Florida-Specific vs. Generic Advice",
     footerNote:
       "Much online guidance misses Florida's specific legal framework — deposit transfer obligations, lease survival provisions, and local market norms in Pinellas County. We provide Florida-verified guidance, not national boilerplate that may not apply to your situation.",
   },

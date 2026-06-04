@@ -300,6 +300,7 @@ export type SituationFullContent = {
     asideTitle?: string;
     asideBody?: string;
     asideList?: string[];
+    footerTitle?: string;
     footerNote?: string;
     grid?: boolean;
     /** Image cards (photo above title) instead of icon grid. */
