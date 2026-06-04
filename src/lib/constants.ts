@@ -3,6 +3,7 @@ import { AREA_CITIES as CITY_AREA_LIST, CITY_NAV_LINKS } from "./cities";
 export const ASSETS = {
   johnPortrait: "/assets/images/john-gardepe.webp",
   johnSvg: "/assets/images/John-svg.svg",
+  johnByline: "/assets/images/John.webp",
   johnCta: "/assets/images/john-gardepe-1.webp",
   ownerJohn: "/assets/images/john-own.webp",
   bbbBadge: "/assets/images/bbb-client.webp",
@@ -10,6 +11,8 @@ export const ASSETS = {
   favicon: "/favicon.ico",
   faviconPng: "/assets/images/we-buy-st-pete-favicon-res.png",
   marketChart: "/assets/images/Understanding-the-st-pete-market.webp",
+  marketChartForeclosure: "/assets/images/Understanding-the-st-pete-market-foreclosure.webp",
+  cashHomebuyersOptimized: "/assets/images/Cash-Homebuyers-optimized.webp",
   marketChartStPetersburg: "/assets/images/Understanding-the-st-Petersburg-cash.webp",
   marketChartPinellasPark:
     "/assets/images/Understanding-the-Pinellas-Park-cash-home-market-optimized.webp",
@@ -1412,6 +1415,29 @@ export const HOW_IT_WORKS_TOC = [
   { id: "faq", label: "FAQ" },
 ] as const;
 
+export const HOW_IT_WORKS_DETAILED_STEPS = [
+  {
+    num: "01",
+    title: "Submit your inquiry",
+    body: "Reach out by phone, online form, or email with your property address and a brief description of your situation. This takes just a few minutes.",
+  },
+  {
+    num: "02",
+    title: "Receive and review the offer",
+    body: "We evaluate your property and typically provide a written cash offer within 24 hours. Review it at your own pace with no pressure.",
+  },
+  {
+    num: "03",
+    title: "Acceptance and escrow",
+    body: "Once you accept, we open escrow and handle title work, inspections (for our due diligence only — not your responsibility), and paperwork.",
+  },
+  {
+    num: "04",
+    title: "Closing and possession",
+    body: "We close on a date that works for you. After signing, you receive your proceeds and hand over the keys. The entire process from inquiry to close can happen in as little as 7 days.",
+  },
+] as const;
+
 export const HOW_IT_WORKS_STEPS = [
   {
     num: "01",
@@ -1621,18 +1647,22 @@ export const GUARANTEE_ASIDE_CHECKLIST = [
 export const GUARANTEE_ITEMS = [
   {
     title: "Guaranteed cash offer",
+    icon: "cash" as const,
     body: "A written offer based on your property's current condition. Firm — no last-minute renegotiations.",
   },
   {
     title: "No hidden fees",
+    icon: "dollar" as const,
     body: "The offer you see is the offer you get. We cover closing costs, so you keep more of your sale price.",
   },
   {
     title: "Closing on your timeline",
+    icon: "clock" as const,
     body: "Choose a closing date that works for you — 7 days, 30 days, or longer if needed.",
   },
   {
     title: "AS-IS purchase",
+    icon: "repair" as const,
     body: "We buy in any condition. No repairs, no staging, no cleaning required. Leave what you don't want.",
   },
 ] as const;

@@ -57,7 +57,6 @@
 }
 
 .guarantee--card .guarantee-list h3 {
-  font-weight: 600;
   font-size: clamp(18px, 2vw, 22px);
   color: var(--ink);
 }
@@ -98,10 +97,7 @@
 
 .guarantee--card .guarantee-aside h3 {
   font-size: clamp(26px, 3.2vw, 34px);
-  line-height: 1.15;
   margin-top: 16px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
 }
 
 .guarantee--card .guarantee-aside h3 em {

@@ -26,6 +26,7 @@ import {
   SITUATION_PAGE_DIFF_IMAGES,
   SITE,
   SITUATION_CARD_HOME_IMAGES,
+  ASSETS,
 } from "@/lib/constants";
 import type {
   SituationCourtProcess,
@@ -1102,7 +1103,12 @@ export function SituationWhyUsSection({
                 <Arr />
               </Link>
               {data.footerNote ? (
-                <p className="situation-why-footer-note">{data.footerNote}</p>
+                <div className="situation-why-aside-note">
+                  {data.asideNoteTitle ? (
+                    <p className="situation-why-aside-note__title">{data.asideNoteTitle}</p>
+                  ) : null}
+                  <p>{data.footerNote}</p>
+                </div>
               ) : null}
             </Reveal>
           ) : null}
@@ -1389,6 +1395,16 @@ export function renderSituationSection(
             showLocal={content.market.showLocal === true}
             badgeValue={content.market.badgeValue}
             badgeLabel={content.market.badgeLabel}
+            chartImage={
+              content.market.chartImage ??
+              (content.slug === "foreclosure" ? ASSETS.marketChartForeclosure : undefined)
+            }
+            chartImageAlt={
+              content.market.chartImageAlt ??
+              (content.slug === "foreclosure"
+                ? "Chart illustrating the St. Petersburg foreclosure cash home market"
+                : undefined)
+            }
             sideImage={content.market.sideImage}
             sideImageAlt={content.market.sideImageAlt}
           />
@@ -1460,7 +1476,6 @@ export function renderSituationSection(
           eyebrow={content.faq.eyebrow}
           title={titleToParts(content.faq)}
           items={content.faq.items}
-          showFullLink={false}
         />
       );
 

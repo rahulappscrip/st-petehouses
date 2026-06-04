@@ -209,9 +209,9 @@
           "body": "We work with local title professionals, handle any complications, and keep your closing on track."
         }
       ],
-      "badgeValue": "$380k",
-      "badgeLabel": "Avg. St Pete home value",
-      "showLocal": false
+      "showLocal": false,
+      "chartImage": "/assets/images/Understanding-the-st-pete-market-foreclosure.webp",
+      "chartImageAlt": "Chart illustrating the St. Petersburg foreclosure cash home market"
     },
     "guarantee": {
       "eyebrow": "Our Commitment",
@@ -1143,6 +1143,8 @@
       "lede": "Tampa Bay-area variations affect price and speed. Local data beats generic statewide averages — and we track it daily.",
       "showChart": false,
       "showLocal": false,
+      "sideImage": "/assets/images/Cash-Homebuyers-optimized.webp",
+      "sideImageAlt": "Cash home buyers serving St. Petersburg and Tampa Bay during a divorce home sale",
       "factors": [
         {
           "title": "Demand differences",
@@ -1622,6 +1624,7 @@
       ],
       "asideTitle": "Ready to stop being a landlord?",
       "asideBody": "Call or message us now. A local St Pete team member will respond within 24 hours with a no-obligation cash offer — tenants in place, no repairs required.",
+      "asideNoteTitle": "Florida-specific vs. generic advice",
       "footerNote": "Much online guidance misses Florida's specific legal framework — deposit transfer obligations, lease survival provisions, and local market norms in Pinellas County. We provide Florida-verified guidance, not national boilerplate that may not apply to your situation."
     }
   },

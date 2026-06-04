@@ -2,19 +2,19 @@
 
 @theme {
   --color-forest: #1f3d2e;
-  --color-forest-dark: #152b20;
+  --color-forest-dark: #1f3d2e;
   --color-accent: #4fa86b;
-  --color-accent-light: #6dbd84;
-  --color-sage: #c8d9c4;
-  --color-sage-light: #f4f8f3;
-  --color-sage-mid: #e2ede0;
-  --color-ink: #1a1a1a;
-  --color-ink-mid: #5a6b5e;
-  --color-ink-soft: #8a9e8e;
-  --color-paper: #f4f8f3;
-  --color-cream: #f5f0e8;
-  --color-line: #d8e5d4;
-  --font-serif: "DM Serif Display", Georgia, "Times New Roman", serif;
+  --color-accent-light: #4fa86b;
+  --color-sage: #f3f8f4;
+  --color-sage-light: #ffffff;
+  --color-sage-mid: #f3f8f4;
+  --color-ink: #1f3d2e;
+  --color-ink-mid: #2e4438;
+  --color-ink-soft: #5e6b63;
+  --color-paper: #f3f8f4;
+  --color-cream: #ffffff;
+  --color-line: rgba(31, 61, 46, 0.12);
+  --font-serif: "DM Serif Display", Georgia, serif;
 }
 
 @utility text-accent-serif {

@@ -20,17 +20,6 @@
 .reviews-header h2 {
   padding-top: 18px;
   padding-bottom: 5px;
-  font-family: var(--sans);
-  font-weight: 500;
-  font-size: clamp(32px, 3.6vw, 42px);
-  line-height: 1.15;
-}
-
-.reviews-header h2 em {
-  font-family: var(--serif);
-  font-style: italic;
-  font-weight: 400;
-  color: var(--sun);
 }
 
 .testimonials .reviews-header .lede {
@@ -49,9 +38,8 @@
 }
 
 .testimonials .rating-badge .score {
-  font-family: var(--serif);
   font-size: 48px;
-  font-weight: 400;
+  font-weight: 800;
   color: var(--ink);
   line-height: 1;
 }

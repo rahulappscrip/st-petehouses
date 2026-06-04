@@ -171,17 +171,35 @@ export function ReviewsPageContent() {
           </Reveal>
 
           <Reveal className="compare">
-            <div className="compare-grid">
-              <div className="col-h">Factor</div>
-              <div className="col-h us">Cash offer (us)</div>
-              <div className="col-h">Agent listing</div>
-              {REVIEWS_COMPARE_ROWS.map((row) => (
-                <div key={row.factor} className="compare-row" style={{ display: "contents" }}>
-                  <div className="row-h">{row.factor}</div>
-                  <div className="us-cell">{row.us}</div>
-                  <div className="other-cell">{row.other}</div>
+            <div className="compare-scroll">
+              <div
+                className="compare-grid"
+                role="table"
+                aria-label="Cash offer compared to agent listing"
+              >
+                <div className="col-h" role="columnheader">
+                  Factor
                 </div>
-              ))}
+                <div className="col-h us" role="columnheader">
+                  Cash offer (us)
+                </div>
+                <div className="col-h" role="columnheader">
+                  Agent listing
+                </div>
+                {REVIEWS_COMPARE_ROWS.map((row) => (
+                  <div key={row.factor} className="compare-grid__row" role="row">
+                    <div className="row-h" role="rowheader">
+                      {row.factor}
+                    </div>
+                    <div className="us-cell" role="cell">
+                      {row.us}
+                    </div>
+                    <div className="other-cell" role="cell">
+                      {row.other}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </Reveal>
         </div>
@@ -194,7 +212,6 @@ export function ReviewsPageContent() {
             Frequently asked questions about <em>cash buyer reviews</em>.
           </>
         }
-        showFullLink={false}
         className=""
       />
 
