@@ -22,6 +22,7 @@ export type SituationStep = {
 
 export type SituationCard = {
   icon?: string;
+  label?: string;
   title: string;
   body: string;
   image?: string;
@@ -66,6 +67,7 @@ export type SituationHero = {
   neighborhoodTags?: string[];
   trustPills?: string[];
   urgencyBadge?: string;
+  compassionBanner?: string;
   keySteps?: { title: string; items: string[] };
   /** Optional middle crumb, e.g. city page before the situation label. */
   breadcrumbTrail?: SituationInlineLink[];
@@ -102,6 +104,7 @@ export type SituationTaxCard = {
   label: string;
   title: string;
   body: string;
+  icon?: string;
 };
 
 export type SituationValuationScenario = {
@@ -110,8 +113,123 @@ export type SituationValuationScenario = {
   body: string;
 };
 
+export type SituationEmpathyNumberCard = {
+  value: string;
+  suffix?: string;
+  prefix?: string;
+  title?: string;
+  body: string;
+  source?: { label: string; href: string };
+};
+
+export type SituationEmpathyContent = SituationTitleParts & {
+  paragraphs: string[];
+  quote: string;
+  closingParagraph?: string;
+  numbersEyebrow: string;
+  numbers: SituationEmpathyNumberCard[];
+};
+
+export type SituationStageCard = {
+  label: string;
+  title: string;
+  body: string;
+  link?: { label: string; href: string };
+};
+
+export type SituationStagesContent = SituationTitleParts & {
+  items: SituationStageCard[];
+};
+
+export type SituationTenantMarketFactorIcon = "phone" | "house" | "document" | "clock";
+
+export type SituationTenantMarketFactor = {
+  title: string;
+  body: string;
+  label?: string;
+  icon?: SituationTenantMarketFactorIcon;
+};
+
+export type SituationTenantMarketTestimonial = {
+  quote: string;
+  name: string;
+  location: string;
+  note?: string;
+};
+
+export type SituationTenantMarketContent = SituationTitleParts & {
+  factors: SituationTenantMarketFactor[];
+  regions?: { label: string; body: string }[];
+  testimonial?: SituationTenantMarketTestimonial;
+};
+
+export type SituationForeclosureLawLink = {
+  label: string;
+  href: string;
+};
+
+export type SituationForeclosureLawStep = {
+  num: string;
+  title: string;
+  body: string;
+  link: SituationForeclosureLawLink;
+};
+
+export type SituationForeclosureLawContent = SituationTitleParts & {
+  paragraphs: string[];
+  disclaimer: string;
+  steps: SituationForeclosureLawStep[];
+};
+
+export type SituationLegalInfoLink = {
+  href: string;
+  label: string;
+};
+
+export type SituationFloodLawContent = SituationTitleParts & {
+  lede: string;
+  legalNote?: string;
+  items: { title: string; body: string; link?: SituationLegalInfoLink }[];
+};
+
+export type SituationFemaInsuranceContent = SituationTitleParts & {
+  lede: string;
+  disclaimer: string;
+  cards: { title: string; paragraphs: string[]; link?: SituationLegalInfoLink }[];
+};
+
+export type SituationMoldDisclosureContent = SituationTitleParts & {
+  lede: string;
+  legalNote: string;
+  items: {
+    icon?: string;
+    title: string;
+    body: string;
+    link?: SituationLegalInfoLink;
+    links?: SituationLegalInfoLink[];
+  }[];
+};
+
+export type SituationTestimonial = {
+  quote: string;
+  initials: string;
+  name: string;
+  meta: string;
+};
+
+export type SituationTestimonialsContent = SituationTitleParts & {
+  items: SituationTestimonial[];
+};
+
 export type SituationSectionId =
   | "stats"
+  | "empathy"
+  | "stages"
+  | "tenantMarket"
+  | "foreclosureLaw"
+  | "floodLaw"
+  | "femaInsurance"
+  | "moldDisclosure"
   | "process"
   | "buyProcess"
   | "courtProcess"
@@ -149,6 +267,13 @@ export type SituationFullContent = {
   metaDescription: string;
   hero: SituationHero;
   stats?: SituationStat[];
+  empathy?: SituationEmpathyContent;
+  stages?: SituationStagesContent;
+  tenantMarket?: SituationTenantMarketContent;
+  foreclosureLaw?: SituationForeclosureLawContent;
+  floodLaw?: SituationFloodLawContent;
+  femaInsurance?: SituationFemaInsuranceContent;
+  moldDisclosure?: SituationMoldDisclosureContent;
   sectionOrder: SituationSectionId[];
   process?: SituationTitleParts & {
     steps: SituationStep[];
@@ -215,7 +340,7 @@ export type SituationFullContent = {
     cards: { tag: string; title: string; paragraphs: string[]; cta?: boolean }[];
   };
   environmental?: SituationTitleParts & {
-    items: { title: string; body: string }[];
+    items: { title: string; body: string; icon?: string }[];
   };
   payoff?: SituationTitleParts & {
     steps: { num: string; title: string; body: string }[];
@@ -228,6 +353,10 @@ export type SituationFullContent = {
     imageCards?: boolean;
     /** Keep city-sit-card layout with photos (category label + title). */
     cityImageCards?: boolean;
+    /** Numbered investor/buyer priority cards (e.g. tenants page). */
+    numberedCards?: boolean;
+    /** Icon grid cards (e.g. lien types page). */
+    iconCards?: boolean;
   };
   areas?: SituationTitleParts & {
     areasNote?: string;
@@ -235,6 +364,7 @@ export type SituationFullContent = {
     areasNoteAfter?: string;
     areasAside?: { title: string; body: string };
   };
+  testimonials?: SituationTestimonialsContent;
   situations?: SituationTitleParts & {
     items: SituationCard[];
     dark?: boolean;
@@ -242,7 +372,7 @@ export type SituationFullContent = {
     imageCards?: boolean;
   };
   market?: SituationTitleParts & {
-    factors: { title: string; body: string; label?: string }[];
+    factors: SituationTenantMarketFactor[];
     badgeValue?: string;
     badgeLabel?: string;
     showChart?: boolean;
@@ -256,8 +386,10 @@ export type SituationFullContent = {
   };
   guarantee?: SituationTitleParts & {
     items: { title: string; body: string }[];
-    asideTitle: string;
-    asideBody: string;
+    asideTitle?: string;
+    asideBody?: string;
+    ctaTitle?: string;
+    ctaBody?: string;
   };
   comparison?: SituationTitleParts & {
     traditionalLabel: string;

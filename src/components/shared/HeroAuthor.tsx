@@ -19,8 +19,8 @@ export function HeroAuthor({ role = "Local Founder · We Buy St Pete Houses" }: 
         />
       </span>
       <div>
-        <strong>John Gardepe</strong>
-        <span>{role}</span>
+        <strong className="feature-title">John Gardepe</strong>
+        <span className="body-standard">{role}</span>
       </div>
     </div>
   );

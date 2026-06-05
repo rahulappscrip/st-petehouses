@@ -6,17 +6,19 @@
 export const INHERITED_CONTENT = {
   sectionOrder: [
     "stats",
-    "buyProcess",
-    "comparison",
     "probate",
     "tax",
-    "valuation",
     "resources",
+    "buyProcess",
     "areas",
+    "testimonials",
+    "guarantee",
     "faq",
     "finalCta",
   ],
   hero: {
+    compassionBanner:
+      "Inheriting a home can be overwhelming. We're here to make the process as simple and stress-free as possible.",
     formTitle: "Tell us about the inherited home.",
     formIntro:
       "Receive a fair, no-obligation cash offer — we'll guide you through every step.",
@@ -30,12 +32,13 @@ export const INHERITED_CONTENT = {
     ],
   },
   stats: [
-    { value: "7", suffix: "days", label: "Days minimum to close" },
-    { prefix: "$", value: "0", label: "Commissions or fees" },
-    { value: "500", suffix: "+", label: "Homes purchased locally" },
-    { value: "100", suffix: "%", label: "As-is — no repairs needed" },
+    { value: "BBB", suffix: " A+", label: "Accredited Business" },
+    { value: "5.0", suffix: " ★", label: "Google Reviews (120+)" },
+    { value: "500", suffix: "+", label: "Homes Bought in Tampa Bay" },
+    { value: "15", suffix: "+ Yrs", label: "Local Experience" },
   ],
   buyProcess: {
+    layout: "visual",
     eyebrow: "How We Buy Inherited Houses",
     titleLead: "Cash, as-is, with ",
     titleEm: "probate support.",
@@ -44,22 +47,22 @@ export const INHERITED_CONTENT = {
       "Our process is designed to be transparent and stress-free for heirs navigating unfamiliar territory. From initial contact to closing, we guide you every step of the way.",
     features: [
       {
-        icon: "📋",
+        icon: "document",
         title: "As-is purchases — nothing required",
         body: "No need to clean out belongings, fix outdated systems, or worry about curb appeal. We purchase the property exactly as it is, including personal items left behind.",
       },
       {
-        icon: "💵",
+        icon: "dollar",
         title: "No commissions or fees — ever",
         body: "You keep the full cash offer amount. There are no real estate agent commissions, no closing costs charged to you, and no hidden fees at the end.",
       },
       {
-        icon: "📅",
+        icon: "calendar",
         title: "Probate and title clearance support",
         body: "We work alongside your probate attorney to keep the process moving. We can begin preparing the sale while probate is underway — reducing the overall timeline to closing.",
       },
       {
-        icon: "📍",
+        icon: "location",
         title: "Flexible closing — your timeline",
         body: "Close in as little as 7 days, or take more time to finalize probate or family decisions. You choose the closing date that works for your situation.",
       },
@@ -68,52 +71,31 @@ export const INHERITED_CONTENT = {
     steps: [
       {
         num: "1",
+        icon: "phone",
         title: "Contact us with property details",
         body: "Call (727) 477-8998, email, or submit our online form. Share the property address and your probate status.",
         link: { label: "Contact us today →", href: "/contact" },
       },
       {
         num: "2",
+        icon: "house",
         title: "Property review and fair cash offer",
         body: "We evaluate the property's condition and local market. You receive a written, no-obligation cash offer with transparent terms.",
         link: { label: "How our process works →", href: "/how-it-works" },
       },
       {
         num: "3",
+        icon: "handshake",
         title: "Accept the offer on your terms",
         body: "No pressure, no deadlines. Accept when you're ready. We coordinate with your probate attorney and a local title company.",
       },
       {
         num: "4",
+        icon: "cash",
         title: "Close and receive your cash",
         body: "You choose the closing date. We handle all paperwork. You receive the full cash offer amount at closing — no deductions.",
       },
     ],
-  },
-  comparison: {
-    eyebrow: "Compare Your Options",
-    titleLead: "Cash offer vs. traditional listing — ",
-    titleEm: "what's best for your inherited home?",
-    titleTail: "",
-    lede:
-      "For inherited properties, especially those in probate or needing significant work, a cash offer eliminates the friction and gets you to closing faster.",
-    traditionalLabel: "Listing with an Agent",
-    traditionalTimeline: "60–90+ days",
-    cashLabel: "Cash Offer (with us)",
-    cashTimeline: "7–30 days",
-    featuredBadge: "Recommended for inherited homes",
-    rows: [
-      { label: "Timeline", traditional: "60–90+ days avg", cash: "As little as 7 days" },
-      { label: "Repairs", traditional: "Often required", cash: "None — as-is" },
-      { label: "Commissions", traditional: "5–6%", cash: "$0" },
-      { label: "Showings", traditional: "Multiple", cash: "None" },
-      { label: "Probate support", traditional: "Limited", cash: "Included" },
-      { label: "Certainty", traditional: "Financing risk", cash: "Guaranteed cash" },
-    ],
-    cashNote:
-      "Best for: properties in probate, deferred maintenance, out-of-state heirs, or anyone who needs certainty over maximum price.",
-    traditionalNote:
-      "May yield a higher gross price if the property is in excellent condition and you have months to wait — but net proceeds often similar when accounting for repairs, commissions, and carrying costs.",
   },
   probate: {
     eyebrow: "Probate & Title",
@@ -174,30 +156,6 @@ export const INHERITED_CONTENT = {
       { label: "Our recommendation", title: "Consult a Florida CPA before closing", body: "We recommend consulting a tax advisor or CPA familiar with Florida real estate before finalizing your sale. We can provide referrals to trusted local professionals." },
     ],
   },
-  valuation: {
-    eyebrow: "Local Market Insights",
-    titleLead: "Interactive valuation and ",
-    titleEm: "St Petersburg market data.",
-    titleTail: "",
-    lede:
-      "Understanding what your inherited property is worth — in its current condition and after repairs — helps you make a faster, more informed decision.",
-    scenarios: [
-      { label: "Scenario A", title: "Sell as-is for cash — now", body: "Receive a fair cash offer based on current condition and local comps. Close quickly, avoid carrying costs, repairs, and commission. Get certainty on your net proceeds today." },
-      { label: "Scenario B", title: "Repair and list with an agent", body: "Invest in repairs and staging, wait for a buyer, and pay 5–6% commission. Higher gross price possible — but net proceeds after costs and months of carrying costs may be similar to a cash offer." },
-      { label: "Scenario C", title: "Wait through probate, then list", body: "The traditional path — but the property continues to carry property taxes, insurance, and maintenance costs throughout probate. Our parallel approach starts the sale process early to reduce this window." },
-    ],
-    statsTitle: "St Petersburg Market at a Glance",
-    stats: [
-      { label: "Traditional days on market", value: "45–90 days" },
-      { label: "Cash sale closing time", value: "7–30 days" },
-      { label: "Typical agent commission", value: "5–6%" },
-      { label: "Our agent commission", value: "$0" },
-      { label: "Repairs required", value: "None (as-is)" },
-      { label: "Probate support", value: "Yes (included)" },
-    ],
-    statsNote:
-      "Figures reflect typical St Petersburg market ranges. Your specific offer is based on block-level comps and property condition.",
-  },
   resources: {
     eyebrow: "Local Resources",
     titleLead: "Local resources for selling ",
@@ -211,6 +169,33 @@ export const INHERITED_CONTENT = {
       { tag: "Tax", title: "Pinellas County Tax Collector", body: "Property tax records, outstanding tax balances, and payment information. Important for title clearance before closing." },
       { tag: "Appraiser", title: "Pinellas County Property Appraiser", body: "Official property valuations, ownership information, and assessment data. Useful for understanding the property's current assessed value." },
     ],
+  },
+  guarantee: {
+    eyebrow: "Our Commitment",
+    titleLead: "Simple terms. ",
+    titleEm: "No surprises.",
+    titleTail: "",
+    lede: "The same straightforward promise we'd want if we were the ones inheriting a home.",
+    items: [
+      {
+        title: "No commissions or fees",
+        body: "The cash offer you accept is the amount you receive. We cover all standard closing costs — nothing is deducted at the end.",
+      },
+      {
+        title: "Buy as-is — nothing required",
+        body: "No repairs, no cleaning, no staging. We purchase the property exactly as it stands — belongings and all if needed.",
+      },
+      {
+        title: "No pressure, no deadlines from us",
+        body: "You accept when you're ready. We work on your timeline — and your probate attorney's timeline, not ours.",
+      },
+      {
+        title: "Guaranteed cash — no financing risk",
+        body: "We buy with cash. No lender that can pull out, no buyer financing contingency, no deal falling through at the last minute.",
+      },
+    ],
+    ctaTitle: "Ready to move forward with the sale?",
+    ctaBody: "A fair cash offer — no repairs, no commissions, on your probate timeline.",
   },
   areas: {
     eyebrow: "Service Area",

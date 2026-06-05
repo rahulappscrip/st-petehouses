@@ -47,10 +47,7 @@ const SLUG_META = {
   divorce: {
     label: "Divorce",
     breadcrumb: "Divorce home sale",
-    sectionOrder: [
-      "stats", "prose", "courtProcess", "cards", "comparison", "situations", "market",
-      "process", "whyUs", "areas", "resources", "faq", "finalCta",
-    ],
+    sectionOrder: DIVORCE_CONTENT.sectionOrder,
   },
   tenants: { label: "House with tenants", breadcrumb: "Rental with tenants", sectionOrder: ["stats","prose","tenantRights","obligations","cards","market","caseStudies","whyUs","resources","areas","faq","finalCta"] },
   lien: { label: "House with a lien", breadcrumb: "Sell with a lien", sectionOrder: ["stats","cards","process","situations","payoff","whyUs","areas","resources","faq","finalCta"] },
@@ -121,7 +118,12 @@ function buildPage(slug, data) {
   const meta = SLUG_META[slug];
   const tp = titlePartsFromH1(data.h1);
 
-  const faqTitleEm = slug.includes("as-is") ? "selling as-is" : "selling for cash";
+  // FAQ heading uses the "em" portion only; most slugs default to "selling for cash".
+  // Foreclosure is a dedicated copy block targeting "stopping foreclosure".
+  let faqTitleEm;
+  if (slug.includes("foreclosure")) faqTitleEm = "stopping foreclosure";
+  else if (slug.includes("as-is")) faqTitleEm = "selling as-is";
+  else faqTitleEm = "selling for cash";
   const faqTail = slug.includes("florida") && !slug.includes("st-pete") ? " in Florida." : " in St Petersburg.";
 
   const page = {

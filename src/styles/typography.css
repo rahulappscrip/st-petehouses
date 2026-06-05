@@ -1,7 +1,26 @@
 /**
  * Site typography — Inter for all text/headings; DM Serif only inside <em>.
- * Loaded last so it wins over section-specific overrides.
+ * Loaded before situation-typography.css (situation subpages enforce scale last).
+ *
+ * Scale (use these classes only — do not add custom font sizes):
+ * H1 / .h-display — 800, 40–62px, lh 1.0, -0.04em
+ * H2 / .h-2      — 800, 32–46px, lh 1.06, -0.035em
+ * H3 / .h-3      — 700, 22–26px, lh 1.18, -0.025em
+ * H4 / .h-4      — 700, 20px, lh 1.25, -0.02em
+ * .feature-title — 700, 17px, lh 1.3
+ * .body-intro     — 400, 18px, lh 1.7
+ * .body-standard  — 400, 16px, lh 1.75
  */
+
+/* ── H1 (page titles) ── */
+h1,
+.h-display {
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: var(--h1-size);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
 
 /* ── H2 (section titles) ── */
 h2,
@@ -46,14 +65,39 @@ h2.lead-title {
   line-height: 1.12;
 }
 
+/* Prevent Tailwind height utilities from clipping semantic headings */
+h2,
+h3,
+h4 {
+  height: unset;
+}
+
+h2.h-2,
+h3.h-3,
+h4.h-4 {
+  height: auto;
+}
+
 /* ── H3 (card / block titles) ── */
 h3,
 .h-3,
 h3[class] {
   font-family: var(--sans);
+  font-size: var(--h3-size);
   font-weight: 700;
   letter-spacing: -0.025em;
   line-height: 1.18;
+}
+
+/* ── H4 (step / sub-block titles) ── */
+h4,
+.h-4,
+h4[class] {
+  font-family: var(--sans);
+  font-size: var(--h4-size);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
 }
 
 h3 em,
@@ -144,4 +188,34 @@ em {
 .timeline-widget .result .big em {
   font-family: var(--serif);
   font-style: italic;
+}
+
+/* ── Feature title (17px) ── */
+.feature-title,
+h3.feature-title,
+h4.feature-title,
+.icon-card h4 {
+  font-family: var(--sans);
+  font-size: var(--feature-title-size);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: normal;
+}
+
+/* ── Body intro (18px) ── */
+.body-intro,
+.lede {
+  font-family: var(--sans);
+  font-size: var(--body-intro-size);
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* ── Body standard (16px) ── */
+.body-standard,
+p.body-standard {
+  font-family: var(--sans);
+  font-size: var(--body-size);
+  font-weight: 400;
+  line-height: 1.75;
 }

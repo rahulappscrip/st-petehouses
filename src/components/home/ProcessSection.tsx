@@ -110,15 +110,17 @@ export function ProcessSection({
         ) : null}
 
         {disclosureNote ? (
-          <p className="situation-process-disclosure">{disclosureNote}</p>
+          <p className="situation-process-disclosure body-standard">{disclosureNote}</p>
         ) : null}
 
         {keySteps ? (
           <div className="situation-key-steps situation-key-steps--in-process">
-            <h4>{keySteps.title}</h4>
+            <h4 className="feature-title">{keySteps.title}</h4>
             <ul>
               {keySteps.items.map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item} className="body-standard">
+                  {item}
+                </li>
               ))}
             </ul>
           </div>

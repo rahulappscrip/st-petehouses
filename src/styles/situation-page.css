@@ -38,6 +38,32 @@
   padding-top: 0;
 }
 
+.situation-compassion-banner {
+  background: color-mix(in oklab, var(--gold) 12%, var(--paper));
+  border-bottom: 1px solid color-mix(in oklab, var(--gold) 25%, transparent);
+  padding: 12px 0;
+  font-family: var(--sans);
+}
+
+.situation-compassion-banner__inner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: color-mix(in oklab, var(--gold) 80%, var(--ink));
+}
+
+.situation-compassion-banner__inner svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.situation-compassion-banner__inner p {
+  margin: 0;
+  line-height: 1.45;
+}
+
 .situation-hero__checklist {
   display: flex;
   flex-direction: column;
@@ -52,8 +78,6 @@
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  font-size: 15px;
-  line-height: 1.5;
   color: var(--ink-2);
 }
 
@@ -137,8 +161,6 @@
 }
 
 .situation-process-docs h4 {
-  font-size: 14px;
-  font-weight: 700;
   color: var(--ink);
   margin-bottom: 14px;
 }
@@ -169,8 +191,6 @@
   background: var(--sage-light, #f4f8f3);
   border: 1px solid var(--line-soft);
   border-radius: var(--radius-m);
-  font-size: 14px;
-  line-height: 1.65;
   color: var(--ink-2);
 }
 
@@ -208,6 +228,228 @@
   margin-bottom: 10px;
 }
 
+.situation-flood-law__note {
+  margin-top: -24px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--ink-2);
+}
+
+.situation-flood-law__grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  margin-top: clamp(32px, 4vw, 48px);
+}
+
+@media (min-width: 900px) {
+  .situation-flood-law__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.situation-flood-law-card {
+  background: var(--paper);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-m);
+  padding: 24px;
+}
+
+.situation-flood-law-card h3 {
+  margin-bottom: 8px;
+}
+
+.situation-flood-law-card p {
+  margin-bottom: 10px;
+}
+
+.situation-flood-law-card__link {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--sun);
+  text-decoration: none;
+}
+
+.situation-flood-law-card__link:hover {
+  text-decoration: underline;
+}
+
+.situation-fema-insurance {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.situation-fema-insurance .eyebrow {
+  color: var(--sun);
+}
+
+.situation-fema-insurance .h-2,
+.situation-fema-insurance h2 {
+  color: var(--paper);
+}
+
+.situation-fema-insurance .section-head__lede,
+.situation-fema-insurance .lede {
+  color: color-mix(in oklab, var(--paper) 70%, transparent);
+}
+
+.situation-fema-insurance__grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  margin-top: clamp(32px, 4vw, 48px);
+}
+
+@media (min-width: 900px) {
+  .situation-fema-insurance__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.situation-fema-insurance-card {
+  background: color-mix(in oklab, var(--paper) 7%, transparent);
+  border: 1px solid color-mix(in oklab, var(--paper) 18%, transparent);
+  border-radius: var(--radius-m);
+  padding: 24px;
+}
+
+.situation-fema-insurance-card h3 {
+  color: var(--paper);
+  margin-bottom: 8px;
+}
+
+.situation-fema-insurance-card p {
+  color: color-mix(in oklab, var(--paper) 72%, transparent);
+  margin-bottom: 10px;
+}
+
+.situation-fema-insurance-card__link {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--sun);
+  text-decoration: none;
+}
+
+.situation-fema-insurance-card__link:hover {
+  text-decoration: underline;
+}
+
+.situation-fema-insurance__disclaimer {
+  margin-top: 24px;
+  padding: 16px 20px;
+  background: color-mix(in oklab, var(--paper) 5%, transparent);
+  border: 1px solid color-mix(in oklab, var(--paper) 15%, transparent);
+  border-radius: var(--radius-s);
+}
+
+.situation-fema-insurance__disclaimer p {
+  margin: 0;
+  font-size: 12px;
+  font-style: italic;
+  color: color-mix(in oklab, var(--paper) 70%, transparent);
+}
+
+.situation-mold-disclosure {
+  background: var(--sand);
+  border-top: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.situation-mold-disclosure__grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  margin-top: clamp(32px, 4vw, 48px);
+}
+
+@media (min-width: 900px) {
+  .situation-mold-disclosure__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.situation-mold-disclosure-card {
+  background: var(--paper);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-m);
+  padding: 24px;
+}
+
+.situation-mold-disclosure-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 12px;
+  background: var(--sand);
+  border: 1px solid color-mix(in oklab, var(--ink) 8%, var(--line-soft));
+  border-radius: var(--radius-s);
+  color: var(--ink);
+}
+
+.situation-mold-disclosure-card__icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.situation-mold-disclosure-card h3 {
+  margin-bottom: 8px;
+}
+
+.situation-mold-disclosure-card p {
+  margin-bottom: 10px;
+}
+
+.situation-mold-disclosure-card__links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.situation-mold-disclosure-card__link {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--sun);
+  text-decoration: none;
+}
+
+.situation-mold-disclosure-card__link:hover {
+  text-decoration: underline;
+}
+
+.situation-mold-disclosure__note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 24px;
+  padding: 16px 20px;
+  background: var(--paper);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-s);
+}
+
+.situation-mold-disclosure__note-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid var(--line-soft);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink-2);
+}
+
+.situation-mold-disclosure__note p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ink-2);
+}
+
 .situation-insurance-card h3 {
   font-size: 16px;
   color: var(--ink);
@@ -239,6 +481,24 @@
   border: 1px solid var(--line-soft);
   border-radius: var(--radius-m);
   padding: 24px;
+}
+
+.situation-environmental-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 12px;
+  background: var(--sand);
+  border: 1px solid color-mix(in oklab, var(--ink) 8%, var(--line-soft));
+  border-radius: var(--radius-s);
+  color: var(--ink);
+}
+
+.situation-environmental-card__icon svg {
+  width: 16px;
+  height: 16px;
 }
 
 .situation-environmental-card h3 {
@@ -332,14 +592,11 @@
 }
 
 .situation-whyus-card h3 {
-  font-size: 15px;
   color: var(--ink);
   margin-bottom: 8px;
 }
 
 .situation-whyus-card p {
-  font-size: 13px;
-  line-height: 1.65;
   color: var(--ink-2);
 }
 
@@ -534,14 +791,11 @@
 }
 
 .situation-info-card h3 {
-  font-size: var(--h3-size);
   color: var(--ink);
   margin-bottom: 14px;
 }
 
 .situation-info-card > p {
-  font-size: 14.5px;
-  line-height: 1.6;
   color: var(--ink-2);
   margin-top: 10px;
 }
@@ -552,8 +806,6 @@
 
 .situation-info-card li {
   display: block;
-  font-size: 14.5px;
-  line-height: 1.6;
   color: var(--ink-2);
   margin-top: 12px;
 }
@@ -589,18 +841,19 @@
 }
 
 /* h2.h-3 was inheriting large h2 typography and overlapping body copy */
-.situation-info-block h2 {
-  font-size: clamp(20px, 2.1vw, 24px);
+.situation-info-block h3 {
   color: var(--ink);
   margin: 0 0 14px;
 }
 
 .situation-info-block > p,
 .situation-info-block__footer {
-  font-size: 15px;
-  line-height: 1.65;
   color: var(--ink-2);
   margin: 0 0 12px;
+}
+
+.situation-info-block__footer.body-standard {
+  padding-top: 16px;
 }
 
 .situation-info-callout {
@@ -626,15 +879,12 @@
 
 .situation-info-list li strong {
   display: block;
-  font-size: 15px;
   color: var(--ink);
   margin-bottom: 4px;
 }
 
 .situation-info-list li p {
   margin: 0;
-  font-size: 14.5px;
-  line-height: 1.6;
   color: var(--ink-2);
 }
 
@@ -658,14 +908,11 @@
 }
 
 .situation-chapter h4 {
-  font-weight: 600;
-  font-size: 16px;
   color: var(--ink);
 }
 
 .situation-chapter p {
   margin-top: 8px;
-  font-size: 14px;
 }
 
 .situation-resource-item {
@@ -723,14 +970,11 @@
 
 .situation-diff-card h3 {
   margin-top: 8px;
-  font-size: 17px;
   color: var(--ink);
 }
 
 .situation-diff-card p {
   margin-top: 8px;
-  font-size: 14.5px;
-  line-height: 1.6;
   color: var(--ink-2);
 }
 
@@ -799,15 +1043,11 @@
 }
 
 .situation-why-list h4 {
-  font-size: 15px;
-  font-weight: 700;
   color: var(--ink);
 }
 
 .situation-why-list p {
   margin-top: 4px;
-  font-size: 13px;
-  line-height: 1.6;
   color: var(--ink-2);
 }
 
@@ -851,13 +1091,8 @@
 .situation-aside-cta .phone {
   display: block;
   margin-top: 18px;
-<<<<<<< HEAD
-  font-size: clamp(24px, 3vw, 30px);
-  font-weight: 700;
-=======
   font-size: clamp(22px, 2.8vw, 24px);
   font-weight: 800;
->>>>>>> c09c67324dce1ec3b013e5ceb8232e530f59254f
   color: var(--paper);
   text-decoration: none;
 }
@@ -935,9 +1170,7 @@
 }
 
 .situation-body {
-  font-size: 17px;
   color: var(--ink-2);
-  line-height: 1.65;
   max-width: 64ch;
 }
 
@@ -1110,10 +1343,6 @@
 }
 
 .city-hero__eyebrow {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
   color: var(--ink-soft);
 }
 
@@ -1124,14 +1353,10 @@
 .city-hero__title {
   margin-top: 0;
   max-width: none;
-  line-height: 1.15;
   text-wrap: pretty;
 }
 
 .city-hero__sub {
-  font-family: var(--sans);
-  font-size: clamp(16px, 1.6vw, 17px);
-  line-height: 1.65;
   color: var(--ink-2);
   max-width: 52ch;
 }
@@ -1165,14 +1390,11 @@
 
 .city-hero__author strong {
   display: block;
-  font-size: 14px;
-  font-weight: 600;
   color: var(--ink);
 }
 
 .city-hero__author span {
   display: block;
-  font-size: 13px;
   color: var(--ink-soft);
   margin-top: 2px;
 }
@@ -1250,19 +1472,15 @@
 }
 
 .city-sit-card h3 {
-  font-size: 17px;
   color: var(--ink);
 }
 
 .city-sit-card p {
-  font-size: 14.5px;
-  line-height: 1.6;
   color: var(--ink-2);
 }
 
 /* City page FAQ — matches global FAQ type scale */
 .city-faq .faq-q {
-  font-size: var(--body-size);
   font-weight: 500;
   padding: 18px 0;
 }
@@ -1361,15 +1579,22 @@
   flex-shrink: 0;
 }
 
+.situation-buy-feature__icon--svg {
+  background: var(--teal-deep);
+  color: var(--sand);
+}
+
+.situation-buy-feature__icon--svg svg {
+  width: 22px;
+  height: 22px;
+}
+
 .situation-buy-feature h3 {
-  font-size: 17px;
   color: var(--ink);
   margin: 0 0 6px;
 }
 
 .situation-buy-feature p {
-  font-size: 14px;
-  line-height: 1.6;
   color: var(--ink-2);
   margin: 0;
 }
@@ -1384,7 +1609,6 @@
 }
 
 .situation-buy-steps__title {
-  font-size: 18px;
   color: var(--ink);
   margin: 0;
   padding: clamp(24px, 3vw, 32px) 0 24px;
@@ -1431,15 +1655,11 @@
 }
 
 .situation-buy-steps h4 {
-  font-size: 15px;
-  font-weight: 600;
   color: var(--ink);
   margin-bottom: 4px;
 }
 
 .situation-buy-steps p {
-  font-size: 14px;
-  line-height: 1.55;
   color: var(--ink-2);
 }
 
@@ -1472,14 +1692,11 @@
 }
 
 .situation-probate-q h3 {
-  font-size: 17px;
   color: var(--ink);
   margin-bottom: 8px;
 }
 
 .situation-probate-q p {
-  font-size: 15px;
-  line-height: 1.65;
   color: var(--ink-2);
 }
 
@@ -1500,7 +1717,6 @@
 
 .situation-probate-timeline li strong {
   display: block;
-  font-size: 15px;
   color: var(--ink);
 }
 
@@ -1513,8 +1729,6 @@
 }
 
 .situation-probate-timeline li p {
-  font-size: 13.5px;
-  line-height: 1.55;
   color: var(--ink-2);
 }
 
@@ -1531,8 +1745,6 @@
 }
 
 .situation-tax-p {
-  font-size: 15px;
-  line-height: 1.65;
   color: var(--ink-2);
   margin-top: 14px;
 }
@@ -1547,8 +1759,6 @@
   border-radius: var(--radius);
   background: var(--sand);
   border: 1px solid var(--line-soft);
-  font-size: 13px;
-  line-height: 1.55;
   color: var(--ink-2);
 }
 
@@ -1582,14 +1792,11 @@
 }
 
 .situation-tax-card h3 {
-  font-size: 15px;
   color: var(--ink);
   margin-bottom: 8px;
 }
 
 .situation-tax-card p {
-  font-size: 13.5px;
-  line-height: 1.55;
   color: var(--ink-2);
 }
 
@@ -1760,6 +1967,107 @@
   color: color-mix(in oklab, var(--paper) 72%, transparent);
 }
 
+/* Icon grid cards (e.g. lien types) */
+.situation-icon-cards__grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+  margin-top: clamp(32px, 4vw, 48px);
+}
+
+@media (min-width: 640px) {
+  .situation-icon-cards__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .situation-icon-cards__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.situation-icon-cards__card {
+  background: var(--paper);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-m);
+  padding: 22px;
+  transition: border-color 0.2s ease;
+}
+
+.situation-icon-cards__card:hover {
+  border-color: color-mix(in oklab, var(--sun) 45%, var(--line-soft));
+}
+
+.situation-icon-cards__card--featured {
+  background-color: #f2f8f4;
+}
+
+.situation-icon-cards__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 12px;
+  background: var(--sand);
+  border: 1px solid color-mix(in oklab, var(--ink) 8%, var(--line-soft));
+  border-radius: var(--radius-s);
+  color: var(--ink);
+}
+
+.situation-icon-cards__card--featured .situation-icon-cards__icon {
+  background: var(--paper);
+}
+
+.situation-icon-cards__icon--accent {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: transparent;
+}
+
+.situation-icon-cards__icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.situation-icon-cards__card h3 {
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+
+.situation-icon-cards__card p {
+  margin: 0;
+  color: var(--ink-2);
+}
+
+.situation-icon-cards__card--photo {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+}
+
+.situation-icon-cards__media {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: color-mix(in oklab, var(--ink) 6%, var(--paper));
+}
+
+.situation-icon-cards__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.situation-icon-cards__body {
+  padding: clamp(18px, 2vw, 22px);
+  flex: 1;
+}
+
 /* Lien page — payoff flow */
 .situation-payoff__flow {
   display: grid;
@@ -1841,8 +2149,8 @@
 
 .situation-payoff__equity p:last-child {
   margin: 0;
-  font-size: 13px;
-  line-height: 1.55;
+  font-size: var(--body-size);
+  line-height: 1.75;
   color: var(--ink-2);
 }
 
@@ -1876,10 +2184,9 @@
 }
 
 .situation-tenant-rights__list li {
+  display: block;
   padding: 14px 0;
   border-bottom: 1px solid var(--line-soft);
-  font-size: 14px;
-  line-height: 1.65;
   color: var(--ink-2);
 }
 
@@ -1946,6 +2253,104 @@
   color: color-mix(in oklab, var(--paper) 72%, transparent);
 }
 
+.situation-numbered-cards__grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  margin-top: clamp(32px, 4vw, 48px);
+}
+
+@media (min-width: 640px) {
+  .situation-numbered-cards__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .situation-numbered-cards__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.situation-numbered-cards__card {
+  background: var(--paper);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-m);
+  padding: 24px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.situation-numbered-cards__card:hover {
+  border-color: color-mix(in oklab, var(--sun) 45%, var(--line-soft));
+}
+
+.situation-numbered-cards__card--featured {
+  background: var(--sand);
+}
+
+.situation-numbered-cards__num {
+  display: block;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(28px, 3vw, 32px);
+  font-weight: 800;
+  line-height: 1;
+  color: color-mix(in oklab, var(--ink) 18%, var(--sand));
+  margin-bottom: 12px;
+}
+
+.situation-numbered-cards__num--accent {
+  color: var(--sun);
+  font-style: normal;
+  font-family: var(--sans);
+}
+
+.situation-numbered-cards__card h3 {
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+
+.situation-numbered-cards__card p {
+  margin: 0;
+  color: var(--ink-2);
+}
+
+.situation-numbered-cards__card--photo {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+}
+
+.situation-numbered-cards__media {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: color-mix(in oklab, var(--ink) 6%, var(--paper));
+}
+
+.situation-numbered-cards__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.situation-numbered-cards__body {
+  padding: clamp(18px, 2vw, 22px);
+  flex: 1;
+}
+
+.situation-page--tenants .situation-numbered-cards__body {
+  background-color: #ffffff;
+}
+
+.situation-numbered-cards__cta,
+.situation-icon-cards__cta {
+  margin-top: 16px;
+}
+
 .situation-tenant-market {
   background: var(--ink);
   color: var(--paper);
@@ -1971,9 +2376,21 @@
   margin-top: clamp(32px, 4vw, 48px);
 }
 
+@media (min-width: 640px) {
+  .situation-tenant-market__factors {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (min-width: 900px) {
   .situation-tenant-market__factors {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .situation-tenant-market__factors--4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
@@ -1982,6 +2399,23 @@
   border: 1px solid color-mix(in oklab, var(--paper) 18%, transparent);
   border-radius: var(--radius-m);
   padding: 24px;
+}
+
+.situation-tenant-market__factor-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 14px;
+  border: 1px solid color-mix(in oklab, var(--sun) 45%, transparent);
+  border-radius: var(--radius-s);
+  color: var(--sun);
+}
+
+.situation-tenant-market__factor-icon svg {
+  width: 20px;
+  height: 20px;
 }
 
 .situation-tenant-market__factor-label {
@@ -1995,14 +2429,11 @@
 }
 
 .situation-tenant-market__factor h3 {
-  font-size: 15px;
   color: var(--paper);
   margin-bottom: 8px;
 }
 
 .situation-tenant-market__factor p {
-  font-size: 13px;
-  line-height: 1.65;
   color: color-mix(in oklab, var(--paper) 72%, transparent);
 }
 
@@ -2046,9 +2477,199 @@
 
 .situation-tenant-market__region p {
   margin: 0;
-  font-size: 14px;
-  line-height: 1.5;
   color: var(--paper);
+}
+
+.situation-tenant-market__testimonial {
+  display: grid;
+  gap: clamp(24px, 3vw, 32px);
+  grid-template-columns: 1fr;
+  align-items: center;
+  margin-top: clamp(32px, 4vw, 48px);
+  padding: clamp(24px, 3vw, 36px);
+  background: color-mix(in oklab, var(--paper) 7%, transparent);
+  border: 1px solid color-mix(in oklab, var(--paper) 18%, transparent);
+  border-radius: var(--radius-m);
+}
+
+@media (min-width: 768px) {
+  .situation-tenant-market__testimonial {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr);
+    gap: clamp(28px, 4vw, 48px);
+  }
+}
+
+.situation-tenant-market__testimonial-quote {
+  margin: 0;
+}
+
+.situation-tenant-market__quote-mark {
+  display: block;
+  line-height: 0.85;
+  color: var(--sun);
+  margin-bottom: 12px;
+}
+
+.situation-tenant-market__testimonial-quote p {
+  margin: 0;
+  font-style: italic;
+  color: var(--paper);
+}
+
+.situation-tenant-market__testimonial-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.situation-tenant-market__stars {
+  display: flex;
+  gap: 4px;
+  font-size: 14px;
+  color: var(--sun);
+  margin-bottom: 4px;
+}
+
+.situation-tenant-market__testimonial-name {
+  margin: 0;
+  color: var(--paper);
+}
+
+.situation-tenant-market__testimonial-location {
+  margin: 0;
+  color: color-mix(in oklab, var(--paper) 72%, transparent);
+}
+
+.situation-tenant-market__testimonial-note {
+  margin: 6px 0 0;
+  color: var(--sun);
+}
+
+.situation-foreclosure-law {
+  color: var(--ink);
+  border-bottom: 1px solid var(--line-soft);
+  background: var(--paper);
+}
+
+.situation-foreclosure-law__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(26px, 4vw, 48px);
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .situation-foreclosure-law__grid {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  }
+}
+
+.situation-foreclosure-law__copy .eyebrow {
+  margin-bottom: 14px;
+}
+
+.situation-foreclosure-law__title {
+  margin-bottom: clamp(18px, 2.5vw, 24px);
+}
+
+.situation-foreclosure-law__p {
+  margin: 0 0 14px;
+  color: var(--ink-2);
+}
+
+.situation-foreclosure-law__p:last-child {
+  margin-bottom: 0;
+}
+
+.situation-foreclosure-law__disclaimer {
+  margin-top: 18px;
+  padding: 18px 18px;
+  background: var(--paper);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-s);
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.situation-foreclosure-law__disclaimer-icon {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid var(--line-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-soft);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.situation-foreclosure-law__disclaimer-text {
+  margin: 0;
+  color: var(--ink-2);
+}
+
+.situation-foreclosure-law__steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.situation-foreclosure-law__step {
+  border-bottom: 1px solid var(--line-soft);
+  padding: 18px 0;
+}
+
+.situation-foreclosure-law__step:last-child {
+  border-bottom: 0;
+}
+
+.situation-foreclosure-law__step-inner {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.situation-foreclosure-law__step-num {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: color-mix(in oklab, var(--sun) 90%, var(--paper));
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 12px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.situation-foreclosure-law__step-copy {
+  flex: 1;
+}
+
+.situation-foreclosure-law__step-title {
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+
+.situation-foreclosure-law__step-body {
+  margin: 0;
+  color: var(--ink-2);
+}
+
+.situation-foreclosure-law__step-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--sun);
+  text-decoration: underline;
 }
 
 .situation-case-studies {
@@ -2097,8 +2718,6 @@
 }
 
 .situation-case-card p {
-  font-size: 14px;
-  line-height: 1.7;
   color: var(--ink-2);
   margin-bottom: 10px;
 }
@@ -2122,7 +2741,6 @@
 }
 
 .situation-case-card__stat-label {
-  font-size: 13px;
   color: var(--ink-2);
 }
 
@@ -2156,8 +2774,6 @@
 }
 
 .situation-case-takeaways li {
-  font-size: 14px;
-  line-height: 1.6;
   color: var(--ink-2);
 }
 
@@ -2171,7 +2787,6 @@
   margin-top: 7px;
 }
 
-<<<<<<< HEAD
 /* Florida-specific callout card (tenants why-us sidebar) */
 .situation-aside-cta .situation-why-aside-note {
   margin-top: 20px;
@@ -2205,8 +2820,6 @@
   color: var(--ink-soft);
 }
 
-=======
->>>>>>> c09c67324dce1ec3b013e5ceb8232e530f59254f
 /* Numeric buyer cards on tenants page */
 .city-sit-card__icon:has(+ h3) {
   font-size: 13px;
@@ -2534,15 +3147,188 @@
 }
 
 .situation-resource-note {
-  font-size: 12px;
   color: var(--ink-soft);
   margin-top: 8px;
 }
 
 .situation-resources-footer {
   margin-top: 28px;
-  font-size: 14px;
   font-style: italic;
   color: var(--ink-soft);
-  line-height: 1.6;
+}
+
+/* Empathy + by-the-numbers (foreclosure and reusable) */
+.situation-empathy__grid {
+  display: grid;
+  gap: clamp(36px, 5vw, 64px);
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .situation-empathy__grid {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: clamp(40px, 5vw, 72px);
+  }
+}
+
+.situation-empathy__story .eyebrow,
+.situation-empathy__numbers .eyebrow {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.situation-empathy__title {
+  color: var(--ink);
+  margin-bottom: clamp(18px, 2.5vw, 24px);
+}
+
+.situation-empathy__lede {
+  margin-bottom: clamp(18px, 2.5vw, 24px);
+}
+
+.situation-empathy__story .situation-hero__actions {
+  margin-top: clamp(20px, 3vw, 28px);
+}
+
+.situation-empathy__prose p,
+.situation-empathy__closing {
+  color: var(--ink-soft);
+  margin: 0 0 16px;
+}
+
+.situation-empathy__quote {
+  margin: clamp(20px, 3vw, 28px) 0;
+  padding: clamp(18px, 2.5vw, 24px) clamp(20px, 2.5vw, 28px);
+  background: color-mix(in oklab, var(--sun) 12%, var(--paper));
+  border-left: 4px solid var(--sun);
+  border-radius: 0 var(--radius-s) var(--radius-s) 0;
+}
+
+.situation-empathy__quote p {
+  margin: 0;
+  color: var(--ink);
+  font-style: normal;
+}
+
+.situation-empathy__cards {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 1fr;
+  margin-top: clamp(18px, 2.5vw, 24px);
+}
+
+@media (min-width: 520px) {
+  .situation-empathy__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+.situation-empathy__card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: clamp(18px, 2.2vw, 22px);
+  background: var(--paper);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-s);
+  min-height: 100%;
+}
+
+.situation-empathy__card-value {
+  display: block;
+  color: var(--ink);
+}
+
+.situation-empathy__card-title {
+  margin: 0;
+  color: var(--ink);
+}
+
+.situation-empathy__card-body {
+  flex: 1;
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.situation-empathy__card-source {
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--sun);
+  text-decoration: none;
+}
+
+.situation-empathy__card-source:hover {
+  color: var(--sun-deep);
+  text-decoration: underline;
+}
+
+/* Foreclosure stages grid (reusable) */
+.situation-stages__grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+  margin-top: clamp(28px, 4vw, 40px);
+}
+
+@media (min-width: 640px) {
+  .situation-stages__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+}
+
+@media (min-width: 960px) {
+  .situation-stages__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+.situation-stages__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: clamp(20px, 2.5vw, 24px);
+  background: var(--sand);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-s);
+  min-height: 100%;
+}
+
+.situation-stages__label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sun);
+  margin-bottom: 10px;
+}
+
+.situation-stages__card h3 {
+  color: var(--ink);
+  margin: 0 0 10px;
+}
+
+.situation-stages__card p {
+  flex: 1;
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.situation-stages__link {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--sun);
+  text-decoration: none;
+}
+
+.situation-stages__link:hover {
+  color: var(--sun-deep);
+  text-decoration: underline;
 }
