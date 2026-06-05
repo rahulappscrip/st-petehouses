@@ -7,12 +7,7 @@ const FOOTER_COMPANY = [
   { label: "Sell Your House", href: "/sell-your-house" },
   { label: "About Us", href: "/about" },
   { label: "Reviews", href: "/reviews" },
-  { label: "Cash vs Agent", href: "/compare" },
-  { label: "FAQ", href: "/faq" },
-  { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
-  { label: "Get a Cash Offer", href: SITE.cashOfferHref },
-  { label: "Privacy Policy", href: "/about" },
 ];
 
 function SocialIcon({ icon }: { icon: (typeof SOCIAL_LINKS)[number]["icon"] }) {
