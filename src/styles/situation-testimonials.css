@@ -1,0 +1,80 @@
+/* Situation pages: shared testimonial layout */
+
+.situation-testimonials {
+  background: var(--paper);
+  font-family: var(--sans);
+}
+
+.situation-testimonials .eyebrow::after {
+  display: none;
+}
+
+.situation-testimonials .eyebrow {
+  gap: 0;
+}
+
+.situation-testimonials__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.situation-testimonials__card {
+  background: var(--sand);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-1);
+}
+
+.situation-testimonials__quote-mark {
+  line-height: 0.85;
+  color: var(--sun);
+  margin-bottom: 12px;
+}
+
+.situation-testimonials__quote-mark.h-2 {
+  height: unset;
+}
+
+.situation-testimonials__quote {
+  color: var(--ink-2);
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.situation-testimonials__author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.situation-testimonials__avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--teal-deep);
+  color: var(--sand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.situation-testimonials__name {
+  color: var(--ink);
+}
+
+.situation-testimonials__meta {
+  color: var(--ink-soft);
+  margin-top: 3px;
+}
+
+@media (max-width: 760px) {
+  .situation-testimonials__grid {
+    grid-template-columns: 1fr;
+  }
+}

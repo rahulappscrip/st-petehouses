@@ -33,7 +33,7 @@ const PATCHES = {
 const STRAY_KEYS = [
   "situations", "testimonials", "market", "guarantee", "infoBlocks", "diff", "whyUs",
   "comparison", "courtProcess", "prose", "cards", "payoff", "tenantRights", "obligations", "caseStudies",
-  "insurance", "environmental", "prosCons", "trust",
+  "insurance", "environmental", "prosCons", "trust", "empathy",
   "buyProcess", "probate", "tax", "valuation",
   "process", "cards",
 ];
@@ -49,6 +49,7 @@ function mergeSection(existing, incoming) {
   if (Array.isArray(incoming.items)) merged.items = incoming.items;
   if (Array.isArray(incoming.steps)) merged.steps = incoming.steps;
   if (Array.isArray(incoming.paragraphs)) merged.paragraphs = incoming.paragraphs;
+  if (incoming.layout === undefined && "layout" in merged) delete merged.layout;
   return merged;
 }
 

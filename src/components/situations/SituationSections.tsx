@@ -15,24 +15,43 @@ import { FaqSection } from "@/components/home/FaqSection";
 import { FinalCtaSection } from "@/components/home/FinalCtaSection";
 import { SellerSituationsSection } from "@/components/home/SellerSituationsSection";
 import { InheritedBuyProcessVisual } from "@/components/situations/InheritedBuyProcessVisual";
+import { EmpathyNumbersSection } from "@/components/situations/EmpathyNumbersSection";
+import { StageCardsSection } from "@/components/situations/StageCardsSection";
+import { ForeclosureLawSection } from "@/components/situations/ForeclosureLawSection";
+import { SituationFloodLawSection } from "@/components/situations/SituationFloodLawSection";
+import { SituationFemaInsuranceSection } from "@/components/situations/SituationFemaInsuranceSection";
+import { SituationMoldDisclosureSection } from "@/components/situations/SituationMoldDisclosureSection";
+import { SituationTestimonialsSection } from "@/components/situations/SituationTestimonialsSection";
+import { SituationEmpathyCtaSection } from "@/components/situations/SituationEmpathyCtaSection";
+import { SituationPillCardsSection } from "@/components/situations/SituationPillCardsSection";
+import { SituationTaxIconCardsSection } from "@/components/situations/SituationTaxIconCardsSection";
+import { SituationStepCardsSection } from "@/components/situations/SituationStepCardsSection";
+import { SituationNumberedCardsSection } from "@/components/situations/SituationNumberedCardsSection";
+import { SituationIconCardsSection } from "@/components/situations/SituationIconCardsSection";
 import {
+  INHERITED_BUY_PROCESS_FEATURES,
   LIEN_PROPERTY_SITUATION_IMAGES,
+  LIEN_TYPE_CARD_IMAGES,
   mapCitySituationsToSellerCards,
   mapSituationPageCardsToSellerCards,
   mapSituationPageCityCards,
   mapSituationPageSituationsToSellerCards,
   SELL_AS_IS_WHEN_IMAGES,
   SELL_AS_IS_WHY_US_IMAGES,
+  SITUATION_PAGE_CARD_IMAGES,
   SITUATION_PAGE_DIFF_IMAGES,
   SITE,
   SITUATION_CARD_HOME_IMAGES,
   ASSETS,
 } from "@/lib/constants";
+import { INHERITED_BUY_FEATURE_ICONS } from "@/components/situations/InheritedBuyProcessIcons";
 import type {
   SituationCourtProcess,
   SituationFullContent,
   SituationSectionId,
   SituationStat,
+  SituationTenantMarketContent,
+  SituationTenantMarketFactor,
   SituationTitleParts,
 } from "@/lib/situation-types";
 
@@ -196,7 +215,7 @@ export function SituationBuyProcessSection({
   alt?: boolean;
 }) {
   if (data.layout === "visual") {
-    return <InheritedBuyProcessVisual data={data} alt={alt} />;
+    return <InheritedBuyProcessVisual data={data} alt />;
   }
 
   return (
@@ -209,27 +228,35 @@ export function SituationBuyProcessSection({
         />
         <Reveal className="situation-buy-grid">
           <div className="situation-buy-features">
-            {data.features.map((item) => (
+            {data.features.map((item) => {
+              const iconKey = INHERITED_BUY_PROCESS_FEATURES[item.title]?.iconKey;
+              const featureIcon = iconKey ? INHERITED_BUY_FEATURE_ICONS[iconKey] : null;
+
+              return (
               <div key={item.title} className="situation-buy-feature">
-                <span className="situation-buy-feature__icon" aria-hidden>
-                  {item.icon ?? "✓"}
+                <span
+                  className={`situation-buy-feature__icon${featureIcon ? " situation-buy-feature__icon--svg" : ""}`}
+                  aria-hidden
+                >
+                  {featureIcon ?? item.icon ?? "✓"}
                 </span>
                 <div>
-                  <h3>{item.title}</h3>
-                  <p>{item.body}</p>
+                  <h3 className="feature-title">{item.title}</h3>
+                  <p className="body-standard">{item.body}</p>
                 </div>
               </div>
-            ))}
+            );
+            })}
           </div>
           <div className="situation-buy-steps">
-            <h3 className="situation-buy-steps__title">{data.stepsTitle}</h3>
+            <h3 className="situation-buy-steps__title h-3">{data.stepsTitle}</h3>
             <ol>
               {data.steps.map((step) => (
                 <li key={step.num}>
                   <span className="situation-buy-steps__num">{step.num}</span>
                   <div>
-                    <h4>{step.title}</h4>
-                    <p>
+                    <h4 className="h-4">{step.title}</h4>
+                    <p className="body-standard">
                       {step.body}
                       {step.link ? (
                         <>
@@ -271,27 +298,27 @@ export function SituationProbateSection({
             {data.items.map((item, i) => (
               <Reveal key={item.question} className="situation-probate-q" d={i > 0 ? 1 : undefined}>
                 <span className="situation-probate-q__label">{item.label}</span>
-                <h3>{item.question}</h3>
-                <p>{item.answer}</p>
+                <h3 className="feature-title">{item.question}</h3>
+                <p className="body-standard">{item.answer}</p>
               </Reveal>
             ))}
           </div>
           <Reveal d={1} className="situation-probate-aside">
             <div className="situation-info-card">
-              <h3>{data.timelineTitle}</h3>
+              <h3 className="h-4">{data.timelineTitle}</h3>
               <ol className="situation-probate-timeline">
                 {data.timeline.map((item) => (
                   <li key={item.stage}>
-                    <strong>{item.stage}</strong>
+                    <strong className="feature-title">{item.stage}</strong>
                     <span>{item.duration}</span>
-                    <p>{item.body}</p>
+                    <p className="body-standard">{item.body}</p>
                   </li>
                 ))}
               </ol>
             </div>
             <div className="situation-aside-cta">
-              <h3>{data.helpTitle}</h3>
-              <p>{data.helpBody}</p>
+              <h3 className="h-4">{data.helpTitle}</h3>
+              <p className="body-standard">{data.helpBody}</p>
               <a href={SITE.phoneHref} className="phone">
                 {SITE.phone}
               </a>
@@ -326,19 +353,19 @@ export function SituationTaxSection({
           <Reveal>
             <div>
               {data.paragraphs.map((p) => (
-                <p key={p.slice(0, 40)} className="situation-tax-p">
+                <p key={p.slice(0, 40)} className="situation-tax-p body-standard">
                   {p}
                 </p>
               ))}
-              <p className="situation-tax-disclaimer">{data.disclaimer}</p>
+              <p className="situation-tax-disclaimer body-standard">{data.disclaimer}</p>
             </div>
           </Reveal>
           <div className="situation-tax-cards">
             {data.cards.map((card, i) => (
               <Reveal key={card.title} className="situation-tax-card" d={i > 0 ? ((i % 2) as 1 | 2) : undefined}>
                 <span className="situation-tax-card__label">{card.label}</span>
-                <h3>{card.title}</h3>
-                <p>{card.body}</p>
+                <h3 className="feature-title">{card.title}</h3>
+                <p className="body-standard">{card.body}</p>
               </Reveal>
             ))}
           </div>
@@ -414,7 +441,7 @@ export function SituationTenantRightsSection({
           <Reveal>
             <ul className="situation-tenant-rights__list">
               {data.items.map((item) => (
-                <li key={item.strong}>
+                <li key={item.strong} className="body-standard">
                   <strong>{item.strong}</strong> {item.text}
                 </li>
               ))}
@@ -560,6 +587,42 @@ export function SituationInsuranceSection({
   );
 }
 
+const ENVIRONMENTAL_ICONS: Record<string, ReactNode> = {
+  mold: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+      <circle cx="12" cy="12" r="10" />
+      <path d="M12 8v4l3 3" strokeLinecap="round" />
+    </svg>
+  ),
+  lead: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+      <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" strokeLinecap="round" />
+      <path d="M14 2v6h6M12 18v-6M9 15h6" strokeLinecap="round" />
+    </svg>
+  ),
+  disposal: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+      <polyline points="3 6 5 6 21 6" />
+      <path
+        d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a1 1 0 011-1h4a1 1 0 011 1v2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  ),
+  shield: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  ),
+  calendar: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+      <rect x="3" y="4" width="18" height="18" rx="2" />
+      <path d="M16 2v4M8 2v4M3 10h18" strokeLinecap="round" />
+    </svg>
+  ),
+};
+
 export function SituationEnvironmentalSection({
   data,
   alt,
@@ -576,23 +639,70 @@ export function SituationEnvironmentalSection({
           lede={data.lede}
         />
         <div className="situation-environmental__grid">
-          {data.items.map((item, i) => (
-            <Reveal key={item.title} className="situation-environmental-card" d={i > 0 ? ((i % 3) as 1 | 2 | 3) : undefined}>
-              <h3>{item.title}</h3>
-              <p>{item.body}</p>
-            </Reveal>
-          ))}
+          {data.items.map((item, i) => {
+            const iconKey = item.icon?.toLowerCase();
+            const icon = iconKey ? ENVIRONMENTAL_ICONS[iconKey] : null;
+
+            return (
+              <Reveal
+                key={item.title}
+                className="situation-environmental-card"
+                d={i > 0 ? ((i % 3) as 1 | 2 | 3) : undefined}
+              >
+                {icon ? <span className="situation-environmental-card__icon">{icon}</span> : null}
+                <h3 className="h-4">{item.title}</h3>
+                <p className="body-standard">{item.body}</p>
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>
   );
 }
 
+function TenantMarketFactorIcon({ icon }: { icon: NonNullable<SituationTenantMarketFactor["icon"]> }) {
+  switch (icon) {
+    case "phone":
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden>
+          <path
+            d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.1a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 15z"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      );
+    case "house":
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden>
+          <path d="M3 11l9-7 9 7v9a1 1 0 01-1 1h-5v-6h-6v6H4a1 1 0 01-1-1z" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      );
+    case "document":
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden>
+          <rect x="4" y="3" width="16" height="18" rx="2" />
+          <path d="M8 8h8M8 12h8M8 16h5" strokeLinecap="round" />
+        </svg>
+      );
+    case "clock":
+      return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden>
+          <circle cx="12" cy="12" r="9" />
+          <path d="M12 7v5l3 2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      );
+  }
+}
+
 export function SituationTenantMarketSection({
   data,
 }: {
-  data: NonNullable<SituationFullContent["market"]>;
+  data: SituationTenantMarketContent;
 }) {
+  const factorCols = data.factors.length >= 4 ? " situation-tenant-market__factors--4" : "";
+
   return (
     <section className="section situation-tenant-market">
       <div className="wrap">
@@ -601,21 +711,50 @@ export function SituationTenantMarketSection({
           title={<SectionTitle lead={data.titleLead} em={data.titleEm} tail={data.titleTail} />}
           lede={data.lede}
         />
-        <div className="situation-tenant-market__factors">
+        <div className={`situation-tenant-market__factors${factorCols}`}>
           {data.factors.map((f, i) => (
             <Reveal key={f.title} className="situation-tenant-market__factor" d={i > 0 ? ((i % 3) as 1 | 2 | 3) : undefined}>
+              {f.icon ? (
+                <span className="situation-tenant-market__factor-icon" aria-hidden>
+                  <TenantMarketFactorIcon icon={f.icon} />
+                </span>
+              ) : null}
               {f.label ? <span className="situation-tenant-market__factor-label">{f.label}</span> : null}
-              <h3>{f.title}</h3>
-              <p>{f.body}</p>
+              <h3 className="feature-title">{f.title}</h3>
+              <p className="body-standard">{f.body}</p>
             </Reveal>
           ))}
         </div>
+        {data.testimonial ? (
+          <Reveal className="situation-tenant-market__testimonial">
+            <blockquote className="situation-tenant-market__testimonial-quote">
+              <span className="situation-tenant-market__quote-mark h-2" aria-hidden>
+                &ldquo;
+              </span>
+              <p className="body-standard">{data.testimonial.quote}</p>
+            </blockquote>
+            <div className="situation-tenant-market__testimonial-meta">
+              <div className="situation-tenant-market__stars" aria-label="5 out of 5 stars">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <span key={i} aria-hidden>
+                    ★
+                  </span>
+                ))}
+              </div>
+              <p className="situation-tenant-market__testimonial-name feature-title">{data.testimonial.name}</p>
+              <p className="situation-tenant-market__testimonial-location body-standard">{data.testimonial.location}</p>
+              {data.testimonial.note ? (
+                <p className="situation-tenant-market__testimonial-note body-standard">{data.testimonial.note}</p>
+              ) : null}
+            </div>
+          </Reveal>
+        ) : null}
         {data.regions && data.regions.length > 0 ? (
           <Reveal className="situation-tenant-market__regions">
             {data.regions.map((r) => (
               <div key={r.label} className="situation-tenant-market__region">
                 <span className="situation-tenant-market__region-label">{r.label}</span>
-                <p>{r.body}</p>
+                <p className="body-standard">{r.body}</p>
               </div>
             ))}
           </Reveal>
@@ -736,7 +875,9 @@ export function SituationProseSection({
           <Reveal>
             <div>
               {data.paragraphs.map((p) => (
-                <p key={p.slice(0, 48)}>{p}</p>
+                <p key={p.slice(0, 48)} className="body-standard">
+                  {p}
+                </p>
               ))}
               <div className="situation-hero__actions">
                 <Link href="#offer" className="btn btn--cta">
@@ -759,8 +900,14 @@ export function SituationProseSection({
                   <h3>{data.sidebar.title}</h3>
                   <ul>
                     {data.sidebar.items.map((item) => (
-                      <li key={item.strong}>
-                        <strong>{item.strong}</strong> {item.text}
+                      <li key={item.text}>
+                        {item.strong ? (
+                          <>
+                            <strong>{item.strong}</strong> {item.text}
+                          </>
+                        ) : (
+                          item.text
+                        )}
                       </li>
                     ))}
                   </ul>
@@ -795,14 +942,14 @@ function SituationInfoBlockColumn({
 }) {
   return (
     <Reveal d={delay} className="situation-info-block">
-      <h2>{block.title}</h2>
-      {block.body ? <p>{block.body}</p> : null}
+      <h3 className="h-3">{block.title}</h3>
+      {block.body ? <p className="body-standard">{block.body}</p> : null}
       {block.chapters ? (
         <div className="situation-chapter-grid">
           {block.chapters.map((ch) => (
             <div key={ch.title} className="situation-chapter">
-              <h4>{ch.title}</h4>
-              <p>{ch.body}</p>
+              <h4 className="h-4">{ch.title}</h4>
+              <p className="body-standard">{ch.body}</p>
             </div>
           ))}
         </div>
@@ -811,13 +958,13 @@ function SituationInfoBlockColumn({
         <ul className="situation-info-list">
           {block.list.map((item) => (
             <li key={item.title}>
-              <strong>{item.title}</strong>
-              <p>{item.body}</p>
+              <strong className="feature-title">{item.title}</strong>
+              <p className="body-standard">{item.body}</p>
             </li>
           ))}
         </ul>
       ) : null}
-      {block.footer ? <p className="situation-info-block__footer">{block.footer}</p> : null}
+      {block.footer ? <p className="situation-info-block__footer body-standard">{block.footer}</p> : null}
     </Reveal>
   );
 }
@@ -842,8 +989,8 @@ export function SituationInfoBlocksSection({
         {callout ? (
           <Reveal className="situation-info-callout">
             <div className="situation-info-card situation-info-callout__card">
-              <h3>{callout.title}</h3>
-              <p>{callout.body}</p>
+              <h3 className="h-4">{callout.title}</h3>
+              <p className="body-standard">{callout.body}</p>
               <Link href="#offer" className="btn btn--cta">
                 Get a cash offer
                 <Arr />
@@ -1012,8 +1159,8 @@ export function SituationDiffSection({
             {data.items.map((item, i) => (
               <Reveal key={item.num} className="situation-diff-card" d={i > 0 ? ((i % 3) as 1 | 2 | 3) : undefined}>
                 <span className="num">{item.num}</span>
-                <h3>{item.title}</h3>
-                <p>{item.body}</p>
+                <h3 className="feature-title">{item.title}</h3>
+                <p className="body-standard">{item.body}</p>
               </Reveal>
             ))}
           </div>
@@ -1154,9 +1301,9 @@ export function SituationResourcesSection({
                   {item.tag}
                 </span>
               ) : null}
-              <h3>{item.title}</h3>
-              <p>{item.body}</p>
-              {item.note ? <p className="situation-resource-note">{item.note}</p> : null}
+              <h3 className="feature-title">{item.title}</h3>
+              <p className="body-standard">{item.body}</p>
+              {item.note ? <p className="situation-resource-note body-standard">{item.note}</p> : null}
               {item.phone ? (
                 <a href={`tel:${item.phone.replace(/\D/g, "")}`} className="situation-resource-phone">
                   {item.phone}
@@ -1170,7 +1317,7 @@ export function SituationResourcesSection({
             </Reveal>
           ))}
         </div>
-        {data.footerNote ? <p className="situation-resources-footer">{data.footerNote}</p> : null}
+        {data.footerNote ? <p className="situation-resources-footer body-standard">{data.footerNote}</p> : null}
       </div>
     </section>
   );
@@ -1189,6 +1336,49 @@ export function renderSituationSection(
     case "stats":
       return content.stats ? <SituationStatsSection key={id} stats={content.stats} /> : null;
 
+    case "empathy":
+      if (
+        (content.slug === "divorce" ||
+          content.slug === "tenants" ||
+          content.slug === "lien" ||
+          content.slug === "storm-damage" ||
+          content.slug === "cash-home-buyers" ||
+          content.slug === "fire-damage" ||
+          content.slug === "water-damage" ||
+          content.slug === "sell-as-is" ||
+          content.slug === "as-is-florida") &&
+        content.empathy
+      ) {
+        return <SituationEmpathyCtaSection key={id} data={content.empathy} alt={alt} />;
+      }
+      return content.empathy ? (
+        <EmpathyNumbersSection key={id} data={content.empathy} alt={alt} />
+      ) : null;
+
+    case "stages":
+      return content.stages ? <StageCardsSection key={id} data={content.stages} alt={alt} /> : null;
+
+    case "tenantMarket":
+      return content.tenantMarket ? (
+        <SituationTenantMarketSection key={id} data={content.tenantMarket} />
+      ) : null;
+
+    case "foreclosureLaw":
+      return content.foreclosureLaw ? (
+        <ForeclosureLawSection key={id} data={content.foreclosureLaw} />
+      ) : null;
+
+    case "floodLaw":
+      return content.floodLaw ? <SituationFloodLawSection key={id} data={content.floodLaw} alt={alt} /> : null;
+
+    case "femaInsurance":
+      return content.femaInsurance ? <SituationFemaInsuranceSection key={id} data={content.femaInsurance} /> : null;
+
+    case "moldDisclosure":
+      return content.moldDisclosure ? (
+        <SituationMoldDisclosureSection key={id} data={content.moldDisclosure} alt={alt} />
+      ) : null;
+
     case "courtProcess":
       return content.courtProcess ? (
         <SituationCourtProcessSection key={id} data={content.courtProcess} alt={alt} />
@@ -1205,6 +1395,9 @@ export function renderSituationSection(
       ) : null;
 
     case "tax":
+      if (content.slug === "divorce" && content.tax) {
+        return <SituationTaxIconCardsSection key={id} data={content.tax} alt={alt} />;
+      }
       return content.tax ? <SituationTaxSection key={id} data={content.tax} alt={alt} /> : null;
 
     case "valuation":
@@ -1213,6 +1406,9 @@ export function renderSituationSection(
       ) : null;
 
     case "process":
+      if (content.slug === "divorce" && content.process) {
+        return <SituationStepCardsSection key={id} data={content.process} />;
+      }
       return content.process ? (
         <ProcessSection
           key={id}
@@ -1267,6 +1463,33 @@ export function renderSituationSection(
       ) : null;
 
     case "cards":
+      if (content.slug === "divorce" && content.cards) {
+        return <SituationPillCardsSection key={id} data={content.cards} alt={alt} />;
+      }
+      if (content.cards?.numberedCards) {
+        return (
+          <SituationNumberedCardsSection
+            key={id}
+            data={content.cards}
+            alt={alt}
+            imageMap={SITUATION_PAGE_CARD_IMAGES[content.slug]}
+          />
+        );
+      }
+      if (content.cards?.iconCards) {
+        return (
+          <SituationIconCardsSection
+            key={id}
+            data={content.cards}
+            alt={alt}
+            imageMap={
+              content.slug === "lien"
+                ? LIEN_TYPE_CARD_IMAGES
+                : SITUATION_PAGE_CARD_IMAGES[content.slug]
+            }
+          />
+        );
+      }
       return content.cards ? (
         content.cards.cityImageCards ? (
           <section key={id} className={`section${alt ? " section-alt" : ""}`} id="cards">
@@ -1345,6 +1568,7 @@ export function renderSituationSection(
           eyebrow={content.areas.eyebrow}
           title={titleToParts(content.areas)}
           lede={content.areas.lede}
+          listHeading={content.slug === "inherited" ? "Communities we serve" : undefined}
           areasNote={content.areas.areasNote}
           areasNoteLink={content.areas.areasNoteLink}
           areasNoteAfter={content.areas.areasNoteAfter}
@@ -1353,7 +1577,15 @@ export function renderSituationSection(
       ) : null;
 
     case "testimonials":
-      return <ReviewsSection key={id} className={alt ? "section-alt" : ""} />;
+      return content.testimonials ? (
+        <SituationTestimonialsSection
+          key={id}
+          data={content.testimonials}
+          className={alt ? "section-alt" : ""}
+        />
+      ) : (
+        <ReviewsSection key={id} className={alt ? "section-alt" : ""} />
+      );
 
     case "situations":
       return content.situations ? (
@@ -1391,7 +1623,7 @@ export function renderSituationSection(
     case "market":
       return content.market ? (
         content.market.dark ? (
-          <SituationTenantMarketSection key={id} data={content.market} />
+          <SituationTenantMarketSection key={id} data={content.market as SituationTenantMarketContent} />
         ) : (
           <MarketSection
             key={id}
@@ -1424,18 +1656,25 @@ export function renderSituationSection(
         )
       ) : null;
 
-    case "guarantee":
-      return content.guarantee ? (
+    case "guarantee": {
+      if (!content.guarantee) return null;
+      const asideTitle = content.guarantee.asideTitle ?? content.guarantee.ctaTitle;
+      const asideBody = content.guarantee.asideBody ?? content.guarantee.ctaBody;
+      return (
         <GuaranteeSection
           key={id}
           eyebrow={content.guarantee.eyebrow}
           title={titleToParts(content.guarantee)}
           lede={content.guarantee.lede}
           items={content.guarantee.items}
-          asideTitle={content.guarantee.asideTitle}
-          asideBody={content.guarantee.asideBody}
+          asideTitle={asideTitle}
+          asideBody={asideBody}
+          showAside={Boolean(asideTitle && asideBody)}
+          asidePrimaryLabel="Get My Cash Offer"
+          variant="card"
         />
-      ) : null;
+      );
+    }
 
     case "prosCons":
       return content.prosCons ? <SituationProsConsSection key={id} data={content.prosCons} /> : null;

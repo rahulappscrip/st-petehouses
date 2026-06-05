@@ -1,0 +1,197 @@
+/* Divorce situation page sections — global design tokens + typography classes */
+
+/* Children cards */
+.situation-divorce-children__grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  margin-top: 48px;
+}
+
+@media (min-width: 760px) {
+  .situation-divorce-children__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.situation-divorce-children__card {
+  background: var(--sand);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow-1);
+}
+
+.situation-divorce-children__pill {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sun-deep);
+  background: color-mix(in oklab, var(--sun) 14%, var(--paper));
+  border-radius: var(--radius-pill);
+  padding: 4px 10px;
+  margin-bottom: 14px;
+}
+
+.situation-divorce-children__card h3 {
+  color: var(--ink);
+  margin: 0 0 10px;
+}
+
+.situation-divorce-children__card p {
+  color: var(--ink-2);
+  margin: 0;
+}
+
+/* Tax cards */
+.situation-divorce-tax__grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  margin-top: 48px;
+}
+
+@media (min-width: 760px) {
+  .situation-divorce-tax__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.situation-divorce-tax__card {
+  display: flex;
+  flex-direction: column;
+  background: var(--sand);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.situation-divorce-tax__media {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: color-mix(in oklab, var(--ink) 6%, var(--paper));
+}
+
+.situation-divorce-tax__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.situation-divorce-tax__body {
+  padding: clamp(18px, 2vw, 22px);
+  flex: 1;
+}
+
+.situation-divorce-tax__card h3 {
+  color: var(--ink);
+  margin: 0 0 10px;
+}
+
+.situation-divorce-tax__card p {
+  color: var(--ink-2);
+  margin: 0;
+}
+
+.situation-divorce-tax__disclaimer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  padding: 20px 28px;
+  background: var(--sand);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+}
+
+.situation-divorce-tax__disclaimer .feature-title {
+  color: var(--ink);
+  margin: 0 0 4px;
+}
+
+.situation-divorce-tax__disclaimer .body-standard {
+  color: var(--ink-soft);
+  margin: 0;
+  max-width: 56ch;
+}
+
+/* Dark process grid */
+.situation-divorce-process {
+  background: var(--teal-deep);
+}
+
+.situation-divorce-process__head .eyebrow {
+  color: color-mix(in oklab, var(--sun) 80%, var(--sand));
+}
+
+.situation-divorce-process__head .eyebrow::after {
+  background: color-mix(in oklab, var(--sun) 80%, var(--sand));
+}
+
+.situation-divorce-process__head .h-2 {
+  color: var(--sand);
+}
+
+.situation-divorce-process__head .h-2 em {
+  color: var(--sun);
+}
+
+.situation-divorce-process__head .lede {
+  color: color-mix(in oklab, var(--sand) 70%, transparent);
+}
+
+.situation-divorce-process__grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+  margin-top: 48px;
+}
+
+@media (min-width: 640px) {
+  .situation-divorce-process__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 980px) {
+  .situation-divorce-process__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.situation-divorce-process__card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-s);
+  padding: 24px;
+}
+
+.situation-divorce-process__num {
+  display: block;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--sun);
+  margin-bottom: 10px;
+}
+
+.situation-divorce-process__card h3 {
+  color: var(--sand);
+  margin: 0 0 10px;
+}
+
+.situation-divorce-process__card p {
+  color: color-mix(in oklab, var(--sand) 70%, transparent);
+  margin: 0;
+}
+
+/* Testimonials */

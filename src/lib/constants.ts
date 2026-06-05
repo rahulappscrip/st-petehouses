@@ -54,7 +54,7 @@ export const ASSETS = {
   remainingLeaseDuration: "/assets/images/Remaining-Lease-Duration.webp",
   immediateCashFlow: "/assets/images/Immediate-Cash-Flow.webp",
   moveOutTimelineClarity: "/assets/images/Move-Out-Timeline-Clarity.webp",
-  cleanDocumentation: "/assets/images/Clean-Documentation.webp",
+  cleanDocumentation: "/assets/images/Clean-Documentation-optimized.webp",
   weBuyRegardless: "/assets/images/We-Buy-Regardless.webp",
   localPresence: "/assets/images/Local-Presence.webp",
   noHiddenFees: "/assets/images/No-Hidden-Fees.webp",
@@ -107,6 +107,34 @@ export const ASSETS = {
   foreclosureProvenTrackRecord: "/assets/images/Proven-track-record.webp",
   foreclosureLocalVsAiAdvice: "/assets/images/Local-vs-AI-generated-advice.webp",
 } as const;
+
+/** Lien page — "Types of Liens We Handle" cards. */
+export const LIEN_TYPE_CARD_IMAGES: Record<string, { image: string; imageAlt: string }> = {
+  "Tax Liens": {
+    image: ASSETS.taxLiens,
+    imageAlt: "Federal IRS and Florida property tax lien resolved at cash closing",
+  },
+  "Mortgage Liens": {
+    image: ASSETS.mortgageLiens,
+    imageAlt: "Primary and secondary mortgage liens paid off at closing from sale proceeds",
+  },
+  "Judgment Liens": {
+    image: ASSETS.judgmentLiens,
+    imageAlt: "Court-ordered judgment lien handled with Florida title professionals",
+  },
+  "Mechanic's Liens": {
+    image: ASSETS.mechanicsLiens,
+    imageAlt: "Contractor mechanic's lien coordinated at closing with title company",
+  },
+  "HOA Liens": {
+    image: ASSETS.hoaLiens,
+    imageAlt: "Homeowners association lien resolved at closing",
+  },
+  "Multiple Liens": {
+    image: ASSETS.multipleLiens,
+    imageAlt: "Multiple overlapping property liens coordinated simultaneously at closing",
+  },
+};
 
 /** Lien page — "Properties and Situations We Handle" forest cards. */
 export const LIEN_PROPERTY_SITUATION_IMAGES: Record<string, { image: string; imageAlt: string }> = {
@@ -336,22 +364,27 @@ export const INHERITED_BUY_PROCESS_FEATURES: Record<
   "Probate & title support": {
     image: ASSETS.inheritedBuyProbate,
     imageAlt: "Probate court documents for inherited property sale in St Petersburg",
-    iconKey: "probate",
+    iconKey: "calendar",
+  },
+  "Probate and title clearance support": {
+    image: ASSETS.inheritedBuyProbate,
+    imageAlt: "Probate court documents for inherited property sale in St Petersburg",
+    iconKey: "calendar",
   },
   "As-is purchases — nothing required": {
     image: ASSETS.inheritedBuyAsIs,
     imageAlt: "Inherited St Petersburg home purchased as-is for cash",
-    iconKey: "asis",
+    iconKey: "document",
   },
   "No commissions or fees — ever": {
     image: ASSETS.inheritedBuyNoFees,
     imageAlt: "No real estate commissions or hidden fees on inherited home cash sale",
-    iconKey: "fees",
+    iconKey: "dollar",
   },
   "Flexible closing — your timeline": {
     image: ASSETS.inheritedBuyFlexibleClosing,
     imageAlt: "Flexible closing timeline when selling an inherited house for cash",
-    iconKey: "calendar",
+    iconKey: "location",
   },
 };
 

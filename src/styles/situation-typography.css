@@ -1,0 +1,303 @@
+/**
+ * Situation subpages — enforce global :root typography scale.
+ * Loaded after situation-page.css and typography.css.
+ */
+
+.situation-page,
+.city-hero.situation-hero {
+  font-family: var(--sans);
+}
+
+/* ── H1 / display ── */
+.situation-page .h-display,
+.city-hero__title.h-display {
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: var(--h1-size);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+/* ── H2 ── */
+.situation-page :is(h2, .h-2),
+[class*="situation-"] :is(h2, .h-2) {
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: var(--h2-size);
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+}
+
+/* ── H3 ── */
+.situation-page :is(h3, .h-3),
+[class*="situation-"] :is(h3, .h-3) {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: var(--h3-size);
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+}
+
+/* ── H4 ── */
+.situation-page :is(h4, .h-4),
+[class*="situation-"] :is(h4, .h-4) {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: var(--h4-size);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+/* ── Feature title (situation pages → h3 scale) ── */
+.situation-page .feature-title,
+[class*="situation-"] .feature-title {
+  font-family: var(--sans);
+  font-size: var(--h3-size);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+}
+
+/* ── Body intro & lede ── */
+.situation-page :is(.body-intro, .lede),
+.city-hero__sub.body-intro {
+  font-family: var(--sans);
+  font-size: var(--body-intro-size);
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* ── Body standard ── */
+.situation-page .body-standard,
+[class*="situation-"] .body-standard {
+  font-family: var(--sans);
+  font-size: var(--body-size);
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+/* ── Eyebrow ── */
+.city-hero__eyebrow.eyebrow,
+.situation-page .eyebrow,
+[class*="situation-"] .eyebrow {
+  font-family: var(--sans);
+  font-size: var(--eyebrow-size);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+/* ── Display stat values ── */
+.situation-empathy__card-value,
+.situation-numbered-cards__num {
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: var(--h2-size);
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+}
+
+.situation-empathy__card-value em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--sun);
+}
+
+.situation-numbered-cards__num {
+  font-style: normal;
+}
+
+.situation-empathy__card-title {
+  font-family: var(--sans);
+  font-size: var(--body-size);
+  font-weight: 600;
+  line-height: 1.75;
+}
+
+/* ── Phone links ── */
+.situation-aside-cta .phone,
+.situation-areas-aside-cta__phone {
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: var(--h3-size);
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+}
+
+/* ── Legacy prose blocks ── */
+.situation-body {
+  font-family: var(--sans);
+  font-size: var(--body-intro-size);
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* ── Card titles (compact blocks → h4 scale) ── */
+[class*="situation-"] :is(
+  .situation-whyus-card h3,
+  .situation-payoff__step h3,
+  .situation-obligation-card h3,
+  .situation-environmental-card h3,
+  .situation-insurance-card h3,
+  .situation-flood-law-card h3,
+  .situation-mold-disclosure-card h3,
+  .situation-fema-insurance-card h3,
+  .situation-process-docs h4,
+  .situation-why-list h4,
+  .situation-why-info-card h4,
+  .situation-payoff__equity-title
+) {
+  font-family: var(--sans);
+  font-size: var(--h4-size);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+/* ── Card / list body copy ── */
+[class*="situation-"] :is(
+  .situation-icon-cards__card p,
+  .situation-numbered-cards__card p,
+  .situation-whyus-card p,
+  .situation-environmental-card p,
+  .situation-flood-law-card p,
+  .situation-mold-disclosure-card p,
+  .situation-insurance-card p,
+  .situation-obligation-card p,
+  .situation-payoff__step p,
+  .situation-proscons-card li,
+  .situation-proscons-card__note,
+  .situation-tenant-rights__list li,
+  .situation-aside-cta p,
+  .situation-areas-aside-cta p,
+  .situation-forest-sit__card p,
+  .situation-why-list p,
+  .situation-payoff__equity p:last-child
+) {
+  font-family: var(--sans);
+  font-size: var(--body-size);
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+[class*="situation-"] :is(
+  .situation-process-disclosure,
+  .situation-exclusion-note p,
+  .areas-note,
+  .situation-flood-law__note,
+  .situation-mold-disclosure__note p,
+  .situation-aside-cta__list
+) {
+  font-family: var(--sans);
+  font-size: var(--body-size);
+  line-height: 1.75;
+}
+
+/* ── Dark aside headings ── */
+.situation-aside-cta h3,
+.situation-areas-aside-cta h3 {
+  font-size: var(--h3-size);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+}
+
+.situation-forest-sit__card h3 {
+  font-size: var(--feature-title-size);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: normal;
+}
+
+/* ── Key steps strip ── */
+.situation-key-steps h2 {
+  font-size: var(--h3-size);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+}
+
+.situation-key-steps h4 {
+  font-size: var(--feature-title-size);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: normal;
+}
+
+/* ── Testimonials quote mark ── */
+.situation-testimonials__quote-mark.h-2 {
+  height: unset;
+}
+
+/* ── FAQ questions ── */
+.situation-page .faq-q,
+.situation-faq .faq-q {
+  font-size: var(--h4-size);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+/* ── Service area links ── */
+.situation-page .area-list a {
+  font-size: var(--body-size);
+}
+
+/* ── Tenant rights list ── */
+.situation-tenant-rights__list li {
+  display: block;
+}
+
+/* ── Hero offer form ── */
+.situation-page .lead-card.lead-offer-form .lead-intro,
+.situation-page .lead-card.lead-offer-form .lead-consent {
+  font-size: var(--body-size);
+  line-height: 1.75;
+}
+
+/* ── Case studies ── */
+.situation-case-card p,
+.situation-case-card__stat-label,
+.situation-case-takeaways li {
+  font-size: var(--body-size);
+  line-height: 1.75;
+}
+
+/* ── Process section — borders on situation subpages only ── */
+.situation-page #process.section {
+  border-top: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+/* ── Inherited buy process (visual layout) ── */
+.situation-inherited-buy__card-title {
+  font-family: var(--sans);
+  font-size: var(--h4-size);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.situation-inherited-buy__card-text,
+.situation-inherited-buy__step-text {
+  font-family: var(--sans);
+  font-size: var(--body-size);
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.situation-inherited-buy__timeline-title {
+  font-family: var(--sans);
+  font-size: var(--h3-size);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+}
+
+.situation-inherited-buy__step-title {
+  font-family: var(--sans);
+  font-size: var(--h4-size);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+

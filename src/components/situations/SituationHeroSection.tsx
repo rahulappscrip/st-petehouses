@@ -14,6 +14,17 @@ type Props = {
 export function SituationHeroSection({ breadcrumb, hero }: Props) {
   return (
     <>
+      {hero.compassionBanner ? (
+        <div className="situation-compassion-banner">
+          <div className="wrap situation-compassion-banner__inner">
+            <svg viewBox="0 0 24 24" aria-hidden>
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+            <p className="body-standard">{hero.compassionBanner}</p>
+          </div>
+        </div>
+      ) : null}
+
       <nav className="city-breadcrumb" aria-label="Breadcrumb">
         <div className="wrap">
           <Link href="/">Home</Link>
@@ -32,7 +43,7 @@ export function SituationHeroSection({ breadcrumb, hero }: Props) {
         <div className="city-hero__bg" aria-hidden="true" />
         <div className="wrap city-hero__grid">
           <Reveal className="city-hero__content">
-            <p className="city-hero__eyebrow">{hero.eyebrow}</p>
+            <p className="eyebrow city-hero__eyebrow">{hero.eyebrow}</p>
             {hero.urgencyBadge ? (
               <p className="situation-hero__urgency-badge">{hero.urgencyBadge}</p>
             ) : null}
@@ -41,7 +52,7 @@ export function SituationHeroSection({ breadcrumb, hero }: Props) {
               {hero.titleEm ? <em>{hero.titleEm}</em> : null}
               {hero.titleTail}
             </h1>
-            <p className="city-hero__sub">{hero.subheadline}</p>
+            <p className="city-hero__sub body-intro">{hero.subheadline}</p>
 
             {hero.neighborhoodTags && hero.neighborhoodTags.length > 0 ? (
               <div className="situation-hero__neighborhoods" aria-label="Featured neighborhoods">
@@ -66,7 +77,9 @@ export function SituationHeroSection({ breadcrumb, hero }: Props) {
             {hero.checklist && hero.checklist.length > 0 ? (
               <ul className="situation-hero__checklist">
                 {hero.checklist.map((item) => (
-                  <li key={item}>{item}</li>
+                  <li key={item} className="body-standard">
+                    {item}
+                  </li>
                 ))}
               </ul>
             ) : null}
