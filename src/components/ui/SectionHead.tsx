@@ -2,7 +2,7 @@ import type { CSSProperties, ReactNode } from "react";
 import { Reveal } from "@/components/ui/Reveal";
 
 type Props = {
-  eyebrow: string;
+  eyebrow?: string;
   title: ReactNode;
   lede?: string;
   centered?: boolean;
@@ -16,7 +16,7 @@ export function SectionHead({ eyebrow, title, lede, centered, className = "", st
       className={`section-head${centered ? " section-head--center" : ""}${className ? ` ${className}` : ""}`}
       style={style}
     >
-      <span className="eyebrow">{eyebrow}</span>
+      {eyebrow ? <span className="eyebrow">{eyebrow}</span> : null}
       <div className="section-head__copy">
         <h2 className="h-2">{title}</h2>
         {lede ? <p className="lede">{lede}</p> : null}

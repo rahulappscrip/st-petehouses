@@ -27,7 +27,7 @@
 .pros-card__lab {
   display: block;
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ink-soft);
@@ -58,7 +58,7 @@
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.45;
   color: var(--ink-2);
 }
@@ -101,7 +101,7 @@
   background: var(--ink);
   color: var(--paper);
   font-family: var(--sans);
-  font-size: 15px;
+  font-size: 16px;
   font-style: italic;
   display: grid;
   place-items: center;
@@ -153,7 +153,7 @@
   top: clamp(20px, 2.5vw, 28px);
   right: clamp(20px, 2.5vw, 28px);
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 16px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-weight: 400;
@@ -186,7 +186,7 @@
 
 .pros-compare__type {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ink-soft);
@@ -205,7 +205,7 @@
 }
 
 .pros-compare__sub {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.45;
   color: var(--ink-2);
   margin-top: 8px;
@@ -236,7 +236,7 @@
 
 .pros-compare__row dt {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--ink-soft);
@@ -250,7 +250,7 @@
 .pros-compare__row dd {
   margin: 0;
   font-family: var(--sans);
-  font-size: clamp(15px, 1.6vw, 18px);
+  font-size: clamp(16px, 1.6vw, 18px);
   line-height: 1.2;
   color: var(--ink);
   text-align: right;
@@ -271,7 +271,7 @@
 
 .pros-compare__note {
   margin: 18px 0 0;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.6;
   color: var(--ink-2);
   font-style: italic;

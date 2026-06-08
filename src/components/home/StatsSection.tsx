@@ -1,12 +1,50 @@
 import { Reveal } from "@/components/ui/Reveal";
 import { STATS } from "@/lib/constants";
 
-export function StatsSection() {
+type StatItem = {
+  value: string;
+  suffix?: string;
+  label: string;
+  sub?: string;
+  href?: string;
+};
+
+type StatsSectionProps = {
+  stats?: readonly StatItem[];
+  className?: string;
+};
+
+function StatValue({ stat }: { stat: StatItem }) {
+  const content = (
+    <>
+      {stat.value}
+      {stat.suffix ? <em>{stat.suffix}</em> : null}
+    </>
+  );
+
+  if (stat.href) {
+    return (
+      <a href={stat.href} className="stat__link">
+        {content}
+      </a>
+    );
+  }
+
+  return content;
+}
+
+export function StatsSection({ stats = STATS, className = "" }: StatsSectionProps) {
+  const gridClass =
+    stats.length === 3 ? "stats-grid stats-grid--3" : "stats-grid";
+
   return (
-    <section className="stats" aria-label="Key facts">
+    <section
+      className={`stats${className ? ` ${className}` : ""}`}
+      aria-label="Key facts"
+    >
       <div className="wrap">
-        <div className="stats-grid">
-          {STATS.map((stat, i) => (
+        <div className={gridClass}>
+          {stats.map((stat, i) => (
             <Reveal
               key={stat.label}
               as="div"
@@ -14,11 +52,10 @@ export function StatsSection() {
               className="stat"
             >
               <b>
-                {stat.value}
-                {"suffix" in stat && stat.suffix ? <em>{stat.suffix}</em> : null}
+                <StatValue stat={stat} />
               </b>
               <span>{stat.label}</span>
-              <p className="sub">{stat.sub}</p>
+              {stat.sub ? <p className="sub">{stat.sub}</p> : null}
             </Reveal>
           ))}
         </div>

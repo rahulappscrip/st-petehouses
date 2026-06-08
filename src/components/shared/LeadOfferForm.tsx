@@ -48,7 +48,7 @@ export function LeadOfferForm({
           </span>
         </div>
         {formEyebrow ? <span className="lead-eyebrow">{formEyebrow}</span> : null}
-        <h2 className="lead-title">{formTitle}</h2>
+        <p className="lead-title">{formTitle}</p>
         <p className="lead-intro">{formIntro}</p>
       </div>
 

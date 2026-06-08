@@ -84,7 +84,7 @@
 
 .situation-inherited-buy__card-text {
   margin: 0;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
   color: var(--ink-2);
 }
@@ -180,7 +180,7 @@
 
 .situation-inherited-buy__step-text {
   margin: 0;
-  font-size: 13.5px;
+  font-size: 16px;
   line-height: 1.55;
   color: var(--ink-2);
   max-width: 28ch;

@@ -25,6 +25,9 @@ type ProcessSectionProps = {
   keySteps?: { title: string; items: string[] };
   docs?: string[];
   disclosureNote?: string;
+  showCtas?: boolean;
+  id?: string;
+  className?: string;
 };
 
 export function ProcessSection({
@@ -43,17 +46,22 @@ export function ProcessSection({
   keySteps,
   docs,
   disclosureNote,
+  showCtas = true,
+  id = "process",
+  className = "",
 }: ProcessSectionProps = {}) {
   const stepsClass =
     steps.length === 3
       ? " steps--3"
-      : steps.length === 5
-        ? " steps--5"
-        : steps.length === 6
-          ? " steps--6"
-          : "";
+      : steps.length === 4
+        ? " steps--4"
+        : steps.length === 5
+          ? " steps--5"
+          : steps.length === 6
+            ? " steps--6"
+            : "";
   return (
-    <section className="section" id="process">
+    <section className={`section${className ? ` ${className}` : ""}`} id={id}>
       <div className="wrap">
         <SectionHead eyebrow={eyebrow} title={title} lede={lede} />
 
@@ -86,15 +94,17 @@ export function ProcessSection({
           <p className="process-note">{note}</p>
         ) : null}
 
-        <div style={{ marginTop: 28, display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center" }}>
-          <Link href={primaryCta.href} className="btn btn--cta">
-            {primaryCta.label}
-            <Arr />
-          </Link>
-          <Link href={secondaryCta.href} className="btn btn--link">
-            {secondaryCta.label}
-          </Link>
-        </div>
+        {showCtas ? (
+          <div style={{ marginTop: 28, display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center" }}>
+            <Link href={primaryCta.href} className="btn btn--cta">
+              {primaryCta.label}
+              <Arr />
+            </Link>
+            <Link href={secondaryCta.href} className="btn btn--link">
+              {secondaryCta.label}
+            </Link>
+          </div>
+        ) : null}
 
         {docs && docs.length > 0 ? (
           <div className="situation-process-docs">

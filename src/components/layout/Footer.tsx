@@ -5,6 +5,8 @@ import { FOOTER_SITUATIONS, NAV_LINKS, SITE, SOCIAL_LINKS } from "@/lib/constant
 const FOOTER_COMPANY = [
   { label: "How It Works", href: "/how-it-works" },
   { label: "Sell Your House", href: "/sell-your-house" },
+  { label: "Get a Cash Offer", href: "/get-a-cash-offer" },
+  { label: "Cash vs Agent", href: "/cash-vs-agent" },
   { label: "About Us", href: "/about" },
   { label: "Reviews", href: "/reviews" },
   { label: "Contact", href: "/contact" },

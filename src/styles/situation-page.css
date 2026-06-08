@@ -99,7 +99,7 @@
 }
 
 .situation-hero__neighborhood-tag {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--forest);
   background: var(--sage-light, #f4f8f3);
@@ -119,7 +119,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--ink);
   background: var(--paper);
@@ -141,7 +141,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--ink);
   background: color-mix(in oklab, var(--sun) 15%, var(--paper));
@@ -178,7 +178,7 @@
 }
 
 .situation-process-docs__item {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--ink-2);
   padding: 10px 14px;
   background: var(--sage-light, #f4f8f3);
@@ -214,7 +214,7 @@
 }
 
 .situation-insurance-card {
-  background: var(--paper);
+  background-color: #ffffff;
   border: 1px solid var(--line-soft);
   border-radius: var(--radius-m);
   padding: 28px;
@@ -222,7 +222,7 @@
 
 .situation-insurance-card__tag {
   display: block;
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--ink-2);
   margin-bottom: 10px;
@@ -231,7 +231,7 @@
 .situation-flood-law__note {
   margin-top: -24px;
   margin-bottom: 8px;
-  font-size: 13px;
+  font-size: 16px;
   font-style: italic;
   color: var(--ink-2);
 }
@@ -265,7 +265,7 @@
 }
 
 .situation-flood-law-card__link {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--sun);
   text-decoration: none;
@@ -325,7 +325,7 @@
 }
 
 .situation-fema-insurance-card__link {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--sun);
   text-decoration: none;
@@ -345,7 +345,7 @@
 
 .situation-fema-insurance__disclaimer p {
   margin: 0;
-  font-size: 12px;
+  font-size: 16px;
   font-style: italic;
   color: color-mix(in oklab, var(--paper) 70%, transparent);
 }
@@ -409,7 +409,7 @@
 }
 
 .situation-mold-disclosure-card__link {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--sun);
   text-decoration: none;
@@ -439,14 +439,14 @@
   flex-shrink: 0;
   border-radius: 50%;
   border: 1px solid var(--line-soft);
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--ink-2);
 }
 
 .situation-mold-disclosure__note p {
   margin: 0;
-  font-size: 13px;
+  font-size: 16px;
   color: var(--ink-2);
 }
 
@@ -457,7 +457,7 @@
 }
 
 .situation-insurance-card p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.65;
   color: var(--ink-2);
   margin-bottom: 10px;
@@ -502,13 +502,13 @@
 }
 
 .situation-environmental-card h3 {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--ink);
   margin-bottom: 8px;
 }
 
 .situation-environmental-card p {
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.65;
   color: var(--ink-2);
 }
@@ -526,7 +526,7 @@
 .situation-resource-phone {
   display: block;
   margin-top: 10px;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--ink);
   text-decoration: none;
@@ -551,7 +551,7 @@
 }
 
 .situation-areas-aside-cta p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
   color: color-mix(in oklab, var(--paper) 78%, transparent);
 }
@@ -602,7 +602,7 @@
 
 .situation-info-card__badge {
   display: inline-block;
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -655,7 +655,7 @@
 
 .situation-exclusion-note p {
   margin: 0;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.6;
   color: var(--ink-2);
 }
@@ -667,7 +667,7 @@
 .situation-resource-link {
   display: inline-block;
   margin-top: 12px;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--sun);
   text-decoration: none;
@@ -679,7 +679,7 @@
 
 .areas-note {
   margin-top: 16px;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.6;
   color: var(--ink-2);
 }
@@ -705,7 +705,7 @@
 }
 
 .situation-key-steps--in-process {
-  margin-top: clamp(28px, 3vw, 40px);
+  margin-top: 0;
   padding: clamp(20px, 2.5vw, 28px);
   border: 1px solid var(--line);
   border-radius: var(--radius-l);
@@ -741,7 +741,7 @@
 }
 
 .situation-key-steps li {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.55;
   color: var(--ink-2);
   padding-left: 18px;
@@ -926,12 +926,12 @@
 .situation-resource-item strong {
   display: block;
   color: var(--ink);
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .situation-resource-item p {
   margin-top: 6px;
-  font-size: 14px;
+  font-size: 16px;
   color: var(--ink-2);
 }
 
@@ -962,7 +962,7 @@
 
 .situation-diff-card .num {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--sun-deep);
@@ -1071,7 +1071,7 @@
 
 .situation-aside-cta p {
   margin-top: 10px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
   color: color-mix(in oklab, var(--paper) 72%, transparent);
 }
@@ -1083,7 +1083,7 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.55;
   color: color-mix(in oklab, var(--paper) 78%, transparent);
 }
@@ -1107,7 +1107,7 @@
   display: block;
   margin-top: 10px;
   text-align: center;
-  font-size: 12px;
+  font-size: 16px;
   color: color-mix(in oklab, var(--paper) 62%, transparent);
   text-decoration: none;
 }
@@ -1124,7 +1124,7 @@
 }
 
 .situation-why-info-card h4 {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--ink);
   text-transform: uppercase;
@@ -1133,7 +1133,7 @@
 }
 
 .situation-why-info-card p {
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.65;
   color: var(--ink-2);
 }
@@ -1202,7 +1202,7 @@
 
 .situation-aside__eyebrow {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--sun-deep);
@@ -1214,7 +1214,7 @@
 }
 
 .situation-aside > p {
-  font-size: 14.5px;
+  font-size: 16px;
   color: var(--ink-2);
   margin-top: 10px;
 }
@@ -1235,7 +1235,7 @@
   padding: 14px 0;
   background: var(--paper);
   border-bottom: 1px solid var(--line-soft);
-  font-size: 13px;
+  font-size: 16px;
   color: var(--ink-soft);
 }
 
@@ -1436,7 +1436,7 @@
 }
 
 .city-sit-card {
-  background: var(--paper);
+  background-color: #ffffff;
   border: 1px solid var(--line);
   border-radius: var(--radius-l);
   padding: 24px;
@@ -1647,7 +1647,7 @@
   border-radius: 50%;
   background: var(--sun);
   color: var(--white);
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -1683,7 +1683,7 @@
 
 .situation-probate-q__label {
   display: block;
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1722,7 +1722,7 @@
 
 .situation-probate-timeline li span {
   display: block;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--sun);
   margin: 2px 0 6px;
@@ -1783,7 +1783,7 @@
 
 .situation-tax-card__label {
   display: block;
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -1827,7 +1827,7 @@
 
 .situation-val-scenario__label {
   display: block;
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -1842,7 +1842,7 @@
 }
 
 .situation-val-scenario p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.55;
   color: var(--ink-2);
 }
@@ -1868,20 +1868,20 @@
 }
 
 .situation-val-stat-row dt {
-  font-size: 13px;
+  font-size: 16px;
   color: color-mix(in oklab, var(--paper) 70%, transparent);
 }
 
 .situation-val-stat-row dd {
   margin: 0;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   text-align: right;
 }
 
 .situation-val-stats__note {
   margin-top: 14px;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.5;
   color: color-mix(in oklab, var(--paper) 55%, transparent);
   font-style: italic;
@@ -1955,14 +1955,14 @@
 }
 
 .situation-forest-sit__card h3 {
-  font-size: clamp(15px, 1.8vw, 16px);
+  font-size: clamp(16px, 1.8vw, 16px);
   color: var(--paper);
   margin: 0 0 6px;
 }
 
 .situation-forest-sit__card p {
   margin: 0;
-  font-size: clamp(13px, 1.5vw, 14px);
+  font-size: clamp(16px, 1.5vw, 16px);
   line-height: 1.6;
   color: color-mix(in oklab, var(--paper) 72%, transparent);
 }
@@ -2108,7 +2108,7 @@
 
 .situation-payoff__step-num {
   display: block;
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -2117,13 +2117,13 @@
 }
 
 .situation-payoff__step h3 {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--ink);
   margin-bottom: 8px;
 }
 
 .situation-payoff__step p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.65;
   color: var(--ink-2);
 }
@@ -2141,7 +2141,7 @@
 }
 
 .situation-payoff__equity-title {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--ink);
   margin: 0 0 4px;
@@ -2225,13 +2225,13 @@
 }
 
 .situation-obligation-card h3 {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--ink);
   margin-bottom: 12px;
 }
 
 .situation-obligation-card p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.65;
   color: var(--ink-2);
   margin-bottom: 10px;
@@ -2420,7 +2420,7 @@
 
 .situation-tenant-market__factor-label {
   display: block;
-  font-size: 10px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -2435,6 +2435,66 @@
 
 .situation-tenant-market__factor p {
   color: color-mix(in oklab, var(--paper) 72%, transparent);
+}
+
+.situation-tenant-market__factor-value {
+  display: block;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(24px, 3vw, 28px);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--sun);
+  margin-bottom: 8px;
+}
+
+.situation-tenant-market__callout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 24px;
+  padding: 22px 28px;
+  background: color-mix(in oklab, var(--paper) 5%, transparent);
+  border: 1px solid color-mix(in oklab, var(--paper) 15%, transparent);
+  border-radius: var(--radius-m);
+}
+
+.situation-tenant-market__callout-copy strong {
+  display: block;
+  color: var(--paper);
+  margin-bottom: 4px;
+}
+
+.situation-tenant-market__callout-copy p {
+  margin: 0;
+  color: color-mix(in oklab, var(--paper) 72%, transparent);
+}
+
+.situation-tenant-market__callout-cta {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.situation-tenant-market__footer-note {
+  margin: 20px 0 0;
+  color: color-mix(in oklab, var(--paper) 65%, transparent);
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.situation-icon-cards__tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: var(--sand-2);
+  color: var(--ink);
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 12px;
 }
 
 .situation-tenant-market__regions {
@@ -2467,7 +2527,7 @@
 
 .situation-tenant-market__region-label {
   display: block;
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -2525,7 +2585,7 @@
 .situation-tenant-market__stars {
   display: flex;
   gap: 4px;
-  font-size: 14px;
+  font-size: 16px;
   color: var(--sun);
   margin-bottom: 4px;
 }
@@ -2602,7 +2662,7 @@
   align-items: center;
   justify-content: center;
   color: var(--ink-soft);
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 1;
   margin-top: 2px;
@@ -2644,7 +2704,7 @@
   align-items: center;
   justify-content: center;
   font-weight: 800;
-  font-size: 12px;
+  font-size: 16px;
   flex-shrink: 0;
   margin-top: 2px;
 }
@@ -2666,7 +2726,7 @@
 .situation-foreclosure-law__step-link {
   display: inline-block;
   margin-top: 8px;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--sun);
   text-decoration: underline;
@@ -2699,7 +2759,7 @@
 
 .situation-case-card__tag {
   display: inline-flex;
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -2753,7 +2813,7 @@
 }
 
 .situation-case-takeaways h3 {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--ink);
   margin-bottom: 14px;
 }
@@ -2802,7 +2862,7 @@
 .situation-aside-cta .situation-why-aside-note__title {
   margin: 0 0 12px;
   font-family: var(--sans);
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -2814,7 +2874,7 @@
   margin: 0;
   padding-bottom: 8px;
   font-family: var(--sans);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.55;
   color: var(--ink-soft);
@@ -2822,7 +2882,7 @@
 
 /* Numeric buyer cards on tenants page */
 .city-sit-card__icon:has(+ h3) {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 800;
 }
 
@@ -2866,7 +2926,7 @@
 
 .situation-proscons-card__lab {
   display: inline-flex;
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -2888,7 +2948,7 @@
 }
 
 .situation-proscons-card li {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
   color: color-mix(in oklab, var(--paper) 88%, transparent);
   padding-left: 18px;
@@ -2926,7 +2986,7 @@
   padding: 16px;
   border-radius: 8px;
   background: color-mix(in oklab, var(--paper) 6%, transparent);
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.6;
   color: color-mix(in oklab, var(--paper) 65%, transparent);
 }
@@ -2980,7 +3040,7 @@
 }
 
 .situation-proscons-when__lede {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.7;
   color: var(--ink-2);
   margin-bottom: 24px;
@@ -3021,13 +3081,13 @@
 
 .situation-proscons-chip strong {
   display: block;
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 4px;
 }
 
 .situation-proscons-chip p {
   margin: 0;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.55;
   color: var(--ink-2);
 }
@@ -3085,7 +3145,7 @@
   border-radius: 50%;
   background: color-mix(in oklab, var(--sun) 18%, var(--paper));
   color: var(--ink);
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -3093,13 +3153,13 @@
 }
 
 .situation-trust__points h4 {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
   margin-bottom: 4px;
 }
 
 .situation-trust__points p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
   color: var(--ink-2);
   margin: 0;
@@ -3118,7 +3178,7 @@
 }
 
 .situation-trust__card > p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.65;
   color: color-mix(in oklab, var(--paper) 78%, transparent);
 }
@@ -3141,7 +3201,7 @@
 
 .situation-trust__stat-label {
   display: block;
-  font-size: 11px;
+  font-size: 16px;
   color: color-mix(in oklab, var(--paper) 65%, transparent);
   margin-top: 2px;
 }
@@ -3230,7 +3290,7 @@
   flex-direction: column;
   gap: 8px;
   padding: clamp(18px, 2.2vw, 22px);
-  background: var(--paper);
+  background: #ffffff;
   border: 1px solid var(--line-soft);
   border-radius: var(--radius-s);
   min-height: 100%;
@@ -3254,7 +3314,7 @@
 
 .situation-empathy__card-source {
   margin-top: 4px;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--sun);
   text-decoration: none;
@@ -3300,7 +3360,7 @@
 
 .situation-stages__label {
   display: block;
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -3322,7 +3382,7 @@
 .situation-stages__link {
   display: inline-block;
   margin-top: 14px;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--sun);
   text-decoration: none;

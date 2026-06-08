@@ -7,7 +7,7 @@
  * H2 / .h-2      — 800, 32–46px, lh 1.06, -0.035em
  * H3 / .h-3      — 700, 22–26px, lh 1.18, -0.025em
  * H4 / .h-4      — 700, 20px, lh 1.25, -0.02em
- * .feature-title — 700, 17px, lh 1.3
+ * .feature-title — 700, 20px, lh 1.3
  * .body-intro     — 400, 18px, lh 1.7
  * .body-standard  — 400, 16px, lh 1.75
  */
@@ -51,7 +51,7 @@ h2 em,
 .reviews-header h2,
 .testimonials .reviews-header h2,
 .article-body h2,
-.lead-title,
+p.lead-title,
 .about-cta-card__title,
 .meet-owner__title {
   font-family: var(--sans);
@@ -60,9 +60,9 @@ h2 em,
   letter-spacing: -0.035em;
 }
 
-h2.lead-title {
-  font-size: clamp(24px, 2.2vw, 30px);
+p.lead-title {
   line-height: 1.12;
+  margin: 0;
 }
 
 /* Prevent Tailwind height utilities from clipping semantic headings */

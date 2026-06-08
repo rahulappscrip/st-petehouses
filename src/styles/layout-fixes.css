@@ -105,7 +105,7 @@ main {
   .nav-links > li > a,
   .nav-links > li > button {
     padding: 8px 10px;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .nav-cta {
@@ -114,11 +114,11 @@ main {
 
   .nav-cta .btn--cta {
     padding: 10px 16px;
-    font-size: 13.5px;
+    font-size: 16px;
   }
 
   .nav-phone {
-    font-size: 13px;
+    font-size: 16px;
   }
 
   .nav-phone .ico {
@@ -127,9 +127,9 @@ main {
   }
 }
 
-/* Hero + form: clip decorative overflow inside content width */
+/* Hero + form: clip overflow on both axes so content cannot bleed into stats */
 .hero {
-  overflow-x: clip;
+  overflow: clip;
   max-width: 100%;
 }
 
@@ -142,6 +142,7 @@ main {
 
 .hero-body {
   min-width: 0;
+  min-height: 0;
   max-width: 100%;
 }
 

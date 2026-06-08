@@ -106,7 +106,7 @@
 .offer-formula__lab {
   display: block;
   font-family: var(--sans);
-  font-size: 10px;
+  font-size: 16px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   line-height: 1.35;
@@ -181,7 +181,7 @@
 .offer-factor__title {
   font-family: var(--sans);
   font-weight: 400;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.2;
   color: var(--ink);
   padding-right: 30px;
@@ -189,7 +189,7 @@
 }
 
 .offer-factor p {
-  font-size: 13.5px;
+  font-size: 16px;
   line-height: 1.55;
   color: var(--ink-2);
   margin-top: auto;
@@ -234,7 +234,7 @@
 .offer-advance__badge {
   display: inline-block;
   font-family: var(--sans);
-  font-size: 10px;
+  font-size: 16px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-weight: 400;
@@ -263,7 +263,7 @@
 
 .offer-advance__lede {
   margin-top: 12px;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.5;
   color: #cbd7cf;
   max-width: 540px;
@@ -286,7 +286,7 @@
 .offer-advance__list li {
   position: relative;
   padding-left: 22px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.35;
   color: #eef3ee;
 }
@@ -321,7 +321,7 @@
   --bd: var(--gold);
   --fg: var(--teal-deep);
   padding: 16px 28px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.04em;
   text-transform: uppercase;

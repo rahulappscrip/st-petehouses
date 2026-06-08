@@ -7,7 +7,8 @@
 
 .hero {
   --hero-fixed-h: 820px;
-  padding-block: clamp(16px, 2vw, 32px) 0;
+  padding-top: clamp(16px, 2vw, 32px);
+  padding-bottom: 0;
 }
 
 .hero-header {
@@ -45,13 +46,13 @@
 /* Desktop: fixed hero height; image + form share remaining space */
 @media (min-width: 768px) {
   .hero {
-    height: var(--hero-fixed-h);
     min-height: var(--hero-fixed-h);
-    max-height: var(--hero-fixed-h);
+    height: auto;
+    max-height: none;
     display: flex;
     flex-direction: column;
-    padding-block: 20px 0;
-    overflow: hidden;
+    padding-top: clamp(20px, 2vw, 32px);
+    padding-bottom: 0;
   }
 
   .hero > .wrap {
@@ -82,9 +83,15 @@
   .hero-body {
     flex: 1;
     min-height: 0;
+    grid-template-rows: minmax(0, 1fr);
     grid-template-columns: minmax(0, 1fr) minmax(380px, 460px);
     gap: clamp(16px, 2vw, 32px);
-    align-items: flex-start;
+    align-items: stretch;
+  }
+
+  .hero-body > * {
+    min-height: 0;
+    min-width: 0;
   }
 }
 
@@ -185,7 +192,7 @@
   align-self: end;
   position: static !important;
   top: auto !important;
-  margin-bottom: 46px;
+  margin-bottom: 0;
   padding: 24px clamp(18px, 2vw, 24px);
   gap: 8px;
 }
@@ -233,17 +240,17 @@
 }
 
 .hero .lead-badges .lead-badge--5 b {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .hero .lead-badges .lead-badge--5 i {
   margin-top: 1px;
-  font-size: 9px;
+  font-size: 16px;
   line-height: 1.1;
 }
 
 .hero .lead-intro {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.4;
 }
 
@@ -262,7 +269,7 @@
 .hero .lead-consent {
   margin-bottom: 8px;
   padding: 10px 12px;
-  font-size: 11.5px;
+  font-size: 16px;
   line-height: 1.45;
 }
 

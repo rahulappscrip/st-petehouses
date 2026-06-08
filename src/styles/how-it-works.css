@@ -2,7 +2,7 @@
 
 .crumbs {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ink-soft);
@@ -71,7 +71,7 @@
   gap: 14px;
   margin-top: 24px;
   font-family: var(--mono);
-  font-size: 11.5px;
+  font-size: 16px;
   letter-spacing: 0.08em;
   color: var(--ink-soft);
   flex-wrap: wrap;
@@ -87,7 +87,7 @@
 
 .byline .author {
   font-family: var(--sans);
-  font-size: 14px;
+  font-size: 16px;
   color: var(--ink);
   letter-spacing: 0;
 }
@@ -99,7 +99,7 @@
 
 .byline .author span {
   color: var(--ink-soft);
-  font-size: 12.5px;
+  font-size: 16px;
 }
 
 .byline .dot {
@@ -237,7 +237,7 @@
   left: 16px;
   bottom: 16px;
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 0.08em;
   background: var(--paper);
   color: var(--ink);
@@ -313,7 +313,7 @@
 
 .pstep p {
   color: var(--ink-2);
-  font-size: 15px;
+  font-size: 16px;
   margin: 0;
   max-width: none;
 }
@@ -363,7 +363,7 @@
 }
 
 .icon-card p {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--ink-2);
   margin: 0;
   max-width: none;
@@ -396,7 +396,7 @@
 
 .compare-callout .lab {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ink-soft);
@@ -410,7 +410,7 @@
 }
 
 .compare-callout ul {
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
   max-width: none;
 }
@@ -430,7 +430,7 @@
 
 .timeline-widget .sub {
   color: var(--ink-soft);
-  font-size: 14px;
+  font-size: 16px;
   margin: 0 0 18px;
   max-width: none;
 }
@@ -452,7 +452,7 @@
   flex-direction: column;
   gap: 6px;
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ink-soft);
@@ -467,7 +467,7 @@
   font: inherit;
   font-family: var(--sans);
   color: var(--ink);
-  font-size: 14.5px;
+  font-size: 16px;
   letter-spacing: 0;
   text-transform: none;
 }
@@ -503,7 +503,7 @@
 }
 
 .timeline-widget .result .note {
-  font-size: 13px;
+  font-size: 16px;
   color: color-mix(in oklab, var(--paper) 78%, transparent);
   max-width: 36ch;
 }
@@ -521,7 +521,7 @@
 
 .toc h4 {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ink-soft);
@@ -550,14 +550,14 @@
   border-radius: 8px;
   text-decoration: none;
   color: var(--ink-2);
-  font-size: 14px;
+  font-size: 16px;
   transition: background 0.15s ease, color 0.15s ease;
 }
 
 .toc a::before {
   content: counter(tocstep, decimal-leading-zero);
   font-family: var(--mono);
-  font-size: 10.5px;
+  font-size: 16px;
   letter-spacing: 0.08em;
   color: var(--sun-deep);
   flex: 0 0 auto;

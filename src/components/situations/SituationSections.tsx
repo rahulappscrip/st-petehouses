@@ -32,7 +32,6 @@ import {
   INHERITED_BUY_PROCESS_FEATURES,
   LIEN_PROPERTY_SITUATION_IMAGES,
   LIEN_TYPE_CARD_IMAGES,
-  mapCitySituationsToSellerCards,
   mapSituationPageCardsToSellerCards,
   mapSituationPageCityCards,
   mapSituationPageSituationsToSellerCards,
@@ -41,7 +40,6 @@ import {
   SITUATION_PAGE_CARD_IMAGES,
   SITUATION_PAGE_DIFF_IMAGES,
   SITE,
-  SITUATION_CARD_HOME_IMAGES,
   ASSETS,
 } from "@/lib/constants";
 import { INHERITED_BUY_FEATURE_ICONS } from "@/components/situations/InheritedBuyProcessIcons";
@@ -720,6 +718,7 @@ export function SituationTenantMarketSection({
                 </span>
               ) : null}
               {f.label ? <span className="situation-tenant-market__factor-label">{f.label}</span> : null}
+              {f.value ? <span className="situation-tenant-market__factor-value">{f.value}</span> : null}
               <h3 className="feature-title">{f.title}</h3>
               <p className="body-standard">{f.body}</p>
             </Reveal>
@@ -748,6 +747,23 @@ export function SituationTenantMarketSection({
               ) : null}
             </div>
           </Reveal>
+        ) : null}
+        {data.callout ? (
+          <Reveal className="situation-tenant-market__callout">
+            <div className="situation-tenant-market__callout-copy">
+              <strong className="feature-title">{data.callout.title}</strong>
+              <p className="body-standard">{data.callout.body}</p>
+            </div>
+            {data.callout.cta ? (
+              <Link href={data.callout.cta.href} className="btn btn--cta situation-tenant-market__callout-cta">
+                {data.callout.cta.label}
+                <Arr />
+              </Link>
+            ) : null}
+          </Reveal>
+        ) : null}
+        {data.footerNote ? (
+          <p className="situation-tenant-market__footer-note body-standard">{data.footerNote}</p>
         ) : null}
         {data.regions && data.regions.length > 0 ? (
           <Reveal className="situation-tenant-market__regions">
