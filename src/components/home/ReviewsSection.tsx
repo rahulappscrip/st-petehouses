@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { ReviewQuote } from "@/components/home/ReviewQuote";
 import { Reveal } from "@/components/ui/Reveal";
+import { HOME_TESTIMONIALS } from "@/lib/constants";
 import type { GoogleReviewItem, TestimonialsData } from "@/lib/reviews/types";
 
 export type ReviewItem = Pick<GoogleReviewItem, "quote" | "name" | "meta" | "initials">;
@@ -16,6 +17,7 @@ export type ReviewsSectionProps = {
   showGoogleLink?: boolean;
   showRatingBadge?: boolean;
   googleLinkLabel?: string;
+  googleLinkHref?: string;
 };
 
 export function ReviewsSection({
@@ -32,15 +34,9 @@ export function ReviewsSection({
   items,
   showGoogleLink = true,
   showRatingBadge = true,
-  googleLinkLabel = "Read all 12 reviews on Google →",
+  googleLinkLabel,
+  googleLinkHref,
 }: ReviewsSectionProps = {}) {
-  const reviews = items ?? HOME_TESTIMONIALS.items.map((r) => ({
-    quote: r.quote,
-    name: r.name,
-    meta: r.meta,
-    initials: r.initials,
-  }));
-}: ReviewsSectionProps) {
   const totalReviews =
     testimonialsProp?.totalReviews ?? testimonialsProp?.items.length ?? items?.length ?? 0;
   const defaultLede = `${totalReviews} verified review${totalReviews === 1 ? "" : "s"} from St Petersburg homeowners who sold to us. No incentives, no edits. Read every one of them on Google.`;
@@ -95,17 +91,15 @@ export function ReviewsSection({
           ))}
         </div>
 
-        {showGoogleLink && testimonialsProp ? (
+        {showGoogleLink && (testimonialsProp || googleLinkHref) ? (
           <Reveal d={2} className="reviews-footer">
-            <a className="gbp-link" href={HOME_TESTIMONIALS.googleUrl} target="_blank" rel="noopener noreferrer">
-              {googleLinkLabel}
             <a
               className="gbp-link"
-              href={testimonialsProp.googleUrl}
+              href={googleLinkHref ?? testimonialsProp?.googleUrl ?? HOME_TESTIMONIALS.googleUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Read all {totalReviews} reviews on Google →
+              {googleLinkLabel ?? `Read all ${totalReviews} reviews on Google →`}
             </a>
           </Reveal>
         ) : null}
