@@ -1,6 +1,7 @@
 "use client";
 
-import type { ReactNode } from "react";
+import type { FormEvent, ReactNode } from "react";
+import { useState } from "react";
 import { Arr } from "@/components/ui/Arr";
 import { ASSETS, SELL_REASON_OPTIONS, SITE } from "@/lib/constants";
 
@@ -13,6 +14,8 @@ type LeadOfferFormProps = {
   submitLabel?: string;
   className?: string;
 };
+
+type SubmitState = "idle" | "loading" | "success" | "error";
 
 export function LeadOfferForm({
   id = "offer",
@@ -27,7 +30,54 @@ export function LeadOfferForm({
   submitLabel = "Get My Fair Offer",
   className = "",
 }: LeadOfferFormProps) {
+  const [submitState, setSubmitState] = useState<SubmitState>("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
   const rootClass = ["lead-card", "lead-offer-form", className].filter(Boolean).join(" ");
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    const payload = {
+      firstName: String(formData.get("firstName") ?? "").trim(),
+      lastName: String(formData.get("lastName") ?? "").trim(),
+      address: String(formData.get("address") ?? "").trim(),
+      sellReason: String(formData.get("sellReason") ?? "").trim(),
+      phone: String(formData.get("phone") ?? "").trim(),
+      email: String(formData.get("email") ?? "").trim(),
+    };
+
+    setSubmitState("loading");
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const data = (await response.json().catch(() => null)) as { error?: string } | null;
+
+      if (!response.ok) {
+        throw new Error(data?.error ?? "Something went wrong. Please try again.");
+      }
+
+      setSubmitState("success");
+      form.reset();
+    } catch (error) {
+      setSubmitState("error");
+      setErrorMessage(
+        error instanceof Error ? error.message : "Something went wrong. Please try again.",
+      );
+    }
+  }
+
+  const isLoading = submitState === "loading";
+  const isSuccess = submitState === "success";
 
   return (
     <aside className={rootClass} id={id} aria-label="Get a cash offer">
@@ -52,37 +102,32 @@ export function LeadOfferForm({
         <p className="lead-intro">{formIntro}</p>
       </div>
 
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          const b = e.currentTarget.querySelector('button[type="submit"]') as HTMLButtonElement;
-          if (b) {
-            b.textContent = "Sent — we will be in touch";
-            b.disabled = true;
-          }
-        }}
-      >
+      <form onSubmit={handleSubmit} noValidate>
         <div className="row-2">
           <div className="field">
             <label htmlFor="first-name">First name</label>
             <input
               id="first-name"
+              name="firstName"
               className="input"
               required
               type="text"
               autoComplete="given-name"
               placeholder="John"
+              disabled={isLoading || isSuccess}
             />
           </div>
           <div className="field">
             <label htmlFor="last-name">Last name</label>
             <input
               id="last-name"
+              name="lastName"
               className="input"
               required
               type="text"
               autoComplete="family-name"
               placeholder="Smith"
+              disabled={isLoading || isSuccess}
             />
           </div>
         </div>
@@ -92,11 +137,13 @@ export function LeadOfferForm({
           <div className="input-with-action">
             <input
               id="addr"
+              name="address"
               className="input"
               required
               type="text"
               autoComplete="street-address"
               placeholder={addressPlaceholder}
+              disabled={isLoading || isSuccess}
             />
           </div>
         </div>
@@ -106,7 +153,14 @@ export function LeadOfferForm({
             <label htmlFor="sell-reason">Why are you looking to sell?</label>
             <span className="field-badge">required</span>
           </div>
-          <select id="sell-reason" className="select" required defaultValue="">
+          <select
+            id="sell-reason"
+            name="sellReason"
+            className="select"
+            required
+            defaultValue=""
+            disabled={isLoading || isSuccess}
+          >
             <option value="" disabled>
               Select a reason
             </option>
@@ -121,11 +175,29 @@ export function LeadOfferForm({
         <div className="row-2">
           <div className="field">
             <label htmlFor="phone">Phone</label>
-            <input id="phone" className="input" required type="tel" autoComplete="tel" placeholder={SITE.phone} />
+            <input
+              id="phone"
+              name="phone"
+              className="input"
+              required
+              type="tel"
+              autoComplete="tel"
+              placeholder={SITE.phone}
+              disabled={isLoading || isSuccess}
+            />
           </div>
           <div className="field">
             <label htmlFor="email">Email</label>
-            <input id="email" className="input" required type="email" autoComplete="email" placeholder="you@example.com" />
+            <input
+              id="email"
+              name="email"
+              className="input"
+              required
+              type="email"
+              autoComplete="email"
+              placeholder="you@example.com"
+              disabled={isLoading || isSuccess}
+            />
           </div>
         </div>
 
@@ -135,9 +207,20 @@ export function LeadOfferForm({
           </span>
         </label>
 
-        <button type="submit" className="btn btn--cta" style={{ width: "100%", justifyContent: "center" }}>
-          {submitLabel}
-          <Arr />
+        {submitState === "error" ? (
+          <p className="lead-form-error" role="alert">
+            {errorMessage}
+          </p>
+        ) : null}
+
+        <button
+          type="submit"
+          className="btn btn--cta"
+          style={{ width: "100%", justifyContent: "center" }}
+          disabled={isLoading || isSuccess}
+        >
+          {isSuccess ? "Sent — we will be in touch" : isLoading ? "Sending..." : submitLabel}
+          {!isLoading && !isSuccess ? <Arr /> : null}
         </button>
       </form>
     </aside>

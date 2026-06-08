@@ -783,6 +783,17 @@ h4.feature-title {
   line-height: 1.45;
 }
 
+.lead-form-error {
+  margin: 0 0 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: color-mix(in oklab, #c0392b 10%, var(--paper));
+  border: 1px solid color-mix(in oklab, #c0392b 24%, var(--line));
+  color: #8b2e2e;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
 /* BBB / 5-star trust badges above form */
 .lead-badge{
   display: inline-flex; flex-direction: column; align-items: flex-start; gap: 0;
