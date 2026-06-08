@@ -1408,12 +1408,49 @@
   background: var(--sand);
   width: 100%;
   max-width: 100%;
-  padding: 24px clamp(18px, 2vw, 24px);
-  gap: 8px;
+  padding: 20px clamp(18px, 2vw, 24px) 22px;
+  gap: 6px;
 }
 
 .city-hero .lead-card.lead-offer-form .lead-top {
-  gap: 16px;
+  gap: 8px;
+}
+
+.city-hero .lead-card.lead-offer-form form .field {
+  margin-bottom: 8px;
+}
+
+.city-hero .lead-card.lead-offer-form form .row-2 {
+  margin-bottom: 8px;
+}
+
+.city-hero .lead-card.lead-offer-form form .input,
+.city-hero .lead-card.lead-offer-form form .select {
+  padding: 12px 14px;
+}
+
+.city-hero .lead-card.lead-offer-form .lead-consent {
+  margin-bottom: 6px;
+  padding: 8px 10px;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+  .city-hero__grid {
+    align-items: stretch;
+  }
+
+  .city-hero__grid > .reveal {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    height: 100%;
+  }
+
+  .city-hero__grid > .reveal:not(.city-hero__content) {
+    justify-content: flex-start;
+  }
 }
 
 /* City situation / benefit cards */

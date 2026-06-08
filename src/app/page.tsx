@@ -16,7 +16,6 @@ import { FaqSection } from "@/components/home/FaqSection";
 import { FinalCtaSection } from "@/components/home/FinalCtaSection";
 import { GUARANTEE_ASIDE_CHECKLIST, HOMEPAGE_SEO, SITE } from "@/lib/constants";
 import { getTestimonialsData } from "@/lib/reviews/get-reviews";
-import { HOMEPAGE_FAQ_JSON_LD } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: HOMEPAGE_SEO.title,
@@ -42,10 +41,6 @@ export default async function HomePage() {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(HOMEPAGE_FAQ_JSON_LD) }}
-      />
       <HeroSection />
       <StatsSection />
       <ProcessSection />

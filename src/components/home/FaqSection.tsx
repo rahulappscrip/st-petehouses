@@ -2,15 +2,15 @@ import type { ReactNode } from "react";
 import { FaqAccordionList } from "@/components/home/FaqAccordionList";
 import { SectionHead } from "@/components/ui/SectionHead";
 import { FAQ_ITEMS } from "@/lib/constants";
-
-type FaqItem = { q: string; a: string; aLink?: { href: string; label: string } };
+import { buildFaqPageJsonLd, type FaqSchemaItem } from "@/lib/schema";
 
 type FaqSectionProps = {
-  items?: readonly FaqItem[];
+  items?: readonly FaqSchemaItem[];
   title?: ReactNode;
   eyebrow?: string;
   className?: string;
   id?: string;
+  includeSchema?: boolean;
 };
 
 export function FaqSection({
@@ -23,18 +23,31 @@ export function FaqSection({
   eyebrow = "FAQ",
   className = "",
   id = "faq",
+  includeSchema = true,
 }: FaqSectionProps) {
   return (
-    <section
-      className={`section ${className}`.trim()}
-      id={id}
-      style={{ background: "var(--paper)", borderTop: "1px solid var(--line-soft)", borderBottom: "1px solid var(--line-soft)" }}
-    >
-      <div className="wrap" style={{ maxWidth: 920 }}>
-        <SectionHead eyebrow={eyebrow} title={title} />
+    <>
+      {includeSchema ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(buildFaqPageJsonLd(items)) }}
+        />
+      ) : null}
+      <section
+        className={`section ${className}`.trim()}
+        id={id}
+        style={{
+          background: "var(--paper)",
+          borderTop: "1px solid var(--line-soft)",
+          borderBottom: "1px solid var(--line-soft)",
+        }}
+      >
+        <div className="wrap" style={{ maxWidth: 920 }}>
+          <SectionHead eyebrow={eyebrow} title={title} />
 
-        <FaqAccordionList items={items} />
-      </div>
-    </section>
+          <FaqAccordionList items={items} />
+        </div>
+      </section>
+    </>
   );
 }

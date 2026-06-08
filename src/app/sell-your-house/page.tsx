@@ -29,35 +29,6 @@ const jsonLd = {
       dateModified: "2026-05-27",
     },
     {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Do I need to fix up my house to sell to a cash buyer?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "No — we buy properties as-is, without requiring repairs. You won't need to invest time or money in upgrades, staging, or contractor work before closing.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "How fast can I get a cash offer in St. Petersburg?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Cash offers can be provided quickly, often within 24 hours. Once you submit your property details, we review the information and present a fair offer.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Are there Realtor commissions or closing costs with cash offers?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "We don't charge Realtor commissions. Closing costs can vary depending on the specifics of the transaction, but we work to minimize your out-of-pocket expenses and provide transparency on any costs before you commit.",
-          },
-        },
-      ],
-    },
-    {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: SITE.url },

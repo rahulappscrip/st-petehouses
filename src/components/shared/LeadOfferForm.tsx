@@ -2,7 +2,7 @@
 
 import type { ReactNode } from "react";
 import { Arr } from "@/components/ui/Arr";
-import { ASSETS, SITE } from "@/lib/constants";
+import { ASSETS, SELL_REASON_OPTIONS, SITE } from "@/lib/constants";
 
 type LeadOfferFormProps = {
   id?: string;
@@ -62,6 +62,31 @@ export function LeadOfferForm({
           }
         }}
       >
+        <div className="row-2">
+          <div className="field">
+            <label htmlFor="first-name">First name</label>
+            <input
+              id="first-name"
+              className="input"
+              required
+              type="text"
+              autoComplete="given-name"
+              placeholder="John"
+            />
+          </div>
+          <div className="field">
+            <label htmlFor="last-name">Last name</label>
+            <input
+              id="last-name"
+              className="input"
+              required
+              type="text"
+              autoComplete="family-name"
+              placeholder="Smith"
+            />
+          </div>
+        </div>
+
         <div className="field">
           <label htmlFor="addr">Property address</label>
           <div className="input-with-action">
@@ -74,6 +99,23 @@ export function LeadOfferForm({
               placeholder={addressPlaceholder}
             />
           </div>
+        </div>
+
+        <div className="field">
+          <div className="field-label-row">
+            <label htmlFor="sell-reason">Why are you looking to sell?</label>
+            <span className="field-badge">required</span>
+          </div>
+          <select id="sell-reason" className="select" required defaultValue="">
+            <option value="" disabled>
+              Select a reason
+            </option>
+            {SELL_REASON_OPTIONS.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
         </div>
 
         <div className="row-2">
