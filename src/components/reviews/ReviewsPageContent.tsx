@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
 import { ReviewsSection } from "@/components/home/ReviewsSection";
-import { HOME_TESTIMONIALS } from "@/lib/constants";
+import type { TestimonialsData } from "@/lib/reviews/types";
 import { FaqSection } from "@/components/home/FaqSection";
 import { FinalCtaSection } from "@/components/home/FinalCtaSection";
 import {
@@ -20,7 +20,11 @@ const TRUST_ICONS = [
   <g key="4"><circle cx="12" cy="12" r="9" /><path d="M9 12l2 2 4-4" /></g>,
 ];
 
-export function ReviewsPageContent() {
+type ReviewsPageContentProps = {
+  testimonials: TestimonialsData;
+};
+
+export function ReviewsPageContent({ testimonials }: ReviewsPageContentProps) {
   return (
     <>
       <section className="rev-hero">
@@ -38,13 +42,13 @@ export function ReviewsPageContent() {
 
             <div className="summary">
               <div className="big">
-                {HOME_TESTIMONIALS.rating}
+                {testimonials.rating}
               </div>
               <div className="meta">
                 <span className="stars" aria-hidden>
                   ★★★★★
                 </span>
-                <b>{HOME_TESTIMONIALS.count}</b>
+                <b>{testimonials.count}</b>
                 <span>on Google · Tampa Bay</span>
               </div>
               <div className="badges">
@@ -54,7 +58,7 @@ export function ReviewsPageContent() {
                 </span>
                 <span className="badge badge--google">
                   <b>Google</b>
-                  <i>{HOME_TESTIMONIALS.rating} Rating</i>
+                  <i>{testimonials.rating} Rating</i>
                 </span>
                 <span className="badge">
                   <b>500+</b>
@@ -76,7 +80,7 @@ export function ReviewsPageContent() {
         </div>
       </section>
 
-      <ReviewsSection />
+      <ReviewsSection testimonials={testimonials} />
 
       <section className="section section-alt">
         <div className="wrap">

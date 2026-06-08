@@ -1,0 +1,98 @@
+import type { HouseOfAppsLeadPayload, LeadFormInput } from "@/lib/house-of-apps/types";
+
+const HOU_API_URL = "https://api-v2.houseofapps.ai/v1/integrations/leads";
+
+function normalizePhone(phone: string): string {
+  const digits = phone.replace(/\D/g, "");
+  if (digits.length === 11 && digits.startsWith("1")) {
+    return digits.slice(1);
+  }
+  return digits;
+}
+
+export function buildLeadPayload(input: LeadFormInput): HouseOfAppsLeadPayload {
+  const stageId = process.env.HOU_STAGE_ID ?? "";
+  const sellReasonFieldId = process.env.HOU_SELL_REASON_FIELD_ID ?? "";
+  const sellReasonSubFieldId = process.env.HOU_SELL_REASON_SUB_FIELD_ID ?? "";
+
+  const payload: HouseOfAppsLeadPayload = {
+    lead: {
+      name: `${input.firstName} ${input.lastName}`.trim(),
+      stage_id: stageId,
+      lead_source: "Website",
+    },
+    contact: {
+      email: input.email,
+      portal_access: false,
+      first_name: input.firstName,
+      last_name: input.lastName,
+      phones: [
+        {
+          phone_number: normalizePhone(input.phone),
+          phone_isd_code: "+1",
+          label: "mobile",
+          is_primary: true,
+        },
+      ],
+      addresses: [
+        {
+          address_line1: input.address,
+          is_primary: true,
+        },
+      ],
+    },
+  };
+
+  if (sellReasonFieldId && sellReasonSubFieldId) {
+    payload.lead.custom_fields = [
+      {
+        field_id: sellReasonFieldId,
+        sub_fields: [
+          {
+            field_id: sellReasonSubFieldId,
+            value: input.sellReason,
+          },
+        ],
+      },
+    ];
+  }
+
+  return payload;
+}
+
+export async function createHouseOfAppsLead(input: LeadFormInput) {
+  const licenseKey = process.env.HOU_LICENSE_KEY;
+  const appSecret = process.env.HOU_APP_SECRET;
+
+  if (!licenseKey || !appSecret) {
+    throw new Error("House of Apps credentials are not configured.");
+  }
+
+  if (!process.env.HOU_STAGE_ID) {
+    throw new Error("House of Apps stage ID is not configured.");
+  }
+
+  const payload = buildLeadPayload(input);
+
+  const response = await fetch(HOU_API_URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      licenseKey,
+      appSecret,
+    },
+    body: JSON.stringify(payload),
+  });
+
+  const data = await response.json().catch(() => null);
+
+  if (!response.ok) {
+    const message =
+      typeof data === "object" && data && "message" in data && typeof data.message === "string"
+        ? data.message
+        : `Lead API request failed with status ${response.status}`;
+    throw new Error(message);
+  }
+
+  return data;
+}

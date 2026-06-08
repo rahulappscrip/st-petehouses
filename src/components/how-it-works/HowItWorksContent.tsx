@@ -5,7 +5,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { ArticleToc } from "@/components/how-it-works/ArticleToc";
 import { ProcessStepsGrid } from "@/components/how-it-works/ProcessStepsGrid";
 import { TimelineCalculator } from "@/components/how-it-works/TimelineCalculator";
-import { FaqAccordionList } from "@/components/home/FaqAccordionList";
+import { FaqSection } from "@/components/home/FaqSection";
 import { FinalCtaSection } from "@/components/home/FinalCtaSection";
 import {
   ASSETS,
@@ -316,17 +316,14 @@ export function HowItWorksContent() {
         </div>
       </div>
 
-      <section className="section hiw-faq" id="faq">
-        <div className="wrap" style={{ maxWidth: 920 }}>
-          <Reveal className="section-head">
-            <span className="eyebrow">FAQ</span>
-            <h2 className="h-2">
-              Frequently asked questions about <em>cash offers</em>.
-            </h2>
-          </Reveal>
-          <FaqAccordionList items={HOW_IT_WORKS_FAQ} />
-        </div>
-      </section>
+      <FaqSection
+        items={HOW_IT_WORKS_FAQ}
+        title={
+          <>
+            Frequently asked questions about <em>cash offers</em>.
+          </>
+        }
+      />
 
       <FinalCtaSection />
     </>

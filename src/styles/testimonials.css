@@ -82,6 +82,7 @@
   padding: 28px;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .testimonials .review-card.featured {
@@ -97,14 +98,48 @@
   margin-bottom: 14px;
 }
 
+.testimonials .review-card .quote-wrap {
+  flex: 1;
+  margin-bottom: 20px;
+  min-width: 0;
+}
+
 .testimonials .review-card .quote {
   font-family: var(--sans);
   font-size: 16px;
   line-height: 1.55;
   color: var(--ink-2);
-  flex: 1;
-  margin-bottom: 20px;
+  margin: 0;
   font-weight: 400;
+}
+
+.testimonials .review-card .quote--clamped {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+
+.testimonials .review-card .quote-read-more {
+  margin-top: 10px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--teal-deep);
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.testimonials .review-card .quote-read-more:hover {
+  color: var(--sun);
+}
+
+.testimonials .review-card.featured .quote-read-more {
+  color: var(--gold);
 }
 
 .testimonials .review-card.featured .quote {

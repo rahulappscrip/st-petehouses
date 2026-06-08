@@ -8,7 +8,7 @@ import { CityCompareSection } from "@/components/cities/CityCompareSection";
 import { CitySituationsSection } from "@/components/cities/CitySituationsSection";
 import { ProcessSection } from "@/components/home/ProcessSection";
 import { AreasSection } from "@/components/home/AreasSection";
-import { ReviewsSection } from "@/components/home/ReviewsSection";
+import { ReviewsSectionBlock } from "@/components/home/ReviewsSectionBlock";
 import { MarketSection } from "@/components/home/MarketSection";
 import { GuaranteeSection } from "@/components/home/GuaranteeSection";
 import { FaqSection } from "@/components/home/FaqSection";
@@ -1600,7 +1600,7 @@ export function renderSituationSection(
           className={alt ? "section-alt" : ""}
         />
       ) : (
-        <ReviewsSection key={id} className={alt ? "section-alt" : ""} />
+        <ReviewsSectionBlock key={id} className={alt ? "section-alt" : ""} />
       );
 
     case "situations":
