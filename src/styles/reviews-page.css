@@ -79,12 +79,12 @@
 
 .rev-hero .summary .meta b {
   font-weight: 400;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .rev-hero .summary .meta span {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--ink-soft);
@@ -104,7 +104,7 @@
   border-radius: 10px;
   background: var(--ink);
   color: var(--paper);
-  font-size: 11px;
+  font-size: 16px;
   line-height: 1.1;
 }
 
@@ -117,7 +117,7 @@
 .rev-hero .badge i {
   font-style: normal;
   font-family: var(--mono);
-  font-size: 9.5px;
+  font-size: 16px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: color-mix(in oklab, var(--paper) 75%, transparent);
@@ -155,7 +155,7 @@
   background: var(--paper);
   border: 1px solid var(--line);
   color: var(--ink-2);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.15s ease;
@@ -174,7 +174,7 @@
 
 .review-filters button .count {
   font-family: var(--mono);
-  font-size: 10.5px;
+  font-size: 16px;
   opacity: 0.7;
 }
 
@@ -227,7 +227,7 @@
   place-items: center;
   color: #fff;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   flex: 0 0 auto;
 }
 
@@ -251,13 +251,13 @@
 
 .review .who b {
   font-weight: 400;
-  font-size: 14.5px;
+  font-size: 16px;
   color: var(--ink);
 }
 
 .review .who span {
   font-family: var(--mono);
-  font-size: 10.5px;
+  font-size: 16px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--ink-soft);
@@ -266,7 +266,7 @@
 .review .stars {
   color: var(--sun);
   letter-spacing: 1px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .review p.quote {
@@ -293,7 +293,7 @@
   gap: 6px;
   align-self: flex-start;
   font-family: var(--mono);
-  font-size: 10.5px;
+  font-size: 16px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--teal-deep);
@@ -309,7 +309,7 @@
   padding-top: 14px;
   border-top: 1px dashed var(--line-soft);
   font-family: var(--mono);
-  font-size: 10.5px;
+  font-size: 16px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--ink-soft);
@@ -386,7 +386,7 @@
 }
 
 .trust-card p {
-  font-size: 13.5px;
+  font-size: 16px;
   color: var(--ink-2);
   margin: 0;
 }
@@ -409,7 +409,7 @@
   grid-template-columns: minmax(128px, 1.35fr) minmax(168px, 1fr) minmax(168px, 1fr);
   width: 100%;
   min-width: 560px;
-  font-size: 14.5px;
+  font-size: 16px;
   line-height: 1.45;
 }
 
@@ -421,7 +421,7 @@
 
 .compare-grid .col-h {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ink-soft);
@@ -495,7 +495,7 @@
   .compare-grid__row > .row-h {
     padding: 14px 16px 10px;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 16px;
     background: var(--sand);
     border-bottom: 1px solid var(--line-soft);
   }
@@ -511,7 +511,7 @@
   .compare-grid__row > .us-cell::before,
   .compare-grid__row > .other-cell::before {
     font-family: var(--mono);
-    font-size: 10px;
+    font-size: 16px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--ink-soft);
@@ -536,14 +536,14 @@
   .compare-grid > .col-h,
   .compare-grid__row > div {
     padding: 14px 16px;
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
 .reviews-note {
   margin-top: 24px;
   font-family: var(--mono);
-  font-size: 11.5px;
+  font-size: 16px;
   letter-spacing: 0.08em;
   color: var(--ink-soft);
 }

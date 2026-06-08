@@ -15,6 +15,7 @@ export type ReviewsSectionProps = {
   items?: readonly ReviewItem[];
   showGoogleLink?: boolean;
   showRatingBadge?: boolean;
+  googleLinkLabel?: string;
 };
 
 export function ReviewsSection({
@@ -31,6 +32,14 @@ export function ReviewsSection({
   items,
   showGoogleLink = true,
   showRatingBadge = true,
+  googleLinkLabel = "Read all 12 reviews on Google →",
+}: ReviewsSectionProps = {}) {
+  const reviews = items ?? HOME_TESTIMONIALS.items.map((r) => ({
+    quote: r.quote,
+    name: r.name,
+    meta: r.meta,
+    initials: r.initials,
+  }));
 }: ReviewsSectionProps) {
   const totalReviews =
     testimonialsProp?.totalReviews ?? testimonialsProp?.items.length ?? items?.length ?? 0;
@@ -88,6 +97,8 @@ export function ReviewsSection({
 
         {showGoogleLink && testimonialsProp ? (
           <Reveal d={2} className="reviews-footer">
+            <a className="gbp-link" href={HOME_TESTIMONIALS.googleUrl} target="_blank" rel="noopener noreferrer">
+              {googleLinkLabel}
             <a
               className="gbp-link"
               href={testimonialsProp.googleUrl}

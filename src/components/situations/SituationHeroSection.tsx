@@ -9,9 +9,16 @@ import type { SituationHero } from "@/lib/situation-types";
 type Props = {
   breadcrumb: string;
   hero: SituationHero;
+  showBreadcrumb?: boolean;
+  formId?: string;
 };
 
-export function SituationHeroSection({ breadcrumb, hero }: Props) {
+export function SituationHeroSection({
+  breadcrumb,
+  hero,
+  showBreadcrumb = true,
+  formId = "offer",
+}: Props) {
   return (
     <>
       {hero.compassionBanner ? (
@@ -25,19 +32,21 @@ export function SituationHeroSection({ breadcrumb, hero }: Props) {
         </div>
       ) : null}
 
-      <nav className="city-breadcrumb" aria-label="Breadcrumb">
-        <div className="wrap">
-          <Link href="/">Home</Link>
-          {hero.breadcrumbTrail?.map((crumb) => (
-            <span key={crumb.href}>
-              <span aria-hidden>›</span>
-              <Link href={crumb.href}>{crumb.label}</Link>
-            </span>
-          ))}
-          <span aria-hidden>›</span>
-          <span>{breadcrumb}</span>
-        </div>
-      </nav>
+      {showBreadcrumb ? (
+        <nav className="city-breadcrumb" aria-label="Breadcrumb">
+          <div className="wrap">
+            <Link href="/">Home</Link>
+            {hero.breadcrumbTrail?.map((crumb) => (
+              <span key={crumb.href}>
+                <span aria-hidden>›</span>
+                <Link href={crumb.href}>{crumb.label}</Link>
+              </span>
+            ))}
+            <span aria-hidden>›</span>
+            <span>{breadcrumb}</span>
+          </div>
+        </nav>
+      ) : null}
 
       <section className="city-hero situation-hero">
         <div className="city-hero__bg" aria-hidden="true" />
@@ -85,7 +94,7 @@ export function SituationHeroSection({ breadcrumb, hero }: Props) {
             ) : null}
 
             <div className="situation-hero__actions">
-              <Link href="#offer" className="btn btn--cta">
+              <Link href={`#${formId}`} className="btn btn--cta">
                 Get my cash offer
                 <Arr />
               </Link>
@@ -99,6 +108,7 @@ export function SituationHeroSection({ breadcrumb, hero }: Props) {
 
           <Reveal d={1}>
           <LeadOfferForm
+            id={formId}
             formTitle={hero.formTitle}
             formIntro={hero.formIntro}
             addressPlaceholder={hero.addressPlaceholder ?? "123 Main St, St Petersburg, FL"}

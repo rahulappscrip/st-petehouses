@@ -1,0 +1,229 @@
+/* Cash vs Agent page */
+
+.cash-vs-agent-page .situation-insurance__grid {
+  margin-top: 0;
+}
+
+.cash-vs-agent-page .cva-hero {
+  padding-block: clamp(40px, 6vw, 72px) clamp(36px, 5vw, 64px);
+  text-align: center;
+  background: #ffffff;
+  border-bottom: 1px solid var(--line);
+}
+
+.cash-vs-agent-page .cva-hero__inner {
+  max-width: 930px;
+  margin-inline: auto;
+}
+
+.cash-vs-agent-page .cva-hero__eyebrow {
+  margin-bottom: 18px;
+}
+
+.cash-vs-agent-page .cva-hero__title {
+  margin-bottom: 18px;
+}
+
+.cash-vs-agent-page .cva-hero__title em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--sun);
+}
+
+.cash-vs-agent-page .cva-hero__body {
+  max-width: 100%;
+  margin-inline: auto;
+  margin-bottom: 24px;
+  color: var(--ink-2);
+  line-height: 1.75;
+}
+
+.cash-vs-agent-page .cva-hero__disclaimer {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 8px;
+  max-width: 560px;
+  margin-inline: auto;
+  text-align: left;
+  font-size: 13px;
+  color: var(--ink-2);
+  background: var(--sand-2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 16px;
+  line-height: 1.55;
+}
+
+.cash-vs-agent-page .cva-hero__disclaimer svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--leaf);
+}
+
+/* Comparison tables */
+.cash-vs-agent-page .cva-compare-groups {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(24px, 4vw, 32px);
+  margin-top: clamp(28px, 4vw, 40px);
+}
+
+.cash-vs-agent-page .cva-compare-group__title {
+  margin-bottom: 12px;
+  color: var(--ink);
+}
+
+.cash-vs-agent-page .cva-compare-row-note {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--ink-soft);
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
+/* Math section */
+.cash-vs-agent-page .cva-math-section {
+  border-bottom: 1px solid var(--line);
+}
+
+.cva-math__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(24px, 4vw, 32px);
+  margin-top: clamp(32px, 4vw, 48px);
+}
+
+@media (min-width: 900px) {
+  .cva-math__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.cva-math-card {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--paper);
+}
+
+.cva-math-card__head {
+  padding: 20px 24px;
+}
+
+.cva-math-card__head--cash {
+  background: var(--teal-deep);
+  color: var(--paper);
+}
+
+.cva-math-card__head--cash h3 {
+  color: var(--paper);
+  margin: 0;
+}
+
+.cva-math-card__head--cash p {
+  font-size: 14px;
+  line-height: 18px;
+  margin: 4px 0 0;
+  color: color-mix(in oklab, var(--paper) 72%, transparent);
+}
+
+.cva-math-card__head--agent {
+  background: var(--sand-2);
+  border-bottom: 1px solid var(--line);
+}
+
+.cva-math-card__head--agent h3 {
+  margin: 0;
+  font-size: 16px;
+  color: var(--ink);
+}
+
+.cva-math-card__head--agent p {
+  font-size: 13px;
+  margin: 4px 0 0;
+  color: var(--ink-2);
+}
+
+.cva-math-card__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 24px;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.cva-math-card__row:last-child {
+  border-bottom: none;
+}
+
+.cva-math-card__row--total {
+  background: color-mix(in oklab, var(--leaf) 8%, var(--paper));
+}
+
+.cva-math-card__row-label {
+  font-size: 16px;
+  color: var(--ink-2);
+}
+
+.cva-math-card__row--total .cva-math-card__row-label {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.cva-math-card__row-val {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: right;
+  color: var(--ink);
+}
+
+.cva-math-card__row-val--positive {
+  color: var(--leaf);
+}
+
+.cva-math-card__row-val--negative {
+  color: #dc2626;
+}
+
+.cva-math-card__row--total .cva-math-card__row-val {
+  font-size: 16px;
+}
+
+.cva-math__note {
+  margin-top: 20px;
+  background: var(--sand-2);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 18px;
+  font-size: 12px;
+  color: var(--ink-2);
+  line-height: 1.6;
+}
+
+.cva-math__note strong {
+  color: var(--ink);
+}
+
+/* Fit section — process layout */
+.cva-process-fit__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(20px, 3vw, 24px);
+  margin-top: clamp(28px, 4vw, 40px);
+}
+
+@media (min-width: 900px) {
+  .cva-process-fit__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(24px, 4vw, 32px);
+  }
+}
+
+.cash-vs-agent-page #process .situation-key-steps ul {
+  max-width: none;
+}

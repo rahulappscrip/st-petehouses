@@ -67,7 +67,7 @@
 }
 
 .sit p {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--ink-2);
   margin: 0;
 }
@@ -95,7 +95,7 @@
 }
 
 .legal p {
-  font-size: 14.5px;
+  font-size: 16px;
   color: var(--ink-2);
   margin: 0;
 }

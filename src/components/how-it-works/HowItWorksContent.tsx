@@ -58,16 +58,6 @@ function IconCard({
   );
 }
 
-function ImagePlaceholder({ tone, label }: { tone?: string; label: string }) {
-  return (
-    <div
-      className={`ph-inline${tone ? ` tone-${tone}` : ""}`}
-      data-label={label}
-      aria-hidden
-    />
-  );
-}
-
 export function HowItWorksContent() {
   return (
     <>

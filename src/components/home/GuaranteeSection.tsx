@@ -4,7 +4,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { SectionHead } from "@/components/ui/SectionHead";
 import { Arr } from "@/components/ui/Arr";
 import { resolveGuaranteeIcon, type GuaranteeIconId } from "@/components/home/guarantee-icons";
-import { GUARANTEE_ASIDE_CHECKLIST, GUARANTEE_ITEMS } from "@/lib/constants";
+import { GUARANTEE_ITEMS } from "@/lib/constants";
 
 export type GuaranteeItem = {
   title: string;

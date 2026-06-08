@@ -147,6 +147,8 @@ export type SituationTenantMarketFactor = {
   title: string;
   body: string;
   label?: string;
+  /** Large formula operand (e.g. ARV, −10%) shown above the title. */
+  value?: string;
   icon?: SituationTenantMarketFactorIcon;
 };
 
@@ -161,6 +163,12 @@ export type SituationTenantMarketContent = SituationTitleParts & {
   factors: SituationTenantMarketFactor[];
   regions?: { label: string; body: string }[];
   testimonial?: SituationTenantMarketTestimonial;
+  callout?: {
+    title: string;
+    body: string;
+    cta?: { label: string; href: string };
+  };
+  footerNote?: string;
 };
 
 export type SituationForeclosureLawLink = {

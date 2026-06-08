@@ -87,7 +87,14 @@
 }
 
 /* ── Display stat values ── */
-.situation-empathy__card-value,
+.situation-empathy__card-value {
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+}
+
 .situation-numbered-cards__num {
   font-family: var(--sans);
   font-weight: 800;
@@ -248,9 +255,13 @@
 }
 
 /* ── Hero offer form ── */
-.situation-page .lead-card.lead-offer-form .lead-intro,
-.situation-page .lead-card.lead-offer-form .lead-consent {
+.situation-page .lead-card.lead-offer-form .lead-intro {
   font-size: var(--body-size);
+  line-height: 1.75;
+}
+
+.situation-page .lead-card.lead-offer-form .lead-consent {
+  font-size: 14px;
   line-height: 1.75;
 }
 

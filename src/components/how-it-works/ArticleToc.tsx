@@ -58,7 +58,7 @@ export function ArticleToc() {
         <a
           href={SITE.phoneHref}
           className="btn btn--ghost"
-          style={{ justifyContent: "center", fontFamily: "var(--mono)", fontSize: 13 }}
+          style={{ justifyContent: "center", fontFamily: "var(--mono)", fontSize: 16 }}
         >
           {SITE.phone}
         </a>

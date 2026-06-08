@@ -62,7 +62,7 @@
 }
 
 .guarantee--card .guarantee-list p {
-  font-size: clamp(14px, 1.6vw, 15px);
+  font-size: clamp(16px, 1.6vw, 16px);
   line-height: 1.5;
   margin-top: 6px;
   max-width: 52ch;
@@ -110,7 +110,7 @@
 }
 
 .guarantee--card .guarantee-aside > p {
-  font-size: clamp(14px, 1.7vw, 15px);
+  font-size: clamp(16px, 1.7vw, 16px);
   line-height: 1.55;
   margin-top: 16px;
   max-width: 46ch;
@@ -131,7 +131,7 @@
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  font-size: clamp(14px, 1.6vw, 15px);
+  font-size: clamp(16px, 1.6vw, 16px);
   line-height: 1.45;
   color: color-mix(in oklab, var(--paper) 92%, transparent);
 }
@@ -163,7 +163,7 @@
   --fg: var(--teal-deep);
   --bd: #fff;
   padding: 12px 20px;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   box-shadow: 0 4px 14px -8px rgba(0, 0, 0, 0.35);
 }
@@ -178,7 +178,7 @@
   --fg: #fff;
   --bd: color-mix(in oklab, #fff 42%, transparent);
   padding: 12px 20px;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .guarantee--card .guarantee-aside .btn--guarantee-secondary:hover {

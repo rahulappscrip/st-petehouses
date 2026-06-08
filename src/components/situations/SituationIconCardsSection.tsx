@@ -166,6 +166,7 @@ export function SituationIconCardsSection({ data, alt, imageMap }: Props) {
                   </span>
                 ) : null}
                 <div className={photo ? "situation-icon-cards__body" : undefined}>
+                  {item.label ? <span className="situation-icon-cards__tag">{item.label}</span> : null}
                   <h3 className="h-4">{item.title}</h3>
                   <p className="body-standard">{item.body}</p>
                 </div>

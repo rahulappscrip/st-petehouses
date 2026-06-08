@@ -6,10 +6,9 @@
 }
 
 .hero {
-  --hero-fixed-h: 920px;
-  padding-block: clamp(16px, 2vw, 32px) 0;
-  overflow-x: clip;
-  overflow-y: visible;
+  --hero-fixed-h: 820px;
+  padding-top: clamp(16px, 2vw, 32px);
+  padding-bottom: 0;
 }
 
 .hero-header {
@@ -47,14 +46,13 @@
 /* Desktop: min-height hero; image + form share remaining space */
 @media (min-width: 768px) {
   .hero {
-    height: auto;
     min-height: var(--hero-fixed-h);
+    height: auto;
     max-height: none;
     display: flex;
     flex-direction: column;
-    padding-block: 20px 0;
-    overflow-x: clip;
-    overflow-y: visible;
+    padding-top: clamp(20px, 2vw, 32px);
+    padding-bottom: 0;
   }
 
   .hero > .wrap {
@@ -85,20 +83,15 @@
   .hero-body {
     flex: 1;
     min-height: 0;
+    grid-template-rows: minmax(0, 1fr);
     grid-template-columns: minmax(0, 1fr) minmax(380px, 460px);
     gap: clamp(16px, 2vw, 32px);
     align-items: stretch;
   }
 
-  .hero-body > .reveal {
-    display: flex;
-    flex-direction: column;
+  .hero-body > * {
     min-height: 0;
-    height: 100%;
-  }
-
-  .hero-body > .reveal:not(.hero-portrait) {
-    justify-content: flex-start;
+    min-width: 0;
   }
 }
 
@@ -207,6 +200,8 @@
   position: static !important;
   top: auto !important;
   margin-bottom: 0;
+  padding: 24px clamp(18px, 2vw, 24px);
+  gap: 8px;
   padding: 20px clamp(18px, 2vw, 24px) 22px;
   gap: 6px;
 }
@@ -253,17 +248,17 @@
 }
 
 .hero .lead-badges .lead-badge--5 b {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .hero .lead-badges .lead-badge--5 i {
   margin-top: 1px;
-  font-size: 9px;
+  font-size: 16px;
   line-height: 1.1;
 }
 
 .hero .lead-intro {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.4;
 }
 
@@ -285,10 +280,10 @@
 }
 
 .hero .lead-consent {
-  margin-bottom: 6px;
-  padding: 8px 10px;
-  font-size: 11px;
-  line-height: 1.4;
+  margin-bottom: 8px;
+  padding: 10px 12px;
+  font-size: 16px;
+  line-height: 1.45;
 }
 
 .hero .lead-trust {

@@ -57,12 +57,12 @@
 }
 
 .testimonials .rating-badge .count {
-  font-size: 13px;
+  font-size: 16px;
   color: var(--ink-soft);
 }
 
 .testimonials .rating-badge .source {
-  font-size: 11px;
+  font-size: 16px;
   color: var(--sun);
   font-weight: 400;
   letter-spacing: 0.08em;
@@ -93,7 +93,7 @@
 
 .testimonials .review-card .stars {
   color: var(--gold);
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 1px;
   margin-bottom: 14px;
 }
@@ -106,7 +106,7 @@
 
 .testimonials .review-card .quote {
   font-family: var(--sans);
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.55;
   color: var(--ink-2);
   margin: 0;
@@ -162,7 +162,7 @@
   align-items: center;
   justify-content: center;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 16px;
   font-family: var(--sans);
   flex-shrink: 0;
 }
@@ -179,7 +179,7 @@
 
 .testimonials .review-card .name {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   color: var(--ink);
   line-height: 1.2;
 }
@@ -189,7 +189,7 @@
 }
 
 .testimonials .review-card .meta-line {
-  font-size: 11.5px;
+  font-size: 16px;
   color: var(--ink-soft);
   margin-top: 3px;
   display: flex;
@@ -210,7 +210,7 @@
   color: var(--teal-deep);
   padding: 2px 8px;
   border-radius: 999px;
-  font-size: 10px;
+  font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.04em;
 }
@@ -234,7 +234,7 @@
 }
 
 .testimonials .owner-reply .ot {
-  font-size: 11px;
+  font-size: 16px;
   color: var(--sun);
   font-weight: 400;
   text-transform: uppercase;
@@ -247,7 +247,7 @@
 }
 
 .testimonials .owner-reply .reply-text {
-  font-size: 13px;
+  font-size: 16px;
   color: var(--ink-2);
   line-height: 1.5;
 }
@@ -268,7 +268,7 @@
   color: var(--teal-deep);
   font-weight: 400;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
   padding: 12px 24px;
   border: 1.5px solid var(--teal-deep);
   border-radius: 999px;

@@ -1,3 +1,4 @@
+/* Contact page layout (legacy) */
 .crumbs {
   padding-bottom: 50px;
 }
@@ -133,7 +134,7 @@
 
 .about-cta-card__eyebrow {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--sun-deep);
@@ -146,7 +147,7 @@
 
 .about-cta-card__text {
   margin-top: 10px;
-  font-size: 14.5px;
+  font-size: 16px;
   color: var(--ink-2);
 }
 
@@ -159,4 +160,281 @@
 
 .about-cta-card__btn {
   justify-content: center;
+}
+
+/* About Us page */
+.about-us-page {
+  background: #ffffff;
+}
+
+.about-founder {
+  padding-top: 0;
+  padding-bottom: clamp(56px, 8vw, 96px);
+}
+
+.about-founder__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .about-founder__grid {
+    grid-template-columns: minmax(280px, 380px) minmax(0, 1fr);
+  }
+}
+
+.about-founder__left {
+  min-width: 0;
+}
+
+@media (min-width: 900px) {
+  .about-founder__left {
+    position: sticky;
+    top: calc(var(--nav-h) + 20px);
+  }
+}
+
+.about-founder__avatar-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: linear-gradient(145deg, var(--sand) 0%, var(--paper) 100%);
+  margin-bottom: 24px;
+}
+
+.about-founder__photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.about-founder__avatar-label {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  background: var(--ink);
+  border-radius: 10px;
+  padding: 14px 18px;
+}
+
+.about-founder__avatar-label strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--paper);
+  margin-bottom: 2px;
+}
+
+.about-founder__avatar-label span {
+  font-size: 16px;
+  color: color-mix(in oklab, var(--paper) 72%, transparent);
+}
+
+.about-founder__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about-founder__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  color: var(--ink-soft);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.about-founder__contact-item:hover {
+  color: var(--ink);
+}
+
+.about-founder__contact-item--static {
+  cursor: default;
+}
+
+.about-founder__contact-item svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--sun);
+  fill: none;
+  flex-shrink: 0;
+}
+
+.about-founder__right .eyebrow {
+  margin-bottom: 20px;
+}
+
+.about-founder__title {
+  margin-bottom: 32px;
+}
+
+.about-founder__body {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.about-founder__body p {
+  margin: 0;
+  color: var(--ink-soft);
+  line-height: 1.85;
+}
+
+.about-founder__pullquote {
+  margin: 14px 0;
+  padding: 24px 28px;
+  background: var(--sand-2);
+  border-left: 4px solid var(--sun);
+  border-radius: 0 12px 12px 0;
+}
+
+.about-founder__pullquote p {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.about-founder__pullquote cite {
+  display: block;
+  margin-top: 14px;
+  font-family: var(--sans);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.about-founder__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 36px;
+}
+
+.about-commitment {
+  background: var(--ink);
+  color: var(--paper);
+  padding-block: clamp(56px, 8vw, 96px);
+}
+
+.about-commitment__header {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(24px, 4vw, 80px);
+  align-items: center;
+  margin-bottom: clamp(40px, 6vw, 64px);
+}
+
+@media (min-width: 900px) {
+  .about-commitment__header {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.about-commitment__header h2 {
+  color: var(--paper);
+}
+
+.about-commitment__header h2 em {
+  color: color-mix(in oklab, var(--paper) 72%, var(--sun));
+}
+
+.about-commitment__header p {
+  color: color-mix(in oklab, var(--paper) 72%, transparent);
+  line-height: 1.8;
+}
+
+.about-commitment__grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .about-commitment__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-commitment__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.about-commitment__card {
+  background: color-mix(in oklab, var(--paper) 6%, transparent);
+  border: 1px solid color-mix(in oklab, var(--paper) 15%, transparent);
+  border-radius: 14px;
+  padding: 28px 24px;
+  transition: background 0.2s ease;
+}
+
+.about-commitment__card:hover {
+  background: color-mix(in oklab, var(--paper) 9%, transparent);
+}
+
+.about-commitment__num {
+  font-family: var(--serif);
+  font-size: 42px;
+  font-weight: 700;
+  color: color-mix(in oklab, var(--sun) 30%, transparent);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.about-commitment__card h3 {
+  color: var(--paper);
+  margin-bottom: 8px;
+}
+
+.about-commitment__card p {
+  margin: 0;
+  color: color-mix(in oklab, var(--paper) 72%, transparent);
+  line-height: 1.65;
+}
+
+.about-reviews.testimonials {
+  background: var(--sand-2);
+  border-top: 1px solid var(--line);
+}
+
+.about-reviews .reviews-header {
+  text-align: center;
+}
+
+.about-reviews .reviews-header .left {
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+.about-reviews .reviews-header .lede {
+  margin-inline: auto;
+  max-width: 500px;
+}
+
+.about-faq {
+  background: var(--paper) !important;
+}
+
+@media (max-width: 639px) {
+  .about-founder__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
