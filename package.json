@@ -8,7 +8,9 @@
     "dev:clean": "rimraf .next && next dev",
     "build": "rimraf .next && next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "sync:reviews": "node scripts/sync-google-reviews.mjs",
+    "sync:reviews:force": "node scripts/sync-google-reviews.mjs --force"
   },
   "dependencies": {
     "next": "^15.3.3",

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ReviewsPageContent } from "@/components/reviews/ReviewsPageContent";
 import { SITE } from "@/lib/constants";
+import { getTestimonialsData } from "@/lib/reviews/get-reviews";
 
 export const metadata: Metadata = {
   title: "We Buy St Pete Houses Reviews: Real Customer Feedback",
@@ -64,14 +65,16 @@ const jsonLd = {
   ],
 };
 
-export default function ReviewsPage() {
+export default async function ReviewsPage() {
+  const testimonials = await getTestimonialsData();
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <ReviewsPageContent />
+      <ReviewsPageContent testimonials={testimonials} />
     </>
   );
 }
