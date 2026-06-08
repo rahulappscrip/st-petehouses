@@ -615,6 +615,17 @@ export const TOPBAR = {
   bbb: "BBB A+ Accredited",
 } as const;
 
+export const SELL_REASON_OPTIONS = [
+  { value: "inherited-estate", label: "Inherited / estate" },
+  { value: "divorce-separation", label: "Divorce / separation" },
+  { value: "facing-foreclosure", label: "Facing foreclosure" },
+  { value: "relocating", label: "Relocating" },
+  { value: "financial-hardship", label: "Financial hardship" },
+  { value: "tired-landlord", label: "Tired landlord" },
+  { value: "too-much-work", label: "Too much work needed" },
+  { value: "other", label: "Other" },
+] as const;
+
 export const HOME_TESTIMONIALS = {
   rating: "4.9",
   count: "12 verified reviews",

@@ -1,0 +1,40 @@
+name: Sync Google Reviews
+
+on:
+  schedule:
+    - cron: "0 14 * * *"
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Sync reviews from SerpAPI
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+        run: node scripts/sync-google-reviews.mjs
+
+      - name: Commit updated cache
+        run: |
+          if git diff --quiet src/data/google-reviews.json; then
+            echo "No review changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/google-reviews.json
+          git commit -m "$(cat <<'EOF'
+Sync Google reviews from SerpAPI.
+
+EOF
+)"
+          git push

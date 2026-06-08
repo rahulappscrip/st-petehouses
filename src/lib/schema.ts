@@ -1,4 +1,35 @@
-import { FAQ_ITEMS, SITE } from "./constants";
+import { SITE } from "./constants";
+
+export type FaqSchemaItem = {
+  q: string;
+  a: string;
+  aLink?: { href: string; label: string };
+};
+
+function formatFaqAnswerText(item: FaqSchemaItem): string {
+  if (!item.aLink) return item.a;
+
+  const href = item.aLink.href.startsWith("http")
+    ? item.aLink.href
+    : `${SITE.url.replace(/\/$/, "")}${item.aLink.href.startsWith("/") ? item.aLink.href : `/${item.aLink.href}`}`;
+
+  return `${item.a} ${item.aLink.label}: ${href}`;
+}
+
+export function buildFaqPageJsonLd(items: readonly FaqSchemaItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: formatFaqAnswerText(item),
+      },
+    })),
+  };
+}
 
 /** Site-wide RealEstateAgent structured data (schema.org) */
 export const REAL_ESTATE_AGENT_JSON_LD = {
@@ -20,16 +51,3 @@ export const REAL_ESTATE_AGENT_JSON_LD = {
   },
 } as const;
 
-/** Homepage FAQ — matches on-page accordion text verbatim */
-export const HOMEPAGE_FAQ_JSON_LD = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: FAQ_ITEMS.map((item) => ({
-    "@type": "Question",
-    name: item.q,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: item.a,
-    },
-  })),
-} as const;

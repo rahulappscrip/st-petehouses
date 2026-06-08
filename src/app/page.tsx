@@ -15,7 +15,7 @@ import { ResourcesSection } from "@/components/home/ResourcesSection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { FinalCtaSection } from "@/components/home/FinalCtaSection";
 import { GUARANTEE_ASIDE_CHECKLIST, HOMEPAGE_SEO, SITE } from "@/lib/constants";
-import { HOMEPAGE_FAQ_JSON_LD } from "@/lib/schema";
+import { getTestimonialsData } from "@/lib/reviews/get-reviews";
 
 export const metadata: Metadata = {
   title: HOMEPAGE_SEO.title,
@@ -36,13 +36,11 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-export default function HomePage() {
+export default async function HomePage() {
+  const testimonials = await getTestimonialsData();
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(HOMEPAGE_FAQ_JSON_LD) }}
-      />
       <HeroSection />
       <StatsSection />
       <ProcessSection />
@@ -52,7 +50,7 @@ export default function HomePage() {
       <SavingsEstimatorSection />
       <ProsConsSection />
       <AreasSection />
-      <ReviewsSection />
+      <ReviewsSection testimonials={testimonials} />
       <MarketSection showLocal={false} />
       <GuaranteeSection asideChecklist={GUARANTEE_ASIDE_CHECKLIST} />
       <ResourcesSection />

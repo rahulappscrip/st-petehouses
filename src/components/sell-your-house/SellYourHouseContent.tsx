@@ -6,7 +6,7 @@ import { SellerSituationsSection } from "@/components/home/SellerSituationsSecti
 import { AreasSection } from "@/components/home/AreasSection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { FinalCtaSection } from "@/components/home/FinalCtaSection";
-import { ReviewsSection } from "@/components/home/ReviewsSection";
+import { ReviewsSectionBlock } from "@/components/home/ReviewsSectionBlock";
 import {
   SELL_HOUSE_FAQ,
   SELL_HOUSE_LEGAL_BLOCKS,
@@ -104,7 +104,7 @@ export function SellYourHouseContent() {
         listHeading="Service area"
       />
 
-      <ReviewsSection className="section-alt" />
+      <ReviewsSectionBlock className="section-alt" />
 
       <InfoSection
         eyebrow="How we price offers"
