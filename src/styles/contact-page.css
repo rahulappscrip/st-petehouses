@@ -192,6 +192,65 @@
   padding-left: 10px;
 }
 
+/* Home hero lead form — contact page */
+.contact-form-section .lead-card.lead-offer-form {
+  background: var(--sand);
+  width: 100%;
+  max-width: 100%;
+  align-self: start;
+  justify-self: end;
+  position: static !important;
+  top: auto !important;
+  margin-bottom: 0;
+  padding: 20px clamp(18px, 2vw, 24px) 22px;
+  gap: 6px;
+}
+
+.contact-form-section .lead-card.lead-offer-form .lead-top {
+  gap: 8px;
+}
+
+.contact-form-section .lead-badges {
+  --lead-badge-h: 42px;
+  align-items: center;
+}
+
+.contact-form-section .lead-badge-bbb {
+  display: block;
+  height: var(--lead-badge-h);
+  width: auto;
+  max-width: calc(var(--lead-badge-h) * 2.66);
+  object-fit: contain;
+  object-position: left center;
+}
+
+.contact-form-section .lead-badges .lead-badge--5 {
+  height: var(--lead-badge-h);
+  min-height: var(--lead-badge-h);
+  padding-block: 0;
+  padding-inline: 10px;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.contact-form-section .lead-intro {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.contact-form-section .lead-card.lead-offer-form form .field {
+  margin-bottom: 8px;
+}
+
+.contact-form-section .lead-card.lead-offer-form form .row-2 {
+  margin-bottom: 8px;
+}
+
+.contact-form-section .lead-card.lead-offer-form form .input,
+.contact-form-section .lead-card.lead-offer-form form .select {
+  padding: 12px 14px;
+}
+
 .contact-form-card {
   background: #ffffff;
   border: 1px solid var(--line);

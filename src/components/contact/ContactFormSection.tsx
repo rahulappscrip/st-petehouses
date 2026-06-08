@@ -1,4 +1,5 @@
-import { ContactOfferForm } from "@/components/contact/ContactOfferForm";
+import { DEFAULT_HERO } from "@/components/home/HeroSection";
+import { LeadOfferForm } from "@/components/shared/LeadOfferForm";
 import { Reveal } from "@/components/ui/Reveal";
 import { CONTACT_PAGE } from "@/lib/contact-content";
 import { ASSETS } from "@/lib/constants";
@@ -56,7 +57,13 @@ export function ContactFormSection() {
         </Reveal>
 
         <Reveal d={1} className="contact-form-section__right">
-          <ContactOfferForm />
+          <LeadOfferForm
+            id="form"
+            formEyebrow={DEFAULT_HERO.formEyebrow}
+            formTitle={DEFAULT_HERO.formTitle}
+            formIntro={DEFAULT_HERO.formIntro}
+            addressPlaceholder={DEFAULT_HERO.addressPlaceholder}
+          />
         </Reveal>
       </div>
     </section>

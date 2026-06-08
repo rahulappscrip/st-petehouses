@@ -3,17 +3,17 @@ import { FinalCtaSection } from "@/components/home/FinalCtaSection";
 import { ProcessSection } from "@/components/home/ProcessSection";
 import { ReviewsSection } from "@/components/home/ReviewsSection";
 import { StatsSection } from "@/components/home/StatsSection";
+import { AboutHeroSection } from "@/components/about/AboutHeroSection";
 import { MeetFounderSection } from "@/components/about/MeetFounderSection";
-import { SituationHeroSection } from "@/components/situations/SituationHeroSection";
 import { Reveal } from "@/components/ui/Reveal";
-import { ABOUT_HERO, ABOUT_PAGE, ABOUT_STATS } from "@/lib/about-content";
+import { ABOUT_PAGE, ABOUT_STATS } from "@/lib/about-content";
 
 export function AboutPageContent() {
   const { mission, commitment, reviews, faq, cta } = ABOUT_PAGE;
 
   return (
     <div className="about-us-page">
-      <SituationHeroSection breadcrumb={ABOUT_PAGE.hero.breadcrumb} hero={ABOUT_HERO} />
+      <AboutHeroSection />
       <StatsSection stats={ABOUT_STATS} />
 
       <ProcessSection

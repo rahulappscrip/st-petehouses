@@ -778,10 +778,7 @@ p.lead-title {
 }
 
 .lead-card.lead-offer-form .lead-consent {
-  margin-bottom: 8px;
-  padding: 10px 12px;
-  font-size: 16px;
-  line-height: 1.45;
+  font-size: 12px;
 }
 
 .lead-form-error {
@@ -831,10 +828,13 @@ p.lead-title {
 /* Consent note (no checkbox — informational) */
 .lead-consent{
   display: block;
-  font-size: 16px; line-height: 1.5; color: var(--ink-soft);
-  padding: 12px 14px;
-  background: var(--sand);
-  border: 1px solid var(--line-soft); border-radius: 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  padding: unset;
+  background: unset;
+  border: unset;
+  border-radius: unset;
   margin-bottom: 12px;
 }
 
@@ -1457,7 +1457,7 @@ p.lead-title {
   position: relative; overflow: hidden;
   background: var(--ink); color: var(--paper);
   border-radius: clamp(20px, 3vw, 32px);
-  padding: clamp(40px, 6vw, 43px) clamp(36px, 6vw, 80px) 0;
+  padding: clamp(30px, 6vw, 30px) clamp(36px, 6vw, 80px) 0;
   display: grid; gap: 40px;
   grid-template-columns: 1fr;
   align-items: center;
@@ -1476,7 +1476,7 @@ p.lead-title {
   align-items: flex-start;
   gap: clamp(16px, 2vw, 24px);
   margin-top: 0;
-  padding-bottom: clamp(40px, 6vw, 56px);
+  padding-bottom: clamp(24px, 6vw, 30px);
 }
 .cta-card__content > *{
   flex-shrink: 0;

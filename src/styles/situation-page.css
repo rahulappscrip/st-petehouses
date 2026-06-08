@@ -1429,13 +1429,6 @@
   padding: 12px 14px;
 }
 
-.city-hero .lead-card.lead-offer-form .lead-consent {
-  margin-bottom: 6px;
-  padding: 8px 10px;
-  font-size: 11px;
-  line-height: 1.4;
-}
-
 @media (min-width: 768px) {
   .city-hero__grid {
     align-items: stretch;
