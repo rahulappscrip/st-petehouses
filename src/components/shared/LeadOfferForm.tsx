@@ -42,8 +42,7 @@ export function LeadOfferForm({
     const formData = new FormData(form);
 
     const payload = {
-      firstName: String(formData.get("firstName") ?? "").trim(),
-      lastName: String(formData.get("lastName") ?? "").trim(),
+      fullName: String(formData.get("fullName") ?? "").trim(),
       address: String(formData.get("address") ?? "").trim(),
       sellReason: String(formData.get("sellReason") ?? "").trim(),
       phone: String(formData.get("phone") ?? "").trim(),
@@ -103,33 +102,18 @@ export function LeadOfferForm({
       </div>
 
       <form onSubmit={handleSubmit} noValidate>
-        <div className="row-2">
-          <div className="field">
-            <label htmlFor="first-name">First name</label>
-            <input
-              id="first-name"
-              name="firstName"
-              className="input"
-              required
-              type="text"
-              autoComplete="given-name"
-              placeholder="John"
-              disabled={isLoading || isSuccess}
-            />
-          </div>
-          <div className="field">
-            <label htmlFor="last-name">Last name</label>
-            <input
-              id="last-name"
-              name="lastName"
-              className="input"
-              required
-              type="text"
-              autoComplete="family-name"
-              placeholder="Smith"
-              disabled={isLoading || isSuccess}
-            />
-          </div>
+        <div className="field">
+          <label htmlFor="full-name">Full Name</label>
+          <input
+            id="full-name"
+            name="fullName"
+            className="input"
+            required
+            type="text"
+            autoComplete="name"
+            placeholder="John Smith"
+            disabled={isLoading || isSuccess}
+          />
         </div>
 
         <div className="field">

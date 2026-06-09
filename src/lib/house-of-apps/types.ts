@@ -1,6 +1,5 @@
 export type LeadFormInput = {
-  firstName: string;
-  lastName: string;
+  fullName: string;
   address: string;
   sellReason: string;
   phone: string;

@@ -2,6 +2,20 @@ import type { HouseOfAppsLeadPayload, LeadFormInput } from "@/lib/house-of-apps/
 
 const HOU_API_URL = "https://api-v2.houseofapps.ai/v1/integrations/leads";
 
+function splitFullName(fullName: string): { firstName: string; lastName: string } {
+  const trimmed = fullName.trim();
+  const spaceIndex = trimmed.indexOf(" ");
+
+  if (spaceIndex === -1) {
+    return { firstName: trimmed, lastName: "" };
+  }
+
+  return {
+    firstName: trimmed.slice(0, spaceIndex).trim(),
+    lastName: trimmed.slice(spaceIndex + 1).trim(),
+  };
+}
+
 function normalizePhone(phone: string): string {
   const digits = phone.replace(/\D/g, "");
   if (digits.length === 11 && digits.startsWith("1")) {
@@ -15,17 +29,19 @@ export function buildLeadPayload(input: LeadFormInput): HouseOfAppsLeadPayload {
   const sellReasonFieldId = process.env.HOU_SELL_REASON_FIELD_ID ?? "";
   const sellReasonSubFieldId = process.env.HOU_SELL_REASON_SUB_FIELD_ID ?? "";
 
+  const { firstName, lastName } = splitFullName(input.fullName);
+
   const payload: HouseOfAppsLeadPayload = {
     lead: {
-      name: `${input.firstName} ${input.lastName}`.trim(),
+      name: input.fullName.trim(),
       stage_id: stageId,
       lead_source: "Website",
     },
     contact: {
       email: input.email,
       portal_access: false,
-      first_name: input.firstName,
-      last_name: input.lastName,
+      first_name: firstName,
+      last_name: lastName,
       phones: [
         {
           phone_number: normalizePhone(input.phone),
