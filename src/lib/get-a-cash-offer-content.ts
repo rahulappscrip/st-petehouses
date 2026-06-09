@@ -1,5 +1,12 @@
 import { ASSETS } from "@/lib/constants";
 
+export const GET_A_CASH_OFFER_STATS = [
+  { value: "24", suffix: "hr", label: "Written offer", sub: "within 24 hours" },
+  { value: "No", label: "Obligation to accept" },
+  { value: "BBB ", suffix: "A+", label: "Accredited" },
+  { value: "500", suffix: "+", label: "Homes purchased" },
+] as const;
+
 export const GET_A_CASH_OFFER_PAGE = {
   meta: {
     title: "Get a Cash Offer | We Buy St Pete Houses | No Obligation",
@@ -11,88 +18,45 @@ export const GET_A_CASH_OFFER_PAGE = {
     titleLead: "Get Your Fair ",
     titleEm: "Cash Offer",
     body: "Fill out the form and we'll have a written, no-obligation cash offer in your hands within 24 hours. No repairs, no commissions, no pressure to accept.",
-    trustPills: [
-      "Written offer within 24 hours",
-      "No obligation to accept",
-      "BBB A+ Accredited",
-      "500+ homes purchased",
-    ],
-    steps: [
+  },
+  process: {
+    eyebrow: "How It Works",
+    titleLead: "Your path from inquiry to ",
+    titleEm: "closing.",
+    titleTail: "",
+    lede: "Here's exactly what happens after you fill out the form — step by step, with no surprises.",
+    items: [
       {
-        num: "1",
-        timing: "~ 2 minutes",
+        label: "~ 2 minutes",
         title: "Tell us about your property",
         body: "Fill out the form with your address, contact info, and a brief description of your situation. We ask a few follow-up questions by phone to understand your timeline and any unique circumstances.",
       },
       {
-        num: "2",
-        timing: "Within 24 hours",
+        label: "Within 24 hours",
         title: "We assess your property & run the numbers",
         body: "We research recent comparable sales in your neighborhood, estimate repair costs based on condition details you share, and apply our transparent offer formula — ARV minus holding costs, profit margin, and repairs. In most cases we can present an offer without an in-person visit.",
       },
       {
-        num: "3",
-        timing: "In writing",
+        label: "In writing",
         title: "You receive your written cash offer",
         body: "We present a written offer with clear terms — the amount, the proposed closing date, and no hidden contingencies. We walk you through how we calculated the number. There's no pressure to accept and no expiry deadline forcing a decision.",
       },
       {
-        num: "4",
-        timing: "One visit",
+        label: "One visit",
         title: "Optional property walkthrough",
         body: "If you'd like us to see the property before finalizing terms, we schedule a single, no-pressure walkthrough. No staging, no cleaning. We see the home as it stands. This step isn't always required — we close many properties without one.",
       },
       {
-        num: "5",
-        timing: "Your choice",
+        label: "Your choice",
         title: "Accept, decline, or ask questions",
         body: "You review the offer with family, your attorney, or whoever you want to involve. Accept when you're ready. Decline if it doesn't work — no hard feelings. Ask us to explain any part of the offer you don't understand.",
       },
       {
-        num: "6",
-        timing: "7–14 days typical",
+        label: "7–14 days typical",
         title: "Close on your date — cash in hand",
         body: "Once accepted, we work with a licensed Pinellas County title company to handle all paperwork. You choose the closing date. We cover all standard closing costs. The offer amount goes directly to you — nothing deducted.",
       },
     ],
-    form: {
-      title: "Get Your Fair Offer Today",
-      intro: "We buy houses fast, as-is, and stress-free. No repairs or out-of-pocket costs.",
-      submitLabel: "Get My Fair Cash Offer",
-      consent:
-        "By submitting, you agree to receive transactional or conversational communications from We Buy St Pete Houses via SMS, calls, and email related to your property inquiry. Reply STOP to opt out. Your info is never sold.",
-      successTitle: "We've got your details.",
-      successBody:
-        "Our local St Pete team will be in touch within 24 hours — usually much sooner. You can also reach us directly at ",
-      badges: ["No obligation", "Info never sold", "24 hr response"],
-      situationOptions: [
-        "Facing foreclosure",
-        "Inherited / probate property",
-        "Divorce or separation",
-        "Tired landlord / problem tenants",
-        "Major repairs needed",
-        "Fire / flood / storm damage",
-        "Property with liens",
-        "Bankruptcy",
-        "Relocating",
-        "Hoarder property",
-        "Other",
-      ],
-      conditionOptions: [
-        "Move-in ready / minor cosmetic issues",
-        "Needs moderate updates or repairs",
-        "Needs significant repairs",
-        "Major damage (fire, flood, structural)",
-        "Extreme condition (hoarder, abandoned)",
-      ],
-      timelineOptions: [
-        "As fast as possible (under 2 weeks)",
-        "Within 30 days",
-        "30–60 days",
-        "Flexible — no rush",
-        "Not sure yet",
-      ],
-    },
   },
   formula: {
     eyebrow: "Our Offer Formula",

@@ -8,6 +8,7 @@
 .gaco-hero {
   background: var(--paper);
   border-bottom: 1px solid var(--line);
+  overflow: visible;
 }
 
 .gaco-hero__inner {
@@ -18,15 +19,22 @@
   padding-block: clamp(48px, 6vw, 72px);
 }
 
+.gaco-hero__left,
+.gaco-hero__right {
+  min-width: 0;
+  width: 100%;
+}
+
 @media (min-width: 900px) {
   .gaco-hero__inner {
-    grid-template-columns: minmax(0, 1fr) minmax(320px, 460px);
+    grid-template-columns: minmax(0, 1fr) minmax(380px, 460px);
     gap: clamp(48px, 5vw, 72px);
   }
 
-  .gaco-hero__right {
+  .gaco-hero__left {
     position: sticky;
     top: calc(var(--topbar-h) + var(--nav-h) + 16px);
+    align-self: start;
   }
 }
 
@@ -53,104 +61,66 @@
   color: var(--ink-2);
   line-height: 1.75;
   max-width: 480px;
-  margin-bottom: 32px;
+  margin-bottom: 0;
 }
 
-.gaco-trust-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 36px;
+/* Home hero lead form — get a cash offer page */
+.gaco-hero .lead-card.lead-offer-form {
+  background: var(--sand);
+  width: 100%;
+  max-width: 100%;
+  align-self: start;
+  justify-self: end;
+  position: static !important;
+  top: auto !important;
+  margin-bottom: 0;
+  padding: 20px clamp(18px, 2vw, 24px) 22px;
+  gap: 6px;
 }
 
-.gaco-trust-pill {
-  display: inline-flex;
+.gaco-hero .lead-card.lead-offer-form .lead-top {
+  gap: 8px;
+}
+
+.gaco-hero .lead-badges {
+  --lead-badge-h: 42px;
   align-items: center;
-  gap: 7px;
-  background: var(--sand-2);
-  border: 1px solid var(--line);
-  border-radius: 100px;
-  padding: 7px 14px;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--ink);
 }
 
-.gaco-trust-pill svg {
-  width: 14px;
-  height: 14px;
-  stroke: var(--sun);
-  flex-shrink: 0;
+.gaco-hero .lead-badge-bbb {
+  display: block;
+  height: var(--lead-badge-h);
+  width: auto;
+  max-width: calc(var(--lead-badge-h) * 2.66);
+  object-fit: contain;
+  object-position: left center;
 }
 
-.gaco-offer-steps {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.gaco-offer-step {
-  display: flex;
-  gap: 18px;
-  align-items: flex-start;
-  padding: 20px 0;
-  border-bottom: 1px solid var(--line-soft);
-}
-
-.gaco-offer-step:last-child {
-  border-bottom: none;
-}
-
-.gaco-offer-step__rail {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-shrink: 0;
-}
-
-.gaco-offer-step__num {
-  display: inline-flex;
-  align-items: center;
+.gaco-hero .lead-badges .lead-badge--5 {
+  height: var(--lead-badge-h);
+  min-height: var(--lead-badge-h);
+  padding-block: 0;
+  padding-inline: 10px;
   justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: var(--ink);
-  color: var(--paper);
-  font-size: 13px;
-  font-weight: 700;
+  box-sizing: border-box;
 }
 
-.gaco-offer-step__content {
-  padding-top: 6px;
-  min-width: 0;
+.gaco-hero .lead-intro {
+  font-size: 16px;
+  line-height: 1.4;
 }
 
-.gaco-offer-step__timing {
-  display: inline-block;
-  font-size: 18px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--sun);
-  background: var(--sand-2);
-  border-radius: 4px;
-  padding: 2px 8px;
+.gaco-hero .lead-card.lead-offer-form form .field {
   margin-bottom: 8px;
 }
 
-.gaco-offer-step__content h2 {
-  font-size: 22px !important;
-  margin-bottom: 5px;
+.gaco-hero .lead-card.lead-offer-form form .row-2 {
+  margin-bottom: 8px;
 }
 
-.gaco-offer-step__content p {
-  color: var(--ink-soft);
-  line-height: 1.65;
-}
-
-.gaco-form-card.contact-form-card {
-  box-shadow: 0 8px 48px color-mix(in oklab, var(--ink) 10%, transparent);
+.gaco-hero .lead-card.lead-offer-form form .input,
+.gaco-hero .lead-card.lead-offer-form form .select {
+  padding: 12px 14px;
 }
 
 /* What to Prepare */
@@ -277,10 +247,4 @@
 
 .get-a-cash-offer-page .situation-stages {
   background: #f3f8f4;
-}
-
-@media (max-width: 899px) {
-  .contact-form__row {
-    grid-template-columns: 1fr;
-  }
 }
