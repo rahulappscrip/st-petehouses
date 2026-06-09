@@ -105,8 +105,13 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "short-term-rental-ban-st-petersburg",
     title: "Short Term Rental Ban in St. Petersburg, FL: What Homeowners and Investors Need to Know",
+    detailHeadline: {
+      before: "Short Term Rental Ban in ",
+      emphasis: "St. Petersburg, FL",
+      after: ".",
+    },
     excerpt:
-      "St. Pete's short-term rental ordinance explained — who it affects, what the enforcement timeline looks like, and your options if you're holding a property you can no longer rent. Essential reading for STR owners, Airbnb hosts, and investors in Pinellas County.",
+      "What homeowners and investors actually need to know — zoning, licensing, the 30-day rule, enforcement risks, and what to do if the STR path no longer works for your property.",
     category: "legal",
     categoryLabel: "Florida law",
     date: "2026-05-30",
@@ -122,11 +127,61 @@ export const BLOG_POSTS: BlogPost[] = [
     imageGlyph: "🏠",
     heroImage: `${BLOG_IMAGE}/1-Short-Term-Rental-Ban-in-St-Petersburg-FL.webp`,
     heroImageAlt:
-      "Short Term Rental Ban in St. Petersburg, FL: What Homeowners and Investors Need to Know",
-    tags: ["Florida law", "Short-term rental", "St Petersburg"],
+      "A St. Petersburg, Florida waterfront neighborhood with residential properties commonly used for short-term rentals.",
+    heroImageCaption:
+      "St. Petersburg residential neighborhoods — where STR rules vary significantly by zoning and jurisdiction.",
+    tags: ["Florida law", "St. Petersburg", "Airbnb & STR"],
     metaDescription:
       "St. Petersburg's short-term rental rules explained — zoning, licensing, the 30-day threshold, enforcement risks, and what to do if STR no longer makes sense for your property.",
-    isPlaceholder: true,
+    toc: [
+      { id: "what-is", label: 'What the "ban" actually is' },
+      { id: "30-day-rule", label: "The 30-day rule & exceptions" },
+      { id: "enforcement", label: "Enforcement & fines" },
+      { id: "investor-strategy", label: "Investor strategy" },
+      { id: "compliance", label: "Step-by-step compliance" },
+      { id: "licensing-taxes", label: "Licensing & taxes" },
+      { id: "alternatives", label: "Alternatives & selling" },
+      { id: "jurisdictions", label: "St. Pete vs. nearby cities" },
+    ],
+    nextCta: {
+      eyebrow: "Next steps",
+      title: {
+        before: "If selling is the right next step for your ",
+        emphasis: "St. Pete property",
+        after: ".",
+      },
+      description:
+        "For some owners, staying in the STR game — with proper compliance — is absolutely workable. For others, pivoting to long-term rentals or selling makes more financial sense than navigating layers of local, county, and state rules indefinitely. If selling is where you've landed, we work with homeowners and investors across St. Petersburg and Greater Tampa Bay. Fair, as-is cash offer within 24 hours, close in as little as 7 days.",
+      secondaryCta: { label: 'Visit "Sell Your House"', href: "/sell-your-house" },
+      asideLabel: "Talk to John directly",
+      asideBullets: [
+        "Local team — no call centers",
+        "As-is, no repairs required",
+        "SellFast@WeBuyStPeteHouses.com",
+      ],
+    },
+    faq: [
+      {
+        q: "Are short-term rentals allowed in St. Petersburg, FL?",
+        a: "Some STR activity is allowed but heavily regulated. What's permitted depends on your specific zoning designation, whether you're renting a whole unit or a room in your own home, and whether you've met state DBPR licensing and tax requirements. The only reliable answer is a direct lookup of your address in the city's planning portal — general statements about St. Pete STR rules can be dangerously misleading.",
+      },
+      {
+        q: "What are the exceptions to the short-term rental rules in St. Petersburg?",
+        a: "Exceptions typically involve specific zoning designations that permit STR activity, properly licensed vacation rentals that have met all DBPR and local permit requirements, or owner-occupied room rentals that DBPR does not classify as public lodging. Review official guidance from the City of St. Petersburg and the Florida DBPR rather than relying on secondhand information or platform-specific advice.",
+      },
+      {
+        q: "When did the St. Petersburg short-term rental restrictions take effect?",
+        a: "Rules have evolved through multiple zoning updates over time — there is no single effective date for a single ban. To confirm effective dates and any recent amendments applicable to your property, review the City of St. Petersburg's current code of ordinances directly on the city's official website. Rules that applied a year ago may have been updated since.",
+      },
+      {
+        q: "What steps should I take to stay compliant with St. Pete STR rules?",
+        a: "Six steps: (1) Confirm your jurisdiction — City of St. Pete, unincorporated Pinellas County, or another city. (2) Look up your exact zoning on the city planning portal. (3) Check for a local permit or certificate of use requirement. (4) Determine whether DBPR vacation rental licensing applies to your property type. (5) Verify whether an owner-occupied exemption applies. (6) Register for Florida transient rental tax and any Pinellas County local option taxes before your first booking. Consult a qualified attorney for case-specific guidance.",
+      },
+      {
+        q: "What are the penalties for non-compliance with STR rules?",
+        a: "Penalties can come from three directions simultaneously: city citations and escalating daily fines under the city code enforcement process; Florida Department of Revenue back taxes, interest, and penalties for unremitted transient rental taxes; and potential DBPR enforcement for operating an unlicensed public lodging establishment. Review official city and state resources for current fine schedules — amounts change and can compound quickly for repeat violations.",
+      },
+    ],
   },
   {
     slug: "how-as-is-really-works-when-a-cash-buyer-inspects",
