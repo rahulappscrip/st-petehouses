@@ -136,6 +136,11 @@ export function BlogDetailContent({ post }: { post: BlogPost }) {
           <h1>{getDetailTitle(post)}</h1>
           <p className="lede">{post.excerpt}</p>
 
+          <div className="article-meta">
+            <span>Published {post.dateDisplay}</span>
+            <span>{post.readTime}</span>
+          </div>
+
           <div className="byline">
             <span className="av" aria-hidden="true">
               {post.authorInitials}
@@ -146,10 +151,6 @@ export function BlogDetailContent({ post }: { post: BlogPost }) {
                 {post.authorRole} · We Buy St Pete Houses
               </span>
             </span>
-            <span className="dot" />
-            <span>Published {post.dateDisplay}</span>
-            <span className="dot" />
-            <span>{post.readTime}</span>
           </div>
 
           {post.heroImage ? (
