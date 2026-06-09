@@ -16,8 +16,7 @@ function parseLeadInput(body: unknown): LeadFormInput | null {
   const data = body as Record<string, unknown>;
 
   if (
-    !isNonEmptyString(data.firstName) ||
-    !isNonEmptyString(data.lastName) ||
+    !isNonEmptyString(data.fullName) ||
     !isNonEmptyString(data.address) ||
     !isNonEmptyString(data.sellReason) ||
     !isNonEmptyString(data.phone) ||
@@ -29,8 +28,7 @@ function parseLeadInput(body: unknown): LeadFormInput | null {
   if (!isValidEmail(data.email.trim())) return null;
 
   return {
-    firstName: data.firstName.trim(),
-    lastName: data.lastName.trim(),
+    fullName: data.fullName.trim(),
     address: data.address.trim(),
     sellReason: data.sellReason.trim(),
     phone: data.phone.trim(),
