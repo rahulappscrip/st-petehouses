@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHead } from "@/components/ui/SectionHead";
 import type { SituationMoldDisclosureContent } from "@/lib/situation-types";
@@ -26,9 +27,10 @@ const CARD_ICONS: Record<string, ReactNode> = {
 type Props = {
   data: SituationMoldDisclosureContent;
   alt?: boolean;
+  imageMap?: Record<string, { image: string; imageAlt: string }>;
 };
 
-export function SituationMoldDisclosureSection({ data, alt }: Props) {
+export function SituationMoldDisclosureSection({ data, alt, imageMap }: Props) {
   return (
     <section className={`section situation-mold-disclosure${alt ? " section-alt" : ""}`}>
       <div className="wrap">
@@ -46,32 +48,48 @@ export function SituationMoldDisclosureSection({ data, alt }: Props) {
         <div className="situation-mold-disclosure__grid">
           {data.items.map((item, i) => {
             const icon = item.icon ? CARD_ICONS[item.icon] : null;
+            const photo = imageMap?.[item.title];
             const links = item.links ?? (item.link ? [item.link] : []);
 
             return (
               <Reveal
                 key={item.title}
-                className="situation-mold-disclosure-card"
+                className={`situation-mold-disclosure-card${photo ? " situation-mold-disclosure-card--photo" : ""}`}
                 d={i > 0 ? ((i % 3) as 1 | 2 | 3) : undefined}
               >
-                {icon ? <span className="situation-mold-disclosure-card__icon">{icon}</span> : null}
-                <h3 className="h-4">{item.title}</h3>
-                <p className="body-standard">{item.body}</p>
-                {links.length > 0 ? (
-                  <div className="situation-mold-disclosure-card__links">
-                    {links.map((link) => (
-                      <a
-                        key={link.href}
-                        href={link.href}
-                        className="situation-mold-disclosure-card__link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {link.label}
-                      </a>
-                    ))}
+                {photo ? (
+                  <div className="situation-mold-disclosure-card__media">
+                    <Image
+                      src={photo.image}
+                      alt={photo.imageAlt}
+                      width={800}
+                      height={500}
+                      sizes="(min-width: 900px) 33vw, 100vw"
+                      className="situation-mold-disclosure-card__img"
+                    />
                   </div>
+                ) : icon ? (
+                  <span className="situation-mold-disclosure-card__icon">{icon}</span>
                 ) : null}
+                <div className={photo ? "situation-mold-disclosure-card__body" : undefined}>
+                  <h3 className="h-4">{item.title}</h3>
+                  <p className="body-standard">{item.body}</p>
+                  {links.length > 0 ? (
+                    <div className="situation-mold-disclosure-card__links">
+                      {links.map((link) => (
+                        <a
+                          key={link.href}
+                          href={link.href}
+                          className="situation-mold-disclosure-card__link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {link.label}
+                        </a>
+                      ))}
+                    </div>
+                  ) : null}
+                </div>
               </Reveal>
             );
           })}

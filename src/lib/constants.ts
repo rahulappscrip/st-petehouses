@@ -92,6 +92,12 @@ export const ASSETS = {
   asIsFloridaUrban: "/assets/images/urban.webp",
   asIsFloridaSuburban: "/assets/images/suburban.webp",
   asIsFloridaValue: "/assets/images/value.webp",
+  asIsFloridaDisclosure: "/assets/images/Disclosure.webp",
+  asIsFloridaAsIsContract: "/assets/images/The-Florida-As-Is-Contract.webp",
+  asIsFloridaMoveOutHoa: "/assets/images/Move-Out-HOA-Considerations.webp",
+  sellAsIsYouCanSellMold: "/assets/images/You-can-sell-mold.webp",
+  sellAsIsDisclosureNeeded: "/assets/images/Disclosure-is-needed.webp",
+  sellAsIsFreeMoldLegalResources: "/assets/images/free-mold-and-legl-resources.webp",
   inheritedBuyProbate: "/assets/images/Probate-and-title.webp",
   inheritedBuyAsIs: "/assets/images/As-is-purchases.webp",
   inheritedBuyNoFees: "/assets/images/No-commission.webp",
@@ -336,6 +342,22 @@ export const DIVORCE_TAX_CARD_IMAGES: Record<string, { image: string; imageAlt: 
   },
 };
 
+/** As-is Florida page — Florida Legal Framework environmental cards. */
+export const AS_IS_FLORIDA_ENVIRONMENTAL_IMAGES: Record<string, { image: string; imageAlt: string }> = {
+  "Disclosure Obligations": {
+    image: ASSETS.asIsFloridaDisclosure,
+    imageAlt: "Florida as-is home sale disclosure obligations for sellers",
+  },
+  "The Florida As-Is Contract": {
+    image: ASSETS.asIsFloridaAsIsContract,
+    imageAlt: "The Florida as-is real estate contract for cash home sales",
+  },
+  "Move-Out & HOA Considerations": {
+    image: ASSETS.asIsFloridaMoveOutHoa,
+    imageAlt: "Move-out timing and HOA considerations when selling as-is in Florida",
+  },
+};
+
 /** As-is Florida page — neighborhood market cards (keyed by category icon label). */
 export const AS_IS_FLORIDA_NEIGHBORHOOD_IMAGES: Record<string, { image: string; imageAlt: string }> = {
   Coastal: {
@@ -535,6 +557,22 @@ export const SELL_AS_IS_WHEN_IMAGES: Record<string, { image: string; imageAlt: s
   "Divorce / Hardship": {
     image: ASSETS.sellAsIsDivorceHardship,
     imageAlt: "Home sold as-is for cash during divorce or hardship",
+  },
+};
+
+/** Sell as-is — Florida Mold Laws disclosure cards. */
+export const SELL_AS_IS_MOLD_DISCLOSURE_IMAGES: Record<string, { image: string; imageAlt: string }> = {
+  "Yes, You Can Sell with Mold": {
+    image: ASSETS.sellAsIsYouCanSellMold,
+    imageAlt: "Selling a mold-damaged home as-is for cash in St Petersburg, Florida",
+  },
+  "Disclosure Is Required": {
+    image: ASSETS.sellAsIsDisclosureNeeded,
+    imageAlt: "Florida mold disclosure requirements for home sellers",
+  },
+  "Free Mold & Legal Resources": {
+    image: ASSETS.sellAsIsFreeMoldLegalResources,
+    imageAlt: "Free mold and legal resources for Florida home sellers",
   },
 };
 

@@ -29,12 +29,14 @@ import { SituationStepCardsSection } from "@/components/situations/SituationStep
 import { SituationNumberedCardsSection } from "@/components/situations/SituationNumberedCardsSection";
 import { SituationIconCardsSection } from "@/components/situations/SituationIconCardsSection";
 import {
+  AS_IS_FLORIDA_ENVIRONMENTAL_IMAGES,
   INHERITED_BUY_PROCESS_FEATURES,
   LIEN_PROPERTY_SITUATION_IMAGES,
   LIEN_TYPE_CARD_IMAGES,
   mapSituationPageCardsToSellerCards,
   mapSituationPageCityCards,
   mapSituationPageSituationsToSellerCards,
+  SELL_AS_IS_MOLD_DISCLOSURE_IMAGES,
   SELL_AS_IS_WHEN_IMAGES,
   SELL_AS_IS_WHY_US_IMAGES,
   SITUATION_PAGE_CARD_IMAGES,
@@ -624,9 +626,11 @@ const ENVIRONMENTAL_ICONS: Record<string, ReactNode> = {
 export function SituationEnvironmentalSection({
   data,
   alt,
+  imageMap,
 }: {
   data: NonNullable<SituationFullContent["environmental"]>;
   alt?: boolean;
+  imageMap?: Record<string, { image: string; imageAlt: string }>;
 }) {
   return (
     <section className={`section situation-environmental${alt ? " section-alt" : ""}`}>
@@ -640,16 +644,32 @@ export function SituationEnvironmentalSection({
           {data.items.map((item, i) => {
             const iconKey = item.icon?.toLowerCase();
             const icon = iconKey ? ENVIRONMENTAL_ICONS[iconKey] : null;
+            const photo = imageMap?.[item.title];
 
             return (
               <Reveal
                 key={item.title}
-                className="situation-environmental-card"
+                className={`situation-environmental-card${photo ? " situation-environmental-card--photo" : ""}`}
                 d={i > 0 ? ((i % 3) as 1 | 2 | 3) : undefined}
               >
-                {icon ? <span className="situation-environmental-card__icon">{icon}</span> : null}
-                <h3 className="h-4">{item.title}</h3>
-                <p className="body-standard">{item.body}</p>
+                {photo ? (
+                  <div className="situation-environmental-card__media">
+                    <Image
+                      src={photo.image}
+                      alt={photo.imageAlt}
+                      width={800}
+                      height={500}
+                      sizes="(min-width: 900px) 33vw, 100vw"
+                      className="situation-environmental-card__img"
+                    />
+                  </div>
+                ) : icon ? (
+                  <span className="situation-environmental-card__icon">{icon}</span>
+                ) : null}
+                <div className={photo ? "situation-environmental-card__body" : undefined}>
+                  <h3 className="h-4">{item.title}</h3>
+                  <p className="body-standard">{item.body}</p>
+                </div>
               </Reveal>
             );
           })}
@@ -1392,7 +1412,14 @@ export function renderSituationSection(
 
     case "moldDisclosure":
       return content.moldDisclosure ? (
-        <SituationMoldDisclosureSection key={id} data={content.moldDisclosure} alt={alt} />
+        <SituationMoldDisclosureSection
+          key={id}
+          data={content.moldDisclosure}
+          alt={alt}
+          imageMap={
+            content.slug === "sell-as-is" ? SELL_AS_IS_MOLD_DISCLOSURE_IMAGES : undefined
+          }
+        />
       ) : null;
 
     case "courtProcess":
@@ -1475,7 +1502,14 @@ export function renderSituationSection(
 
     case "environmental":
       return content.environmental ? (
-        <SituationEnvironmentalSection key={id} data={content.environmental} alt={alt} />
+        <SituationEnvironmentalSection
+          key={id}
+          data={content.environmental}
+          alt={alt}
+          imageMap={
+            content.slug === "as-is-florida" ? AS_IS_FLORIDA_ENVIRONMENTAL_IMAGES : undefined
+          }
+        />
       ) : null;
 
     case "cards":

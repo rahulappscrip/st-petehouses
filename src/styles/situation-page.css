@@ -376,6 +376,29 @@
   padding: 24px;
 }
 
+.situation-mold-disclosure-card--photo {
+  padding: 0;
+  overflow: hidden;
+}
+
+.situation-mold-disclosure-card__media {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: color-mix(in oklab, var(--ink) 6%, var(--paper));
+}
+
+.situation-mold-disclosure-card__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.situation-mold-disclosure-card__body {
+  padding: clamp(18px, 2vw, 24px);
+}
+
 .situation-mold-disclosure-card__icon {
   display: inline-flex;
   align-items: center;
@@ -481,6 +504,29 @@
   border: 1px solid var(--line-soft);
   border-radius: var(--radius-m);
   padding: 24px;
+}
+
+.situation-environmental-card--photo {
+  padding: 0;
+  overflow: hidden;
+}
+
+.situation-environmental-card__media {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: color-mix(in oklab, var(--ink) 6%, var(--paper));
+}
+
+.situation-environmental-card__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.situation-environmental-card__body {
+  padding: clamp(18px, 2vw, 24px);
 }
 
 .situation-environmental-card__icon {
