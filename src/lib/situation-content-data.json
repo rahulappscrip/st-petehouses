@@ -3745,7 +3745,6 @@
       "legalNote": "This is general information, not legal advice. Mold disclosure rules can vary based on property type, transaction specifics, and applicable statutes. Consult a licensed Florida real estate attorney if you have specific questions about your disclosure obligations before completing any sale.",
       "items": [
         {
-          "icon": "any",
           "title": "Yes, You Can Sell with Mold",
           "body": "Selling a home with active mold in Florida is legal. Disclosure is required — but remediation before sale is not. Cash buyers like us purchase with full knowledge of the mold condition.",
           "link": {
@@ -3754,7 +3753,6 @@
           }
         },
         {
-          "icon": "lead",
           "title": "Disclosure Is Required",
           "body": "Florida law requires sellers to disclose known material defects, including mold, under Florida Statute §404.056 (indoor air quality) and general case law on material defects. Transparency protects you from post-sale liability.",
           "link": {
@@ -3763,7 +3761,6 @@
           }
         },
         {
-          "icon": "shield",
           "title": "Free Mold & Legal Resources",
           "body": "For free guidance on mold health risks, legal questions about disclosure obligations, and mold-related health concerns in Pinellas County:",
           "links": [
@@ -4412,17 +4409,14 @@
       "lede": "Florida law requires specific disclosures even in as-is cash sales. These obligations protect both parties and ensure a transparent transaction. We walk you through each one before you sign anything.",
       "items": [
         {
-          "icon": "lead",
           "title": "Disclosure Obligations",
           "body": "Even selling as-is, Florida law requires disclosing known defects — structural problems, roof leaks, plumbing or electrical issues, environmental hazards, and lead paint (pre-1978 homes). We guide you through exactly what must be shared."
         },
         {
-          "icon": "shield",
           "title": "The Florida As-Is Contract",
           "body": "Florida's standard as-is contract (FAR/BAR forms) states the property is sold in its current condition — no repair obligations for the seller. We explain each clause before you sign so there are no surprises."
         },
         {
-          "icon": "calendar",
           "title": "Move-Out & HOA Considerations",
           "body": "Move-out timelines are flexible — we work with your schedule. If your property is in an HOA, you must disclose fees, rules, and any pending violations before closing. We help you navigate all of it."
         }
