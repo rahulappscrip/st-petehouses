@@ -413,7 +413,7 @@ export function SituationValuationSection({
               ))}
             </dl>
             {data.statsNote ? <p className="situation-val-stats__note">{data.statsNote}</p> : null}
-            <Link href="#offer" className="btn btn--cta" style={{ width: "100%", justifyContent: "center" }}>
+            <Link href={SITE.cashOfferHref} className="btn btn--cta" style={{ width: "100%", justifyContent: "center" }}>
               Get my cash offer
               <Arr />
             </Link>
@@ -918,7 +918,7 @@ export function SituationProseSection({
                 </p>
               ))}
               <div className="situation-hero__actions">
-                <Link href="#offer" className="btn btn--cta">
+                <Link href={SITE.cashOfferHref} className="btn btn--cta">
                   Get my cash offer
                   <Arr />
                 </Link>
@@ -1824,7 +1824,6 @@ export function renderSituationSection(
             />
           }
           description={content.finalCta.description}
-          offerHref="#offer"
           bullets={content.finalCta.bullets}
         />
       );

@@ -80,6 +80,10 @@ export function HowItWorksContent() {
               across Tampa Bay — what it means, how long it takes, what it costs, and who it&apos;s
               right for. From a real local buyer, not a sales pitch.
             </p>
+            <div className="article-meta">
+              <span>Updated May 26, 2026</span>
+              <span>9 min read</span>
+            </div>
             <div className="byline">
               <Image
                 className="av"
@@ -92,10 +96,6 @@ export function HowItWorksContent() {
                 <b>By John Gardepe</b>
                 <span>Owner · We Buy St Pete Houses</span>
               </span>
-              <span className="dot" aria-hidden />
-              <span>Updated May 26, 2026</span>
-              <span className="dot" aria-hidden />
-              <span>9 min read</span>
             </div>
           </Reveal>
         </div>

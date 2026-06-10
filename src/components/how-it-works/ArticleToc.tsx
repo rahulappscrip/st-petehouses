@@ -52,7 +52,7 @@ export function ArticleToc() {
         ))}
       </ol>
       <div className="toc-cta">
-        <Link href="/#offer" className="btn btn--cta" style={{ justifyContent: "center" }}>
+        <Link href={SITE.cashOfferHref} className="btn btn--cta" style={{ justifyContent: "center" }}>
           Get my cash offer
         </Link>
         <a

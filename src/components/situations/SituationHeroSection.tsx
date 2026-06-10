@@ -100,7 +100,7 @@ export function SituationHeroSection({
             ) : null}
 
             <div className="situation-hero__actions">
-              <Link href={`#${formId}`} className="btn btn--cta">
+              <Link href={SITE.cashOfferHref} className="btn btn--cta">
                 Get my cash offer
                 <Arr />
               </Link>
