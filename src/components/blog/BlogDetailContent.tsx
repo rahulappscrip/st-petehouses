@@ -4,6 +4,7 @@ import type { CSSProperties, ReactNode } from "react";
 import { BlogToc } from "@/components/blog/BlogToc";
 import { InheritedHomeArticle } from "@/components/blog/InheritedHomeArticle";
 import { PlaceholderBlogArticle } from "@/components/blog/PlaceholderBlogArticle";
+import { ShortTermRentalBanArticle } from "@/components/blog/ShortTermRentalBanArticle";
 import { FaqSection } from "@/components/home/FaqSection";
 import { Arr } from "@/components/ui/Arr";
 import type { BlogPost } from "@/lib/blog";
@@ -77,6 +78,9 @@ function renderArticleBody(post: BlogPost) {
   if (post.slug === "how-to-price-an-inherited-home-in-florida") {
     return <InheritedHomeArticle post={post} />;
   }
+  if (post.slug === "short-term-rental-ban-st-petersburg") {
+    return <ShortTermRentalBanArticle post={post} />;
+  }
   return <PlaceholderBlogArticle post={post} />;
 }
 
@@ -107,9 +111,11 @@ export function BlogDetailContent({ post }: { post: BlogPost }) {
   const breadcrumbTitle =
     post.slug === "how-to-price-an-inherited-home-in-florida"
       ? "How to Price an Inherited Home in Florida"
-      : post.title.length > 48
-        ? `${post.title.slice(0, 48)}…`
-        : post.title;
+      : post.slug === "short-term-rental-ban-st-petersburg"
+        ? "Short Term Rental Ban in St. Petersburg, FL"
+        : post.title.length > 48
+          ? `${post.title.slice(0, 48)}…`
+          : post.title;
 
   return (
     <main className="blog-detail-page">
