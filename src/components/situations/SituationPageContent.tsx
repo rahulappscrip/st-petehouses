@@ -9,7 +9,11 @@ type Props = {
 export function SituationPageContent({ content }: Props) {
   return (
     <div className={`situation-page situation-page--${content.slug}`}>
-      <SituationHeroSection breadcrumb={content.breadcrumb} hero={content.hero} />
+      <SituationHeroSection
+        breadcrumb={content.breadcrumb}
+        hero={content.hero}
+        situationSlug={content.slug}
+      />
 
       {content.hero.keySteps && !content.process?.keySteps ? (
         <section className="situation-key-steps" aria-label="What to do right now">

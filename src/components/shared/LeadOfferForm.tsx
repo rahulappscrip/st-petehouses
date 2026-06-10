@@ -5,6 +5,7 @@ import { useCallback, useState } from "react";
 import { Arr } from "@/components/ui/Arr";
 import { FormToast } from "@/components/ui/FormToast";
 import { ASSETS, SELL_REASON_OPTIONS, SITE } from "@/lib/constants";
+import type { SellReasonValue } from "@/lib/situation-sell-reason";
 
 type LeadOfferFormProps = {
   id?: string;
@@ -14,6 +15,7 @@ type LeadOfferFormProps = {
   addressPlaceholder?: string;
   submitLabel?: string;
   className?: string;
+  defaultSellReason?: SellReasonValue;
 };
 
 type SubmitState = "idle" | "loading" | "error";
@@ -45,6 +47,7 @@ export function LeadOfferForm({
   addressPlaceholder = "123 Main St, St Petersburg, FL",
   submitLabel = "Get My Fair Offer",
   className = "",
+  defaultSellReason,
 }: LeadOfferFormProps) {
   const [submitState, setSubmitState] = useState<SubmitState>("idle");
   const [errorMessage, setErrorMessage] = useState("");
@@ -160,7 +163,7 @@ export function LeadOfferForm({
               name="sellReason"
               className="select"
               required
-              defaultValue=""
+              defaultValue={defaultSellReason ?? ""}
               disabled={isLoading}
             >
               <option value="" disabled>
