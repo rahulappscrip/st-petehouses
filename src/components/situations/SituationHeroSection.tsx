@@ -4,6 +4,7 @@ import { LeadOfferForm } from "@/components/shared/LeadOfferForm";
 import { Arr } from "@/components/ui/Arr";
 import { Reveal } from "@/components/ui/Reveal";
 import { SITE } from "@/lib/constants";
+import { getSituationSellReason } from "@/lib/situation-sell-reason";
 import type { SituationHero } from "@/lib/situation-types";
 
 type Props = {
@@ -11,6 +12,7 @@ type Props = {
   hero: SituationHero;
   showBreadcrumb?: boolean;
   formId?: string;
+  situationSlug?: string;
 };
 
 export function SituationHeroSection({
@@ -18,7 +20,10 @@ export function SituationHeroSection({
   hero,
   showBreadcrumb = true,
   formId = "offer",
+  situationSlug,
 }: Props) {
+  const defaultSellReason = situationSlug ? getSituationSellReason(situationSlug) : undefined;
+
   return (
     <>
       {hero.compassionBanner ? (
@@ -118,6 +123,7 @@ export function SituationHeroSection({
             formTitle={hero.formTitle}
             formIntro={hero.formIntro}
             addressPlaceholder={hero.addressPlaceholder ?? "123 Main St, St Petersburg, FL"}
+            defaultSellReason={defaultSellReason}
           />
           </Reveal>
         </div>
