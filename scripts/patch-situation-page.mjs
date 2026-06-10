@@ -15,6 +15,7 @@ import { CASH_HOME_BUYERS_CONTENT } from "./situation-content/cash-home-buyers.m
 import { FORECLOSURE_CONTENT } from "./situation-content/foreclosure.mjs";
 import { INHERITED_CONTENT } from "./situation-content/inherited.mjs";
 import { FIRE_DAMAGE_CONTENT } from "./situation-content/fire-damage.mjs";
+import { CONDEMNED_CONTENT, CONDEMNED_PAGE } from "./situation-content/condemned.mjs";
 
 const PATCHES = {
   foreclosure: FORECLOSURE_CONTENT,
@@ -28,14 +29,19 @@ const PATCHES = {
   "as-is-florida": AS_IS_FLORIDA_CONTENT,
   "cash-home-buyers": CASH_HOME_BUYERS_CONTENT,
   "fire-damage": FIRE_DAMAGE_CONTENT,
+  condemned: CONDEMNED_CONTENT,
+};
+
+const NEW_PAGES = {
+  condemned: CONDEMNED_PAGE,
 };
 
 const STRAY_KEYS = [
   "situations", "testimonials", "market", "guarantee", "infoBlocks", "diff", "whyUs",
-  "comparison", "courtProcess", "prose", "cards", "payoff", "tenantRights", "obligations", "caseStudies",
+  "comparison", "courtProcess", "prose", "cards", "payoff", "tenantRights", "caseStudies",
   "insurance", "environmental", "prosCons", "trust", "empathy",
   "buyProcess", "probate", "tax", "valuation",
-  "process", "cards",
+  "process", "cards", "floodLaw", "stages", "obligations",
 ];
 
 function mergeSection(existing, incoming) {
@@ -110,6 +116,11 @@ const pages = JSON.parse(fs.readFileSync(dataPath, "utf8"));
 for (const slug of slugs) {
   const idx = pages.findIndex((p) => p.slug === slug);
   if (idx < 0) {
+    if (NEW_PAGES[slug]) {
+      pages.push(NEW_PAGES[slug]);
+      console.log("Added", slug, "— sections:", NEW_PAGES[slug].sectionOrder.join(", "));
+      continue;
+    }
     console.error("Slug not found:", slug);
     process.exit(1);
   }

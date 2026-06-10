@@ -1382,7 +1382,8 @@ export function renderSituationSection(
           content.slug === "fire-damage" ||
           content.slug === "water-damage" ||
           content.slug === "sell-as-is" ||
-          content.slug === "as-is-florida") &&
+          content.slug === "as-is-florida" ||
+          content.slug === "condemned") &&
         content.empathy
       ) {
         return <SituationEmpathyCtaSection key={id} data={content.empathy} alt={alt} />;
@@ -1392,6 +1393,25 @@ export function renderSituationSection(
       ) : null;
 
     case "stages":
+      if (content.slug === "condemned" && content.stages) {
+        return (
+          <ProcessSection
+            key={id}
+            eyebrow={content.stages.eyebrow}
+            title={titleToParts(content.stages)}
+            lede={content.stages.lede}
+            steps={content.stages.items.map((item, i) => ({
+              num: String(i + 1).padStart(2, "0"),
+              title: item.title,
+              body: item.link ? `${item.body} ${item.link.label}` : item.body,
+              metaLabel: "Timing",
+              metaValue: item.label,
+            }))}
+            showStepMeta
+            showCtas={false}
+          />
+        );
+      }
       return content.stages ? <StageCardsSection key={id} data={content.stages} alt={alt} /> : null;
 
     case "tenantMarket":
@@ -1455,6 +1475,7 @@ export function renderSituationSection(
       return content.process ? (
         <ProcessSection
           key={id}
+          id={content.slug === "condemned" ? "how-we-help" : "process"}
           eyebrow={content.process.eyebrow}
           title={titleToParts(content.process)}
           lede={content.process.lede}

@@ -773,6 +773,7 @@ export const NAV_LINKS = {
     { label: "Sell as-is (St Pete)", href: "/situations/sell-as-is" },
     { label: "Sell as-is (Florida)", href: "/situations/as-is-florida" },
     { label: "Cash home buyers", href: "/situations/cash-home-buyers" },
+    { label: "Condemned house", href: "/situations/condemned" },
   ],
   company: [
     { label: "About Us", href: "/about" },
@@ -794,6 +795,7 @@ export const FOOTER_SITUATIONS = [
   { label: "Sell as-is (St Pete)", href: "/situations/sell-as-is" },
   { label: "Sell as-is (Florida)", href: "/situations/as-is-florida" },
   { label: "Cash home buyers", href: "/situations/cash-home-buyers" },
+  { label: "Condemned house", href: "/situations/condemned" },
 ] as const;
 
 export const STATS = [
