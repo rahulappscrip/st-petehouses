@@ -640,12 +640,9 @@ export const MEET_OWNER = {
   badgeCompany: "We Buy St. Pete Houses",
 } as const;
 
-/** Footer social links — replace `#` with real URLs when ready */
+/** Footer social links */
 export const SOCIAL_LINKS = [
   { label: "Facebook", href: "https://www.facebook.com/WeBuyStPeteHouses", icon: "facebook" },
-  { label: "LinkedIn", href: "#", icon: "linkedin" },
-  { label: "Instagram", href: "#", icon: "instagram" },
-  { label: "Google", href: "#", icon: "google" },
 ] as const;
 
 export const TOPBAR = {
@@ -1129,7 +1126,7 @@ export function mapSituationPageCityCards(
       title: item.title,
       body: item.body,
       image: photo?.image,
-      imageAlt: photo?.imageAlt ?? item.icon,
+      imageAlt: photo?.imageAlt ?? `${item.title} — cash home sale situation in St. Petersburg`,
     };
   });
 }

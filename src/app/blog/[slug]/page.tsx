@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { BlogDetailContent } from "@/components/blog/BlogDetailContent";
 import { BLOG_POSTS, getBlogPost } from "@/lib/blog";
 import { SITE } from "@/lib/constants";
+import { getBlogPostKeyword } from "@/lib/seo-keywords";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -22,6 +23,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `${post.title} | We Buy St Pete Houses`,
     description: post.metaDescription,
+    keywords: getBlogPostKeyword(post),
     alternates: { canonical: `/blog/${post.slug}` },
     authors: [{ name: post.author }],
     openGraph: {

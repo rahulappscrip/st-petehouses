@@ -5,7 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Main } from "@/components/layout/Main";
 import { MobileCallBar } from "@/components/layout/MobileCallBar";
 import { ASSETS, SITE } from "@/lib/constants";
-import { REAL_ESTATE_AGENT_JSON_LD } from "@/lib/schema";
+import { REAL_ESTATE_AGENT_JSON_LD, SITE_PUBLISHER, SITE_PUBLISHER_JSON_LD } from "@/lib/schema";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -15,7 +15,12 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description: "We buy houses in St. Petersburg and Tampa Bay for cash. Fair offers, fast closings, no repairs required.",
+  publisher: SITE_PUBLISHER.name,
   robots: { index: true, follow: true },
+  openGraph: {
+    siteName: SITE.name,
+    locale: "en_US",
+  },
   icons: {
     icon: [
       { url: ASSETS.favicon, sizes: "32x32", type: "image/png" },
@@ -40,7 +45,12 @@ export default function RootLayout({
       <body>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(REAL_ESTATE_AGENT_JSON_LD) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [REAL_ESTATE_AGENT_JSON_LD, SITE_PUBLISHER_JSON_LD],
+            }),
+          }}
         />
         <div className="site-chrome">
           <TopBar />

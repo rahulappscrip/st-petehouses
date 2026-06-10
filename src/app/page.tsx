@@ -16,15 +16,12 @@ import { FaqSection } from "@/components/home/FaqSection";
 import { FinalCtaSection } from "@/components/home/FinalCtaSection";
 import { GUARANTEE_ASIDE_CHECKLIST, HOMEPAGE_SEO, SITE } from "@/lib/constants";
 import { getTestimonialsData } from "@/lib/reviews/get-reviews";
+import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 export const metadata: Metadata = {
   title: HOMEPAGE_SEO.title,
   description: HOMEPAGE_SEO.description,
-  keywords: [
-    HOMEPAGE_SEO.primaryKeyword,
-    "sell house fast St Petersburg",
-    "cash home buyers St Petersburg FL",
-  ],
+  keywords: PAGE_KEYWORDS.home,
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",

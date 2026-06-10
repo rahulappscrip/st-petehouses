@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { CityPageContent } from "@/components/cities/CityPageContent";
 import { SITE } from "@/lib/constants";
 import { CITY_PAGES, getCityPage } from "@/lib/cities";
+import { getCityPageKeyword } from "@/lib/seo-keywords";
 
 type PageProps = {
   params: Promise<{ location: string }>;
@@ -23,6 +24,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title,
     description: page.metaDescription,
+    keywords: getCityPageKeyword(page.cityName),
     alternates: { canonical },
     openGraph: {
       type: "article",

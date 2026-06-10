@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import { GetACashOfferPageContent } from "@/components/get-a-cash-offer/GetACashOfferPageContent";
 import { GET_A_CASH_OFFER_PAGE } from "@/lib/get-a-cash-offer-content";
 import { SITE } from "@/lib/constants";
+import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 export const metadata: Metadata = {
   title: GET_A_CASH_OFFER_PAGE.meta.title,
   description: GET_A_CASH_OFFER_PAGE.meta.description,
+  keywords: PAGE_KEYWORDS.getACashOffer,
   alternates: { canonical: "/get-a-cash-offer" },
   openGraph: {
     type: "website",

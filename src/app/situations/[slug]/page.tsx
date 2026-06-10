@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { SituationPageContent } from "@/components/situations/SituationPageContent";
 import { SITE } from "@/lib/constants";
 import { getSituationContent, SITUATION_PAGES } from "@/lib/situations";
+import { getSituationPageKeyword } from "@/lib/seo-keywords";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -22,6 +23,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: content.metaTitle,
     description: content.metaDescription,
+    keywords: getSituationPageKeyword(content.slug, content.label),
     alternates: { canonical },
     openGraph: {
       type: "article",

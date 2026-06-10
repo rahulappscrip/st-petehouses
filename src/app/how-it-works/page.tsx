@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { HowItWorksContent } from "@/components/how-it-works/HowItWorksContent";
 import { SITE } from "@/lib/constants";
+import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 export const metadata: Metadata = {
   title: "How It Works: Selling Your House Fast for Cash | We Buy St Pete Houses",
   description:
     "Learn how our cash home buying process works — from inquiry to closing in as little as 7 days. No repairs, no fees, no hassle. Serving St Petersburg and Tampa Bay.",
+  keywords: PAGE_KEYWORDS.howItWorks,
   alternates: { canonical: "/how-it-works" },
   openGraph: {
     type: "article",

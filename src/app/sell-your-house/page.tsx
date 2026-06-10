@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { SellYourHouseContent } from "@/components/sell-your-house/SellYourHouseContent";
 import { SITE } from "@/lib/constants";
+import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 export const metadata: Metadata = {
   title: "Sell Your House Fast in St. Petersburg, FL | Cash Offers",
   description:
     "Sell your house fast in St. Petersburg with We Buy St Pete Houses. Get a cash offer quickly, close in as little as 7 days, and avoid repairs or commissions.",
+  keywords: PAGE_KEYWORDS.sellYourHouse,
   alternates: { canonical: "/sell-your-house" },
   openGraph: {
     type: "website",

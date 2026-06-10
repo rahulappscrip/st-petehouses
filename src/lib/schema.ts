@@ -31,9 +31,21 @@ export function buildFaqPageJsonLd(items: readonly FaqSchemaItem[]) {
   };
 }
 
+/** Site-wide publisher — used in root layout metadata and JSON-LD. */
+export const SITE_PUBLISHER = {
+  name: SITE.name,
+  url: SITE.url,
+} as const;
+
+export const SITE_PUBLISHER_JSON_LD = {
+  "@type": "Organization",
+  "@id": `${SITE.url}#publisher`,
+  name: SITE_PUBLISHER.name,
+  url: SITE_PUBLISHER.url,
+} as const;
+
 /** Site-wide RealEstateAgent structured data (schema.org) */
 export const REAL_ESTATE_AGENT_JSON_LD = {
-  "@context": "https://schema.org",
   "@type": "RealEstateAgent",
   "@id": `${SITE.url}#organization`,
   name: SITE.name,

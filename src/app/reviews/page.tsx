@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import { ReviewsPageContent } from "@/components/reviews/ReviewsPageContent";
 import { SITE } from "@/lib/constants";
 import { getTestimonialsData } from "@/lib/reviews/get-reviews";
+import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 export const metadata: Metadata = {
   title: "We Buy St Pete Houses Reviews: Real Customer Feedback",
   description:
     "Read authentic We Buy St Pete Houses reviews from St Petersburg homeowners. See how local sellers experienced our fast, transparent cash home buying process.",
+  keywords: PAGE_KEYWORDS.reviews,
   alternates: { canonical: "/reviews" },
   openGraph: {
     type: "article",
