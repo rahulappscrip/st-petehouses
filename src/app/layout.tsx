@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { TopBar } from "@/components/layout/TopBar";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { Main } from "@/components/layout/Main";
 import { MobileCallBar } from "@/components/layout/MobileCallBar";
 import { ASSETS, SITE } from "@/lib/constants";
 import { REAL_ESTATE_AGENT_JSON_LD } from "@/lib/schema";
@@ -45,7 +46,7 @@ export default function RootLayout({
           <TopBar />
           <Header />
         </div>
-        <main>{children}</main>
+        <Main>{children}</Main>
         <Footer />
         <MobileCallBar />
       </body>

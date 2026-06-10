@@ -40,7 +40,7 @@ export function CityContactSection({ eyebrow, title, lede }: Props) {
             <h2>Takes less than 2 minutes.</h2>
             <p>No commitment required. We respond within 24 hours.</p>
             <div className="situation-aside__actions">
-              <Link href="#offer" className="btn btn--cta">
+              <Link href={SITE.cashOfferHref} className="btn btn--cta">
                 Get my cash offer
                 <Arr />
               </Link>

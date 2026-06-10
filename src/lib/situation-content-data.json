@@ -6116,9 +6116,7 @@
       "asideList": [
         "Time to remove personal items — Take family heirlooms, photos, documents — anything with personal meaning. We work on your schedule, not ours.",
         "Closing day — We handle all paperwork with a licensed Pinellas County title company. You sign and receive your cash. The property transfers to us.",
-        "We coordinate junk removal — Our local vendor network handles full cleanout — responsibly sorting, donating salvageable items, and properly disposing of the rest.",
-        "We resolve code violations — Any outstanding notices, fines, or liens become our responsibility. We coordinate with the city directly to bring the property into compliance.",
-        "You're completely done — No ongoing liability, no follow-up calls, no bills. One clean exit from a situation that may have weighed on you for months or years."
+         "You're completely done — No ongoing liability, no follow-up calls, no bills. One clean exit from a situation that may have weighed on you for months or years."
       ]
     },
     "tenantMarket": {
@@ -6140,6 +6138,10 @@
         {
           "label": "Greater Tampa Bay",
           "body": "Tampa, Manatee, Palmetto, Sarasota, Hudson, New Port Richey"
+        },
+        {
+          "label": "ALSO SERVING",
+          "body": "St Pete Beach, Treasure Island, Madeira Beach, Kenneth City, Belleair, Safety Harbor, Tarpon Springs, Oldsmar, Land O' Lakes, Wesley Chapel"
         }
       ]
     },
@@ -6221,9 +6223,19 @@
         {
           "tag": "Legal Referral",
           "title": "Florida Bar — Lawyer Referral Service",
-          "body": "Find a licensed Florida attorney for questions about property disclosure obligations, probate complications, or complex title situations related to hoarder properties.",
-          "href": "https://www.floridabar.org/public/lrs/",
-          "linkLabel": "Florida Bar Referral Service →"
+          "body": "Find a licensed Florida attorney for questions about property disclosure obligations, probate complications, or complex title situations related to hoarder properties."
+        }
+        ,
+        {
+          "tag": "Tax Collector",
+          "title": "Pinellas County Tax Collector",
+          "body": "Property tax information, outstanding balances, and payment history. Important for confirming any tax liens attached to the property"
+        }
+        ,
+        {
+          "tag": "Florida",
+          "title": "Florida Dept. of Children & Families",
+          "body": "When the homeowner requires social services support alongside a property sale including adult protective services and community care coordination."
         }
       ]
     },
@@ -6654,9 +6666,19 @@
         {
           "tag": "Legal Referral",
           "title": "Florida Bar — Elder Law Referral",
-          "body": "For complex situations — estate administration, heir disputes, or legal questions about the reverse mortgage payoff — the Florida Bar connects you with licensed elder law attorneys.",
-          "href": "https://www.floridabar.org/public/lrs/",
-          "linkLabel": "Florida Bar Referral →"
+          "body": "For complex situations — estate administration, heir disputes, or legal questions about the reverse mortgage payoff — the Florida Bar connects you with licensed elder law attorneys."
+        }
+        ,
+        {
+          "tag": "FEDERAL — HUD",
+          "title": "HUD — HECM Heir & Estate Resources",
+          "body": "Specific guidance for heirs and estates dealing with a reverse mortgage after a borrower's death."
+        }
+        ,
+        {
+          "tag": "SENIOR RESOURCES",
+          "title": "AARP — Reverse Mortgage Guide",
+          "body": "Plain-language guidance on reverse mortgage rights, servicer obligations, and what to expect when selling or repaying a HECM loan."
         }
       ]
     },
@@ -6983,6 +7005,16 @@
           "title": "Florida Dept of Revenue — Pinellas",
           "body": "State tax guidance, documentary stamp information, and filings related to Florida real estate transactions.",
           "note": "floridarevenue.com"
+        },
+        {
+          "tag": "Circuit Court",
+          "title": "Pinellas County Clerk of the Circuit Court",
+          "body": "Official property records, lien searches, deed transfers, and title-related documents. Essential for confirming clear title before any as-is sale closes."
+        },
+        {
+          "tag": "Referral Service",
+          "title": "Florida Bar Lawyer Referral Service",
+          "body": "As-is sales can raise disclosure liability questions. A licensed Florida real estate attorney can review your as-is contract and advise on your disclosure obligations."
         }
       ],
       "footerNote": "For legal or financial advice specific to your situation, consult a qualified attorney or tax professional familiar with Florida real estate transactions."
