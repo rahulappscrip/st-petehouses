@@ -32,7 +32,7 @@ export function FinalCtaSection({
             <span className="eyebrow">{eyebrow}</span>
             <div className="cta-card__copy">
               <h2 className="h-2">{title}</h2>
-              <p>{description}</p>
+              {description ? <p>{description}</p> : null}
               {bullets && bullets.length > 0 ? (
                 <ul className="cta-card__bullets">
                   {bullets.map((item) => (

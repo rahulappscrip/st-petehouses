@@ -31,7 +31,7 @@ function BlogNextCta({ post }: { post: BlogPost }) {
           {cta.title.after}
         </>
       }
-      description={cta.description}
+      description=""
     />
   );
 }
