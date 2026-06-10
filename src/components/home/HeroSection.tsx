@@ -3,7 +3,9 @@
 import type { ReactNode } from "react";
 import { Reveal } from "@/components/ui/Reveal";
 import { LeadOfferForm } from "@/components/shared/LeadOfferForm";
+import { SiteImg } from "@/components/ui/SiteImage";
 import { ASSETS } from "@/lib/constants";
+import { PERSON_IMAGES } from "@/lib/image-accessibility";
 
 export type HeroContent = {
   title: ReactNode;
@@ -49,10 +51,10 @@ export function HeroSection({ content = DEFAULT_HERO }: { content?: HeroContent 
         <div className="hero-body">
           <Reveal as="div" d={2} className="hero-portrait" aria-label="John Gardepe — owner">
             <div className="hero-portrait__img">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <SiteImg
                 src={ASSETS.johnPortrait}
-                alt="John Gardepe, owner of We Buy St Pete Houses"
+                alt={PERSON_IMAGES.johnPortrait.alt}
+                title={PERSON_IMAGES.johnPortrait.title}
                 className="hero-portrait__photo"
                 width={894}
                 height={1302}

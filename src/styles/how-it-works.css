@@ -523,6 +523,7 @@
 .toc {
   position: sticky;
   top: calc(var(--topbar-h) + var(--nav-h) + 16px);
+  margin-bottom: 30px;
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: var(--radius-l);

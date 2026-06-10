@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { SiteImage } from "@/components/ui/SiteImage";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 type Props = {
@@ -8,9 +8,18 @@ type Props = {
   afterSrc: string;
   beforeAlt: string;
   afterAlt: string;
+  beforeTitle?: string;
+  afterTitle?: string;
 };
 
-export function BeforeAfterSlider({ beforeSrc, afterSrc, beforeAlt, afterAlt }: Props) {
+export function BeforeAfterSlider({
+  beforeSrc,
+  afterSrc,
+  beforeAlt,
+  afterAlt,
+  beforeTitle,
+  afterTitle,
+}: Props) {
   const frameRef = useRef<HTMLDivElement>(null);
   const [pos, setPos] = useState(50);
   const dragging = useRef(false);
@@ -92,10 +101,24 @@ export function BeforeAfterSlider({ beforeSrc, afterSrc, beforeAlt, afterAlt }: 
   return (
     <div className="ba-frame" ref={frameRef}>
       <div className="ba-side ba-before">
-        <Image src={beforeSrc} alt={beforeAlt} fill sizes="(min-width: 880px) 50vw, 100vw" className="ba-side__img" />
+        <SiteImage
+          src={beforeSrc}
+          alt={beforeAlt}
+          title={beforeTitle ?? beforeAlt}
+          fill
+          sizes="(min-width: 880px) 50vw, 100vw"
+          className="ba-side__img"
+        />
       </div>
       <div className="ba-side ba-after">
-        <Image src={afterSrc} alt={afterAlt} fill sizes="(min-width: 880px) 50vw, 100vw" className="ba-side__img" />
+        <SiteImage
+          src={afterSrc}
+          alt={afterAlt}
+          title={afterTitle ?? afterAlt}
+          fill
+          sizes="(min-width: 880px) 50vw, 100vw"
+          className="ba-side__img"
+        />
       </div>
       <button className="ba-handle" type="button" aria-label="Drag to reveal before and after">
         <span className="ba-handle-line" aria-hidden="true" />

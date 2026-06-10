@@ -19,20 +19,22 @@ function parseLeadInput(body: unknown): LeadFormInput | null {
     !isNonEmptyString(data.fullName) ||
     !isNonEmptyString(data.address) ||
     !isNonEmptyString(data.sellReason) ||
-    !isNonEmptyString(data.phone) ||
-    !isNonEmptyString(data.email)
+    !isNonEmptyString(data.phone)
   ) {
     return null;
   }
 
-  if (!isValidEmail(data.email.trim())) return null;
+  const email =
+    typeof data.email === "string" ? data.email.trim() : "";
+
+  if (email && !isValidEmail(email)) return null;
 
   return {
     fullName: data.fullName.trim(),
     address: data.address.trim(),
     sellReason: data.sellReason.trim(),
     phone: data.phone.trim(),
-    email: data.email.trim(),
+    email,
   };
 }
 

@@ -1,4 +1,5 @@
-import Image from "next/image";
+import { SiteImage } from "@/components/ui/SiteImage";
+import { imageTitleFrom } from "@/lib/image-accessibility";
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHead } from "@/components/ui/SectionHead";
@@ -42,9 +43,10 @@ export function InheritedBuyProcessVisual({ data, alt }: Props) {
                 <div className="situation-inherited-buy__card-media">
                   <div className="situation-inherited-buy__card-img-wrap">
                     {media?.image ? (
-                      <Image
+                      <SiteImage
                         src={media.image}
                         alt={media.imageAlt}
+                        title={imageTitleFrom(media)}
                         width={640}
                         height={480}
                         sizes="(min-width: 1080px) 25vw, (min-width: 640px) 50vw, 100vw"
@@ -73,9 +75,10 @@ export function InheritedBuyProcessVisual({ data, alt }: Props) {
                 <li key={step.num} className="situation-inherited-buy__step">
                   {stepIcon ? (
                     <span className="situation-inherited-buy__step-icon situation-inherited-buy__step-icon--svg">
-                      <Image
+                      <SiteImage
                         src={stepIcon.src}
                         alt={stepIcon.alt}
+                        title={stepIcon.alt}
                         width={60}
                         height={60}
                         className="situation-inherited-buy__step-icon-img"

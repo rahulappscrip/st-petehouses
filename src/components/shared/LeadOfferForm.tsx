@@ -4,7 +4,9 @@ import type { FormEvent, ReactNode } from "react";
 import { useCallback, useState } from "react";
 import { Arr } from "@/components/ui/Arr";
 import { FormToast } from "@/components/ui/FormToast";
+import { SiteImg } from "@/components/ui/SiteImage";
 import { ASSETS, SELL_REASON_OPTIONS, SITE } from "@/lib/constants";
+import { TRUST_IMAGES } from "@/lib/image-accessibility";
 import type { SellReasonValue } from "@/lib/situation-sell-reason";
 
 type LeadOfferFormProps = {
@@ -23,14 +25,24 @@ type SubmitState = "idle" | "loading" | "error";
 const SUCCESS_MESSAGE =
   "Thank you! We've received your information and will be in touch within 24 hours.";
 
-function FieldLabel({ htmlFor, children }: { htmlFor: string; children: ReactNode }) {
+function FieldLabel({
+  htmlFor,
+  children,
+  required = true,
+}: {
+  htmlFor: string;
+  children: ReactNode;
+  required?: boolean;
+}) {
   return (
     <label htmlFor={htmlFor}>
       {children}
-      <span className="field-required" aria-hidden="true">
-        {" "}
-        *
-      </span>
+      {required ? (
+        <span className="field-required" aria-hidden="true">
+          {" "}
+          *
+        </span>
+      ) : null}
     </label>
   );
 }
@@ -106,11 +118,11 @@ export function LeadOfferForm({
       <aside className={rootClass} id={id} aria-label="Get a cash offer">
         <div className="lead-top">
           <div className="lead-badges">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <SiteImg
               className="lead-badge-bbb"
               src={ASSETS.bbbBadge}
-              alt="BBB Accredited Business, A+ rating"
+              alt={TRUST_IMAGES.bbbBadge.alt}
+              title={TRUST_IMAGES.bbbBadge.title}
               width={2000}
               height={751}
               decoding="async"
@@ -192,12 +204,13 @@ export function LeadOfferForm({
               />
             </div>
             <div className="field">
-              <FieldLabel htmlFor="email">Email</FieldLabel>
+              <FieldLabel htmlFor="email" required={false}>
+                Email
+              </FieldLabel>
               <input
                 id="email"
                 name="email"
                 className="input"
-                required
                 type="email"
                 autoComplete="email"
                 placeholder="you@example.com"

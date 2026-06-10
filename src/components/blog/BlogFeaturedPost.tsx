@@ -1,9 +1,11 @@
-import Image from "next/image";
 import Link from "next/link";
+import { SiteImage } from "@/components/ui/SiteImage";
 import type { BlogPost } from "@/lib/blog";
-import { getBlogPostHref } from "@/lib/blog";
+import { getBlogHeroImageCopy, getBlogPostHref } from "@/lib/blog";
 
 export function BlogFeaturedPost({ post }: { post: BlogPost }) {
+  const heroImage = post.heroImage ? getBlogHeroImageCopy(post) : null;
+
   return (
     <div className="featured">
       <Link
@@ -11,10 +13,11 @@ export function BlogFeaturedPost({ post }: { post: BlogPost }) {
         className="featured-img"
         aria-label={`Read featured article: ${post.title}`}
       >
-        {post.heroImage ? (
-          <Image
+        {post.heroImage && heroImage ? (
+          <SiteImage
             src={post.heroImage}
-            alt={post.heroImageAlt ?? post.title}
+            alt={heroImage.alt}
+            title={heroImage.title}
             fill
             sizes="(max-width: 1100px) 100vw, 50vw"
             priority

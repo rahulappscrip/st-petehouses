@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { SiteImage } from "@/components/ui/SiteImage";
 import { BlogAuthorBio } from "@/components/blog/BlogAuthorBio";
 import type { BlogPost } from "@/lib/blog";
 
@@ -75,9 +75,10 @@ export function ShortTermRentalBanArticle({ post }: { post: BlogPost }) {
         </p>
 
         <figure className="figure">
-          <Image
+          <SiteImage
             src={`${STR_BLOG_IMAGE}/first-photo.webp`}
             alt="Illustration of layered government regulation — city, county, and state levels that govern short-term rental rules in St. Petersburg, Florida."
+            title="City, county, and state STR rules that apply in St. Petersburg"
             width={900}
             height={506}
             sizes="(max-width: 1100px) 100vw, 900px"
@@ -187,9 +188,10 @@ export function ShortTermRentalBanArticle({ post }: { post: BlogPost }) {
         </p>
 
         <figure className="figure">
-          <Image
+          <SiteImage
             src={`${STR_BLOG_IMAGE}/second-photo.webp`}
             alt="A formal notice document representing a code enforcement violation notice for a short-term rental property in St. Petersburg."
+            title="Code enforcement violation notice for a St. Petersburg short-term rental"
             width={900}
             height={506}
             sizes="(max-width: 1100px) 100vw, 900px"
@@ -353,9 +355,10 @@ export function ShortTermRentalBanArticle({ post }: { post: BlogPost }) {
         </p>
 
         <figure className="figure">
-          <Image
+          <SiteImage
             src={`${STR_BLOG_IMAGE}/Third-photo.webp`}
             alt="Florida state compliance documents and tax forms related to short-term rental licensing and transient rental tax registration."
+            title="Florida STR licensing and transient rental tax registration documents"
             width={900}
             height={506}
             sizes="(max-width: 1100px) 100vw, 900px"

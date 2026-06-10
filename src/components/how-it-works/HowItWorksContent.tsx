@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import { SiteImage } from "@/components/ui/SiteImage";
 import { Reveal } from "@/components/ui/Reveal";
 import { ArticleToc } from "@/components/how-it-works/ArticleToc";
 import { ProcessStepsGrid } from "@/components/how-it-works/ProcessStepsGrid";
@@ -15,6 +15,7 @@ import {
   HOW_IT_WORKS_SITUATIONS,
   HOW_IT_WORKS_STEPS,
 } from "@/lib/constants";
+import { HOW_IT_WORKS_IMAGES, PERSON_IMAGES } from "@/lib/image-accessibility";
 
 const BENEFIT_ICONS = [
   <g key="1"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></g>,
@@ -85,10 +86,11 @@ export function HowItWorksContent() {
               <span>9 min read</span>
             </div>
             <div className="byline">
-              <Image
+              <SiteImage
                 className="av"
                 src={ASSETS.johnByline}
-                alt="John Gardepe"
+                alt={PERSON_IMAGES.johnByline.alt}
+                title={PERSON_IMAGES.johnByline.title}
                 width={40}
                 height={40}
               />
@@ -159,9 +161,10 @@ export function HowItWorksContent() {
                 </div>
               </div>
               <figure className="hiw-inline-image">
-                <Image
+                <SiteImage
                   src="/assets/images/HIW-Image-1.webp"
-                  alt="Cash buyer explainer and comparison"
+                  alt={HOW_IT_WORKS_IMAGES.explainer.alt}
+                  title={HOW_IT_WORKS_IMAGES.explainer.title}
                   fill
                   sizes="(max-width: 980px) 100vw, 900px"
                   className="hiw-inline-image__img"
@@ -185,9 +188,10 @@ export function HowItWorksContent() {
                 no pressure and no surprises.
               </p>
               <figure className="hiw-inline-image">
-                <Image
+                <SiteImage
                   src="/assets/images/HIW-Image-2.webp"
-                  alt="Process flow diagram for cash home buying"
+                  alt={HOW_IT_WORKS_IMAGES.processFlow.alt}
+                  title={HOW_IT_WORKS_IMAGES.processFlow.title}
                   fill
                   sizes="(max-width: 980px) 100vw, 900px"
                   className="hiw-inline-image__img"
@@ -273,9 +277,10 @@ export function HowItWorksContent() {
                 successful closings.
               </p>
               <figure className="hiw-inline-image">
-                <Image
+                <SiteImage
                   src="/assets/images/HOW-IT-WORKS-Cash-Homebuyers.webp"
-                  alt="Trust signals for verifying legitimate cash home buyers"
+                  alt={HOW_IT_WORKS_IMAGES.trustSignals.alt}
+                  title={HOW_IT_WORKS_IMAGES.trustSignals.title}
                   fill
                   sizes="(max-width: 980px) 100vw, 900px"
                   className="hiw-inline-image__img"

@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { SiteImage } from "@/components/ui/SiteImage";
 import type { ReactNode } from "react";
 import { BlogToc } from "@/components/blog/BlogToc";
 import { InheritedHomeArticle } from "@/components/blog/InheritedHomeArticle";
@@ -8,7 +8,7 @@ import { ShortTermRentalBanArticle } from "@/components/blog/ShortTermRentalBanA
 import { FaqSection } from "@/components/home/FaqSection";
 import { FinalCtaSection } from "@/components/home/FinalCtaSection";
 import type { BlogPost } from "@/lib/blog";
-import { DEFAULT_BLOG_NEXT_CTA } from "@/lib/blog";
+import { DEFAULT_BLOG_NEXT_CTA, getBlogHeroImageCopy } from "@/lib/blog";
 
 function CrumbArrow() {
   return (
@@ -61,6 +61,7 @@ function getDetailTitle(post: BlogPost): ReactNode {
 }
 
 export function BlogDetailContent({ post }: { post: BlogPost }) {
+  const heroImage = post.heroImage ? getBlogHeroImageCopy(post) : null;
   const toc =
     post.toc ??
     (post.isPlaceholder
@@ -121,11 +122,12 @@ export function BlogDetailContent({ post }: { post: BlogPost }) {
             </span>
           </div>
 
-          {post.heroImage ? (
+          {post.heroImage && heroImage ? (
             <figure className="hero-image">
-              <Image
+              <SiteImage
                 src={post.heroImage}
-                alt={post.heroImageAlt ?? post.title}
+                alt={heroImage.alt}
+                title={heroImage.title}
                 fill
                 sizes="(max-width: 1100px) 100vw, 1100px"
                 priority

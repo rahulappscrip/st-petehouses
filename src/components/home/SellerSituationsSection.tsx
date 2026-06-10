@@ -1,8 +1,9 @@
 import type { ReactNode } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
+import { SiteImage } from "@/components/ui/SiteImage";
 import { SELLER_SITUATIONS } from "@/lib/constants";
+import { imageTitleFrom } from "@/lib/image-accessibility";
 
 export type SellerSituationCard = {
   title: string;
@@ -10,6 +11,7 @@ export type SellerSituationCard = {
   href: string;
   image: string;
   imageAlt: string;
+  imageTitle?: string;
 };
 
 type SellerSituationsSectionProps = {
@@ -56,9 +58,10 @@ export function SellerSituationsSection({
             const card = (
               <>
                 <div className="sit-card__media">
-                  <Image
+                  <SiteImage
                     src={item.image}
                     alt={item.imageAlt}
+                    title={imageTitleFrom(item)}
                     width={800}
                     height={500}
                     sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"

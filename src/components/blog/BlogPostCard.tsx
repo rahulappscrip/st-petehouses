@@ -1,16 +1,19 @@
-import Image from "next/image";
 import Link from "next/link";
+import { SiteImage } from "@/components/ui/SiteImage";
 import type { BlogPost } from "@/lib/blog";
-import { getBlogPostHref } from "@/lib/blog";
+import { getBlogHeroImageCopy, getBlogPostHref } from "@/lib/blog";
 
 export function BlogPostCard({ post }: { post: BlogPost }) {
+  const heroImage = post.heroImage ? getBlogHeroImageCopy(post) : null;
+
   return (
     <Link href={getBlogPostHref(post.slug)} className="post">
       <div className={`post-img${post.heroImage ? " post-img--photo" : ` tone-${post.imageTone}`}`}>
-        {post.heroImage ? (
-          <Image
+        {post.heroImage && heroImage ? (
+          <SiteImage
             src={post.heroImage}
-            alt={post.heroImageAlt ?? post.title}
+            alt={heroImage.alt}
+            title={heroImage.title}
             fill
             sizes="(max-width: 900px) 100vw, 33vw"
             style={{ objectFit: "cover" }}

@@ -1,4 +1,5 @@
-import Image from "next/image";
+import { SiteImage } from "@/components/ui/SiteImage";
+import { imageTitleFrom } from "@/lib/image-accessibility";
 import type { ReactNode } from "react";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHead } from "@/components/ui/SectionHead";
@@ -114,7 +115,7 @@ const CARD_ICONS: Record<string, ReactNode> = {
 type Props = {
   data: NonNullable<SituationFullContent["cards"]>;
   alt?: boolean;
-  imageMap?: Record<string, { image: string; imageAlt: string }>;
+  imageMap?: Record<string, { image: string; imageAlt: string; imageTitle?: string }>;
 };
 
 export function SituationIconCardsSection({ data, alt, imageMap }: Props) {
@@ -149,9 +150,10 @@ export function SituationIconCardsSection({ data, alt, imageMap }: Props) {
               >
                 {photo ? (
                   <div className="situation-icon-cards__media">
-                    <Image
+                    <SiteImage
                       src={photo.image}
                       alt={photo.imageAlt}
+                      title={imageTitleFrom(photo)}
                       width={800}
                       height={500}
                       sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"

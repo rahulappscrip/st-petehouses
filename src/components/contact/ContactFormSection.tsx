@@ -1,8 +1,10 @@
 import { DEFAULT_HERO } from "@/components/home/HeroSection";
 import { LeadOfferForm } from "@/components/shared/LeadOfferForm";
 import { Reveal } from "@/components/ui/Reveal";
+import { SiteImg } from "@/components/ui/SiteImage";
 import { CONTACT_PAGE } from "@/lib/contact-content";
 import { ASSETS } from "@/lib/constants";
+import { PERSON_IMAGES } from "@/lib/image-accessibility";
 
 function PromiseCheckIcon() {
   return (
@@ -39,10 +41,10 @@ export function ContactFormSection() {
           </ul>
 
           <div className="contact-john-card">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <SiteImg
               src={ASSETS.ownerJohn}
-              alt="John Gardepe, Owner of We Buy St Pete Houses"
+              alt={PERSON_IMAGES.johnPortrait.alt}
+              title={PERSON_IMAGES.johnPortrait.title}
               className="contact-john-card__photo"
               width={80}
               height={80}

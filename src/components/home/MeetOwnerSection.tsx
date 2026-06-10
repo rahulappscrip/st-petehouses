@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
 import { Arr } from "@/components/ui/Arr";
+import { SiteImg } from "@/components/ui/SiteImage";
 import { ASSETS, MEET_OWNER } from "@/lib/constants";
+import { PERSON_IMAGES } from "@/lib/image-accessibility";
 
 function HouseIcon() {
   return (
@@ -20,10 +22,10 @@ export function MeetOwnerSection() {
         <div className="meet-owner__top">
           <Reveal className="meet-owner__media">
             <div className="meet-owner__photo-frame">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <SiteImg
                 src={ASSETS.ownerJohn}
-                alt="John Gardepe, owner of We Buy St Pete Houses"
+                alt={PERSON_IMAGES.johnPortrait.alt}
+                title={PERSON_IMAGES.johnPortrait.title}
                 className="meet-owner__photo"
                 width={640}
                 height={800}

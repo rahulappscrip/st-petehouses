@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
 import { Arr } from "@/components/ui/Arr";
+import { SiteImg } from "@/components/ui/SiteImage";
 import { ABOUT_PAGE } from "@/lib/about-content";
 import { ASSETS, SITE } from "@/lib/constants";
+import { PERSON_IMAGES } from "@/lib/image-accessibility";
 
 function PhoneIcon() {
   return (
@@ -52,10 +54,10 @@ export function MeetFounderSection() {
         <div className="about-founder__grid">
           <Reveal className="about-founder__left">
             <div className="about-founder__avatar-wrap">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <SiteImg
                 src={ASSETS.ownerJohn}
-                alt="John Gardepe, owner of We Buy St Pete Houses"
+                alt={PERSON_IMAGES.johnPortrait.alt}
+                title={PERSON_IMAGES.johnPortrait.title}
                 className="about-founder__photo"
                 width={894}
                 height={1302}
