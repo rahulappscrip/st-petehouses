@@ -881,32 +881,80 @@ p.lead-title {
 .field{ display: flex; flex-direction: column; gap: 6px; }
 .field label{ font-family: var(--mono); font-size: 16px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); }
 
-.field-label-row{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-}
-.field-label-row label{
+.lead-card.lead-offer-form .field label{
   font-family: var(--sans);
   font-size: 14px;
   letter-spacing: 0;
-  text-transform: none;
-  color: var(--ink-2);
+  text-transform: capitalize;
+  color: var(--ink-soft);
   font-weight: 500;
 }
-.field-badge{
-  display: inline-flex;
-  align-items: center;
-  padding: 3px 8px;
-  border-radius: 999px;
-  background: color-mix(in oklab, var(--gold) 18%, var(--paper));
-  color: var(--gold);
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: .08em;
-  text-transform: uppercase;
+
+.lead-card.lead-offer-form .field-required{
+  color: var(--sun-deep);
+  font-weight: 600;
+}
+
+.form-toast{
+  position: fixed;
+  z-index: 9999;
+  top: calc(var(--topbar-h) + var(--nav-h) + 16px);
+  left: 50%;
+  translate: -50% 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: min(420px, calc(100vw - 32px));
+  padding: 16px 18px;
+  border-radius: 14px;
+  background: var(--ink);
+  color: var(--paper);
+  border: 1px solid color-mix(in oklab, var(--paper) 12%, transparent);
+  box-shadow: var(--shadow-2);
+  animation: form-toast-in .25s ease;
+}
+
+.form-toast__icon{
   flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--sun);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.form-toast__message{
+  margin: 0;
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.45;
+  color: color-mix(in oklab, var(--paper) 94%, transparent);
+}
+
+.form-toast__close{
+  flex-shrink: 0;
+  margin: -4px -6px 0 0;
+  padding: 4px 8px;
+  border: 0;
+  background: none;
+  color: color-mix(in oklab, var(--paper) 70%, transparent);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.form-toast__close:hover{
+  color: #fff;
+}
+
+@keyframes form-toast-in{
+  from{ opacity: 0; }
+  to{ opacity: 1; }
 }
 .input, .select{
   width: 100%; appearance: none;
