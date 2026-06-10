@@ -1,21 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { CSSProperties, ReactNode } from "react";
+import type { ReactNode } from "react";
 import { BlogToc } from "@/components/blog/BlogToc";
 import { InheritedHomeArticle } from "@/components/blog/InheritedHomeArticle";
 import { PlaceholderBlogArticle } from "@/components/blog/PlaceholderBlogArticle";
 import { ShortTermRentalBanArticle } from "@/components/blog/ShortTermRentalBanArticle";
 import { FaqSection } from "@/components/home/FaqSection";
-import { Arr } from "@/components/ui/Arr";
+import { FinalCtaSection } from "@/components/home/FinalCtaSection";
 import type { BlogPost } from "@/lib/blog";
 import { DEFAULT_BLOG_NEXT_CTA } from "@/lib/blog";
-import { SITE } from "@/lib/constants";
-
-const ghostOnDarkStyle = {
-  "--bg": "transparent",
-  "--fg": "var(--paper)",
-  "--bd": "color-mix(in oklab, var(--paper) 40%, transparent)",
-} as CSSProperties;
 
 function CrumbArrow() {
   return (
@@ -29,48 +22,17 @@ function BlogNextCta({ post }: { post: BlogPost }) {
   const cta = post.nextCta ?? DEFAULT_BLOG_NEXT_CTA;
 
   return (
-    <section className="next-cta">
-      <div className="wrap">
-        <div className="cta-card blog-next-cta-card">
-          <div>
-            <span className="blog-next-cta-card__eyebrow">{cta.eyebrow}</span>
-            <h2>
-              {cta.title.before}
-              <em>{cta.title.emphasis}</em>
-              {cta.title.after}
-            </h2>
-            <p>{cta.description}</p>
-            <div className="actions">
-              <Link href="/contact" className="btn btn--cta">
-                Get my cash offer
-                <Arr />
-              </Link>
-              {cta.secondaryCta ? (
-                <Link href={cta.secondaryCta.href} className="btn" style={ghostOnDarkStyle}>
-                  {cta.secondaryCta.label}
-                </Link>
-              ) : null}
-            </div>
-          </div>
-          <aside>
-            <span className="lab">{cta.asideLabel}</span>
-            <a href={SITE.phoneHref} className="num">
-              {SITE.phone}
-            </a>
-            <ul>
-              {cta.asideBullets.map((item) => (
-                <li key={item}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
-                    <path d="M4 12l5 5L20 6" />
-                  </svg>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </aside>
-        </div>
-      </div>
-    </section>
+    <FinalCtaSection
+      eyebrow={cta.eyebrow}
+      title={
+        <>
+          {cta.title.before}
+          <em>{cta.title.emphasis}</em>
+          {cta.title.after}
+        </>
+      }
+      description={cta.description}
+    />
   );
 }
 

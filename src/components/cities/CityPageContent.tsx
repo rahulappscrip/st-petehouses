@@ -290,7 +290,6 @@ function renderCitySection(id: CitySectionId, content: CityFullContent, page: Ci
             />
           }
           description={content.finalCta.description}
-          offerHref="#offer"
         />
       );
 
