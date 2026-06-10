@@ -1364,7 +1364,7 @@ p.lead-title {
 .res:hover{ border-color: var(--ink); transform: translateY(-1px); }
 .res .l{ display: flex; flex-direction: column; gap: 4px; }
 .res .l b{ font-weight: 500; color: var(--ink); font-size: 16px; }
-.res .l span{ font-family: var(--mono); font-size: 16px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
+.res .l span{ font-family: var(--mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
 .res .arr-out{ color: var(--ink-soft); }
 
 /* Before/After slider */

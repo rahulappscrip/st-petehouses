@@ -157,3 +157,34 @@ main {
   max-width: 100%;
 }
 
+@media (max-width: 480px) {
+  body .offer-formula {
+    grid-template-columns: repeat(1, minmax(var(--offer-box-w), 1fr));
+  }
+  body .meet-owner__title {
+    margin-top:14px;
+  }
+  body .pros-compare__row dt {
+    font-size:12px;
+  }
+  body .meet-owner__cta-btn {
+    font-size: 12px;
+  }
+
+  body .calc-field__head label {
+    font-size: 12px;
+  }
+  body .stats-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  body .step-num {
+    font-size: 22px;
+  }
+  body .area-list li {
+    padding:4px 0px
+  }
+  body .market-chart {
+    min-height: auto;
+  }
+}
+

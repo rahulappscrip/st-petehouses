@@ -161,6 +161,41 @@
   border-radius: 999px;
   background: color-mix(in oklab, var(--sun) 88%, var(--paper));
   color: var(--teal-deep);
+  white-space: nowrap;
+  line-height: 1.2;
+  z-index: 1;
+}
+
+@media (max-width: 899px) {
+  .pros-compare__panel--cash {
+    border-radius: var(--radius-l);
+  }
+
+  .pros-compare__badge {
+    position: static;
+    align-self: flex-start;
+    margin-bottom: 14px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    padding: 5px 10px;
+  }
+
+  .pros-compare__head {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .pros-compare__badge {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    padding: 4px 8px;
+    margin-bottom: 12px;
+  }
+
+  .pros-compare__panel--cash .pros-compare__type {
+    font-size: 12px;
+  }
 }
 
 .pros-compare__head {

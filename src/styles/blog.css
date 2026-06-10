@@ -703,6 +703,18 @@
   margin-top: 22px;
 }
 
+.blog-detail-page .article-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 16px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  line-height: 1.4;
+}
+
 .blog-detail-page .byline .av {
   width: 46px;
   height: 46px;
@@ -1224,4 +1236,23 @@
 .blog-detail-page .faq-section h2 em {
   font-family: var(--sans);
   font-style: italic;
+}
+
+@media (max-width: 480px) {
+  .blog-detail-page .article-hero h1 {
+    font-size: 26px;
+  }
+
+  .blog-detail-page .next-cta .blog-next-cta-card aside .num {
+    font-size: 16px;
+  }
+
+  .blog-detail-page .next-cta .blog-next-cta-card {
+    padding: 20px;
+  }
+}
+
+a.btn.btn--cta::before,
+a.btn.btn--cta {
+  color: #ffffff;
 }
