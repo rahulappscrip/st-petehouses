@@ -1,17 +1,20 @@
-/** /situations/sell-as-is — situation-page/sell-my-house-as-is-st-petersburg.html */
+/** /situations/sell-as-is — sell-my-house-as-is-st-petersburg.html */
+
+const sectionOrder = [
+  "stats",
+  "empathy",
+  "process",
+  "prosCons",
+  "areas",
+  "testimonials",
+  "guarantee",
+  "resources",
+  "faq",
+  "finalCta",
+];
 
 export const SELL_AS_IS_CONTENT = {
-  sectionOrder: [
-    "stats",
-    "process",
-    "prosCons",
-    "whyUs",
-    "trust",
-    "areas",
-    "resources",
-    "faq",
-    "finalCta",
-  ],
+  sectionOrder,
   metaTitle: "Sell My House As Is St Petersburg | Fast Cash Offers",
   metaDescription:
     "Sell your house as is in St Petersburg for cash. We buy homes in any condition, close in as little as 7 days. No repairs, no fees, no hassle.",
@@ -36,11 +39,54 @@ export const SELL_AS_IS_CONTENT = {
     ],
   },
   stats: [
-    { value: "24", suffix: "hr", label: "Offer Turnaround" },
-    { value: "7", label: "Days to Close" },
-    { prefix: "$", value: "0", label: "Fees or Commissions" },
-    { value: "Any", label: "Condition Accepted" },
+    { value: "BBB", suffix: " A+", label: "Accredited Business" },
+    { value: "5.0", suffix: " ★", label: "Google Reviews (120+)" },
+    { value: "500", suffix: "+", label: "Homes Bought in Tampa Bay" },
+    { value: "15", suffix: "+ Yrs", label: "Local Experience" },
   ],
+  empathy: {
+    eyebrow: "Why St Pete Homeowners Come to Us",
+    titleLead: "You have a reason to sell. ",
+    titleEm: "The house shouldn't make it harder.",
+    titleTail: "",
+    lede:
+      "Most people searching for an as-is cash buyer in St Petersburg aren't doing it casually. There's usually something pressing — a property that needs more work than it's worth, a life event, a timeline the market can't meet.",
+    paragraphs: [
+      "You may have already talked to agents who said \"fix it up first.\" You may be holding a property you inherited, can't afford to repair, or simply want out of. You may have a deadline — a court date, a job relocation, a financial pressure — that a 60-day traditional listing can't accommodate.",
+      "Whatever brought you here, you deserve a straightforward option. One fair offer, in writing, with no obligation to accept. A closing date you control. No repairs, no showings, no agent fees reducing what you walk away with.",
+      "We've bought 500+ homes across St Pete and Tampa Bay in exactly these situations. We know what a fair offer looks like for your neighborhood and your property's condition — and we'll be direct with you about the numbers.",
+    ],
+    quote:
+      "\"I got three agents telling me I needed to renovate before listing. We Buy St Pete Houses gave me a fair cash offer the next morning, no conditions. Closed in 9 days. Exactly what I needed.\" — St. Petersburg seller, 2024",
+    numbersEyebrow: "What sellers avoid when they go as-is",
+    numbers: [
+      {
+        prefix: "$",
+        value: "28",
+        suffix: "k",
+        title: "Average pre-sale repair spend in Florida",
+        body: "Roof, HVAC, kitchen, paint — costs compound fast before you've listed. Cash as-is skips all of it.",
+      },
+      {
+        value: "5–6",
+        suffix: "%",
+        title: "Agent commission on a traditional sale",
+        body: "On a $350k home that's up to $21,000 gone. Our offer is what you receive — zero deductions.",
+      },
+      {
+        value: "60",
+        suffix: "+",
+        title: "Days average for a traditional St Pete sale to close",
+        body: "More months of taxes, insurance, and carrying costs. We close in as little as 7 days.",
+      },
+      {
+        prefix: "$",
+        value: "0",
+        title: "Fees or commissions with us",
+        body: "No deductions, no hidden costs. What we offer is what you receive at the closing table.",
+      },
+    ],
+  },
   process: {
     eyebrow: "The Cash Sale Process",
     titleLead: "How the St Pete ",
@@ -105,88 +151,6 @@ export const SELL_AS_IS_CONTENT = {
     ],
     footerNote:
       "Bottom line: A cash sale isn't right for everyone. If your priority is speed, simplicity, and certainty over maximizing every dollar, it's often the smartest path forward.",
-    when: {
-      titleLead: "When a ",
-      titleEm: "cash sale",
-      titleTail: " makes sense.",
-      lede:
-        "Cash sales work especially well in specific situations where speed, simplicity, or a difficult property condition make traditional listing impractical.",
-      items: [
-        { icon: "🏦", title: "Foreclosure", body: "Act quickly to avoid credit damage and move forward." },
-        { icon: "🏛️", title: "Probate / Inherited", body: "Simplify the estate process with a clean cash transaction." },
-        { icon: "🚚", title: "Relocation", body: "Move on your timeline without listing delays holding you back." },
-        { icon: "🔑", title: "Tired Landlord", body: "Exit rental property headaches quickly, even with tenants." },
-        { icon: "🔨", title: "Major Repairs Needed", body: "Avoid costly renovations — we buy damaged property as-is." },
-        { icon: "⚖️", title: "Divorce / Hardship", body: "Get a fast, certain resolution when timing is critical." },
-      ],
-    },
-  },
-  whyUs: {
-    grid: true,
-    eyebrow: "Our Approach",
-    titleLead: "Why choose a ",
-    titleEm: "cash sale",
-    titleTail: " in St Pete.",
-    lede:
-      "Cash sales eliminate the variables that derail traditional transactions — and our local knowledge means competitive offers tailored to St Petersburg's market.",
-    items: [
-      {
-        icon: "📅",
-        title: "Predictable timeline",
-        body: "You know exactly when you'll close and receive your funds. No waiting on lender schedules, no last-minute rescheduling.",
-      },
-      {
-        icon: "🗺️",
-        title: "Local market knowledge",
-        body: "We understand St Petersburg neighborhoods, property values, and what drives buyer interest — from Old Northeast to Kenwood and the waterfront.",
-      },
-      {
-        icon: "🤝",
-        title: "Seller-focused support",
-        body: "We work around your needs, not ours. If you need more time before closing or have a complicated situation, we'll accommodate you.",
-      },
-      {
-        icon: "💵",
-        title: "No hidden costs",
-        body: "What we offer is what you receive, minus standard closing costs. No deductions, no last-minute fees, no surprise adjustments.",
-      },
-    ],
-  },
-  trust: {
-    eyebrow: "Local Expertise",
-    titleLead: "Your trustworthy ",
-    titleEm: "St Pete",
-    titleTail: " buyer.",
-    lede:
-      "We're not a national franchise or out-of-state investor — we're local, accessible, and genuinely invested in this community. Our team understands the nuances of St Petersburg properties, from historic bungalows to waterfront condos.",
-    points: [
-      {
-        title: "Community involvement",
-        body: "We're part of the St Pete community, not just passing through. We've been buying homes here for years and intend to keep doing so.",
-      },
-      {
-        title: "Responsive local team",
-        body: "Reach us by phone, email, or in person. You speak directly with a decision-maker, not a call center.",
-      },
-      {
-        title: "Trusted local partners",
-        body: "We work with vetted local title companies, attorneys, and contractors — the same professionals St Pete sellers rely on.",
-      },
-      {
-        title: "Transparent process",
-        body: "We explain every step and answer every question. No surprises, no pressure, no fine print designed to confuse.",
-      },
-    ],
-    card: {
-      title: "We know St Pete — and we're here to help.",
-      body: "When you work with a local buyer, you get genuine accountability, accessibility, and an offer based on real knowledge of your neighborhood — not an algorithm.",
-    },
-    stats: [
-      { value: "500+", label: "Homes purchased" },
-      { value: "7 days", label: "Fastest close" },
-      { value: "$0", label: "Fees charged" },
-      { value: "Local", label: "St Pete based" },
-    ],
   },
   areas: {
     eyebrow: "Service Area",
@@ -195,7 +159,59 @@ export const SELL_AS_IS_CONTENT = {
     titleTail: "",
     lede:
       "We buy houses for cash throughout St Petersburg and the Greater Tampa Bay area. If your property is in the region, we can help.",
-    areasNote: "Contact us to confirm we serve your specific area. If you're in the Tampa Bay region, there's a good chance we can help.",
+    areasNote:
+      "Contact us to confirm we serve your specific area. If you're in the Tampa Bay region, there's a good chance we can help.",
+  },
+  testimonials: {
+    eyebrow: "What Sellers Say",
+    titleLead: "St Pete homeowners who sold ",
+    titleEm: "as-is for cash.",
+    titleTail: "",
+    lede:
+      "No repairs. No waiting. These sellers chose speed and certainty over the traditional listing process.",
+    items: [
+      {
+        quote:
+          "Agents kept telling me I needed a new roof and kitchen before they'd list it. We Buy St Pete Houses gave me a cash offer the next morning — no conditions. Closed in 9 days. I saved at least $30,000 in repairs I'd never have recouped anyway.",
+        initials: "JM",
+        name: "James M.",
+        meta: "Sold as-is, skipped forced renovations · St. Petersburg",
+      },
+      {
+        quote:
+          "I was relocating for work and needed to close on a specific date. No traditional sale could guarantee that timeline. Cash offer in 24 hours, closed exactly when I needed. No showings, no strangers in my house, no stress.",
+        initials: "LP",
+        name: "Laura P.",
+        meta: "Sold as-is for job relocation · Clearwater",
+      },
+    ],
+  },
+  guarantee: {
+    eyebrow: "Our Commitment",
+    titleLead: "Clear terms. ",
+    titleEm: "No surprises.",
+    titleTail: "",
+    lede: "The same deal we'd want if we were the ones selling. Simple, fair, no-pressure.",
+    items: [
+      {
+        title: "No repairs required",
+        body: "Any condition — deferred maintenance, storm damage, vacant properties. We buy it exactly as it stands.",
+      },
+      {
+        title: "No commissions or fees",
+        body: "The offer you accept is what you receive. We cover standard closing costs — nothing deducted at the end.",
+      },
+      {
+        title: "Close on your timeline",
+        body: "As fast as 7 days or more time if you need it. You set the closing date — we work around your schedule.",
+      },
+      {
+        title: "One walkthrough — that's it",
+        body: "No open houses, no buyer showings, no strangers parading through your home. We evaluate once and make an offer.",
+      },
+    ],
+    asideTitle: "Skip the repairs. Get your offer today.",
+    asideBody: "No obligation. No pressure. We respond within 24 hours.",
   },
   resources: {
     eyebrow: "Helpful Offices",
@@ -290,4 +306,11 @@ export const SELL_AS_IS_CONTENT = {
       "We buy houses in St Petersburg in any condition — no repairs, no commissions, no hassle. Submit your details for a no-obligation offer in 24 hours.",
     bullets: ["(727) 477-8998", "SellFast@WeBuyStPeteHouses.com", "St. Petersburg, FL — We're Local"],
   },
+};
+
+export const SELL_AS_IS_PAGE = {
+  slug: "sell-as-is",
+  label: "Sell as-is (St Pete)",
+  breadcrumb: "Sell My House As-Is",
+  ...SELL_AS_IS_CONTENT,
 };

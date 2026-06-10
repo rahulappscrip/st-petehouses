@@ -131,9 +131,6 @@ export const INHERITED_CONTENT = {
       { stage: "Title Transfer to Heirs", duration: "After court approval", body: "Property title transferred; heirs authorized to sell" },
       { stage: "Sale & Closing", duration: "As little as 7 days after title clears", body: "We close quickly once title is clear — often within days of authorization" },
     ],
-    helpTitle: "We guide you through every step.",
-    helpBody:
-      "Not sure where you are in probate? Call us — we'll tell you exactly what you need, what to prepare, and how we can work in parallel to minimize your total timeline.",
   },
   tax: {
     eyebrow: "Tax Considerations",
@@ -168,6 +165,16 @@ export const INHERITED_CONTENT = {
       { tag: "Clerk", title: "Pinellas County Clerk of the Circuit Court & Comptroller", body: "Probate filings, court records, deed recording, and official property documents for estates going through Pinellas County." },
       { tag: "Tax", title: "Pinellas County Tax Collector", body: "Property tax records, outstanding tax balances, and payment information. Important for title clearance before closing." },
       { tag: "Appraiser", title: "Pinellas County Property Appraiser", body: "Official property valuations, ownership information, and assessment data. Useful for understanding the property's current assessed value." },
+      {
+        tag: "Court",
+        title: "Pinellas County Circuit Court — Probate Division",
+        body: "If the estate requires probate before the property can be sold, the personal representative's authority to act flows from a court order issued here.",
+      },
+      {
+        tag: "Legal",
+        title: "Florida Bar Lawyer Referral Service",
+        body: "The Florida Bar's referral service connects you with licensed Florida attorneys who handle exactly these situations.",
+      },
     ],
   },
   guarantee: {

@@ -61,7 +61,13 @@ export function SituationHeroSection({
               {hero.titleEm ? <em>{hero.titleEm}</em> : null}
               {hero.titleTail}
             </h1>
-            <p className="city-hero__sub body-intro">{hero.subheadline}</p>
+            <div className="city-hero__subs">
+              {(hero.subheadlines ?? [hero.subheadline]).map((paragraph) => (
+                <p key={paragraph} className="city-hero__sub body-intro">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
 
             {hero.neighborhoodTags && hero.neighborhoodTags.length > 0 ? (
               <div className="situation-hero__neighborhoods" aria-label="Featured neighborhoods">

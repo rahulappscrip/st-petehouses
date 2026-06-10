@@ -1,6 +1,12 @@
 import Link from "next/link";
 import { BrandLogo } from "@/components/ui/BrandLogo";
-import { FOOTER_SITUATIONS, NAV_LINKS, SITE, SOCIAL_LINKS } from "@/lib/constants";
+import {
+  FOOTER_SITUATIONS,
+  NAV_LINKS,
+  SITE,
+  SOCIAL_LINKS,
+  SITUATIONS_MENU_LEFT_COLUMN_COUNT,
+} from "@/lib/constants";
 
 const FOOTER_COMPANY = [
   { label: "How It Works", href: "/how-it-works" },
@@ -117,13 +123,22 @@ export function Footer() {
 
           <div className="foot-col foot-col--2col">
             <h4>We Buy Houses In Any Situation</h4>
-            <ul>
-              {FOOTER_SITUATIONS.map((s) => (
-                <li key={`${s.href}-${s.label}`}>
-                  <Link href={s.href}>{s.label}</Link>
-                </li>
-              ))}
-            </ul>
+            <div className="foot-col--2col__grid">
+              <ul>
+                {FOOTER_SITUATIONS.slice(0, SITUATIONS_MENU_LEFT_COLUMN_COUNT).map((s) => (
+                  <li key={`${s.href}-${s.label}`}>
+                    <Link href={s.href}>{s.label}</Link>
+                  </li>
+                ))}
+              </ul>
+              <ul>
+                {FOOTER_SITUATIONS.slice(SITUATIONS_MENU_LEFT_COLUMN_COUNT).map((s) => (
+                  <li key={`${s.href}-${s.label}`}>
+                    <Link href={s.href}>{s.label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 

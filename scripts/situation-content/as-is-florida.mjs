@@ -27,6 +27,11 @@ export const AS_IS_FLORIDA_CONTENT = {
     titleTail: " in Florida for Cash",
     subheadline:
       "No repairs. No showings. No agent commissions. We buy houses in St. Pete and across Florida as-is for cash — closing in as little as 7 days. You sell the home exactly as it stands and move on with certainty.",
+    subheadlines: [
+      "No repairs. No showings. No agent commissions. We buy houses in St. Pete and across Florida as-is for cash — closing in as little as 7 days. You sell the home exactly as it stands and move on with certainty.",
+      "Whether your home needs major work, has code violations, tenants in place, or has been sitting vacant for years — we've seen it all and we buy it all. There's no cleanup required, no contractor bids to get, and no open houses to prepare for.",
+      "Our process is simple: tell us about the property, receive a written cash offer within 24 hours, and choose your closing date. We cover all standard closing costs. The number in your offer is the number you walk away with.",
+    ],
     formTitle: "Get your cash offer today.",
     formIntro:
       "Tell us about your property. We'll have a no-obligation cash offer in your hands within 24 hours — no repairs, no pressure.",
@@ -57,8 +62,6 @@ export const AS_IS_FLORIDA_CONTENT = {
         { strong: "No repairs required", text: " — we buy in any condition including fire damage, water damage, or code violations." },
         { strong: "No staging or showings", text: " — one walkthrough from us, then we get out of your way." },
         { strong: "No financing contingencies", text: " — cash buyers don't need bank approval. The deal won't collapse at the last minute." },
-        { strong: "You choose the closing date", text: " — as fast as 7 days or as flexible as you need." },
-        { strong: "Disclosures still required", text: " — Florida law requires you to disclose known defects. We guide you through exactly what must be shared." },
       ],
     },
   },

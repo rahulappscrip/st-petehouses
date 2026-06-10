@@ -55,13 +55,6 @@ export const TENANTS_CONTENT = {
         { strong: "Tenant rights", text: "— occupancy rights continue through the remainder of the lease term regardless of ownership change." },
       ],
     },
-    extraCard: {
-      title: "Month-to-Month vs Fixed-Term",
-      items: [
-        { strong: "Month-to-month:", text: " More flexibility for both parties; proper notice required before showings and sale." },
-        { strong: "Fixed-term lease:", text: " Continues until expiration; buyer inherits all terms. We buy both situations — no conditions." },
-      ],
-    },
   },
   tenantRights: {
     eyebrow: "Tenant Protections",
@@ -176,7 +169,7 @@ export const TENANTS_CONTENT = {
     titleLead: "Real Florida Tenant-Occupied Sales: ",
     titleEm: "What Works",
     titleTail: "",
-    lede: "Learning from real transactions helps you avoid common pitfalls and set realistic expectations. Here are two recent closings from our Tampa Bay portfolio.",
+    lede: "Learning from real transactions helps you avoid common pitfalls and set realistic expectations. Here are three recent closings from our Tampa Bay portfolio.",
     cases: [
       {
         tag: "St. Petersburg · Duplex",
@@ -197,6 +190,16 @@ export const TENANTS_CONTENT = {
         ],
         statValue: "Before",
         statLabel: "lease expiration — saved 3 months of landlord costs",
+      },
+      {
+        tag: "Pinellas Park · Single-Family Rental",
+        title: "Tenant Refusing to Cooperate with Showings",
+        paragraphs: [
+          "The seller had an at-will tenant who refused access for showings and was behind on rent. A traditional listing was not a viable option due to the tenant's lack of cooperation. We purchased the property without requiring a single showing, evaluated its condition through an exterior inspection and comparable sales data, and presented a cash offer that reflected the occupied status of the home.",
+          "After closing, we took full responsibility for handling the tenant situation. The seller had no further involvement and did not need to communicate with the tenant at any point after accepting the offer.",
+        ],
+        statValue: "As-is sale",
+        statLabel: "Tenant remained in place • No showings required • No landlord obligations after closing",
       },
     ],
     takeaways: [

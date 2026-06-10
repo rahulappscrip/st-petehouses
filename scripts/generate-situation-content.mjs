@@ -55,10 +55,10 @@ const SLUG_META = {
   "fire-damage": { label: "Fire damage", breadcrumb: "Fire-damaged home", sectionOrder: ["stats","prose","process","cards","situations","whyUs","areas","resources","faq","finalCta"] },
   "storm-damage": { label: "Storm damage", breadcrumb: "Storm-damaged home", sectionOrder: ["stats","cards","process","comparison","insurance","environmental","caseStudies","resources","areas","whyUs","faq","finalCta"] },
   "sell-as-is": {
-    label: "Sell as-is",
-    breadcrumb: "Sell as-is St Petersburg",
+    label: "Sell as-is (St Pete)",
+    breadcrumb: "Sell My House As-Is",
     sectionOrder: [
-      "stats", "process", "prosCons", "whyUs", "trust", "areas", "resources", "faq", "finalCta",
+      "stats", "empathy", "process", "prosCons", "areas", "testimonials", "guarantee", "resources", "faq", "finalCta",
     ],
   },
   "as-is-florida": {
