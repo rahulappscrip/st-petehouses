@@ -1,18 +1,24 @@
 import Link from "next/link";
+import { SiteImg } from "@/components/ui/SiteImage";
 import { ASSETS, SITE } from "@/lib/constants";
+import { BRAND_IMAGES } from "@/lib/image-accessibility";
 
 type BrandLogoProps = {
   showName?: boolean;
+  variant?: "header" | "footer";
 };
 
-export function BrandLogo({ showName = true }: BrandLogoProps) {
+export function BrandLogo({ showName = true, variant = "header" }: BrandLogoProps) {
+  const logoCopy =
+    variant === "footer" ? BRAND_IMAGES.footerLogo : BRAND_IMAGES.headerLogo;
+
   return (
     <Link href="/" className="brand" aria-label={`${SITE.name} — home`}>
       <span className="brand-mark">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <SiteImg
           src={ASSETS.logo}
-          alt=""
+          alt={logoCopy.alt}
+          title={logoCopy.title}
           width={2048}
           height={1822}
           decoding="async"

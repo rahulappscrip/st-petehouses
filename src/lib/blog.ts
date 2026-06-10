@@ -1,3 +1,5 @@
+import { imageAccessibility, type ImageAccessibility } from "@/lib/image-accessibility";
+
 export type BlogCategory = "process" | "market" | "situations" | "prep" | "legal";
 
 export type ImageTone = "sun" | "teal" | "ink" | "leaf" | "gold" | "sand";
@@ -46,6 +48,7 @@ export type BlogPost = {
   tagVariant?: "sun";
   heroImage?: string;
   heroImageAlt?: string;
+  heroImageTitle?: string;
   heroImageCaption?: string;
   tags?: string[];
   metaDescription: string;
@@ -127,7 +130,9 @@ export const BLOG_POSTS: BlogPost[] = [
     imageGlyph: "🏠",
     heroImage: `${BLOG_IMAGE}/1-Short-Term-Rental-Ban-in-St-Petersburg-FL.webp`,
     heroImageAlt:
-      "A St. Petersburg, Florida waterfront neighborhood with residential properties commonly used for short-term rentals.",
+      "St. Petersburg, Florida waterfront neighborhood with homes commonly used as short-term rentals",
+    heroImageTitle:
+      "Short-term rental rules in St. Petersburg, Florida — zoning and compliance guide",
     heroImageCaption:
       "St. Petersburg residential neighborhoods — where STR rules vary significantly by zoning and jurisdiction.",
     tags: ["Florida law", "St. Petersburg", "Airbnb & STR"],
@@ -200,7 +205,9 @@ export const BLOG_POSTS: BlogPost[] = [
     imageGlyph: "$",
     tagVariant: "sun",
     heroImage: `${BLOG_IMAGE}/2-How-As-Is-Really-Works-When-a-Cash-Buyer-Inspects-Your-Home.webp`,
-    heroImageAlt: 'How "as-is" really works when a cash buyer inspects your home',
+    heroImageAlt:
+      "Home inspection during an as-is cash home sale in St. Petersburg, Florida",
+    heroImageTitle: 'How "as-is" works when a cash buyer inspects your home',
     tags: ["Cash sale process", "As-is"],
     metaDescription:
       "What an as-is cash buyer inspection really covers, when offers get adjusted, and how to evaluate a fair written cash offer.",
@@ -222,7 +229,9 @@ export const BLOG_POSTS: BlogPost[] = [
     imageTone: "teal",
     imageGlyph: "↗",
     heroImage: `${BLOG_IMAGE}/3-St-Pete-Neighborhoods-Where-Cash-Offers-Are-Strongest.webp`,
-    heroImageAlt: "St Pete neighborhoods where cash offers are strongest in Q2 2026",
+    heroImageAlt:
+      "St. Petersburg neighborhood streetscape illustrating local cash offer strength in Q2 2026",
+    heroImageTitle: "St Pete neighborhoods where cash offers are strongest in Q2 2026",
     tags: ["Market insights", "St Petersburg"],
     metaDescription:
       "Q2 2026 look at St Petersburg neighborhoods where cash offers are strongest and what that means for sellers.",
@@ -253,7 +262,8 @@ export const BLOG_POSTS: BlogPost[] = [
     imageGlyph: "⚖",
     heroImage: `${BLOG_IMAGE}/4-How-to-Price-an-Inherited-Home-in-Florida.webp`,
     heroImageAlt:
-      "How to price an inherited home in Florida: a practical guide for heirs",
+      "Florida heirs reviewing inherited home pricing options in the St. Petersburg area",
+    heroImageTitle: "How to price an inherited home in Florida — practical guide for heirs",
     heroImageCaption: "Florida heirs weighing pricing options · Hero image",
     tags: ["Inherited & Probate", "Florida", "Pricing guide"],
     metaDescription:
@@ -330,7 +340,10 @@ export const BLOG_POSTS: BlogPost[] = [
     imageTone: "gold",
     imageGlyph: "⚡",
     heroImage: `${BLOG_IMAGE}/5-Floridas-Home-Insurance-Crisis.webp`,
-    heroImageAlt: "Florida's Home Insurance Crisis: What It Means If You're Trying to Sell in St. Petersburg",
+    heroImageAlt:
+      "Florida home insurance challenges affecting St. Petersburg homeowners trying to sell",
+    heroImageTitle:
+      "Florida home insurance crisis — what it means for St. Petersburg sellers",
     tags: ["Market insights", "Insurance", "St Petersburg"],
     metaDescription:
       "How Florida's home insurance crisis affects St. Petersburg sellers — premiums, carrier exits, and buyer financing challenges.",
@@ -352,7 +365,9 @@ export const BLOG_POSTS: BlogPost[] = [
     imageTone: "teal",
     imageGlyph: "🌊",
     heroImage: `${BLOG_IMAGE}/6-Selling-a-St.-Pete-Waterfront-Home-You-Can-No-Longer-Insure.webp`,
-    heroImageAlt: "Selling a St. Pete Waterfront Home You Can No Longer Insure",
+    heroImageAlt:
+      "St. Petersburg waterfront home that may be difficult or impossible to insure",
+    heroImageTitle: "Selling a St. Pete waterfront home you can no longer insure",
     tags: ["Tough situations", "Waterfront", "Insurance"],
     metaDescription:
       "Options for selling a St. Petersburg waterfront home that buyers or carriers won't insure.",
@@ -374,7 +389,9 @@ export const BLOG_POSTS: BlogPost[] = [
     imageTone: "leaf",
     imageGlyph: "⚖",
     heroImage: `${BLOG_IMAGE}/7-Selling-an-Inherited-St-Pete-Condo-With-HOA-Special-Assessments.webp`,
-    heroImageAlt: "Selling an Inherited St. Pete Condo With HOA Special Assessments",
+    heroImageAlt:
+      "Inherited St. Petersburg condo with HOA special assessment documents on a table",
+    heroImageTitle: "Selling an inherited St. Pete condo with HOA special assessments",
     tags: ["Tough situations", "Inherited", "HOA"],
     metaDescription:
       "How to sell an inherited St. Petersburg condo with HOA special assessments — responsibilities and sale options.",
@@ -396,7 +413,9 @@ export const BLOG_POSTS: BlogPost[] = [
     imageTone: "ink",
     imageGlyph: "§",
     heroImage: `${BLOG_IMAGE}/8-Florida-Flood-Disclosure.webp`,
-    heroImageAlt: "Florida flood disclosure: what sellers must say (and what buyers will ask)",
+    heroImageAlt:
+      "Florida flood disclosure documents required when selling a home in St. Petersburg",
+    heroImageTitle: "Florida flood disclosure — what sellers must say and buyers will ask",
     tags: ["Florida law", "Disclosure"],
     metaDescription:
       "Florida flood disclosure requirements explained for home sellers — what to disclose and what buyers expect.",
@@ -418,7 +437,9 @@ export const BLOG_POSTS: BlogPost[] = [
     imageTone: "leaf",
     imageGlyph: "🔑",
     heroImage: `${BLOG_IMAGE}/Tired-land-lord.webp`,
-    heroImageAlt: "Tired landlord guide: selling a Tampa rental with tenants in place",
+    heroImageAlt:
+      "Tampa Bay rental property with tenants — options for tired landlords selling for cash",
+    heroImageTitle: "Tired landlord guide: selling a Tampa rental with tenants in place",
     tags: ["Tough situations", "Tenants"],
     metaDescription:
       "Guide for Tampa Bay landlords selling a rental with tenants — lease options, cash-for-keys, and cash buyer closings.",
@@ -441,7 +462,9 @@ export const BLOG_POSTS: BlogPost[] = [
     imageGlyph: "⚠",
     tagVariant: "sun",
     heroImage: `${BLOG_IMAGE}/9-Facing-Foreclosure-in-Pinellas-County.webp`,
-    heroImageAlt: "Facing foreclosure in Pinellas County? Your options, week by week",
+    heroImageAlt:
+      "Pinellas County homeowner reviewing foreclosure timeline and cash sale options",
+    heroImageTitle: "Facing foreclosure in Pinellas County — your options, week by week",
     tags: ["Tough situations", "Foreclosure", "Pinellas County"],
     metaDescription:
       "Week-by-week foreclosure options for Pinellas County homeowners and how a cash sale can help.",
@@ -463,13 +486,20 @@ export const BLOG_POSTS: BlogPost[] = [
     imageTone: "teal",
     imageGlyph: "📊",
     heroImage: `${BLOG_IMAGE}/10-Tampa-Bay-Days-on-Market-Trends.webp`,
-    heroImageAlt: "Tampa Bay days-on-market trends — what cash offers look like at speed",
+    heroImageAlt:
+      "Tampa Bay housing market chart showing days-on-market trends for cash home sales",
+    heroImageTitle: "Tampa Bay days-on-market trends — what fast cash offers look like",
     tags: ["Market insights", "Tampa Bay"],
     metaDescription:
       "Tampa Bay days-on-market trends and what they mean for as-is cash offers.",
     isPlaceholder: true,
   },
 ];
+
+export function getBlogHeroImageCopy(post: BlogPost): ImageAccessibility {
+  const alt = post.heroImageAlt ?? post.title;
+  return imageAccessibility(alt, post.heroImageTitle ?? alt);
+}
 
 export function getBlogPost(slug: string): BlogPost | undefined {
   return BLOG_POSTS.find((post) => post.slug === slug);

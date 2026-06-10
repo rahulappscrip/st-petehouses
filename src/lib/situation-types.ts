@@ -29,6 +29,7 @@ export type SituationCard = {
   body: string;
   image?: string;
   imageAlt?: string;
+  imageTitle?: string;
   href?: string;
 };
 

@@ -56,7 +56,7 @@ export function Footer() {
       <div className="wrap">
         <div className="foot-grid">
           <div className="foot-brand">
-            <BrandLogo />
+            <BrandLogo variant="footer" />
             <p className="blurb">Local cash home buyers serving St Petersburg, Tampa Bay and the surrounding counties.</p>
             <div className="foot-contact">
               <a href={SITE.phoneHref}>

@@ -1,9 +1,10 @@
 import type { CSSProperties, ReactNode } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
 import { Arr } from "@/components/ui/Arr";
+import { SiteImage } from "@/components/ui/SiteImage";
 import { ASSETS, SITE } from "@/lib/constants";
+import { PERSON_IMAGES } from "@/lib/image-accessibility";
 
 type FinalCtaSectionProps = {
   eyebrow?: string;
@@ -66,9 +67,10 @@ export function FinalCtaSection({
           </div>
 
           <aside className="cta-side">
-            <Image
+            <SiteImage
               src={ASSETS.johnCta}
-              alt="John Gardepe"
+              alt={PERSON_IMAGES.johnCta.alt}
+              title={PERSON_IMAGES.johnCta.title}
               width={480}
               height={560}
               sizes="(min-width: 880px) 33vw, 100vw"

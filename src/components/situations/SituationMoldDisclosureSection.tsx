@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
-import Image from "next/image";
+import { SiteImage } from "@/components/ui/SiteImage";
+import { imageTitleFrom } from "@/lib/image-accessibility";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHead } from "@/components/ui/SectionHead";
 import type { SituationMoldDisclosureContent } from "@/lib/situation-types";
@@ -27,7 +28,7 @@ const CARD_ICONS: Record<string, ReactNode> = {
 type Props = {
   data: SituationMoldDisclosureContent;
   alt?: boolean;
-  imageMap?: Record<string, { image: string; imageAlt: string }>;
+  imageMap?: Record<string, { image: string; imageAlt: string; imageTitle?: string }>;
 };
 
 export function SituationMoldDisclosureSection({ data, alt, imageMap }: Props) {
@@ -59,9 +60,10 @@ export function SituationMoldDisclosureSection({ data, alt, imageMap }: Props) {
               >
                 {photo ? (
                   <div className="situation-mold-disclosure-card__media">
-                    <Image
+                    <SiteImage
                       src={photo.image}
                       alt={photo.imageAlt}
+                      title={imageTitleFrom(photo)}
                       width={800}
                       height={500}
                       sizes="(min-width: 900px) 33vw, 100vw"

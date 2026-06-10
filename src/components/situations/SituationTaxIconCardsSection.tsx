@@ -1,4 +1,5 @@
-import Image from "next/image";
+import { SiteImage } from "@/components/ui/SiteImage";
+import { imageTitleFrom } from "@/lib/image-accessibility";
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHead } from "@/components/ui/SectionHead";
@@ -35,9 +36,10 @@ export function SituationTaxIconCardsSection({ data, alt }: Props) {
               <Reveal key={card.title} className="situation-divorce-tax__card" d={i > 0 ? 1 : undefined}>
                 {photo ? (
                   <div className="situation-divorce-tax__media">
-                    <Image
+                    <SiteImage
                       src={photo.image}
                       alt={photo.imageAlt}
+                      title={imageTitleFrom(photo)}
                       width={800}
                       height={500}
                       sizes="(min-width: 760px) 33vw, 100vw"

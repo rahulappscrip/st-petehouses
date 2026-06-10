@@ -1,8 +1,9 @@
 import type { ReactNode } from "react";
-import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHead } from "@/components/ui/SectionHead";
+import { SiteImage } from "@/components/ui/SiteImage";
 import { ASSETS, MARKET_FACTORS, MARKET_SECTION } from "@/lib/constants";
+import { MARKET_IMAGES } from "@/lib/image-accessibility";
 
 export type MarketFactor = {
   letter: string;
@@ -22,8 +23,10 @@ type MarketSectionProps = {
   alt?: boolean;
   chartImage?: string;
   chartImageAlt?: string;
+  chartImageTitle?: string;
   sideImage?: string;
   sideImageAlt?: string;
+  sideImageTitle?: string;
 };
 
 export function MarketSection({
@@ -41,10 +44,14 @@ export function MarketSection({
   showLocal = true,
   alt = true,
   chartImage = ASSETS.marketChart,
-  chartImageAlt = "Chart illustrating the St. Petersburg cash home market",
+  chartImageAlt = MARKET_IMAGES.defaultChart.alt,
+  chartImageTitle,
   sideImage,
-  sideImageAlt = "Local market context for cash home offers",
+  sideImageAlt = MARKET_IMAGES.localContext.alt,
+  sideImageTitle,
 }: MarketSectionProps = {}) {
+  const resolvedChartTitle = chartImageTitle ?? chartImageAlt;
+  const resolvedSideTitle = sideImageTitle ?? sideImageAlt;
   const useTwoColumn = showChart || Boolean(sideImage);
 
   return (
@@ -55,9 +62,10 @@ export function MarketSection({
         <div className={useTwoColumn ? "market-grid" : "factor-list"}>
           {showChart ? (
             <Reveal className="market-chart">
-              <Image
+              <SiteImage
                 src={chartImage}
                 alt={chartImageAlt}
+                title={resolvedChartTitle}
                 width={960}
                 height={720}
                 sizes="(min-width: 960px) 50vw, 100vw"
@@ -72,9 +80,10 @@ export function MarketSection({
             </Reveal>
           ) : sideImage ? (
             <Reveal className="market-chart">
-              <Image
+              <SiteImage
                 src={sideImage}
                 alt={sideImageAlt}
+                title={resolvedSideTitle}
                 width={960}
                 height={720}
                 sizes="(min-width: 960px) 50vw, 100vw"

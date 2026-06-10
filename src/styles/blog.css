@@ -1034,6 +1034,7 @@ body .blog-page .featured-body h2 {
 
 .blog-detail-page .author-bio {
   margin-top: unset;
+  margin-bottom: 30px;
   padding: clamp(24px, 3vw, 36px);
   background: var(--paper);
   border: 1px solid var(--line);

@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
-import Image from "next/image";
+import { SiteImage } from "@/components/ui/SiteImage";
+import { imageTitleFrom } from "@/lib/image-accessibility";
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHead } from "@/components/ui/SectionHead";
@@ -71,7 +72,7 @@ function SituationImageCardsGrid({
   className = "sit-cards",
 }: {
   items: readonly { title: string; body: string }[];
-  imageMap: Record<string, { image: string; imageAlt: string }>;
+  imageMap: Record<string, { image: string; imageAlt: string; imageTitle?: string }>;
   className?: string;
 }) {
   return (
@@ -86,9 +87,10 @@ function SituationImageCardsGrid({
           >
             {photo ? (
               <div className="sit-card__media">
-                <Image
+                <SiteImage
                   src={photo.image}
                   alt={photo.imageAlt}
+                  title={imageTitleFrom(photo)}
                   width={800}
                   height={500}
                   sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
@@ -656,9 +658,10 @@ export function SituationEnvironmentalSection({
               >
                 {photo ? (
                   <div className="situation-environmental-card__media">
-                    <Image
+                    <SiteImage
                       src={photo.image}
                       alt={photo.imageAlt}
+                      title={imageTitleFrom(photo)}
                       width={800}
                       height={500}
                       sizes="(min-width: 900px) 33vw, 100vw"
@@ -871,9 +874,10 @@ export function SituationForestSituationsSection({
               >
                 {photo ? (
                   <div className="situation-forest-sit__media">
-                    <Image
+                    <SiteImage
                       src={photo.image}
                       alt={photo.imageAlt}
+                      title={imageTitleFrom(photo)}
                       width={800}
                       height={500}
                       sizes="(min-width: 1024px) 33vw, (min-width: 720px) 50vw, 100vw"

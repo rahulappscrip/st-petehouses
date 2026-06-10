@@ -77,8 +77,10 @@ export function ResourcesSection({
                   <BeforeAfterSlider
                     beforeSrc={item.beforeImage}
                     afterSrc={item.afterImage}
-                    beforeAlt={`${item.beforeLabel} — ${item.title}`}
-                    afterAlt={`${item.afterLabel} — ${item.title}`}
+                    beforeAlt={item.beforeImageAlt}
+                    afterAlt={item.afterImageAlt}
+                    beforeTitle={`${item.beforeLabel} — ${item.title}`}
+                    afterTitle={`${item.afterLabel} — ${item.title}`}
                   />
                   <div className="ba-meta">
                     <h3>{item.title}</h3>

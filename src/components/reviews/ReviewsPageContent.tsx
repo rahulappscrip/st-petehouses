@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
+import { SiteImage } from "@/components/ui/SiteImage";
 import { ReviewsSection } from "@/components/home/ReviewsSection";
 import type { TestimonialsData } from "@/lib/reviews/types";
 import { FaqSection } from "@/components/home/FaqSection";
@@ -12,6 +12,7 @@ import {
   REVIEWS_PROCESS_STEPS,
   REVIEWS_TRUST_SIGNALS,
 } from "@/lib/constants";
+import { PERSON_IMAGES } from "@/lib/image-accessibility";
 
 const TRUST_ICONS = [
   <g key="1"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 1 1 18 0z" /><circle cx="12" cy="10" r="3" /></g>,
@@ -68,7 +69,14 @@ export function ReviewsPageContent({ testimonials }: ReviewsPageContentProps) {
             </div>
 
             <div className="byline">
-              <Image className="av" src={ASSETS.johnPortrait} alt="John Gardepe" width={40} height={40} />
+              <SiteImage
+                className="av"
+                src={ASSETS.johnPortrait}
+                alt={PERSON_IMAGES.johnAvatar.alt}
+                title={PERSON_IMAGES.johnAvatar.title}
+                width={40}
+                height={40}
+              />
               <span className="author">
                 <b>By John Gardepe</b>
                 <span>Owner · We Buy St Pete Houses</span>

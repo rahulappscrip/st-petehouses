@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { SiteImage } from "@/components/ui/SiteImage";
 import Link from "next/link";
 import { BlogAuthorBio } from "@/components/blog/BlogAuthorBio";
 import type { BlogPost } from "@/lib/blog";
@@ -98,9 +98,10 @@ export function InheritedHomeArticle({ post }: { post: BlogPost }) {
           an inherited home is actually worth.
         </p>
         <figure className="figure">
-          <Image
+          <SiteImage
             src="https://pub-4ee5abe5561c4d33a588ca34bfa5d5a5.r2.dev/tools/6de59ddf-e9e4-4c87-a82b-918e0c30551f.jpg"
             alt="A quiet St. Petersburg, Florida neighborhood illustrating local context for inherited home pricing."
+            title="St. Petersburg neighborhood context for pricing an inherited home"
             width={1200}
             height={675}
             sizes="(max-width: 1100px) 100vw, 1100px"
@@ -285,9 +286,10 @@ export function InheritedHomeArticle({ post }: { post: BlogPost }) {
           Using comps and probate data to <em>estimate market value</em>.
         </h2>
         <figure className="figure">
-          <Image
+          <SiteImage
             src="https://pub-4ee5abe5561c4d33a588ca34bfa5d5a5.r2.dev/tools/54095a2f-c838-438d-8869-6aefe8fe715b.jpg"
             alt="Infographic showing the Florida probate timeline and price-path guidance for inherited homes."
+            title="Florida probate timeline and inherited home pricing paths"
             width={1200}
             height={675}
             sizes="(max-width: 1100px) 100vw, 1100px"
