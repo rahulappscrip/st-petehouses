@@ -229,11 +229,10 @@ export const DIVORCE_CONTENT = {
     ],
     asideTitle: "Strategies to Maintain Momentum",
     asideList: [
-      "Start the sale process early — even before the divorce is finalized. Pre-marketing a cash sale loses nothing.",
-      "Communicate openly with your attorney and our team. Shared timelines prevent last-minute surprises.",
-      "Choose a cash buyer who understands Florida divorce timelines and can close on your exact schedule.",
-      "Get lien and title checks initiated in parallel with legal proceedings — not after.",
-      "Request a written offer with a flexible closing date window to accommodate court scheduling changes.",
+      "Start the sale process early — even before the divorce is finalized.",
+      "Communicate openly with your attorney and our team to prevent last-minute surprises.",
+      "Choose a cash buyer who can close on your exact court-scheduled date.",
+      "Get lien and title checks initiated in parallel with legal proceedings.",
     ],
   },
   resources: {

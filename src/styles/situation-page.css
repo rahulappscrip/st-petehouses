@@ -776,6 +776,10 @@
   font-size: 17px;
 }
 
+.situation-page--foreclosure .situation-key-steps--in-process {
+  margin-top: 30px;
+}
+
 .situation-key-steps ul {
   margin: 0;
   padding: 0;
@@ -1402,9 +1406,16 @@
   text-wrap: pretty;
 }
 
+.city-hero__subs {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
 .city-hero__sub {
   color: var(--ink-2);
   max-width: 52ch;
+  margin: 0;
 }
 
 .city-hero__author {
@@ -2697,6 +2708,12 @@
 @media (min-width: 900px) {
   .situation-foreclosure-law__grid {
     grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  }
+
+  .situation-foreclosure-law__copy {
+    position: sticky;
+    top: calc(var(--topbar-h) + var(--nav-h) + 16px);
+    align-self: start;
   }
 }
 

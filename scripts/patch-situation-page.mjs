@@ -9,12 +9,16 @@ import { DIVORCE_CONTENT } from "./situation-content/divorce.mjs";
 import { TENANTS_CONTENT } from "./situation-content/tenants.mjs";
 import { LIEN_CONTENT } from "./situation-content/lien.mjs";
 import { STORM_DAMAGE_CONTENT } from "./situation-content/storm-damage.mjs";
-import { SELL_AS_IS_CONTENT } from "./situation-content/sell-as-is.mjs";
+import { SELL_AS_IS_CONTENT, SELL_AS_IS_PAGE } from "./situation-content/sell-as-is.mjs";
 import { AS_IS_FLORIDA_CONTENT } from "./situation-content/as-is-florida.mjs";
 import { CASH_HOME_BUYERS_CONTENT } from "./situation-content/cash-home-buyers.mjs";
 import { FORECLOSURE_CONTENT } from "./situation-content/foreclosure.mjs";
 import { INHERITED_CONTENT } from "./situation-content/inherited.mjs";
 import { FIRE_DAMAGE_CONTENT } from "./situation-content/fire-damage.mjs";
+import { CONDEMNED_CONTENT, CONDEMNED_PAGE } from "./situation-content/condemned.mjs";
+import { MEDICAL_EMERGENCY_CONTENT, MEDICAL_EMERGENCY_PAGE } from "./situation-content/medical-emergency.mjs";
+import { HOARDER_HOUSE_CONTENT, HOARDER_HOUSE_PAGE } from "./situation-content/hoarder-house.mjs";
+import { REVERSE_MORTGAGE_CONTENT, REVERSE_MORTGAGE_PAGE } from "./situation-content/reverse-mortgage.mjs";
 
 const PATCHES = {
   foreclosure: FORECLOSURE_CONTENT,
@@ -28,14 +32,26 @@ const PATCHES = {
   "as-is-florida": AS_IS_FLORIDA_CONTENT,
   "cash-home-buyers": CASH_HOME_BUYERS_CONTENT,
   "fire-damage": FIRE_DAMAGE_CONTENT,
+  condemned: CONDEMNED_CONTENT,
+  "medical-emergency": MEDICAL_EMERGENCY_CONTENT,
+  "hoarder-house": HOARDER_HOUSE_CONTENT,
+  "reverse-mortgage": REVERSE_MORTGAGE_CONTENT,
+};
+
+const NEW_PAGES = {
+  "sell-as-is": SELL_AS_IS_PAGE,
+  condemned: CONDEMNED_PAGE,
+  "medical-emergency": MEDICAL_EMERGENCY_PAGE,
+  "hoarder-house": HOARDER_HOUSE_PAGE,
+  "reverse-mortgage": REVERSE_MORTGAGE_PAGE,
 };
 
 const STRAY_KEYS = [
   "situations", "testimonials", "market", "guarantee", "infoBlocks", "diff", "whyUs",
-  "comparison", "courtProcess", "prose", "cards", "payoff", "tenantRights", "obligations", "caseStudies",
+  "comparison", "courtProcess", "prose", "cards", "payoff", "tenantRights", "caseStudies",
   "insurance", "environmental", "prosCons", "trust", "empathy",
   "buyProcess", "probate", "tax", "valuation",
-  "process", "cards",
+  "process", "cards", "floodLaw", "stages", "obligations", "tenantMarket", "femaInsurance",
 ];
 
 function mergeSection(existing, incoming) {
@@ -110,6 +126,11 @@ const pages = JSON.parse(fs.readFileSync(dataPath, "utf8"));
 for (const slug of slugs) {
   const idx = pages.findIndex((p) => p.slug === slug);
   if (idx < 0) {
+    if (NEW_PAGES[slug]) {
+      pages.push(NEW_PAGES[slug]);
+      console.log("Added", slug, "— sections:", NEW_PAGES[slug].sectionOrder.join(", "));
+      continue;
+    }
     console.error("Slug not found:", slug);
     process.exit(1);
   }

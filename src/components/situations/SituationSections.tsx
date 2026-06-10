@@ -316,17 +316,19 @@ export function SituationProbateSection({
                 ))}
               </ol>
             </div>
-            <div className="situation-aside-cta">
-              <h3 className="h-4">{data.helpTitle}</h3>
-              <p className="body-standard">{data.helpBody}</p>
-              <a href={SITE.phoneHref} className="phone">
-                {SITE.phone}
-              </a>
-              <Link href="#offer" className="btn btn--cta" style={{ width: "100%", justifyContent: "center" }}>
-                Submit your property online
-                <Arr />
-              </Link>
-            </div>
+            {data.helpTitle || data.helpBody ? (
+              <div className="situation-aside-cta">
+                {data.helpTitle ? <h3 className="h-4">{data.helpTitle}</h3> : null}
+                {data.helpBody ? <p className="body-standard">{data.helpBody}</p> : null}
+                <a href={SITE.phoneHref} className="phone">
+                  {SITE.phone}
+                </a>
+                <Link href="#offer" className="btn btn--cta" style={{ width: "100%", justifyContent: "center" }}>
+                  Submit your property online
+                  <Arr />
+                </Link>
+              </div>
+            ) : null}
           </Reveal>
         </div>
       </div>
@@ -1382,7 +1384,12 @@ export function renderSituationSection(
           content.slug === "fire-damage" ||
           content.slug === "water-damage" ||
           content.slug === "sell-as-is" ||
-          content.slug === "as-is-florida") &&
+          content.slug === "mold-damage" ||
+          content.slug === "as-is-florida" ||
+          content.slug === "condemned" ||
+          content.slug === "medical-emergency" ||
+          content.slug === "hoarder-house" ||
+          content.slug === "reverse-mortgage") &&
         content.empathy
       ) {
         return <SituationEmpathyCtaSection key={id} data={content.empathy} alt={alt} />;
@@ -1392,6 +1399,25 @@ export function renderSituationSection(
       ) : null;
 
     case "stages":
+      if ((content.slug === "condemned" || content.slug === "hoarder-house") && content.stages) {
+        return (
+          <ProcessSection
+            key={id}
+            eyebrow={content.stages.eyebrow}
+            title={titleToParts(content.stages)}
+            lede={content.stages.lede}
+            steps={content.stages.items.map((item, i) => ({
+              num: String(i + 1).padStart(2, "0"),
+              title: item.title,
+              body: item.link ? `${item.body} ${item.link.label}` : item.body,
+              metaLabel: "Timing",
+              metaValue: item.label,
+            }))}
+            showStepMeta
+            showCtas={false}
+          />
+        );
+      }
       return content.stages ? <StageCardsSection key={id} data={content.stages} alt={alt} /> : null;
 
     case "tenantMarket":
@@ -1417,7 +1443,7 @@ export function renderSituationSection(
           data={content.moldDisclosure}
           alt={alt}
           imageMap={
-            content.slug === "sell-as-is" ? SELL_AS_IS_MOLD_DISCLOSURE_IMAGES : undefined
+            content.slug === "mold-damage" ? SELL_AS_IS_MOLD_DISCLOSURE_IMAGES : undefined
           }
         />
       ) : null;
@@ -1455,6 +1481,7 @@ export function renderSituationSection(
       return content.process ? (
         <ProcessSection
           key={id}
+          id={content.slug === "condemned" || content.slug === "hoarder-house" ? "how-we-help" : "process"}
           eyebrow={content.process.eyebrow}
           title={titleToParts(content.process)}
           lede={content.process.lede}
@@ -1463,7 +1490,7 @@ export function renderSituationSection(
           keySteps={content.process.keySteps}
           docs={content.process.docs}
           disclosureNote={content.process.disclosureNote}
-          showStepMeta={false}
+          showStepMeta={content.slug === "reverse-mortgage"}
           primaryCta={{ label: content.process.primaryCta ?? "Start with a free offer", href: "#offer" }}
           secondaryCta={
             content.process.secondaryCta ?? {
@@ -1478,6 +1505,9 @@ export function renderSituationSection(
       return content.prose ? <SituationProseSection key={id} data={content.prose} alt={alt} /> : null;
 
     case "payoff":
+      if (content.slug === "reverse-mortgage" && content.payoff) {
+        return <SituationStepCardsSection key={id} data={content.payoff} stepLabel="" />;
+      }
       return content.payoff ? <SituationPayoffSection key={id} data={content.payoff} alt={alt} /> : null;
 
     case "tenantRights":

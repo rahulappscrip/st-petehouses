@@ -16,6 +16,13 @@ export const FORECLOSURE_CONTENT = {
     "finalCta",
   ],
   hero: {
+    subheadline:
+      "Facing foreclosure in St Petersburg? You still have options — and time may be shorter than you think.",
+    subheadlines: [
+      "Facing foreclosure in St Petersburg? You still have options — and time may be shorter than you think. We buy houses as-is for cash across Pinellas County, with no fees, no commissions, and no repairs required. Get a no-obligation written offer within 24 hours and close in as little as 7 days before the foreclosure sale date.",
+      "A cash sale lets you stop the process on your terms. Instead of losing the home at auction, you walk away with your equity intact, your credit damage limited, and the situation resolved cleanly. No showings, no lender approvals, no deals falling through at the last minute.",
+      "We've helped dozens of St Petersburg homeowners navigate foreclosure timelines across every stage. If you're not sure how much time you have left, call us today. We'll tell you honestly whether a cash sale can still help you.",
+    ],
     formIntro:
       "A small local team of in-house specialists — buying homes across Pinellas County at fair prices. No agents, no repairs, no surprises.",
     authorRole: "Local Founder · We Buy St Pete Houses · Pinellas County",

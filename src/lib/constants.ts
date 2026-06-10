@@ -753,6 +753,9 @@ export const HOME_TESTIMONIALS = {
   ],
 } as const;
 
+/** Situations mega-menu / footer: items per left column before the right column starts. */
+export const SITUATIONS_MENU_LEFT_COLUMN_COUNT = 8;
+
 export const NAV_LINKS = {
   primary: [
     { label: "How It Works", href: "/how-it-works" },
@@ -771,8 +774,13 @@ export const NAV_LINKS = {
     { label: "Fire damage", href: "/situations/fire-damage" },
     { label: "Storm damage", href: "/situations/storm-damage" },
     { label: "Sell as-is (St Pete)", href: "/situations/sell-as-is" },
+    { label: "Mold Damage", href: "/situations/mold-damage" },
     { label: "Sell as-is (Florida)", href: "/situations/as-is-florida" },
     { label: "Cash home buyers", href: "/situations/cash-home-buyers" },
+    { label: "Condemned house", href: "/situations/condemned" },
+    { label: "Medical emergency", href: "/situations/medical-emergency" },
+    { label: "Hoarder house", href: "/situations/hoarder-house" },
+    { label: "Reverse mortgage", href: "/situations/reverse-mortgage" },
   ],
   company: [
     { label: "About Us", href: "/about" },
@@ -792,8 +800,13 @@ export const FOOTER_SITUATIONS = [
   { label: "Fire damage", href: "/situations/fire-damage" },
   { label: "Storm damage", href: "/situations/storm-damage" },
   { label: "Sell as-is (St Pete)", href: "/situations/sell-as-is" },
+  { label: "Mold Damage", href: "/situations/mold-damage" },
   { label: "Sell as-is (Florida)", href: "/situations/as-is-florida" },
   { label: "Cash home buyers", href: "/situations/cash-home-buyers" },
+  { label: "Condemned house", href: "/situations/condemned" },
+  { label: "Medical emergency", href: "/situations/medical-emergency" },
+  { label: "Hoarder house", href: "/situations/hoarder-house" },
+  { label: "Reverse mortgage", href: "/situations/reverse-mortgage" },
 ] as const;
 
 export const STATS = [

@@ -6,7 +6,7 @@ import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react
 import { createPortal } from "react-dom";
 import { BrandLogo } from "@/components/ui/BrandLogo";
 import { Arr } from "@/components/ui/Arr";
-import { NAV_LINKS, SITE } from "@/lib/constants";
+import { NAV_LINKS, SITE, SITUATIONS_MENU_LEFT_COLUMN_COUNT } from "@/lib/constants";
 
 function Caret() {
   return (
@@ -342,12 +342,12 @@ export function Header() {
               </button>
               <div className="menu menu-2col" role="menu" onClick={(e) => e.stopPropagation()}>
                 <div className="menu-col">
-                  {NAV_LINKS.situations.slice(0, 6).map((s) => (
+                  {NAV_LINKS.situations.slice(0, SITUATIONS_MENU_LEFT_COLUMN_COUNT).map((s) => (
                     <MenuItem key={s.href} href={s.href} label={s.label} onNavigate={handleMenuNavigate} />
                   ))}
                 </div>
                 <div className="menu-col">
-                  {NAV_LINKS.situations.slice(6).map((s) => (
+                  {NAV_LINKS.situations.slice(SITUATIONS_MENU_LEFT_COLUMN_COUNT).map((s) => (
                     <MenuItem key={s.href} href={s.href} label={s.label} onNavigate={handleMenuNavigate} />
                   ))}
                 </div>

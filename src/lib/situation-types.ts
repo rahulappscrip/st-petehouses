@@ -18,6 +18,8 @@ export type SituationStep = {
   link?: SituationInlineLink;
   /** Icon key for visual buy-process timeline (e.g. phone, house). */
   icon?: string;
+  metaLabel?: string;
+  metaValue?: string;
 };
 
 export type SituationCard = {
@@ -59,6 +61,8 @@ export type SituationHero = {
   titleEm: string;
   titleTail: string;
   subheadline: string;
+  /** When set, renders multiple intro paragraphs instead of a single subheadline. */
+  subheadlines?: string[];
   checklist?: string[];
   formTitle: string;
   formIntro: string;
@@ -304,8 +308,8 @@ export type SituationFullContent = {
     items: SituationProbateItem[];
     timelineTitle: string;
     timeline: SituationTimelineItem[];
-    helpTitle: string;
-    helpBody: string;
+    helpTitle?: string;
+    helpBody?: string;
   };
   tax?: SituationTitleParts & {
     paragraphs: string[];
