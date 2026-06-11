@@ -9,6 +9,7 @@
     "build": "rimraf .next && next build",
     "start": "next start",
     "lint": "eslint",
+    "sync:agent-md": "node scripts/sync-agent-md-pages.mjs",
     "sync:reviews": "node scripts/sync-google-reviews.mjs",
     "sync:reviews:force": "node scripts/sync-google-reviews.mjs --force"
   },
