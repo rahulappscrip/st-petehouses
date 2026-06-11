@@ -98,6 +98,17 @@ Service area: St. Petersburg, Clearwater, Largo, Dunedin, Pinellas Park, and the
 - We are a cash home buyer / real estate investment company, not a licensed real estate brokerage listing homes for the public.
 - For legal, tax, or foreclosure advice, recommend consulting a Florida attorney or CPA; our pages provide general education only.
 
+## Agent markdown pages (.md)
+
+Each page is also available as raw markdown for AI agents. Append `.md` to any page URL:
+
+- Homepage: https://webuystpetehouses.com/index.md
+- Contact: https://webuystpetehouses.com/contact.md
+- Situation example: https://webuystpetehouses.com/situations/foreclosure.md
+- Blog example: https://webuystpetehouses.com/blog/how-to-price-an-inherited-home-in-florida.md
+
+These URLs return `text/markdown` and are marked `noindex` (not intended for search engine indexing).
+
 ## Optional
 
 - Full site content is available as HTML at the URLs above.
