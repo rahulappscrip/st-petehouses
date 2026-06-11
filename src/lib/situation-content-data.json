@@ -3743,8 +3743,8 @@
       "paragraphs": [
         "We buy houses in any condition across St Petersburg and the Greater Tampa Bay area — mold and all. You don't have to hire contractors, wait for remediation completion, or navigate insurance approvals before getting an offer.",
         "Our process is designed for sellers who need certainty and speed. We evaluate your home AS-IS, present a fair written cash offer within 24 hours, and close on your schedule — whether that's 7 days or a few weeks from now.",
-       "Mold damage creates real obstacles in a traditional sale — most financed buyers can't get lender approval on a property with active mold, and remediation costs can run into tens of thousands before you ever list. A cash sale sidesteps all of that entirely. We factor the condition into our offer upfront so there are no surprises, no renegotiations after inspection, and no deals falling through at the last minute." 
-        ],
+        "Mold damage creates real obstacles in a traditional sale — most financed buyers can't get lender approval on a property with active mold, and remediation costs can run into tens of thousands before you ever list. A cash sale sidesteps all of that entirely. We factor the condition into our offer upfront so there are no surprises, no renegotiations after inspection, and no deals falling through at the last minute."
+      ],
       "sidebar": {
         "title": "What Sellers Get from Us",
         "items": [
@@ -3938,7 +3938,6 @@
           "tag": "State",
           "title": "Florida Bar Lawyer Referral Service",
           "body": "Mold-related sales often involve disclosure liability questions or buyer disputes. A licensed Florida real estate attorney can advise on your disclosure obligations."
-          
         }
       ],
       "footerNote": "For legal or financial advice specific to your situation, consult a qualified attorney or tax professional familiar with Florida real estate transactions."
@@ -6116,7 +6115,7 @@
       "asideList": [
         "Time to remove personal items — Take family heirlooms, photos, documents — anything with personal meaning. We work on your schedule, not ours.",
         "Closing day — We handle all paperwork with a licensed Pinellas County title company. You sign and receive your cash. The property transfers to us.",
-         "You're completely done — No ongoing liability, no follow-up calls, no bills. One clean exit from a situation that may have weighed on you for months or years."
+        "You're completely done — No ongoing liability, no follow-up calls, no bills. One clean exit from a situation that may have weighed on you for months or years."
       ]
     },
     "tenantMarket": {
@@ -6224,14 +6223,12 @@
           "tag": "Legal Referral",
           "title": "Florida Bar — Lawyer Referral Service",
           "body": "Find a licensed Florida attorney for questions about property disclosure obligations, probate complications, or complex title situations related to hoarder properties."
-        }
-        ,
+        },
         {
           "tag": "Tax Collector",
           "title": "Pinellas County Tax Collector",
           "body": "Property tax information, outstanding balances, and payment history. Important for confirming any tax liens attached to the property"
-        }
-        ,
+        },
         {
           "tag": "Florida",
           "title": "Florida Dept. of Children & Families",
@@ -6667,14 +6664,12 @@
           "tag": "Legal Referral",
           "title": "Florida Bar — Elder Law Referral",
           "body": "For complex situations — estate administration, heir disputes, or legal questions about the reverse mortgage payoff — the Florida Bar connects you with licensed elder law attorneys."
-        }
-        ,
+        },
         {
           "tag": "FEDERAL — HUD",
           "title": "HUD — HECM Heir & Estate Resources",
           "body": "Specific guidance for heirs and estates dealing with a reverse mortgage after a borrower's death."
-        }
-        ,
+        },
         {
           "tag": "SENIOR RESOURCES",
           "title": "AARP — Reverse Mortgage Guide",
@@ -7078,6 +7073,735 @@
         "SellFast@WeBuyStPeteHouses.com",
         "St. Petersburg, FL — We're Local"
       ]
+    }
+  },
+  {
+    "slug": "bankruptcy",
+    "label": "Bankruptcy",
+    "breadcrumb": "Sell during bankruptcy",
+    "metaTitle": "Sell Your Florida House During Bankruptcy | We Buy St Pete Houses",
+    "metaDescription": "Selling a home during bankruptcy in Florida? We buy as-is for cash and coordinate with your trustee and attorney. Chapter 7 and Chapter 13. No repairs, no commissions.",
+    "hero": {
+      "eyebrow": "Bankruptcy Home Sale · Florida · St Petersburg",
+      "titleLead": "Sell Your Florida House During ",
+      "titleEm": "Bankruptcy",
+      "titleTail": " — Fast Cash Offer",
+      "subheadline": "Bankruptcy doesn't have to mean losing control of your home sale. We buy Florida homes as-is — no repairs, no commissions — and we coordinate directly with your bankruptcy trustee to close on your timeline.",
+      "formTitle": "Get your cash offer today.",
+      "formIntro": "Tell us about your property and bankruptcy situation. We'll have a no-obligation offer in your hands within 24 hours.",
+      "authorRole": "Local Founder · We Buy St Pete Houses · Pinellas County",
+      "addressPlaceholder": "123 Main St, St Petersburg FL",
+      "checklist": [
+        "Cash offer within 24 hours",
+        "We coordinate with your bankruptcy trustee",
+        "As-is purchase — no repairs required",
+        "No fees or commissions",
+        "Close in as little as 7 days once approvals are in place"
+      ]
+    },
+    "stats": [
+      {
+        "value": "BBB",
+        "suffix": " A+",
+        "label": "Accredited Business"
+      },
+      {
+        "value": "5.0",
+        "suffix": " ★",
+        "label": "Google Reviews (120+)"
+      },
+      {
+        "value": "500",
+        "suffix": "+",
+        "label": "Homes Bought in Tampa Bay"
+      },
+      {
+        "value": "15",
+        "suffix": "+ Yrs",
+        "label": "Local Experience"
+      }
+    ],
+    "sectionOrder": [
+      "stats",
+      "empathy",
+      "floodLaw",
+      "obligations",
+      "process",
+      "areas",
+      "testimonials",
+      "guarantee",
+      "resources",
+      "faq",
+      "finalCta"
+    ],
+    "empathy": {
+      "eyebrow": "We Understand Where You Are Right Now",
+      "titleLead": "Bankruptcy is already hard enough. ",
+      "titleEm": "Your home sale shouldn't make it harder.",
+      "titleTail": "",
+      "lede": "Whether you're mid-proceedings or just considering your options — selling a home during bankruptcy feels more complicated than it needs to be. We help Florida homeowners find a clear, compliant exit.",
+      "paragraphs": [
+        "You may be trying to preserve whatever equity you have before creditors close in. You may have a property the trustee is looking at, and you'd rather control the sale than let it get liquidated. You may simply need to reduce your financial obligations quickly and a fast cash sale is the cleanest path.",
+        "What most homeowners don't realize is that working with an experienced cash buyer actually simplifies the trustee and court process. We provide clear documentation, transparent transaction terms, and we coordinate directly with your bankruptcy attorney — making it easier for the trustee to approve and move quickly.",
+        "We've helped Florida homeowners sell during both Chapter 7 and Chapter 13 proceedings. We know the process, the paperwork, and how to structure a sale that works within bankruptcy law. You don't have to navigate this alone."
+      ],
+      "quote": "\"I was in Chapter 13 and needed to sell before my repayment plan became unworkable. We Buy St Pete Houses worked directly with my attorney, provided all the documentation the trustee needed, and we closed in 11 days once the court approved. I didn't think it could move that fast.\" — St. Petersburg seller, 2024",
+      "numbersEyebrow": "What bankruptcy home sellers face",
+      "numbers": [
+        {
+          "value": "Ch. 7",
+          "title": "Trustee controls non-exempt assets — time is critical",
+          "body": "If your home equity exceeds Florida's homestead exemption, the trustee can liquidate it. A proactive cash sale lets you control the terms."
+        },
+        {
+          "value": "Ch. 13",
+          "title": "Court approval required — but it can move fast with the right buyer",
+          "body": "A § 363 motion and creditor notice is required. Cash buyers with clear terms get approved faster than complex financed transactions."
+        },
+        {
+          "prefix": "$",
+          "value": "0",
+          "title": "Fees, commissions, or repairs with us",
+          "body": "Every dollar of our offer goes toward your estate — not to agents or contractors. The trustee sees a clean, maximum-net transaction."
+        },
+        {
+          "value": "7",
+          "suffix": " days",
+          "title": "Minimum to close once court or trustee approves",
+          "body": "We move immediately after approvals. No delays from financing, inspections, or buyer conditions."
+        }
+      ]
+    },
+    "floodLaw": {
+      "eyebrow": "Florida Legal Framework",
+      "titleLead": "What Florida Law Requires When Selling ",
+      "titleEm": "During Bankruptcy",
+      "titleTail": "",
+      "lede": "The legal requirements vary significantly between Chapter 7 and Chapter 13. Understanding both protects you and helps the sale move faster. General information only — consult a Florida bankruptcy attorney for your specific situation.",
+      "items": [
+        {
+          "title": "Chapter 7 — Trustee Authorization",
+          "body": "In Chapter 7, the bankruptcy trustee takes control of non-exempt assets. If your home equity exceeds Florida's homestead exemption, the trustee may sell it. To sell the property yourself, you typically need trustee approval and must demonstrate the sale serves the interests of the bankruptcy estate. Florida's unlimited homestead exemption applies to primary residences — but only if residency and acreage requirements are met.",
+          "link": {
+            "label": "Florida Southern District — Sale of Property Rules →",
+            "href": "https://www.flsb.uscourts.gov/local-rule/sale-property"
+          }
+        },
+        {
+          "title": "Chapter 13 — Court Approval Required",
+          "body": "In Chapter 13, you retain possession of your property while following a court-approved repayment plan. Selling estate property generally requires filing a motion under 11 U.S.C. § 363, providing notice to creditors, and receiving court approval after a hearing. The court evaluates whether the sale serves creditor interests and the debtor's reorganization plan.",
+          "link": {
+            "label": "11 U.S.C. § 363 — Sale of Property of the Estate →",
+            "href": "https://www.govinfo.gov/content/pkg/USCODE-2011-title11/html/USCODE-2011-title11-chap3-subchapIV-sec363.htm"
+          }
+        },
+        {
+          "title": "Free Legal Resources",
+          "body": "For guidance on your specific situation, consult the Florida Bar Consumer Resources, Florida Southern District Bankruptcy Court local rules, and U.S. Courts bankruptcy guidance. We strongly recommend consulting a licensed Florida bankruptcy attorney before making any decisions about your home sale.",
+          "link": {
+            "label": "Florida Bar Consumer Resources →",
+            "href": "https://www.floridabar.org/public/consumer/"
+          }
+        }
+      ],
+      "legalNote": "The above is general informational content and does not constitute legal advice. Bankruptcy law is complex and fact-specific. Always consult a licensed Florida bankruptcy attorney for guidance on your individual situation before proceeding with any sale. Selling a home during bankruptcy without proper trustee or court authorization can result in the sale being voided or legal penalties. We work alongside your legal team — not instead of them."
+    },
+    "obligations": {
+      "eyebrow": "Chapter 7 vs Chapter 13",
+      "titleLead": "How Selling Works Under Each ",
+      "titleEm": "Bankruptcy Chapter",
+      "titleTail": "",
+      "lede": "The path to selling your home differs depending on which chapter you filed. Here's what to expect under each — and how we help in both cases.",
+      "cards": [
+        {
+          "title": "Chapter 7 — Liquidation",
+          "paragraphs": [
+            "Trustee controls non-exempt assets from filing date.",
+            "Florida's homestead exemption may fully protect your equity.",
+            "If equity exceeds exemption, trustee may sell without your consent.",
+            "Voluntary sale requires trustee approval — we provide all documentation needed.",
+            "Sale proceeds distributed to creditors; exempt equity returned to you.",
+            "Timeline: faster if trustee approves quickly; we can close days after approval.",
+            "We coordinate directly with your Chapter 7 trustee — providing transparent terms that simplify and speed up their review."
+          ]
+        },
+        {
+          "title": "Chapter 13 — Reorganization",
+          "paragraphs": [
+            "You retain possession of property during repayment plan.",
+            "Sale requires filing a § 363 motion with the bankruptcy court.",
+            "Creditors receive notice and have opportunity to object.",
+            "Court holds hearing and issues approval order before closing.",
+            "Sale proceeds typically applied to repayment plan obligations.",
+            "Timeline: depends on court scheduling — often 3–6 weeks for approval.",
+            "We work alongside your bankruptcy attorney to prepare the motion filing and provide all documentation needed for a smooth court approval."
+          ]
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "How It Works",
+      "titleLead": "Our Cash Offer Process for ",
+      "titleEm": "Bankruptcy Home Sales",
+      "titleTail": "",
+      "lede": "Designed to work within Florida bankruptcy procedures — transparent, compliant, and built to move fast once approvals are in place.",
+      "steps": [
+        {
+          "num": "01",
+          "title": "Initial Contact",
+          "body": "Call, email, or fill out our form. Tell us your property address, bankruptcy chapter, and whether your attorney is involved. No formal inspection required upfront."
+        },
+        {
+          "num": "02",
+          "title": "Property Review & Offer",
+          "body": "We evaluate your home as-is and present a written, no-obligation cash offer within 24 hours — with full transparency on how we arrived at the number."
+        },
+        {
+          "num": "03",
+          "title": "Trustee / Court Coordination",
+          "body": "We work directly with your bankruptcy attorney and trustee to provide all documentation required for trustee approval (Ch. 7) or court motion (Ch. 13)."
+        },
+        {
+          "num": "04",
+          "title": "Approval & Acceptance",
+          "body": "Once trustee or court approval is in place, you formally accept the offer. We coordinate with a local title company to prepare closing paperwork."
+        },
+        {
+          "num": "05",
+          "title": "Close & Move Forward",
+          "body": "We close on your timeline — often within 7 days of approval. Proceeds are handled per bankruptcy court guidance. You walk away with a clean, compliant sale behind you."
+        }
+      ],
+      "primaryCta": "Start the process"
+    },
+    "areas": {
+      "eyebrow": "Service Area",
+      "titleLead": "St. Petersburg and ",
+      "titleEm": "Greater Tampa Bay.",
+      "titleTail": "",
+      "lede": "We buy houses across St. Pete and Tampa Bay during bankruptcy proceedings — with local relationships at Pinellas County title companies and familiarity with the Middle and Southern Districts of Florida bankruptcy courts."
+    },
+    "testimonials": {
+      "eyebrow": "What Sellers Say",
+      "titleLead": "From homeowners who sold during ",
+      "titleEm": "bankruptcy proceedings.",
+      "titleTail": "",
+      "lede": "Selling a home during bankruptcy feels impossible until you understand how cash buyers work within the process. These sellers found a compliant, fast path through.",
+      "items": [
+        {
+          "quote": "I was in Chapter 13 and my attorney said I could sell the house but we needed court approval. We Buy St Pete Houses provided everything the trustee needed within 48 hours — the documentation was clean, the terms were clear, and the court approved quickly. Closed 11 days after approval. I didn't know it could work that fast inside bankruptcy.",
+          "initials": "MR",
+          "name": "Marcus R.",
+          "meta": "Sold during Chapter 13 repayment plan · St. Petersburg"
+        },
+        {
+          "quote": "The trustee in my Chapter 7 was about to liquidate the property and I'd have had no control over the price or timing. My attorney suggested a voluntary sale instead. We got a fair cash offer within 24 hours, the trustee approved it, and we closed before the liquidation deadline. It saved me thousands and gave me dignity in a brutal situation.",
+          "initials": "TW",
+          "name": "Theresa W.",
+          "meta": "Voluntary sale, Chapter 7 · Clearwater"
+        }
+      ]
+    },
+    "guarantee": {
+      "eyebrow": "Our Commitment",
+      "titleLead": "Clear terms. ",
+      "titleEm": "No surprises.",
+      "titleTail": "",
+      "lede": "The same deal we'd want if we were the ones navigating bankruptcy proceedings. Straightforward, trustee-friendly, no pressure.",
+      "items": [
+        {
+          "title": "No repairs required",
+          "body": "We buy as-is in any condition. The estate doesn't spend a dollar on repairs before the sale — maximizing net proceeds for creditors and you."
+        },
+        {
+          "title": "No commissions or fees",
+          "body": "The offer you accept is what goes to the estate. No agent commissions reducing what's available to creditors or to your exempt equity."
+        },
+        {
+          "title": "We work with your trustee",
+          "body": "We coordinate directly with your bankruptcy attorney and trustee — providing all documentation needed for a compliant, court-ready transaction."
+        },
+        {
+          "title": "Close fast once approved",
+          "body": "No financing delays, no buyer contingencies. Once trustee or court approval is in place, we close in as little as 7 days."
+        }
+      ],
+      "ctaTitle": "Ready to explore your options?",
+      "ctaBody": "No obligation. No pressure. A cash offer within 24 hours — we coordinate with your attorney."
+    },
+    "resources": {
+      "eyebrow": "Local Resources",
+      "titleLead": "Local Resources for ",
+      "titleEm": "St. Petersburg Bankruptcy Home Sales",
+      "titleTail": "",
+      "lede": "These offices and agencies can provide official guidance on legal, court, and regulatory matters related to selling a home during bankruptcy in Florida.",
+      "items": [
+        {
+          "tag": "Federal Court",
+          "title": "Florida Middle District Bankruptcy Court",
+          "body": "Handles bankruptcy cases for Pinellas, Hillsborough, and surrounding counties. Local rules on property sales, § 363 motions, and creditor notice requirements.",
+          "href": "https://www.flmb.uscourts.gov",
+          "linkLabel": "flmb.uscourts.gov →"
+        },
+        {
+          "tag": "Federal Court",
+          "title": "Florida Southern District Bankruptcy Court",
+          "body": "Local rules for sale of property under bankruptcy. Includes guidance on notice requirements, motion procedures, and trustee authorization.",
+          "href": "https://www.flsb.uscourts.gov/local-rule/sale-property",
+          "linkLabel": "Sale of Property Rules →"
+        },
+        {
+          "tag": "County",
+          "title": "Pinellas County Clerk of the Circuit Court",
+          "body": "Property records, deed transfers, and title-related documents. Essential for confirming ownership and lien status before any sale transaction during bankruptcy.",
+          "phone": "(727) 464-7000"
+        },
+        {
+          "tag": "Legal Referral",
+          "title": "Florida Bar — Lawyer Referral Service",
+          "body": "Find a licensed Florida bankruptcy attorney to guide you through disclosure obligations, court approval requirements, and protecting your exempt equity.",
+          "href": "https://www.floridabar.org/public/lrs/",
+          "linkLabel": "Florida Bar Referral Service →"
+        },
+        {
+          "tag": "U.S. TRUSTEE — DOJ",
+          "title": "U.S. Trustee Program — Department of Justice",
+          "body": "Oversees bankruptcy cases and trustee conduct. Relevant when a trustee is administering the estate sale.",
+          "href": "https://www.justice.gov/ust",
+          "linkLabel": "justice.gov/ust →"
+        },
+        {
+          "tag": "STATE — EXEMPTIONS",
+          "title": "Florida Homestead Exemption — Florida Department of Revenue",
+          "body": "Florida's homestead exemption can protect significant equity during bankruptcy.",
+          "href": "https://floridarevenue.com/property/Pages/Homestead.aspx",
+          "linkLabel": "floridarevenue.com →"
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "titleLead": "Frequently asked questions about selling a house ",
+      "titleEm": "during bankruptcy in Florida.",
+      "titleTail": "",
+      "items": [
+        {
+          "q": "Can I sell my home during bankruptcy in Florida?",
+          "a": "Yes — selling a home during bankruptcy in Florida is possible. The process depends on whether you filed Chapter 7 or Chapter 13. Chapter 7 typically requires trustee approval. Chapter 13 requires court approval after filing a § 363 motion and providing notice to creditors. We coordinate with your trustee and attorney throughout."
+        },
+        {
+          "q": "What happens if I sell my house during bankruptcy without approval?",
+          "a": "Selling property that is part of a bankruptcy estate without proper authorization can result in the sale being voided by the court and potential legal penalties. Always obtain trustee approval (Chapter 7) or court approval (Chapter 13) before proceeding. We help ensure every step is compliant — but always consult your bankruptcy attorney first."
+        },
+        {
+          "q": "What is the 910-day rule in bankruptcy?",
+          "a": "The 910-day rule applies to purchase-money car loans in Chapter 13 bankruptcy and does not directly affect Florida homestead exemptions or home equity. Florida's homestead exemption rules are governed by separate provisions, including residency requirements. Consult a Florida bankruptcy attorney for guidance specific to your situation."
+        },
+        {
+          "q": "How long after Chapter 13 can I sell my house?",
+          "a": "You can sell during a Chapter 13 repayment plan — you don't have to wait until it's complete. You need court authorization via a § 363 motion. Once the court approves and a hearing is held, the sale can proceed. We work with your attorney to prepare the motion and provide all supporting documentation to move the court process as quickly as possible."
+        },
+        {
+          "q": "What happens to the proceeds when I sell during bankruptcy?",
+          "a": "Proceeds are handled under bankruptcy court guidance. In Chapter 7, non-exempt proceeds are typically distributed to creditors. In Chapter 13, proceeds are generally applied to your repayment plan obligations. Florida's homestead exemption may protect all or part of your equity — consult your attorney to understand what you're entitled to keep."
+        },
+        {
+          "q": "Do you coordinate with bankruptcy trustees and attorneys?",
+          "a": "Yes — that's a core part of how we work in bankruptcy sales. We provide trustees and courts with clear transaction documentation, transparent offer terms, and full cooperation throughout the approval process. We also work directly alongside your bankruptcy attorney to ensure everything is handled correctly."
+        },
+        {
+          "q": "Do you charge fees or commissions?",
+          "a": "No. We never charge real estate commissions or hidden fees. The cash offer you accept is what goes to the estate — nothing deducted for agents, staging, or marketing. We cover standard closing costs. This transparency is important in bankruptcy sales where trustees scrutinize transaction economics."
+        },
+        {
+          "q": "What documents will I need to start?",
+          "a": "Typically you'll need proof of ownership (deed or title), a government-issued ID, and bankruptcy filing documents (case number, chapter filed, trustee contact). We'll guide you through the rest and coordinate with your attorney to gather any additional documentation required for a compliant, trustee-approved sale."
+        },
+        {
+          "q": "Can I sell a rental property during bankruptcy?",
+          "a": "Yes. Rental properties can be sold during bankruptcy proceedings under the same approval requirements — trustee authorization in Chapter 7, court approval in Chapter 13. The Florida homestead exemption does not apply to investment properties, so proceeds are more likely to go to creditors. Consult your attorney about the implications for your specific case."
+        },
+        {
+          "q": "How can I verify a cash buyer is legitimate?",
+          "a": "Ask for proof of funds, a physical business address, verifiable reviews, and confirmation that they close through a licensed Florida title company. We Buy St Pete Houses is a local LLC — PO Box 143, St Petersburg FL 33731 — with 500+ closed transactions and a BBB A+ rating. We close through licensed Pinellas County title companies to protect all parties. Always have your bankruptcy attorney review any purchase agreement before signing."
+        }
+      ]
+    },
+    "finalCta": {
+      "eyebrow": "Ready to move forward?",
+      "titleLead": "Sell your Florida home during bankruptcy — ",
+      "titleEm": "on your terms.",
+      "titleTail": "",
+      "description": "No repairs. No commissions. A transparent cash offer within 24 hours. We coordinate with your trustee and close fast once approvals are in place."
+    }
+  },
+  {
+    "slug": "foundation-problems",
+    "label": "Foundation problems",
+    "breadcrumb": "Foundation problems",
+    "metaTitle": "Sell Your House with Foundation Problems in St Petersburg | We Buy St Pete Houses",
+    "metaDescription": "Foundation cracks, settlement, or drainage issues in St Petersburg? We buy homes as-is for cash — no repairs, no commissions. Close in as little as 7 days.",
+    "hero": {
+      "eyebrow": "St. Petersburg, Florida · Foundation Problem Homes",
+      "titleLead": "Sell your house with ",
+      "titleEm": "foundation problems",
+      "titleTail": " in St. Petersburg for cash.",
+      "subheadline": "We buy homes in St. Petersburg in any condition — including those with cracks, settlement issues, and drainage concerns. No repairs, no commissions, no hassle. Close in as little as 7 days.",
+      "formTitle": "Tell us about your home.",
+      "formIntro": "Get a fair, no-obligation cash offer — any condition.",
+      "authorRole": "Co-Founder & Head of Acquisitions · We Buy St Pete Houses",
+      "addressPlaceholder": "123 4th Ave N, St Petersburg FL 33701",
+      "checklist": [
+        "No repairs or foundation fixes required",
+        "No real estate agent commissions or fees",
+        "Close in as little as 7 days",
+        "We handle Florida disclosure guidance",
+        "Fair, transparent offer based on as-is condition"
+      ]
+    },
+    "stats": [
+      {
+        "value": "BBB",
+        "suffix": " A+",
+        "label": "Accredited Business"
+      },
+      {
+        "value": "5.0",
+        "suffix": " ★",
+        "label": "Google Reviews (120+)"
+      },
+      {
+        "value": "500",
+        "suffix": "+",
+        "label": "Homes Bought in Tampa Bay"
+      },
+      {
+        "value": "15",
+        "suffix": "+ Yrs",
+        "label": "Local Experience"
+      }
+    ],
+    "sectionOrder": [
+      "stats",
+      "empathy",
+      "prose",
+      "comparison",
+      "process",
+      "areas",
+      "testimonials",
+      "guarantee",
+      "resources",
+      "faq",
+      "finalCta"
+    ],
+    "empathy": {
+      "eyebrow": "You Found Out — Now What?",
+      "titleLead": "Foundation problems don't have to mean ",
+      "titleEm": "months of stress and uncertainty.",
+      "titleTail": "",
+      "lede": "Whether the issue showed up in an inspection, you've watched the cracks grow for years, or you inherited a property you suspect has structural problems — the path forward can feel overwhelming. We help St Pete homeowners find a clean exit.",
+      "paragraphs": [
+        "You may have already had one sale fall through when the buyer's lender flagged foundation issues. You may have gotten a repair estimate that made your stomach drop. You may be holding a property you can't afford to fix and can't seem to sell — watching it sit while taxes and insurance keep coming.",
+        "Foundation problems scare off the vast majority of traditional buyers. Most lenders won't finance a property with known structural issues until repairs are complete — which means your buyer pool shrinks to people paying cash, and those buyers often lowball knowing your position.",
+        "We're cash buyers who specifically buy properties with foundation issues. We factor the repair cost into a fair, transparent offer rather than requiring you to pay for it first. No contingencies, no lender complications, no months of carrying costs while you wait for the right buyer to show up."
+      ],
+      "quote": "\"A buyer backed out after their inspector flagged the foundation. I thought I was stuck. We Buy St Pete Houses gave me a written cash offer two days later — took the house exactly as it was. I wish I'd called sooner.\" — St. Petersburg seller, 2024",
+      "numbersEyebrow": "What foundation-problem sellers face",
+      "numbers": [
+        {
+          "prefix": "$",
+          "value": "2k",
+          "suffix": "–$8k+",
+          "title": "Typical Florida foundation repair range",
+          "body": "Minor crack injection to full underpinning — costs vary widely, and contractors' estimates often differ dramatically."
+        },
+        {
+          "value": "0",
+          "title": "Lenders willing to finance a home with known foundation issues",
+          "body": "Most conventional and FHA lenders require foundation repairs before loan approval — shrinking your buyer pool to cash only."
+        },
+        {
+          "value": "Weeks",
+          "title": "Minimum delay if you repair first, then list",
+          "body": "Contractor scheduling, permit timelines, and re-inspection add weeks before you can even relist — with no guarantee the next buyer won't negotiate further."
+        },
+        {
+          "value": "7",
+          "suffix": " days",
+          "title": "Minimum to close once you accept our offer",
+          "body": "No repairs, no re-inspection, no lender. We close when you're ready."
+        }
+      ]
+    },
+    "prose": {
+      "eyebrow": "How Foundation Issues Affect Your Sale",
+      "titleLead": "What foundation problems ",
+      "titleEm": "mean for selling",
+      "titleTail": " in St. Petersburg.",
+      "lede": "Foundation problems can scare off traditional buyers and trigger lender requirements for repairs before loan approval. Understanding the impact helps you make the right decision about whether to repair or sell as-is.",
+      "paragraphs": [
+        "Signs like cracks in walls or floors, doors that stick, uneven flooring, and drainage issues all signal potential foundation concerns. Traditional buyers who rely on financing often walk away — lenders and insurers frequently require repairs before approving loans, meaning your home can sit on the market for months.",
+        "Florida law requires sellers to disclose known foundation issues as material defects. Cash buyers factor repair estimates into their offers rather than requiring you to fix anything first. This means you avoid paying for repairs while still receiving a fair, transparent offer based on your home's current condition.",
+        "Typical foundation repair costs in Florida generally range from approximately $2,200 to $8,100, with a national average around $5,000. Extensive structural work can cost considerably more. A cash buyer absorbs these costs in their offer — you don't pay them."
+      ],
+      "sidebar": {
+        "title": "Florida Disclosure Requirements",
+        "badge": "Seller obligations",
+        "items": [
+          {
+            "strong": "Disclose known defects:",
+            "text": "Florida law requires sellers to disclose all known material defects, including foundation problems, to potential buyers."
+          },
+          {
+            "strong": "We guide you through it:",
+            "text": "When you sell to a cash buyer, we walk you through your disclosure obligations so you fulfill legal requirements without stress — and without needing to fix anything first."
+          }
+        ]
+      }
+    },
+    "comparison": {
+      "eyebrow": "Repair or Sell As-Is?",
+      "titleLead": "Making the right choice ",
+      "titleEm": "in St. Petersburg.",
+      "titleTail": "",
+      "lede": "Repairs don't always add dollar-for-dollar value, and traditional buyers may still negotiate down after you've invested in fixes. Here's how the two paths compare.",
+      "traditionalLabel": "Repair Before Listing",
+      "traditionalTimeline": "Weeks to months",
+      "cashLabel": "Sell As-Is for Cash",
+      "cashTimeline": "as little as 7 days",
+      "featuredBadge": "Best for foundation issues",
+      "rows": [
+        {
+          "label": "Upfront repair costs",
+          "traditional": "$2,200–$8,100+ out of pocket",
+          "cash": "None — we absorb in offer"
+        },
+        {
+          "label": "Timeline to close",
+          "traditional": "Weeks or months of repairs + listing",
+          "cash": "As fast as 7 days"
+        },
+        {
+          "label": "Buyer financing risk",
+          "traditional": "Deal can still fall through",
+          "cash": "Zero — cash purchase"
+        },
+        {
+          "label": "Agent commission",
+          "traditional": "5–6% of sale price",
+          "cash": "$0 — none"
+        },
+        {
+          "label": "Post-repair negotiation",
+          "traditional": "Buyers may still negotiate credits",
+          "cash": "No inspection contingencies"
+        },
+        {
+          "label": "Holding costs",
+          "traditional": "Taxes, insurance during repair period",
+          "cash": "Minimal — fast close"
+        },
+        {
+          "label": "Disclosure guidance",
+          "traditional": "You manage it",
+          "cash": "We guide you through requirements"
+        }
+      ]
+    },
+    "process": {
+      "eyebrow": "Our Cash Offer Process",
+      "titleLead": "Step-by-step: how to sell a ",
+      "titleEm": "foundation-problem home",
+      "titleTail": " in St. Pete.",
+      "lede": "Our process is straightforward, transparent, and designed to move at your pace. No formal inspection required on your part — we handle the evaluation.",
+      "steps": [
+        {
+          "num": "01",
+          "title": "Initial Inquiry",
+          "body": "Call (727) 477-8998 or fill out our form. Tell us about your property and the foundation issues you're aware of."
+        },
+        {
+          "num": "02",
+          "title": "Property Evaluation",
+          "body": "We assess your home's condition — including foundation issues — to determine a fair cash offer. No formal inspection required from you."
+        },
+        {
+          "num": "03",
+          "title": "Receive Your Offer",
+          "body": "We present a transparent, no-obligation cash offer based on the as-is condition. Full clarity on how we arrived at the number."
+        },
+        {
+          "num": "04",
+          "title": "Review & Accept",
+          "body": "No pressure. Take your time, ask questions, and choose the closing date that works best for you."
+        },
+        {
+          "num": "05",
+          "title": "Close & Get Paid",
+          "body": "We handle the paperwork and guide you through Florida disclosure requirements. Walk away with cash in hand — no agent fees, no repair costs."
+        }
+      ],
+      "primaryCta": "Get my cash offer"
+    },
+    "areas": {
+      "eyebrow": "Service Area",
+      "titleLead": "",
+      "titleEm": "St. Petersburg",
+      "titleTail": " and Greater Tampa Bay.",
+      "lede": "Our local presence means we understand the unique challenges St. Petersburg homeowners face when selling properties with foundation problems. We're here to provide fast, fair, community-focused service."
+    },
+    "testimonials": {
+      "eyebrow": "What Sellers Say",
+      "titleLead": "Homeowners who sold with ",
+      "titleEm": "foundation problems",
+      "titleTail": " in St Petersburg.",
+      "lede": "No repairs. No deals falling through. These sellers found a direct way out of a situation that felt stuck.",
+      "items": [
+        {
+          "quote": "A buyer backed out after their inspector flagged the foundation cracks. I'd already accepted their offer and started planning the move. We Buy St Pete Houses gave me a written offer two days later — same price, no inspection contingency, no foundation repair required. Closed in 8 days.",
+          "initials": "BK",
+          "name": "Brian K.",
+          "meta": "Sold after deal fell through on foundation inspection · St. Petersburg"
+        },
+        {
+          "quote": "I inherited my father's house in Pinellas Park. It had obvious foundation settlement — sloping floors, sticking doors, cracks everywhere. Repair estimates ranged from $6,000 to $14,000. I live in another state and couldn't manage a renovation. Cash offer in 24 hours. Done remotely in 12 days.",
+          "initials": "SJ",
+          "name": "Sandra J.",
+          "meta": "Sold inherited home with foundation settlement · Pinellas Park"
+        }
+      ]
+    },
+    "guarantee": {
+      "eyebrow": "Our Commitment",
+      "titleLead": "Clear terms. ",
+      "titleEm": "No surprises.",
+      "titleTail": "",
+      "lede": "When you're already dealing with foundation problems, the sale shouldn't add more uncertainty. Here's exactly what we commit to.",
+      "items": [
+        {
+          "title": "No repairs required",
+          "body": "Cracks, settlement, drainage issues, structural damage — we buy it in its current condition. Nothing needs to change before you sell."
+        },
+        {
+          "title": "No commissions or fees",
+          "body": "The offer you accept is what you receive at closing. We cover standard closing costs — nothing deducted at the end."
+        },
+        {
+          "title": "Close on your timeline",
+          "body": "As fast as 7 days or more time if you need it. No repair completion or re-inspection required before closing."
+        },
+        {
+          "title": "Guaranteed cash — no fall-through",
+          "body": "We don't use lender financing. Foundation issues that kill conventional loans are not a problem for us. When we commit, we close."
+        }
+      ],
+      "ctaTitle": "Ready to move forward?",
+      "ctaBody": "No repairs. No pressure. A cash offer within 24 hours."
+    },
+    "resources": {
+      "eyebrow": "Local Resources",
+      "titleLead": "Local resources for ",
+      "titleEm": "St. Petersburg homeowners.",
+      "titleTail": "",
+      "lede": "These offices help you understand foundation issues, disclosure obligations, and your options as a seller. We're happy to point you in the right direction.",
+      "items": [
+        {
+          "tag": "CITY",
+          "title": "City of St. Petersburg Building Department",
+          "body": "Permits, inspections, and code compliance information — useful for confirming any open permits or prior repair history.",
+          "href": "https://www.stpete.org/government/city_departments/neighborhood_affairs/building_and_construction_services/index.php",
+          "linkLabel": "St Pete Building Department →"
+        },
+        {
+          "tag": "COUNTY",
+          "title": "Pinellas County Consumer Protection",
+          "body": "Resources for understanding your rights and responsibilities as a seller, including guidance on disclosure requirements.",
+          "href": "https://pinellas.gov/department/consumer-protection/",
+          "linkLabel": "Pinellas Consumer Protection →"
+        },
+        {
+          "tag": "STATE",
+          "title": "Florida DBPR — Licensed Contractors",
+          "body": "Verify licensed, insured foundation contractors if you want a repair estimate or second opinion before deciding to sell.",
+          "href": "https://www.myfloridalicense.com",
+          "linkLabel": "myfloridalicense.com →"
+        },
+        {
+          "tag": "LEGAL REFERRAL",
+          "title": "Florida Bar — Lawyer Referral Service",
+          "body": "For legal advice on disclosure obligations or complex title situations — consult a Florida real estate attorney.",
+          "href": "https://www.floridabar.org/public/lrs/",
+          "linkLabel": "Florida Bar Referral Service →"
+        },
+        {
+          "tag": "STATE — INSURANCE",
+          "title": "Florida Department of Financial Services",
+          "body": "If your homeowner's insurance covers foundation damage, this office handles insurance complaints, claim disputes, and adjuster licensing verification.",
+          "href": "https://www.myfloridacfo.com/division/consumers",
+          "linkLabel": "myfloridacfo.com →"
+        },
+        {
+          "tag": "COUNTY",
+          "title": "Pinellas County Property Appraiser",
+          "body": "Foundation issues directly affect assessed value and comparable sales. The Property Appraiser's office provides official valuations and ownership records.",
+          "href": "https://www.pcpao.gov/",
+          "linkLabel": "pcpao.gov →"
+        }
+      ]
+    },
+    "faq": {
+      "eyebrow": "FAQs",
+      "titleLead": "Frequently asked questions about selling a home with ",
+      "titleEm": "foundation problems",
+      "titleTail": " in St. Petersburg.",
+      "items": [
+        {
+          "q": "Can I sell my house as-is with foundation problems?",
+          "a": "Yes. We buy homes as-is, including those with foundation problems, and can close quickly with a cash offer. You don't need to make any repairs or improvements before selling to us."
+        },
+        {
+          "q": "Is it hard to sell a home with foundation issues through a traditional sale?",
+          "a": "Yes — traditional sales are significantly harder. Most mortgage lenders require foundation issues to be repaired before approving financing, which either forces you to pay for repairs upfront or limits your buyer pool to cash purchasers. Cash buyers like us eliminate this hurdle entirely."
+        },
+        {
+          "q": "How fast can you close on a house with foundation issues?",
+          "a": "We can close in as little as 7 days, depending on your timeline and the specifics of the transaction. You choose the closing date that works best for you — whether that's one week or a few months out."
+        },
+        {
+          "q": "What disclosures are required in Florida for foundation issues?",
+          "a": "Florida law requires sellers to disclose known material defects, including foundation problems. We guide you through what must be disclosed and how to fulfill your legal obligations without stress. You're required to disclose what you know — you don't have to get an inspection to discover additional issues before selling to us."
+        },
+        {
+          "q": "Do I need an inspection before selling?",
+          "a": "No mandatory inspection is required to receive a cash offer from us. We assess foundation concerns as part of our own evaluation process, so you don't need to arrange or pay for an inspection upfront."
+        },
+        {
+          "q": "Are cash offers fair when a home has foundation problems?",
+          "a": "Yes. Our cash offers reflect the property's current condition with clear, transparent terms. We factor in estimated repair costs and current market conditions, then present a number we can fully explain. There are no hidden fees or last-minute surprises at the closing table."
+        },
+        {
+          "q": "What are common signs of foundation problems I should watch for?",
+          "a": "Look for cracks in walls or floors (especially stair-step or horizontal cracks), doors and windows that stick or won't close properly, uneven or sloping floors, and water pooling or drainage problems around the foundation perimeter. These often signal foundation concerns that may need attention."
+        },
+        {
+          "q": "Should I repair before selling if there are foundation problems?",
+          "a": "It depends on your timeline and goals. Repairs can cost $2,200–$8,100 or more and take weeks to complete — and traditional buyers may still negotiate down after seeing an inspection. If speed, certainty, and avoiding out-of-pocket costs are priorities, selling as-is to a cash buyer is typically the smarter path in St. Petersburg."
+        },
+        {
+          "q": "How does a cash offer compare to a traditional sale for a foundation-problem home?",
+          "a": "Cash offers provide speed and certainty with no repairs required. Traditional sales typically require repairs, showings, agent commissions, and financing contingencies that can delay or derail the closing. For homes with foundation issues specifically, traditional sales are often not viable at all without repair work first."
+        },
+        {
+          "q": "What local resources can help me understand foundation problems?",
+          "a": "The City of St. Petersburg Building Department, Pinellas County Consumer Protection, and licensed local foundation contractors are good starting points. The Florida DBPR can help you verify licensed contractors. We're also happy to answer questions and point you to trusted resources as you explore your options."
+        }
+      ]
+    },
+    "finalCta": {
+      "titleLead": "Foundation problems? We ",
+      "titleEm": "still buy",
+      "titleTail": " your St. Pete home.",
+      "description": "Get your no-obligation cash offer today. No repairs, no fees, no delays — close in as little as 7 days on your schedule."
     }
   }
 ]

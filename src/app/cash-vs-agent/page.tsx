@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { CashVsAgentPageContent } from "@/components/cash-vs-agent/CashVsAgentPageContent";
 import { CASH_VS_AGENT_PAGE } from "@/lib/cash-vs-agent-content";
 import { SITE } from "@/lib/constants";
+import { getPageOgImage, ogImageMeta } from "@/lib/og-images";
 import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 export const metadata: Metadata = {
@@ -15,6 +16,10 @@ export const metadata: Metadata = {
     description: CASH_VS_AGENT_PAGE.meta.description,
     url: `${SITE.url}cash-vs-agent/`,
     locale: "en_US",
+    images: (() => {
+      const file = getPageOgImage("/cash-vs-agent");
+      return file ? ogImageMeta(file, CASH_VS_AGENT_PAGE.meta.title) : undefined;
+    })(),
   },
   robots: { index: true, follow: true },
 };

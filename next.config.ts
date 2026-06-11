@@ -12,7 +12,6 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       { source: "/situations/probate", destination: "/situations/inherited", permanent: true },
-      { source: "/situations/bankruptcy", destination: "/situations/foreclosure", permanent: true },
       { source: "/situations/mortgage", destination: "/situations/lien", permanent: true },
     ];
   },

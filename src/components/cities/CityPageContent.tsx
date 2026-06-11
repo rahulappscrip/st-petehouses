@@ -54,7 +54,7 @@ function renderCitySection(id: CitySectionId, content: CityFullContent, page: Ci
           lede={content.process.lede}
           steps={content.process.steps}
           showStepMeta={false}
-          primaryCta={{ label: content.process.primaryCtaLabel, href: "#offer" }}
+          primaryCta={{ label: content.process.primaryCtaLabel, href: SITE.cashOfferHref }}
           secondaryCta={{ label: content.process.secondaryCtaLabel, href: SITE.phoneHref }}
         />
       );

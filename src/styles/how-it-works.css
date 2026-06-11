@@ -25,6 +25,22 @@
   color: var(--ink);
 }
 
+.crumbs svg {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 759px) {
+  .crumbs {
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 4px;
+  }
+
+  .crumbs svg {
+    margin-inline: 2px;
+  }
+}
+
 .article-hero {
   position: relative;
   overflow: hidden;

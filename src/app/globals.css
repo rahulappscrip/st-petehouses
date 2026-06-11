@@ -1,30 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap");
-
+/* Global styles — loaded on every route via root layout */
 @import "../styles/tailwind-theme.css";
 @import "../styles/reference-layout.css";
-@import "../styles/hero.css";
 @import "../styles/layout-fixes.css";
 @import "../styles/header.css";
-@import "../styles/reviews-page.css";
-@import "../styles/sell-your-house.css";
-@import "../styles/how-it-works.css";
-@import "../styles/offer-math.css";
-@import "../styles/seller-situations.css";
-@import "../styles/meet-owner.css";
-@import "../styles/savings-estimator.css";
-@import "../styles/pros-cons.css";
-@import "../styles/market-section.css";
-@import "../styles/guarantee-section.css";
-@import "../styles/testimonials.css";
-@import "../styles/situation-page.css";
-@import "../styles/situation-testimonials.css";
-@import "../styles/divorce-page.css";
-@import "../styles/inherited-buy-process.css";
 @import "../styles/mobile-nav.css";
-@import "../styles/about.css";
-@import "../styles/contact-page.css";
-@import "../styles/cash-vs-agent.css";
-@import "../styles/get-a-cash-offer.css";
-@import "../styles/blog.css";
 @import "../styles/typography.css";
-@import "../styles/situation-typography.css";

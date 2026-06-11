@@ -6,6 +6,8 @@ import Link from "next/link";
 export type FaqAccordionItem = {
   q: string;
   a: string;
+  list?: readonly string[];
+  aAfter?: string;
   aLink?: { href: string; label: string };
 };
 
@@ -51,6 +53,14 @@ export function FaqAccordionList({ items, defaultOpenIndex = 0 }: FaqAccordionLi
                 </>
               ) : null}
             </p>
+            {item.list?.length ? (
+              <ul>
+                {item.list.map((entry) => (
+                  <li key={entry}>{entry}</li>
+                ))}
+              </ul>
+            ) : null}
+            {item.aAfter ? <p>{item.aAfter}</p> : null}
           </div>
         </details>
       ))}

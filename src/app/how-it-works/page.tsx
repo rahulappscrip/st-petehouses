@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { HowItWorksContent } from "@/components/how-it-works/HowItWorksContent";
 import { SITE } from "@/lib/constants";
+import { getPageOgImage, ogImageMeta } from "@/lib/og-images";
 import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 export const metadata: Metadata = {
@@ -16,6 +17,10 @@ export const metadata: Metadata = {
       "Our 4-step cash home buying process — inquiry, assessment, offer, closing in as little as 7 days. As-is, no fees, no commissions.",
     url: `${SITE.url}how-it-works/`,
     locale: "en_US",
+    images: (() => {
+      const file = getPageOgImage("/how-it-works");
+      return file ? ogImageMeta(file, "How It Works: Selling Your House Fast for Cash") : undefined;
+    })(),
   },
   robots: { index: true, follow: true },
 };
