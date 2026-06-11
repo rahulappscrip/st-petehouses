@@ -270,10 +270,11 @@
 }
 
 .pros-compare__row dt {
-  font-family: var(--mono);
+  font-family: var(--sans);
   font-size: 16px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  line-height: 22px;
+  letter-spacing: unset;
+  text-transform: capitalize;
   color: var(--ink-soft);
   margin: 0;
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SellYourHouseContent } from "@/components/sell-your-house/SellYourHouseContent";
 import { SITE } from "@/lib/constants";
+import { getPageOgImage, ogImageMeta } from "@/lib/og-images";
 import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 export const metadata: Metadata = {
@@ -15,6 +16,10 @@ export const metadata: Metadata = {
     description: "Cash offers quickly. Close in as little as 7 days. As-is, no repairs, no commissions.",
     url: `${SITE.url}sell-your-house/`,
     locale: "en_US",
+    images: (() => {
+      const file = getPageOgImage("/sell-your-house");
+      return file ? ogImageMeta(file, "Sell Your House Fast in St. Petersburg, FL") : undefined;
+    })(),
   },
   robots: { index: true, follow: true },
 };

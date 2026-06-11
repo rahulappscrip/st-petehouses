@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { CityPageContent } from "@/components/cities/CityPageContent";
 import { SITE } from "@/lib/constants";
 import { CITY_PAGES, getCityPage } from "@/lib/cities";
+import { getCityOgImage, ogImageMeta } from "@/lib/og-images";
 import { getCityPageKeyword } from "@/lib/seo-keywords";
 
 type PageProps = {
@@ -24,7 +25,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title,
     description: page.metaDescription,
-    keywords: getCityPageKeyword(page.cityName),
+    keywords: getCityPageKeyword(page.route, page.cityName),
     alternates: { canonical },
     openGraph: {
       type: "article",
@@ -32,6 +33,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: page.metaDescription,
       url: `${SITE.url}${page.route}/`,
       locale: "en_US",
+      images: (() => {
+        const file = getCityOgImage(page.route);
+        return file ? ogImageMeta(file, title) : undefined;
+      })(),
     },
     robots: { index: true, follow: true },
   };

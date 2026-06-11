@@ -18,6 +18,8 @@ const SITUATION_SELL_REASON_MAP: Partial<Record<string, SellReasonValue>> = {
   "hoarder-house": "too-much-work",
   "sell-as-is": "too-much-work",
   "as-is-florida": "too-much-work",
+  bankruptcy: "financial-hardship",
+  "foundation-problems": "too-much-work",
 };
 
 export function getSituationSellReason(slug: string): SellReasonValue | undefined {

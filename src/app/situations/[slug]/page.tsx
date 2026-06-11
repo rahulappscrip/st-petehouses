@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SituationPageContent } from "@/components/situations/SituationPageContent";
 import { SITE } from "@/lib/constants";
+import { getSituationOgImage, ogImageMeta } from "@/lib/og-images";
 import { getSituationContent, SITUATION_PAGES } from "@/lib/situations";
 import { getSituationPageKeyword } from "@/lib/seo-keywords";
 
@@ -31,6 +32,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: content.metaDescription,
       url: `${SITE.url}situations/${content.slug}/`,
       locale: "en_US",
+      images: (() => {
+        const file = getSituationOgImage(content.slug);
+        return file ? ogImageMeta(file, content.metaTitle) : undefined;
+      })(),
     },
     robots: { index: true, follow: true },
   };

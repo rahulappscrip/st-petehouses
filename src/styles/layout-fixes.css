@@ -188,10 +188,6 @@ main {
   }
 }
 @media (min-width:1025px){
-.location .reveal.reveal-d1.in {
-  padding-bottom: 50px;
-}
-
 .cta-side__img {
 display: block;
 width: 100%;

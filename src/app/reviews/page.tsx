@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ReviewsPageContent } from "@/components/reviews/ReviewsPageContent";
 import { SITE } from "@/lib/constants";
+import { getPageOgImage, ogImageMeta } from "@/lib/og-images";
 import { getTestimonialsData } from "@/lib/reviews/get-reviews";
 import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
@@ -16,6 +17,10 @@ export const metadata: Metadata = {
     description: "Authentic reviews from St Petersburg sellers — fast cash offers, transparent terms, smooth closings.",
     url: `${SITE.url}reviews/`,
     locale: "en_US",
+    images: (() => {
+      const file = getPageOgImage("/reviews");
+      return file ? ogImageMeta(file, "We Buy St Pete Houses Reviews") : undefined;
+    })(),
   },
   robots: { index: true, follow: true },
 };

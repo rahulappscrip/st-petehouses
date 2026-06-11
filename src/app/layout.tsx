@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import localFont from "next/font/local";
 import { TopBar } from "@/components/layout/TopBar";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -8,13 +9,28 @@ import { ASSETS, SITE } from "@/lib/constants";
 import { REAL_ESTATE_AGENT_JSON_LD, SITE_PUBLISHER, SITE_PUBLISHER_JSON_LD } from "@/lib/schema";
 import "./globals.css";
 
+const inter = localFont({
+  src: "../../public/fonts/Inter-Variable-Font.ttf",
+  variable: "--font-inter-next",
+  display: "swap",
+});
+
+const dmSerifDisplay = localFont({
+  src: "../../public/fonts/DMSerifDisplay-Italic.ttf",
+  weight: "400",
+  style: "italic",
+  variable: "--font-dm-serif-next",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
     default: SITE.name,
     template: "%s",
   },
-  description: "We buy houses in St. Petersburg and Tampa Bay for cash. Fair offers, fast closings, no repairs required.",
+  description:
+    "We buy houses in St. Petersburg and Tampa Bay for cash. Fair offers, fast closings, no repairs required.",
   publisher: SITE_PUBLISHER.name,
   robots: { index: true, follow: true },
   openGraph: {
@@ -41,8 +57,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" className={`${inter.variable} ${dmSerifDisplay.variable}`}>
+      <body className={inter.className}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

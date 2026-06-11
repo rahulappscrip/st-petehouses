@@ -196,7 +196,7 @@ export function SituationCourtProcessSection({
               <div className="situation-aside-cta" style={{ marginTop: 20 }}>
                 <h3>{data.callout.title}</h3>
                 <p>{data.callout.body}</p>
-                <Link href="#offer" className="btn btn--cta">
+                <Link href={SITE.cashOfferHref} className="btn btn--cta">
                   Get a cash offer now
                   <Arr />
                 </Link>
@@ -494,7 +494,7 @@ export function SituationObligationsSection({
                 <p key={p.slice(0, 40)}>{p}</p>
               ))}
               {card.featured ? (
-                <Link href="#offer" className="btn btn--cta">
+                <Link href={SITE.cashOfferHref} className="btn btn--cta">
                   Get a cash offer
                   <Arr />
                 </Link>
@@ -1033,7 +1033,7 @@ export function SituationInfoBlocksSection({
             <div className="situation-info-card situation-info-callout__card">
               <h3 className="h-4">{callout.title}</h3>
               <p className="body-standard">{callout.body}</p>
-              <Link href="#offer" className="btn btn--cta">
+              <Link href={SITE.cashOfferHref} className="btn btn--cta">
                 Get a cash offer
                 <Arr />
               </Link>
@@ -1495,7 +1495,7 @@ export function renderSituationSection(
           docs={content.process.docs}
           disclosureNote={content.process.disclosureNote}
           showStepMeta={content.slug === "reverse-mortgage"}
-          primaryCta={{ label: content.process.primaryCta ?? "Start with a free offer", href: "#offer" }}
+          primaryCta={{ label: content.process.primaryCta ?? "Start with a free offer", href: SITE.cashOfferHref }}
           secondaryCta={
             content.process.secondaryCta ?? {
               label: `Call ${SITE.phone}`,
