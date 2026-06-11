@@ -53,15 +53,18 @@ export function StageCardsSection({ data, alt, layout = "grid" }: Props) {
                 className="situation-stages__card"
                 d={i > 0 ? ((i % 3) as 1 | 2 | 3) : undefined}
               >
-                <span className="situation-stages__label">{item.label}</span>
+                {item.label ? (
+                  <span className="situation-stages__label">{item.label}</span>
+                ) : null}
                 <h3 className="h-3">{item.title}</h3>
                 <p className="body-standard">{item.body}</p>
                 {item.link ? (
                   <a
                     href={item.link.href}
                     className="situation-stages__link"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    {...(item.link.href.startsWith("http")
+                      ? { target: "_blank", rel: "noopener noreferrer" }
+                      : {})}
                   >
                     {item.link.label}
                   </a>

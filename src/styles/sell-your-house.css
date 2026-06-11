@@ -1,11 +1,5 @@
 /* Sell Your House page */
 
-.section-alt {
-  background: var(--paper);
-  border-top: 1px solid var(--line-soft);
-  border-bottom: 1px solid var(--line-soft);
-}
-
 .sit-grid {
   display: grid;
   gap: 14px;

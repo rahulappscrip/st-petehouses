@@ -71,7 +71,7 @@ export function ReviewsPageContent({ testimonials }: ReviewsPageContentProps) {
             <div className="byline">
               <SiteImage
                 className="av"
-                src={ASSETS.johnPortrait}
+                src={ASSETS.johnByline}
                 alt={PERSON_IMAGES.johnAvatar.alt}
                 title={PERSON_IMAGES.johnAvatar.title}
                 width={40}

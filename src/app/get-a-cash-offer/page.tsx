@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { GetACashOfferPageContent } from "@/components/get-a-cash-offer/GetACashOfferPageContent";
 import { GET_A_CASH_OFFER_PAGE } from "@/lib/get-a-cash-offer-content";
 import { SITE } from "@/lib/constants";
+import { getPageOgImage, ogImageMeta } from "@/lib/og-images";
 import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
 export const metadata: Metadata = {
@@ -15,6 +16,10 @@ export const metadata: Metadata = {
     description: GET_A_CASH_OFFER_PAGE.meta.description,
     url: `${SITE.url}get-a-cash-offer/`,
     locale: "en_US",
+    images: (() => {
+      const file = getPageOgImage("/get-a-cash-offer");
+      return file ? ogImageMeta(file, GET_A_CASH_OFFER_PAGE.meta.title) : undefined;
+    })(),
   },
   robots: { index: true, follow: true },
 };

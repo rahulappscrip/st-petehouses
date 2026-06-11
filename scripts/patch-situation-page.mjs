@@ -19,6 +19,11 @@ import { CONDEMNED_CONTENT, CONDEMNED_PAGE } from "./situation-content/condemned
 import { MEDICAL_EMERGENCY_CONTENT, MEDICAL_EMERGENCY_PAGE } from "./situation-content/medical-emergency.mjs";
 import { HOARDER_HOUSE_CONTENT, HOARDER_HOUSE_PAGE } from "./situation-content/hoarder-house.mjs";
 import { REVERSE_MORTGAGE_CONTENT, REVERSE_MORTGAGE_PAGE } from "./situation-content/reverse-mortgage.mjs";
+import { BANKRUPTCY_CONTENT, BANKRUPTCY_PAGE } from "./situation-content/bankruptcy.mjs";
+import {
+  FOUNDATION_PROBLEMS_CONTENT,
+  FOUNDATION_PROBLEMS_PAGE,
+} from "./situation-content/foundation-problems.mjs";
 
 const PATCHES = {
   foreclosure: FORECLOSURE_CONTENT,
@@ -36,6 +41,8 @@ const PATCHES = {
   "medical-emergency": MEDICAL_EMERGENCY_CONTENT,
   "hoarder-house": HOARDER_HOUSE_CONTENT,
   "reverse-mortgage": REVERSE_MORTGAGE_CONTENT,
+  bankruptcy: BANKRUPTCY_CONTENT,
+  "foundation-problems": FOUNDATION_PROBLEMS_CONTENT,
 };
 
 const NEW_PAGES = {
@@ -44,6 +51,8 @@ const NEW_PAGES = {
   "medical-emergency": MEDICAL_EMERGENCY_PAGE,
   "hoarder-house": HOARDER_HOUSE_PAGE,
   "reverse-mortgage": REVERSE_MORTGAGE_PAGE,
+  bankruptcy: BANKRUPTCY_PAGE,
+  "foundation-problems": FOUNDATION_PROBLEMS_PAGE,
 };
 
 const STRAY_KEYS = [

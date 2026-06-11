@@ -614,7 +614,7 @@ export const HOMEPAGE_SEO = {
   title: "We Buy Houses In St Petersburg FL | Cash Offer in 24 Hours",
   description:
     "Sell your St Petersburg house fast for cash. No repairs, no fees, no commissions. Get a fair cash offer today and close on your timeline—as-is, hassle-free",
-  primaryKeyword: "We Buy Houses In St Petersburg",
+  primaryKeyword: "sell my house fast st petersburg",
 } as const;
 
 export const MEET_OWNER = {
@@ -751,7 +751,7 @@ export const HOME_TESTIMONIALS = {
 } as const;
 
 /** Situations mega-menu / footer: items per left column before the right column starts. */
-export const SITUATIONS_MENU_LEFT_COLUMN_COUNT = 8;
+export const SITUATIONS_MENU_LEFT_COLUMN_COUNT = 9;
 
 export const NAV_LINKS = {
   primary: [
@@ -766,6 +766,7 @@ export const NAV_LINKS = {
     { label: "Inherited house", href: "/situations/inherited" },
     { label: "Divorce", href: "/situations/divorce" },
     { label: "House with tenants", href: "/situations/tenants" },
+    { label: "Bankruptcy", href: "/situations/bankruptcy" },
     { label: "House with a lien", href: "/situations/lien" },
     { label: "Water / flood damage", href: "/situations/water-damage" },
     { label: "Fire damage", href: "/situations/fire-damage" },
@@ -777,10 +778,12 @@ export const NAV_LINKS = {
     { label: "Condemned house", href: "/situations/condemned" },
     { label: "Medical emergency", href: "/situations/medical-emergency" },
     { label: "Hoarder house", href: "/situations/hoarder-house" },
+    { label: "Foundation problems", href: "/situations/foundation-problems" },
     { label: "Reverse mortgage", href: "/situations/reverse-mortgage" },
   ],
   company: [
     { label: "About Us", href: "/about" },
+    { label: "FAQ", href: "/faq" },
     { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/contact" },
   ],
@@ -792,6 +795,7 @@ export const FOOTER_SITUATIONS = [
   { label: "Inherited house", href: "/situations/inherited" },
   { label: "Divorce", href: "/situations/divorce" },
   { label: "House with tenants", href: "/situations/tenants" },
+  { label: "Bankruptcy", href: "/situations/bankruptcy" },
   { label: "House with a lien", href: "/situations/lien" },
   { label: "Water / flood damage", href: "/situations/water-damage" },
   { label: "Fire damage", href: "/situations/fire-damage" },
@@ -803,6 +807,7 @@ export const FOOTER_SITUATIONS = [
   { label: "Condemned house", href: "/situations/condemned" },
   { label: "Medical emergency", href: "/situations/medical-emergency" },
   { label: "Hoarder house", href: "/situations/hoarder-house" },
+  { label: "Foundation problems", href: "/situations/foundation-problems" },
   { label: "Reverse mortgage", href: "/situations/reverse-mortgage" },
 ] as const;
 
@@ -1010,6 +1015,13 @@ function resolveCitySituationMedia(title: string): { image: string; imageAlt: st
       image: ASSETS.tiredLandlord,
       imageAlt: SELLER_SITUATIONS[3].imageAlt,
       href: "/situations/tenants",
+    };
+  }
+  if (/bankruptcy/i.test(lower)) {
+    return {
+      image: ASSETS.behindOnPayments,
+      imageAlt: "Selling a Florida home during bankruptcy for cash",
+      href: "/situations/bankruptcy",
     };
   }
   if (/tax lien/i.test(lower)) {

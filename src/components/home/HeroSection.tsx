@@ -24,7 +24,7 @@ export const DEFAULT_HERO: HeroContent = {
   ),
   subheadline:
     "Sell your St. Petersburg house as-is without repairs, commissions, or showings. Get a fair offer from a local buyer and choose a closing date that works for you.",
-  formEyebrow: "Get your fair cash offer today",
+  formEyebrow: "No Repairs. No Fees. Just Cash.",
   formTitle: (
     <>
       Get Your <em>Fair Offer</em> Today.

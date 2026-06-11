@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import Link from "next/link";
 import { HeroAuthor } from "@/components/shared/HeroAuthor";
 import { LeadOfferForm } from "@/components/shared/LeadOfferForm";
@@ -42,13 +43,17 @@ export function SituationHeroSection({
           <div className="wrap">
             <Link href="/">Home</Link>
             {hero.breadcrumbTrail?.map((crumb) => (
-              <span key={crumb.href}>
-                <span aria-hidden>›</span>
+              <Fragment key={crumb.href}>
+                <span className="city-breadcrumb__sep" aria-hidden>
+                  ›
+                </span>
                 <Link href={crumb.href}>{crumb.label}</Link>
-              </span>
+              </Fragment>
             ))}
-            <span aria-hidden>›</span>
-            <span>{breadcrumb}</span>
+            <span className="city-breadcrumb__sep" aria-hidden>
+              ›
+            </span>
+            <span className="city-breadcrumb__current">{breadcrumb}</span>
           </div>
         </nav>
       ) : null}

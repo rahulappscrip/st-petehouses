@@ -1,3 +1,4 @@
+import "@/styles/bundles/home.css";
 import type { Metadata } from "next";
 import { HeroSection } from "@/components/home/HeroSection";
 import { StatsSection } from "@/components/home/StatsSection";
@@ -15,6 +16,7 @@ import { ResourcesSection } from "@/components/home/ResourcesSection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { FinalCtaSection } from "@/components/home/FinalCtaSection";
 import { GUARANTEE_ASIDE_CHECKLIST, HOMEPAGE_SEO, SITE } from "@/lib/constants";
+import { getPageOgImage, ogImageMeta } from "@/lib/og-images";
 import { getTestimonialsData } from "@/lib/reviews/get-reviews";
 import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
 
@@ -29,6 +31,10 @@ export const metadata: Metadata = {
     description: HOMEPAGE_SEO.description,
     url: SITE.url,
     locale: "en_US",
+    images: (() => {
+      const file = getPageOgImage("/");
+      return file ? ogImageMeta(file, HOMEPAGE_SEO.title) : undefined;
+    })(),
   },
   robots: { index: true, follow: true },
 };

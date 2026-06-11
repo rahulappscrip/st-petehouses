@@ -780,6 +780,12 @@
   margin-top: 30px;
 }
 
+@media (min-width: 1025px) {
+  .situation-page--foreclosure .situation-hero h1 em {
+    padding-left: 10px;
+  }
+}
+
 .situation-key-steps ul {
   margin: 0;
   padding: 0;
@@ -1296,6 +1302,16 @@
   flex-wrap: wrap;
 }
 
+.city-breadcrumb__sep {
+  flex: 0 0 auto;
+  color: var(--ink-soft);
+  line-height: 1;
+}
+
+.city-breadcrumb__current {
+  color: var(--ink);
+}
+
 .city-breadcrumb a {
   color: var(--ink-soft);
   text-decoration: none;
@@ -1303,6 +1319,17 @@
 
 .city-breadcrumb a:hover {
   color: var(--ink);
+}
+
+@media (max-width: 759px) {
+  .city-breadcrumb .wrap {
+    column-gap: 10px;
+    row-gap: 4px;
+  }
+
+  .city-breadcrumb__sep {
+    margin-inline: 2px;
+  }
 }
 
 /* City page hero — content left, homepage form right */
@@ -3348,6 +3375,12 @@
 .situation-empathy__closing {
   color: var(--ink-soft);
   margin: 0 0 16px;
+}
+
+@media (min-width: 1025px) {
+  .situation-empathy__closing:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .situation-empathy__quote {
