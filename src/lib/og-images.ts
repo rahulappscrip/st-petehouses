@@ -47,7 +47,7 @@ export const CITY_OG_IMAGES: Record<string, string> = {
 
 /** Static page route → OG image filename */
 export const PAGE_OG_IMAGES: Record<string, string> = {
-  "/": "OG-Image-We-buy-houses-in-St-Petersburg.webp",
+  "/": "OG-Image-Home-page.webp",
   "/how-it-works": "OG-Image - How-It-Works.webp",
   "/about": "OG-Image-About-us.webp",
   "/blog": "OG-Image-Blog.webp",
