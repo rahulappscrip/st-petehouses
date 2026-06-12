@@ -170,8 +170,7 @@
       "testimonial": {
         "quote": "We were two weeks from the sale date when we called. I expected them to lowball us or make it complicated — instead they walked us through every step, gave us a fair offer the next day, and we closed 9 days later. We walked away with money in our pocket instead of nothing.",
         "name": "Marcus & Diane T.",
-        "location": "Sold their home in Pinellas Park, FL",
-        "note": "[Replace with verified testimonial]"
+        "location": "Sold their home in Pinellas Park, FL"
       }
     },
     "foreclosureLaw": {
@@ -3108,6 +3107,16 @@
           "tag": "Tax",
           "title": "Pinellas County Tax Collector",
           "body": "Property tax records and payment information. Confirm any outstanding tax obligations before your property closing."
+        },
+        {
+          "tag": "FEDERAL — FEMA",
+          "title": "FEMA Individual Assistance Program",
+          "body": "If your property is in a federally declared disaster area, you may qualify for assistance grants before deciding to sell."
+        },
+        {
+          "tag": "STATE — INSURANCE",
+          "title": "Florida Department of Financial Services",
+          "body": "File insurance complaints and verify adjuster licensing — relevant when an insurer underpays or denies a fire damage claim."
         }
       ]
     }
@@ -3503,17 +3512,14 @@
       "lede": "Storm damage often creates environmental hazards that must be disclosed. Understanding these considerations protects both parties and ensures a compliant transaction.",
       "items": [
         {
-          "icon": "mold",
           "title": "Mold and Moisture Risks",
           "body": "Porous materials visibly moldy after water damage — drywall, insulation, carpet — cannot be satisfactorily cleaned and must be disclosed. Cash buyers like us factor mold issues into the offer. You don't need to remediate before selling. Florida Department of Health and EPA guidance applies."
         },
         {
-          "icon": "lead",
           "title": "Lead Paint & Asbestos",
           "body": "Homes built before 1978 may contain lead-based paint — federal law requires disclosure and an EPA-approved pamphlet. Older homes may also contain asbestos in insulation, flooring, or roofing. We're experienced with both and factor them into our offer process."
         },
         {
-          "icon": "disposal",
           "title": "Proper Disposal of Damaged Materials",
           "body": "Florida regulations govern disposal of storm-damaged materials, especially those containing hazardous substances. If materials remain on-site, we typically handle disposal as part of the acquisition — coordinating with licensed contractors and disposal services to manage environmental compliance."
         }
@@ -5425,9 +5431,19 @@
         {
           "tag": "Rehabilitation Option",
           "title": "St Pete Housing Rehabilitation",
-          "body": "If you want to keep and repair the property, income-eligible homeowners may qualify for city rehabilitation assistance. This won't apply to all situations — but it's worth exploring before deciding to sell.",
-          "href": "https://www.stpete.org/government/city_departments/neighborhood_affairs/housing_rehabilitation/index.php",
-          "linkLabel": "St Pete Housing Rehab →"
+          "body": "If you want to keep and repair the property, income-eligible homeowners may qualify for city rehabilitation assistance. This won't apply to all situations — but it's worth exploring before deciding to sell."
+        }
+        ,
+        {
+          "tag": "TAX",
+          "title": "Pinellas County Tax Collector",
+          "body": "Property tax records, outstanding balances, and any tax liens attached to the property. Important for confirming what's owed before closing"
+        }
+        ,
+        {
+          "tag": "STATE — FAIR HOUSING ",
+          "title": "Florida Commission on Human Relations",
+          "body": "If the condemnation involves a disability-related hoarding situation, Florida's fair housing protections may apply."
         }
       ]
     },

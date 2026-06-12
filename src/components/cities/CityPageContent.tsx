@@ -20,7 +20,7 @@ import {
   type CitySectionId,
 } from "@/lib/city-content";
 import { notFound } from "next/navigation";
-import { mapCityBenefitsToSellerCards, mapCitySituationsToSellerCards, SITE } from "@/lib/constants";
+import { mapCityBenefitsToSellerCards, mapCitySituationsToSellerCards } from "@/lib/constants";
 import type { CityPageData } from "@/lib/cities";
 
 type Props = {
@@ -54,8 +54,7 @@ function renderCitySection(id: CitySectionId, content: CityFullContent, page: Ci
           lede={content.process.lede}
           steps={content.process.steps}
           showStepMeta={false}
-          primaryCta={{ label: content.process.primaryCtaLabel, href: SITE.cashOfferHref }}
-          secondaryCta={{ label: content.process.secondaryCtaLabel, href: SITE.phoneHref }}
+          showCtas={false}
         />
       );
 
@@ -326,8 +325,17 @@ function CityFullPageContent({ page, content }: Props & { content: CityFullConte
   );
 }
 
+const ST_PETERSBURG_PAGE_CLASS = "city-page--st-petersburg-fl";
+
 export function CityPageContent({ page }: Props) {
   const content = getCityFullContent(page.route);
   if (!content) notFound();
-  return <CityFullPageContent page={page} content={content} />;
+
+  const pageContent = <CityFullPageContent page={page} content={content} />;
+
+  if (page.route === "we-buy-houses-st-petersburg-fl") {
+    return <div className={ST_PETERSBURG_PAGE_CLASS}>{pageContent}</div>;
+  }
+
+  return pageContent;
 }

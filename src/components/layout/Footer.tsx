@@ -81,7 +81,7 @@ export function Footer() {
           </div>
 
           <div className="foot-col">
-            <h4>Company</h4>
+            <p>Company</p>
             {FOOTER_COMPANY.map((l) => (
               <Link key={l.href + l.label} href={l.href}>
                 {l.label}
@@ -90,7 +90,7 @@ export function Footer() {
           </div>
 
           <div className="foot-col">
-            <h4>Cities</h4>
+            <p>Cities</p>
             {NAV_LINKS.locations.cities.map((c) => (
               <Link key={c.href} href={c.href}>
                 {c.label}
@@ -99,7 +99,7 @@ export function Footer() {
           </div>
 
           <div className="foot-col foot-col--2col">
-            <h4>We Buy Houses In Any Situation</h4>
+            <p>We Buy Houses In Any Situation</p>
             <div className="foot-col--2col__grid">
               <ul>
                 {FOOTER_SITUATIONS.slice(0, SITUATIONS_MENU_LEFT_COLUMN_COUNT).map((s) => (

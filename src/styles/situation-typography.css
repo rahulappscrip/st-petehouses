@@ -191,7 +191,6 @@
 [class*="situation-"] :is(
   .situation-process-disclosure,
   .situation-exclusion-note p,
-  .areas-note,
   .situation-flood-law__note,
   .situation-mold-disclosure__note p,
   .situation-aside-cta__list
@@ -247,7 +246,7 @@
 
 /* ── Service area links ── */
 .situation-page .area-list a {
-  font-size: var(--body-size);
+  font-size: 18px;
 }
 
 /* ── Tenant rights list ── */
@@ -258,7 +257,7 @@
 /* ── Hero offer form ── */
 .situation-page .lead-card.lead-offer-form .lead-intro {
   font-size: var(--body-size);
-  line-height: 1.75;
+  line-height: 22px;
 }
 
 /* ── Case studies ── */

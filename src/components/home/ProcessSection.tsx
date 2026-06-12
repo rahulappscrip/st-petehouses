@@ -2,7 +2,6 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHead } from "@/components/ui/SectionHead";
-import { Arr } from "@/components/ui/Arr";
 import { PROCESS_STEPS } from "@/lib/constants";
 
 type ProcessStep = {
@@ -18,7 +17,6 @@ type ProcessSectionProps = {
   title?: ReactNode;
   lede?: string;
   steps?: readonly ProcessStep[];
-  primaryCta?: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
   showStepMeta?: boolean;
   note?: string;
@@ -39,7 +37,6 @@ export function ProcessSection({
   ),
   lede = "Our process is transparent and flexible. From your first conversation to a fair offer and closing on your timeline, we make selling straightforward—without the uncertainty of traditional home sales.",
   steps = PROCESS_STEPS,
-  primaryCta = { label: "Learn More", href: "#offer" },
   secondaryCta = { label: "Learn more about how it works →", href: "/how-it-works" },
   showStepMeta = true,
   note,
@@ -96,10 +93,6 @@ export function ProcessSection({
 
         {showCtas ? (
           <div style={{ marginTop: 28, display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center" }}>
-            <Link href={primaryCta.href} className="btn btn--cta">
-              {primaryCta.label}
-              <Arr />
-            </Link>
             <Link href={secondaryCta.href} className="btn btn--link">
               {secondaryCta.label}
             </Link>

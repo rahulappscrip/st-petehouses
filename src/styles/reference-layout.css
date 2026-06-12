@@ -764,7 +764,7 @@ p.lead-title {
 
 .lead-badges .lead-badge--5 i {
   margin-top: 1px;
-  font-size: 16px;
+  font-size: 12px !important;
   line-height: 1.1;
 }
 
@@ -1154,7 +1154,7 @@ p.lead-title {
 .step:hover{ transform: translateY(-2px); border-color: color-mix(in oklab, var(--ink) 18%, var(--line)); box-shadow: var(--shadow-2); }
 .step-num{ font-style: italic; font-size: 56px; font-weight: 800; line-height: 1; color: var(--sun); }
 .step h3{ font-size: 22px; text-transform: capitalize; }
-.step p{ color: var(--ink-2); font-size: 16px; flex: 1; }
+.step p{ color: var(--ink-2); font-size: 18px; line-height: 26px; flex: 1; }
 .step .step-meta{
   padding-top: 16px; border-top: 1px dashed var(--line);
   display: flex; align-items: center; justify-content: space-between;
@@ -1597,6 +1597,7 @@ p.lead-title {
   font-weight: 700;
 }
 .cta-card p{
+  font-size: 18px;
   color: color-mix(in oklab, var(--paper) 75%, transparent);
   max-width: 52ch;
   line-height: 1.65;
@@ -1671,12 +1672,12 @@ p.lead-title {
   flex: 0 0 auto;
 }
 
-.foot-col h4{
+.foot-col p {
   font-family: var(--sans);
-  font-size: 17px;
   color: var(--paper);
-  font-weight: 400;
   margin-bottom: 18px;
+  font-size: 17px;
+  font-weight: 400;
 }
 .foot-col a{ display: block; padding: 6px 0; color: color-mix(in oklab, var(--paper) 70%, transparent); text-decoration: none; font-size: 16px; }
 .foot-col a:hover{ color: var(--paper); }

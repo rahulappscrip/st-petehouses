@@ -46,7 +46,7 @@
 .calc-field__head label {
   font-family: var(--mono);
   font-size: 16px;
-  letter-spacing: 0.12em;
+  letter-spacing: unset;
   text-transform: uppercase;
   color: var(--ink-soft);
   line-height: 1.35;
@@ -78,8 +78,8 @@
 .calc-disclaimer {
   font-family: var(--mono);
   font-size: 16px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  letter-spacing: unset;
+  text-transform: capitalize;
   color: var(--ink-soft);
   line-height: 1.5;
   margin-top: auto;
@@ -105,7 +105,7 @@
 
 .calc-results__total {
   font-weight: 800;
-  font-size: clamp(44px, 5vw, 64px);
+  font-size: clamp(32px, 5vw, 64px);
   line-height: 1;
   letter-spacing: -0.02em;
   margin-top: 10px;

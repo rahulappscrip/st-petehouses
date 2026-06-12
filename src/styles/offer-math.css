@@ -238,9 +238,9 @@
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-weight: 400;
-  padding: 6px 12px;
+  padding: 3px 12px;
   border-radius: 999px;
-  background: var(--gold);
+  background: #ffffff;
   color: var(--teal-deep);
 }
 
@@ -314,6 +314,11 @@
     justify-content: center;
     align-self: center;
   }
+}
+
+.reveal.reveal-d1.offer-advance.in .offer-advance__action a.btn--cta {
+  background: #ffffff;
+  color: var(--teal-deep);
 }
 
 .offer-advance__cta {

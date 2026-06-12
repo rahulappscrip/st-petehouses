@@ -82,9 +82,6 @@ export function AreasSection({
                 </Link>
               </div>
             ) : null}
-            <Link href="/#areas" className="btn btn--link" style={{ marginTop: 18 }}>
-              All service areas →
-            </Link>
           </Reveal>
         </div>
       </div>
