@@ -58,8 +58,8 @@ export function HeroSection({ content = DEFAULT_HERO }: { content?: HeroContent 
                 className="hero-portrait__photo"
                 width={894}
                 height={1302}
-                fetchPriority="high"
-                decoding="async"
+                priority
+                sizes="(min-width: 900px) 40vw, 100vw"
               />
             </div>
           </Reveal>

@@ -48,7 +48,7 @@ export function ContactFormSection() {
               className="contact-john-card__photo"
               width={80}
               height={80}
-              decoding="async"
+              sizes="80px"
             />
             <div className="contact-john-card__info">
               <strong className="contact-john-card__name">{john.name}</strong>

@@ -21,7 +21,7 @@ export function BrandLogo({ showName = true, variant = "header" }: BrandLogoProp
           title={logoCopy.title}
           width={2048}
           height={1822}
-          decoding="async"
+          sizes="40px"
         />
       </span>
       {showName ? (

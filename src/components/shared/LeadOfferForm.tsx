@@ -125,7 +125,7 @@ export function LeadOfferForm({
               title={TRUST_IMAGES.bbbBadge.title}
               width={2000}
               height={751}
-              decoding="async"
+              sizes="200px"
             />
             <span className="lead-badge lead-badge--5">
               <b>★★★★★</b>
