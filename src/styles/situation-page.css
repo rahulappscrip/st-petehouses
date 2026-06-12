@@ -725,7 +725,7 @@
 
 .areas-note {
   margin-top: 16px;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
   color: var(--ink-2);
 }
@@ -862,6 +862,8 @@
 
 .situation-info-card li {
   display: block;
+  font-size: 18px;
+  line-height: 28px;
   color: var(--ink-2);
   margin-top: 12px;
 }
@@ -2684,6 +2686,10 @@
   margin-bottom: 12px;
 }
 
+span.situation-tenant-market__quote-mark.h-2 {
+  height: auto;
+}
+
 .situation-tenant-market__testimonial-quote p {
   margin: 0;
   font-style: italic;
@@ -2712,11 +2718,6 @@
 .situation-tenant-market__testimonial-location {
   margin: 0;
   color: color-mix(in oklab, var(--paper) 72%, transparent);
-}
-
-.situation-tenant-market__testimonial-note {
-  margin: 6px 0 0;
-  color: var(--sun);
 }
 
 .situation-foreclosure-law {

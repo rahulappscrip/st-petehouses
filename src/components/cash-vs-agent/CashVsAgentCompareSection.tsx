@@ -32,31 +32,38 @@ function CompareTable({ group, index }: { group: CompareGroup; index: number }) 
       <h3 className="h-4 cva-compare-group__title">{group.title}</h3>
       <div className="compare">
         <div className="compare-scroll">
-          <div className="compare-grid" role="table" aria-label={`${group.title} comparison`}>
-            <div className="col-h" role="columnheader">
-              Factor
-            </div>
-            <div className="col-h us" role="columnheader">
-              Cash Sale
-            </div>
-            <div className="col-h" role="columnheader">
-              Listing with Agent
-            </div>
-            {group.rows.map((row) => (
-              <div key={row.label} className="compare-grid__row" role="row">
-                <div className="row-h" role="rowheader">
-                  {row.label}
-                  {row.note ? <span className="cva-compare-row-note">{row.note}</span> : null}
-                </div>
-                <div className="us-cell" role="cell">
-                  {row.cash}
-                </div>
-                <div className="other-cell" role="cell">
-                  {row.agent}
-                </div>
-              </div>
-            ))}
-          </div>
+          <table className="compare-grid" aria-label={`${group.title} comparison`}>
+            <colgroup>
+              <col className="col-factor" />
+              <col className="col-us" />
+              <col className="col-other" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col" className="col-h">
+                  Factor
+                </th>
+                <th scope="col" className="col-h us">
+                  Cash Sale
+                </th>
+                <th scope="col" className="col-h">
+                  Listing with Agent
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {group.rows.map((row) => (
+                <tr key={row.label} className="compare-grid__row">
+                  <th scope="row" className="row-h">
+                    {row.label}
+                    {row.note ? <span className="cva-compare-row-note">{row.note}</span> : null}
+                  </th>
+                  <td className="us-cell">{row.cash}</td>
+                  <td className="other-cell">{row.agent}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     </Reveal>

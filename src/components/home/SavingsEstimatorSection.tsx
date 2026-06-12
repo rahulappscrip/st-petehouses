@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { Reveal } from "@/components/ui/Reveal";
 import { Arr } from "@/components/ui/Arr";
+import { SITE } from "@/lib/constants";
 
 const DEFAULTS = {
   homeValue: 350_000,
@@ -156,7 +157,7 @@ export function SavingsEstimatorSection() {
                 <span>{formatCurrency(total)}</span>
               </li>
             </ul>
-            <Link href="#offer" className="btn btn--calc-cta">
+            <Link href={SITE.cashOfferHref} className="btn btn--calc-cta">
               Get my real cash offer
               <Arr />
             </Link>

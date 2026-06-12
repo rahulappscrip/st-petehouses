@@ -6,6 +6,7 @@ import {
   OFFER_FORMULA_DETAILS,
   OFFER_FORMULA_PARTS,
   OFFER_MATH,
+  SITE,
 } from "@/lib/constants";
 
 function FormulaOp({ children }: { children: string }) {
@@ -67,7 +68,7 @@ export function OfferMathSection() {
             </ul>
           </div>
           <div className="offer-advance__action">
-            <Link href="#offer" className="btn offer-advance__cta">
+            <Link href={SITE.cashOfferHref} className="btn btn--cta">
               {OFFER_MATH.cashAdvance.cta}
               <Arr />
             </Link>

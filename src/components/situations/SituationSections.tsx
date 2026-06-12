@@ -31,6 +31,7 @@ import { SituationNumberedCardsSection } from "@/components/situations/Situation
 import { SituationIconCardsSection } from "@/components/situations/SituationIconCardsSection";
 import {
   AS_IS_FLORIDA_ENVIRONMENTAL_IMAGES,
+  STORM_DAMAGE_ENVIRONMENTAL_IMAGES,
   INHERITED_BUY_PROCESS_FEATURES,
   LIEN_PROPERTY_SITUATION_IMAGES,
   LIEN_TYPE_CARD_IMAGES,
@@ -767,9 +768,6 @@ export function SituationTenantMarketSection({
               </div>
               <p className="situation-tenant-market__testimonial-name feature-title">{data.testimonial.name}</p>
               <p className="situation-tenant-market__testimonial-location body-standard">{data.testimonial.location}</p>
-              {data.testimonial.note ? (
-                <p className="situation-tenant-market__testimonial-note body-standard">{data.testimonial.note}</p>
-              ) : null}
             </div>
           </Reveal>
         ) : null}
@@ -1495,7 +1493,6 @@ export function renderSituationSection(
           docs={content.process.docs}
           disclosureNote={content.process.disclosureNote}
           showStepMeta={content.slug === "reverse-mortgage"}
-          primaryCta={{ label: content.process.primaryCta ?? "Start with a free offer", href: SITE.cashOfferHref }}
           secondaryCta={
             content.process.secondaryCta ?? {
               label: `Call ${SITE.phone}`,
@@ -1541,7 +1538,11 @@ export function renderSituationSection(
           data={content.environmental}
           alt={alt}
           imageMap={
-            content.slug === "as-is-florida" ? AS_IS_FLORIDA_ENVIRONMENTAL_IMAGES : undefined
+            content.slug === "as-is-florida"
+              ? AS_IS_FLORIDA_ENVIRONMENTAL_IMAGES
+              : content.slug === "storm-damage"
+                ? STORM_DAMAGE_ENVIRONMENTAL_IMAGES
+                : undefined
           }
         />
       ) : null;

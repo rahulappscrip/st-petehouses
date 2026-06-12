@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
 import { Arr } from "@/components/ui/Arr";
 import { SiteImg } from "@/components/ui/SiteImage";
-import { ASSETS, MEET_OWNER } from "@/lib/constants";
+import { ASSETS, MEET_OWNER, SITE } from "@/lib/constants";
 import { PERSON_IMAGES } from "@/lib/image-accessibility";
 
 function HouseIcon() {
@@ -76,7 +76,7 @@ export function MeetOwnerSection() {
               <h3>{MEET_OWNER.ctaTitle}</h3>
               <p>{MEET_OWNER.ctaBody}</p>
             </div>
-            <Link href="#offer" className="meet-owner__cta-btn">
+            <Link href={SITE.cashOfferHref} className="meet-owner__cta-btn">
               {MEET_OWNER.ctaButton}
               <Arr />
             </Link>

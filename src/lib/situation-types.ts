@@ -161,7 +161,6 @@ export type SituationTenantMarketTestimonial = {
   quote: string;
   name: string;
   location: string;
-  note?: string;
 };
 
 export type SituationTenantMarketContent = SituationTitleParts & {

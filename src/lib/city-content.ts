@@ -1,4 +1,4 @@
-import { ASSETS, SITE } from "./constants";
+import { ASSETS } from "./constants";
 
 export type CitySectionId =
   | "process"
@@ -92,7 +92,6 @@ export type CityFullContent = {
     lede: string;
     steps: CityProcessStep[];
     primaryCtaLabel: string;
-    secondaryCtaLabel: string;
   };
   areas: SectionTitle & {
     eyebrow: string;
@@ -166,8 +165,6 @@ export type CityFullContent = {
     description: string;
   };
 };
-
-const PROCESS_SECONDARY_CTA = `or call ${SITE.phone}`;
 
 const ST_PETERSBURG_COMPARE_ROWS: CityCompareRow[] = [
   { label: "Commissions", traditional: "5–6% of price", cash: "None — $0" },
@@ -257,7 +254,6 @@ const ST_PETERSBURG: CityFullContent = {
       },
     ],
     primaryCtaLabel: "Start with a free offer",
-    secondaryCtaLabel: PROCESS_SECONDARY_CTA,
   },
   areas: {
     eyebrow: "Where We Buy",
@@ -547,7 +543,6 @@ const CLEARWATER: CityFullContent = {
       },
     ],
     primaryCtaLabel: "Start with a free offer",
-    secondaryCtaLabel: PROCESS_SECONDARY_CTA,
   },
   areas: {
     eyebrow: "Where We Buy",
@@ -798,7 +793,6 @@ const LARGO: CityFullContent = {
       },
     ],
     primaryCtaLabel: "Start with a cash offer",
-    secondaryCtaLabel: PROCESS_SECONDARY_CTA,
   },
   areas: {
     eyebrow: "Where We Buy",
@@ -1024,7 +1018,6 @@ const DUNEDIN: CityFullContent = {
       },
     ],
     primaryCtaLabel: "Start with a cash offer",
-    secondaryCtaLabel: PROCESS_SECONDARY_CTA,
   },
   comparison: {
     eyebrow: "Cash Sale vs. Traditional Listing",
@@ -1290,7 +1283,6 @@ const PINELLAS_PARK: CityFullContent = {
       },
     ],
     primaryCtaLabel: "Start with a free offer",
-    secondaryCtaLabel: PROCESS_SECONDARY_CTA,
   },
   areas: {
     eyebrow: "Service Area",

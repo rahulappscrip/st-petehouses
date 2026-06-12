@@ -184,34 +184,37 @@ export function ReviewsPageContent({ testimonials }: ReviewsPageContentProps) {
 
           <Reveal className="compare">
             <div className="compare-scroll">
-              <div
-                className="compare-grid"
-                role="table"
-                aria-label="Cash offer compared to agent listing"
-              >
-                <div className="col-h" role="columnheader">
-                  Factor
-                </div>
-                <div className="col-h us" role="columnheader">
-                  Cash offer (us)
-                </div>
-                <div className="col-h" role="columnheader">
-                  Agent listing
-                </div>
-                {REVIEWS_COMPARE_ROWS.map((row) => (
-                  <div key={row.factor} className="compare-grid__row" role="row">
-                    <div className="row-h" role="rowheader">
-                      {row.factor}
-                    </div>
-                    <div className="us-cell" role="cell">
-                      {row.us}
-                    </div>
-                    <div className="other-cell" role="cell">
-                      {row.other}
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <table className="compare-grid" aria-label="Cash offer compared to agent listing">
+                <colgroup>
+                  <col className="col-factor" />
+                  <col className="col-us" />
+                  <col className="col-other" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col" className="col-h">
+                      Factor
+                    </th>
+                    <th scope="col" className="col-h us">
+                      Cash offer (us)
+                    </th>
+                    <th scope="col" className="col-h">
+                      Agent listing
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {REVIEWS_COMPARE_ROWS.map((row) => (
+                    <tr key={row.factor} className="compare-grid__row">
+                      <th scope="row" className="row-h">
+                        {row.factor}
+                      </th>
+                      <td className="us-cell">{row.us}</td>
+                      <td className="other-cell">{row.other}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </Reveal>
         </div>
@@ -235,7 +238,6 @@ export function ReviewsPageContent({ testimonials }: ReviewsPageContentProps) {
           </>
         }
         description="Share basic property details — address, condition, any known issues — and we'll respond quickly with a clear, transparent offer. There's no pressure to accept; our goal is to give you a clear option to compare with any other plans you're considering."
-        offerHref="/sell-your-house#offer"
       />
     </>
   );

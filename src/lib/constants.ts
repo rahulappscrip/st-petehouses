@@ -50,6 +50,9 @@ export const ASSETS = {
   moldMoisture: "/assets/images/Mold-Moisture.webp",
   structuralDamageOptimized: "/assets/images/Structural-Damage-optimized.webp",
   anyConditionWeBuyIt: "/assets/images/Any-Condition-We-Buy-It.webp",
+  moldAndMoistureRisks: "/assets/images/Mold-and-Moisture-Risks.webp",
+  leadPaintAsbestos: "/assets/images/Lead-Paint-Asbestos.webp",
+  properDisposalOfDamagedMaterials: "/assets/images/Proper-Disposal-of-Damaged-Materials.webp",
   leaseContinuity: "/assets/images/Lease-Continuity.webp",
   remainingLeaseDuration: "/assets/images/Remaining-Lease-Duration.webp",
   immediateCashFlow: "/assets/images/Immediate-Cash-Flow.webp",
@@ -223,6 +226,22 @@ export const STORM_DAMAGE_CARD_IMAGES: Record<string, { image: string; imageAlt:
   "Any Condition — We Buy It": {
     image: ASSETS.anyConditionWeBuyIt,
     imageAlt: "Any storm damage condition — we buy Tampa Bay homes for cash",
+  },
+};
+
+/** Storm damage page — Environmental & Legal Disclosures cards. */
+export const STORM_DAMAGE_ENVIRONMENTAL_IMAGES: Record<string, { image: string; imageAlt: string }> = {
+  "Mold and Moisture Risks": {
+    image: ASSETS.moldAndMoistureRisks,
+    imageAlt: "Mold and moisture risks after storm damage in a Florida home",
+  },
+  "Lead Paint & Asbestos": {
+    image: ASSETS.leadPaintAsbestos,
+    imageAlt: "Lead paint and asbestos disclosure considerations in older storm-damaged homes",
+  },
+  "Proper Disposal of Damaged Materials": {
+    image: ASSETS.properDisposalOfDamagedMaterials,
+    imageAlt: "Proper disposal of storm-damaged building materials in Florida",
   },
 };
 
