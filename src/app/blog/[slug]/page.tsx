@@ -1,21 +1,25 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { BlogDetailContent } from "@/components/blog/BlogDetailContent";
-import { BLOG_POSTS, getBlogPost } from "@/lib/blog";
 import { SITE } from "@/lib/constants";
 import { getBlogPostKeyword } from "@/lib/seo-keywords";
+import { getAllWordPressSlugs, getWordPressBlogPostWithFallback } from "@/lib/wordpress";
+
+export const revalidate = 60;
+export const dynamicParams = true;
 
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
 
-export function generateStaticParams() {
-  return BLOG_POSTS.map((post) => ({ slug: post.slug }));
+export async function generateStaticParams() {
+  const slugs = await getAllWordPressSlugs();
+  return slugs.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const post = getBlogPost(slug);
+  const post = await getWordPressBlogPostWithFallback(slug);
   if (!post) return {};
 
   const url = `${SITE.url}blog/${post.slug}/`;
@@ -42,7 +46,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function BlogDetailPage({ params }: PageProps) {
   const { slug } = await params;
-  const post = getBlogPost(slug);
+  const post = await getWordPressBlogPostWithFallback(slug);
   if (!post) notFound();
 
   const jsonLd = {

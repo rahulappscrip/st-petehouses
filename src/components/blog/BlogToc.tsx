@@ -53,7 +53,7 @@ export function BlogToc({ items }: { items: BlogTocItem[] }) {
         ))}
       </ol>
       <div className="toc-cta">
-        <Link href="/contact" className="btn btn--cta" style={{ justifyContent: "center" }}>
+        <Link href={SITE.cashOfferHref} className="btn btn--cta" style={{ justifyContent: "center" }}>
           Get my cash offer
         </Link>
         <a

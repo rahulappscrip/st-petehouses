@@ -626,7 +626,7 @@ export const SITE = {
   url: "https://webuystpetehouses.com/",
   mapsHref: "https://maps.app.goo.gl/WLWfNKY5PqvBVPXy5",
   /** Primary “Get Cash Offer” CTA — contact page with offer form */
-  cashOfferHref: "/contact",
+  cashOfferHref: "/contact/#form",
 } as const;
 
 export const HOMEPAGE_SEO = {
