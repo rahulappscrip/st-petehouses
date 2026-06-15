@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
 import { Arr } from "@/components/ui/Arr";
-import { SiteImg } from "@/components/ui/SiteImage";
+import { SiteImage } from "@/components/ui/SiteImage";
 import { ASSETS, MEET_OWNER, SITE } from "@/lib/constants";
 import { PERSON_IMAGES } from "@/lib/image-accessibility";
 
@@ -22,14 +22,14 @@ export function MeetOwnerSection() {
         <div className="meet-owner__top">
           <Reveal className="meet-owner__media">
             <div className="meet-owner__photo-frame">
-              <SiteImg
+              <SiteImage
                 src={ASSETS.ownerJohn}
                 alt={PERSON_IMAGES.johnPortrait.alt}
                 title={PERSON_IMAGES.johnPortrait.title}
                 className="meet-owner__photo"
                 width={640}
                 height={800}
-                decoding="async"
+                sizes="(min-width: 900px) 50vw, 100vw"
               />
               <div className="meet-owner__badge">
                 <strong>John Gardepe</strong>

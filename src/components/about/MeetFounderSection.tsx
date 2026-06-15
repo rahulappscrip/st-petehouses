@@ -61,7 +61,7 @@ export function MeetFounderSection() {
                 className="about-founder__photo"
                 width={894}
                 height={1302}
-                decoding="async"
+                sizes="(min-width: 900px) 45vw, 100vw"
               />
               <div className="about-founder__avatar-label">
                 <strong>John Gardepe</strong>
