@@ -15,7 +15,7 @@ export const PAGE_KEYWORDS = {
 } as const;
 
 const CITY_KEYWORDS: Record<string, string> = {
-  "we-buy-houses-st-petersburg-fl": "sell your house for cash florida",
+  "we-buy-houses-st-petersburg-fl": "sell my house fast st petersburg fl",
   "we-buy-houses-clearwater-fl": "we buy houses clearwater",
   "we-buy-houses-largo-fl": "sell my house fast largo",
   "we-buy-houses-dunedin-fl": "sell my house fast dunedin",

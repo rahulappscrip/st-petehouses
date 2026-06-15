@@ -2141,7 +2141,7 @@ Why median DOM doesn't tell the whole story for as-is sales, and how that shapes
 > Sell your house fast in St Petersburg, FL. Get a fair cash offer with no repairs, no fees, and close on your schedule. We buy houses as-is.
 
 - **Canonical URL:** https://webuystpetehouses.com/we-buy-houses-st-petersburg-fl
-- **Primary keyword:** we buy houses St Petersburg FL
+- **Primary keyword:** sell my house fast st petersburg fl
 - **Company:** We Buy St Pete Houses · (727) 477-8998 · SellFast@WeBuyStPeteHouses.com
 
 *St Petersburg, FL · Served by We Buy St Pete Houses*
