@@ -27,6 +27,11 @@ const nextConfig: NextConfig = {
         hostname: "pub-4ee5abe5561c4d33a588ca34bfa5d5a5.r2.dev",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "wordpress-1628174-6490314.cloudwaysapps.com",
+        pathname: "/**",
+      },
     ],
   },
 };

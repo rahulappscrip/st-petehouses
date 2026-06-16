@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
+import { BlogDataHydrator } from "@/components/blog/BlogDataHydrator";
 import { BlogPageContent } from "@/components/blog/BlogPageContent";
 import { BLOG_PAGE } from "@/lib/blog";
 import { SITE } from "@/lib/constants";
 import { getPageOgImage, ogImageMeta } from "@/lib/og-images";
 import { PAGE_KEYWORDS } from "@/lib/seo-keywords";
+import { getWordPressBlogPostsWithFallback } from "@/lib/wordpress";
+
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Blog · We Buy St Pete Houses",
@@ -24,6 +28,12 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-export default function BlogPage() {
-  return <BlogPageContent />;
+export default async function BlogPage() {
+  const posts = await getWordPressBlogPostsWithFallback();
+
+  return (
+    <BlogDataHydrator posts={posts}>
+      <BlogPageContent />
+    </BlogDataHydrator>
+  );
 }

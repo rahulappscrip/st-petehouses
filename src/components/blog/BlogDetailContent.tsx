@@ -1,10 +1,9 @@
 import Link from "next/link";
 import { SiteImage } from "@/components/ui/SiteImage";
 import type { ReactNode } from "react";
+import { BlogAuthorBio } from "@/components/blog/BlogAuthorBio";
 import { BlogToc } from "@/components/blog/BlogToc";
-import { InheritedHomeArticle } from "@/components/blog/InheritedHomeArticle";
-import { PlaceholderBlogArticle } from "@/components/blog/PlaceholderBlogArticle";
-import { ShortTermRentalBanArticle } from "@/components/blog/ShortTermRentalBanArticle";
+import { WordPressBlogArticle } from "@/components/blog/WordPressBlogArticle";
 import { FaqSection } from "@/components/home/FaqSection";
 import { FinalCtaSection } from "@/components/home/FinalCtaSection";
 import type { BlogPost } from "@/lib/blog";
@@ -36,16 +35,6 @@ function BlogNextCta({ post }: { post: BlogPost }) {
   );
 }
 
-function renderArticleBody(post: BlogPost) {
-  if (post.slug === "how-to-price-an-inherited-home-in-florida") {
-    return <InheritedHomeArticle post={post} />;
-  }
-  if (post.slug === "short-term-rental-ban-st-petersburg") {
-    return <ShortTermRentalBanArticle post={post} />;
-  }
-  return <PlaceholderBlogArticle post={post} />;
-}
-
 function getDetailTitle(post: BlogPost): ReactNode {
   if (post.detailHeadline) {
     const { before, emphasis, after } = post.detailHeadline;
@@ -60,25 +49,13 @@ function getDetailTitle(post: BlogPost): ReactNode {
   return post.title;
 }
 
+function getBreadcrumbTitle(post: BlogPost): string {
+  return post.title.length > 48 ? `${post.title.slice(0, 48)}…` : post.title;
+}
+
 export function BlogDetailContent({ post }: { post: BlogPost }) {
   const heroImage = post.heroImage ? getBlogHeroImageCopy(post) : null;
-  const toc =
-    post.toc ??
-    (post.isPlaceholder
-      ? [
-          { id: "overview", label: "What this guide covers" },
-          { id: "takeaways", label: "Key takeaways" },
-        ]
-      : []);
-
-  const breadcrumbTitle =
-    post.slug === "how-to-price-an-inherited-home-in-florida"
-      ? "How to Price an Inherited Home in Florida"
-      : post.slug === "short-term-rental-ban-st-petersburg"
-        ? "Short Term Rental Ban in St. Petersburg, FL"
-        : post.title.length > 48
-          ? `${post.title.slice(0, 48)}…`
-          : post.title;
+  const toc = post.toc ?? [];
 
   return (
     <main className="blog-detail-page">
@@ -89,7 +66,7 @@ export function BlogDetailContent({ post }: { post: BlogPost }) {
             <CrumbArrow />
             <Link href="/blog">Blog</Link>
             <CrumbArrow />
-            <span>{breadcrumbTitle}</span>
+            <span>{getBreadcrumbTitle(post)}</span>
           </nav>
 
           {post.tags?.length ? (
@@ -117,7 +94,7 @@ export function BlogDetailContent({ post }: { post: BlogPost }) {
             <span className="author">
               <b>By {post.author}</b>
               <span>
-                {post.authorRole} · We Buy St Pete Houses
+                {post.authorCompany ?? `${post.authorRole} · We Buy St Pete Houses`}
               </span>
             </span>
           </div>
@@ -144,7 +121,10 @@ export function BlogDetailContent({ post }: { post: BlogPost }) {
       </section>
 
       <div className="article-wrap">
-        <article className="article-body">{renderArticleBody(post)}</article>
+        <article className="article-body">
+          {post.contentHtml ? <WordPressBlogArticle html={post.contentHtml} /> : null}
+          <BlogAuthorBio post={post} />
+        </article>
         {toc.length > 0 ? <BlogToc items={toc} /> : null}
       </div>
 
@@ -152,6 +132,7 @@ export function BlogDetailContent({ post }: { post: BlogPost }) {
         <FaqSection
           items={post.faq}
           className="faq-section"
+          id="faq"
           eyebrow="FAQ"
           title={
             <>

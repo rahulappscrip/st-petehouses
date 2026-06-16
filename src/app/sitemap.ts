@@ -1,8 +1,8 @@
 import type { MetadataRoute } from "next";
-import { BLOG_POSTS } from "@/lib/blog";
 import { CITY_PAGES } from "@/lib/cities";
 import { SITE } from "@/lib/constants";
 import { SITUATION_SLUGS } from "@/lib/situation-content";
+import { getWordPressBlogPostsWithFallback } from "@/lib/wordpress";
 
 const BASE_URL = SITE.url.replace(/\/$/, "");
 
@@ -24,8 +24,9 @@ const STATIC_ROUTES: StaticRoute[] = [
   { path: "/blog", changeFrequency: "weekly", priority: 0.8 },
 ];
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
+  const blogPosts = await getWordPressBlogPostsWithFallback();
 
   const staticPages: MetadataRoute.Sitemap = STATIC_ROUTES.map(({ path, changeFrequency, priority }) => ({
     url: `${BASE_URL}${path}`,
@@ -48,7 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  const blogPages: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
+  const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
     url: `${BASE_URL}/blog/${post.slug}`,
     lastModified: new Date(post.date),
     changeFrequency: "monthly",
