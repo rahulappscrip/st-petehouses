@@ -6,7 +6,7 @@
     "dev": "next dev",
     "dev:fast": "next dev",
     "dev:clean": "rimraf .next && next dev",
-    "build": "rimraf .next && next build",
+    "build": "rimraf .next && node scripts/sync-agent-md-pages.mjs && next build",
     "start": "next start",
     "lint": "eslint",
     "sync:agent-md": "node scripts/sync-agent-md-pages.mjs",

@@ -10,6 +10,7 @@ const POST_CORE_FIELDS = `
   title
   slug
   date
+  modified
   excerpt
   content
   isSticky
@@ -92,7 +93,7 @@ async function wordpressGraphQL<T>(
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ query, variables }),
-    next: { revalidate: 60 },
+    next: { revalidate: 60, tags: ["wordpress-posts"] },
   });
 
   if (!response.ok) {
@@ -175,6 +176,7 @@ export type WordPressPost = {
   title: string;
   slug: string;
   date: string;
+  modified: string;
   excerpt: string;
   content: string;
   isSticky: boolean;

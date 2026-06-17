@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { createHouseOfAppsLead } from "@/lib/house-of-apps/create-lead";
 import type { LeadFormInput } from "@/lib/house-of-apps/types";
+import { createWordPressLead } from "@/lib/wordpress/create-lead";
 
 function isNonEmptyString(value: unknown): value is string {
   return typeof value === "string" && value.trim().length > 0;
@@ -10,7 +11,11 @@ function isValidEmail(email: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
-function parseLeadInput(body: unknown): LeadFormInput | null {
+type ParsedLeadInput = LeadFormInput & {
+  sourcePage: string;
+};
+
+function parseLeadInput(body: unknown): ParsedLeadInput | null {
   if (!body || typeof body !== "object") return null;
 
   const data = body as Record<string, unknown>;
@@ -29,12 +34,16 @@ function parseLeadInput(body: unknown): LeadFormInput | null {
 
   if (email && !isValidEmail(email)) return null;
 
+  const sourcePage =
+    typeof data.sourcePage === "string" ? data.sourcePage.trim() : "";
+
   return {
     fullName: data.fullName.trim(),
     address: data.address.trim(),
     sellReason: data.sellReason.trim(),
     phone: data.phone.trim(),
     email,
+    sourcePage,
   };
 }
 
@@ -48,6 +57,13 @@ export async function POST(request: Request) {
     }
 
     const result = await createHouseOfAppsLead(input);
+
+    try {
+      await createWordPressLead(input);
+    } catch (wpError) {
+      console.error("Failed to save lead to WordPress:", wpError);
+    }
+
     return NextResponse.json({ success: true, result });
   } catch (error) {
     console.error("Failed to create lead:", error);
