@@ -2,6 +2,7 @@
 
 import type { FormEvent, ReactNode } from "react";
 import { useCallback, useState } from "react";
+import { AddressAutocompleteInput } from "@/components/shared/AddressAutocompleteInput";
 import { Arr } from "@/components/ui/Arr";
 import { FormToast } from "@/components/ui/FormToast";
 import { SiteImg } from "@/components/ui/SiteImage";
@@ -64,6 +65,7 @@ export function LeadOfferForm({
   const [submitState, setSubmitState] = useState<SubmitState>("idle");
   const [errorMessage, setErrorMessage] = useState("");
   const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [addressFieldKey, setAddressFieldKey] = useState(0);
 
   const dismissToast = useCallback(() => setToastMessage(null), []);
 
@@ -82,6 +84,7 @@ export function LeadOfferForm({
       sellReason: String(formData.get("sellReason") ?? "").trim(),
       phone: String(formData.get("phone") ?? "").trim(),
       email: String(formData.get("email") ?? "").trim(),
+      sourcePage: window.location.pathname,
     };
 
     setSubmitState("loading");
@@ -101,6 +104,7 @@ export function LeadOfferForm({
       }
 
       form.reset();
+      setAddressFieldKey((current) => current + 1);
       setSubmitState("idle");
       setToastMessage(SUCCESS_MESSAGE);
     } catch (error) {
@@ -154,18 +158,13 @@ export function LeadOfferForm({
 
           <div className="field">
             <FieldLabel htmlFor="addr">Property address</FieldLabel>
-            <div className="input-with-action">
-              <input
-                id="addr"
-                name="address"
-                className="input"
-                required
-                type="text"
-                autoComplete="street-address"
-                placeholder={addressPlaceholder}
-                disabled={isLoading}
-              />
-            </div>
+            <AddressAutocompleteInput
+              key={addressFieldKey}
+              id="addr"
+              name="address"
+              placeholder={addressPlaceholder}
+              disabled={isLoading}
+            />
           </div>
 
           <div className="field">
