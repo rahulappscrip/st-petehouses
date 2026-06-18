@@ -1,14 +1,11 @@
 import { NextResponse } from "next/server";
 import { createHouseOfAppsLead } from "@/lib/house-of-apps/create-lead";
 import type { LeadFormInput } from "@/lib/house-of-apps/types";
+import { isValidEmail, isValidUsPhone } from "@/lib/lead-form-validation";
 import { createWordPressLead } from "@/lib/wordpress/create-lead";
 
 function isNonEmptyString(value: unknown): value is string {
   return typeof value === "string" && value.trim().length > 0;
-}
-
-function isValidEmail(email: string): boolean {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
 type ParsedLeadInput = LeadFormInput & {
@@ -34,6 +31,9 @@ function parseLeadInput(body: unknown): ParsedLeadInput | null {
 
   if (email && !isValidEmail(email)) return null;
 
+  const phone = data.phone.trim();
+  if (!isValidUsPhone(phone)) return null;
+
   const sourcePage =
     typeof data.sourcePage === "string" ? data.sourcePage.trim() : "";
 
@@ -41,7 +41,7 @@ function parseLeadInput(body: unknown): ParsedLeadInput | null {
     fullName: data.fullName.trim(),
     address: data.address.trim(),
     sellReason: data.sellReason.trim(),
-    phone: data.phone.trim(),
+    phone,
     email,
     sourcePage,
   };

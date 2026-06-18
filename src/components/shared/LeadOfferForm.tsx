@@ -3,11 +3,16 @@
 import type { FormEvent, ReactNode } from "react";
 import { useCallback, useState } from "react";
 import { AddressAutocompleteInput } from "@/components/shared/AddressAutocompleteInput";
+import { UsPhoneInput } from "@/components/shared/UsPhoneInput";
 import { Arr } from "@/components/ui/Arr";
 import { FormToast } from "@/components/ui/FormToast";
 import { SiteImg } from "@/components/ui/SiteImage";
 import { ASSETS, SELL_REASON_OPTIONS, SITE } from "@/lib/constants";
 import { TRUST_IMAGES } from "@/lib/image-accessibility";
+import {
+  getLeadFormErrorMessage,
+  validateLeadFormFields,
+} from "@/lib/lead-form-validation";
 import type { SellReasonValue } from "@/lib/situation-sell-reason";
 
 type LeadOfferFormProps = {
@@ -66,6 +71,7 @@ export function LeadOfferForm({
   const [errorMessage, setErrorMessage] = useState("");
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [addressFieldKey, setAddressFieldKey] = useState(0);
+  const [phone, setPhone] = useState("");
 
   const dismissToast = useCallback(() => setToastMessage(null), []);
 
@@ -82,10 +88,18 @@ export function LeadOfferForm({
       fullName: String(formData.get("fullName") ?? "").trim(),
       address: String(formData.get("address") ?? "").trim(),
       sellReason: String(formData.get("sellReason") ?? "").trim(),
-      phone: String(formData.get("phone") ?? "").trim(),
+      phone,
       email: String(formData.get("email") ?? "").trim(),
       sourcePage: window.location.pathname,
     };
+
+    const fieldErrors = validateLeadFormFields(payload);
+    const validationMessage = getLeadFormErrorMessage(fieldErrors);
+    if (validationMessage) {
+      setSubmitState("error");
+      setErrorMessage(validationMessage);
+      return;
+    }
 
     setSubmitState("loading");
     setErrorMessage("");
@@ -104,6 +118,7 @@ export function LeadOfferForm({
       }
 
       form.reset();
+      setPhone("");
       setAddressFieldKey((current) => current + 1);
       setSubmitState("idle");
       setToastMessage(SUCCESS_MESSAGE);
@@ -191,13 +206,11 @@ export function LeadOfferForm({
           <div className="row-2">
             <div className="field">
               <FieldLabel htmlFor="phone">Phone</FieldLabel>
-              <input
+              <UsPhoneInput
                 id="phone"
                 name="phone"
-                className="input"
-                required
-                type="tel"
-                autoComplete="tel"
+                value={phone}
+                onChange={setPhone}
                 placeholder={SITE.phone}
                 disabled={isLoading}
               />
