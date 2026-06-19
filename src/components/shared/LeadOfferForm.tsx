@@ -30,6 +30,8 @@ type LeadOfferFormProps = {
   submitLabel?: string;
   className?: string;
   defaultSellReason?: SellReasonValue;
+  onSuccess?: () => void;
+  showBadges?: boolean;
 };
 
 type SubmitState = "idle" | "loading" | "error";
@@ -72,6 +74,8 @@ export function LeadOfferForm({
   submitLabel = "Get My Fair Offer",
   className = "",
   defaultSellReason,
+  onSuccess,
+  showBadges = true,
 }: LeadOfferFormProps) {
   const [submitState, setSubmitState] = useState<SubmitState>("idle");
   const [errorMessage, setErrorMessage] = useState("");
@@ -157,6 +161,7 @@ export function LeadOfferForm({
       setSubmitState("idle");
       setToastMessage(SUCCESS_MESSAGE);
       trackFormSubmitted(id, payload);
+      onSuccess?.();
     } catch (error) {
       setSubmitState("error");
       setErrorMessage(
@@ -171,24 +176,26 @@ export function LeadOfferForm({
 
       <aside className={rootClass} id={id} aria-label="Get a cash offer">
         <div className="lead-top">
-          <div className="lead-badges">
-            <SiteImg
-              className="lead-badge-bbb"
-              src={ASSETS.bbbBadge}
-              alt={TRUST_IMAGES.bbbBadge.alt}
-              title={TRUST_IMAGES.bbbBadge.title}
-              width={2000}
-              height={751}
-              sizes="200px"
-            />
-            <span className="lead-badge lead-badge--5">
-              <b>★★★★★</b>
-              <i>5.0 Rated</i>
-            </span>
-          </div>
+          {showBadges ? (
+            <div className="lead-badges">
+              <SiteImg
+                className="lead-badge-bbb"
+                src={ASSETS.bbbBadge}
+                alt={TRUST_IMAGES.bbbBadge.alt}
+                title={TRUST_IMAGES.bbbBadge.title}
+                width={2000}
+                height={751}
+                sizes="200px"
+              />
+              <span className="lead-badge lead-badge--5">
+                <b>★★★★★</b>
+                <i>5.0 Rated</i>
+              </span>
+            </div>
+          ) : null}
           {formEyebrow ? <span className="lead-eyebrow">{formEyebrow}</span> : null}
           <p className="lead-title">{formTitle}</p>
-          <p className="lead-intro">{formIntro}</p>
+          {formIntro ? <p className="lead-intro">{formIntro}</p> : null}
         </div>
 
         <form

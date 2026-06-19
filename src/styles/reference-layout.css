@@ -384,16 +384,14 @@ h4.feature-title {
   line-height: 1.1;
 }
 .site-header .brand-name small{
-  font-size: 16px;
-  letter-spacing: 0.12em;
-  margin-top: 3px;
-}
-@media (max-width: 479px){
-  .site-header .brand-name small{ display: none; }
+  font-size: clamp(10px, 0.95vw, 12px);
+  letter-spacing: 0.03em;
+  margin-top: 2px;
+  color: var(--sun);
 }
 .brand-name{ font-family: var(--sans); font-size: 20px; line-height: 1.05; white-space: nowrap; }
-.brand-name small{ display: block; font-family: var(--mono); font-size: 16px; letter-spacing: .16em; color: var(--ink-soft); text-transform: uppercase; margin-top: 4px; white-space: nowrap; }
-@media (min-width: 1200px){ .brand-name{ font-size: 22px; } .brand-name small{ font-size: 16px; } }
+.brand-name small{ display: block; font-family: var(--mono); font-size: 13px; letter-spacing: .04em; color: var(--sun); margin-top: 4px; white-space: nowrap; }
+@media (min-width: 1200px){ .brand-name{ font-size: 22px; } .brand-name small{ font-size: 14px; } }
 
 .nav-links{
   display: none;
@@ -1693,7 +1691,7 @@ p.lead-title {
 @media (min-width: 760px){ .foot-grid{ grid-template-columns: 1.3fr 1fr 1fr 1.55fr; } }
 .foot-brand .brand-mark{ background:#fff; border-radius:10px; padding:4px; }
 .foot-brand .brand-name{ color: var(--paper); }
-.foot-brand .brand-name small{ color: color-mix(in oklab, var(--paper) 60%, transparent); }
+.foot-brand .brand-name small{ color: var(--sun); }
 .foot-brand .blurb{ font-size: 16px; color: color-mix(in oklab, var(--paper) 72%, transparent); margin-top: 18px; max-width: 36ch; }
 .foot-contact{ display: flex; flex-direction: column; gap: 10px; margin-top: 20px; font-size: 16px; }
 .foot-contact a, .foot-contact span{ display: inline-flex; align-items: center; gap: 12px; color: color-mix(in oklab, var(--paper) 84%, transparent); text-decoration: none; }

@@ -617,6 +617,7 @@ export const SELL_AS_IS_WHY_US_IMAGES: Record<string, { image: string; imageAlt:
 
 export const SITE = {
   name: "We Buy St Pete Houses",
+  logoTagline: "For Cash Home Buyers",
   tagline: "Tampa Bay · FL",
   phone: "(727) 477-8998",
   phoneHref: "tel:+17274778998",

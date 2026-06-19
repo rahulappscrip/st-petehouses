@@ -27,6 +27,7 @@ export function BrandLogo({ showName = true, variant = "header" }: BrandLogoProp
       {showName ? (
         <span className="brand-name">
           {SITE.name}
+          <small>{SITE.logoTagline}</small>
         </span>
       ) : null}
     </Link>
