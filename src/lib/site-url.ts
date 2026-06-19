@@ -5,9 +5,10 @@ export function getSiteOrigin(): string {
     return explicit.replace(/\/$/, "");
   }
 
-  const vercel = process.env.VERCEL_URL?.trim();
-  if (vercel) {
-    return `https://${vercel.replace(/\/$/, "")}`;
+  // Stable project domain (e.g. st-petehouses.vercel.app), not the per-deployment VERCEL_URL.
+  const vercelProduction = process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim();
+  if (vercelProduction) {
+    return `https://${vercelProduction.replace(/^https?:\/\//, "").replace(/\/$/, "")}`;
   }
 
   return "https://webuystpetehouses.com";
