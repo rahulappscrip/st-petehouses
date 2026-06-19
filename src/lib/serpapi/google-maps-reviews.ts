@@ -3,6 +3,7 @@ import type { GoogleReviewItem, GoogleReviewsCache } from "@/lib/reviews/types";
 const SERPAPI_BASE = "https://serpapi.com/search.json";
 const DATA_ID = "0x8c02ee3246fb83f7:0x54d9e9e986f44cfc";
 const HL = "en";
+const SERPAPI_TIMEOUT_MS = 8_000;
 
 type SerpApiUser = {
   name?: string;
@@ -105,17 +106,29 @@ async function fetchReviewsPage(
     url.searchParams.set(key, value);
   }
 
-  const response = await fetch(url, { next: { revalidate: 0 } });
-  if (!response.ok) {
-    throw new Error(`SerpAPI request failed with status ${response.status}`);
-  }
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), SERPAPI_TIMEOUT_MS);
 
-  const data = (await response.json()) as SerpApiReviewsResponse;
-  if (data.search_metadata?.status !== "Success") {
-    throw new Error(data.error ?? "SerpAPI returned an unsuccessful response");
-  }
+  try {
+    const response = await fetch(url, { signal: controller.signal });
+    if (!response.ok) {
+      throw new Error(`SerpAPI request failed with status ${response.status}`);
+    }
 
-  return data;
+    const data = (await response.json()) as SerpApiReviewsResponse;
+    if (data.search_metadata?.status !== "Success") {
+      throw new Error(data.error ?? "SerpAPI returned an unsuccessful response");
+    }
+
+    return data;
+  } catch (error) {
+    if (error instanceof Error && error.name === "AbortError") {
+      throw new Error(`SerpAPI request timed out after ${SERPAPI_TIMEOUT_MS}ms`);
+    }
+    throw error;
+  } finally {
+    clearTimeout(timeout);
+  }
 }
 
 export async function fetchGoogleMapsReviewsSnapshot(

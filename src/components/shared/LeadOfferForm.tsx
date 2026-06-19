@@ -1,12 +1,18 @@
 "use client";
 
-import type { FormEvent, ReactNode } from "react";
+import type { FocusEvent, FormEvent, ReactNode } from "react";
 import { useCallback, useState } from "react";
 import { AddressAutocompleteInput } from "@/components/shared/AddressAutocompleteInput";
 import { UsPhoneInput } from "@/components/shared/UsPhoneInput";
 import { Arr } from "@/components/ui/Arr";
 import { FormToast } from "@/components/ui/FormToast";
 import { SiteImg } from "@/components/ui/SiteImage";
+import {
+  markFormFieldCompleted,
+  markFormStarted,
+  trackFormSubmitted,
+  trackFormValidationError,
+} from "@/lib/analytics/form-state";
 import { ASSETS, SELL_REASON_OPTIONS, SITE } from "@/lib/constants";
 import { TRUST_IMAGES } from "@/lib/image-accessibility";
 import {
@@ -78,6 +84,33 @@ export function LeadOfferForm({
   const rootClass = ["lead-card", "lead-offer-form", className].filter(Boolean).join(" ");
   const isLoading = submitState === "loading";
 
+  function handleFormFocusIn(event: FocusEvent<HTMLFormElement>) {
+    const target = event.target;
+    if (
+      !(target instanceof HTMLInputElement || target instanceof HTMLSelectElement) ||
+      !target.name
+    ) {
+      return;
+    }
+
+    markFormStarted(id, target.name);
+  }
+
+  function handleFormFocusOut(event: FocusEvent<HTMLFormElement>) {
+    const target = event.target;
+    if (
+      !(target instanceof HTMLInputElement || target instanceof HTMLSelectElement) ||
+      !target.name
+    ) {
+      return;
+    }
+
+    const fieldValue = target.name === "phone" ? phone : String(target.value).trim();
+    if (!fieldValue) return;
+
+    markFormFieldCompleted(id, target.name, target.type || "text", fieldValue);
+  }
+
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
@@ -96,6 +129,7 @@ export function LeadOfferForm({
     const fieldErrors = validateLeadFormFields(payload);
     const validationMessage = getLeadFormErrorMessage(fieldErrors);
     if (validationMessage) {
+      trackFormValidationError(id, Object.keys(fieldErrors));
       setSubmitState("error");
       setErrorMessage(validationMessage);
       return;
@@ -122,6 +156,7 @@ export function LeadOfferForm({
       setAddressFieldKey((current) => current + 1);
       setSubmitState("idle");
       setToastMessage(SUCCESS_MESSAGE);
+      trackFormSubmitted(id, payload);
     } catch (error) {
       setSubmitState("error");
       setErrorMessage(
@@ -156,7 +191,12 @@ export function LeadOfferForm({
           <p className="lead-intro">{formIntro}</p>
         </div>
 
-        <form onSubmit={handleSubmit} noValidate>
+        <form
+          onSubmit={handleSubmit}
+          onFocusCapture={handleFormFocusIn}
+          onBlurCapture={handleFormFocusOut}
+          noValidate
+        >
           <div className="field">
             <FieldLabel htmlFor="full-name">Full name</FieldLabel>
             <input

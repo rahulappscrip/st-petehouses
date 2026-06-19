@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { createHouseOfAppsLead } from "@/lib/house-of-apps/create-lead";
 import type { LeadFormInput } from "@/lib/house-of-apps/types";
 import { isValidEmail, isValidUsPhone } from "@/lib/lead-form-validation";
+import { sendLeadNotificationEmail } from "@/lib/resend/send-lead-notification";
 import { createWordPressLead } from "@/lib/wordpress/create-lead";
 
 function isNonEmptyString(value: unknown): value is string {
@@ -62,6 +63,12 @@ export async function POST(request: Request) {
       await createWordPressLead(input);
     } catch (wpError) {
       console.error("Failed to save lead to WordPress:", wpError);
+    }
+
+    try {
+      await sendLeadNotificationEmail(input);
+    } catch (emailError) {
+      console.error("Failed to send lead notification email:", emailError);
     }
 
     return NextResponse.json({ success: true, result });

@@ -27,7 +27,7 @@ export function SituationTestimonialsSection({ data, title, className = "" }: Pr
         <div className="situation-testimonials__grid">
           {data.items.map((t, i) => (
             <Reveal
-              key={t.initials + t.name}
+              key={t.reviewId ?? `${t.initials}-${t.name}`}
               as="article"
               className="situation-testimonials__card"
               d={i > 0 ? 1 : undefined}
