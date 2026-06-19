@@ -1,10 +1,10 @@
 import type { MetadataRoute } from "next";
 import { CITY_PAGES } from "@/lib/cities";
-import { SITE } from "@/lib/constants";
+import { getSiteOrigin } from "@/lib/site-url";
 import { getLastModified } from "@/lib/sitemap-last-modified";
 import { SITUATION_SLUGS } from "@/lib/situation-content";
 
-const BASE_URL = SITE.url.replace(/\/$/, "");
+const BASE_URL = getSiteOrigin();
 
 export const revalidate = 60;
 
@@ -63,6 +63,12 @@ const STATIC_ROUTES: StaticRoute[] = [
     changeFrequency: "monthly",
     priority: 0.7,
     sources: ["src/app/cash-vs-agent/page.tsx", "src/components/cash-vs-agent"],
+  },
+  {
+    path: "/faq",
+    changeFrequency: "monthly",
+    priority: 0.8,
+    sources: ["src/app/faq/page.tsx", "src/components/faq"],
   },
   {
     path: "/blog",

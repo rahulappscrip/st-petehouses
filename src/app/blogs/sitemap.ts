@@ -1,8 +1,8 @@
 import type { MetadataRoute } from "next";
-import { SITE } from "@/lib/constants";
+import { getSiteOrigin } from "@/lib/site-url";
 import { fetchWordPressPosts } from "@/lib/wordpress/graphql";
 
-const BASE_URL = SITE.url.replace(/\/$/, "");
+const BASE_URL = getSiteOrigin();
 
 export const revalidate = 60;
 

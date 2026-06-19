@@ -1,4 +1,5 @@
 import { AREA_CITIES as CITY_AREA_LIST, CITY_NAV_LINKS } from "./cities";
+import { getSiteUrl } from "./site-url";
 
 export const ASSETS = {
   johnPortrait: "/assets/images/john-gardepe.webp",
@@ -615,6 +616,7 @@ export const SELL_AS_IS_WHY_US_IMAGES: Record<string, { image: string; imageAlt:
   },
 };
 
+
 export const SITE = {
   name: "We Buy St Pete Houses",
   logoTagline: "For Cash Home Buyers",
@@ -624,11 +626,11 @@ export const SITE = {
   email: "SellFast@WeBuyStPeteHouses.com",
   contactEmail: "hello@webuystpetehouses.com",
   address: "PO Box 143, St. Petersburg, FL 33731",
-  url: "https://webuystpetehouses.com/",
+  url: getSiteUrl(),
   mapsHref: "https://maps.app.goo.gl/WLWfNKY5PqvBVPXy5",
   /** Primary “Get Cash Offer” CTA — contact page with offer form */
   cashOfferHref: "/contact/#form",
-} as const;
+};
 
 export const HOMEPAGE_SEO = {
   title: "We Buy Houses In St Petersburg FL | Cash Offer in 24 Hours",

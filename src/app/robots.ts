@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
-import { SITE } from "@/lib/constants";
+import { getSiteOrigin } from "@/lib/site-url";
 
-const BASE_URL = SITE.url.replace(/\/$/, "");
+const BASE_URL = getSiteOrigin();
 
 export default function robots(): MetadataRoute.Robots {
   return {
