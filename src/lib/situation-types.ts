@@ -223,13 +223,16 @@ export type SituationMoldDisclosureContent = SituationTitleParts & {
 };
 
 export type SituationTestimonial = {
+  reviewId?: string;
   quote: string;
   initials: string;
   name: string;
   meta: string;
 };
 
-export type SituationTestimonialsContent = SituationTitleParts & {
+export type SituationTestimonialsHeader = SituationTitleParts;
+
+export type SituationTestimonialsContent = SituationTestimonialsHeader & {
   items: SituationTestimonial[];
 };
 
@@ -376,7 +379,7 @@ export type SituationFullContent = {
     areasNoteAfter?: string;
     areasAside?: { title: string; body: string };
   };
-  testimonials?: SituationTestimonialsContent;
+  testimonials?: SituationTestimonialsHeader;
   situations?: SituationTitleParts & {
     items: SituationCard[];
     dark?: boolean;

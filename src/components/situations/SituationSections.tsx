@@ -22,7 +22,7 @@ import { ForeclosureLawSection } from "@/components/situations/ForeclosureLawSec
 import { SituationFloodLawSection } from "@/components/situations/SituationFloodLawSection";
 import { SituationFemaInsuranceSection } from "@/components/situations/SituationFemaInsuranceSection";
 import { SituationMoldDisclosureSection } from "@/components/situations/SituationMoldDisclosureSection";
-import { SituationTestimonialsSection } from "@/components/situations/SituationTestimonialsSection";
+import { SituationTestimonialsSectionBlock } from "@/components/situations/SituationTestimonialsSectionBlock";
 import { SituationEmpathyCtaSection } from "@/components/situations/SituationEmpathyCtaSection";
 import { SituationPillCardsSection } from "@/components/situations/SituationPillCardsSection";
 import { SituationTaxIconCardsSection } from "@/components/situations/SituationTaxIconCardsSection";
@@ -1663,9 +1663,10 @@ export function renderSituationSection(
 
     case "testimonials":
       return content.testimonials ? (
-        <SituationTestimonialsSection
+        <SituationTestimonialsSectionBlock
           key={id}
-          data={content.testimonials}
+          slug={content.slug}
+          header={content.testimonials}
           className={alt ? "section-alt" : ""}
         />
       ) : (

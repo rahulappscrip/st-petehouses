@@ -10,7 +10,7 @@ export const REVIEW_CACHE_SECONDS = 86_400;
 /** Number of newest reviews shown in the UI. */
 export const DISPLAY_REVIEW_LIMIT = 9;
 
-function pickLatestReviews(
+export function pickLatestReviews(
   items: readonly GoogleReviewItem[],
   limit = DISPLAY_REVIEW_LIMIT,
 ): GoogleReviewItem[] {
@@ -75,10 +75,16 @@ function getFileTestimonials(): TestimonialsData | null {
 }
 
 async function resolveTestimonials(): Promise<TestimonialsData> {
+  const fileData = getFileTestimonials();
   const apiKey = process.env.SERPAPI_KEY;
 
   if (!apiKey) {
-    return getFileTestimonials() ?? fallbackTestimonials();
+    return fileData ?? fallbackTestimonials();
+  }
+
+  // Use bundled JSON at request time; refresh via `npm run sync:reviews`.
+  if (fileData) {
+    return fileData;
   }
 
   try {
@@ -90,7 +96,7 @@ async function resolveTestimonials(): Promise<TestimonialsData> {
     return toTestimonialsData(snapshot);
   } catch (error) {
     console.error("Failed to fetch Google reviews from SerpAPI:", error);
-    return getFileTestimonials() ?? fallbackTestimonials();
+    return fallbackTestimonials();
   }
 }
 
