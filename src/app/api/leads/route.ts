@@ -1,13 +1,12 @@
 import { NextResponse } from "next/server";
 import { createHouseOfAppsLead } from "@/lib/house-of-apps/create-lead";
 import type { LeadFormInput } from "@/lib/house-of-apps/types";
-import { isValidEmail, isValidUsPhone } from "@/lib/lead-form-validation";
+import {
+  getLeadFormErrorMessage,
+  validateLeadFormFields,
+} from "@/lib/lead-form-validation";
 import { sendLeadNotificationEmail } from "@/lib/resend/send-lead-notification";
 import { createWordPressLead } from "@/lib/wordpress/create-lead";
-
-function isNonEmptyString(value: unknown): value is string {
-  return typeof value === "string" && value.trim().length > 0;
-}
 
 type ParsedLeadInput = LeadFormInput & {
   sourcePage: string;
@@ -18,34 +17,43 @@ function parseLeadInput(body: unknown): ParsedLeadInput | null {
 
   const data = body as Record<string, unknown>;
 
-  if (
-    !isNonEmptyString(data.fullName) ||
-    !isNonEmptyString(data.address) ||
-    !isNonEmptyString(data.sellReason) ||
-    !isNonEmptyString(data.phone)
-  ) {
-    return null;
-  }
+  const values = {
+    fullName: typeof data.fullName === "string" ? data.fullName : "",
+    address: typeof data.address === "string" ? data.address : "",
+    sellReason: typeof data.sellReason === "string" ? data.sellReason : "",
+    phone: typeof data.phone === "string" ? data.phone : "",
+    email: typeof data.email === "string" ? data.email : "",
+  };
 
-  const email =
-    typeof data.email === "string" ? data.email.trim() : "";
-
-  if (email && !isValidEmail(email)) return null;
-
-  const phone = data.phone.trim();
-  if (!isValidUsPhone(phone)) return null;
+  const errors = validateLeadFormFields(values);
+  if (Object.keys(errors).length > 0) return null;
 
   const sourcePage =
     typeof data.sourcePage === "string" ? data.sourcePage.trim() : "";
 
   return {
-    fullName: data.fullName.trim(),
-    address: data.address.trim(),
-    sellReason: data.sellReason.trim(),
-    phone,
-    email,
+    fullName: values.fullName.trim(),
+    address: values.address.trim(),
+    sellReason: values.sellReason.trim(),
+    phone: values.phone.trim(),
+    email: values.email.trim(),
     sourcePage,
   };
+}
+
+function getValidationError(body: unknown): string | null {
+  if (!body || typeof body !== "object") return "Invalid form data.";
+
+  const data = body as Record<string, unknown>;
+  const errors = validateLeadFormFields({
+    fullName: typeof data.fullName === "string" ? data.fullName : "",
+    address: typeof data.address === "string" ? data.address : "",
+    sellReason: typeof data.sellReason === "string" ? data.sellReason : "",
+    phone: typeof data.phone === "string" ? data.phone : "",
+    email: typeof data.email === "string" ? data.email : "",
+  });
+
+  return getLeadFormErrorMessage(errors);
 }
 
 export async function POST(request: Request) {
@@ -54,7 +62,11 @@ export async function POST(request: Request) {
     const input = parseLeadInput(body);
 
     if (!input) {
-      return NextResponse.json({ error: "Invalid form data." }, { status: 400 });
+      const validationError = getValidationError(body);
+      return NextResponse.json(
+        { error: validationError ?? "Invalid form data." },
+        { status: 400 },
+      );
     }
 
     const result = await createHouseOfAppsLead(input);

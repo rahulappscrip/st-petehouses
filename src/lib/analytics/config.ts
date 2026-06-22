@@ -14,5 +14,5 @@ export function getRudderDataPlaneUrl(): string {
 }
 
 export function isRudderGeoEnabled(): boolean {
-  return process.env.NEXT_PUBLIC_RUDDER_GEO_ENABLED === "true";
+  return process.env.NEXT_PUBLIC_RUDDER_GEO_ENABLED !== "false";
 }

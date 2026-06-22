@@ -263,14 +263,13 @@ export function LeadOfferForm({
               />
             </div>
             <div className="field">
-              <FieldLabel htmlFor="email" required={false}>
-                Email
-              </FieldLabel>
+              <FieldLabel htmlFor="email">Email</FieldLabel>
               <input
                 id="email"
                 name="email"
                 className="input"
                 type="email"
+                required
                 autoComplete="email"
                 placeholder="you@example.com"
                 disabled={isLoading}
