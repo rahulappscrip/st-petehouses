@@ -54,18 +54,31 @@ export function buildAiCatalog() {
     {
       identifier: "urn:webuystpetehouses:llms-txt",
       displayName: "llms.txt Site Index",
+      version: "1.0.0",
       mediaType: "text/plain",
       url: `${origin}/llms.txt`,
       description: "Site index, contact info, and guidance for AI systems.",
       tags: ["documentation", "llms-txt"],
     },
+    {
+      identifier: "urn:webuystpetehouses:api:health",
+      displayName: "API Health Check",
+      version: "1.0.0",
+      mediaType: "application/json",
+      url: `${origin}/api/health`,
+      description:
+        "Liveness endpoint for monitoring tools and agents to verify APIs are available before calling them.",
+      tags: ["api", "health", "monitoring"],
+    },
   ];
 
   return {
     specVersion: "1.0",
+    generatedAt: new Date().toISOString(),
     host: {
       displayName: "We Buy St Pete Houses",
       identifier: origin.replace(/^https?:\/\//, ""),
+      canonicalUrl: origin,
       documentationUrl: `${origin}/llms.txt`,
     },
     entries,
