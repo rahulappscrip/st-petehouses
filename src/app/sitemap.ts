@@ -76,6 +76,12 @@ const STATIC_ROUTES: StaticRoute[] = [
     priority: 0.8,
     sources: ["src/app/blog/page.tsx", "src/components/blog"],
   },
+  {
+    path: "/demo",
+    changeFrequency: "monthly",
+    priority: 0.3,
+    sources: ["src/app/demo/page.tsx"],
+  },
 ];
 
 const CITY_PAGE_SOURCES = [

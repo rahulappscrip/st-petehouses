@@ -1692,11 +1692,11 @@ p.lead-title {
 .foot-brand .brand-mark{ background:#fff; border-radius:10px; padding:4px; }
 .foot-brand .brand-name{ color: var(--paper); }
 .foot-brand .brand-name small{ color: var(--sun); }
-.foot-brand .blurb{ font-size: 16px; color: color-mix(in oklab, var(--paper) 72%, transparent); margin-top: 18px; max-width: 36ch; }
+.foot-brand .blurb{ font-size: 16px; color: var(--paper); margin-top: 18px; max-width: 36ch; }
 .foot-contact{ display: flex; flex-direction: column; gap: 10px; margin-top: 20px; font-size: 16px; }
-.foot-contact a, .foot-contact span{ display: inline-flex; align-items: center; gap: 12px; color: color-mix(in oklab, var(--paper) 84%, transparent); text-decoration: none; }
-.foot-contact svg{ width: 16px; height: 16px; flex: 0 0 auto; color: color-mix(in oklab, var(--paper) 60%, transparent); }
-.foot-contact a:hover{ color: var(--paper); }
+.foot-contact a, .foot-contact span{ display: inline-flex; align-items: center; gap: 12px; color: var(--paper); text-decoration: none; }
+.foot-contact svg{ width: 16px; height: 16px; flex: 0 0 auto; color: color-mix(in oklab, var(--paper) 85%, transparent); }
+.foot-contact a:hover{ color: color-mix(in oklab, var(--paper) 85%, transparent); }
 
 .foot-social{
   display: flex;
@@ -1733,8 +1733,14 @@ p.lead-title {
   font-size: 17px;
   font-weight: 400;
 }
-.foot-col a{ display: block; padding: 6px 0; color: color-mix(in oklab, var(--paper) 70%, transparent); text-decoration: none; font-size: 16px; }
-.foot-col a:hover{ color: var(--paper); }
+.foot-col a{
+  display: block;
+  padding: 6px 0;
+  color: var(--paper);
+  text-decoration: none;
+  font-size: 16px;
+}
+.foot-col a:hover{ color: color-mix(in oklab, var(--paper) 85%, transparent); }
 .foot-col--2col__grid{
   display: grid;
   grid-template-columns: repeat(2, minmax(10.5rem, 1fr));
@@ -1753,6 +1759,7 @@ p.lead-title {
   padding: 6px 0;
   line-height: 1.4;
   white-space: nowrap;
+  color: var(--paper);
 }
 @media (max-width: 859px){
   .foot-col--2col__grid{

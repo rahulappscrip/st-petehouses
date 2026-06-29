@@ -17,10 +17,10 @@
 .market-chart {
   position: relative;
   min-height: 380px;
-  /* border: 1px solid var(--line); */
   border-radius: var(--radius);
   overflow: hidden;
-  /* background: var(--sand); */
+  background: var(--white);
+  box-shadow: var(--shadow-2);
 }
 
 .market-chart__img {
