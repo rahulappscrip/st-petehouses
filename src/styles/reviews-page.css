@@ -442,7 +442,7 @@ body .rev-hero .summary .meta span.stars {
   text-transform: uppercase;
   color: var(--ink-soft);
   background: var(--sand);
-  font-weight: inherit;
+  font-weight: 700;
 }
 
 .compare-grid .col-h.us {
@@ -451,7 +451,7 @@ body .rev-hero .summary .meta span.stars {
 }
 
 .compare-grid__row > .row-h {
-  font-weight: 500;
+  font-weight: 700;
   color: var(--ink);
 }
 
@@ -514,7 +514,7 @@ body .rev-hero .summary .meta span.stars {
 
   .compare-grid__row > .row-h {
     padding: 14px 16px 10px;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 16px;
     background: var(--sand);
     border-bottom: 1px solid var(--line-soft);
@@ -532,6 +532,7 @@ body .rev-hero .summary .meta span.stars {
   .compare-grid__row > .other-cell::before {
     font-family: var(--mono);
     font-size: 16px;
+    font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--ink-soft);

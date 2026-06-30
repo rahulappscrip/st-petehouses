@@ -6,12 +6,13 @@
     "dev": "next dev",
     "dev:fast": "next dev",
     "dev:clean": "rimraf .next && next dev",
-    "build": "rimraf .next && node scripts/sync-agent-md-pages.mjs && next build",
+    "build": "rimraf .next && node scripts/sync-agent-md-pages.mjs && node scripts/check-sitemap.mjs && next build",
     "start": "next start",
     "lint": "eslint",
     "sync:agent-md": "node scripts/sync-agent-md-pages.mjs",
     "sync:reviews": "node scripts/sync-google-reviews.mjs",
-    "sync:reviews:force": "node scripts/sync-google-reviews.mjs --force"
+    "sync:reviews:force": "node scripts/sync-google-reviews.mjs --force",
+    "check:sitemap": "node scripts/check-sitemap.mjs"
   },
   "dependencies": {
     "next": "^15.3.3",

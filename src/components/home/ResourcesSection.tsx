@@ -85,17 +85,10 @@ export function ResourcesSection({
                   <div className="ba-meta">
                     <h3>{item.title}</h3>
                     <p>{item.body}</p>
-                    <span className="stat">
-                      {i === 0 ? (
-                        <>
-                          <b>9 day</b> close · <b>14 wk</b> renovation
-                        </>
-                      ) : (
-                        <>
-                          <b>7 day</b> close · <b>11 wk</b> renovation
-                        </>
-                      )}
-                    </span>
+                    <span
+                      className="stat"
+                      dangerouslySetInnerHTML={{ __html: item.statHtml }}
+                    />
                   </div>
                 </Reveal>
               ))}

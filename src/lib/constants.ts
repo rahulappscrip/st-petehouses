@@ -2,11 +2,11 @@ import { AREA_CITIES as CITY_AREA_LIST, CITY_NAV_LINKS } from "./cities";
 import { getSiteUrl } from "./site-url";
 
 export const ASSETS = {
-  johnPortrait: "/assets/images/john-gardepe.webp",
+  johnPortrait: "/assets/images/Benette.webp",
   johnSvg: "/assets/images/John-svg.svg",
   johnByline: "/assets/images/John.webp",
-  johnCta: "/assets/images/john-gardepe-1.webp",
-  ownerJohn: "/assets/images/john-own.webp",
+  johnCta: "/assets/images/Benette.webp",
+  ownerJohn: "/assets/images/Benette.webp",
   bbbBadge: "/assets/images/bbb-client.webp",
   logo: "/assets/images/logo.webp",
   favicon: "/favicon.ico",
@@ -1665,7 +1665,7 @@ export const OFFER_MATH = {
 export const OFFER_FORMULA_PARTS = [
   { label: "After Repair Value", value: "ARV" },
   { label: "Holding & Selling", value: "10%" },
-  { label: "Our Profit", value: "10%" },
+  { label: "Our Profit", value: "" },
   { label: "Repair Costs", value: "Actual" },
 ] as const;
 
@@ -1682,13 +1682,13 @@ export const OFFER_FORMULA_DETAILS = [
   },
   {
     num: "03",
-    title: "Our Profit (10%)",
-    body: "A reasonable margin that lets us stay in business and keep buying homes like yours. We do not maximize this at your expense.",
+    title: "Repair Costs",
+    body: "The estimated cost to bring your home to market-ready condition. We absorb this risk so you do not pay for any repairs out of pocket.",
   },
   {
     num: "04",
-    title: "Repair Costs",
-    body: "The estimated cost to bring your home to market-ready condition. We absorb this risk so you do not pay for any repairs out of pocket.",
+    title: "Our Profit",
+    body: "A reasonable margin that lets us stay in business and keep buying homes like yours. We do not maximize this at your expense.",
   },
 ] as const;
 

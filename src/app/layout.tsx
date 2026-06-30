@@ -60,8 +60,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${dmSerifDisplay.variable}`}>
-      <body className={inter.className}>
+    <html lang="en" className={`${inter.variable} ${dmSerifDisplay.variable}`} suppressHydrationWarning>
+      <body className={inter.className} suppressHydrationWarning>
         <RudderStackScript />
         <RudderAnalyticsProvider />
         <script
