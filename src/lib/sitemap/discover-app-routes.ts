@@ -12,7 +12,7 @@ export type DiscoveredAppRoute = {
 
 function isNoIndexPage(absolutePageFile: string): boolean {
   const content = fs.readFileSync(absolutePageFile, "utf8");
-  return /robots\s*:\s*\{[^}]*index\s*:\s*false/s.test(content);
+  return /robots\s*:\s*\{[\s\S]*?index\s*:\s*false/.test(content);
 }
 
 function hasDynamicSegment(relativeDir: string): boolean {
