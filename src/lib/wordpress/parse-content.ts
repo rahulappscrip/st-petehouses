@@ -125,7 +125,7 @@ function parseFaqPairs(faqHtml: string): BlogFaqItem[] {
 
 function findAuthorBioStartIndex(html: string): number {
   const authorNamePattern =
-    /<p[^>]*>\s*<strong>\s*(?:Benette Andrew|John Gardepe)\s*<\/strong>/i;
+    /<p[^>]*>\s*<strong>\s*(?:Bennett Andrews|John Gardepe)\s*<\/strong>/i;
   const authorMatch = html.search(authorNamePattern);
   if (authorMatch !== -1) {
     const before = html.slice(Math.max(0, authorMatch - 120), authorMatch);

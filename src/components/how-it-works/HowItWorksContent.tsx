@@ -95,7 +95,7 @@ export function HowItWorksContent() {
                 height={40}
               />
               <span className="author">
-                <b>By Benette Andrew</b>
+                <b>By Bennett Andrews</b>
                 <span>Owner · We Buy St Pete Houses</span>
               </span>
             </div>

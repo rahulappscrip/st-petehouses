@@ -641,7 +641,7 @@ export const HOMEPAGE_SEO = {
 
 export const MEET_OWNER = {
   eyebrow: "Meet the owner",
-  title: "Hi, I'm Benette Andrew.",
+  title: "Hi, I'm Bennett Andrews.",
   subtitle: "I'm the owner of We Buy St. Pete Houses.",
   paragraphs: [
     {
@@ -731,7 +731,7 @@ export const HOME_TESTIMONIALS = {
       meta: "5 reviews • 3 years ago",
       localGuide: false,
       quote:
-        "It was a pleasure working with Benette Andrew and his team! He was very professional, down to earth, and patient! Glad that they were the ones to help me through this process of selling my home.",
+        "It was a pleasure working with Bennett Andrews and his team! He was very professional, down to earth, and patient! Glad that they were the ones to help me through this process of selling my home.",
     },
     {
       initials: "RB",

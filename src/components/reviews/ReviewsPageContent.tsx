@@ -78,7 +78,7 @@ export function ReviewsPageContent({ testimonials }: ReviewsPageContentProps) {
                 height={40}
               />
               <span className="author">
-                <b>By Benette Andrew</b>
+                <b>By Bennett Andrews</b>
                 <span>Owner · We Buy St Pete Houses</span>
               </span>
               <span className="dot" aria-hidden />

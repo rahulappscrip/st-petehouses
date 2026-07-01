@@ -22,7 +22,7 @@ export function GetACashOfferHeroSection() {
             <p className="body-large gaco-hero__body">{hero.body}</p>
           </Reveal>
 
-          <Reveal d={1} className="hero-portrait gaco-hero__portrait" aria-label="Benette Andrew — owner">
+          <Reveal d={1} className="hero-portrait gaco-hero__portrait" aria-label="Bennett Andrews — owner">
             <div className="hero-portrait__img">
               <SiteImg
                 src={ASSETS.johnPortrait}

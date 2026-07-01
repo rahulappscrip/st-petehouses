@@ -36,7 +36,7 @@ const jsonLd = {
       dateModified: "2026-06-08",
       author: {
         "@type": "Person",
-        name: "Benette Andrew",
+        name: "Bennett Andrews",
         jobTitle: "Owner",
         worksFor: { "@type": "LocalBusiness", name: "We Buy St Pete Houses" },
       },

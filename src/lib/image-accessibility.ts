@@ -25,20 +25,20 @@ export const BRAND_IMAGES = {
 
 export const PERSON_IMAGES = {
   johnPortrait: imageAccessibility(
-    "Benette Andrew, founder and owner of We Buy St Pete Houses in St. Petersburg, Florida",
-    "Benette Andrew — local St. Petersburg cash home buyer",
+    "Bennett Andrews, founder and owner of We Buy St Pete Houses in St. Petersburg, Florida",
+    "Bennett Andrews — local St. Petersburg cash home buyer",
   ),
   johnCta: imageAccessibility(
-    "Benette Andrew ready to review your St. Petersburg property for a cash offer",
-    "Speak with Benette Andrew about selling your St. Pete home for cash",
+    "Bennett Andrews ready to review your St. Petersburg property for a cash offer",
+    "Speak with Bennett Andrews about selling your St. Pete home for cash",
   ),
   johnByline: imageAccessibility(
-    "Portrait of Benette Andrew, author of this cash home buying guide",
-    "Benette Andrew — We Buy St Pete Houses",
+    "Portrait of Bennett Andrews, author of this cash home buying guide",
+    "Bennett Andrews — We Buy St Pete Houses",
   ),
   johnAvatar: imageAccessibility(
-    "Benette Andrew profile photo",
-    "Benette Andrew — We Buy St Pete Houses founder",
+    "Bennett Andrews profile photo",
+    "Bennett Andrews — We Buy St Pete Houses founder",
   ),
 } as const;
 

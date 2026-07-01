@@ -36,7 +36,7 @@ export function CityHeroSection({
               JG
             </span>
             <div>
-              <strong>Benette Andrew</strong>
+              <strong>Bennett Andrews</strong>
               <span>{authorRole}</span>
             </div>
           </div>
