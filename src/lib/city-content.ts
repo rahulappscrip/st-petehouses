@@ -529,7 +529,7 @@ const CLEARWATER: CityFullContent = {
       {
         num: "02",
         title: "Receive a Cash Offer",
-        body: "We analyze local market conditions and present a no-obligation cash offer, typically within 24 hours of your inquiry. No pressure to accept.",
+        body: "We take a look at the local market, review the property, and usually send over a no-obligation cash offer within 24 hours. No pressure, no hard sell — just a clear offer you can review when you are ready.",
       },
       {
         num: "03",
@@ -558,7 +558,7 @@ const CLEARWATER: CityFullContent = {
     titleLead: "Clearwater homes we buy, ",
     titleEm: "any situation.",
     titleTail: "",
-    lede: "We buy Clearwater homes in all kinds of circumstances — foreclosure, probate, and other tough-to-sell scenarios where speed and simplicity matter most.",
+    lede: "We buy houses in Clearwater in all kinds of circumstances — foreclosure, probate, and other tough-to-sell scenarios where speed and simplicity matter most.",
     items: [
       {
         icon: "🏦",
@@ -613,7 +613,7 @@ const CLEARWATER: CityFullContent = {
       {
         icon: "💰",
         title: "No agent commissions or fees",
-        body: "We buy direct. No listing agent, no buyer's agent, no 5–6% commission deducted from your proceeds. You keep more of the sale.",
+        body: "We buy direct from you. No listing agent, no buyer's agent, no 5–6% commission deducted from your proceeds to help you keep more money in your pocket.",
       },
       {
         icon: "📅",
@@ -631,7 +631,7 @@ const CLEARWATER: CityFullContent = {
     steps: [
       {
         title: "Sign a purchase agreement",
-        body: "A straightforward contract outlining the sale terms — price, timeline, and any conditions. We walk you through every line.",
+        body: "A written agreement outlining the sale terms — price, timeline, and any conditions. We walk you through every line.",
       },
       {
         title: "Schedule closing on your timeline",
@@ -648,7 +648,7 @@ const CLEARWATER: CityFullContent = {
     titleLead: "Traditional sale vs. ",
     titleEm: "cash sale",
     titleTail: " in Clearwater.",
-    lede: "A cash offer trades a potentially higher list price for speed, certainty, and zero hassle — the right choice when timing matters.",
+    lede: "A cash offer is really about making the sale faster, simpler, and more certain. No repairs, no long back-and-forth, and no drawn-out process — just a straightforward option when timing matters.",
     traditionalLabel: "Traditional Agent Listing",
     traditionalTimeline: "9 days — 14 weeks",
     cashLabel: "We Buy St. Pete Houses",
@@ -716,7 +716,7 @@ const CLEARWATER: CityFullContent = {
       },
       {
         q: "What happens after I accept a cash offer?",
-        a: "You sign a straightforward purchase agreement, choose your closing date, and receive funds at the closing table. We guide you through each step with full transparency — no surprises, no hidden steps.",
+        a: "You sign a simple purchase agreement, choose your closing date, and receive funds at the closing table. We guide you through each step with full transparency — no surprises, no hidden steps.",
       },
       {
         q: "What areas near Clearwater do you serve?",
