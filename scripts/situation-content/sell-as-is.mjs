@@ -27,7 +27,7 @@ export const SELL_AS_IS_CONTENT = {
       "We buy houses for cash in St Petersburg in any condition — no repairs, no agent commissions, no hidden fees. Get a fair, no-obligation cash offer and close in as little as 7 days, on your schedule.",
     formTitle: "Tell us about your home.",
     formIntro: "Get a fair as-is cash offer within 24 hours.",
-    authorRole: "By John Gardepe · Principal Buyer, We Buy St. Pete Houses, LLC",
+    authorRole: "By Benette Andrew · Principal Buyer, We Buy St. Pete Houses, LLC",
     addressPlaceholder: "123 Main St, St. Petersburg, FL",
     breadcrumbTrail: [{ label: "St. Petersburg", href: "/we-buy-houses-st-petersburg-fl" }],
     checklist: [

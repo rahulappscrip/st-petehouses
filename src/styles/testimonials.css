@@ -1,4 +1,5 @@
 /* Homepage testimonials — from calculator-and-testimonials handoff */
+@import "./testimonial-cards.css";
 
 .testimonials {
   background: var(--paper);

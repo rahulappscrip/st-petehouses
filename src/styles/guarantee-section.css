@@ -1,3 +1,45 @@
+/* ============================================================
+   Guarantee section
+   ============================================================ */
+.guarantee{ background: var(--paper); border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
+.guarantee-grid{ display: grid; gap: clamp(24px, 3vw, 40px); grid-template-columns: 1fr; align-items: start; }
+@media (min-width: 960px){ .guarantee-grid{ grid-template-columns: .8fr 1.2fr; } }
+.guarantee-list{ display: flex; flex-direction: column; gap: 0; }
+.guarantee-list .gi{
+  display: grid; gap: 12px; grid-template-columns: auto 1fr; align-items: start;
+  padding: 22px 0; border-top: 1px solid var(--line);
+}
+.guarantee-list .gi:last-child{ border-bottom: 1px solid var(--line); }
+.guarantee-list .ico{
+  width: 42px; height: 42px; border-radius: 12px;
+  background: color-mix(in oklab, var(--sun) 14%, var(--paper));
+  color: var(--sun-deep);
+  display: grid; place-items: center;
+}
+.guarantee-list .ico svg{ width: 20px; height: 20px; }
+.guarantee-list h3{
+  font-size: var(--h3-size);
+}
+.guarantee-list p{ color: var(--ink-2); font-size: 16px; margin-top: 4px; }
+
+.guarantee-aside{
+  background: var(--ink); color: var(--paper);
+  border-radius: var(--radius-l);
+  padding: clamp(28px, 3.5vw, 40px);
+  position: relative; overflow: hidden;
+}
+.guarantee-aside::before{
+  content:""; position: absolute; right: -20%; top: -30%;
+  width: 60%; height: 160%;
+  background: radial-gradient(ellipse at center, rgba(42,174,102,.3), transparent 60%);
+  pointer-events: none;
+}
+.guarantee-aside .lab{ font-family: var(--mono); font-size: 16px; letter-spacing: .14em; text-transform: uppercase; color: color-mix(in oklab, var(--paper) 60%, transparent); position: relative; z-index: 1; }
+.guarantee-aside h3{ font-size: var(--h3-size); margin-top: 12px; position: relative; z-index: 1; }
+.guarantee-aside h3 em{ font-style: italic; color: var(--sun); }
+.guarantee-aside p{ font-size: 16px; color: color-mix(in oklab, var(--paper) 80%, transparent); margin-top: 14px; max-width: 50ch; position: relative; z-index: 1; }
+.guarantee-aside .actions{ display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; position: relative; z-index: 1; }
+
 /* Home guarantee — card layout (reference design) */
 .guarantee--card .guarantee-card {
   display: grid;

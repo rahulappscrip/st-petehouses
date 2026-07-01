@@ -1,0 +1,36 @@
+/* ============================================================
+   Areas served — map + list
+   ============================================================ */
+.areas-section{ background: var(--paper); border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); }
+.areas-grid{ display: grid; gap: clamp(24px, 3vw, 40px); grid-template-columns: 1fr; }
+@media (min-width: 880px){ .areas-grid{ grid-template-columns: 1.1fr .9fr; align-items: stretch; } }
+.area-map{
+  min-height: clamp(320px, 50vw, 450px);
+  border-radius: var(--radius-l);
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+.area-map__embed{
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: clamp(320px, 50vw, 450px);
+  border: 0;
+}
+.areas-aside h3{ font-size: 26px; margin-bottom: 14px; white-space: nowrap; }
+.area-list{
+  display: grid; grid-template-columns: 1fr;
+  list-style: none; padding: 0; margin: 0;
+}
+.area-list li{
+  font-size: 16px; color: var(--ink-2);
+  padding: 10px 0; border-bottom: 1px dashed var(--line-soft);
+}
+.area-list a{ text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 8px; }
+.area-list a::before{ content:""; width: 6px; height: 6px; border-radius: 50%; background: var(--sun); flex: 0 0 auto; }
+.area-list a:hover{ color: var(--ink); }
+.area-list a:hover::before{ background: var(--sun-deep); }
+.area-list .featured{ color: var(--sun-deep); font-weight: 400; }
+.area-list .featured a{ color: inherit; }

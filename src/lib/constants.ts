@@ -641,7 +641,7 @@ export const HOMEPAGE_SEO = {
 
 export const MEET_OWNER = {
   eyebrow: "Meet the owner",
-  title: "Hi, I'm John Gardepe.",
+  title: "Hi, I'm Benette Andrew.",
   subtitle: "I'm the owner of We Buy St. Pete Houses.",
   paragraphs: [
     {
@@ -697,7 +697,7 @@ export const HOME_TESTIMONIALS = {
       quote:
         "We Buy St Pete Homes was excellent to work with from start to finish. They complied with all of my terms and stayed on top of the entire process. John was prompt and courteous. Contract to close was 14 days. I would highly recommend.",
       ownerReply: {
-        title: "Response from John",
+        title: "Response from Benette",
         text: "Tom, thank you for the kind words. I'm glad we were able to meet your expectations throughout the sale of your rental property. We sincerely appreciated your professionalism as well.",
       },
     },
@@ -731,7 +731,7 @@ export const HOME_TESTIMONIALS = {
       meta: "5 reviews • 3 years ago",
       localGuide: false,
       quote:
-        "It was a pleasure working with John Gardepe and his team! He was very professional, down to earth, and patient! Glad that they were the ones to help me through this process of selling my home.",
+        "It was a pleasure working with Benette Andrew and his team! He was very professional, down to earth, and patient! Glad that they were the ones to help me through this process of selling my home.",
     },
     {
       initials: "RB",
@@ -749,7 +749,7 @@ export const HOME_TESTIMONIALS = {
       quote:
         "He was very professional and a good person to work with. Showed up on time for the meetings and always responds in an appropriate time.",
       ownerReply: {
-        title: "Response from John",
+        title: "Response from Benette",
         text: "Thank you Steve, we really enjoyed working with you and getting to know you. We always appreciate the opportunity to work with a Veteran. Thank you for your service.",
       },
     },
@@ -870,7 +870,7 @@ export const PROCESS_STEPS = [
   {
     num: "02",
     title: "Cash Offer",
-    body: "We review the details and provide a fair, no-obligation cash offer — usually within 24 hours.",
+    body: "We review your details and provide a fair, no-obligation cash offer - usually within 24 hours.",
     metaLabel: "Within",
     metaValue: "24 hours",
     highlight: true,
@@ -878,7 +878,7 @@ export const PROCESS_STEPS = [
   {
     num: "03",
     title: "walkthrough",
-    body: "We visit your property as-is. No repairs, no cleaning, no staging — just a quick, friendly walkthrough.",
+    body: "We visit your property either in person or via a virtual walkthrough. No repairs, no cleaning, no staging needed - just a quick, friendly walkthrough.",
     metaLabel: "Repairs",
     metaValue: "None",
   },
@@ -948,7 +948,7 @@ export const SELLER_SITUATIONS = [
   },
   {
     title: "Tired landlord",
-    body: "Exit problem tenants. We buy with the lease in place if needed.",
+    body: "Goodbye, problem tenants. We buy with the lease in place if needed.",
     href: "/situations/tenants",
     image: ASSETS.tiredLandlord,
     imageAlt: "Tired landlord selling a tenant-occupied rental for cash in Tampa Bay",
@@ -956,7 +956,7 @@ export const SELLER_SITUATIONS = [
   },
   {
     title: "Distressed property",
-    body: "Major repairs needed. Skip the contractor — we buy as-is.",
+    body: "No major repairs needed. Skip the contractor — we buy as-is.",
     href: "/situations/sell-as-is",
     image: ASSETS.distressedProperty,
     imageAlt: "Distressed St. Petersburg home sold as-is for cash without repairs",
@@ -1652,7 +1652,7 @@ export const HOW_IT_WORKS_FAQ = [
 export const OFFER_MATH = {
   eyebrow: "Our Offer Math",
   lede:
-    "We need to make a profit on the sale, but we promise not to take advantage of you or give you a lowball offer. Every cash offer follows a transparent formula, and we are happy to walk you through the math so you understand exactly how we arrived at your number.",
+    "Every cash offer follows a transparent formula, and we are happy to walk you through the math so you understand exactly how we arrived at your number.",
   formulaResult: { label: "Cash Offer Amount", value: "Your Offer" },
   cashAdvance: {
     badge: "Additional Benefit",
@@ -1665,20 +1665,20 @@ export const OFFER_MATH = {
 export const OFFER_FORMULA_PARTS = [
   { label: "After Repair Value", value: "ARV" },
   { label: "Holding & Selling", value: "10%" },
-  { label: "Our Profit", value: "" },
   { label: "Repair Costs", value: "Actual" },
+  { label: "Our Profit", value: "" },
 ] as const;
 
 export const OFFER_FORMULA_DETAILS = [
   {
     num: "01",
     title: "After Repair Value",
-    body: "What your home would sell for in fully renovated, market-ready condition. We base this on recent comparable sales in your neighborhood, not a guess.",
+    body: "What your home would sell for in fully renovated, market-ready condition. We base this on hard data from recent comparable sales in your neighborhood, not a guess.",
   },
   {
     num: "02",
     title: "Holding & Selling (10%)",
-    body: "Costs we cover after buying: property taxes, insurance, utilities while we hold it, and agent commissions and closing costs we pay when we resell.",
+    body: "Once we buy the house, we take on the costs too — things like property taxes, insurance, utilities while we own it, and the agent commissions and closing costs when we find it a new family.",
   },
   {
     num: "03",
@@ -1702,7 +1702,7 @@ export const CASH_ADVANCE_BENEFITS = [
 export const PROS_CONS = {
   eyebrow: "Cash Sale Tradeoffs",
   lede:
-    "Cash offers close fast and require no repairs, but may come with a discount compared to a full-market listing. Here is the honest tradeoff.",
+    "Cash offers are built for speed and simplicity. There are no repairs to make, no showings to deal with, and no drawn-out process. The offer embodies the convenience of selling quickly and as-is.",
   advantagesTitle: "Advantages of cash sales",
   tradeoffsTitle: "Considerations to keep in mind",
 } as const;
@@ -1784,7 +1784,7 @@ export const GUARANTEE_ITEMS = [
   {
     title: "No hidden fees",
     icon: "dollar" as const,
-    body: "The offer you see is the offer you get. We cover closing costs, so you keep more of your sale price.",
+    body: "The offer you see is the offer you get. We cover closing costs, so there are NO surprise fees on closing day.",
   },
   {
     title: "Closing on your timeline",
@@ -1828,12 +1828,12 @@ export const MARKET_FACTORS = [
   {
     letter: "B",
     title: "Days on market",
-    body: "How long homes sit on the market as-is matters. We factor in current absorption rates so our offers reflect what a property will actually transact for today.",
+    body: "We also look at how long homes are actually sitting when they sell as-is. If properties are taking longer to sell, that matters. Our offer takes today’s market pace into account so it lines up with what the home is realistically worth.",
   },
   {
     letter: "C",
     title: "Property condition impact",
-    body: "Repair scope changes the calculus. We estimate the realistic cost to bring a home to market — and pass through fair value to you without nickel-and-diming.",
+    body: "The amount of repairs needed plays a role in the offer. We factor in what it would realistically cost to get the home ready after we buy it, while still keeping the offer fair and straightforward.",
   },
   {
     letter: "D",

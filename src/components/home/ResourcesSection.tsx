@@ -22,10 +22,10 @@ export function ResourcesSection({
   eyebrow = "Local resources",
   title = (
     <>
-      Trusted St Petersburg <em>homeowner resources</em>.
+      Trusted <em> homeowner resources</em>.
     </>
   ),
-  lede = "Selling to a cash buyer is straightforward, but it helps to know the local resources available to you for title, taxes, and property records.",
+  lede = "Selling to a cash buyer is simple, but it helps to know the local resources available to you for title, taxes, and property records.",
   resources = RESOURCES,
   showBeforeAfter = true,
   alt = false,

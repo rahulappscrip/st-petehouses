@@ -25,20 +25,20 @@ export const BRAND_IMAGES = {
 
 export const PERSON_IMAGES = {
   johnPortrait: imageAccessibility(
-    "John Gardepe, founder and owner of We Buy St Pete Houses in St. Petersburg, Florida",
-    "John Gardepe — local St. Petersburg cash home buyer",
+    "Benette Andrew, founder and owner of We Buy St Pete Houses in St. Petersburg, Florida",
+    "Benette Andrew — local St. Petersburg cash home buyer",
   ),
   johnCta: imageAccessibility(
-    "John Gardepe ready to review your St. Petersburg property for a cash offer",
-    "Speak with John Gardepe about selling your St. Pete home for cash",
+    "Benette Andrew ready to review your St. Petersburg property for a cash offer",
+    "Speak with Benette Andrew about selling your St. Pete home for cash",
   ),
   johnByline: imageAccessibility(
-    "Portrait of John Gardepe, author of this cash home buying guide",
-    "John Gardepe — We Buy St Pete Houses",
+    "Portrait of Benette Andrew, author of this cash home buying guide",
+    "Benette Andrew — We Buy St Pete Houses",
   ),
   johnAvatar: imageAccessibility(
-    "John Gardepe profile photo",
-    "John Gardepe — We Buy St Pete Houses founder",
+    "Benette Andrew profile photo",
+    "Benette Andrew — We Buy St Pete Houses founder",
   ),
 } as const;
 

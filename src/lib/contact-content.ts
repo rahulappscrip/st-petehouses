@@ -23,7 +23,7 @@ export const CONTACT_PAGE = {
       "Close through a licensed Pinellas County title company",
     ],
     john: {
-      name: "John Gardepe",
+      name: "Benette Andrew",
       title: "Owner & Founder · We Buy St Pete Houses",
       quote:
         "We treat every homeowner the way we'd want our own family to be treated. You'll get a fair offer and a team that's with you every step of the way.",
@@ -104,7 +104,7 @@ export const CONTACT_PAGE = {
       },
       {
         q: "Who will I be talking to?",
-        a: "A local member of our St Pete team. John Gardepe is involved in every transaction, and the people you speak with know the Pinellas County market and the specific situations that bring most sellers to us — not a national call center.",
+        a: "A local member of our St Pete team. Benette Andrew is involved in every transaction, and the people you speak with know the Pinellas County market and the specific situations that bring most sellers to us — not a national call center.",
       },
       {
         q: "Will my information be kept confidential?",

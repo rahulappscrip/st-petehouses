@@ -49,7 +49,7 @@ export function HeroSection({ content = DEFAULT_HERO }: { content?: HeroContent 
         </div>
 
         <div className="hero-body">
-          <Reveal as="div" d={2} className="hero-portrait" aria-label="John Gardepe — owner">
+          <Reveal as="div" d={2} className="hero-portrait" aria-label="Benette Andrew — owner">
             <div className="hero-portrait__img">
               <SiteImg
                 src={ASSETS.johnPortrait}

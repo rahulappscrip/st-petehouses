@@ -87,7 +87,7 @@ function resolveAuthorName(post: WordPressPost): string {
   const { name, firstName, lastName } = post.author?.node ?? {};
   if (name?.trim()) return name.trim();
   const fromParts = [firstName, lastName].filter(Boolean).join(" ").trim();
-  return fromParts || "John Gardepe";
+  return fromParts || "Benette Andrew";
 }
 
 function resolveAuthorRole(post: WordPressPost): string {

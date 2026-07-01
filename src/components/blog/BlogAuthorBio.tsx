@@ -3,10 +3,10 @@ import type { BlogPost } from "@/lib/blog";
 import { ABOUT_PAGE } from "@/lib/about-content";
 
 const DEFAULT_AUTHOR = {
-  name: "John Gardepe",
-  initials: "JG",
+  name: "Benette Andrew",
+  initials: "BA",
   role: "Co-Founder & Head of Acquisitions · We Buy St Pete Houses",
-  bio: "John is the Co-Founder and Head of Acquisitions of a St. Petersburg-based real estate investment company, where he has led property acquisitions and deal structuring across the Greater Tampa Bay area since 2020. His work centers on sourcing and structuring off-market property opportunities and guiding homeowners through fast, as-is sales.",
+  bio: "Benette is the Co-Founder and Head of Acquisitions of a St. Petersburg-based real estate investment company, where she has led property acquisitions and deal structuring across the Greater Tampa Bay area since 2020. Her work centers on sourcing and structuring off-market property opportunities and guiding homeowners through fast, as-is sales.",
 };
 
 type BlogAuthorBioProps = {

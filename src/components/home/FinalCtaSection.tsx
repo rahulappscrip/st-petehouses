@@ -18,7 +18,7 @@ export function FinalCtaSection({
   eyebrow = "Ready to sell?",
   title = (
     <>
-      Get your <em>no-obligation</em> St Petersburg cash offer today.
+      Get your <em>no-obligation</em> offer today.
     </>
   ),
   description = "Call us or fill out our form. Tell us about your property — address, condition, and timeline. Receive your cash offer, usually within 24 hours. Choose your closing date. No pressure. No obligation. Just a fair cash offer for your St Pete home.",

@@ -1,3 +1,73 @@
+/* ============================================================
+   Market section — factors list with image
+   ============================================================ */
+.market-grid{ display: grid; gap: clamp(24px, 3vw, 40px); grid-template-columns: 1fr; align-items: start; }
+@media (min-width: 960px){ .market-grid{ grid-template-columns: 1fr 1fr; } }
+.factor-list{ display: flex; flex-direction: column; }
+.factor{
+  display: grid; grid-template-columns: auto 1fr; column-gap: 22px;
+  align-items: baseline;
+  padding: 22px 0;
+  border-top: 1px solid var(--line);
+}
+.factor .pre{
+  font-family: var(--mono); font-size: 16px; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--sun-deep);
+  white-space: nowrap;
+}
+.factor h3{ font-size: var(--h3-size); }
+.factor p{ color: var(--ink-2); font-size: 16px; margin-top: 6px; }
+
+/* Striped placeholder block */
+.ph{
+  background:
+    repeating-linear-gradient(135deg,
+      color-mix(in oklab, var(--ink) 6%, var(--sand)),
+      color-mix(in oklab, var(--ink) 6%, var(--sand)) 8px,
+      color-mix(in oklab, var(--ink) 10%, var(--sand)) 8px,
+      color-mix(in oklab, var(--ink) 10%, var(--sand)) 16px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  position: relative; overflow: hidden;
+  min-height: 200px;
+  color: var(--ink-2);
+}
+.ph::after{
+  content: attr(data-label);
+  position: absolute; left: 14px; bottom: 12px;
+  font-family: var(--mono); font-size: 16px; letter-spacing: .08em;
+  color: var(--ink); background: var(--paper);
+  padding: 6px 10px; border-radius: 6px; border: 1px solid var(--line);
+  max-width: calc(100% - 28px);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.ph[data-tone="teal"]{
+  background:
+    repeating-linear-gradient(135deg,
+      color-mix(in oklab, var(--teal) 8%, var(--sand)),
+      color-mix(in oklab, var(--teal) 8%, var(--sand)) 8px,
+      color-mix(in oklab, var(--teal) 16%, var(--sand)) 8px,
+      color-mix(in oklab, var(--teal) 16%, var(--sand)) 16px);
+}
+.ph[data-tone="sun"]{
+  background:
+    repeating-linear-gradient(135deg,
+      color-mix(in oklab, var(--sun) 8%, var(--sand)),
+      color-mix(in oklab, var(--sun) 8%, var(--sand)) 8px,
+      color-mix(in oklab, var(--sun) 16%, var(--sand)) 8px,
+      color-mix(in oklab, var(--sun) 16%, var(--sand)) 16px);
+}
+.ph[data-tone="ink"]{
+  background:
+    repeating-linear-gradient(135deg,
+      color-mix(in oklab, var(--ink) 80%, var(--paper)),
+      color-mix(in oklab, var(--ink) 80%, var(--paper)) 8px,
+      color-mix(in oklab, var(--ink) 92%, var(--paper)) 8px,
+      color-mix(in oklab, var(--ink) 92%, var(--paper)) 16px);
+  color: var(--paper);
+}
+.ph[data-tone="ink"]::after{ background: var(--ink); color: var(--paper); border-color: rgba(255,255,255,.1); }
+
 /* Market section — stats + local neighborhoods (missing-sections placement 2) */
 
 .market-section.section-alt {

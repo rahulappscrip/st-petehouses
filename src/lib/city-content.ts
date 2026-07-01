@@ -470,7 +470,7 @@ const ST_PETERSBURG: CityFullContent = {
       },
       {
         q: "Will I work with a real person?",
-        a: "Yes — you'll work directly with John Gardepe or one of our small in-house team. You'll have a direct phone number and won't get bounced around call centers or virtual assistants.",
+        a: "Yes — you'll work directly with Benette Andrew or one of our small in-house team. You'll have a direct phone number and won't get bounced around call centers or virtual assistants.",
       },
       {
         q: "Do you use a real estate agent service?",
@@ -1501,7 +1501,7 @@ const PINELLAS_PARK: CityFullContent = {
       },
       {
         q: "Will I work with a real person?",
-        a: "Yes. You'll work directly with John Gardepe and our local Tampa Bay team — not a call center. We're your neighbors, not a national corporation.",
+        a: "Yes. You'll work directly with Benette Andrew and our local Tampa Bay team — not a call center. We're your neighbors, not a national corporation.",
       },
       {
         q: "Is the offer truly no-obligation?",

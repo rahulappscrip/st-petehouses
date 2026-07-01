@@ -74,7 +74,7 @@ export const BLOG_PAGE = {
     "Everything St. Petersburg homeowners need to know about selling their house in any situation — foreclosure, inherited property, insurance problems, flood damage, HOA issues and more. Written by We Buy St Pete Houses.",
   eyebrow: "Blog · Seller resources",
   lede:
-    "Everything St. Petersburg homeowners need to know about selling their house — in any situation. Foreclosure, divorce, inherited property, insurance problems, flood damage, code violations, and more. Straightforward guides written by John Gardepe and the We Buy St Pete Houses team. No fluff, no fear-bait.",
+    "Everything St. Petersburg homeowners need to know about selling their house — in any situation. Foreclosure, divorce, inherited property, insurance problems, flood damage, code violations, and more. Straightforward guides written by Benette Andrew and the We Buy St Pete Houses team. No fluff, no fear-bait.",
 } as const;
 
 export const DEFAULT_BLOG_NEXT_CTA: BlogNextCtaContent = {

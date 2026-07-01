@@ -101,7 +101,7 @@ Depending on your situation, we may be able to provide a cash advance against yo
 - **Distressed property** — Major repairs needed. Skip the contractor — we buy as-is. (https://webuystpetehouses.com/situations/sell-as-is)
 - **Relocation** — Move on your schedule without waiting for a buyer to come along. (https://webuystpetehouses.com/how-it-works)
 
-## Hi, I'm John Gardepe.
+## Hi, I'm Benette Andrew.
 
 *Meet the owner*
 
@@ -419,7 +419,7 @@ We emphasize a direct, fast cash path with as-is purchases and clear timelines f
 - **Primary keyword:** how cash home buying works
 - **Company:** We Buy St Pete Houses · (727) 477-8998 · SellFast@WeBuyStPeteHouses.com
 
-A clear, step-by-step guide to selling your home for cash in St Petersburg and Tampa Bay — inquiry, assessment, offer, closing. Written by John Gardepe, Owner, We Buy St Pete Houses.
+A clear, step-by-step guide to selling your home for cash in St Petersburg and Tampa Bay — inquiry, assessment, offer, closing. Written by Benette Andrew, Owner, We Buy St Pete Houses.
 
 ## The 4-step process in detail
 
@@ -970,7 +970,7 @@ Nothing — there's no appraisal in a cash sale. With a traditional financed buy
 
 # About Us | We Buy St Pete Houses — Local Cash Home Buyers Since 2014
 
-> Meet John Gardepe and the team behind We Buy St Pete Houses. A local St. Petersburg company with 500+ homes purchased and a mission to treat every seller like family.
+> Meet Benette Andrew and the team behind We Buy St Pete Houses. A local St. Petersburg company with 500+ homes purchased and a mission to treat every seller like family.
 
 - **Canonical URL:** https://webuystpetehouses.com/about
 - **Primary keyword:** about We Buy St Pete Houses
@@ -980,7 +980,7 @@ Nothing — there's no appraisal in a cash sale. With a traditional financed buy
 
 *We Buy St Pete Houses*
 
-A local St. Petersburg company started in 2014 by John Gardepe — helping homeowners sell fast, fairly, and without the stress of the traditional listing process.
+A local St. Petersburg company started in 2014 by Benette Andrew — helping homeowners sell fast, fairly, and without the stress of the traditional listing process.
 
 ## By the numbers
 
@@ -993,7 +993,7 @@ A local St. Petersburg company started in 2014 by John Gardepe — helping homeo
 
 *We Buy St Pete Houses*
 
-A local St. Petersburg company started in 2014 by John Gardepe — helping homeowners sell fast, fairly, and without the stress of the traditional listing process.
+A local St. Petersburg company started in 2014 by Benette Andrew — helping homeowners sell fast, fairly, and without the stress of the traditional listing process.
 
 **Breadcrumb:** Our Company
 
@@ -1013,7 +1013,7 @@ Accredited Business
 
 **5.0 ★** — Google Reviews (120+)
 
-### Hi — I'm John Gardepe, and this is why I started this company.
+### Hi — I'm Benette Andrew, and this is why I started this company.
 
 *Meet the Founder*
 
@@ -1025,7 +1025,7 @@ Accredited Business
 
 > "We treat every homeowner the way we'd want our own family to be treated. You'll get a fair offer and a team that's with you every step of the way."
 
-**Quote cite:** — John Gardepe, Founder
+**Quote cite:** — Benette Andrew, Founder
 
 **Linked in:** https://www.linkedin.com/in/john-gardepe-b68070160/
 
@@ -1083,7 +1083,7 @@ Unedited, unscripted reviews from verified St. Petersburg sellers — collected 
 
 **Q: Are you a local company or a national franchise?**
 
-We're locally owned and operated — not a franchise, not a national iBuyer, not a call center. We Buy St Pete Houses was founded by John Gardepe in St. Petersburg in 2014 and is still independently run today. When you call us, you're talking to our local team — people who live and work in this community.
+We're locally owned and operated — not a franchise, not a national iBuyer, not a call center. We Buy St Pete Houses was founded by Benette Andrew in St. Petersburg in 2014 and is still independently run today. When you call us, you're talking to our local team — people who live and work in this community.
 
 **Q: How do I know your cash offers are fair?**
 
@@ -1144,7 +1144,7 @@ We buy houses in any condition across St. Petersburg and Tampa Bay. One fair off
 
 > "We treat every homeowner the way we'd want our own family to be treated. You'll get a fair offer and a team that's with you every step of the way."
 
-**Name:** John Gardepe
+**Name:** Benette Andrew
 
 #### Get your fair cash offer today.
 
@@ -1230,7 +1230,7 @@ Not at all. We buy in any condition, so you don't need to clean, repair, or stag
 
 **Q: Who will I be talking to?**
 
-A local member of our St Pete team. John Gardepe is involved in every transaction, and the people you speak with know the Pinellas County market and the specific situations that bring most sellers to us — not a national call center.
+A local member of our St Pete team. Benette Andrew is involved in every transaction, and the people you speak with know the Pinellas County market and the specific situations that bring most sellers to us — not a national call center.
 
 **Q: Will my information be kept confidential?**
 
@@ -1596,7 +1596,7 @@ Start by submitting a simple form or calling us at (727) 477-8998 for a no-oblig
 - **Primary keyword:** St Petersburg home selling blog
 - **Company:** We Buy St Pete Houses · (727) 477-8998 · SellFast@WeBuyStPeteHouses.com
 
-Everything St. Petersburg homeowners need to know about selling their house — in any situation. Foreclosure, divorce, inherited property, insurance problems, flood damage, code violations, and more. Straightforward guides written by John Gardepe and the We Buy St Pete Houses team. No fluff, no fear-bait.
+Everything St. Petersburg homeowners need to know about selling their house — in any situation. Foreclosure, divorce, inherited property, insurance problems, flood damage, code violations, and more. Straightforward guides written by Benette Andrew and the We Buy St Pete Houses team. No fluff, no fear-bait.
 
 ## Articles
 
@@ -1636,7 +1636,7 @@ Everything St. Petersburg homeowners need to know about selling their house — 
 - **Primary keyword:** Florida law
 - **Company:** We Buy St Pete Houses · (727) 477-8998 · SellFast@WeBuyStPeteHouses.com
 
-*Florida law · May 30, 2026 · 8 min read · By John Gardepe, Co-Founder & Head of Acquisitions*
+*Florida law · May 30, 2026 · 8 min read · By Benette Andrew, Co-Founder & Head of Acquisitions*
 
 **Tags:** Florida law, St. Petersburg, Airbnb & STR
 
@@ -1804,7 +1804,7 @@ For some owners, staying in the STR game — with proper compliance — is absol
 - **Primary keyword:** Cash sale process
 - **Company:** We Buy St Pete Houses · (727) 477-8998 · SellFast@WeBuyStPeteHouses.com
 
-*Cash sale process · May 18, 2026 · 6 min read · By John Gardepe, Co-Founder & Head of Acquisitions*
+*Cash sale process · May 18, 2026 · 6 min read · By Benette Andrew, Co-Founder & Head of Acquisitions*
 
 **Tags:** Cash sale process, As-is
 
@@ -1825,7 +1825,7 @@ What an as-is inspection includes, what triggers a re-trade, and how to read a f
 - **Primary keyword:** Market insights
 - **Company:** We Buy St Pete Houses · (727) 477-8998 · SellFast@WeBuyStPeteHouses.com
 
-*Market insights · May 12, 2026 · 7 min read · By John Gardepe, Co-Founder & Head of Acquisitions*
+*Market insights · May 12, 2026 · 7 min read · By Benette Andrew, Co-Founder & Head of Acquisitions*
 
 **Tags:** Market insights, St Petersburg
 
@@ -1846,11 +1846,11 @@ A look at Historic Kenwood, Old Northeast and Disston Heights — and where sell
 - **Primary keyword:** Inherited & Probate
 - **Company:** We Buy St Pete Houses · (727) 477-8998 · SellFast@WeBuyStPeteHouses.com
 
-*Tough situations · May 27, 2026 · 10 min read · By John Gardepe, Co-Founder & Head of Acquisitions*
+*Tough situations · May 27, 2026 · 10 min read · By Benette Andrew, Co-Founder & Head of Acquisitions*
 
 **Tags:** Inherited & Probate, Florida, Pricing guide
 
-A practical, Florida-specific framework for heirs — probate timing, the federal stepped-up basis, honest local comps, and choosing between a listing or a cash sale. From John Gardepe, a local St. Petersburg buyer who's helped families through this many times.
+A practical, Florida-specific framework for heirs — probate timing, the federal stepped-up basis, honest local comps, and choosing between a listing or a cash sale. From Benette Andrew, a local St. Petersburg buyer who's helped families through this many times.
 
 **In this article:** Florida pricing framework · Probate timing & price · Florida-specific value factors · 5-step pricing checklist · Common pricing mistakes · Cash offers & fast sales · Tax basics for Florida heirs · Using comps & probate data · Adapting national advice · FAQ
 
@@ -1997,7 +1997,7 @@ Thank you for working through what can be a tough topic. If you're dealing with 
 - **Primary keyword:** Market insights
 - **Company:** We Buy St Pete Houses · (727) 477-8998 · SellFast@WeBuyStPeteHouses.com
 
-*Market insights · May 21, 2026 · 8 min read · By John Gardepe, Co-Founder & Head of Acquisitions*
+*Market insights · May 21, 2026 · 8 min read · By Benette Andrew, Co-Founder & Head of Acquisitions*
 
 **Tags:** Market insights, Insurance, St Petersburg
 
@@ -2018,7 +2018,7 @@ Carriers pulling out of Florida, premiums tripling, and buyers who can't get cov
 - **Primary keyword:** Tough situations
 - **Company:** We Buy St Pete Houses · (727) 477-8998 · SellFast@WeBuyStPeteHouses.com
 
-*Tough situations · May 5, 2026 · 7 min read · By John Gardepe, Co-Founder & Head of Acquisitions*
+*Tough situations · May 5, 2026 · 7 min read · By Benette Andrew, Co-Founder & Head of Acquisitions*
 
 **Tags:** Tough situations, Waterfront, Insurance
 
@@ -2039,7 +2039,7 @@ When your waterfront property becomes uninsurable — dropped by your carrier, f
 - **Primary keyword:** Tough situations
 - **Company:** We Buy St Pete Houses · (727) 477-8998 · SellFast@WeBuyStPeteHouses.com
 
-*Tough situations · Apr 18, 2026 · 7 min read · By John Gardepe, Co-Founder & Head of Acquisitions*
+*Tough situations · Apr 18, 2026 · 7 min read · By Benette Andrew, Co-Founder & Head of Acquisitions*
 
 **Tags:** Tough situations, Inherited, HOA
 
@@ -2060,7 +2060,7 @@ When you inherit a St. Petersburg condo and discover a large HOA special assessm
 - **Primary keyword:** Florida law
 - **Company:** We Buy St Pete Houses · (727) 477-8998 · SellFast@WeBuyStPeteHouses.com
 
-*Florida law · Apr 9, 2026 · 7 min read · By John Gardepe, Co-Founder & Head of Acquisitions*
+*Florida law · Apr 9, 2026 · 7 min read · By Benette Andrew, Co-Founder & Head of Acquisitions*
 
 **Tags:** Florida law, Disclosure
 
@@ -2081,7 +2081,7 @@ The 2024 statute update in plain English, with examples of clean vs. risky discl
 - **Primary keyword:** Tough situations
 - **Company:** We Buy St Pete Houses · (727) 477-8998 · SellFast@WeBuyStPeteHouses.com
 
-*Tough situations · Apr 28, 2026 · 8 min read · By John Gardepe, Co-Founder & Head of Acquisitions*
+*Tough situations · Apr 28, 2026 · 8 min read · By Benette Andrew, Co-Founder & Head of Acquisitions*
 
 **Tags:** Tough situations, Tenants
 
@@ -2102,7 +2102,7 @@ When to keep the lease, when to negotiate cash-for-keys, and how a cash buyer ta
 - **Primary keyword:** Tough situations
 - **Company:** We Buy St Pete Houses · (727) 477-8998 · SellFast@WeBuyStPeteHouses.com
 
-*Tough situations · Apr 3, 2026 · 8 min read · By John Gardepe, Co-Founder & Head of Acquisitions*
+*Tough situations · Apr 3, 2026 · 8 min read · By Benette Andrew, Co-Founder & Head of Acquisitions*
 
 **Tags:** Tough situations, Foreclosure, Pinellas County
 
@@ -2123,7 +2123,7 @@ From the first missed payment to the foreclosure sale — what to do when, and h
 - **Primary keyword:** Market insights
 - **Company:** We Buy St Pete Houses · (727) 477-8998 · SellFast@WeBuyStPeteHouses.com
 
-*Market insights · Mar 27, 2026 · 6 min read · By John Gardepe, Co-Founder & Head of Acquisitions*
+*Market insights · Mar 27, 2026 · 6 min read · By Benette Andrew, Co-Founder & Head of Acquisitions*
 
 **Tags:** Market insights, Tampa Bay
 
@@ -2346,7 +2346,7 @@ As fast as 7 days in straightforward cases. Most closings happen within 2–3 we
 
 **Q: Will I work with a real person?**
 
-Yes — you'll work directly with John Gardepe or one of our small in-house team. You'll have a direct phone number and won't get bounced around call centers or virtual assistants.
+Yes — you'll work directly with Benette Andrew or one of our small in-house team. You'll have a direct phone number and won't get bounced around call centers or virtual assistants.
 
 **Q: Do you use a real estate agent service?**
 
@@ -3179,7 +3179,7 @@ We can close in as little as 7 days, or on whatever timeline works best for you 
 
 **Q: Will I work with a real person?**
 
-Yes. You'll work directly with John Gardepe and our local Tampa Bay team — not a call center. We're your neighbors, not a national corporation.
+Yes. You'll work directly with Benette Andrew and our local Tampa Bay team — not a call center. We're your neighbors, not a national corporation.
 
 **Q: Is the offer truly no-obligation?**
 
@@ -3414,7 +3414,7 @@ Federal and state foreclosure-prevention resources include HUD-certified counsel
 
 **Q: Will I work with a real person?**
 
-Yes — always. John Gardepe or a member of our local St Pete team will be your point of contact throughout the entire process. No call centers, no bots, no runarounds.
+Yes — always. Benette Andrew or a member of our local St Pete team will be your point of contact throughout the entire process. No call centers, no bots, no runarounds.
 
 ## We'll call you right back.
 
@@ -5472,7 +5472,7 @@ A cash home buyer is someone who pays cash for your home — enabling faster, no
 
 - At We Buy St Pete Houses, we evaluate your property based on its current condition, local market data, and our straightforward process. You don't need to make repairs, stage the home, or wait months for a buyer. We handle the entire process so you can move forward without the stress.
 - We've purchased over 500 homes across St. Petersburg and the greater Tampa Bay area — inherited properties, fire-damaged homes, vacant houses, and everything in between. Every offer is written, every cost is explained upfront, and there are no last-minute surprises at the closing table.
-- When you work with us, you're dealing directly with a local buyer — not a national call center or an algorithm. John Gardepe and the We Buy St Pete Houses team are based in Pinellas County and have been buying homes here since 2014. Call us, fill out the form, or stop by — we respond to every inquiry personally.
+- When you work with us, you're dealing directly with a local buyer — not a national call center or an algorithm. Benette Andrew and the We Buy St Pete Houses team are based in Pinellas County and have been buying homes here since 2014. Call us, fill out the form, or stop by — we respond to every inquiry personally.
 
 ### Why sellers choose cash
 

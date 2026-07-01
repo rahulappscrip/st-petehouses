@@ -1,0 +1,113 @@
+/* ============================================================
+   Process steps
+   ============================================================ */
+.steps{ display: grid; gap: 18px; grid-template-columns: 1fr; }
+@media (min-width: 640px){ .steps{ grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1080px){ .steps{ grid-template-columns: repeat(4, 1fr); } }
+
+/* Court process / four-step blocks — 2×2, not 1×4 */
+.steps.steps--4 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .steps.steps--4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.steps.steps--4 .step {
+  min-height: 0;
+}
+
+.steps.steps--3 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 720px) {
+  .steps.steps--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.steps.steps--3 .step {
+  min-height: 0;
+}
+
+.steps.steps--5 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .steps.steps--5 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1080px) {
+  .steps.steps--5 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.steps.steps--5 .step {
+  min-height: 0;
+}
+
+.steps.steps--6 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .steps.steps--6 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1080px) {
+  .steps.steps--6 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.steps.steps--6 .step {
+  min-height: 0;
+}
+
+.process-note {
+  margin-top: clamp(20px, 2.5vw, 28px);
+  padding: clamp(18px, 2vw, 22px) clamp(20px, 2.5vw, 28px);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink-2);
+  max-width: 72ch;
+}
+
+.process-note strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.step{
+  background: var(--paper); border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  padding: 26px;
+  display: flex; flex-direction: column; gap: 12px;
+  min-height: 280px;
+  position: relative;
+  transition: transform .25s ease, border-color .2s ease, box-shadow .25s ease;
+}
+.step:hover{ transform: translateY(-2px); border-color: color-mix(in oklab, var(--ink) 18%, var(--line)); box-shadow: var(--shadow-2); }
+.step-num{ font-style: italic; font-size: 56px; font-weight: 800; line-height: 1; color: var(--sun); }
+.step h3{ font-size: 22px; text-transform: capitalize; }
+.step p{ color: var(--ink-2); font-size: 18px; line-height: 26px; flex: 1; }
+.step .step-meta{
+  padding-top: 16px; border-top: 1px dashed var(--line);
+  display: flex; align-items: center; justify-content: space-between;
+  font-family: var(--mono); font-size: 16px; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.step .step-meta b{ color: var(--ink); font-weight: 400; }
