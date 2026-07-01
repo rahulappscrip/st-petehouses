@@ -760,7 +760,7 @@ const LARGO: CityFullContent = {
   ],
   heroEyebrow: "Largo, Florida · Cash Home Buyers",
   heroSubheadline:
-    "A small local team of buyers — buying homes across Pinellas County in Largo. No repairs, no agents, no fees, no surprises.",
+    "A small local team of buyers — buying homes in Largo and the greater Pinellas County area. No repairs, no agents, no fees, no surprises.",
   formTitle: "Tell us about your home.",
   formIntro: "Get your fair cash offer — no obligation, no hassle.",
   authorRole: "Local Largo Home Buyer · Pinellas County, FL",
@@ -779,17 +779,17 @@ const LARGO: CityFullContent = {
       {
         num: "02",
         title: "We visit, in person",
-        body: "A local team member visits your home at a time that works for you — no strangers wandering through.",
+        body: "A local team member will set up a time to visit your home either in person or virtually — no strangers wandering through.",
       },
       {
         num: "03",
         title: "Receive a written offer",
-        body: "We present a fair, no-obligation cash offer based on current Largo market data and your home's condition.",
+        body: "We take a look at the Largo market, factor in the home’s condition, and put together a fair cash offer with no pressure or obligation.",
       },
       {
         num: "04",
         title: "Close on your timeline",
-        body: "Accept and we close in as little as 7 days — or take the time you need. You pick the closing date.",
+        body: "If the offer works for you, we can close in as little as 7 days. Or, if you need more time, that is fine too. You choose the closing date that fits your schedule.",
       },
     ],
     primaryCtaLabel: "Start with a cash offer",
@@ -811,12 +811,12 @@ const LARGO: CityFullContent = {
       {
         icon: "🏚️",
         title: "Foreclosure / Pre-foreclosure",
-        body: "Facing foreclosure? We can move fast to help you avoid it with a cash sale before the deadline.",
+        body: "Facing foreclosure? We can move fast to help you avoid it and the damage to your credit.",
       },
       {
         icon: "⚖️",
         title: "Divorce or Separation",
-        body: "Selling a shared home quickly helps both parties move forward. We simplify the process.",
+        body: "Selling a shared home quickly helps both parties move forward. We make the process simple and stress-free",
       },
       {
         icon: "📋",
@@ -896,7 +896,8 @@ const LARGO: CityFullContent = {
     items: [
       {
         title: "No commissions",
-        body: "You don't pay us an offer — or anyone else. We never charge real estate commissions on any offer.",
+        body: "Our offers are free to get, and there are no real estate commissions to worry about. We keep the process simple and hassle-free from the start.",
+
       },
       {
         title: "No repairs",
