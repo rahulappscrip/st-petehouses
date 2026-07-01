@@ -4,7 +4,7 @@ import { getSiteOrigin } from "@/lib/site-url";
 import { discoverAppRoutes } from "@/lib/sitemap/discover-app-routes";
 import { resolveSitemapConfig } from "@/lib/sitemap/route-config";
 import { getLastModified } from "@/lib/sitemap-last-modified";
-import { SITUATION_SLUGS } from "@/lib/situation-content";
+import { PUBLISHED_SITUATION_SLUGS } from "@/lib/situation-content";
 
 const BASE_URL = getSiteOrigin();
 
@@ -43,7 +43,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   const situationLastModified = getLastModified(...SITUATION_PAGE_SOURCES);
-  const situationPages: MetadataRoute.Sitemap = SITUATION_SLUGS.map((slug) => ({
+  const situationPages: MetadataRoute.Sitemap = PUBLISHED_SITUATION_SLUGS.map((slug) => ({
     url: `${BASE_URL}/situations/${slug}`,
     lastModified: situationLastModified,
     changeFrequency: "monthly",
