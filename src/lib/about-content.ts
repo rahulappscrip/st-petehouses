@@ -45,7 +45,7 @@ export const ABOUT_PAGE = {
     titleLead: "Hi — I'm Benette Andrew, ",
     titleEm: "and this is why I started this company.",
     paragraphs: [
-      "I grew up watching people I knew get stuck. Stuck in a house they couldn't sell because it needed work they couldn't afford. Stuck waiting months for a traditional sale to close while a life event — a divorce, a death, a job loss — demanded they move faster. Stuck paying an agent 6% of a home's value for a process that felt like it was designed to serve the agent more than the seller.",
+      "I decided to start this business after watching people I knew get stuck. Stuck in a house they couldn't sell because it needed work they couldn't afford. Stuck waiting months for a traditional sale to close while a life event — a divorce, a death, a job loss — demanded they move faster. Stuck paying an agent 6% of a home's value for a process that felt like it was designed to serve the agent more than the seller.",
       "I started We Buy St Pete Houses in 2014 because I believed there was a better way. Not a flashier way. Not a national brand way. Just a local, honest, human way — where the seller is treated like a person navigating something hard, not a transaction to be optimized.",
       "Since then, we've purchased more than 500 homes across St. Petersburg, Pinellas County, and the Tampa Bay area. Every one of those was someone's difficult situation that we helped resolve. Foreclosures stopped before the auction date. Inherited homes settled without months of court proceedings. Divorces closed quickly so both parties could finally move on. Properties with fire damage, mold, structural problems — homes that no agent would touch — purchased fairly, quickly, and without any burden placed back on the seller.",
       "I'm still involved in every transaction. When you call us, you're talking to a local team — people who know these neighborhoods, know the Pinellas County market, and genuinely care about giving you a fair outcome. We're not a franchise. We're not a call center. We're not going to pass you off to someone in another state who's never been to St. Pete.",
@@ -61,7 +61,7 @@ export const ABOUT_PAGE = {
   mission: {
     titleLead: "What we believe makes ",
     titleEm: "a fair home sale.",
-    body: "We've built every part of how we operate around a single question: what would we want if we were the ones selling? The answer shapes every offer we make, every conversation we have, and every closing we facilitate.",
+    body: "We've built all our processes around a single question: what would we want if we were the ones selling? The answer shapes every offer we make, every conversation we have, and every closing we facilitate.",
     values: [
       {
         title: "Transparency over spin",
