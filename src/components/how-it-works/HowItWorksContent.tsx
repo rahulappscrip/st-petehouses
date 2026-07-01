@@ -109,10 +109,7 @@ export function HowItWorksContent() {
             <section id="what-is-a-cash-buyer">
               <h2>What is a cash home buyer?</h2>
               <p className="intro">
-                A cash home buyer is a real estate investor who purchases property with cash and
-                typically closes quickly without requiring repairs. In my experience, cash buyers
-                like us focus on fast, as-is purchases to streamline the process for sellers.
-              </p>
+                A cash home buyer is a real estate investor who buy houses with cash and typically closes quickly without requiring repairs. In my experience, cash buyers like us focus on fast, as-is purchases to streamline the process for sellers.</p>
               <p>Cash buyers differ from traditional buyers in several key ways:</p>
               <ul>
                 <li>
@@ -247,9 +244,7 @@ export function HowItWorksContent() {
             <section id="are-cash-buyers-legit">
               <h2>Are cash home buyers legit?</h2>
               <p>
-                Many homeowners wonder if cash buyers are legitimate or if the process is too good
-                to be true. Legitimate cash buyers are investors who close with cash — we&apos;re
-                real businesses operating transparently.
+              It is normal to wonder if cash buyers are legit or if the whole thing sounds a little too easy. The good ones are real investors and real businesses that buy homes with cash, explain the terms clearly, and keep the process straightforward from start to finish.
               </p>
               <p>
                 Common myths include the belief that all cash offers are lowball scams or that buyers
@@ -258,10 +253,7 @@ export function HowItWorksContent() {
                 because we don&apos;t rely on financing.
               </p>
               <p>
-                Cash offers compare favorably to traditional offers in terms of speed and certainty.
-                A traditional buyer may offer a higher price, but they often require repairs,
-                inspections, appraisals, and financing — any of which can delay or cancel the sale. A
-                cash offer is firm and fast.
+              Cash offers are usually easier to count on because there are fewer things that can slow the sale down. With a regular buyer, there may be repairs, inspections, appraisals, financing, and a lot of back-and-forth before anything is final. A cash offer keeps things simpler, faster, and more certain.
               </p>
               <p>
                 <strong>How to verify a cash buyer&apos;s credibility:</strong>
