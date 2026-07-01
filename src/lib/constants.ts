@@ -1482,9 +1482,9 @@ export const REVIEWS_TRUST_SIGNALS = [
 ] as const;
 
 export const REVIEWS_PROCESS_STEPS = [
-  { num: "01", title: "Initial inquiry", body: "Contact us by phone or online form and share basic details about your property." },
+  { num: "01", title: "Get in touch", body: "Contact us by phone or submit our online form and share basic details about your property." },
   { num: "02", title: "Property review", body: "We evaluate condition and local market factors — no formal inspection required for our offer." },
-  { num: "03", title: "Offer presentation", body: "We present a no-obligation cash offer and clearly explain how we arrived at the price." },
+  { num: "03", title: "Offer presentation", body: "We give you a no-obligation cash offer and clearly explain how we put that offer together." },
   { num: "04", title: "Closing", body: "You pick the closing date. We close in as little as 7 days, or wait until you're ready." },
 ] as const;
 
