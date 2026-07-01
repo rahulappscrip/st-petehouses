@@ -991,7 +991,7 @@ const DUNEDIN: CityFullContent = {
   ],
   heroEyebrow: "Dunedin, Florida · Cash Home Buyers",
   heroSubheadline:
-    "A small local team of buyers — purchasing homes across Pinellas County in Dunedin. No repairs, no agents, no fees, no surprises. Close on your timeline, often in about a week.",
+    "We are a small local team buying homes in Dunedin and throughout Pinellas County. You do not have to make repairs, deal with agents, pay fees, or worry about surprises. We keep things simple and can often close in about a week.",
   formTitle: "Tell us about your home.",
   formIntro: "Get your fair cash offer — no obligation, no hassle.",
   authorRole: "Local Dunedin Home Buyer · Pinellas County, FL",
@@ -1000,22 +1000,22 @@ const DUNEDIN: CityFullContent = {
     titleLead: "How selling to a ",
     titleEm: "cash buyer",
     titleTail: " works in Dunedin.",
-    lede: "You provide basic info about your property, we present a cash offer, and you pick a closing date. It's that simple — no showings, no contingencies, no surprises.",
+    lede: "You send over a few basic details about the property, we put together a cash offer, and you choose the closing date that works for you. Simple as that — no showings, no financing delays, and no surprises.",
     steps: [
       {
         num: "01",
         title: "Submit Your Property Details",
-        body: "Share your Dunedin home's address, condition, and any relevant details. This takes just a few minutes and starts the process immediately.",
+        body: "Share your property details, such as its condition or any structural issues, and any other details you think we should know. It only takes a few minutes and gets the process started.",
       },
       {
         num: "02",
         title: "Receive a No-Obligation Cash Offer",
-        body: "We review your property and present a fair, written cash offer. No pressure to accept — you decide what's best for you and your timeline.",
+        body: "We will review the property and put together a fair, written cash offer. No pressure to accept — you can look it over and decide what works best for you.",
       },
       {
         num: "03",
         title: "Close on Your Timeline",
-        body: "Once you accept, we schedule a closing date that fits your needs. You receive your cash with no surprise fees, no agent cuts, no delays.",
+        body: "If the offer makes sense, we will set a closing date that fits your schedule. You get paid without surprise fees, agent commissions, or unnecessary delays.",
       },
     ],
     primaryCtaLabel: "Start with a cash offer",
@@ -1042,7 +1042,7 @@ const DUNEDIN: CityFullContent = {
     titleLead: "Situations we help Dunedin homeowners ",
     titleEm: "solve.",
     titleTail: "",
-    lede: "We buy in many tough-sell situations to simplify the process. Whether you're dealing with urgent circumstances or simply want a fast, hassle-free sale, we can help.",
+    lede: "We buy houses in all kinds of situations and help sellers move on without making the process harder than it needs to be. Whether you are dealing with something urgent or just want a fast, simple sale, we can help make it easier.",
     items: [
       {
         icon: "🏚️",
