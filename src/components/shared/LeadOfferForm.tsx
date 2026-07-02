@@ -3,7 +3,8 @@
 import type { FocusEvent, FormEvent, ReactNode } from "react";
 import { useCallback, useState } from "react";
 import { AddressAutocompleteInput } from "@/components/shared/AddressAutocompleteInput";
-import { UsPhoneInput } from "@/components/shared/UsPhoneInput";
+import { InternationalPhoneInput } from "@/components/shared/InternationalPhoneInput";
+import { useDefaultPhoneCountry } from "@/hooks/use-default-phone-country";
 import { Arr } from "@/components/ui/Arr";
 import { FormToast } from "@/components/ui/FormToast";
 import { SiteImg } from "@/components/ui/SiteImage";
@@ -19,6 +20,7 @@ import {
   getLeadFormErrorMessage,
   validateLeadFormFields,
 } from "@/lib/lead-form-validation";
+import { DEFAULT_PHONE_COUNTRY } from "@/lib/phone-countries";
 import type { SellReasonValue } from "@/lib/situation-sell-reason";
 
 type LeadOfferFormProps = {
@@ -78,6 +80,8 @@ export function LeadOfferForm({
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [addressFieldKey, setAddressFieldKey] = useState(0);
   const [phone, setPhone] = useState("");
+  const [phoneCountryCode, setPhoneCountryCode] = useState(DEFAULT_PHONE_COUNTRY);
+  const defaultPhoneCountryCode = useDefaultPhoneCountry();
 
   const dismissToast = useCallback(() => setToastMessage(null), []);
 
@@ -122,6 +126,7 @@ export function LeadOfferForm({
       address: String(formData.get("address") ?? "").trim(),
       sellReason: String(formData.get("sellReason") ?? "").trim(),
       phone,
+      phoneCountryCode,
       email: String(formData.get("email") ?? "").trim(),
       sourcePage: window.location.pathname,
     };
@@ -153,6 +158,7 @@ export function LeadOfferForm({
 
       form.reset();
       setPhone("");
+      setPhoneCountryCode(defaultPhoneCountryCode);
       setAddressFieldKey((current) => current + 1);
       setSubmitState("idle");
       setToastMessage(SUCCESS_MESSAGE);
@@ -246,11 +252,14 @@ export function LeadOfferForm({
           <div className="row-2">
             <div className="field">
               <FieldLabel htmlFor="phone">Phone</FieldLabel>
-              <UsPhoneInput
+              <InternationalPhoneInput
                 id="phone"
                 name="phone"
                 value={phone}
+                countryCode={phoneCountryCode}
+                defaultCountryCode={defaultPhoneCountryCode}
                 onChange={setPhone}
+                onCountryChange={setPhoneCountryCode}
                 placeholder={SITE.phone}
                 disabled={isLoading}
               />

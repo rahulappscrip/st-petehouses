@@ -3,6 +3,7 @@ export type LeadFormInput = {
   address: string;
   sellReason: string;
   phone: string;
+  phoneCountryCode: string;
   email: string;
 };
 
