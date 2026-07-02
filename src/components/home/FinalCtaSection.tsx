@@ -18,7 +18,7 @@ export function FinalCtaSection({
   eyebrow = "Ready to sell?",
   title = (
     <>
-      Get your <em>no-obligation</em> St Petersburg cash offer today.
+      Get your <em>no-obligation</em> offer today.
     </>
   ),
   description = "Call us or fill out our form. Tell us about your property — address, condition, and timeline. Receive your cash offer, usually within 24 hours. Choose your closing date. No pressure. No obligation. Just a fair cash offer for your St Pete home.",
@@ -69,10 +69,10 @@ export function FinalCtaSection({
           <aside className="cta-side">
             <SiteImage
               src={ASSETS.johnCta}
-              alt={PERSON_IMAGES.johnCta.alt}
-              title={PERSON_IMAGES.johnCta.title}
-              width={480}
-              height={560}
+              alt={PERSON_IMAGES.johnPortrait.alt}
+              title={PERSON_IMAGES.johnPortrait.title}
+              width={894}
+              height={1302}
               sizes="(min-width: 880px) 33vw, 100vw"
               className="cta-side__img"
             />

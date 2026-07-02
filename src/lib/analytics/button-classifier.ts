@@ -106,6 +106,16 @@ export function getButtonText(element: HTMLElement): string {
   );
 }
 
+const NAV_CHROME_SELECTOR =
+  ".site-chrome, header, .site-header, .site-foot, footer, nav, .nav-links, .menu-item, .top-link, .foot-col, .brand, .topbar, .mobile-nav-panel";
+
+const HEADER_UI_BUTTON_SELECTOR =
+  "header, .site-header, [data-menu], .nav-burger, .mobile-nav-overlay, .mobile-nav-panel";
+
+function isBtnElement(element: HTMLElement): boolean {
+  return element.classList.contains("btn") || element.closest(".btn") !== null;
+}
+
 export function shouldSkipButtonClick(element: HTMLElement): boolean {
   if (element.closest(".lead-offer-form form") && element.getAttribute("type") === "submit") {
     return true;
@@ -113,6 +123,16 @@ export function shouldSkipButtonClick(element: HTMLElement): boolean {
 
   const href = getElementHref(element).toLowerCase();
   if (href.startsWith("tel:") || href.startsWith("mailto:")) {
+    return true;
+  }
+
+  // Header/footer/logo nav text links — tracked via page_view, not button_clicked
+  if (element.tagName === "A" && !isBtnElement(element) && element.closest(NAV_CHROME_SELECTOR)) {
+    return true;
+  }
+
+  // Dropdown toggles, burger menu, drawer chrome — not CTAs
+  if (element.tagName === "BUTTON" && !isBtnElement(element) && element.closest(HEADER_UI_BUTTON_SELECTOR)) {
     return true;
   }
 

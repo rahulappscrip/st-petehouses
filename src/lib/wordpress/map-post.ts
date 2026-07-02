@@ -27,7 +27,7 @@ const CATEGORY_LABELS: Record<BlogCategory, string> = {
 const IMAGE_TONES: ImageTone[] = ["sun", "teal", "ink", "leaf", "gold", "sand"];
 
 const DEFAULT_AUTHOR = {
-  name: "John Gardepe",
+  name: "Bennett Andrews",
   initials: "JG",
   role: "Co-Founder & Head of Acquisitions",
   bio: "John is the Co-Founder and Head of Acquisitions of a St. Petersburg-based real estate investment company, where he has led property acquisitions and deal structuring across the Greater Tampa Bay area since 2020. His work centers on sourcing and structuring off-market property opportunities and guiding homeowners through fast, as-is sales.",

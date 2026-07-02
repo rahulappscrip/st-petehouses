@@ -33,7 +33,7 @@ export function MarketSection({
   eyebrow = MARKET_SECTION.eyebrow,
   title = (
     <>
-      Understanding the St Petersburg <em>cash-offer market</em>.
+      Understanding the Local <em>cash-offer market</em>.
     </>
   ),
   lede = MARKET_SECTION.lede,

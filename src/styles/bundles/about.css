@@ -1,4 +1,6 @@
 /* About page */
+@import "../process-steps.css";
+@import "../final-cta.css";
 @import "../about.css";
 @import "../how-it-works.css";
 @import "../testimonials.css";

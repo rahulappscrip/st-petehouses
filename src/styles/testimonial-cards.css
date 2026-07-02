@@ -1,0 +1,27 @@
+/* ============================================================
+   Customer testimonials
+   ============================================================ */
+.test-grid{ display: grid; gap: 18px; grid-template-columns: 1fr; }
+@media (min-width: 720px){ .test-grid{ grid-template-columns: repeat(2, 1fr); } }
+.tcard{
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  padding: 28px;
+  display: flex; flex-direction: column; gap: 16px;
+  min-height: 240px;
+}
+.tcard .stars{ color: var(--sun); letter-spacing: 1px; }
+.tcard p.quote{ font-size: 22px; line-height: 1.25; color: var(--ink); }
+.tcard p.quote::before{ content: "“"; color: var(--sun); }
+.tcard p.quote::after{ content: "”"; color: var(--sun); }
+.tcard .who{
+  margin-top: auto; display: flex; align-items: center; gap: 12px;
+  font-size: 16px; color: var(--ink-soft);
+}
+.tcard .who b{ color: var(--ink); font-weight: 400; }
+.av{
+  width: 40px; height: 40px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), var(--sun));
+  display: grid; place-items: center; color: #fff; font-size: 16px; font-weight: 400;
+}

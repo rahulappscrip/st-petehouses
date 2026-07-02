@@ -1,4 +1,6 @@
 /* Contact page */
+@import "../process-steps.css";
+@import "../faq-accordion.css";
 @import "../contact-page.css";
 @import "../situation-page.css";
 @import "../situation-typography.css";

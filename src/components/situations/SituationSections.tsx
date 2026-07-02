@@ -1058,31 +1058,6 @@ export function SituationProsConsSection({
           title={<SectionTitle lead={data.titleLead} em={data.titleEm} tail={data.titleTail} />}
           lede={data.lede}
         />
-        <div className="situation-proscons__grid">
-          <Reveal className="situation-proscons-card situation-proscons-card--pro">
-            <span className="situation-proscons-card__lab">Pros of selling for cash</span>
-            <ul>
-              {data.advantages.map((item) => (
-                <li key={item.strong}>
-                  <strong>{item.strong}</strong> {item.text}
-                </li>
-              ))}
-            </ul>
-          </Reveal>
-          <Reveal className="situation-proscons-card situation-proscons-card--con" d={1}>
-            <span className="situation-proscons-card__lab situation-proscons-card__lab--amber">
-              Things to consider
-            </span>
-            <ul>
-              {data.tradeoffs.map((item) => (
-                <li key={item.strong}>
-                  <strong>{item.strong}</strong> {item.text}
-                </li>
-              ))}
-            </ul>
-            {data.footerNote ? <p className="situation-proscons-card__note">{data.footerNote}</p> : null}
-          </Reveal>
-        </div>
         {data.when ? (
           <Reveal className="situation-proscons-when" d={1}>
             <h3 className="situation-proscons-when__title">

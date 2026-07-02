@@ -138,7 +138,7 @@ function resolveAuthorName(post) {
   const { name, firstName, lastName } = post.author?.node ?? {};
   if (name?.trim()) return name.trim();
   const fromParts = [firstName, lastName].filter(Boolean).join(" ").trim();
-  return fromParts || "John Gardepe";
+  return fromParts || "Bennett Andrews";
 }
 
 function resolveAuthorRole(post) {

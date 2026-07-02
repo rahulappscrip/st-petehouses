@@ -35,7 +35,7 @@ export function ProcessSection({
       How our <em>offer process</em> works.
     </>
   ),
-  lede = "Our process is transparent and flexible. From your first conversation to a fair offer and closing on your timeline, we make selling straightforward—without the uncertainty of traditional home sales.",
+  lede = "Our process is transparent and flexible. From your first conversation to a fair offer and closing on your timeline, we make selling simple - without the uncertainty of traditional home sales.",
   steps = PROCESS_STEPS,
   secondaryCta = { label: "Learn more about how it works →", href: "/how-it-works" },
   showStepMeta = true,

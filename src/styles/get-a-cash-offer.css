@@ -9,14 +9,15 @@
   background: var(--paper);
   border-bottom: 1px solid var(--line);
   overflow: visible;
+  padding-bottom: 0;
 }
 
 .gaco-hero__inner {
   display: grid;
   grid-template-columns: 1fr;
-  gap: clamp(40px, 5vw, 72px);
-  align-items: start;
-  padding-block: clamp(48px, 6vw, 72px);
+  gap: clamp(32px, 4vw, 48px);
+  align-items: stretch;
+  padding-block: clamp(48px, 6vw, 72px) 0;
 }
 
 .gaco-hero__left,
@@ -25,16 +26,65 @@
   width: 100%;
 }
 
+.gaco-hero__left {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 3vw, 28px);
+}
+
+.gaco-hero__copy {
+  flex-shrink: 0;
+}
+
+.gaco-hero__portrait {
+  margin-top: auto;
+  flex: 1 1 auto;
+  min-height: 0;
+  margin-bottom: 0;
+  display: none;
+}
+
 @media (min-width: 900px) {
+  .gaco-hero__portrait {
+    display: flex;
+  }
   .gaco-hero__inner {
     grid-template-columns: minmax(0, 1fr) minmax(380px, 460px);
-    gap: clamp(48px, 5vw, 72px);
+    gap: clamp(32px, 4vw, 48px);
+    align-items: stretch;
   }
 
   .gaco-hero__left {
-    position: sticky;
-    top: calc(var(--topbar-h) + var(--nav-h) + 16px);
-    align-self: start;
+    position: static;
+    top: auto;
+    align-self: stretch;
+    min-height: 100%;
+    gap: 0;
+  }
+
+  .gaco-hero__copy {
+    margin-bottom: clamp(20px, 3vw, 28px);
+  }
+
+  .gaco-hero__right {
+    align-self: stretch;
+  }
+
+  .gaco-hero .hero-portrait {
+    margin-bottom: 0 !important;
+  }
+
+  .gaco-hero .hero-portrait__img {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+/* Portrait — desktop only (hidden on mobile) */
+@media (min-width: 900px) {
+  .gaco-hero .hero-portrait__img img,
+  .gaco-hero .hero-portrait__photo {
+    max-height: clamp(400px, 64vh, 760px) !important;
   }
 }
 

@@ -1,8 +1,13 @@
 import type { NextConfig } from "next";
+import { buildHomepageLinkHeader } from "./src/lib/agent-discovery/link-headers";
 
 const nextConfig: NextConfig = {
   async headers() {
     return [
+      {
+        source: "/",
+        headers: [{ key: "Link", value: buildHomepageLinkHeader() }],
+      },
       {
         source: "/:path*.md",
         headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],

@@ -13,7 +13,7 @@ export const ABOUT_HERO: SituationHero = {
   titleEm: "We Buy St Pete Houses",
   titleTail: "",
   subheadline:
-    "A local St. Petersburg company started in 2014 by John Gardepe — helping homeowners sell fast, fairly, and without the stress of the traditional listing process.",
+    "A local St. Petersburg company started in 2014 by Bennett Andrews — helping homeowners sell fast, fairly, and without the stress of the traditional listing process.",
   formTitle: "Get your fair cash offer today",
   formIntro:
     "Tell us about your property. A fair written offer within 24 hours — no obligation, no pressure.",
@@ -25,14 +25,14 @@ export const ABOUT_PAGE = {
   meta: {
     title: "About Us | We Buy St Pete Houses — Local Cash Home Buyers Since 2014",
     description:
-      "Meet John Gardepe and the team behind We Buy St Pete Houses. A local St. Petersburg company with 500+ homes purchased and a mission to treat every seller like family.",
+      "Meet Bennett Andrews and the team behind We Buy St Pete Houses. A local St. Petersburg company with 500+ homes purchased and a mission to treat every seller like family.",
   },
   hero: {
     breadcrumb: "Our Company",
     eyebrow: "We Buy St Pete Houses",
     titleLead: "About ",
     titleEm: "We Buy St Pete Houses",
-    body: "A local St. Petersburg company started in 2014 by John Gardepe — helping homeowners sell fast, fairly, and without the stress of the traditional listing process.",
+    body: "A local St. Petersburg company started in 2014 by Bennett Andrews — helping homeowners sell fast, fairly, and without the stress of the traditional listing process.",
     stats: [
       { value: "500", suffix: "+", label: "Homes Purchased" },
       { value: "Since ", em: "2014", label: "Locally Owned" },
@@ -42,10 +42,10 @@ export const ABOUT_PAGE = {
   },
   founder: {
     eyebrow: "Meet the Founder",
-    titleLead: "Hi — I'm John Gardepe, ",
+    titleLead: "Hi — I'm Bennett Andrews, ",
     titleEm: "and this is why I started this company.",
     paragraphs: [
-      "I grew up watching people I knew get stuck. Stuck in a house they couldn't sell because it needed work they couldn't afford. Stuck waiting months for a traditional sale to close while a life event — a divorce, a death, a job loss — demanded they move faster. Stuck paying an agent 6% of a home's value for a process that felt like it was designed to serve the agent more than the seller.",
+      "I decided to start this business after watching people I knew get stuck. Stuck in a house they couldn't sell because it needed work they couldn't afford. Stuck waiting months for a traditional sale to close while a life event — a divorce, a death, a job loss — demanded they move faster. Stuck paying an agent 6% of a home's value for a process that felt like it was designed to serve the agent more than the seller.",
       "I started We Buy St Pete Houses in 2014 because I believed there was a better way. Not a flashier way. Not a national brand way. Just a local, honest, human way — where the seller is treated like a person navigating something hard, not a transaction to be optimized.",
       "Since then, we've purchased more than 500 homes across St. Petersburg, Pinellas County, and the Tampa Bay area. Every one of those was someone's difficult situation that we helped resolve. Foreclosures stopped before the auction date. Inherited homes settled without months of court proceedings. Divorces closed quickly so both parties could finally move on. Properties with fire damage, mold, structural problems — homes that no agent would touch — purchased fairly, quickly, and without any burden placed back on the seller.",
       "I'm still involved in every transaction. When you call us, you're talking to a local team — people who know these neighborhoods, know the Pinellas County market, and genuinely care about giving you a fair outcome. We're not a franchise. We're not a call center. We're not going to pass you off to someone in another state who's never been to St. Pete.",
@@ -53,15 +53,15 @@ export const ABOUT_PAGE = {
     ],
     quote:
       "We treat every homeowner the way we'd want our own family to be treated. You'll get a fair offer and a team that's with you every step of the way.",
-    quoteCite: "— John Gardepe, Founder",
+    quoteCite: "— Bennett Andrews, Founder",
     linkedIn: "https://www.linkedin.com/in/john-gardepe-b68070160/",
-    primaryCta: "Talk to John's Team",
+    primaryCta: "Talk to Benette's Team",
     secondaryCta: "Call (727) 477-8998",
   },
   mission: {
     titleLead: "What we believe makes ",
     titleEm: "a fair home sale.",
-    body: "We've built every part of how we operate around a single question: what would we want if we were the ones selling? The answer shapes every offer we make, every conversation we have, and every closing we facilitate.",
+    body: "We've built all our processes around a single question: what would we want if we were the ones selling? The answer shapes every offer we make, every conversation we have, and every closing we facilitate.",
     values: [
       {
         title: "Transparency over spin",
@@ -159,7 +159,7 @@ export const ABOUT_PAGE = {
     items: [
       {
         q: "Are you a local company or a national franchise?",
-        a: "We're locally owned and operated — not a franchise, not a national iBuyer, not a call center. We Buy St Pete Houses was founded by John Gardepe in St. Petersburg in 2014 and is still independently run today. When you call us, you're talking to our local team — people who live and work in this community.",
+        a: "We're locally owned and operated — not a franchise, not a national iBuyer, not a call center. We Buy St Pete Houses was founded by Bennett Andrews in St. Petersburg in 2014 and is still independently run today. When you call us, you're talking to our local team — people who live and work in this community.",
       },
       {
         q: "How do I know your cash offers are fair?",

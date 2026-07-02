@@ -22,10 +22,10 @@ export function ResourcesSection({
   eyebrow = "Local resources",
   title = (
     <>
-      Trusted St Petersburg <em>homeowner resources</em>.
+      Trusted <em> homeowner resources</em>.
     </>
   ),
-  lede = "Selling to a cash buyer is straightforward, but it helps to know the local resources available to you for title, taxes, and property records.",
+  lede = "Selling to a cash buyer is simple, but it helps to know the local resources available to you for title, taxes, and property records.",
   resources = RESOURCES,
   showBeforeAfter = true,
   alt = false,
@@ -85,17 +85,10 @@ export function ResourcesSection({
                   <div className="ba-meta">
                     <h3>{item.title}</h3>
                     <p>{item.body}</p>
-                    <span className="stat">
-                      {i === 0 ? (
-                        <>
-                          <b>9 day</b> close · <b>14 wk</b> renovation
-                        </>
-                      ) : (
-                        <>
-                          <b>7 day</b> close · <b>11 wk</b> renovation
-                        </>
-                      )}
-                    </span>
+                    <span
+                      className="stat"
+                      dangerouslySetInnerHTML={{ __html: item.statHtml }}
+                    />
                   </div>
                 </Reveal>
               ))}

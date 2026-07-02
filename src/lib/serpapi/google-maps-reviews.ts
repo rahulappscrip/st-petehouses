@@ -84,7 +84,7 @@ function mapReview(review: SerpApiReview): GoogleReviewItem | null {
     ...(ownerReplyText
       ? {
           ownerReply: {
-            title: "Response from John",
+            title: "Response from Benette",
             text: ownerReplyText,
           },
         }

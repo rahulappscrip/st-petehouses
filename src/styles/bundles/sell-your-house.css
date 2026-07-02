@@ -1,4 +1,7 @@
 /* Sell your house page */
+@import "../process-steps.css";
+@import "../areas-section.css";
+@import "../final-cta.css";
 @import "../hero.css";
 @import "../seller-situations.css";
 @import "../testimonials.css";

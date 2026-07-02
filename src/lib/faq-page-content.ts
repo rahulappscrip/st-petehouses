@@ -70,7 +70,7 @@ export const FAQ_PAGE_CATEGORIES: readonly FaqPageCategory[] = [
       },
       {
         q: "Will I be talking to a real person or a call center?",
-        a: "A real person — every time. We are a locally owned company based in St Petersburg. John Gardepe is involved in every transaction and the people you speak with are members of our local team who know Pinellas County, the neighborhoods, and the specific situations that bring sellers to us. No offshore call centers, no automated systems.",
+        a: "A real person — every time. We are a locally owned company based in St Petersburg. Bennett Andrews is involved in every transaction and the people you speak with are members of our local team who know Pinellas County, the neighborhoods, and the specific situations that bring sellers to us. No offshore call centers, no automated systems.",
       },
       {
         q: "Can I get an offer and then decide not to sell?",
@@ -324,7 +324,7 @@ export const FAQ_PAGE_STILL_HAVE_QUESTIONS = {
     {
       label: "",
       title: "Call or Text Us",
-      body: "Speak directly with our St Petersburg team. John Gardepe and the team answer personally — no call centers, no bots. Available Monday–Friday 8am–7pm, Saturday 9am–5pm.",
+      body: "Speak directly with our St Petersburg team. Bennett Andrews and the team answer personally — no call centers, no bots. Available Monday–Friday 8am–7pm, Saturday 9am–5pm.",
       link: {
         label: "(727) 477-8998",
         href: "tel:+17274778998",

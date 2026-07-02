@@ -470,7 +470,7 @@ const ST_PETERSBURG: CityFullContent = {
       },
       {
         q: "Will I work with a real person?",
-        a: "Yes — you'll work directly with John Gardepe or one of our small in-house team. You'll have a direct phone number and won't get bounced around call centers or virtual assistants.",
+        a: "Yes — you'll work directly with Bennett Andrews or one of our small in-house team. You'll have a direct phone number and won't get bounced around call centers or virtual assistants.",
       },
       {
         q: "Do you use a real estate agent service?",
@@ -529,7 +529,7 @@ const CLEARWATER: CityFullContent = {
       {
         num: "02",
         title: "Receive a Cash Offer",
-        body: "We analyze local market conditions and present a no-obligation cash offer, typically within 24 hours of your inquiry. No pressure to accept.",
+        body: "We take a look at the local market, review the property, and usually send over a no-obligation cash offer within 24 hours. No pressure, no hard sell — just a clear offer you can review when you are ready.",
       },
       {
         num: "03",
@@ -558,7 +558,7 @@ const CLEARWATER: CityFullContent = {
     titleLead: "Clearwater homes we buy, ",
     titleEm: "any situation.",
     titleTail: "",
-    lede: "We buy Clearwater homes in all kinds of circumstances — foreclosure, probate, and other tough-to-sell scenarios where speed and simplicity matter most.",
+    lede: "We buy houses in Clearwater in all kinds of circumstances — foreclosure, probate, and other tough-to-sell scenarios where speed and simplicity matter most.",
     items: [
       {
         icon: "🏦",
@@ -613,7 +613,7 @@ const CLEARWATER: CityFullContent = {
       {
         icon: "💰",
         title: "No agent commissions or fees",
-        body: "We buy direct. No listing agent, no buyer's agent, no 5–6% commission deducted from your proceeds. You keep more of the sale.",
+        body: "We buy direct from you. No listing agent, no buyer's agent, no 5–6% commission deducted from your proceeds to help you keep more money in your pocket.",
       },
       {
         icon: "📅",
@@ -631,7 +631,7 @@ const CLEARWATER: CityFullContent = {
     steps: [
       {
         title: "Sign a purchase agreement",
-        body: "A straightforward contract outlining the sale terms — price, timeline, and any conditions. We walk you through every line.",
+        body: "A written agreement outlining the sale terms — price, timeline, and any conditions. We walk you through every line.",
       },
       {
         title: "Schedule closing on your timeline",
@@ -648,7 +648,7 @@ const CLEARWATER: CityFullContent = {
     titleLead: "Traditional sale vs. ",
     titleEm: "cash sale",
     titleTail: " in Clearwater.",
-    lede: "A cash offer trades a potentially higher list price for speed, certainty, and zero hassle — the right choice when timing matters.",
+    lede: "A cash offer is really about making the sale faster, simpler, and more certain. No repairs, no long back-and-forth, and no drawn-out process — just a straightforward option when timing matters.",
     traditionalLabel: "Traditional Agent Listing",
     traditionalTimeline: "9 days — 14 weeks",
     cashLabel: "We Buy St. Pete Houses",
@@ -716,7 +716,7 @@ const CLEARWATER: CityFullContent = {
       },
       {
         q: "What happens after I accept a cash offer?",
-        a: "You sign a straightforward purchase agreement, choose your closing date, and receive funds at the closing table. We guide you through each step with full transparency — no surprises, no hidden steps.",
+        a: "You sign a simple purchase agreement, choose your closing date, and receive funds at the closing table. We guide you through each step with full transparency — no surprises, no hidden steps.",
       },
       {
         q: "What areas near Clearwater do you serve?",
@@ -760,7 +760,7 @@ const LARGO: CityFullContent = {
   ],
   heroEyebrow: "Largo, Florida · Cash Home Buyers",
   heroSubheadline:
-    "A small local team of buyers — buying homes across Pinellas County in Largo. No repairs, no agents, no fees, no surprises.",
+    "A small local team of buyers — buying homes in Largo and the greater Pinellas County area. No repairs, no agents, no fees, no surprises.",
   formTitle: "Tell us about your home.",
   formIntro: "Get your fair cash offer — no obligation, no hassle.",
   authorRole: "Local Largo Home Buyer · Pinellas County, FL",
@@ -779,17 +779,17 @@ const LARGO: CityFullContent = {
       {
         num: "02",
         title: "We visit, in person",
-        body: "A local team member visits your home at a time that works for you — no strangers wandering through.",
+        body: "A local team member will set up a time to visit your home either in person or virtually — no strangers wandering through.",
       },
       {
         num: "03",
         title: "Receive a written offer",
-        body: "We present a fair, no-obligation cash offer based on current Largo market data and your home's condition.",
+        body: "We take a look at the Largo market, factor in the home’s condition, and put together a fair cash offer with no pressure or obligation.",
       },
       {
         num: "04",
         title: "Close on your timeline",
-        body: "Accept and we close in as little as 7 days — or take the time you need. You pick the closing date.",
+        body: "If the offer works for you, we can close in as little as 7 days. Or, if you need more time, that is fine too. You choose the closing date that fits your schedule.",
       },
     ],
     primaryCtaLabel: "Start with a cash offer",
@@ -811,12 +811,12 @@ const LARGO: CityFullContent = {
       {
         icon: "🏚️",
         title: "Foreclosure / Pre-foreclosure",
-        body: "Facing foreclosure? We can move fast to help you avoid it with a cash sale before the deadline.",
+        body: "Facing foreclosure? We can move fast to help you avoid it and the damage to your credit.",
       },
       {
         icon: "⚖️",
         title: "Divorce or Separation",
-        body: "Selling a shared home quickly helps both parties move forward. We simplify the process.",
+        body: "Selling a shared home quickly helps both parties move forward. We make the process simple and stress-free",
       },
       {
         icon: "📋",
@@ -896,7 +896,8 @@ const LARGO: CityFullContent = {
     items: [
       {
         title: "No commissions",
-        body: "You don't pay us an offer — or anyone else. We never charge real estate commissions on any offer.",
+        body: "Our offers are free to get, and there are no real estate commissions to worry about. We keep the process simple and hassle-free from the start.",
+
       },
       {
         title: "No repairs",
@@ -990,7 +991,7 @@ const DUNEDIN: CityFullContent = {
   ],
   heroEyebrow: "Dunedin, Florida · Cash Home Buyers",
   heroSubheadline:
-    "A small local team of buyers — purchasing homes across Pinellas County in Dunedin. No repairs, no agents, no fees, no surprises. Close on your timeline, often in about a week.",
+    "We are a small local team buying homes in Dunedin and throughout Pinellas County. You do not have to make repairs, deal with agents, pay fees, or worry about surprises. We keep things simple and can often close in about a week.",
   formTitle: "Tell us about your home.",
   formIntro: "Get your fair cash offer — no obligation, no hassle.",
   authorRole: "Local Dunedin Home Buyer · Pinellas County, FL",
@@ -999,22 +1000,22 @@ const DUNEDIN: CityFullContent = {
     titleLead: "How selling to a ",
     titleEm: "cash buyer",
     titleTail: " works in Dunedin.",
-    lede: "You provide basic info about your property, we present a cash offer, and you pick a closing date. It's that simple — no showings, no contingencies, no surprises.",
+    lede: "You send over a few basic details about the property, we put together a cash offer, and you choose the closing date that works for you. Simple as that — no showings, no financing delays, and no surprises.",
     steps: [
       {
         num: "01",
         title: "Submit Your Property Details",
-        body: "Share your Dunedin home's address, condition, and any relevant details. This takes just a few minutes and starts the process immediately.",
+        body: "Share your property details, such as its condition or any structural issues, and any other details you think we should know. It only takes a few minutes and gets the process started.",
       },
       {
         num: "02",
         title: "Receive a No-Obligation Cash Offer",
-        body: "We review your property and present a fair, written cash offer. No pressure to accept — you decide what's best for you and your timeline.",
+        body: "We will review the property and put together a fair, written cash offer. No pressure to accept — you can look it over and decide what works best for you.",
       },
       {
         num: "03",
         title: "Close on Your Timeline",
-        body: "Once you accept, we schedule a closing date that fits your needs. You receive your cash with no surprise fees, no agent cuts, no delays.",
+        body: "If the offer makes sense, we will set a closing date that fits your schedule. You get paid without surprise fees, agent commissions, or unnecessary delays.",
       },
     ],
     primaryCtaLabel: "Start with a cash offer",
@@ -1041,7 +1042,7 @@ const DUNEDIN: CityFullContent = {
     titleLead: "Situations we help Dunedin homeowners ",
     titleEm: "solve.",
     titleTail: "",
-    lede: "We buy in many tough-sell situations to simplify the process. Whether you're dealing with urgent circumstances or simply want a fast, hassle-free sale, we can help.",
+    lede: "We buy houses in all kinds of situations and help sellers move on without making the process harder than it needs to be. Whether you are dealing with something urgent or just want a fast, simple sale, we can help make it easier.",
     items: [
       {
         icon: "🏚️",
@@ -1501,7 +1502,7 @@ const PINELLAS_PARK: CityFullContent = {
       },
       {
         q: "Will I work with a real person?",
-        a: "Yes. You'll work directly with John Gardepe and our local Tampa Bay team — not a call center. We're your neighbors, not a national corporation.",
+        a: "Yes. You'll work directly with Bennett Andrews and our local Tampa Bay team — not a call center. We're your neighbors, not a national corporation.",
       },
       {
         q: "Is the offer truly no-obligation?",

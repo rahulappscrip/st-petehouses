@@ -1,0 +1,75 @@
+.cash-offer-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  padding-bottom: calc(16px + env(safe-area-inset-bottom));
+}
+
+.cash-offer-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background: color-mix(in oklab, var(--ink) 52%, transparent);
+  cursor: pointer;
+}
+
+.cash-offer-modal__panel {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 440px);
+  max-height: min(92dvh, 860px);
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-2);
+}
+
+.cash-offer-modal__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: color-mix(in oklab, var(--paper) 88%, var(--ink));
+  color: var(--ink);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.cash-offer-modal__close:hover {
+  background: var(--sand-2);
+}
+
+.cash-offer-modal__form.lead-card {
+  margin: 0;
+  max-height: none;
+}
+
+.cash-offer-modal__form .lead-top {
+  padding-right: 36px;
+}
+
+@media (max-width: 759px) {
+  .cash-offer-modal {
+    align-items: flex-end;
+    padding: 0;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .cash-offer-modal__panel {
+    width: 100%;
+    max-height: min(88dvh, 760px);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}

@@ -117,7 +117,9 @@ export function validateLeadFormFields(input: LeadFormValues): LeadFormFieldErro
         : "Please enter a valid phone number.";
   }
 
-  if (email && !isValidEmail(email)) {
+  if (!email) {
+    errors.email = "Email is required.";
+  } else if (!isValidEmail(email)) {
     errors.email = "Please enter a valid email address.";
   }
 

@@ -27,15 +27,10 @@ export function MeetOwnerSection() {
                 alt={PERSON_IMAGES.johnPortrait.alt}
                 title={PERSON_IMAGES.johnPortrait.title}
                 className="meet-owner__photo"
-                width={640}
-                height={800}
+                width={894}
+                height={1302}
                 sizes="(min-width: 900px) 50vw, 100vw"
               />
-              <div className="meet-owner__badge">
-                <strong>John Gardepe</strong>
-                <span className="meet-owner__badge-role">{MEET_OWNER.badgeRole}</span>
-                <span className="meet-owner__badge-co">{MEET_OWNER.badgeCompany}</span>
-              </div>
             </div>
           </Reveal>
 
@@ -50,7 +45,9 @@ export function MeetOwnerSection() {
               {typeof first === "object" && (
                 <p>
                   {first.intro}{" "}
-                  <strong className="meet-owner__highlight">{first.lead}</strong>
+                  <Link href="/about" className="meet-owner__highlight">
+                    <strong>{first.lead}</strong>
+                  </Link>
                   {first.rest}
                 </p>
               )}

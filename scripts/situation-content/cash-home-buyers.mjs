@@ -47,7 +47,7 @@ export const CASH_HOME_BUYERS_CONTENT = {
     paragraphs: [
       "At We Buy St Pete Houses, we evaluate your property based on its current condition, local market data, and our straightforward process. You don't need to make repairs, stage the home, or wait months for a buyer. We handle the entire process so you can move forward without the stress.",
       "We've purchased over 500 homes across St. Petersburg and the greater Tampa Bay area — inherited properties, fire-damaged homes, vacant houses, and everything in between. Every offer is written, every cost is explained upfront, and there are no last-minute surprises at the closing table.",
-      "When you work with us, you're dealing directly with a local buyer — not a national call center or an algorithm. John Gardepe and the We Buy St Pete Houses team are based in Pinellas County and have been buying homes here since 2014. Call us, fill out the form, or stop by — we respond to every inquiry personally.",
+      "When you work with us, you're dealing directly with a local buyer — not a national call center or an algorithm. Bennett Andrews and the We Buy St Pete Houses team are based in Pinellas County and have been buying homes here since 2014. Call us, fill out the form, or stop by — we respond to every inquiry personally.",
     ],
     sidebar: {
       title: "Why sellers choose cash",

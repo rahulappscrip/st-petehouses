@@ -312,12 +312,12 @@
 
 /* John photo — trust avatar + signature */
 .lead-trust__avatars span:first-child {
-  background: url("/assets/images/john-gardepe.webp") center/cover no-repeat !important;
+  background: url("/assets/images/Benette.webp") center/cover no-repeat !important;
   color: transparent !important;
 }
 
 .sig-photo {
-  background: url("/assets/images/john-gardepe.webp") center/cover no-repeat !important;
+  background: url("/assets/images/Benette.webp") center/cover no-repeat !important;
 }
 
 .sig-photo span {

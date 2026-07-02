@@ -9,6 +9,7 @@ import { Main } from "@/components/layout/Main";
 import { MobileCallBar } from "@/components/layout/MobileCallBar";
 import { ASSETS, SITE } from "@/lib/constants";
 import { REAL_ESTATE_AGENT_JSON_LD, SITE_PUBLISHER, SITE_PUBLISHER_JSON_LD } from "@/lib/schema";
+import { getSiteUrl } from "@/lib/site-url";
 import "./globals.css";
 
 const inter = localFont({
@@ -26,7 +27,7 @@ const dmSerifDisplay = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE.url),
+  metadataBase: new URL(getSiteUrl()),
   title: {
     default: SITE.name,
     template: "%s",
@@ -59,8 +60,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${dmSerifDisplay.variable}`}>
-      <body className={inter.className}>
+    <html lang="en" className={`${inter.variable} ${dmSerifDisplay.variable}`} suppressHydrationWarning>
+      <body className={inter.className} suppressHydrationWarning>
         <RudderStackScript />
         <RudderAnalyticsProvider />
         <script

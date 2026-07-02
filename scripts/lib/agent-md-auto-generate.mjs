@@ -1,6 +1,13 @@
 import { readFileSync } from "node:fs";
-import { join } from "node:path";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 import { COMPANY_LINE, SITE_URL, pageHeader } from "./agent-md-site-routes.mjs";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+const UNPUBLISHED_SITUATION_SLUGS = new Set(
+  JSON.parse(readFileSync(join(__dirname, "../../src/lib/unpublished-situation-slugs.json"), "utf8")),
+);
 
 function joinTitleParts(...parts) {
   return parts.filter(Boolean).join("");
@@ -208,12 +215,18 @@ export function syncFaqAndSituationMdPages(root, pages) {
   generated.push("faq");
 
   for (const page of situations) {
+    if (UNPUBLISHED_SITUATION_SLUGS.has(page.slug)) continue;
     const key = `situations/${page.slug}`;
     pages[key] = generateSituationMd(page);
     generated.push(key);
   }
 
-  return { generated, situationKeys: situations.map((page) => `situations/${page.slug}`) };
+  return {
+    generated,
+    situationKeys: situations
+      .filter((page) => !UNPUBLISHED_SITUATION_SLUGS.has(page.slug))
+      .map((page) => `situations/${page.slug}`),
+  };
 }
 
 /** Fill in static/city routes that are not in the manual markdown export yet. */

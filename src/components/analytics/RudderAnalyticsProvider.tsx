@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import { isRudderEnabled } from "@/lib/analytics/config";
 import {
@@ -13,53 +14,40 @@ import {
 import { fetchUserLocation, getBaseProperties } from "@/lib/analytics/context";
 import { RUDDER_EVENTS } from "@/lib/analytics/events";
 import { trackEvent, whenRudderReady } from "@/lib/analytics/rudder";
-import { updateScrollDepth } from "@/lib/analytics/scroll";
+import { resetScrollState, updateScrollDepth } from "@/lib/analytics/scroll";
 import { incrementSessionPageView, setPageLoadTime } from "@/lib/analytics/session";
 
 function useRudderPageTracker(): void {
+  const pathname = usePathname();
+
   useEffect(() => {
     if (!isRudderEnabled()) return;
 
-    setPageLoadTime(Date.now());
-    let pageViewSent = false;
-
-    const sendPageView = () => {
-      if (pageViewSent) return;
-      pageViewSent = true;
-      trackEvent(RUDDER_EVENTS.PAGE_VIEW, getBaseProperties());
-    };
-
-    const onVisibilityChange = () => {
-      if (document.visibilityState === "hidden") {
-        sendPageView();
-      }
-    };
-
-    const onPageHide = () => {
-      sendPageView();
-    };
-
-    const timeoutId = window.setTimeout(() => {
-      sendPageView();
-    }, 30000);
-
     window.addEventListener("scroll", updateScrollDepth, { passive: true });
-    document.addEventListener("visibilitychange", onVisibilityChange);
-    window.addEventListener("pagehide", onPageHide);
+    return () => window.removeEventListener("scroll", updateScrollDepth);
+  }, []);
+
+  useEffect(() => {
+    if (!isRudderEnabled() || !pathname) return;
+
+    let cancelled = false;
+
+    setPageLoadTime(Date.now());
+    resetScrollState();
 
     fetchUserLocation().finally(() => {
+      if (cancelled) return;
+
       whenRudderReady(() => {
+        trackEvent(RUDDER_EVENTS.PAGE_VIEW, getBaseProperties());
         incrementSessionPageView();
       });
     });
 
     return () => {
-      window.clearTimeout(timeoutId);
-      window.removeEventListener("scroll", updateScrollDepth);
-      document.removeEventListener("visibilitychange", onVisibilityChange);
-      window.removeEventListener("pagehide", onPageHide);
+      cancelled = true;
     };
-  }, []);
+  }, [pathname]);
 }
 
 function useRudderClickTracker(): void {

@@ -124,14 +124,16 @@ function parseFaqPairs(faqHtml: string): BlogFaqItem[] {
 }
 
 function findAuthorBioStartIndex(html: string): number {
-  const johnGardepe = html.search(/<p[^>]*>\s*<strong>\s*John Gardepe\s*<\/strong>/i);
-  if (johnGardepe !== -1) {
-    const before = html.slice(Math.max(0, johnGardepe - 120), johnGardepe);
-    const jgParagraph = before.match(/<p[^>]*>\s*JG\s*<\/p>\s*$/i);
-    if (jgParagraph?.index !== undefined) {
-      return johnGardepe - (before.length - jgParagraph.index);
+  const authorNamePattern =
+    /<p[^>]*>\s*<strong>\s*(?:Bennett Andrews|John Gardepe)\s*<\/strong>/i;
+  const authorMatch = html.search(authorNamePattern);
+  if (authorMatch !== -1) {
+    const before = html.slice(Math.max(0, authorMatch - 120), authorMatch);
+    const initialsParagraph = before.match(/<p[^>]*>\s*(?:BA|JG)\s*<\/p>\s*$/i);
+    if (initialsParagraph?.index !== undefined) {
+      return authorMatch - (before.length - initialsParagraph.index);
     }
-    return johnGardepe;
+    return authorMatch;
   }
 
   const linkedInIdx = html.search(/john-gardepe-b68070160/i);
