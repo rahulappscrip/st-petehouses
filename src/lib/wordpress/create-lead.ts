@@ -1,4 +1,5 @@
 import type { LeadFormInput } from "@/lib/house-of-apps/types";
+import { formatInternationalPhoneDisplay } from "@/lib/phone-countries";
 import { wordpressFetch } from "@/lib/wordpress/fetch";
 
 export type WordPressLeadInput = LeadFormInput & {
@@ -29,7 +30,7 @@ export async function createWordPressLead(input: WordPressLeadInput): Promise<Wo
       full_name: input.fullName,
       property_address: input.address,
       sell_reason: input.sellReason,
-      phone: input.phone,
+      phone: formatInternationalPhoneDisplay(input.phone, input.phoneCountryCode),
       email: input.email,
       source_page: input.sourcePage ?? "",
     }),

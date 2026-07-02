@@ -1,6 +1,7 @@
 import { Resend } from "resend";
 import { SELL_REASON_OPTIONS, SITE } from "@/lib/constants";
 import type { LeadFormInput } from "@/lib/house-of-apps/types";
+import { formatInternationalPhoneDisplay } from "@/lib/phone-countries";
 
 export type LeadNotificationInput = LeadFormInput & {
   sourcePage?: string;
@@ -11,6 +12,10 @@ const DEFAULT_EMAIL_TO = "rahul@reibarmarketing.com";
 function resolveSellReasonLabel(value: string): string {
   const match = SELL_REASON_OPTIONS.find((option) => option.value === value);
   return match?.label ?? value;
+}
+
+function formatPhone(input: LeadNotificationInput): string {
+  return formatInternationalPhoneDisplay(input.phone, input.phoneCountryCode);
 }
 
 function formatSubmittedAt(): string {
@@ -28,7 +33,7 @@ function buildPlainText(input: LeadNotificationInput): string {
     `Full name: ${input.fullName}`,
     `Property address: ${input.address}`,
     `Sell reason: ${resolveSellReasonLabel(input.sellReason)}`,
-    `Phone: ${input.phone}`,
+    `Phone: ${formatPhone(input)}`,
     `Email: ${input.email || "Not provided"}`,
     `Source page: ${input.sourcePage || "/"}`,
     `Submitted: ${formatSubmittedAt()} (ET)`,
@@ -42,7 +47,7 @@ function buildHtml(input: LeadNotificationInput): string {
     ["Full name", input.fullName],
     ["Property address", input.address],
     ["Sell reason", resolveSellReasonLabel(input.sellReason)],
-    ["Phone", input.phone],
+    ["Phone", formatPhone(input)],
     ["Email", input.email || "Not provided"],
     ["Source page", input.sourcePage || "/"],
     ["Submitted", `${formatSubmittedAt()} (ET)`],

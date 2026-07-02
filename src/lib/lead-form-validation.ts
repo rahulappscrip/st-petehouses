@@ -1,4 +1,5 @@
 import { SELL_REASON_OPTIONS } from "@/lib/constants";
+import { resolvePhoneCountry } from "@/lib/phone-countries";
 
 export type LeadFormFieldErrors = {
   fullName?: string;
@@ -13,6 +14,7 @@ export type LeadFormValues = {
   address: string;
   sellReason: string;
   phone: string;
+  phoneCountryCode: string;
   email: string;
 };
 
@@ -58,6 +60,19 @@ export function isValidUsPhone(phone: string): boolean {
   return true;
 }
 
+export function isValidInternationalPhone(phone: string, countryCode: string): boolean {
+  const digits = phone.replace(/\D/g, "");
+  if (!digits) return false;
+  if (/^(\d)\1{5,}$/.test(digits)) return false;
+
+  const country = resolvePhoneCountry(countryCode);
+  if (country.code === "US" || country.code === "CA") {
+    return isValidUsPhone(phone);
+  }
+
+  return digits.length >= 6 && digits.length <= 14;
+}
+
 export function isValidEmail(email: string): boolean {
   const trimmed = email.trim();
   if (!trimmed || trimmed.length > MAX_EMAIL_LENGTH) return false;
@@ -91,10 +106,15 @@ export function validateLeadFormFields(input: LeadFormValues): LeadFormFieldErro
     errors.sellReason = "Please select a valid reason.";
   }
 
+  const phoneCountryCode = input.phoneCountryCode.trim().toUpperCase() || "US";
+
   if (!phone) {
     errors.phone = "Phone number is required.";
-  } else if (!isValidUsPhone(phone)) {
-    errors.phone = "Please enter a valid 10-digit US phone number.";
+  } else if (!isValidInternationalPhone(phone, phoneCountryCode)) {
+    errors.phone =
+      phoneCountryCode === "US" || phoneCountryCode === "CA"
+        ? "Please enter a valid 10-digit phone number."
+        : "Please enter a valid phone number.";
   }
 
   if (!email) {

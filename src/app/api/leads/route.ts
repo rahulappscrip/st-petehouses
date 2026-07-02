@@ -1,10 +1,8 @@
 import { NextResponse } from "next/server";
 import { createHouseOfAppsLead } from "@/lib/house-of-apps/create-lead";
 import type { LeadFormInput } from "@/lib/house-of-apps/types";
-import {
-  getLeadFormErrorMessage,
-  validateLeadFormFields,
-} from "@/lib/lead-form-validation";
+import { isValidEmail, isValidInternationalPhone } from "@/lib/lead-form-validation";
+import { isSupportedPhoneCountry } from "@/lib/phone-countries";
 import { sendLeadNotificationEmail } from "@/lib/resend/send-lead-notification";
 import { createWordPressLead } from "@/lib/wordpress/create-lead";
 
@@ -25,18 +23,23 @@ function parseLeadInput(body: unknown): ParsedLeadInput | null {
     email: typeof data.email === "string" ? data.email : "",
   };
 
-  const errors = validateLeadFormFields(values);
-  if (Object.keys(errors).length > 0) return null;
+  const phone = data.phone.trim();
+  const phoneCountryCode =
+    typeof data.phoneCountryCode === "string" ? data.phoneCountryCode.trim().toUpperCase() : "US";
+
+  if (!isSupportedPhoneCountry(phoneCountryCode)) return null;
+  if (!isValidInternationalPhone(phone, phoneCountryCode)) return null;
 
   const sourcePage =
     typeof data.sourcePage === "string" ? data.sourcePage.trim() : "";
 
   return {
-    fullName: values.fullName.trim(),
-    address: values.address.trim(),
-    sellReason: values.sellReason.trim(),
-    phone: values.phone.trim(),
-    email: values.email.trim(),
+    fullName: data.fullName.trim(),
+    address: data.address.trim(),
+    sellReason: data.sellReason.trim(),
+    phone,
+    phoneCountryCode,
+    email,
     sourcePage,
   };
 }
