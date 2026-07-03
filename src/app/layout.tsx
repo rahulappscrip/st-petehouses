@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { RudderAnalyticsProvider } from "@/components/analytics/RudderAnalyticsProvider";
 import { RudderStackScript } from "@/components/analytics/RudderStackScript";
-import { TopBar } from "@/components/layout/TopBar";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Main } from "@/components/layout/Main";
@@ -74,7 +73,6 @@ export default function RootLayout({
           }}
         />
         <div className="site-chrome">
-          <TopBar />
           <Header />
         </div>
         <Main>{children}</Main>

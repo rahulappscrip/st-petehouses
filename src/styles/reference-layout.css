@@ -39,7 +39,7 @@
   --maxw: 1280px;
   --gutter: clamp(24px, 4vw, 64px);
   --section-y: clamp(72px, 8vw, 128px);
-  --topbar-h: 38px;
+  --topbar-h: 0px;
   --nav-h: 80px;
 
   /* Type scale — mobile (default) */

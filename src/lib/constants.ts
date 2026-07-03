@@ -669,7 +669,6 @@ export const SOCIAL_LINKS = [
 
 export const TOPBAR = {
   rating: "Rated 5.0 by 120+ St. Petersburg",
-  bbb: "BBB A+ Accredited",
 } as const;
 
 export const SELL_REASON_OPTIONS = [
