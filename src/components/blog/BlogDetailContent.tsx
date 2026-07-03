@@ -7,7 +7,8 @@ import { WordPressBlogArticle } from "@/components/blog/WordPressBlogArticle";
 import { FaqSection } from "@/components/home/FaqSection";
 import { FinalCtaSection } from "@/components/home/FinalCtaSection";
 import type { BlogPost } from "@/lib/blog";
-import { DEFAULT_BLOG_NEXT_CTA, getBlogHeroImageCopy } from "@/lib/blog";
+import { DEFAULT_BLOG_NEXT_CTA, getBlogHeroImageCopy, resolveBlogAuthorAvatar } from "@/lib/blog";
+import { PERSON_IMAGES } from "@/lib/image-accessibility";
 
 function CrumbArrow() {
   return (
@@ -56,6 +57,7 @@ function getBreadcrumbTitle(post: BlogPost): string {
 export function BlogDetailContent({ post }: { post: BlogPost }) {
   const heroImage = post.heroImage ? getBlogHeroImageCopy(post) : null;
   const toc = post.toc ?? [];
+  const authorAvatar = resolveBlogAuthorAvatar(post.authorAvatar);
 
   return (
     <main className="blog-detail-page">
@@ -89,7 +91,14 @@ export function BlogDetailContent({ post }: { post: BlogPost }) {
 
           <div className="byline">
             <span className="av" aria-hidden="true">
-              {post.authorInitials}
+              <SiteImage
+                src={authorAvatar}
+                alt={PERSON_IMAGES.johnByline.alt}
+                title={PERSON_IMAGES.johnByline.title}
+                width={46}
+                height={46}
+                className="av__img"
+              />
             </span>
             <span className="author">
               <b>By {post.author}</b>

@@ -41,7 +41,7 @@ export function ReviewsPageContent({ testimonials }: ReviewsPageContentProps) {
               close with us.
             </p>
 
-            <div className="summary">
+            {/* <div className="summary">
               <div className="big">
                 {testimonials.rating}
               </div>
@@ -66,9 +66,9 @@ export function ReviewsPageContent({ testimonials }: ReviewsPageContentProps) {
                   <i>Homes Bought</i>
                 </span>
               </div>
-            </div>
+            </div> */}
 
-            <div className="byline">
+            {/* <div className="byline">
               <SiteImage
                 className="av"
                 src={ASSETS.johnByline}
@@ -83,7 +83,7 @@ export function ReviewsPageContent({ testimonials }: ReviewsPageContentProps) {
               </span>
               <span className="dot" aria-hidden />
               <span>Updated May 27, 2026</span>
-            </div>
+            </div> */}
           </Reveal>
         </div>
       </section>

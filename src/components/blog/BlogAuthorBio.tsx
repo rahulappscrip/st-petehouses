@@ -1,6 +1,9 @@
 import Link from "next/link";
+import { SiteImage } from "@/components/ui/SiteImage";
 import type { BlogPost } from "@/lib/blog";
+import { resolveBlogAuthorAvatar } from "@/lib/blog";
 import { ABOUT_PAGE } from "@/lib/about-content";
+import { PERSON_IMAGES } from "@/lib/image-accessibility";
 
 const DEFAULT_AUTHOR = {
   name: "Bennett Andrews",
@@ -28,28 +31,27 @@ function resolveAuthorRole(post: BlogAuthorBioProps["post"]): string {
 
 export function BlogAuthorBio({ post }: BlogAuthorBioProps = {}) {
   const name = post?.author?.trim() || DEFAULT_AUTHOR.name;
-  const initials = post?.authorInitials?.trim() || DEFAULT_AUTHOR.initials;
   const role = resolveAuthorRole(post);
   const bio = post?.authorBio?.trim() || DEFAULT_AUTHOR.bio;
-  const avatar = post?.authorAvatar?.trim();
+  const avatar = resolveBlogAuthorAvatar(post?.authorAvatar);
 
   return (
     <aside className="author-bio">
-      <div
-        className="av"
-        aria-hidden="true"
-        style={avatar ? { backgroundImage: `url("${avatar}")` } : undefined}
-      >
-        {avatar ? "" : initials}
+      <div className="av" aria-hidden="true">
+        <SiteImage
+          src={avatar}
+          alt={PERSON_IMAGES.johnByline.alt}
+          title={PERSON_IMAGES.johnByline.title}
+          width={96}
+          height={96}
+          className="av__img"
+        />
       </div>
       <div className="meta">
         <b>{name}</b>
         <span className="role">{role}</span>
         <p>{bio}</p>
         <div className="links">
-          <a href={ABOUT_PAGE.founder.linkedIn} rel="noopener noreferrer" target="_blank">
-            LinkedIn
-          </a>
           <Link href="/reviews">Reviews</Link>
           <Link href="/contact">Request an offer</Link>
         </div>

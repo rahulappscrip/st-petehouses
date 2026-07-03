@@ -1,4 +1,11 @@
-import type { BlogCategory, BlogFaqItem, BlogNextCtaContent, BlogPost, ImageTone } from "@/lib/blog";
+import {
+  resolveBlogAuthorAvatar,
+  type BlogCategory,
+  type BlogFaqItem,
+  type BlogNextCtaContent,
+  type BlogPost,
+  type ImageTone,
+} from "@/lib/blog";
 import { isWordPressMediaUrl, toWordPressImageProxy } from "@/lib/wordpress/fetch";
 import type { WordPressPost } from "@/lib/wordpress/graphql";
 import { parseWordPressContent } from "@/lib/wordpress/parse-content";
@@ -167,7 +174,9 @@ export function mapWordPressPostToBlogPost(post: WordPressPost, index = 0): Blog
   const authorName = resolveAuthorName(post);
   const authorBio = stripHtml(post.author.node.description ?? "").trim() || undefined;
   const avatarUrl = post.author.node.avatar?.url?.trim();
-  const authorAvatar = avatarUrl ? resolveHeroImage(avatarUrl) : undefined;
+  const authorAvatar = resolveBlogAuthorAvatar(
+    avatarUrl && isWordPressMediaUrl(avatarUrl) ? toWordPressImageProxy(avatarUrl) : undefined,
+  );
   const authorCompany =
     stripHtml(post.author.node.authorRelated?.authorCompany ?? "").trim() || undefined;
 

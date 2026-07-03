@@ -1,4 +1,5 @@
 /* City / location pages (/[location]) */
+@import "../stats-strip.css";
 @import "../process-steps.css";
 @import "../areas-section.css";
 @import "../faq-accordion.css";

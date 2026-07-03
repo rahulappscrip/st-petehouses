@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { SiteImage } from "@/components/ui/SiteImage";
 import type { BlogPost } from "@/lib/blog";
-import { getBlogHeroImageCopy, getBlogPostHref } from "@/lib/blog";
+import { getBlogHeroImageCopy, getBlogPostHref, resolveBlogAuthorAvatar } from "@/lib/blog";
+import { PERSON_IMAGES } from "@/lib/image-accessibility";
 
 export function BlogFeaturedPost({ post }: { post: BlogPost }) {
   const heroImage = post.heroImage ? getBlogHeroImageCopy(post) : null;
@@ -41,7 +42,14 @@ export function BlogFeaturedPost({ post }: { post: BlogPost }) {
         <div className="featured-meta">
           <span className="author-mini">
             <span className="av" aria-hidden="true">
-              {post.authorInitials}
+              <SiteImage
+                src={resolveBlogAuthorAvatar(post.authorAvatar)}
+                alt={PERSON_IMAGES.johnByline.alt}
+                title={PERSON_IMAGES.johnByline.title}
+                width={28}
+                height={28}
+                className="av__img"
+              />
             </span>
             {post.author}
           </span>

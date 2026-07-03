@@ -1,4 +1,5 @@
 import { imageAccessibility, type ImageAccessibility } from "@/lib/image-accessibility";
+import { ASSETS } from "@/lib/constants";
 
 export type BlogCategory = "process" | "market" | "situations" | "prep" | "legal";
 
@@ -135,4 +136,20 @@ export function getCategoryCount(category: BlogCategory | "all"): number {
 
 export function getBlogPostHref(slug: string): string {
   return `/blog/${slug}`;
+}
+
+/** Local or proxied WordPress media only — Gravatar and other remote URLs fall back to Benette.webp. */
+export function resolveBlogAuthorAvatar(src?: string): string {
+  const trimmed = src?.trim();
+  if (!trimmed) return ASSETS.johnPortrait;
+  if (trimmed.startsWith("/")) return trimmed;
+
+  try {
+    const { hostname } = new URL(trimmed);
+    if (hostname.endsWith("gravatar.com")) return ASSETS.johnPortrait;
+  } catch {
+    return ASSETS.johnPortrait;
+  }
+
+  return ASSETS.johnPortrait;
 }
