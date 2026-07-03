@@ -10,6 +10,7 @@ import {
   isLandingPage,
 } from "@/lib/analytics/session";
 import { SITUATION_LABEL_BY_SLUG } from "@/lib/analytics/situation-labels";
+import { getSituationSlugFromPath } from "@/lib/situation-slugs";
 
 type UserLocation = {
   country: string | null;
@@ -223,13 +224,13 @@ function parsePathContext(pathname: string): {
     };
   }
 
-  if (path.startsWith("/situations/")) {
-    const slug = path.replace("/situations/", "").split("/")[0];
+  const situationSlug = getSituationSlugFromPath(path);
+  if (situationSlug) {
     return {
       page_type: "situation",
       content_type: "situation",
-      situation_slug: slug || null,
-      situation_label: SITUATION_LABEL_BY_SLUG[slug] ?? null,
+      situation_slug: situationSlug,
+      situation_label: SITUATION_LABEL_BY_SLUG[situationSlug] ?? null,
       city_route: null,
       city_name: null,
     };

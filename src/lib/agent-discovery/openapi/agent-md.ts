@@ -34,7 +34,7 @@ export function buildAgentMdOpenApi() {
               name: "path",
               in: "path",
               required: true,
-              description: "Page path without leading slash (e.g. contact, situations/foreclosure, blog/slug)",
+              description: "Page path without leading slash (e.g. contact, stop-foreclosure-florida, blog/slug)",
               schema: { type: "string" },
             },
           ],

@@ -1,4 +1,4 @@
-/** /situations/hoarder-house — from Hoarder House/sell-hoarder-house-st-petersburg.html */
+/** /sell-hoarder-house-florida — from Hoarder House/sell-hoarder-house-st-petersburg.html */
 
 export const HOARDER_HOUSE_PAGE = {
   slug: "hoarder-house",

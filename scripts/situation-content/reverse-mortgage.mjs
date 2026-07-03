@@ -1,4 +1,4 @@
-/** /situations/reverse-mortgage — from Reverse Mortgage/sell-house-reverse-mortgage-st-petersburg.html */
+/** /sell-house-with-reverse-mortgage-florida — from Reverse Mortgage/sell-house-reverse-mortgage-st-petersburg.html */
 
 export const REVERSE_MORTGAGE_PAGE = {
   slug: "reverse-mortgage",

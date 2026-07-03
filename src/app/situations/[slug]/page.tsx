@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SituationPageContent } from "@/components/situations/SituationPageContent";
+import { getSituationPath } from "@/lib/situation-slugs";
 import { SITE } from "@/lib/constants";
 import { getSituationOgImage, ogImageMeta } from "@/lib/og-images";
 import { getSituationContent, SITUATION_PAGES } from "@/lib/situations";
@@ -19,21 +20,21 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const content = getSituationContent(slug);
   if (!content) return {};
 
-  const canonical = `/situations/${content.slug}`;
+  const canonical = getSituationPath(content.slug);
 
   return {
     title: content.metaTitle,
     description: content.metaDescription,
-    keywords: getSituationPageKeyword(content.slug, content.label),
+    keywords: getSituationPageKeyword(content.pageKey, content.label),
     alternates: { canonical },
     openGraph: {
       type: "article",
       title: content.metaTitle,
       description: content.metaDescription,
-      url: `${SITE.url}situations/${content.slug}/`,
+      url: `${SITE.url.replace(/\/$/, "")}${getSituationPath(content.slug)}/`,
       locale: "en_US",
       images: (() => {
-        const file = getSituationOgImage(content.slug);
+        const file = getSituationOgImage(content.pageKey);
         return file ? ogImageMeta(file, content.metaTitle) : undefined;
       })(),
     },
@@ -42,7 +43,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 function buildJsonLd(content: NonNullable<ReturnType<typeof getSituationContent>>) {
-  const url = `${SITE.url}situations/${content.slug}/`;
+  const url = `${SITE.url.replace(/\/$/, "")}${getSituationPath(content.slug)}/`;
   const titleText = [content.hero.titleLead, content.hero.titleEm, content.hero.titleTail]
     .filter(Boolean)
     .join("");

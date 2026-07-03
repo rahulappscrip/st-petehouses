@@ -1,4 +1,4 @@
-/** /situations/condemned — from Condemned House/sell-condemned-house-st-petersburg.html */
+/** /sell-condemned-house-florida — from Condemned House/sell-condemned-house-st-petersburg.html */
 
 export const CONDEMNED_PAGE = {
   slug: "condemned",

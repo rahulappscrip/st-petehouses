@@ -1,4 +1,4 @@
-/** /situations/bankruptcy — from Bankruptcy.html */
+/** /sell-house-during-bankruptcy-florida — from Bankruptcy.html */
 
 export const BANKRUPTCY_PAGE = {
   slug: "bankruptcy",

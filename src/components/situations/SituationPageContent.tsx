@@ -8,11 +8,11 @@ type Props = {
 
 export function SituationPageContent({ content }: Props) {
   return (
-    <div className={`situation-page situation-page--${content.slug}`}>
+    <div className={`situation-page situation-page--${content.pageKey}`}>
       <SituationHeroSection
         breadcrumb={content.breadcrumb}
         hero={content.hero}
-        situationSlug={content.slug}
+        situationSlug={content.pageKey}
       />
 
       {content.hero.keySteps && !content.process?.keySteps ? (

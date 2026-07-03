@@ -1,4 +1,4 @@
-/** Full section content for /situations/water-damage from situation-page/sell-flooded-house-st-petersburg.html */
+/** Full section content for /sell-flooded-house-florida from situation-page/sell-flooded-house-st-petersburg.html */
 
 export const WATER_DAMAGE_CONTENT = {
   hero: {

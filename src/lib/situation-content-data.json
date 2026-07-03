@@ -1,6 +1,6 @@
 [
   {
-    "slug": "foreclosure",
+    "slug": "stop-foreclosure-florida",
     "label": "Foreclosure",
     "breadcrumb": "Stop foreclosure",
     "metaTitle": "Stop Foreclosure in St Petersburg FL — Fast Cash Offers | We Buy St Pete Houses",
@@ -458,10 +458,11 @@
           "body": "Generic guidance misses Florida's specific foreclosure laws and St Pete's neighborhood realities. We live and work here."
         }
       ]
-    }
+    },
+    "pageKey": "foreclosure"
   },
   {
-    "slug": "inherited",
+    "slug": "sell-inherited-house-florida",
     "label": "Inherited house",
     "breadcrumb": "Inherited property",
     "metaTitle": "Sell Inherited House St Petersburg FL | Fast Cash Offer",
@@ -757,10 +758,11 @@
       ],
       "ctaTitle": "Ready to move forward with the sale?",
       "ctaBody": "A fair cash offer — no repairs, no commissions, on your probate timeline."
-    }
+    },
+    "pageKey": "inherited"
   },
   {
-    "slug": "divorce",
+    "slug": "sell-house-during-divorce-florida",
     "label": "Divorce",
     "breadcrumb": "Divorce home sale",
     "metaTitle": "Sell House During Divorce Florida | Fast Cash Sale St Pete | We Buy St Pete Houses",
@@ -1196,10 +1198,11 @@
       ],
       "ctaTitle": "Ready to take this off the table?",
       "ctaBody": "A fair cash offer that both parties can review — no obligation to accept."
-    }
+    },
+    "pageKey": "divorce"
   },
   {
-    "slug": "tenants",
+    "slug": "sell-rental-property-with-tenants-florida",
     "label": "House with tenants",
     "breadcrumb": "Rental with tenants",
     "metaTitle": "Sell Rental Property with Tenants Florida | Fast Cash Offers | We Buy St Pete Houses",
@@ -1663,10 +1666,11 @@
           "body": "Federal guidance on tenant protections during a property sale, including notice requirements and rights under federally assisted housing programs."
         }
       ]
-    }
+    },
+    "pageKey": "tenants"
   },
   {
-    "slug": "lien",
+    "slug": "sell-house-with-lien-florida",
     "label": "House with a lien",
     "breadcrumb": "Sell with a lien",
     "metaTitle": "Sell House with Lien in Florida | Fast Cash Offer St Pete | We Buy St Pete Houses",
@@ -2072,10 +2076,11 @@
           "body": "Free HUD-approved housing counselors can help homeowners understand how federal liens like FHA mortgage liens and HUD claims affect a property sale."
         }
       ]
-    }
+    },
+    "pageKey": "lien"
   },
   {
-    "slug": "water-damage",
+    "slug": "sell-flooded-house-florida",
     "label": "Water / flood damage",
     "breadcrumb": "Flooded home",
     "metaTitle": "Sell Flooded House St Petersburg for Cash – Fast Close | We Buy St Pete Houses",
@@ -2605,10 +2610,11 @@
           "body": "Local cash buyer specializing in flood-damaged properties across St Pete and Pinellas County. No repairs, no commissions, fast close."
         }
       ]
-    }
+    },
+    "pageKey": "water-damage"
   },
   {
-    "slug": "fire-damage",
+    "slug": "sell-fire-damaged-house-florida",
     "label": "Fire damage",
     "breadcrumb": "Fire-damaged home",
     "metaTitle": "Sell Fire Damaged House St Petersburg | Fast Cash Offer | We Buy St Pete Houses",
@@ -3021,10 +3027,11 @@
           "body": "File insurance complaints and verify adjuster licensing — relevant when an insurer underpays or denies a fire damage claim."
         }
       ]
-    }
+    },
+    "pageKey": "fire-damage"
   },
   {
-    "slug": "storm-damage",
+    "slug": "sell-storm-damaged-house-florida",
     "label": "Storm damage",
     "breadcrumb": "Storm-damaged home",
     "metaTitle": "Sell Storm Damaged House Florida | Fast Cash Offers | We Buy St Pete Houses",
@@ -3521,10 +3528,11 @@
           "body": "Storm damage has financial and emotional weight. We've helped Florida homeowners after hurricanes and flooding move forward — we know how to make this fast and simple."
         }
       ]
-    }
+    },
+    "pageKey": "storm-damage"
   },
   {
-    "slug": "mold-damage",
+    "slug": "selling-a-house-with-mold-florida",
     "label": "Mold Damage",
     "breadcrumb": "Mold damage",
     "metaTitle": "Sell Your Mold-Damaged House in St Petersburg, FL | Fast Cash Offer | We Buy St Pete Houses",
@@ -4038,7 +4046,8 @@
           "label": "St Pete based"
         }
       ]
-    }
+    },
+    "pageKey": "mold-damage"
   },
   {
     "slug": "as-is-florida",
@@ -4521,7 +4530,8 @@
           "body": "Find a licensed Florida real estate attorney for contract review, title disputes, or any legal questions that come up during the sale process."
         }
       ]
-    }
+    },
+    "pageKey": "as-is-florida"
   },
   {
     "slug": "cash-home-buyers",
@@ -4952,10 +4962,11 @@
           "body": "Documentary stamp tax obligations, capital gains guidance, and state tax filings related to property transfers in Florida."
         }
       ]
-    }
+    },
+    "pageKey": "cash-home-buyers"
   },
   {
-    "slug": "condemned",
+    "slug": "sell-condemned-house-florida",
     "label": "Condemned house",
     "breadcrumb": "Condemned property",
     "metaTitle": "Sell Your Condemned House in St Petersburg for Cash | We Buy St Pete Houses",
@@ -5339,10 +5350,11 @@
       "titleEm": "today.",
       "titleTail": "",
       "description": "Every day without resolution is another day of compounding fines. Written offer within 24 hours. Liens resolved at closing. We handle the city coordination — you handle nothing."
-    }
+    },
+    "pageKey": "condemned"
   },
   {
-    "slug": "medical-emergency",
+    "slug": "sell-house-for-medical-emergency-florida",
     "label": "Medical emergency",
     "breadcrumb": "Medical emergency",
     "metaTitle": "Sell Your House for a Medical Emergency in St Petersburg | We Buy St Pete Houses",
@@ -5723,10 +5735,11 @@
       "titleEm": "no obligation.",
       "titleTail": "",
       "description": "Written offer within 24 hours. Close in as little as 7 days. No fees, no repairs, no pressure. We respond personally — every time."
-    }
+    },
+    "pageKey": "medical-emergency"
   },
   {
-    "slug": "hoarder-house",
+    "slug": "sell-hoarder-house-florida",
     "label": "Hoarder house",
     "breadcrumb": "Hoarder house",
     "metaTitle": "Sell Your Hoarder House Fast in St Petersburg FL | Cash Offer | We Buy St Pete Houses",
@@ -6116,10 +6129,11 @@
       "titleEm": "no cleanup, no pressure.",
       "titleTail": "",
       "description": "A fair cash offer within 24 hours. We handle junk removal and code violations after closing. You walk away with cash and none of the burden."
-    }
+    },
+    "pageKey": "hoarder-house"
   },
   {
-    "slug": "reverse-mortgage",
+    "slug": "sell-house-with-reverse-mortgage-florida",
     "label": "Reverse mortgage",
     "breadcrumb": "Reverse mortgage",
     "metaTitle": "Sell Your St Petersburg Home with a Reverse Mortgage | We Buy St Pete Houses",
@@ -6531,10 +6545,11 @@
       "titleEm": "reverse mortgage home.",
       "titleTail": "",
       "description": "We request your payoff statement, build it into the offer math transparently, and close in 7–14 days. No fees, no repairs, no pressure — and no confusion about what you'll actually receive."
-    }
+    },
+    "pageKey": "reverse-mortgage"
   },
   {
-    "slug": "sell-as-is",
+    "slug": "sell-my-house-as-is-florida",
     "label": "Sell as-is (St Pete)",
     "breadcrumb": "Sell My House As-Is",
     "sectionOrder": [
@@ -6863,10 +6878,11 @@
         "SellFast@WeBuyStPeteHouses.com",
         "St. Petersburg, FL — We're Local"
       ]
-    }
+    },
+    "pageKey": "sell-as-is"
   },
   {
-    "slug": "bankruptcy",
+    "slug": "sell-house-during-bankruptcy-florida",
     "label": "Bankruptcy",
     "breadcrumb": "Sell during bankruptcy",
     "metaTitle": "Sell Your Florida House During Bankruptcy | We Buy St Pete Houses",
@@ -7209,10 +7225,11 @@
       "titleEm": "on your terms.",
       "titleTail": "",
       "description": "No repairs. No commissions. A transparent cash offer within 24 hours. We coordinate with your trustee and close fast once approvals are in place."
-    }
+    },
+    "pageKey": "bankruptcy"
   },
   {
-    "slug": "foundation-problems",
+    "slug": "sell-house-with-foundation-problems-florida",
     "label": "Foundation problems",
     "breadcrumb": "Foundation problems",
     "metaTitle": "Sell Your House with Foundation Problems in St Petersburg | We Buy St Pete Houses",
@@ -7564,6 +7581,7 @@
       "titleEm": "still buy",
       "titleTail": " your St. Pete home.",
       "description": "Get your no-obligation cash offer today. No repairs, no fees, no delays — close in as little as 7 days on your schedule."
-    }
+    },
+    "pageKey": "foundation-problems"
   }
 ]

@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 import { buildHomepageLinkHeader } from "./src/lib/agent-discovery/link-headers";
+import { buildSituationRedirects, buildSituationRewrites } from "./src/lib/situation-slugs";
 
 const nextConfig: NextConfig = {
   async headers() {
@@ -16,8 +17,12 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      { source: "/situations/probate", destination: "/situations/inherited", permanent: true },
-      { source: "/situations/mortgage", destination: "/situations/lien", permanent: true },
+      ...buildSituationRedirects(),
+    ];
+  },
+  async rewrites() {
+    return [
+      ...buildSituationRewrites(),
     ];
   },
   images: {

@@ -55,7 +55,7 @@ function formatResources(resources) {
 }
 
 export function generateSituationMd(page) {
-  const canonicalPath = `/situations/${page.slug}`;
+  const canonicalPath = `/${page.slug}`;
   const heroTitle = joinTitleParts(page.hero.titleLead, page.hero.titleEm, page.hero.titleTail);
   const sections = [
     pageHeader({
@@ -216,7 +216,7 @@ export function syncFaqAndSituationMdPages(root, pages) {
 
   for (const page of situations) {
     if (UNPUBLISHED_SITUATION_SLUGS.has(page.slug)) continue;
-    const key = `situations/${page.slug}`;
+    const key = page.slug;
     pages[key] = generateSituationMd(page);
     generated.push(key);
   }
@@ -225,7 +225,7 @@ export function syncFaqAndSituationMdPages(root, pages) {
     generated,
     situationKeys: situations
       .filter((page) => !UNPUBLISHED_SITUATION_SLUGS.has(page.slug))
-      .map((page) => `situations/${page.slug}`),
+      .map((page) => page.slug),
   };
 }
 

@@ -22,6 +22,20 @@ function isCityHref(href: string): boolean {
   return path.startsWith("we-buy-houses-") && path.endsWith("-fl");
 }
 
+function isSituationHref(href: string): boolean {
+  const path = href.replace(/^https?:\/\/[^/]+/i, "").replace(/\/$/, "");
+  if (path.startsWith("/situations/") || path.includes("/situations/")) {
+    return true;
+  }
+
+  const segment = path.replace(/^\//, "").split("/")[0] ?? "";
+  return (
+    segment.startsWith("sell-") ||
+    segment.startsWith("stop-") ||
+    segment.startsWith("selling-a-house-with-")
+  );
+}
+
 export function classifyButton(element: HTMLElement, href: string): ButtonClassification {
   const text = (
     element.textContent?.trim() ||
@@ -36,7 +50,7 @@ export function classifyButton(element: HTMLElement, href: string): ButtonClassi
     return { button_type: "cash_offer", button_action: "get_cash_offer" };
   }
 
-  if (lowerHref.startsWith("/situations/") || lowerHref.includes("/situations/")) {
+  if (isSituationHref(lowerHref)) {
     return { button_type: "situation", button_action: "view_situation" };
   }
 

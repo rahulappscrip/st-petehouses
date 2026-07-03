@@ -276,6 +276,8 @@ export type SituationSectionId =
 
 export type SituationFullContent = {
   slug: string;
+  /** Stable internal key (legacy short slug) for CSS, maps, and conditional sections. */
+  pageKey: string;
   label: string;
   breadcrumb: string;
   metaTitle: string;

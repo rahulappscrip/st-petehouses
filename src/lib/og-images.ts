@@ -59,8 +59,8 @@ export const PAGE_OG_IMAGES: Record<string, string> = {
   "/cash-vs-agent": "OG-Image-Cash-home-buyers.webp",
 };
 
-export function getSituationOgImage(slug: string): string | undefined {
-  return SITUATION_OG_IMAGES[slug];
+export function getSituationOgImage(pageKey: string): string | undefined {
+  return SITUATION_OG_IMAGES[pageKey];
 }
 
 export function getCityOgImage(route: string): string | undefined {

@@ -1,6 +1,7 @@
 import type { SituationFullContent } from "@/lib/situation-types";
 import rawPages from "@/lib/situation-content-data.json";
 import unpublishedSlugs from "@/lib/unpublished-situation-slugs.json";
+import { getSituationPath } from "@/lib/situation-slugs";
 
 const pages = rawPages as SituationFullContent[];
 
@@ -28,6 +29,6 @@ export function getSituationNavPages() {
     .map((p) => ({
       slug: p.slug,
       label: p.label,
-      href: `/situations/${p.slug}`,
+      href: getSituationPath(p.slug),
     }));
 }

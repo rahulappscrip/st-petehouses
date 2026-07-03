@@ -80,7 +80,16 @@ function removeBlogKeys(pages) {
 function removeStaleSituationKeys(pages, activeSituationKeys) {
   const active = new Set(activeSituationKeys);
   for (const key of Object.keys(pages)) {
-    if (key.startsWith("situations/") && !active.has(key)) {
+    if (key.startsWith("situations/")) {
+      delete pages[key];
+      continue;
+    }
+    if (active.has(key)) continue;
+    if (
+      key.startsWith("sell-") ||
+      key.startsWith("stop-") ||
+      key.startsWith("selling-a-house-with-")
+    ) {
       delete pages[key];
     }
   }

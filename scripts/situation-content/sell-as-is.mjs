@@ -1,4 +1,4 @@
-/** /situations/sell-as-is — sell-my-house-as-is-st-petersburg.html */
+/** /sell-my-house-as-is-florida — sell-my-house-as-is-st-petersburg.html */
 
 const sectionOrder = [
   "stats",

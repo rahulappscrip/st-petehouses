@@ -1,5 +1,12 @@
 import { readFileSync } from "node:fs";
-import { join } from "node:path";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+const UNPUBLISHED_SITUATION_SLUGS = new Set(
+  JSON.parse(readFileSync(join(__dirname, "../../src/lib/unpublished-situation-slugs.json"), "utf8")),
+);
 
 const SITE_URL = "https://webuystpetehouses.com";
 const COMPANY_LINE = "We Buy St Pete Houses · (727) 477-8998 · SellFast@WeBuyStPeteHouses.com";
@@ -51,9 +58,10 @@ export function getAllSiteRoutes(root) {
     readFileSync(join(root, "src/lib/situation-content-data.json"), "utf8"),
   );
   for (const page of situations) {
+    if (UNPUBLISHED_SITUATION_SLUGS.has(page.slug)) continue;
     routes.push({
-      key: `situations/${page.slug}`,
-      path: `/situations/${page.slug}`,
+      key: page.slug,
+      path: `/${page.slug}`,
       label: page.label,
     });
   }

@@ -1,4 +1,4 @@
-/** /situations/medical-emergency — from Medical Emergency/sell-house-medical-emergency-st-petersburg.html */
+/** /sell-house-for-medical-emergency-florida — from Medical Emergency/sell-house-medical-emergency-st-petersburg.html */
 
 export const MEDICAL_EMERGENCY_PAGE = {
   slug: "medical-emergency",

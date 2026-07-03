@@ -27,7 +27,7 @@ export function buildMcpServerCard() {
       {
         name: "get_page_markdown",
         description:
-          "Return markdown for a site page. Path examples: index, contact, situations/foreclosure, blog/how-to-price-an-inherited-home-in-florida.",
+          "Return markdown for a site page. Path examples: index, contact, stop-foreclosure-florida, blog/how-to-price-an-inherited-home-in-florida.",
       },
       {
         name: "get_site_index",

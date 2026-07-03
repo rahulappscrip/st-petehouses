@@ -1,4 +1,4 @@
-/** /situations/fire-damage — situation-page/sell-fire-damaged-house-st-petersburg.html */
+/** /sell-fire-damaged-house-florida — situation-page/sell-fire-damaged-house-st-petersburg.html */
 
 export const FIRE_DAMAGE_CONTENT = {
   process: {

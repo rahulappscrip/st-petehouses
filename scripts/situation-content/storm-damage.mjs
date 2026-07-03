@@ -1,4 +1,4 @@
-/** /situations/storm-damage — from situation-page/sell-storm-damaged-house-florida.html */
+/** /sell-storm-damaged-house-florida — from situation-page/sell-storm-damaged-house-florida.html */
 
 export const STORM_DAMAGE_CONTENT = {
   sectionOrder: [

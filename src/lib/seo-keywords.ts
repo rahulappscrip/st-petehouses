@@ -47,8 +47,8 @@ export function getCityPageKeyword(route: string, cityName: string): string {
   return CITY_KEYWORDS[route] ?? `we buy houses ${cityName} FL`;
 }
 
-export function getSituationPageKeyword(slug: string, label: string): string {
-  return SITUATION_KEYWORDS[slug] ?? `sell ${label.toLowerCase()} house St Petersburg FL`;
+export function getSituationPageKeyword(pageKey: string, label: string): string {
+  return SITUATION_KEYWORDS[pageKey] ?? `sell ${label.toLowerCase()} house St Petersburg FL`;
 }
 
 export function getBlogPostKeyword(post: BlogPost): string {

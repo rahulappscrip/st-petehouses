@@ -49,20 +49,20 @@ Service area: St. Petersburg, Clearwater, Largo, Dunedin, Pinellas Park, and the
 
 ## Seller situation pages
 
-- [Foreclosure](https://webuystpetehouses.com/situations/foreclosure): Stop foreclosure with a fast cash sale.
-- [Inherited house](https://webuystpetehouses.com/situations/inherited): Probate and inherited property sales.
-- [Divorce](https://webuystpetehouses.com/situations/divorce): Sell during divorce or separation.
-- [House with tenants](https://webuystpetehouses.com/situations/tenants): Tenant-occupied rental purchases.
-- [House with a lien](https://webuystpetehouses.com/situations/lien): Tax, mortgage, HOA, and judgment liens.
-- [Water / flood damage](https://webuystpetehouses.com/situations/water-damage): Flood-damaged homes sold as-is.
-- [Fire damage](https://webuystpetehouses.com/situations/fire-damage): Fire-damaged property cash sales.
-- [Storm damage](https://webuystpetehouses.com/situations/storm-damage): Hurricane and wind damage.
-- [Mold damage](https://webuystpetehouses.com/situations/mold-damage): Mold-damaged homes, no remediation required first.
-- [Sell as-is (St Pete)](https://webuystpetehouses.com/situations/sell-as-is): General as-is sales in St. Petersburg.
-- [Condemned house](https://webuystpetehouses.com/situations/condemned): Properties with condemnation notices.
-- [Medical emergency](https://webuystpetehouses.com/situations/medical-emergency): Fast sale during medical hardship.
-- [Hoarder house](https://webuystpetehouses.com/situations/hoarder-house): No cleanup required before closing.
-- [Reverse mortgage](https://webuystpetehouses.com/situations/reverse-mortgage): HECM payoff coordination.
+- [Foreclosure](https://webuystpetehouses.com/stop-foreclosure-florida): Stop foreclosure with a fast cash sale.
+- [Inherited house](https://webuystpetehouses.com/sell-inherited-house-florida): Probate and inherited property sales.
+- [Divorce](https://webuystpetehouses.com/sell-house-during-divorce-florida): Sell during divorce or separation.
+- [House with tenants](https://webuystpetehouses.com/sell-rental-property-with-tenants-florida): Tenant-occupied rental purchases.
+- [House with a lien](https://webuystpetehouses.com/sell-house-with-lien-florida): Tax, mortgage, HOA, and judgment liens.
+- [Water / flood damage](https://webuystpetehouses.com/sell-flooded-house-florida): Flood-damaged homes sold as-is.
+- [Fire damage](https://webuystpetehouses.com/sell-fire-damaged-house-florida): Fire-damaged property cash sales.
+- [Storm damage](https://webuystpetehouses.com/sell-storm-damaged-house-florida): Hurricane and wind damage.
+- [Mold damage](https://webuystpetehouses.com/selling-a-house-with-mold-florida): Mold-damaged homes, no remediation required first.
+- [Sell as-is (St Pete)](https://webuystpetehouses.com/sell-my-house-as-is-florida): General as-is sales in St. Petersburg.
+- [Condemned house](https://webuystpetehouses.com/sell-condemned-house-florida): Properties with condemnation notices.
+- [Medical emergency](https://webuystpetehouses.com/sell-house-for-medical-emergency-florida): Fast sale during medical hardship.
+- [Hoarder house](https://webuystpetehouses.com/sell-hoarder-house-florida): No cleanup required before closing.
+- [Reverse mortgage](https://webuystpetehouses.com/sell-house-with-reverse-mortgage-florida): HECM payoff coordination.
 
 ## Blog articles
 
@@ -102,7 +102,7 @@ Each page is also available as raw markdown for AI agents. Append `.md` to any p
 
 - Homepage: https://webuystpetehouses.com/index.md
 - Contact: https://webuystpetehouses.com/contact.md
-- Situation example: https://webuystpetehouses.com/situations/foreclosure.md
+- Situation example: https://webuystpetehouses.com/stop-foreclosure-florida.md
 - Blog example: https://webuystpetehouses.com/blog/how-to-price-an-inherited-home-in-florida.md
 
 These URLs return `text/markdown` and are marked `noindex` (not intended for search engine indexing).

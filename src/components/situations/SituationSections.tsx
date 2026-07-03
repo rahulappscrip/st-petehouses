@@ -1353,20 +1353,20 @@ export function renderSituationSection(
 
     case "empathy":
       if (
-        (content.slug === "divorce" ||
-          content.slug === "tenants" ||
-          content.slug === "lien" ||
-          content.slug === "storm-damage" ||
-          content.slug === "cash-home-buyers" ||
-          content.slug === "fire-damage" ||
-          content.slug === "water-damage" ||
-          content.slug === "sell-as-is" ||
-          content.slug === "mold-damage" ||
-          content.slug === "as-is-florida" ||
-          content.slug === "condemned" ||
-          content.slug === "medical-emergency" ||
-          content.slug === "hoarder-house" ||
-          content.slug === "reverse-mortgage") &&
+        (content.pageKey === "divorce" ||
+          content.pageKey === "tenants" ||
+          content.pageKey === "lien" ||
+          content.pageKey === "storm-damage" ||
+          content.pageKey === "cash-home-buyers" ||
+          content.pageKey === "fire-damage" ||
+          content.pageKey === "water-damage" ||
+          content.pageKey === "sell-as-is" ||
+          content.pageKey === "mold-damage" ||
+          content.pageKey === "as-is-florida" ||
+          content.pageKey === "condemned" ||
+          content.pageKey === "medical-emergency" ||
+          content.pageKey === "hoarder-house" ||
+          content.pageKey === "reverse-mortgage") &&
         content.empathy
       ) {
         return <SituationEmpathyCtaSection key={id} data={content.empathy} alt={alt} />;
@@ -1376,7 +1376,7 @@ export function renderSituationSection(
       ) : null;
 
     case "stages":
-      if ((content.slug === "condemned" || content.slug === "hoarder-house") && content.stages) {
+      if ((content.pageKey === "condemned" || content.pageKey === "hoarder-house") && content.stages) {
         return (
           <ProcessSection
             key={id}
@@ -1420,7 +1420,7 @@ export function renderSituationSection(
           data={content.moldDisclosure}
           alt={alt}
           imageMap={
-            content.slug === "mold-damage" ? SELL_AS_IS_MOLD_DISCLOSURE_IMAGES : undefined
+            content.pageKey === "mold-damage" ? SELL_AS_IS_MOLD_DISCLOSURE_IMAGES : undefined
           }
         />
       ) : null;
@@ -1441,7 +1441,7 @@ export function renderSituationSection(
       ) : null;
 
     case "tax":
-      if (content.slug === "divorce" && content.tax) {
+      if (content.pageKey === "divorce" && content.tax) {
         return <SituationTaxIconCardsSection key={id} data={content.tax} alt={alt} />;
       }
       return content.tax ? <SituationTaxSection key={id} data={content.tax} alt={alt} /> : null;
@@ -1452,13 +1452,13 @@ export function renderSituationSection(
       ) : null;
 
     case "process":
-      if (content.slug === "divorce" && content.process) {
+      if (content.pageKey === "divorce" && content.process) {
         return <SituationStepCardsSection key={id} data={content.process} />;
       }
       return content.process ? (
         <ProcessSection
           key={id}
-          id={content.slug === "condemned" || content.slug === "hoarder-house" ? "how-we-help" : "process"}
+          id={content.pageKey === "condemned" || content.pageKey === "hoarder-house" ? "how-we-help" : "process"}
           eyebrow={content.process.eyebrow}
           title={titleToParts(content.process)}
           lede={content.process.lede}
@@ -1467,7 +1467,7 @@ export function renderSituationSection(
           keySteps={content.process.keySteps}
           docs={content.process.docs}
           disclosureNote={content.process.disclosureNote}
-          showStepMeta={content.slug === "reverse-mortgage"}
+          showStepMeta={content.pageKey === "reverse-mortgage"}
           secondaryCta={
             content.process.secondaryCta ?? {
               label: `Call ${SITE.phone}`,
@@ -1481,7 +1481,7 @@ export function renderSituationSection(
       return content.prose ? <SituationProseSection key={id} data={content.prose} alt={alt} /> : null;
 
     case "payoff":
-      if (content.slug === "reverse-mortgage" && content.payoff) {
+      if (content.pageKey === "reverse-mortgage" && content.payoff) {
         return <SituationStepCardsSection key={id} data={content.payoff} stepLabel="" />;
       }
       return content.payoff ? <SituationPayoffSection key={id} data={content.payoff} alt={alt} /> : null;
@@ -1513,9 +1513,9 @@ export function renderSituationSection(
           data={content.environmental}
           alt={alt}
           imageMap={
-            content.slug === "as-is-florida"
+            content.pageKey === "as-is-florida"
               ? AS_IS_FLORIDA_ENVIRONMENTAL_IMAGES
-              : content.slug === "storm-damage"
+              : content.pageKey === "storm-damage"
                 ? STORM_DAMAGE_ENVIRONMENTAL_IMAGES
                 : undefined
           }
@@ -1523,7 +1523,7 @@ export function renderSituationSection(
       ) : null;
 
     case "cards":
-      if (content.slug === "divorce" && content.cards) {
+      if (content.pageKey === "divorce" && content.cards) {
         return <SituationPillCardsSection key={id} data={content.cards} alt={alt} />;
       }
       if (content.cards?.numberedCards) {
@@ -1532,7 +1532,7 @@ export function renderSituationSection(
             key={id}
             data={content.cards}
             alt={alt}
-            imageMap={SITUATION_PAGE_CARD_IMAGES[content.slug]}
+            imageMap={SITUATION_PAGE_CARD_IMAGES[content.pageKey]}
           />
         );
       }
@@ -1543,9 +1543,9 @@ export function renderSituationSection(
             data={content.cards}
             alt={alt}
             imageMap={
-              content.slug === "lien"
+              content.pageKey === "lien"
                 ? LIEN_TYPE_CARD_IMAGES
-                : SITUATION_PAGE_CARD_IMAGES[content.slug]
+                : SITUATION_PAGE_CARD_IMAGES[content.pageKey]
             }
           />
         );
@@ -1560,7 +1560,7 @@ export function renderSituationSection(
                 eyebrow={content.cards.eyebrow}
                 title={titleToParts(content.cards)}
                 lede={content.cards.lede ?? ""}
-                items={mapSituationPageCityCards(content.slug, content.cards.items)}
+                items={mapSituationPageCityCards(content.pageKey, content.cards.items)}
               />
               {content.cards.exclusionNote ? (
                 <div className="situation-exclusion-note">
@@ -1581,7 +1581,7 @@ export function renderSituationSection(
             lede={content.cards.lede ?? ""}
             linkable={false}
             items={mapSituationPageCardsToSellerCards(
-              content.slug,
+              content.pageKey,
               content.cards.items.map((item) => ({ title: item.title, body: item.body })),
             )}
             after={
@@ -1628,7 +1628,7 @@ export function renderSituationSection(
           eyebrow={content.areas.eyebrow}
           title={titleToParts(content.areas)}
           lede={content.areas.lede}
-          listHeading={content.slug === "inherited" ? "Communities we serve" : undefined}
+          listHeading={content.pageKey === "inherited" ? "Communities we serve" : undefined}
           areasNote={content.areas.areasNote}
           areasNoteLink={content.areas.areasNoteLink}
           areasNoteAfter={content.areas.areasNoteAfter}
@@ -1640,7 +1640,7 @@ export function renderSituationSection(
       return content.testimonials ? (
         <SituationTestimonialsSectionBlock
           key={id}
-          slug={content.slug}
+          slug={content.pageKey}
           header={content.testimonials}
           className={alt ? "section-alt" : ""}
         />
@@ -1661,7 +1661,7 @@ export function renderSituationSection(
             lede={content.situations.lede ?? ""}
             linkable={false}
             items={mapSituationPageSituationsToSellerCards(
-              content.slug,
+              content.pageKey,
               content.situations.items.map((item) => ({ title: item.title, body: item.body })),
             )}
           />
@@ -1703,11 +1703,11 @@ export function renderSituationSection(
             badgeLabel={content.market.badgeLabel}
             chartImage={
               content.market.chartImage ??
-              (content.slug === "foreclosure" ? ASSETS.marketChartForeclosure : undefined)
+              (content.pageKey === "foreclosure" ? ASSETS.marketChartForeclosure : undefined)
             }
             chartImageAlt={
               content.market.chartImageAlt ??
-              (content.slug === "foreclosure"
+              (content.pageKey === "foreclosure"
                 ? "Chart illustrating the St. Petersburg foreclosure cash home market"
                 : undefined)
             }
@@ -1770,7 +1770,7 @@ export function renderSituationSection(
 
     case "diff":
       return content.diff ? (
-        <SituationDiffSection key={id} data={content.diff} slug={content.slug} alt={alt} />
+        <SituationDiffSection key={id} data={content.diff} slug={content.pageKey} alt={alt} />
       ) : null;
 
     case "resources":

@@ -1,4 +1,6 @@
-export const SITUATION_LABEL_BY_SLUG: Record<string, string> = {
+import { SITUATION_SLUG_MIGRATION } from "@/lib/situation-slugs";
+
+const SITUATION_LABEL_BY_PAGE_KEY: Record<string, string> = {
   foreclosure: "Foreclosure",
   inherited: "Inherited house",
   divorce: "Divorce",
@@ -17,4 +19,14 @@ export const SITUATION_LABEL_BY_SLUG: Record<string, string> = {
   "sell-as-is": "Sell as-is (St Pete)",
   bankruptcy: "Bankruptcy",
   "foundation-problems": "Foundation problems",
+};
+
+export const SITUATION_LABEL_BY_SLUG: Record<string, string> = {
+  ...SITUATION_LABEL_BY_PAGE_KEY,
+  ...Object.fromEntries(
+    Object.entries(SITUATION_SLUG_MIGRATION).map(([pageKey, slug]) => [
+      slug,
+      SITUATION_LABEL_BY_PAGE_KEY[pageKey] ?? pageKey,
+    ]),
+  ),
 };

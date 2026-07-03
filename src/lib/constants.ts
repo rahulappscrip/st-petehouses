@@ -783,22 +783,22 @@ export const NAV_LINKS = {
     cities: CITY_NAV_LINKS,
   },
   situations: [
-    { label: "Foreclosure", href: "/situations/foreclosure" },
-    { label: "Inherited house", href: "/situations/inherited" },
-    { label: "Divorce", href: "/situations/divorce" },
-    { label: "House with tenants", href: "/situations/tenants" },
-    { label: "Bankruptcy", href: "/situations/bankruptcy" },
-    { label: "House with a lien", href: "/situations/lien" },
-    { label: "Water / flood damage", href: "/situations/water-damage" },
-    { label: "Fire damage", href: "/situations/fire-damage" },
-    { label: "Storm damage", href: "/situations/storm-damage" },
-    { label: "Sell as-is (St Pete)", href: "/situations/sell-as-is" },
-    { label: "Mold Damage", href: "/situations/mold-damage" },
-    { label: "Condemned house", href: "/situations/condemned" },
-    { label: "Medical emergency", href: "/situations/medical-emergency" },
-    { label: "Hoarder house", href: "/situations/hoarder-house" },
-    { label: "Foundation problems", href: "/situations/foundation-problems" },
-    { label: "Reverse mortgage", href: "/situations/reverse-mortgage" },
+    { label: "Foreclosure", href: "/stop-foreclosure-florida" },
+    { label: "Inherited house", href: "/sell-inherited-house-florida" },
+    { label: "Divorce", href: "/sell-house-during-divorce-florida" },
+    { label: "House with tenants", href: "/sell-rental-property-with-tenants-florida" },
+    { label: "Bankruptcy", href: "/sell-house-during-bankruptcy-florida" },
+    { label: "House with a lien", href: "/sell-house-with-lien-florida" },
+    { label: "Water / flood damage", href: "/sell-flooded-house-florida" },
+    { label: "Fire damage", href: "/sell-fire-damaged-house-florida" },
+    { label: "Storm damage", href: "/sell-storm-damaged-house-florida" },
+    { label: "Sell as-is (St Pete)", href: "/sell-my-house-as-is-florida" },
+    { label: "Mold Damage", href: "/selling-a-house-with-mold-florida" },
+    { label: "Condemned house", href: "/sell-condemned-house-florida" },
+    { label: "Medical emergency", href: "/sell-house-for-medical-emergency-florida" },
+    { label: "Hoarder house", href: "/sell-hoarder-house-florida" },
+    { label: "Foundation problems", href: "/sell-house-with-foundation-problems-florida" },
+    { label: "Reverse mortgage", href: "/sell-house-with-reverse-mortgage-florida" },
   ],
   company: [
     { label: "About Us", href: "/about" },
@@ -810,22 +810,22 @@ export const NAV_LINKS = {
 
 /** Footer “We Buy Houses In Any Situation” column — fixed order. */
 export const FOOTER_SITUATIONS = [
-  { label: "Foreclosure", href: "/situations/foreclosure" },
-  { label: "Inherited house", href: "/situations/inherited" },
-  { label: "Divorce", href: "/situations/divorce" },
-  { label: "House with tenants", href: "/situations/tenants" },
-  { label: "Bankruptcy", href: "/situations/bankruptcy" },
-  { label: "House with a lien", href: "/situations/lien" },
-  { label: "Water / flood damage", href: "/situations/water-damage" },
-  { label: "Fire damage", href: "/situations/fire-damage" },
-  { label: "Storm damage", href: "/situations/storm-damage" },
-  { label: "Sell as-is (St Pete)", href: "/situations/sell-as-is" },
-  { label: "Mold Damage", href: "/situations/mold-damage" },
-  { label: "Condemned house", href: "/situations/condemned" },
-  { label: "Medical emergency", href: "/situations/medical-emergency" },
-  { label: "Hoarder house", href: "/situations/hoarder-house" },
-  { label: "Foundation problems", href: "/situations/foundation-problems" },
-  { label: "Reverse mortgage", href: "/situations/reverse-mortgage" },
+  { label: "Foreclosure", href: "/stop-foreclosure-florida" },
+  { label: "Inherited house", href: "/sell-inherited-house-florida" },
+  { label: "Divorce", href: "/sell-house-during-divorce-florida" },
+  { label: "House with tenants", href: "/sell-rental-property-with-tenants-florida" },
+  { label: "Bankruptcy", href: "/sell-house-during-bankruptcy-florida" },
+  { label: "House with a lien", href: "/sell-house-with-lien-florida" },
+  { label: "Water / flood damage", href: "/sell-flooded-house-florida" },
+  { label: "Fire damage", href: "/sell-fire-damaged-house-florida" },
+  { label: "Storm damage", href: "/sell-storm-damaged-house-florida" },
+  { label: "Sell as-is (St Pete)", href: "/sell-my-house-as-is-florida" },
+  { label: "Mold Damage", href: "/selling-a-house-with-mold-florida" },
+  { label: "Condemned house", href: "/sell-condemned-house-florida" },
+  { label: "Medical emergency", href: "/sell-house-for-medical-emergency-florida" },
+  { label: "Hoarder house", href: "/sell-hoarder-house-florida" },
+  { label: "Foundation problems", href: "/sell-house-with-foundation-problems-florida" },
+  { label: "Reverse mortgage", href: "/sell-house-with-reverse-mortgage-florida" },
 ] as const;
 
 export const STATS = [
@@ -920,7 +920,7 @@ export const SELLER_SITUATIONS = [
   {
     title: "Facing foreclosure",
     body: "Stop the process with a fast cash close before the auction date.",
-    href: "/situations/foreclosure",
+    href: "/stop-foreclosure-florida",
     image: ASSETS.facingForeclosure,
     imageAlt: "St. Petersburg home facing foreclosure — sell for cash before auction",
     imageTitle: "Facing foreclosure? Get a fast cash offer in St. Petersburg",
@@ -928,7 +928,7 @@ export const SELLER_SITUATIONS = [
   {
     title: "Inherited a home",
     body: "Settle the estate without managing repairs or showings.",
-    href: "/situations/inherited",
+    href: "/sell-inherited-house-florida",
     image: ASSETS.inheritedHome,
     imageAlt: "Inherited Florida home ready for a probate or estate cash sale",
     imageTitle: "Sell an inherited home in St. Petersburg for cash",
@@ -936,7 +936,7 @@ export const SELLER_SITUATIONS = [
   {
     title: "Divorce or separation",
     body: "Divide assets quickly without prolonged listing periods.",
-    href: "/situations/divorce",
+    href: "/sell-house-during-divorce-florida",
     image: ASSETS.divorceSeparation,
     imageAlt: "Dividing marital property during divorce — cash home sale in Florida",
     imageTitle: "Sell a home quickly during divorce or separation",
@@ -944,7 +944,7 @@ export const SELLER_SITUATIONS = [
   {
     title: "Tired landlord",
     body: "Goodbye, problem tenants. We buy with the lease in place if needed.",
-    href: "/situations/tenants",
+    href: "/sell-rental-property-with-tenants-florida",
     image: ASSETS.tiredLandlord,
     imageAlt: "Tired landlord selling a tenant-occupied rental for cash in Tampa Bay",
     imageTitle: "Exit a rental property with tenants in place",
@@ -952,7 +952,7 @@ export const SELLER_SITUATIONS = [
   {
     title: "Distressed property",
     body: "No major repairs needed. Skip the contractor — we buy as-is.",
-    href: "/situations/sell-as-is",
+    href: "/sell-my-house-as-is-florida",
     image: ASSETS.distressedProperty,
     imageAlt: "Distressed St. Petersburg home sold as-is for cash without repairs",
     imageTitle: "Sell a distressed property as-is for cash",
@@ -989,98 +989,98 @@ function resolveCitySituationMedia(title: string): { image: string; imageAlt: st
     return {
       image: ASSETS.behindOnPayments,
       imageAlt: "Homeowner reviewing mortgage payment documents",
-      href: "/situations/foreclosure",
+      href: "/stop-foreclosure-florida",
     };
   }
   if (/upside-down mortgage|upside down mortgage/i.test(lower)) {
     return {
       image: ASSETS.upsideDownMortgage,
       imageAlt: "House illustrating an upside-down mortgage situation",
-      href: "/situations/lien",
+      href: "/sell-house-with-lien-florida",
     };
   }
   if (/vacant property|vacant homes|vacant or hard-to-sell/i.test(lower)) {
     return {
       image: ASSETS.vacantProperty,
       imageAlt: "Vacant residential property ready for a cash sale",
-      href: "/situations/sell-as-is",
+      href: "/sell-my-house-as-is-florida",
     };
   }
   if (/foreclos|behind on mortgage|pre-foreclosure/i.test(lower)) {
     return {
       image: ASSETS.facingForeclosure,
       imageAlt: SELLER_SITUATIONS[0].imageAlt,
-      href: "/situations/foreclosure",
+      href: "/stop-foreclosure-florida",
     };
   }
   if (/divorc|separat/i.test(lower)) {
     return {
       image: ASSETS.divorceSeparation,
       imageAlt: SELLER_SITUATIONS[2].imageAlt,
-      href: "/situations/divorce",
+      href: "/sell-house-during-divorce-florida",
     };
   }
   if (/inher|probate|estate/i.test(lower)) {
     return {
       image: ASSETS.inheritedOrProbateProperty,
       imageAlt: "Inherited or probate property ready for a cash home sale",
-      href: "/situations/inherited",
+      href: "/sell-inherited-house-florida",
     };
   }
   if (/landlord|tenant/i.test(lower)) {
     return {
       image: ASSETS.tiredLandlord,
       imageAlt: SELLER_SITUATIONS[3].imageAlt,
-      href: "/situations/tenants",
+      href: "/sell-rental-property-with-tenants-florida",
     };
   }
   if (/bankruptcy/i.test(lower)) {
     return {
       image: ASSETS.behindOnPayments,
       imageAlt: "Selling a Florida home during bankruptcy for cash",
-      href: "/situations/bankruptcy",
+      href: "/sell-house-during-bankruptcy-florida",
     };
   }
   if (/tax lien/i.test(lower)) {
     return {
       image: ASSETS.taxLiens,
       imageAlt: "Florida home with tax lien resolved at cash closing",
-      href: "/situations/lien",
+      href: "/sell-house-with-lien-florida",
     };
   }
   if (/mortgage lien/i.test(lower)) {
     return {
       image: ASSETS.mortgageLiens,
       imageAlt: "Home with mortgage lien paid off from sale proceeds at closing",
-      href: "/situations/lien",
+      href: "/sell-house-with-lien-florida",
     };
   }
   if (/judgment lien/i.test(lower)) {
     return {
       image: ASSETS.judgmentLiens,
       imageAlt: "Property with judgment lien handled at cash closing",
-      href: "/situations/lien",
+      href: "/sell-house-with-lien-florida",
     };
   }
   if (/mechanic.*lien|mechanics lien/i.test(lower)) {
     return {
       image: ASSETS.mechanicsLiens,
       imageAlt: "Home with mechanic's lien sold as-is for cash",
-      href: "/situations/lien",
+      href: "/sell-house-with-lien-florida",
     };
   }
   if (/hoa lien/i.test(lower)) {
     return {
       image: ASSETS.hoaLiens,
       imageAlt: "Property with HOA lien satisfied at closing",
-      href: "/situations/lien",
+      href: "/sell-house-with-lien-florida",
     };
   }
   if (/multiple lien/i.test(lower)) {
     return {
       image: ASSETS.multipleLiens,
       imageAlt: "Property with multiple liens coordinated at cash closing",
-      href: "/situations/lien",
+      href: "/sell-house-with-lien-florida",
     };
   }
   if (/relocat|moving|job transfer/i.test(lower)) {
@@ -1094,14 +1094,14 @@ function resolveCitySituationMedia(title: string): { image: string; imageAlt: st
     return {
       image: ASSETS.upsideDownMortgage,
       imageAlt: "House illustrating an upside-down mortgage situation",
-      href: "/situations/lien",
+      href: "/sell-house-with-lien-florida",
     };
   }
   if (/major repairs|hard-to-sell|as-is|distress|repair/i.test(lower)) {
     return {
       image: ASSETS.distressedProperty,
       imageAlt: SELLER_SITUATIONS[4].imageAlt,
-      href: "/situations/sell-as-is",
+      href: "/sell-my-house-as-is-florida",
     };
   }
 
@@ -1206,7 +1206,7 @@ function resolveCityBenefitMedia(title: string): { image: string; imageAlt: stri
     return {
       image: ASSETS.sellAsIsNoRepairs,
       imageAlt: "Selling a Clearwater home as-is with no repairs or cleaning",
-      href: "/situations/sell-as-is",
+      href: "/sell-my-house-as-is-florida",
     };
   }
   if (/no agent commissions|commissions or fees|agent commissions/i.test(lower)) {

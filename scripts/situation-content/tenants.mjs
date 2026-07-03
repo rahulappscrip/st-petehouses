@@ -1,4 +1,4 @@
-/** /situations/tenants — from situation-page/sell-rental-property-with-tenants-florida.html */
+/** /sell-rental-property-with-tenants-florida — from situation-page/sell-rental-property-with-tenants-florida.html */
 
 export const TENANTS_CONTENT = {
   sectionOrder: [

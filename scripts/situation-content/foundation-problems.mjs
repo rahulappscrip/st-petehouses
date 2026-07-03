@@ -1,4 +1,4 @@
-/** /situations/foundation-problems — from Foundation Problems.html */
+/** /sell-house-with-foundation-problems-florida — from Foundation Problems.html */
 
 export const FOUNDATION_PROBLEMS_PAGE = {
   slug: "foundation-problems",
