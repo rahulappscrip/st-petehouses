@@ -3,7 +3,6 @@ import { resolvePhoneCountry } from "@/lib/phone-countries";
 
 const HOU_API_URL = "https://api-v2.houseofapps.ai/v1/integrations/leads";
 const HOU_WEBSITE_LEAD_CUSTOM_FIELD = {
-  instance_id: "fcd7ed37-0f9b-4086-9207-b6224a242c33",
   field_id: "05837193-f94f-47a5-8c5b-b28d574da47f",
   value: true as const,
 };
@@ -49,6 +48,7 @@ export function buildLeadPayload(input: LeadFormInput): HouseOfAppsLeadPayload {
       name: input.sellReason ? input.sellReason + " - " + input.address.trim() : input.address.trim(),
       stage_id: stageId,
       lead_source: "Website",
+      custom_fields: [HOU_WEBSITE_LEAD_CUSTOM_FIELD],
     },
     contact: {
       email: input.email,
@@ -70,21 +70,18 @@ export function buildLeadPayload(input: LeadFormInput): HouseOfAppsLeadPayload {
         },
       ],
     },
-    custom_fields: [HOU_WEBSITE_LEAD_CUSTOM_FIELD],
   };
 
   if (sellReasonFieldId && sellReasonSubFieldId) {
-    payload.lead.custom_fields = [
-      {
-        field_id: sellReasonFieldId,
-        sub_fields: [
-          {
-            field_id: sellReasonSubFieldId,
-            value: input.sellReason,
-          },
-        ],
-      },
-    ];
+    payload.lead.custom_fields.push({
+      field_id: sellReasonFieldId,
+      sub_fields: [
+        {
+          field_id: sellReasonSubFieldId,
+          value: input.sellReason,
+        },
+      ],
+    });
   }
 
   return payload;

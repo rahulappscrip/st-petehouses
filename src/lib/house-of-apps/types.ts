@@ -15,18 +15,19 @@ export type HouseOfAppsLeadSubField = {
   }>;
 };
 
-export type HouseOfAppsRootCustomField = {
-  instance_id: string;
+export type HouseOfAppsLeadBooleanField = {
   field_id: string;
   value: boolean;
 };
+
+export type HouseOfAppsLeadCustomField = HouseOfAppsLeadSubField | HouseOfAppsLeadBooleanField;
 
 export type HouseOfAppsLeadPayload = {
   lead: {
     name: string;
     stage_id: string;
     lead_source: string;
-    custom_fields?: HouseOfAppsLeadSubField[];
+    custom_fields: HouseOfAppsLeadCustomField[];
   };
   contact: {
     email: string;
@@ -44,5 +45,4 @@ export type HouseOfAppsLeadPayload = {
       is_primary: boolean;
     }>;
   };
-  custom_fields: HouseOfAppsRootCustomField[];
 };
