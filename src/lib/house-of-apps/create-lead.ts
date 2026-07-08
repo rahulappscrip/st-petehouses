@@ -2,6 +2,11 @@ import type { HouseOfAppsLeadPayload, LeadFormInput } from "@/lib/house-of-apps/
 import { resolvePhoneCountry } from "@/lib/phone-countries";
 
 const HOU_API_URL = "https://api-v2.houseofapps.ai/v1/integrations/leads";
+const HOU_WEBSITE_LEAD_CUSTOM_FIELD = {
+  instance_id: "fcd7ed37-0f9b-4086-9207-b6224a242c33",
+  field_id: "05837193-f94f-47a5-8c5b-b28d574da47f",
+  value: true as const,
+};
 
 function splitFullName(fullName: string): { firstName: string; lastName: string } {
   const trimmed = fullName.trim();
@@ -35,8 +40,6 @@ export function buildLeadPayload(input: LeadFormInput): HouseOfAppsLeadPayload {
   const stageId = process.env.HOU_STAGE_ID ?? "";
   const sellReasonFieldId = process.env.HOU_SELL_REASON_FIELD_ID ?? "";
   const sellReasonSubFieldId = process.env.HOU_SELL_REASON_SUB_FIELD_ID ?? "";
-  const customFieldInstanceId = process.env.HOU_CUSTOM_FIELD_INSTANCE_ID ?? "";
-  const customFieldId = process.env.HOU_CUSTOM_FIELD_ID ?? "";
 
   const { firstName, lastName } = splitFullName(input.fullName);
   const phoneCountry = resolvePhoneCountry(input.phoneCountryCode);
@@ -67,32 +70,21 @@ export function buildLeadPayload(input: LeadFormInput): HouseOfAppsLeadPayload {
         },
       ],
     },
+    custom_fields: [HOU_WEBSITE_LEAD_CUSTOM_FIELD],
   };
 
-  const customFields: HouseOfAppsLeadPayload["lead"]["custom_fields"] = [];
-
-  if (customFieldInstanceId && customFieldId) {
-    customFields.push({
-      instance_id: customFieldInstanceId,
-      field_id: customFieldId,
-      value: true,
-    });
-  }
-
   if (sellReasonFieldId && sellReasonSubFieldId) {
-    customFields.push({
-      field_id: sellReasonFieldId,
-      sub_fields: [
-        {
-          field_id: sellReasonSubFieldId,
-          value: input.sellReason,
-        },
-      ],
-    });
-  }
-
-  if (customFields.length > 0) {
-    payload.lead.custom_fields = customFields;
+    payload.lead.custom_fields = [
+      {
+        field_id: sellReasonFieldId,
+        sub_fields: [
+          {
+            field_id: sellReasonSubFieldId,
+            value: input.sellReason,
+          },
+        ],
+      },
+    ];
   }
 
   return payload;

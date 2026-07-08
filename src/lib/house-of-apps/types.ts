@@ -7,26 +7,26 @@ export type LeadFormInput = {
   email: string;
 };
 
-export type HouseOfAppsCustomField =
-  | {
-      field_id: string;
-      sub_fields: Array<{
-        field_id: string;
-        value: string;
-      }>;
-    }
-  | {
-      instance_id: string;
-      field_id: string;
-      value: boolean;
-    };
+export type HouseOfAppsLeadSubField = {
+  field_id: string;
+  sub_fields: Array<{
+    field_id: string;
+    value: string;
+  }>;
+};
+
+export type HouseOfAppsRootCustomField = {
+  instance_id: string;
+  field_id: string;
+  value: boolean;
+};
 
 export type HouseOfAppsLeadPayload = {
   lead: {
     name: string;
     stage_id: string;
     lead_source: string;
-    custom_fields?: HouseOfAppsCustomField[];
+    custom_fields?: HouseOfAppsLeadSubField[];
   };
   contact: {
     email: string;
@@ -44,4 +44,5 @@ export type HouseOfAppsLeadPayload = {
       is_primary: boolean;
     }>;
   };
+  custom_fields: HouseOfAppsRootCustomField[];
 };
