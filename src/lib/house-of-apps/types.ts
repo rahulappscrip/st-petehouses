@@ -7,18 +7,26 @@ export type LeadFormInput = {
   email: string;
 };
 
-export type HouseOfAppsLeadPayload = {
-  lead: {
-    name: string;
-    stage_id: string;
-    lead_source: string;
-    custom_fields?: Array<{
+export type HouseOfAppsCustomField =
+  | {
       field_id: string;
       sub_fields: Array<{
         field_id: string;
         value: string;
       }>;
-    }>;
+    }
+  | {
+      instance_id: string;
+      field_id: string;
+      value: boolean;
+    };
+
+export type HouseOfAppsLeadPayload = {
+  lead: {
+    name: string;
+    stage_id: string;
+    lead_source: string;
+    custom_fields?: HouseOfAppsCustomField[];
   };
   contact: {
     email: string;

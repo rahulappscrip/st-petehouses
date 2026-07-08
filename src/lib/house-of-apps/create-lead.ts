@@ -35,6 +35,8 @@ export function buildLeadPayload(input: LeadFormInput): HouseOfAppsLeadPayload {
   const stageId = process.env.HOU_STAGE_ID ?? "";
   const sellReasonFieldId = process.env.HOU_SELL_REASON_FIELD_ID ?? "";
   const sellReasonSubFieldId = process.env.HOU_SELL_REASON_SUB_FIELD_ID ?? "";
+  const customFieldInstanceId = process.env.HOU_CUSTOM_FIELD_INSTANCE_ID ?? "";
+  const customFieldId = process.env.HOU_CUSTOM_FIELD_ID ?? "";
 
   const { firstName, lastName } = splitFullName(input.fullName);
   const phoneCountry = resolvePhoneCountry(input.phoneCountryCode);
@@ -67,18 +69,30 @@ export function buildLeadPayload(input: LeadFormInput): HouseOfAppsLeadPayload {
     },
   };
 
+  const customFields: HouseOfAppsLeadPayload["lead"]["custom_fields"] = [];
+
+  if (customFieldInstanceId && customFieldId) {
+    customFields.push({
+      instance_id: customFieldInstanceId,
+      field_id: customFieldId,
+      value: true,
+    });
+  }
+
   if (sellReasonFieldId && sellReasonSubFieldId) {
-    payload.lead.custom_fields = [
-      {
-        field_id: sellReasonFieldId,
-        sub_fields: [
-          {
-            field_id: sellReasonSubFieldId,
-            value: input.sellReason,
-          },
-        ],
-      },
-    ];
+    customFields.push({
+      field_id: sellReasonFieldId,
+      sub_fields: [
+        {
+          field_id: sellReasonSubFieldId,
+          value: input.sellReason,
+        },
+      ],
+    });
+  }
+
+  if (customFields.length > 0) {
+    payload.lead.custom_fields = customFields;
   }
 
   return payload;

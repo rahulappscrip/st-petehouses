@@ -3,7 +3,7 @@
  * Add this block to stpete-leads.php (same plugin as lead submissions).
  * Reuses STPETE_LEAD_API_SECRET — no new secrets or wp-config defines needed.
  *
- * Next.js must have WORDPRESS_LEAD_API_SECRET set to the same value.
+ * Next.js must have REVALIDATE_BLOG_SECRET set to the same value.
  */
 
 add_action('transition_post_status', function ($new_status, $old_status, $post) {

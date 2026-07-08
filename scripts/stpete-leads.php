@@ -9,7 +9,7 @@ if (!defined('ABSPATH')) {
   exit;
 }
 
-// Must match WORDPRESS_LEAD_API_SECRET in Next.js .env
+// Must match REVALIDATE_BLOG_SECRET in Next.js .env (blog revalidate webhook)
 define('STPETE_LEAD_API_SECRET', 'AhzdlgWKfxRXj4BmbEmhC2OU');
 
 // Next.js site URL — use Vercel preview/staging until production domain is live.

@@ -7,8 +7,7 @@ type RevalidateBody = {
 
 export async function POST(request: Request) {
   const secret = request.headers.get("x-revalidate-secret");
-  const expectedSecret =
-    process.env.REVALIDATE_BLOG_SECRET ?? process.env.WORDPRESS_LEAD_API_SECRET;
+  const expectedSecret = process.env.REVALIDATE_BLOG_SECRET;
 
   if (!expectedSecret || secret !== expectedSecret) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });

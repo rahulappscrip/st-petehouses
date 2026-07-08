@@ -8,7 +8,7 @@ import {
 } from "@/lib/lead-form-validation";
 import { isSupportedPhoneCountry } from "@/lib/phone-countries";
 import { sendLeadNotificationEmail } from "@/lib/resend/send-lead-notification";
-import { createWordPressLead } from "@/lib/wordpress/create-lead";
+import { sendLeadSlackNotification } from "@/lib/slack/send-lead-notification";
 
 type ParsedLeadInput = LeadFormInput & {
   sourcePage: string;
@@ -73,15 +73,15 @@ export async function POST(request: Request) {
     const result = await createHouseOfAppsLead(input);
 
     try {
-      await createWordPressLead(input);
-    } catch (wpError) {
-      console.error("Failed to save lead to WordPress:", wpError);
-    }
-
-    try {
       await sendLeadNotificationEmail(input);
     } catch (emailError) {
       console.error("Failed to send lead notification email:", emailError);
+    }
+
+    try {
+      await sendLeadSlackNotification(input);
+    } catch (slackError) {
+      console.error("Failed to send lead Slack notification:", slackError);
     }
 
     return NextResponse.json({ success: true, result });

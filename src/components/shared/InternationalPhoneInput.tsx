@@ -53,7 +53,9 @@ export function InternationalPhoneInput({
   const activeCountry = resolvePhoneCountry(countryCode);
   const resolvedPlaceholder =
     placeholder ??
-    (activeCountry.code === "US" || activeCountry.code === "CA" ? "(727) 477-8998" : "Phone number");
+    (activeCountry.code === "US" || activeCountry.code === "CA"
+      ? "(727) 477-8998"
+      : "Enter phone number");
 
   function handleCountryChange(nextCountryCode: string) {
     userChangedCountry.current = true;
@@ -87,6 +89,7 @@ export function InternationalPhoneInput({
         </select>
         <span className="phone-country-select__display" aria-hidden="true">
           <span className="phone-country-select__flag">{countryCodeToFlag(activeCountry.code)}</span>
+          <span className="phone-country-select__country">{activeCountry.code}</span>
           <span className="phone-country-select__dial">{activeCountry.dialCode}</span>
         </span>
       </div>

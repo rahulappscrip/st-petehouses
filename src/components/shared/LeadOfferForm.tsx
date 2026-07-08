@@ -267,7 +267,7 @@ export function LeadOfferForm({
                 defaultCountryCode={defaultPhoneCountryCode}
                 onChange={setPhone}
                 onCountryChange={setPhoneCountryCode}
-                placeholder={SITE.phone}
+                placeholder="Enter phone number"
                 disabled={isLoading}
               />
             </div>

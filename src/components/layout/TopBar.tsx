@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SITE, TOPBAR } from "@/lib/constants";
+import { SITE } from "@/lib/constants";
 import type { TestimonialsData } from "@/lib/reviews/types";
 
 type TopBarProps = {
