@@ -1065,10 +1065,10 @@ p.lead-title {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 0;
   min-height: 100%;
-  min-width: 6.75rem;
-  padding: 14px 12px;
+  min-width: 3.75rem;
+  padding: 14px 10px;
   background: var(--sand);
   border: 1px solid var(--line);
   border-right: 0;
@@ -1078,24 +1078,6 @@ p.lead-title {
   white-space: nowrap;
   flex-wrap: nowrap;
   pointer-events: none;
-}
-.phone-country-select__flag{
-  display: inline-flex;
-  align-items: center;
-  font-size: 1.1em;
-  line-height: 1;
-  flex: 0 0 auto;
-}
-.phone-country-select__country{
-  display: inline-flex;
-  align-items: center;
-  font-family: var(--mono);
-  font-size: 0.82em;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  line-height: 1;
-  flex: 0 0 auto;
 }
 .phone-country-select__dial{
   display: inline-flex;

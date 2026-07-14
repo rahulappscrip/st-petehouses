@@ -88,8 +88,6 @@ export function InternationalPhoneInput({
           ))}
         </select>
         <span className="phone-country-select__display" aria-hidden="true">
-          <span className="phone-country-select__flag">{countryCodeToFlag(activeCountry.code)}</span>
-          <span className="phone-country-select__country">{activeCountry.code}</span>
           <span className="phone-country-select__dial">{activeCountry.dialCode}</span>
         </span>
       </div>
