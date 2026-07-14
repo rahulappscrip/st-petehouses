@@ -40,6 +40,7 @@ export type BlogPost = {
   dateDisplay: string;
   readTime: string;
   author: string;
+  authorSlug?: string;
   authorInitials: string;
   authorRole: string;
   authorCompany?: string;
@@ -136,6 +137,10 @@ export function getCategoryCount(category: BlogCategory | "all"): number {
 
 export function getBlogPostHref(slug: string): string {
   return `/blog/${slug}`;
+}
+
+export function getBlogAuthorHref(slug: string): string {
+  return `/blog/author/${slug}`;
 }
 
 /** Local or proxied WordPress media only — Gravatar and other remote URLs fall back to Benette.webp. */

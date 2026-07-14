@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { SiteImage } from "@/components/ui/SiteImage";
 import type { BlogPost } from "@/lib/blog";
-import { resolveBlogAuthorAvatar } from "@/lib/blog";
-import { ABOUT_PAGE } from "@/lib/about-content";
+import { getBlogAuthorHref, resolveBlogAuthorAvatar } from "@/lib/blog";
 import { PERSON_IMAGES } from "@/lib/image-accessibility";
 
 const DEFAULT_AUTHOR = {
@@ -15,7 +14,13 @@ const DEFAULT_AUTHOR = {
 type BlogAuthorBioProps = {
   post?: Pick<
     BlogPost,
-    "author" | "authorInitials" | "authorRole" | "authorCompany" | "authorBio" | "authorAvatar"
+    | "author"
+    | "authorSlug"
+    | "authorInitials"
+    | "authorRole"
+    | "authorCompany"
+    | "authorBio"
+    | "authorAvatar"
   >;
 };
 
@@ -34,6 +39,7 @@ export function BlogAuthorBio({ post }: BlogAuthorBioProps = {}) {
   const role = resolveAuthorRole(post);
   const bio = post?.authorBio?.trim() || DEFAULT_AUTHOR.bio;
   const avatar = resolveBlogAuthorAvatar(post?.authorAvatar);
+  const authorHref = post?.authorSlug ? getBlogAuthorHref(post.authorSlug) : undefined;
 
   return (
     <aside className="author-bio">
@@ -48,10 +54,19 @@ export function BlogAuthorBio({ post }: BlogAuthorBioProps = {}) {
         />
       </div>
       <div className="meta">
-        <b>{name}</b>
+        <b>
+          {authorHref ? (
+            <Link href={authorHref} className="author-link">
+              {name}
+            </Link>
+          ) : (
+            name
+          )}
+        </b>
         <span className="role">{role}</span>
         <p>{bio}</p>
         <div className="links">
+          {authorHref ? <Link href={authorHref}>More from {name}</Link> : null}
           <Link href="/reviews">Reviews</Link>
           <Link href="/contact">Request an offer</Link>
         </div>

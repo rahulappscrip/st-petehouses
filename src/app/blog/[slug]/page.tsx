@@ -63,6 +63,9 @@ export default async function BlogDetailPage({ params }: PageProps) {
           "@type": "Person",
           name: post.author,
           jobTitle: post.authorRole,
+          ...(post.authorSlug
+            ? { url: `${SITE.url}blog/author/${post.authorSlug}/` }
+            : {}),
         },
         publisher: {
           "@type": "Organization",

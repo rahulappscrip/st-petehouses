@@ -34,17 +34,34 @@ const POST_CORE_FIELDS = `
   }
   author {
     node {
+      databaseId
+      slug
       name
       firstName
       lastName
       description
-      avatar {
+      avatar(size: 512) {
         url
       }
       authorRelated {
         authorCompany
       }
     }
+  }
+`;
+
+const AUTHOR_CORE_FIELDS = `
+  databaseId
+  slug
+  name
+  firstName
+  lastName
+  description
+  avatar(size: 512) {
+    url
+  }
+  authorRelated {
+    authorCompany
   }
 `;
 
@@ -76,6 +93,24 @@ const POST_BY_SLUG_QUERY = `
     post(id: $slug, idType: SLUG) {
       ${POST_CORE_FIELDS}
       ${POST_ACF_FIELDS}
+    }
+  }
+`;
+
+const USER_BY_SLUG_QUERY = `
+  query UserBySlug($slug: ID!) {
+    user(id: $slug, idType: SLUG) {
+      ${AUTHOR_CORE_FIELDS}
+    }
+  }
+`;
+
+const POSTS_BY_AUTHOR_QUERY = `
+  query PostsByAuthor($authorId: Int!, $first: Int!) {
+    posts(first: $first, where: { status: PUBLISH, author: $authorId }) {
+      nodes {
+        ${POST_CORE_FIELDS}
+      }
     }
   }
 `;
@@ -132,6 +167,38 @@ export async function fetchWordPressPostBySlug(slug: string): Promise<WordPressP
   return data.post ?? null;
 }
 
+export async function fetchWordPressUserBySlug(slug: string): Promise<WordPressAuthor | null> {
+  const data = await wordpressGraphQL<{ user: WordPressAuthor | null }>(USER_BY_SLUG_QUERY, {
+    slug,
+  });
+
+  return data.user ?? null;
+}
+
+export async function fetchWordPressPostsByAuthor(
+  authorId: number,
+  first = 100,
+): Promise<WordPressPost[]> {
+  const data = await wordpressGraphQL<{ posts: { nodes: WordPressPost[] } }>(
+    POSTS_BY_AUTHOR_QUERY,
+    { authorId, first },
+  );
+
+  return data.posts.nodes;
+}
+
+export async function fetchWordPressAuthorSlugs(): Promise<string[]> {
+  const posts = await fetchWordPressPosts();
+  const slugs = new Set<string>();
+
+  for (const post of posts) {
+    const slug = post.author.node.slug?.trim();
+    if (slug) slugs.add(slug);
+  }
+
+  return [...slugs];
+}
+
 export type WordPressCategory = {
   name: string;
   slug: string;
@@ -143,6 +210,8 @@ export type WordPressTag = {
 };
 
 export type WordPressAuthor = {
+  databaseId: number;
+  slug: string;
   name: string;
   firstName?: string | null;
   lastName?: string | null;
