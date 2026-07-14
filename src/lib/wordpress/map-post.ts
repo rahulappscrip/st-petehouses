@@ -50,6 +50,20 @@ function stripHtml(html: string): string {
     .trim();
 }
 
+function stripHtmlPreserveBreaks(html: string): string {
+  return html
+    .replace(/\r\n/g, "\n")
+    .replace(/<br\s*\/?>/gi, "\n")
+    .replace(/<\/p>/gi, "\n\n")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&#8217;/g, "'")
+    .replace(/&amp;/g, "&")
+    .replace(/[^\S\n]+/g, " ")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
 function formatDateDisplay(isoDate: string): string {
   const date = new Date(isoDate);
   return date.toLocaleDateString("en-US", {
@@ -83,6 +97,43 @@ function resolveAuthorName(post: WordPressPost): string {
   if (fromParts) return fromParts;
 
   return DEFAULT_AUTHOR.name;
+}
+
+function resolveAuthorAvatarUrl(avatarUrl?: string | null): string | undefined {
+  const trimmed = avatarUrl?.trim();
+  if (!trimmed) return undefined;
+  return resolveBlogAuthorAvatar(
+    isWordPressMediaUrl(trimmed) ? toWordPressImageProxy(trimmed) : undefined,
+  );
+}
+
+export type BlogAuthorProfile = {
+  slug: string;
+  name: string;
+  initials: string;
+  role: string;
+  company?: string;
+  bio?: string;
+  avatar?: string;
+};
+
+export function mapWordPressAuthor(author: WordPressPost["author"]["node"]): BlogAuthorProfile {
+  const displayName =
+    author.name?.trim() ||
+    [author.firstName, author.lastName].filter(Boolean).join(" ").trim() ||
+    DEFAULT_AUTHOR.name;
+  const company = stripHtml(author.authorRelated?.authorCompany ?? "").trim() || undefined;
+  const bio = stripHtmlPreserveBreaks(author.description ?? "").trim() || undefined;
+
+  return {
+    slug: author.slug?.trim() || "",
+    name: displayName,
+    initials: getAuthorInitials(displayName),
+    role: company ?? DEFAULT_AUTHOR.role,
+    company,
+    bio,
+    avatar: resolveAuthorAvatarUrl(author.avatar?.url),
+  };
 }
 
 function resolveCategory(post: WordPressPost): { category: BlogCategory; categoryLabel: string } {
@@ -172,13 +223,10 @@ export function mapWordPressPostToBlogPost(post: WordPressPost, index = 0): Blog
   const acfFaq = mapAcfFaq(post);
   const faq = acfFaq ?? (parsedFaq.length ? parsedFaq : undefined);
   const authorName = resolveAuthorName(post);
-  const authorBio = stripHtml(post.author.node.description ?? "").trim() || undefined;
-  const avatarUrl = post.author.node.avatar?.url?.trim();
-  const authorAvatar = resolveBlogAuthorAvatar(
-    avatarUrl && isWordPressMediaUrl(avatarUrl) ? toWordPressImageProxy(avatarUrl) : undefined,
-  );
-  const authorCompany =
-    stripHtml(post.author.node.authorRelated?.authorCompany ?? "").trim() || undefined;
+  const authorProfile = mapWordPressAuthor(post.author.node);
+  const authorBio = authorProfile.bio;
+  const authorAvatar = authorProfile.avatar;
+  const authorCompany = authorProfile.company;
 
   return {
     slug: post.slug,
@@ -190,6 +238,7 @@ export function mapWordPressPostToBlogPost(post: WordPressPost, index = 0): Blog
     dateDisplay: formatDateDisplay(post.date),
     readTime: estimateReadTime(post.content),
     author: authorName,
+    authorSlug: authorProfile.slug || undefined,
     authorInitials: getAuthorInitials(authorName),
     authorRole: authorCompany ?? DEFAULT_AUTHOR.role,
     authorCompany,

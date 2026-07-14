@@ -7,7 +7,12 @@ import { WordPressBlogArticle } from "@/components/blog/WordPressBlogArticle";
 import { FaqSection } from "@/components/home/FaqSection";
 import { FinalCtaSection } from "@/components/home/FinalCtaSection";
 import type { BlogPost } from "@/lib/blog";
-import { DEFAULT_BLOG_NEXT_CTA, getBlogHeroImageCopy, resolveBlogAuthorAvatar } from "@/lib/blog";
+import {
+  DEFAULT_BLOG_NEXT_CTA,
+  getBlogAuthorHref,
+  getBlogHeroImageCopy,
+  resolveBlogAuthorAvatar,
+} from "@/lib/blog";
 import { PERSON_IMAGES } from "@/lib/image-accessibility";
 
 function CrumbArrow() {
@@ -101,7 +106,16 @@ export function BlogDetailContent({ post }: { post: BlogPost }) {
               />
             </span>
             <span className="author">
-              <b>By {post.author}</b>
+              <b>
+                By{" "}
+                {post.authorSlug ? (
+                  <Link href={getBlogAuthorHref(post.authorSlug)} className="author-link">
+                    {post.author}
+                  </Link>
+                ) : (
+                  post.author
+                )}
+              </b>
               <span>
                 {post.authorCompany ?? `${post.authorRole} · We Buy St Pete Houses`}
               </span>

@@ -1086,6 +1086,7 @@ body .blog-page .featured-body h2 {
   font-size: 16px;
   color: var(--ink-2);
   max-width: none;
+  white-space: pre-line;
 }
 
 .blog-detail-page .author-bio .meta .links {
@@ -1188,4 +1189,226 @@ body .blog-page .featured-body h2 {
 a.btn.btn--cta::before,
 a.btn.btn--cta {
   color: #ffffff;
+}
+
+.blog-page .featured-meta .author-mini .author-link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in oklab, var(--sun) 55%, transparent);
+}
+
+.blog-page .featured-meta .author-mini .author-link:hover {
+  color: var(--sun-deep);
+  border-bottom-color: currentColor;
+}
+
+/* Author detail page */
+.blog-detail-page .author-link,
+.author-page .author-link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in oklab, var(--sun) 55%, transparent);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.blog-detail-page .author-link:hover,
+.author-page .author-link:hover {
+  color: var(--sun-deep);
+  border-bottom-color: currentColor;
+}
+
+.author-page .author-hero {
+  padding: clamp(24px, 3.5vw, 40px) 0 clamp(36px, 5vw, 64px);
+  background:
+    radial-gradient(ellipse 80% 70% at 12% 40%, color-mix(in oklab, var(--teal) 14%, transparent), transparent 55%),
+    radial-gradient(ellipse 70% 60% at 88% 20%, color-mix(in oklab, var(--teal) 8%, transparent), transparent 50%),
+    linear-gradient(180deg, color-mix(in oklab, var(--teal) 4%, var(--paper)) 0%, var(--paper) 100%);
+}
+
+.author-page .author-hero .crumbs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: clamp(22px, 3vw, 36px);
+}
+
+.author-page .author-hero .crumbs a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.author-page .author-hero .crumbs a:hover {
+  color: var(--teal-deep);
+}
+
+.author-page .author-hero__banner {
+  display: grid;
+  gap: clamp(28px, 4vw, 56px);
+  grid-template-columns: minmax(180px, 260px) minmax(0, 1fr);
+  align-items: start;
+}
+
+.author-page .author-hero__media {
+  position: relative;
+  width: 100%;
+  max-width: 260px;
+}
+
+.author-page .author-hero__photo {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 3px solid color-mix(in oklab, var(--teal) 28%, white);
+  box-shadow:
+    0 0 0 6px color-mix(in oklab, var(--teal) 8%, transparent),
+    0 18px 40px color-mix(in oklab, var(--ink) 10%, transparent);
+  background: color-mix(in oklab, var(--teal) 6%, var(--sand));
+}
+
+.author-page .author-hero__photo-img {
+  object-fit: cover;
+  object-position: center top;
+}
+
+.author-page .author-hero__badge {
+  position: absolute;
+  right: -10px;
+  bottom: -12px;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 8px;
+  min-width: 118px;
+  padding: 12px 14px;
+  background: var(--paper);
+  border: 1px solid color-mix(in oklab, var(--teal) 16%, var(--line));
+  border-radius: 14px;
+  box-shadow: 0 10px 28px color-mix(in oklab, var(--ink) 12%, transparent);
+}
+
+.author-page .author-hero__badge strong {
+  font-family: var(--sans);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--ink);
+}
+
+.author-page .author-hero__badge span {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--ink-2);
+}
+
+.author-page .author-hero__topline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
+  margin-bottom: 14px;
+}
+
+.author-page .author-hero__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+
+.author-page .author-hero__label::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  background: var(--teal);
+  flex: 0 0 auto;
+}
+
+.author-page .author-hero__company {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--teal) 10%, white);
+  color: var(--teal-deep);
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.author-page .author-hero__name {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: clamp(36px, 5vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: var(--ink);
+}
+
+.author-page .author-hero__name span {
+  color: var(--teal);
+}
+
+.author-page .author-hero__bio {
+  margin-top: 22px;
+  padding-left: 18px;
+  border-left: 3px solid color-mix(in oklab, var(--teal) 55%, white);
+  max-width: 100%;
+}
+
+.author-page .author-hero__bio p {
+  margin: 0;
+  font-size: clamp(15px, 1.35vw, 17px);
+  line-height: 1.65;
+  color: var(--ink-2);
+}
+
+.author-page .author-hero__bio p + p {
+  margin-top: 14px;
+}
+
+@media (max-width: 720px) {
+  .author-page .author-hero__banner {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+
+  .author-page .author-hero__media {
+    max-width: 220px;
+  }
+
+  .author-page .author-hero__badge {
+    right: -6px;
+    bottom: -10px;
+    min-width: 104px;
+    padding: 10px 12px;
+  }
+
+  .author-page .author-hero__badge strong {
+    font-size: 24px;
+  }
+}
+
+.author-page,
+.author-page h1,
+.author-page h2,
+.author-page h3 {
+  font-family: var(--sans);
 }

@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { SiteImage } from "@/components/ui/SiteImage";
 import type { BlogPost } from "@/lib/blog";
-import { getBlogHeroImageCopy, getBlogPostHref, resolveBlogAuthorAvatar } from "@/lib/blog";
+import { getBlogHeroImageCopy, getBlogPostHref, getBlogAuthorHref, resolveBlogAuthorAvatar } from "@/lib/blog";
 import { PERSON_IMAGES } from "@/lib/image-accessibility";
 
 export function BlogFeaturedPost({ post }: { post: BlogPost }) {
   const heroImage = post.heroImage ? getBlogHeroImageCopy(post) : null;
+  const authorHref = post.authorSlug ? getBlogAuthorHref(post.authorSlug) : undefined;
 
   return (
     <div className="featured">
@@ -51,7 +52,13 @@ export function BlogFeaturedPost({ post }: { post: BlogPost }) {
                 className="av__img"
               />
             </span>
-            {post.author}
+            {authorHref ? (
+              <Link href={authorHref} className="author-link">
+                {post.author}
+              </Link>
+            ) : (
+              post.author
+            )}
           </span>
           <span className="dot" />
           <span>{post.dateDisplay}</span>
